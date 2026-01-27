@@ -151,7 +151,8 @@ En complément de l’API officielle, il existe un dépôt GitHub communautaire 
 
 - Repository : `fkie-cad/nvd-json-data-feeds`
 - Lien : https://github.com/fkie-cad/nvd-json-data-feeds
-![Miroir GitHub NVD JSON Data Feeds](../../assets/images/nvd-json-data-feeds.png)
+
+- ![Miroir GitHub NVD JSON Data Feeds](../../assets/images/nvd-json-data-feeds.png)
 Ce dépôt :
 - publie des données CVE structurées par années (`CVE-1999`, `CVE-2000`, etc.),
 - propose des mises à jour régulières (notamment une publication quotidienne autour de 00:00 UTC),
