@@ -109,6 +109,8 @@ Objectifs :
 - ne jamais committer la clé dans Git
 - rotation régulière
 - monitorer l’utilisation
+
+Pour demander l'API de NVD-NIST :
 - https://nvd.nist.gov/developers/request-an-api-key
 ---
 
