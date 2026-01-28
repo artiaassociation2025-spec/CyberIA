@@ -109,7 +109,7 @@ Objectifs :
 - ne jamais committer la clé dans Git
 - rotation régulière
 - monitorer l’utilisation
-
+- https://nvd.nist.gov/developers/request-an-api-key
 ---
 
 ## 5.7 Exemples de requêtes (recommandés)
