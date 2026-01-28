@@ -20,7 +20,7 @@ Cette documentation a pour objectif de fournir une référence technique sur la 
 ## Table des matières
 1. [Introduction](./01-introduction.md)
 2. [Présentation générale (NVD / NIST / CVE)](./02-overview-nvd-nist-cve.md)
-3. [Structure des données JSON](./nvd/docs/03-data-structure-json.md)
+3. [Structure des données JSON](./03-data-structure-json.md)
 4. [Data Model vulnerability](./04-data-model-vuln.md)
 5. [API NVD](./05-nvd-api.md)
 6. [lifeCyle](./06-lifecycle.md)
