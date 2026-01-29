@@ -49,20 +49,20 @@ Le dataset EPSS est publié au format **CSV** et **JSON** avec les colonnes suiv
 ## 5. Exemples EPSS
 
 ### Exemple CSV (1 ligne)
-***csv
+```csv
 cve,epss,percentile,date
 CVE-2021-44228,0.97,0.999,2024-07-09
-***
+```
 
 ### Exemple JSON (1 entrée)
-***json
+```json
 {
   "cve": "CVE-2021-44228",
   "epss": 0.97,
   "percentile": 0.999,
   "date": "2024-07-09"
 }
-***
+```
 
 ---
 
