@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système avec un lecteur multimedia utilisant la  bibliothèque <SPAN class=\"textit\">xine-lib</SPAN> avec des  sources non corrigées en versions :</P>  <UL>    <LI>supérieures ou égales à 1-beta3 pour les 1-beta,</LI>    <LI>toutes les versions 1-rc,</LI>    <LI>1.0 à 1.0.2,</LI>    <LI>1.1.0.</LI>  </UL>",
+  "content": "## Description\n\nLa bibliothèque xine-lib fournit un ensemble de fonctions permettant de\nconstruire un lecteur multimedia. Parmi les produits pouvant employer\ncette bibliothèque on trouve xine, gxine, les composants du bureau KDE\nkdemultimedia et kaffeine, du bureau Gnome totem,...\n\nCDDB permet d'obtenir automatiquement l'artiste ou le groupe, le titre\ndes morceaux lors de la lecture d'un disque audionumérique. Un bogue de\nformat texte dans la gestion de la réponse du serveur peut être exploité\npour exécuter du code arbitraire. En l'absence de problèmes sur les\nserveurs CDDB habituellement configurés, il faut donc préalablement\nqu'un agresseur parvienne à convaincre sa victime d'interroger un\nserveur sous son contrôle ou soit en mesure d'intercepter son traffic\nréseau.\n\n## Contournement provisoire\n\nSupprimer la bibliothèque partagée xineplug_inp_cdda.so dans le\nrépertoire des greffons de xine-lib (cependant la capacité à lire les\ndisques audionumériques sera perdue).\n\n## Solution\n\nMettre à jour les sources en version 1.0.3 ou se référer au bulletin de\nsécurité de l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Xine XSA-2005-1 :",
+      "url": "http://xinehq.de/index.php/security/XSA-2005-1"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:180 du 12 octobre    2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:180"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 863-1 du 12 octobre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-863"
+    },
+    {
+      "title": "Site de Xine :",
+      "url": "http://xinehq.de/"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200510-08 du 08 octobre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200510-08.xml"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-388",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-10-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-863-1.",
+      "revision_date": "2005-10-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans l'interprétation des réponses CDDB (« Compact\nDisc DataBase » - base de données de disques audionumériques) permet à\nun utilisateur mal intentionné d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité de la bibliothèque multimedia xine-lib",
+  "vendor_advisories": []
+}

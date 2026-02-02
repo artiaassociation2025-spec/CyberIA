@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Exchange 2007 Server Service Pack 1 versions 32-bit et x64.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Exchange 2003 Server Service Pack 2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Exchange 2000 Server Service Pack 3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans Microsoft Exchange Server :\n\n-   la première est relative à une faiblesse dans l'interpréteur de\n    commande MAPI (Messaging Application Programming Interface) et\n    permet à un utilisateur distant de provoquer un déni de service des\n    composants de Microsoft Exchange s'appuyant sur EMSMDB32 comme\n    Attendant Service ;\n-   la seconde concerne la mise en œuvre du protocole TNEF (Transport\n    Neutral Encapsulation Format) et permet à un utilisateur distant\n    d'exécuter du code arbitraire à distance avec les privilèges du\n    service Exchange par le biais d'un message TNEF construit de façon\n    particulière.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0099",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0099"
+    },
+    {
+      "name": "CVE-2009-0098",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0098"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-060",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-02-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans Microsoft Exchange Server permettent\nà un utilisateur distant de provoquer un déni de service ou d'exécuter\ndu code arbitraire.\n",
+  "title": "Multiples vulnérabilités dans Microsoft Exchange",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS09-003 du 10 février 2009",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-003.mspx"
+    }
+  ]
+}

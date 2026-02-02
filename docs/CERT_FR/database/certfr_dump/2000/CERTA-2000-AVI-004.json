@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows NT 4.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'explorateur permet à un serveur d'identifier dans un réseau les\nmachines sous windows (ou utilisant Samba) et les ressources qu'elles\npartagent.\n\nLa première vulnérabilité affecte les systèmes Windows NT et Windows\n2000 et permet à un utilisateur mal intentionné de couper la fonction «\nexplorateur d'ordinateurs » du maître explorateur du sous-réseau dans\nlequel il se trouve. Il peut aussi promouvoir sa propre machine au rang\nde « maître explorateur » . Ces actions ont pour conséquence de rendre\ninvisible dans « l'explorateur d'ordinateur » de windows tous les\nordinateurs de son sous-réseau, ainsi que toutes les ressources\npartagées par ces machines.\n\nLa seconde vulnérabilité ne touche que les systèmes sous Windows NT et\npermet à un utilisateur mal intentionné de surcharger le trafic réseau\nen fausses annonces, ce qui cause des problèmes dans les tables du «\nmaître explorateur », et peut ralentir ou bloquer d'autres services par\nla diminution de la bande passante.\n\n## Solution\n\nMicrosoft met à disposition un correctif concernant ces vulnérabilités\nde l'explorateur d'ordinateurs sous Windows NT 4.0 et 2000 (Versions US)\naux adresses suivantes :\n\n-   Windows NT 4.0 Workstation, Server, et Server, Enterprise Edition :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=21397\n\n-   Windows 2000 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=21298\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Article de la Knowledge Base - Q262694 - de Microsoft à    propos des vulnérabilités de l'explorateur d'ordinateurs sur le    réseau Windows      \n.",
+      "url": "http://www.microsoft.com/technet/support/kb.asp?ID=262694"
+    },
+    {
+      "title": "FAQ concernant le bulletin MS00-036 de Microsoft      \n.",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-036.asp"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS00-036 du 25 mai 2000      \n.",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-036.asp"
+    },
+    {
+      "title": "Article de la Knowledge Base - Q263307 - de Microsoft à    propos des vulnérabilités de l'explorateur d'ordinateurs sur le    réseau Windows",
+      "url": "http://www.microsoft.com/technet/support/kb.asp?ID=263307"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-004",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-05-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes dans le protocole de l'«\nexplorateur d'ordinateurs » (computer browser protocol), utilisé par\nexemple par le « voisinage réseau ».\n\nCes vulnérabilités permettent à un utilisateur mal intentionné de rendre\ninvisible tout un sous-réseau aux explorateurs d'ordinateurs voire de\npermettre des dénis de services.\n",
+  "title": "Vulnérabilité dans le protocole du service explorateur d'ordinateurs sous Windows NT et Windows 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CERT IST",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis CA-2000-06 du CERT/CC Microsoft Security Bulletins",
+      "url": null
+    }
+  ]
+}

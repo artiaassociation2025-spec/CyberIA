@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>GTK2, pour les versions antérieures à 2.4.13-22.</P>",
+  "content": "## Description\n\nGTK2 est un paquet utilisé par plusieurs distributions Linux. Il\ncontient notamment GIMP ToolKit (ou GTK+), une bibliothèque permettant\nde créer des interfaces graphiques et les environnements de bureau. GTK+\nest écrit en langage C.\n\nUne vulnérabilité a été identifiée dans la fonction GdkPixbufLoader(),\nqui ne manipulerait pas correctement certaines valeurs de variables\npassées en argument. Une personne maveillante pourrait exploiter ce\nproblème pour perturber l'application qui utilise cette bibliothèque.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0010",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0010"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SR:2007:007 du 26 janvier    2007 :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2007-Jan/0015.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-415-1 du 01 février 2007 :",
+      "url": "http://www.ubuntu.com/usn/usn-415-1"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1256 du 31 janvier 2007 :",
+      "url": "http://www.debian.org/security/2007/dsa-1256"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2007:0019 du 24 janvier    2007 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0019.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-055",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SuSE.",
+      "revision_date": "2007-01-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian.",
+      "revision_date": "2007-02-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Ubuntu.",
+      "revision_date": "2007-02-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de GTK2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RedHat RHSA-2007-0019 du 24 janvier 2007",
+      "url": null
+    }
+  ]
+}

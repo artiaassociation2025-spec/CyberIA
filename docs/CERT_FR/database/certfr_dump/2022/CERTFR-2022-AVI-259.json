@@ -1,0 +1,87 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Spectrum Protect Server versions 8.1.14.x antérieures à 8.1.14.100",
+      "product": {
+        "name": "Spectrum",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Control Center version 6.2.0.0 sans le correctif iFix07",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Control Center version 6.1.3.0 sans le correctif iFix12",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2020-14803",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-14803"
+    },
+    {
+      "name": "CVE-2022-22394",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22394"
+    },
+    {
+      "name": "CVE-2020-27221",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-27221"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-259",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-03-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits IBM.\nCertaines d'entre elles permettent à un attaquant de provoquer une\nexécution de code arbitraire à distance, un déni de service à distance\net un contournement de la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans les produits IBM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM 6564745 du 18 mars 2022",
+      "url": "https://www.ibm.com/support/pages/node/6564745"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM 6564757 du 18 mars 2022",
+      "url": "https://www.ibm.com/support/pages/node/6564757"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Grafana toutes versions sans les derniers correctifs de sécurité",
+      "product": {
+        "name": "Grafana",
+        "vendor": {
+          "name": "Grafana Labs",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-4123",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-4123"
+    },
+    {
+      "name": "CVE-2025-3580",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-3580"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0447",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-05-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Grafana. Elles permettent à un attaquant de provoquer une atteinte à l'intégrité des données et une injection de code indirecte à distance (XSS).",
+  "title": "Multiples vulnérabilités dans Grafana",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-05-23",
+      "title": "Bulletin de sécurité Grafana cve-2025-4123",
+      "url": "https://grafana.com/blog/2025/05/23/grafana-security-release-medium-and-high-severity-security-fixes-for-cve-2025-4123-and-cve-2025-3580/"
+    }
+  ]
+}

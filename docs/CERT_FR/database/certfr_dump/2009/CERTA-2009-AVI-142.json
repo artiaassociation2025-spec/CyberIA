@@ -1,0 +1,115 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Server 2003 Service Pack 1 et 2, y compris pour les systèmes x64 et Itanium ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Vista, Service Pack 1 inclus, y compris pour les versions x64 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2008 pour systèmes 32 bits, x64 et Itanium.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 2 et 3 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Professional Edition pour systèmes x64, Service Pack 2 compris ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans le système\nd'exploitation Microsoft Windows. Elles concernent :\n\n-   le service de transaction MSDTC (Microsoft Distributed Transaction\n    Coordinator) qui permet d'obtenir certains jetons (NetworkService)\n    lors d'appels RPC ;\n-   le service de gestion WMI (Windows Management Instrumentation) qui\n    permet de récupérer sous certaines conditions les privilèges au\n    niveau LocalSYSTEM ;\n-   le service serveur RPC (RPCSS) qui permet de récupérer sous\n    certaines conditions les droits LocalSYSTEM ;\n-   la classe ThreadPool de Windows qui permet également d'exécuter,\n    selon le positionnement des listes de contrôles d'accès des threads,\n    du code avec des droits élevés LocalSYSTEM.\n\nCertaines de ces vulnérabilités ont fait l'objet de l'alerte\nCERTA-2008-ALE-012 publiée le 10 octobre 2008.\n\n## Solution\n\nSe référer au bulletin de sécurité MS09-012 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0080",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0080"
+    },
+    {
+      "name": "CVE-2008-1436",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1436"
+    },
+    {
+      "name": "CVE-2009-0079",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0079"
+    },
+    {
+      "name": "CVE-2009-0078",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0078"
+    }
+  ],
+  "links": [
+    {
+      "title": "Alerte du CERTA CERTA-2008-ALE-012 du 10 octobre    2008 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2008-ALE-012/"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-142",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-04-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans le système\nd'exploitation Microsoft Windows. Leur exploitation peut conduire à une\nélévation de privilèges.\n",
+  "title": "Vulnérabilités dans Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS09-012 du 14 avril 2009",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-012.mspx"
+    }
+  ]
+}

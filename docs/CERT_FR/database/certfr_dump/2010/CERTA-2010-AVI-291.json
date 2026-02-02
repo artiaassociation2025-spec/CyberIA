@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>libpng versions antérieures à 1.4.3 (branche 1.4.x) ;</LI>    <LI>libpng versions antérieures à 1.2.44    (bhttp://rhn.redhat.com/errata/RHSA-2010-0534.htmlranche    1.2.x).</LI>  </UL>  <P>Les applications utilisant cette bibliothèque peuvent être  vulnérables.</P>",
+  "content": "## Description\n\nDe multiples vulnérabilités ont été identifiées dans la bibliothèque\nlibpng. Leur exploitation permet à une personne malintentionnée\nd'exécuter du code arbitraire à distance, ou de provoquer un déni de\nservice à distance (arrêt inopiné de l'application).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2249",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2249"
+    },
+    {
+      "name": "CVE-2010-1205",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1205"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-2072 du 19 juillet 2010 :",
+      "url": "http://www.debian.org/security/2010/dsa-2072"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2010:0534-1 du 14 juillet    2010 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2010-0534.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2010:133 du 15 juillet    2010 :",
+      "url": "http://www.mandriva.com/en/security/advisories?name=MDVSA-2010:133"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu du 08 juillet 2010 :",
+      "url": "http://www.ubuntu.com/usn/usn-960-1"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-291",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-06-28T00:00:00.000000"
+    },
+    {
+      "description": "ajout d'une référence CVE ;",
+      "revision_date": "2010-06-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat ;",
+      "revision_date": "2010-07-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian et Ubuntu ;",
+      "revision_date": "2010-07-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva.",
+      "revision_date": "2010-07-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans la bibliothèque libpng permettent,\nentre autres, l'exécution de code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans libpng",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes de version libpng",
+      "url": "http://www.libpng.org/pub/png/libpng.html"
+    }
+  ]
+}

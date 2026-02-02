@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Vista ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Vista x64 Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTeredo est un protocole d'encapsulation permettant à une machine isolée\nde communiquer en IPv6 dans un environnement IPv4. Ce dernier est\ndétaillé dans la note d'information CERTA-2006-INF-004.\n\nLe pare-feu de Microsoft Vista ne filtre pas correctement le trafic à\nl'intention de l'interface dédiée à Teredo. Cette vulnérabilité\ns'applique pour toute machine dans un réseau, même exploitant des\ntechniques de translation d'adresses (NAT).\n\nUne personne distante peut ainsi activer cette interface et récupérer\nles informations nécessaires pour initier de nouvelles connexions avec\nle système vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité MS07-038 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3038",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3038"
+    }
+  ],
+  "links": [
+    {
+      "title": "Note d'information CERTA-2006-INF-004, « Migration IPv6 :    enjeux de sécurité » :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2006-INF-004/"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-293",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans le comportement du pare-feu de\nMicrosoft Vista lié à l'interface Teredo. L'exploitation de celle-ci\npermettrait à une personne distante d'activer l'interface et de\nrécupérer les informations nécessaires pour initier de nouvelles\nconnexions avec le système vulnérable.\n",
+  "title": "Vulnérabilité du pare-feu Microsoft Vista",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-038 du 10 juillet 2007",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-038.mspx"
+    }
+  ]
+}

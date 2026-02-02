@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SICAM P850 versions antérieures à 3.11",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Siemens",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "SICAM P855 versions antérieures à 3.11",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Siemens",
+          "scada": true
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2023-31238",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-31238"
+    },
+    {
+      "name": "CVE-2023-30901",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-30901"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-1005",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-11-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Siemens. Elles permettent à un attaquant de provoquer une injection de requêtes illégitimes par rebond (CSRF) et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans les produits Siemens",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-11-11",
+      "title": "Bulletin de sécurité Siemens SSA-201498",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-201498.html"
+    }
+  ]
+}

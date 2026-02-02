@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": null,
+  "content": "## Systèmes\n\nLes versions de CVS égales ou antérieures à la version 1.11.15 (branche\nstable) sont affectées.\n\n## Description\n\nCVS (\\`\\`Concurrent Versions System'') est un système client/serveur\nutilisé pour la gestion des versions de fichiers essentiellement\ntextuels. A cause d'une erreur de programmation dans l'analyse des\ndonnées reçues, il est possible, à l'aide dune ligne \\`\\`Entry''\nhabilement construite, d'écrire au-delà de la mémoire allouée. Cela peut\nêtre exploité pour exécuter du code avec les privilèges du serveur.\n\n## Solution\n\nMettre à jour le serveur (version source 1.11.16) en suivant les\nrecommendations de l'éditeur.\n\n-   Avis de sécurité Debian GNU/Linux DSA-505 du 19 mai 2004 :\n\n        http://www.debian.org/security/2004/dsa-505\n\n-   Avis de sécurité Mandrake Linux MDKSA-2004:048 du 19 mai 2004 :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:048\n\n-   Avis de sécurité Red Hat Linux RHSA-2004:190 du 19 mai 2004 :\n\n        http://rhn.redhat.com/errata/RHSA-2004-190.html\n\n-   Avis de sécurité SUSE Linux SuSE-SA:2004:013 du 19 mai 2004 :\n\n        http://www.suse.com/de/security/2004_13_cvs.html\n\n-   Avis de sécurité Gentoo Linux GLSA-200405-12 du 20 mai 2004 :\n\n        http://www.gentoo.org/security/en/glsa/glsa-200405-12.xml\n\n-   Avis de sécurité FreeBSD FreeBSD-SA-04:10.cvs du 19 mai 2004 :\n\n        ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-04:10.cvs.asc\n\n-   Avis de sécurité OpenBSD du 20 mai 2004 :\n\n        http://www.openbsd.org/errata.html\n\n-   Avis de sécurité NetBSD du 21 mai 2004 :\n\n        ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2004-008.txt.asc\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Note de vulnérabilité de l'US CERT :",
+      "url": "http://www.kb.cert.org/vuls/id/192038"
+    },
+    {
+      "title": "Avis de sécurité d'eMatters :",
+      "url": "http://security.e-matters.de/advisories/072004.html"
+    },
+    {
+      "title": "Site Internet de CVS :",
+      "url": "http://www.cvshome.org"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-170",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-05-21T00:00:00.000000"
+    },
+    {
+      "description": "corrections de liens et ajout de la référence NetBSD.",
+      "revision_date": "2004-05-24T00:00:00.000000"
+    },
+    {
+      "description": "modification de la référence NetBSD.",
+      "revision_date": "2004-06-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de type débordement de mémoire présente dans la partie\nserveur de CVS (\\`\\`Concurrent Versions System'') peut être exploitée\npar un utilisateur mal intentionné afin d'exécuter du code arbitraire à\ndistance sur une machine hébergeant un serveur CVS vulnérable.\n",
+  "title": "Vulnérabilité du serveur CVS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité eMatters",
+      "url": null
+    }
+  ]
+}

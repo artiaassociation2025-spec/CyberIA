@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>DirectX 7.0 ;</LI>    <LI>DirectX 8.1 ;</LI>    <LI>DirectX 9.0 ;</LI>    <LI>DirectX 10.0.</LI>  </UL>  <P>Toutes les versions de Microsoft Windows utilisant l'une de  ces versions de DirectX sont potentiellement affectées.</P>",
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans la collection de\nbibliothèques Microsoft DirectX utilisée par différentes applications :\n\n-   le Codec MJPEG de Windows ne manipule pas correctement les flux\n    MJPEG inclus dans des fichiers multimédias de type AVI (Audio Video\n    Interleave ou ASF (Advanced Systems Format) ;\n-   les fichiers de type SAMI (Synchronized Accessible Media\n    Interchange) ne seraient pas correctement manipulés, et en\n    particulier les propriétés de la variable Class Name.\n\n## Solution\n\nSe référer au bulletin de sécurité MS08-033 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1444",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1444"
+    },
+    {
+      "name": "CVE-2008-0011",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0011"
+    }
+  ],
+  "links": [
+    {
+      "title": "Note de sécurité ZDI-08-040 du 10 juin 2008 :",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-08-040"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-307",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-06-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été identifiées dans Microsoft DirectX. Elles\npeuvent être exploitées à distance par le biais d'un fichier multimédia\nspécialement conçu afin d'exécuter du code arbitraire sur le système\nvulnérable.\n",
+  "title": "Vulnérabilités dans Microsoft DirectX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS08-033 du 10 juin 2008",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-033.mspx"
+    }
+  ]
+}

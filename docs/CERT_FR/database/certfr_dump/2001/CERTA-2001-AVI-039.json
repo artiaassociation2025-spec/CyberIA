@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Millenium Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Plus! 98 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nWindows Plus!98 est une suite d'utilitaires permettant d'étendre les\nfacultés de Windows 98 et 98 deuxième édition. Un de ces utilitaires\npermet de faire de la compression de fichiers en y associant un mot de\npasse. Cette fonctionnalité est également présente sous Windows\nMillenium Edition.\n\nLors de la compression des données, les mots de passe sont stockés sur\nla machine sous le répertoire Windows, dans le fichier dynazip.log.\n\nUn utilisateur mal intentionné peut, dans le cas où il a accès à ce\nrepertoire, récupérer ce fichier et découvrir ainsi la liste des mots de\npasse.\n\n## Solution\n\n-   Télécharger le correctif (version US) sur le site Microsoft :\n    -   Windows Plus! 98 :\n\n            http://download.microsoft.com/download/win98/update/147115/w98/en-us/252694usa8.exe\n\n    -   Windows Millenium Edition :\n\n            http://download.microsoft.com/download/winme/update/14715/winme/en-us/252694usam.exe\n-   Supprimer le fichier dynazip.log dans le répertoire Windows ;\n-   Changer tous les mots de passe des fichiers compressés.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-019.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-039",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-03-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Compromission des mots de passe"
+    }
+  ],
+  "summary": "Un utilisateur ayant un accès sur une machine utilisant le système de\nprotection des fichiers compressés sous Windows Plus!98 ou Windows\nMillenium Edition peut avoir accès à la liste des mots de passe de ces\nfichiers.\n",
+  "title": "Vulnérabilité dans la protection des fichiers compressés sous Windows Plus!98 et Me",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-019",
+      "url": null
+    }
+  ]
+}

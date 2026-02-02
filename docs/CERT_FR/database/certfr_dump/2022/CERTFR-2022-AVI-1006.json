@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Grafana versions 9.x antérieures à 9.2.4",
+      "product": {
+        "name": "Grafana",
+        "vendor": {
+          "name": "Grafana Labs",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Grafana versions 8.x antérieures à 8.5.15",
+      "product": {
+        "name": "Grafana",
+        "vendor": {
+          "name": "Grafana Labs",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-39307",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-39307"
+    },
+    {
+      "name": "CVE-2022-39306",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-39306"
+    },
+    {
+      "name": "CVE-2022-39328",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-39328"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-1006",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-11-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Grafana. Elles\npermettent à un attaquant de provoquer une atteinte à la confidentialité\ndes données et une élévation de privilèges.\n",
+  "title": "Multiples vulnérabilités dans Grafana",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Grafana GHSA-3p62-42x7-gxg5 du 08 novembre 2022",
+      "url": "https://github.com/grafana/grafana/security/advisories/GHSA-3p62-42x7-gxg5"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Grafana GHSA-vqc4-mpj8-jxch du 08 novembre 2022",
+      "url": "https://github.com/grafana/grafana/security/advisories/GHSA-vqc4-mpj8-jxch"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Grafana GHSA-2x6g-h2hg-rq84 du 08 novembre 2022",
+      "url": "https://github.com/grafana/grafana/security/advisories/GHSA-2x6g-h2hg-rq84"
+    }
+  ]
+}

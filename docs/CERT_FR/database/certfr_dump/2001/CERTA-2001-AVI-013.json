@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco CSS 11050 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco CSS 11150 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco CSS 11800.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes commutateurs CISCO de la série 11000 peuvent être configurés pour\nque l'accès telnet soit restreint ou complet.\n\nDans le cas d'un accès restreint, un utilisateur non authentifié (dont\nle compte n'est pas connu par le commutateur) peut par le biais d'une\nrequête sur un nom de fichier trop long (débordement de pile) entraîner\nun blocage du commutateur.\n\nDans le cas d'une configuration en accès complet, la même vulnérabilité\npermet de visualiser certains fichiers de configuration ainsi que la\nstructure des répertoires du commutateur.\n\n## Solution\n\nLes mises à jour ainsi que les modifications à effectuer sont\ndisponibles sur le site CISCO :\n\n    http://www.cisco.com/univercd/cc/td/doc/product/webscale/css/bsccfggd/profiles.htm\n\n    http://www.cisco.com/univercd/cc/td/doc/product/webscale/css/advcfggd/sgacleql.htm\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-013",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-02-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Accès aux fichiers de configuration"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, par le biais d'une connection\ntelnet, entraîner un déni de service ou visualiser les fichiers de\nconfiguration du commutateur cible.\n",
+  "title": "Vulnérabilités sur les commutateurs CISCO série CSS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO",
+      "url": "http://www.cisco.com/warp/public/707/arrowpoint-cli-filesystem-pub.shtml"
+    }
+  ]
+}

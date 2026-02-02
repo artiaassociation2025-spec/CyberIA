@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Outlook 2000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Outlook 2002.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne option de Outlook permet de choisir Word comme éditeur de texte pour\nrépondre au courrier électronique. Lors de la lecture d'un mél, Outlook\nutilise les paramètres de sécurité d'Internet Explorer. Par contre si la\nréponse s'effectue par le biais de Word, ce sont les paramètres de Word\nqui seront utilisés. Un utilisateur répondant à un courrier contenant un\nscript malicieux exécutera alors, lors de la réponse, ce script sur sa\nmachine.\n\n## Contournement provisoire\n\nNe pas selectionner WORD pour répondre au courrier dans la configuration\nd'Outlook.\n\n## Solution\n\nSe référer au bulletin de sécurité de Microsoft (voir paragraphe\nDocumentation) pour connaitre la disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-021.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-087",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-04-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Un utilisateur d'Outlook utilisant l'option Word pour répondre à son\ncourrier électronique peut exécuter à son insu du code arbitraire sur sa\nmachine.\n",
+  "title": "Vulnérabilité de l'éditeur de méls de Microsoft Outlook",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS02-021",
+      "url": null
+    }
+  ]
+}

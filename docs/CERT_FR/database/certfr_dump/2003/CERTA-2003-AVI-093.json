@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows NT 4.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nWindows Media Services est une extention ISAPI (Internet Server API)\npour IIS permettant de délivrer des flux audio et vidéo.\n\n  \n\nAu moyen d'une requête judicieusement composée, un utilisateur mal\nintentionné peut exploiter une vulnérabilité présente dans le composant\nnsiislog.dll afin d'exécuter du code arbitraire à distance ou provoquer\nun déni de service par arrêt du serveur IIS.\n\n## Solution\n\nAppliquer le correctif fourni par Microsoft :\n\n    http://www.microsoft.com/technet/security/bulletin/MS03-019.asp\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-093",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-05-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de Microsoft Windows Media Services Extension",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS03-019 de Microsoft",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "CISCO IOS 11.X",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn utilisateur mal intentionné peut déterminer la liste des utilisateurs\ndéfinis localement en analysant les messages id'erreur renvoyés lors\nd'une authentification sur le routeur via Telnet.\n\n## Solution provisoire\n\nDésactiver Telnet et utiliser SSH ou bien l'authentification de type\n`AAA new-model`.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité CISCO \"Enumerating Locally Defined Users  in CISCO IOS\" :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sn-20030724-ios-enum.shtml"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-128",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans l'IOS de Cisco permettant à un\nindividu mal intentionné de lister les utilisateurs définis localement.\n",
+  "title": "Vulnérabilité dans CISCO IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO \"Enumerating Locally Defined Users in CISCO IOS\"",
+      "url": null
+    }
+  ]
+}

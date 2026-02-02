@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Solaris 7, 8 et 9.</P>",
+  "content": "## Description\n\nLe fichier `.forward` situé dans le répertoire courant d'un utilisateur\nd'un serveur de messagerie sendmail, permet de mettre en oeuvre un\nmécanisme de redirection des messages.\n\nUne vulnérabilité dans la gestion de ce fichier sous cette version de\nsendmail de Solaris permet à un utilisateur mal intentionné d'effectuer\nun déni de service ou bien d'obtenir les privilèges de l'utilisateur\n`root`.\n\n## Solution\n\nAppliquer le correctif fourni par SUN (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-043",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans la gestion du fichier \".forward\" de sendmail sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Alerte de sécurité de SUN #50904",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalerte%2F50904"
+    }
+  ]
+}

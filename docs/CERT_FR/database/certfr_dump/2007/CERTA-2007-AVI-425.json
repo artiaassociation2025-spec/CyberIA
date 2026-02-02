@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>libpng versions 1.2.21 et versions  antérieures.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent la librairie libpng :\n\n-   une erreur dans la fonction de manipulation de profil peut être\n    exploitée afin de provoquer un dysfonctionnement de l'application\n    utilisant cette bibliothèque ;\n-   une erreur lors d'une mauvaise utilisation de la fonction sizeof()\n    permet d'engendrer un dysfonctionnement de l'application utilisant\n    cette bibliothèque ;\n-   des erreurs dans les opérations mal contrôlées d'écriture de\n    plusieurs fonctions peuvent être exploitées pour obtenir un\n    dysfontionnement de l'application utilisant cette bibliothèque.\n\n## Solution\n\nSe référer au bulletin de sécurité sur le site du projet pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5266",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5266"
+    },
+    {
+      "name": "CVE-2007-5268",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5268"
+    },
+    {
+      "name": "CVE-2007-5269",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5269"
+    }
+  ],
+  "links": [
+    {
+      "title": "Le site officiel du projet libpng :",
+      "url": "http://www.libpng.org/pub/png/libpng.html"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2007:0992 du 23 octobre    2007 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0992.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200711-08 du 07 novembre    2007 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200711-08.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-538-1 du 25 octobre 2007 :",
+      "url": "http://www.ubuntu.com/usn/usn-538-1"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-425",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-10-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE et des références aux bulletins de sécurité Ubuntu et Red Hat.",
+      "revision_date": "2007-11-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout d'une référence CVE et de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2007-11-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités découvertes dans libpng permettent à un\nutilisateur malveillant d'effectuer un déni de service à distance.\n",
+  "title": "Multiples vulnérabilités dans libpng",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce sur le site officiel du projet libpng",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows XP Professional x64 Edition (Service Pack 2 compris).",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le service Universal Plug and\nPlay (UPnP) de Microsoft Windows. Ce service a pour but de faciliter la\ncommunication entre périphériques, et s'appuie fréquemment sur les\nprotocoles IP, TCP/UDP et HTTP. Outre une phase de découverte des\nservices disponibles dans le réseau, il offre aussi la possibilité\nd'envoyer des actions et des notifications d'événements (mises à jour du\nservice par exemple). Ce service est largement mise en œuvre, et se\ntrouve bien souvent activé automatiquement dans les configurations par\ndéfaut des appareils. Il fait partie des exceptions autorisées par le\npare-feu Windows dans son installation native.\n\nLe système ne manipulerait pas correctement certaines requêtes HTTP. Une\npersonne malveillante pourrait donc envoyer à distance un paquet\nspécialement construit vers le système vulnérable, et ainsi prendre le\ncontrôle total de celui-ci.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-1204",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1204"
+    }
+  ],
+  "links": [
+    {
+      "title": "Informations sur le service UPnP (Universal Plug and Play)    :",
+      "url": "http://www.upnp.org"
+    },
+    {
+      "title": "Bulletin de sécurité iDefense du 10 avril 2007 :",
+      "url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=509"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-166",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-04-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans le service <span\nclass=\"textit\">Universal Plug and Play</span> (UPnP) de Microsoft\nWindows. Une personne malveillante pourrait l'exploiter en envoyant un\npaquet spécialement construit vers le système vulnérable, et ainsi\nprendre le contrôle total de celui-ci.\n",
+  "title": "Vulnérabilité dans le service UPnP de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-019 du 10 avril 2007",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-019.mspx"
+    }
+  ]
+}

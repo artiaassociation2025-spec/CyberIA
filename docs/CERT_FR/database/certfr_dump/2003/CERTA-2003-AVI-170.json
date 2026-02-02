@@ -1,0 +1,125 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Server 64 bit Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 64 bit Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000, Service Pack 2, 3 et 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT Workstation 4.0, Service Pack 6a ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT Server 4.0, Terminal Server Edition, Service Pack 6a ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT Server 4.0, Service Pack 6a ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 64 bit Edition Version 2003 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Gold, Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes messages Windows permettent aux processus interactifs de réagir aux\névénements utilisateur ou de communiquer avec les autres processus\ninteractifs.\n\nL'une des fonctions de la bibliothèque `User32.dll` qui permet de\nfournir la liste des options d'accès aux utilisateurs ne valide pas\ncorrectement certains de ses paramètres pour les messages Windows qui\nlui sont envoyés. L'envoi d'un message malicieusement formé à un\nprocessus interactif peut faire exécuter aux contrôles `ListBox` et\n`ComboBox` du code arbitraire.\n\nUn utilisateur mal intentionné peut utiliser cette vulnérabilité\nprésente dans toutes les applications mettant en œuvre ces contrôles\nafin d'éléver ses privilèges.\n\n## Solution\n\nAppliquer le correctif suivant la version de Microsoft Windows concernée\n(cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité #MS03-045 de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS03-045.asp"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-170",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-10-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une fonction de la bibliothèque `User32.dll` présente une vulnérabilité\nde type débordement de mémoire. Cette fonction est utilisée par les\ncontrôles `ListBox` et `ControlBox`.\n",
+  "title": "Vulnérabilité dans les contrôles ListBox et ComboBox",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin #MS03-045 de Microsoft",
+      "url": null
+    }
+  ]
+}

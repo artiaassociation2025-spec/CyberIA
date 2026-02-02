@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">IBM WebSphere Application Server</SPAN>  versions 6.0, 6.1 et 7.0.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans IBM WebSphere\nApplication Server :\n\n-   par le biais d'une requête spécifiquement constituée, il est\n    possible de provoquer un déni de service à distance (CVE-2010-0775)\n    ;\n-   le composant Web Container ne gère pas correctement certaines\n    requêtes GET, ce qui permet de réaliser un déni de service à\n    distance (CVE-2010-0776) ;\n-   une erreur lors de la gestion, par le composant Web Container, des\n    fichiers dont la longueur du nom est supérieure à 20 caractères\n    provoque le renvoi d'un autre fichier (CVE-2010-0777).\n\n## Solution\n\nSe référer aux bulletins de sécurité d'ISS X-Force (cf. section\nDocumentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0775",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0775"
+    },
+    {
+      "name": "CVE-2010-0777",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0777"
+    },
+    {
+      "name": "CVE-2010-0776",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0776"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurité d'ISS X-Force du 11 mai 2010 :",
+      "url": "http://xforce.iss.net/xforce/xfdb/58556"
+    },
+    {
+      "title": "Bulletins de sécurité d'ISS X-Force du 11 mai 2010 :",
+      "url": "http://xforce.iss.net/xforce/xfdb/58555"
+    },
+    {
+      "title": "Bulletins de sécurité d'ISS X-Force du 11 mai 2010 :",
+      "url": "http://xforce.iss.net/xforce/xfdb/58557"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-225",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-05-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans <span class=\"textit\">IBM WebSphere\nApplication Server</span> permettent de réaliser un déni de service à\ndistance et d'accéder indûment à des fichiers.\n",
+  "title": "Vulnérabilités dans IBM WebSphere Application Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité ISS X-Force du 11 mai 2010",
+      "url": null
+    }
+  ]
+}

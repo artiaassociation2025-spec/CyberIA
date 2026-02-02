@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tout serveur sous Microsoft SQL Server  7.0 ou 2000 sur lequel est installé <CODE>MDAC</CODE> (Microsoft  Data Access Components) versions <CODE>2.5 SP2</CODE> et  antérieures, <CODE>2.6 SP2</CODE> et antérieures et <CODE>2.7  Gold</CODE> et antérieures.</p>",
+  "content": "## Description\n\nMicrosoft `MDAC` (Microsoft Data Access Components) fournit des\nfonctions pour exploiter une base de données Microsoft SQL Server. Un\nutilisateur mal intentionné peut envoyer une requête mal formée à ce\nmodule qui provoque un débordement de mémoire tampon conduisant, dans\ncertains cas, à l'exécution de code arbitraitre sur le serveur. Ce code\nsera exécuté avec les privilèges de l'application SQL Server. Dans le\ncas d'une installation standard, il s'agira des droits d'un utilisateur\ndu domaine. L'utilisateur mal intentionné pourra, entre autre, modifier,\najouter et effacer des données dans la base.  \n\nLe module `MDAC` est fourni dans de nombreuses applications de Microsoft\nWindows mais seuls les serveurs SQL sont vulnérables.  \n\nPour connaitre la version de `MDAC` installée sur votre système,\nexaminez la clé suivante dans la base de registre de votre serveur :  \n\n`HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\DataAccess`.  \n\nLa clé `FullInstallVer` vous fournit une valeur de type x.xx.yyyy.y où\n`x.xx` correspond à la version de `MDAC` installée.\n\n## Solution\n\nInstallez le correctif correspondant à votre version de `MDAC`. Ce\ncorrectif est disponible en téléchargement sur le site Web de Microsoft\n(cf la section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-164",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Débordement de mémoire"
+    }
+  ],
+  "summary": "Un débordement de mémoire présent dans Microsoft `MDAC`, installé par\ndéfaut sur les serveurs Microsoft SQL Server, permet à un utilisateur\nmal intentionné de provoquer un débordement de mémoire et, dans\ncertaines conditions, l'exécution de code arbitraire.\n",
+  "title": "Débordement de mémoire dans MDAC pour Microsoft SQL Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #MS02-040 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-040.asp"
+    }
+  ]
+}

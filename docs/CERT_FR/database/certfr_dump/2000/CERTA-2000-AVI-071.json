@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous les Systèmes Unix et Linux utilisant BIND versions 8.2.2  et 8.2.2-P1 à P6.</P>",
+  "content": "## Description\n\nBIND est un démon de service de nom (DNS) trés répandu.\n\nDe nouvelles vulnérabilités ont été découvertes sur BIND. Elles\npermettent de bloquer les serveurs DNS.\n\n-   Une utilisation détournée de zxfer, grâce aux outils de transfert de\n    zone (named-xfer et dig) présents dans la distribution de BIND,\n    permet de bloquer le serveur de nom d'un site à distance.\n-   Une mauvaise implémentation de l'outil de vérification des\n    signatures entraîne une division par zéro qui bloque le serveur.\n    Cette erreur n'est pas présente dans le la version 8.2.2-P6\n    (corrigée avec le service pack 6) de BIND.\n-   Une erreur dans la façon de gérer les pointeurs dans les tables lors\n    de l'utilisation de la compression peut entraîner l'entrée du\n    programme dans une boucle infinie qui bloque elle aussi le serveur.\n-   Beaucoup d'autres vulnérabilités sont présentes dans les versions\n    antérieures à 8.2.2-P1 (service pack 1) incluant les versions 8.2.1\n    et inférieures. En particulier, un accès à distance avec les\n    privilèges de l'administrateur du service BIND est possible à l'aide\n    d'un script, et de multiples autres vulnérabilités provoquant des\n    dénis de service sont exploités.\n\n## Contournement provisoire\n\nPour éviter d'être corrompu par une machine utilisant la vulnérabilité\nzxfer, n'autoriser l'exécution d'un transfert de zone que depuis les\nmachines de confiance (serveurs du domaine parent, ou bien serveur(s)\nsecondaire(s) autoritaire(s) de la zone).\n\n## Solution\n\nTélécharger les sources du correctif à appliquer (Service Pack 7) :\n\n    ftp://ftp.isc.org/isc/bind/src/8.2.2-P7/bindsrc.tar.gz\n\nOu bien appliquer le correctif proposé par votre éditeur du système sur\nlequel BIND est installé (Voir les avis de sécurité par éditeur dans le\nparagraphe documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "celui de Linux-Mandrake :",
+      "url": "http://www.linux-mandrake.com/en/updates/MDKSA-2000-067.php3?dis=7.2"
+    },
+    {
+      "title": "l'avis de Caldera Systems :",
+      "url": "http://www.calderasystems.com/support/security/advisories/CSSA-2000-04.0.0.txt"
+    },
+    {
+      "title": "l'avis de Debian :",
+      "url": "http://www.debian.org/security/2000/20001112"
+    },
+    {
+      "title": "l'avis du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2000-20.html"
+    },
+    {
+      "title": "L'avis de l'ISC :",
+      "url": "http://www.isc.org/products/BIND/bind-security.html"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-071",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-11-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès à distance avec privilèges"
+    },
+    {
+      "description": "Plusieurs dénis de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de BIND permettent à un utilisateur mal\nintentionné de bloquer le serveur de Nom (DNS).\n",
+  "title": "Multiples vulnérabilités de BIND",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2000-20 du CERT/CC",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de l'Internet Software Consortium",
+      "url": null
+    }
+  ]
+}

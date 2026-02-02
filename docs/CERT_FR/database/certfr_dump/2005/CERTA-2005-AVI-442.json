@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "F-Secure Anti-Virus Linux Gateway versions antérieures à 2.16.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "F-Secure Anti-Virus Internet Gatekeeper pour Linux versions antérieures à 2.15.484 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'installation des produits F-Secure Anti-Virus Internet Gatekeeper pour\nLinux et F-Secure Anti-Virus Linux Gateway entraîne la création de\nscripts CGI ayant des droits en exécution pour tous avec le paramètre\nSUID activé. Un utilisateur local peut obtenir les droits de\nl'administrateur en utilisant ces scripts.\n\n## Contournement provisoire\n\nModifier les paramètres des scripts à l'aide des commandes ci-dessous.\n\n-   Pour F-Secure Anti-Virus Internet Gatekeeper pour Linux :\n\n    chmod -s /opt/f-secure/fsigk/cgi/\\*suid.cgi\n\n-   Pour F-Secure Anti-Virus Linux Gateway :\n\n    chmod -s /home/virusgw/cgi/\\*suid.cgi\n\n## Solution\n\nAppliquer le correctif tel qu'indiqué dans le bulletin de sécurité\nF-Secure (voir Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FSC-2005-3 de F-Secure du 07 novembre  2005 :",
+      "url": "http://www.f-secure.com/security/fsc-2005-3.shtml"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-442",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans divers produits F-Secure",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FSC-2005-3 de F-Secure du 07 novembre 2005",
+      "url": null
+    }
+  ]
+}

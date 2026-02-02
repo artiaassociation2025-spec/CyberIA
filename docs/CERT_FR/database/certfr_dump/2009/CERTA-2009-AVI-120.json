@@ -1,0 +1,94 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>OpenSSL versions antérieures à la 0.9.8k.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans OpenSSL :\n\n-   une erreur dans la fonction ASN1_STRING_print_ex() permet de\n    provoquer un arrêt inopiné de l'application (crash) ;\n-   une vulnérabilité dans la gestion des erreurs permet dans certaines\n    conditions de faire passer une fausse signature pour valide ;\n-   une erreur dans la gestion des structures ANS1 mal formées permet de\n    provoquer un arrêt inopiné de l'application (crash).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0789",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0789"
+    },
+    {
+      "name": "CVE-2009-0591",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0591"
+    },
+    {
+      "name": "CVE-2009-0590",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0590"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200904-08 du 07 avril 2009    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200904-08.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2009:087 du 03 avril    2009 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:087"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD FreeBSD-SA-09:08.opensll du 22    avril 2009 :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-09:08.opensll.asc"
+    },
+    {
+      "title": "Bulletin de sécurité Sun #258048 du 04 mai 2009 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-258048-1"
+    },
+    {
+      "title": "Bulletin de sécurité OpenSuse SUSE-SR:2009:010 du 12 mai    2009 :",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2009-05/msg00000.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1763 du 06 avril 2009 :",
+      "url": "http://www.debian.org/security/2009/dsa-1763"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD #012_OpenSSL du 08 avril 2009    :",
+      "url": "http://www.openbsd.org/errata44.html#012_openssl"
+    },
+    {
+      "title": "Bulletin de sécurité HP SSRT090059 du 10 juin 2009 :",
+      "url": "https://www13.itrc.hp.com/service/cki/docDisplay.do?docId=emr_na-c017626423"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-750-1 du 30 mars 2009 :",
+      "url": "http://www.ubuntu.com/usn/usn-750-1"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD #001_OpenSSL du 08 avril 2009    :",
+      "url": "http://www.openbsd.org/errata45.html#001_openssl"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-120",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-03-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo, Debian, Ubuntu, Sun, FreeBSD et OpenBSD.",
+      "revision_date": "2009-05-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Mandriva, HP et Suse.",
+      "revision_date": "2009-06-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans OpenSSL permettent à une personne\nmalintentionnée d'effectuer un déni de service à distance ou de\ncontouner la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans OpenSSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenSSL du 25 mars 2009",
+      "url": "http://www.openssl.org/news/secadv_20090325.txt"
+    }
+  ]
+}

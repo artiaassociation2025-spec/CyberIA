@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD 6.x (SA-06-15 et SA-06-16).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 4.x (SA-06-16) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 5.x (SA-06-15 et SA-06-16) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nFreeBSD comportent deux erreurs dans son système de base :\n\n-   Une erreur dans la mise en œuvre du serveur NIS (Network Information\n    System) de FreeBSD permet à un utilisateur distant de contourner les\n    restrictions éventuelles configurées dans ce serveur ;\n-   une erreur dans la mise en œuvre du support du système de fichiers\n    SMBFS dans FreeBSD permet à un utilisateur distant de contourner les\n    mesures de sécurité de type «cage» (chroot) si cette cage se situe\n    sur un système de fichiers de type SMBFS.  \n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-06-16 du 31 mai 2006 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-06-16.smbfs.asc"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-06-15 du 31 mai 2006 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-06-15.ypserv.asc"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-226",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-06-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérbilités présentes dans FreeBSD permettent à un utilisateur\ndistant mal intentionné de contourner la politique de sécurité du\nsystème.\n",
+  "title": "Multiples vulnérabilités dans FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurités FreeBSD-SA-06:15 et FreeBSD-SA-06:16 du 31 mai 2006",
+      "url": null
+    }
+  ]
+}

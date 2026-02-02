@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GraphicsMagick versions antérieures à 1.1.6-r1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ImageMagick versions antérieures à 6.2.2.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nImageMagick et GraphicsMagick sont des ensembles d'outils permettant la\nlecture, la création et la manipulation d'images dans de nombreux\nformats. Une erreur dans leurs décodeurs XWD (X Window Dump) permet à un\nutilisateur distant mal intentionné de provoquer un déni de service par\nle biais d'une image malicieusement constituée.\n\n## Solution\n\nle version 6.2.2.3 de ImageMagick ainsi que la version 1.1.6-r1 de\nGraphicsMagick corrigent le problème.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200505-16 du 21 mai 2005 :",
+      "url": "http://security.gentoo.org/glsa/glsa-200505-16.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:107 du 28 juin    2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:107"
+    },
+    {
+      "title": "Mise à jour de sécurité Fedora Core 3 pour ImageMagick du    26 mai 2005 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/3/"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-203",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-06-13T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence à la mise-à-jour Fedora. Ajout référence au bulletin de sécurité de Mandriva.",
+      "revision_date": "2005-06-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans ImageMagick et GraphicsMagick permet à un\nutilisateur distant mal intentionné de provoquer un déni de service.\n",
+  "title": "Vulnérabilité d'ImageMagick et GraphicsMagick",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA 200505-16 du 21 mai 2005",
+      "url": null
+    }
+  ]
+}

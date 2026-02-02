@@ -1,0 +1,94 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM AIX 5.X.",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\n-   La première vulnérabilité affecte la commande lspath. Elle permet à\n    un utilisateur local mal intentionné de porter atteinte à la\n    confidentialité des données (CAN-2005-0231) ;\n-   la seconde vulnérabilité, également de type débordement de la\n    mémoire, est présente dans la commande ipl_varyon. Elle permet à un\n    individu malveillant d'exécuter du code arbitraire avec les\n    privilèges du compte administrateur (CAN-2005-0262) ;\n-   la dernière vulnérabilité, de type débordement de la mémoire, est\n    présente dans la commande netpmon. Elle permet à un utilisateur\n    local mal intentionné d'exécuter du code arbitraire avec les\n    privilèges du compte administrateur (CAN-2005-0263).\n\n## Contournement provisoire\n\n-   Autoriser uniquement les personnes de confiance à accéder aux\n    systèmes critiques ;\n-   restreindre le groupe system aux utilisateurs de confiance ;\n-   retirer de l'application lspath le drapeau setuid ;\n-   retirer de l'application ipl_varyon le drapeau setuid ;\n-   retirer de l'application netpmon le drapeau setuid.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2005-0261",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0261"
+    },
+    {
+      "name": "CVE-2005-0263",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0263"
+    },
+    {
+      "name": "CVE-2005-0262",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0262"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de l'éditeur concernant AIX 5.1 :",
+      "url": "https://techsupport.services.ibm.com/server/pseries.subscriptionSvcs?mode=1&heading=AIX51&topic=SECURITY&month=ALL"
+    },
+    {
+      "title": "Bulletin de sécurité de l'éditeur concernant AIX 5.3 :      https://techsupport.services.ibm.com/server/pseries.subscriptionSvcs?mode=1&heading=AIX53&topic=SECURITY&month=ALL",
+      "url": "https://techsupport.services.ibm.com/server/pseries.subscriptionSvcs?mode=1&heading=AIX51&topic=SECURITY&month=ALL"
+    },
+    {
+      "title": "Correctif de l'éditeur ipl_varyon :",
+      "url": "ftp://aix.software.ibm.com/aix/efixes/security/ipl_varyon_efix.tar.Z"
+    },
+    {
+      "title": "Bulletin de sécurité de l'éditeur concernant AIX 5.2 :",
+      "url": "https://techsupport.services.ibm.com/server/pseries.subscriptionSvcs?mode=1&heading=AIX52&topic=SECURITY&month=ALL"
+    },
+    {
+      "title": "Correctif de l'éditeur lspath :",
+      "url": "ftp://aix.software.ibm.com/aix/efixes/security/lspath_efix.tar.Z"
+    },
+    {
+      "title": "Correctif de l'éditeur netpmon :",
+      "url": "ftp://aix.software.ibm.com/aix/efixes/security/netpmon_efix.tar.Z"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-075",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-02-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Trois vulnérabilités présentes dans les systèmes AIX de IBM permettent à\nun utilisateur local mal intentionné d'exécuter du code arbitraire avec\nles privilèges du compte administrateur ou de porter atteinte à\nl'intégrité des données présentes sur le système.\n",
+  "title": "Multiples vulnérabilités des systèmes AIX de IBM",
+  "vendor_advisories": [
+    {
+      "published_at": "2005-02-10",
+      "title": "Bulletin de sécurité n˚196 d'iDEFENSE ``IBM AIX netpmonipl_veryon Local Buffer Overflow Vulnerability''",
+      "url": "http://www.idefense.com/application/poi/display?id=196&type=vulnerabilities"
+    },
+    {
+      "published_at": "2005-02-10",
+      "title": "Bulletin de sécurité n˚195 d'iDEFENSE ``IBM AIX lspath Local File Access Vulnerability''",
+      "url": "http://www.idefense.com/application/poi/display?id=195&type=vulnerabilitiesNone"
+    },
+    {
+      "published_at": "2005-02-10",
+      "title": "Bulletin de sécurité n˚197 d'iDEFENSE ``IBM AIX netpmon Local Buffer Overflow Vulnerability''",
+      "url": "http://www.idefense.com/application/poi/display?id=197&type=vulnerabilities"
+    }
+  ]
+}

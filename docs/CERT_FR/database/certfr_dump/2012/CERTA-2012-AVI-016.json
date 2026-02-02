@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PowerDNS Authoritative Server versions 3.x inférieures à la 3.0.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PowerDNS Authoritative Server versions 2.x inférieures à la 2.9.22.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur dans le traitement des paquets « réponse DNS » par PowerDNS\npermet à un attaquant, au moyen de paquets UDP spécialement conçus,\nd'épuiser les ressources systèmes en forçant le serveur à répondre en\nboucle à ses propres réponses.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-0206",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0206"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité PowerDNS Authoritative Server du 10    janvier 2012 :",
+      "url": "http://www.powerdns.com/news/powerdns-security-advisory-2012-01.html"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-016",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-01-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Un attaquant peut réaliser un déni de service à distance à l'aide de\npaquets UDP spécialement conçus.\n",
+  "title": "Vulnérabilité dans PowerDNS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PowerDNS Authoritative Server du 10 janvier 2012",
+      "url": null
+    }
+  ]
+}

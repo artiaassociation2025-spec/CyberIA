@@ -1,0 +1,121 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Explorer 5.0 Service Pack 4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 6 pour Microsoft Windows Server 2003 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 6 pour Microsoft Windows XP Service Pack 2.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 6 Service Pack 1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 6 pour Microsoft Windows Server 2003 Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités existent dans certaines versions du navigateur\nMicrosoft Internet Explorer. Les plus importantes sont détaillées\nci-dessous :\n\n-   l'appel de certains objets HTML (DHTML Method Call) peut provoquer\n    un débordement de mémoire. Un utilisateur malveillant peut profiter\n    de cette vulnérabilité au moyen d'une page web spécialement conçue\n    pour exécuter du code arbitraire à distance.\n-   la manipulation de plusieurs évènements dans un élément HTML n'est\n    pas correctement gérée par Internet Explorer. De la même façon, un\n    utilisateur malveillant peut utiliser ses vulnérabilités dans une\n    page web dédiée, et ainsi exécuter du code arbitraire sur toute\n    machine vulnérable visitant cette page.\n-   une application HTML (connue sous le nom de HTA) construite d'une\n    certaine manière peut contourner le contrôle de sécurité opéré par\n    Internet Explorer.\n-   l'analyse syntaxique du code HTML par Internet Explorer (HTML\n    Parsing) présente plusieurs vulnérabilités permettant l'exécution de\n    code arbitraire à distance au moyen d'une page web contenant des\n    balises HTML non conformes.\n-   certaines adresses réticulaires (URLs) contenant des caractères\n    particuliers à deux octets peuvent être utilisées pour exécuter du\n    code arbitraire à distance. Cette vulnérabilité ne devrait pas\n    concerner les versions françaises ou anglaises de Microsoft Internet\n    Explorer.\n-   un utilisateur malveillant peut usurper l'adresse affichée dans le\n    navigateur. Il peut ainsi provoquer l'affichage dans la barre\n    d'adressage d'une adresse qui ne correspond pas au site visité.\n    Cette technique est par exemple utilisable dans des cas de\n    filoutage.\n\n## Solution\n\nAppliquer le correctif tel qu'indiqué dans le bulletin de sécurité\nMicrosoft MS06-013 (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-1359",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1359"
+    },
+    {
+      "name": "CVE-2006-1191",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1191"
+    },
+    {
+      "name": "CVE-2006-1388",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1388"
+    },
+    {
+      "name": "CVE-2006-1245",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1245"
+    },
+    {
+      "name": "CVE-2006-1192",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1192"
+    },
+    {
+      "name": "CVE-2006-1190",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1190"
+    },
+    {
+      "name": "CVE-2006-1185",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1185"
+    },
+    {
+      "name": "CVE-2006-1186",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1186"
+    },
+    {
+      "name": "CVE-2006-1188",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1188"
+    },
+    {
+      "name": "CVE-2006-1189",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1189"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2006-AVI-150",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-04-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Microsoft Internet Explorer laissent la\npossibilité à un utilisateur malveillant d'exécuter du code arbitraire à\ndistance.\n",
+  "title": "Multiples vulnérabilités dans Microsoft Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-013 du 11 avril 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-013.mspx"
+    }
+  ]
+}

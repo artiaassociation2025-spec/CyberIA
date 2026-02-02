@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SquidGuard 1.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SquidGuard 1.4.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans SquidGuard :\n\n-   la première concerne une fonction du fichier sgLog.c qui, sous\n    certaines conditions, fait passer SquidGuard en mode d'urgence ; ce\n    qui a pour effet de désactiver le filtrage ;\n-   la seconde vulnérabilité est liée à un problème dans le traitement\n    des URLs de très grande taille qui empêche un filtrage correct des\n    liens analysés.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3700",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3700"
+    },
+    {
+      "name": "CVE-2009-3826",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3826"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurité de SquidGuard du 15 et du 19 octobre    2009 :",
+      "url": "http://www.squidguard.org/Downloads/Patches/1.3/Readme.Patch-20091019"
+    },
+    {
+      "title": "Bulletins de sécurité de SquidGuard du 15 et du 19 octobre    2009 :",
+      "url": "http://www.squidguard.org/Downloads/Patches/1.3/Readme.Patch-20091015"
+    },
+    {
+      "title": "Bulletins de sécurité de SquidGuard du 15 et du 19 octobre    2009 :",
+      "url": "http://www.squidguard.org/Downloads/Patches/1.4/Readme.Patch-20091015"
+    },
+    {
+      "title": "Bulletins de sécurité de SquidGuard du 15 et du 19 octobre    2009 :",
+      "url": "http://www.squidguard.org/Downloads/Patches/1.4/Readme.Patch-20091019"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-468",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-11-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans SquidGuard permettent à un\nutilisateur distant malintentionné de contourner la politique de\nsécurité.\n",
+  "title": "Multiples vulnérabilités dans SquidGuard",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité SquidGuard du 15 et 19 octobre 2009",
+      "url": null
+    }
+  ]
+}

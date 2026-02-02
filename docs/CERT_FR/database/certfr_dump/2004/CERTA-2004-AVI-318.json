@@ -1,0 +1,91 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenOffice 1.1.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenOffice",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "StarOffice 7 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenOffice",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nOpenOffice et StarOffice sont deux suites bureautiques.\n\nOpenOffice et StarOffice ne gèrent pas correctement les droits d'accès\nlors de la création des fichiers temporaires. Un utilisateur mal\nintentionné peut exploiter cette vulnérabilité pour accéder aux données\nd'un tiers.\n\n## Contournement provisoire\n\nPositionner la variable d'environnement \\$UMASK permettant de\npositionner le droits d'accès par défaut ou positionner les variables\nd'environnement \\$TMPDIR vers un répertoire fils du répertoire \\$HOME de\nl'utilisateur.\n\n## Solution\n\nSe référer aux différents bulletins de sécurité de l'éditeur pour\nl'obtention des correctifs (cf. section documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200410-17 du 20 octobre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200410-17.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2004:446 du 15 septembre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-446.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:103 du 27    septembre 2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:103"
+    },
+    {
+      "title": "Bulletin de sécurité Secunia SA12302 du 13 septembre 2004 :",
+      "url": "http://secunia.com/advisories/12302"
+    },
+    {
+      "title": "Correctif pour StarOffice (Linux) :",
+      "url": "http://sunsolve.sun.com/search/advsearch.do?collection=PATCH&type=collections&max=50&language=en&queryKey5=116518&toDocument=yes"
+    },
+    {
+      "title": "Site d'OpenOffice :",
+      "url": "http://www.openoffice.org"
+    },
+    {
+      "title": "Correctif pour StarOffice (Solaris/x86) :",
+      "url": "http://sunsolve.sun.com/search/advsearch.do?collection=PATCH&type=collections&max=50&language=en&queryKey5=117073&toDocument=yes"
+    },
+    {
+      "title": "Correctif pour StarOffice (Solaris/sparc) :",
+      "url": "http://sunsolve.sun.com/search/advsearch.do?collection=PATCH&type=collections&max=50&language=en&queryKey5=116519&toDocument=yes"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-318",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Mandrake.",
+      "revision_date": "2004-09-29T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Gentoo.",
+      "revision_date": "2004-10-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité d'OpenOffice et StarOffice",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SA12302 de Secunia",
+      "url": null
+    }
+  ]
+}

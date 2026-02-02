@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Adobe Flash Player 9.0.124.0 ainsi que les versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans l'application Adobe\nFlash Player. Certaines de ces vulnérabilités avaient été partiellement\ncorrigées dans la branche 10. D'autres avaient été mentionnées dans le\nprécédent avis CERTA-2008-AVI-512 et le bulletin de sécurité Adobe\nAPSB08-18.\n\nEn particulier :\n\n-   l'application n'interprète pas correctement certains en-têtes de\n    réponses HTTP. Cette vulnérabilité peut être exploitée pour\n    construire des attaques par injection de code indirecte (cross-site\n    scripting) ;\n-   il serait possible pour un code malveillant de jouer avec la gestion\n    des noms de domaines et la politique d'origine commune mise en\n    oeuvre par les navigateurs pour accéder à des ressources internes\n    (DNS rebinding) ;\n-   l'interprétation des protocoles de la forme jar: ne s'effectue pas\n    correctement, sous certaines conditions. Cette vulnérabilité peut\n    être exploitée pour dérober des informations de navigation par\n    exemple.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). Les versions corrigeant ces\nvulnérabilités sont la 9.0.151.0 et la 10.0.12.36.\n",
+  "cves": [
+    {
+      "name": "CVE-2008-4820",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4820"
+    },
+    {
+      "name": "CVE-2008-4821",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4821"
+    },
+    {
+      "name": "CVE-2008-4822",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4822"
+    },
+    {
+      "name": "CVE-2008-4819",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4819"
+    },
+    {
+      "name": "CVE-2008-4818",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4818"
+    },
+    {
+      "name": "CVE-2008-4823",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4823"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité CERTA-2008-AVI-512 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2008-AVI-512/"
+    },
+    {
+      "title": "Bulletin de sécurité Adobe apsb08-20 du 05 novembre 2008 :",
+      "url": "http://www.adobe.com/support/security/bulletins/apsb08-20.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-546",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-11-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans l'application Adobe\nFlash Player. L'exploitation de ces dernières permet de contourner la\npolitique de sécurité de l'application (associée à celle du navigateur).\n",
+  "title": "Multiples vulnérabilités dans Adobe Flash Player",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Adobe APSB08-20 du 05 novembre 2008",
+      "url": null
+    }
+  ]
+}

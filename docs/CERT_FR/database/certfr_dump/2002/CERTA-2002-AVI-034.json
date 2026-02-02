@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Ucd-snmp versions 4.2.2 et antérieures.</p>",
+  "content": "## Description\n\nDes tests effectués par l'université finlandaise d'Oulu ont mis en\névidence la présence de vulnérabilités dans les routines de décodage et\nde traitement des messages SNMP dans de nombreuses implémentations (se\nréférer au bulletin d'alerte CERTA-2002-ALE-004 du CERTA).\n\nL'exploitation de vulnérabilités, de type débordement de mémoire,\nprésentes dans le paquetage ucd-snmp, permettent à un utilisateur mal\nintentionné d'exécuter du code arbitraire à distance avec les privilèges\nde l'administrateur root.\n\n## Contournement provisoire\n\n-   Ne démarrer l'agent SNMP que si celui-ci est nécessaire ;\n-   ne pas utiliser les noms de communautés positionnés lors de\n    l'installation par défaut ;\n-   filtrer les ports 161/udp et 162/udp utilisés par le protocole SNMP\n    V1 au niveau du garde-barrière afin d'empêcher l'exploitation de ces\n    vulnérabilités depuis l'Internet.\n\n## Solution\n\nIl est conseillé d'appliquer les correctifs des différents éditeurs\n(consultez la section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité DSA-111-1 de Debian :",
+      "url": "http://www.debian.org/security/2002/dsa-111"
+    },
+    {
+      "title": "Avis de sécurité RHSA-2001:163 de RedHat :",
+      "url": "http://www.redhat.com/support/errata/RHSA-2001-163.html"
+    },
+    {
+      "title": "Avis de sécurité MDKSA-2002:014 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/2001/MDKSA-2002-014.php"
+    },
+    {
+      "title": "Avis de sécurité FreeBSD-SA-02:11 de FreeBSD :",
+      "url": "ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-02:11.snmp.asc"
+    },
+    {
+      "title": "Avis de sécurité SuSE-SA:2002:12 de SuSE :",
+      "url": "http://www.suse.com/de/support/security/2002_012_ucdsnmp_txt.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-034",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence à l'avis SuSE dans la section documentation.",
+      "revision_date": "2002-05-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Le paquetage ucd-snmp comprend un ensemble d'outils (agent SNMP,\ngénération et capture de TRAP, etc) très utilisés sous Linux.\n\nDe multiples vulnérabilités présentes dans le paquetage ucd-snmp\npermettent à un utilisateur mal intentionné de réaliser un déni de\nservice ou d'exécuter du code arbitraire à distance avec les privilèges\nde l'administrateur root.\n",
+  "title": "Multiples vulnérabilités du paquetage ucd-snmp",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis RHSA-2001:163 de RedHat",
+      "url": null
+    }
+  ]
+}

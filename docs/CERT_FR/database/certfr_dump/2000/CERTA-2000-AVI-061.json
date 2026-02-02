@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Internet Information Server 4.0 et 5.0 sous Windows  NT et Windows 2000</P>",
+  "content": "## Description\n\nUne erreur dans Internet Information Server permet à un visiteur\nmal-intentionné, en utilisant une URL habilement conçue, d'avoir accès à\ntous les fichiers et répertoires présents sur le volume contenant les\npages web d'un serveur. Les privilèges qui lui sont accordés lors de cet\naccès, lui permettent d'exécuter des programmes sur la machine. Il\npourrait, par conséquent, endommager fortement le serveur.\n\n## Contournement provisoire\n\nLe compte servant à l'accès au site web par un visiteur est nommé\nIUSR_nomdemachine (où nomdemachine est le nom du serveur visité). Pour\naccéder au fichier d'un serveur web, cet utilisateur a les privilèges\nd'un utilisateur des groupes tout le monde et utilisateurs. Par défaut,\nla plupart des fichiers du système sont accessibles en lecture et\nexécution par ce groupe.\n\nSupprimer cette autorisation d'accès aux fichiers du système empêchera à\ntout intrus sans privilèges spéciaux d'exécuter des commandes sur le\nsystème.\n\nPour augmenter la sécurité, le répertoire contenant les pages web du\nsite doit être situé sur un volume différent de celui contenant le\nsystème du serveur.\n\n## Solution\n\nAppliquer le correctif de Microsoft :\n\n-   Pour Windows 2000 :\n\n        http://www.microsoft.com/windows2000/downloads/critical/q269862/default.asp\n\n-   Pour Windows NT :\n\n        http://www.microsoft.com/ntserver/nts/downloads/critical/q269862/default.asp\n\nNota : Les administrateurs ayant déjà appliqué le correctif de Microsoft\nindiqué dans leur bulletin ms00-057 (Comme recommandé dans l'avis\nCERTA-2000-AVI-028) ont corrigé cette vulnérabilité en même temps, il\nn'est pas nécessaire d'appliquer celui-ci.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "La FAQ du bulletin de sécurité :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-078.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-061",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-10-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Accès avec privilèges"
+    },
+    {
+      "description": "Modification d'un serveur web"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Microsoft Internet Information Server permet à un\nvisiteur mal intentionné d'usurper des privilèges qu'il n'a pas (accéder\nà n'importe quel fichier ou répertoire du volume contenant les pages\nweb).\n",
+  "title": "Vulnérabilité dans Internet Information Server sous Windows NT et 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-078.asp"
+    }
+  ]
+}

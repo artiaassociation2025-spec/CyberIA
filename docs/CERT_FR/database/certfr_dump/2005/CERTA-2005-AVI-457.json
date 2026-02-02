@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système utilisant <SPAN class=\n  \"textit\">SpamAssassin</SPAN>, en version source antérieure à la  3.1.0, pour filtrer les pourriels.</P>",
+  "content": "## Description\n\nSpamAssassin est un service de filtrage du courrier indésirable, écrit\nen Perl.\n\nUne expression régulière peu précise du code d'analyse des entêtes peut\ngénérer une explosion combinatoire et arrêter le processus en cours.\nSeul le fils analysant le message courant est impacté, pas l'ensemble du\nservice.\n\n## Solution\n\nMettre à jour en version source 3.1.0 au moins, ou se référer au\nbulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf.\nsection Documentation).\n\nGentoo Linux : la version 3.1.0 est stable pour la plupart des\narchitectures depuis le 14 novembre 2005.\n",
+  "cves": [
+    {
+      "name": "CVE-2005-3351",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-3351"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site internet de SpamAssassin :",
+      "url": "http://spamassassin.apache.org"
+    },
+    {
+      "title": "Fedora Core 3 du 09 novembre 2005 :",
+      "url": "http://www.redhat.com/archives/fedora-announce-list/2005-November/msg00028.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0129 du 07 mars 2006    :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2006-0129.html"
+    },
+    {
+      "title": "Fedora Core 4 du 09 novembre 2005 :",
+      "url": "http://www.redhat.com/archives/fedora-announce-list/2005-November/msg00029.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:221 du 02 décembre    2005 :",
+      "url": "http://frontal2.mandriva.com/security/advisories?name=MDKSA-2005:221"
+    },
+    {
+      "title": "Linux Fedora :       Fedora Core 3 du 09 novembre 2005 :          \n  Fedora Core 4 du 09 novembre 2005 :",
+      "url": "http://www.redhat.com/archives/fedora-announce-list/2005-November/msg00028.html"
+    },
+    {
+      "title": "Linux Fedora :       Fedora Core 3 du 09 novembre 2005 :          \n  Fedora Core 4 du 09 novembre 2005 :",
+      "url": "http://www.redhat.com/archives/fedora-announce-list/2005-November/msg00029.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-457",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva.",
+      "revision_date": "2005-12-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat.",
+      "revision_date": "2006-03-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Dégradation du filtrage du pourriel"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut transmettre des messages\nvolontairement mal formés qui vont provoquer un déni de service du\nprocessus d'analyse ce qui va empêcher l'identification comme pourriel.\n",
+  "title": "Déni de service sur SpamAssassin",
+  "vendor_advisories": []
+}

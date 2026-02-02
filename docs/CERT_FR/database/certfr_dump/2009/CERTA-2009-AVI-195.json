@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions de ntp antérieures à 4.2.4p7.</P>",
+  "content": "## Description\n\nDes vulnérabilités ont été identifiées dans le démon en charge de la\nmaintenance et la synchronisation de l'heure ntpd.\n\n-   l'une d'elles fonctionne lorsque l'authentification NTP est activée\n    (support OpenSSL). Des requêtes spécialement construites peuvent\n    être incorrectement manipulées par la fonction crypto_rcv() de\n    ntpd/ntp_crypto.c lorsque l'option autokey est utilisée (cette\n    option est visible dans le fichier de configuration ntp.conf avec la\n    présence de la ligne contenant \"crypto pw XXX\") ;\n-   des réponses provoquées par l'utilisation de la commande de\n    diagnostic ntpq ne seraient pas correctement manipulées.\n\nCes vulnérabilités peuvent être exploitées à distance par le biais de\ntrames spécialement construites afin de perturber le service, voire\nd'exécuter du code arbitraire.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0159",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0159"
+    },
+    {
+      "name": "CVE-2009-1252",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1252"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2009:1040 du 18 mai 2009 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2009-1040.html"
+    },
+    {
+      "title": "Site officiel de téléchargement du projet ntp :",
+      "url": "http://www.ntp.org/downloads.html"
+    },
+    {
+      "title": "Note de vulnérabilité de l'US-CERT VU#853097 du 18 mai 2009    :",
+      "url": "http://www.kb.cert.org/vuls/id/853097"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2009:1039 du 18 mai 2009 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2009-1039.html"
+    },
+    {
+      "title": "Site présentant l'outil de diagnostic ntpq associé à    ntpd :",
+      "url": "http://www.cis.undel.edu/~mills/ntp/html/ntpq.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-09:09.ntpd du 10 juin 2009    :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-09:09.ntpd.asc"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-195",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-05-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité FreeBSD.",
+      "revision_date": "2009-06-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Des vulnérabilités ont été identifiées dans le démon en charge de la\nmaintenance et la synchronisation de l'heure ntpd. Elles peuvent être\nexploitées à distance par le biais de trames spécialement construites\nafin de perturber le service, voire d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilités dans ntpd",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Red Hat RHSA-2009-1039 du 18 mai 2009",
+      "url": null
+    }
+  ]
+}

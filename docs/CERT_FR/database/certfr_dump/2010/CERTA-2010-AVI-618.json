@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>PHP 5.2.x et 5.3.x.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent PHP :\n\n-   certaines erreurs dans le traitement des archives ZIP permettent de\n    provoquer un déni de service à distance ;\n-   le traitement défectueux des archives PHP (adresses phar://) permet\n    à un utilisateur malveillant de lire des données sensibles ou\n    d'exécuter du code arbitraire à distance ;\n-   l'utilisation d'un nom de fichiers d'une certaine forme permet\n    d'outrepasser les restrictions mises en place à l'aide du module\n    open_basedir ;\n-   l'utilisation d'une adresse mèl d'une certaine forme permet de\n    provoquer un déni de service par épuisement de la mémoire ;\n-   une double désallocation de mémoire permet à un utilisateur\n    malveillant de provoquer un déni de service. La possibilité\n    d'exécuter du code arbitraire n'est pas exclue.\n\n## Solution\n\nLes versions 5.3.4, 5.2.15 et 5.2.16 de PHP remédient à ces\nvulnérabilités.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3709",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3709"
+    },
+    {
+      "name": "CVE-2010-3710",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3710"
+    },
+    {
+      "name": "CVE-2010-2950",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2950"
+    },
+    {
+      "name": "CVE-2010-3436",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3436"
+    },
+    {
+      "name": "CVE-2010-4150",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4150"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-618",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent PHP. Certaines d'entre elles\npermettent à un utilisateur malveillant d'exécuter du code arbitraire à\ndistance.\n",
+  "title": "Vulnérabilités dans PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de version de PHP 5 du 16 décembre 2010",
+      "url": "http://www.php.net/ChangeLog-5.php"
+    }
+  ]
+}

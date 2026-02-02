@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Ces vulnérabilités affectent :</P>  <UL>    <LI>SDK et JRE versions 1.4.2_04 et antérieures ;</LI>    <LI>SDK et JRE versions 1.4.1_07 et antérieures ;</LI>    <LI>SDK et JRE versions 1.4.0_04 et antérieures.</LI>  </UL>  <P>sur les plates-formes Windows, Solaris et Linux. Les versions  antéreures à 1.4.0 de SDK et JRE ne sont pas affectées par ces  vulnérabilités.</P>",
+  "content": "## Description\n\nLe JRE (Java Runime Environment) permet l'exécution de code java.\n\n`XSLT` (Extensible Stylesheet Language Transformation) est un processeur\ninclu dans le JRE, destiné a réécrire des documents `XML` (eXtensible\nMarkup Language) vers un format différent.\n\nUne vulnérabilité présente dans le JRE permet à un utilisateur mal\nintentionné de récuperer des données d'une applet, et d'élever ses\nprivilèges au moyen d'une applet malicieuse contenue dans une page HTML.\n\n## Solution\n\nMettre à jour SDK et JRE avec la version 1.4.2_05 ou supérieure :\n\n    http://java.sun.com/j2se/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HPSBUX01087 du 12 octobre 2004 :",
+      "url": "http://www4.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBUX01087"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-264",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-08-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité HPSBUX01087 de HP.",
+      "revision_date": "2004-10-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le processeur `XSLT` (Extensible\nStylesheet Language Transformation) de la machine virtuelle java (JRE)\npermet à une applet non privilégiée de lire les données d'une autre\napplet traitée par le processeur XSLT et d'élever ses privilèges.\n",
+  "title": "Vulnérabilité dans la machine virtuelle Java (JRE) de SUN",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #57613 de SUN",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert/57613"
+    }
+  ]
+}

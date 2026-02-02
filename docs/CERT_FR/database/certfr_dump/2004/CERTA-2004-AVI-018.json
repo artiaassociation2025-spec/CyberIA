@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mac OS X 10.1.5 (CAN-2004-085) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mac OS X 10.2.8 (CAN-2004-085, CAN-2004-087, CAN-2004-088, CAN-2004-089, CAN-2004-092, CAN-2003-0542, CAN-2003-0789) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mac OS X 10.3.2 (CAN-2004-086, CAN-2004-087, CAN-2004-089, CAN-2004-090,CAN-2003-0542, CAN-2003-0789).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nApple a émis un bulletin concernant une mise à jour des différentes\nversions de Mac OS X. Cette mise à jour est relative à des failles de\nsécurité présentes dans plusieurs composants de Mac OS X :\n\n-   serveur HTTP Apache : CAN-2003-0542, CAN-2003-0789 ;\n-   client de messagerie Apple Mail : CAN-2004-085 et CAN-2004-086 ;\n-   navigateur Safari : CAN-2004-092 ;\n-   outil de configuration système : CAN-2004-087, CAN-2004-088 ;\n-   émulateur MacOS Classic : CAN-2004-089 ;\n-   partage de fichiers Windows : CAN-2004-090.\n\nLes vulnérabilités CAN-2003-0542 et CAN-2003-0789 sont décrites dans le\nbulletin de sécurité CERTA-2003-AVI-177 du CERTA.\n\nLa vulnérabilité CAN-2004-089 est une vulnérabilité de type débordement\nde mémoire présente dans l'exécutable TruBlueEnvironment. Cette\nvulnérabilité peut être exploitée par un utilisateur local mal\nintentionné afin de réaliser une élévation de privilèges sur la\nplate-forme vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs :\n\n    http://docs.info.apple.com/article.html?artnum=61798\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité \"TruBlueEnvironment Buffer Overflow\"    d'Atstake :",
+      "url": "http://www.atstake.com/research/advisories/2004/a012704-1.txt"
+    },
+    {
+      "title": "Bulletin de sécurité CERTA-2003-AVI-177 du CERTA :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2003-AVI-177/index.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-018",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-01-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités sous Mac OS X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise-à-jour de sécurité 2004-01-26 d'Apple",
+      "url": null
+    }
+  ]
+}

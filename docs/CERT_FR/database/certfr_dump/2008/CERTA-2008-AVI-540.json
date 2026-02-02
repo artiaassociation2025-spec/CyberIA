@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "net-snmp 5.3.x versions antérieures à 5.3.2.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "net-snmp 5.4.x versions antérieures à 5.4.2.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Net-snmp 5.2.x versions antérieures à 5.2.5.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité de type débordement d'entier a été identifiée dans la\nfonction netsnmp_create_subtree_cache() du fichier agent/snmpi_agent.c\nde net-snmp. Son exploitation permet à une personne malintentionnée\nd'effectuer un déni de service en envoyant une requête GETBULK\nspécialement conçue à un agent vulnérable.\n\n## Solution\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-4309",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4309"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-1663 du 09 novembre 2008 :",
+      "url": "http://www.debian.org/security/2008/dsa-1663"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2008-0971 du 03 novembre 2008 :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2008-0971.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-540",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2008-11-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin Debian DSA-1663 du 09 novembre 2008.",
+      "revision_date": "2008-11-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans net-snmp permet à une personne malintentionnée\nd'effectuer un déni de service à distance.\n",
+  "title": "Vulnérabilité dans net-snmp",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport de bogue 2205039 de net-snmp",
+      "url": "http://sourceforge.net/tracker/index.php?func=detail&aid=2205039&group_id=12694&atid=112694"
+    }
+  ]
+}

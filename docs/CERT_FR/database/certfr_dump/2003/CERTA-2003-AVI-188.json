@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Postgresql versions antérieures à la  version 7.3.4.</p>",
+  "content": "## Description\n\nUn débordement de mémoire présent dans la fonction de conversion\nto_ascii de Postgresql permet à un utilisateur mal intentionné\nd'exécuter du code arbitraire sur la machine hébergeant ce service.\n\n## Solution\n\nAppliquer le correctif correspondant à votre système (cf section\ndocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Debian DSA-397-1 :",
+      "url": "http://www.debian.org/security/2003/dsa.397.html"
+    },
+    {
+      "title": "Avis de sécurité RedHat RHSA-2003:313-10 :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2003-313.html"
+    },
+    {
+      "title": "Avis de sécurité Mandrake MDKSA-2003:102 :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:102"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-188",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-11-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité RedHat Linux.",
+      "revision_date": "2003-11-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente sur Postgresql permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire sur la machine hébergeant le\nserveur Postgresql.\n",
+  "title": "Vulnérabilité sur Postgresql",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Buletin de sécurité Debian DSA 397-1",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les équipements possédant une version 4.0.3 ou antérieure de  ScreenOS et fonctionnant en <CODE>mode transparent</CODE>.</P>",
+  "content": "## Description\n\nLe mode transparent est un mode activé par défaut sur certains pare-feu\nNetScreen. L'activation de ce mode permet d'utiliser le pare-feu de\nmanière transparente comme un pont.\n\nUn individu mal intentionné situé dans le même domaine de diffusion que\nle pare-feu peut injecter certains paquets non-IP afin de contourner la\npolitique de sécurité mise en place ou d'effectuer des dénis de service.\n\n## Solution\n\nAppliquer les correctifs fournis par le constructeur (cf.\nDocumentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-108",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans ScreenOs permet à un individu mal\nintentionné d'effectuer des dénis de service ou de contourner la\npolitique de sécurité lorsque le pare-feu est configuré en mode\ntransparent.\n",
+  "title": "Vulnérabilité dans ScreenOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #57605 de NetScreen",
+      "url": "http://www.netscreen.com/services/security/alerts/advisory-57605.txt"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Samba 3.0.5 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Samba 2.2.12 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSamba est un logiciel libre, open source, utilisé pour la mise en œuvre\ndes partages réseau à l'aide des protocoles SMB et CIFS sous Unix.\n\nUne vulnérabilité présente lors de l'appel des fonctions unix_convert( )\net check_name( ) permet à une personne malveillante d'avoir accès à des\ninformations hors du répertoire partagé.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Référence CVE CAN-2004-0815 :",
+      "url": "http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0815"
+    },
+    {
+      "title": "Note ``Samba 2.2.12 Potential Arbitrary File Access'' :",
+      "url": "http://sambafr.idealx.org/samba/history/samba-2.2.12.html"
+    },
+    {
+      "title": "Bulletin de sécurité de SUSE SuSE-SA:2004:035 du 05 octobre    2004 :",
+      "url": "http://www.suse.com/de/security/2004_35_samba.html"
+    },
+    {
+      "title": "Site de l'éditeur Samba :",
+      "url": "http://www.samba.org"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-600 du 07 octobre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-600"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat Enterprise Linux et RedHat    Desktop :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-498.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat et Fedora produits    ``End-of-Life'' :",
+      "url": "http://www.fedoralegacy.org/updates/RH9/2004-10-13-FLSA_2004_2102__Updated_samba_packages_fix_security_vulnerability.html"
+    },
+    {
+      "title": "Bulletin de sécurité ``Samba Arbitrary File Access    Vulnerability'' d'IDEFENSE :",
+      "url": "http://www.idefense.com/application/poi/display?id=146&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité de FreeBSD pour Samba du 30 septembre    2004:",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité HP (HPSBUX01086) :",
+      "url": "http://www4.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBUX01086"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-332",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-10-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité RedHat (RHSA-2004-498) et au bulletin de sécurité de Fedora (FLSA:2102).",
+      "revision_date": "2004-10-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité HP (HPSBUX01086).",
+      "revision_date": "2004-10-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Samba permet à un utilisateur mal intentionné\nd'avoir accès de manière arbitraire aux informations présentes sur le\nsystème.\n",
+  "title": "Vulnérabilité de Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Samba 2.2.12 du 29 septembre 2004",
+      "url": null
+    }
+  ]
+}

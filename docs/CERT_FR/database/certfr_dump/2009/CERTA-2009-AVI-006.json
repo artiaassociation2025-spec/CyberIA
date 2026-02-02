@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenSSL pour les versions antérieures à 0.9.8j.",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans OpenSSL. Plusieurs fonctions ne\nvérifient pas correctement le retour de la fonction EVP_VerifyFinal()\npour des signatures avec clés DSA ou ECDSA. Une mauvaise signature est\nalors considérée comme bonne.\n\nCette vulnérabilité peut être exploitée pour contourner la vérification\nde la signature par le client, dans le cas où la personne malveillante\nadministre un site malveillant ou utilise une attaque de la forme\nhomme-au-milieu.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-5077",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-5077"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité OpenSSL du 07 janvier 2009 :",
+      "url": "http://www.openssl.org/news/secadv_20090107.txt"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-006",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-01-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans OpenSSL. Elle permet à un site\nmalveillant de contourner la vérification de la signature par le poste\nde l'utilisateur.\n",
+  "title": "Vulnérabilité dans OpenSSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité OpenSSL du 07 janvier 2009",
+      "url": null
+    }
+  ]
+}

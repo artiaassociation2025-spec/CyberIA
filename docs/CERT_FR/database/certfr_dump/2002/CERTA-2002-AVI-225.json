@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Oracle 9i Release 2 (9.2.x) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Oracle 9i Release 1 (9.0.x) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Oracle 8i (8.1.x).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe service réseau Oracle Net Listener (port 1521/tcp par défaut) est le\ncomposant principal d'Oracle Net, l'application qui permet d'accèder à\ndistance à une base de données Oracle.\n\nUn utilisateur mal intentionné peut utiliser une requête malicieusement\nconstruite employant la commande  \n`SERVICE_CURLOAD` afin d'effectuer un déni de service sur Oracle NET\nListener.\n\n## Solution\n\nAppliquer le correctif correspondant à cette vulnérabilité, disponible\nsur le site d'Oracle :\n\n    http://metalink.oracle.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité #42 d'Oracle :",
+      "url": "http://otn.oracle.com/deploy/security/pdf/2002alert42rev1.pdf"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-225",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-15T00:00:00.000000"
+    },
+    {
+      "description": "modification des systèmes affectés.",
+      "revision_date": "2002-10-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Oracle Net Services.\n",
+  "title": "Vulnérabilité dans Oracle Listener",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin d'alerte 42 d'Oracle",
+      "url": null
+    }
+  ]
+}

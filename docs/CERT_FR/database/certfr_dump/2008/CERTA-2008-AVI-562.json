@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Libxml2 2.x.</p>",
+  "content": "## Description\n\nUne première vulnérabilité provient d'un débordement d'entier dans la\nfonction xmlSAX2Characters(). Elle est exploitable par un utilisateur\nmalveillant pour exécuter du code arbitraire à distance.\n\nUne deuxième vulnérabilité, dans la fonction xmlBufferResize(), peut\nêtre exploitée pour provoquer une boucle infinie.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-4226",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4226"
+    },
+    {
+      "name": "CVE-2008-4225",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4225"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité sécurité Fedora 8 FEDORA-2008-9729 du    19 novembre 2008 :",
+      "url": "https://www.redhat.com/archives/fedora-package-announce/2008-November/msg00472.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1666-1 du 17 novembre 2008    :",
+      "url": "http://www.debian.org/security/2008/dsa-1666"
+    },
+    {
+      "title": "Bulletin de sécurité sécurité Fedora 9 FEDORA-2008-9773 du    19 novembre 2008 :",
+      "url": "https://www.redhat.com/archives/fedora-package-announce/2008-November/msg00513.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-673-1 du 19 novembre 2008 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-673-1"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2008:0988 du 17 novembre    2008 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2008-0988.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-562",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-11-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités de Libxml2 permettent à un utilisateur malveillant\nla réalisation d'un déni de service à distance ou d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilités de Libxml2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RedHat RHSA-2008:0988 du 17 novembre 2008",
+      "url": null
+    }
+  ]
+}

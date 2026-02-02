@@ -1,0 +1,98 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Avira Antivir Premium Security suite 7.x ;",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Avira Antivir Personnal Edition Classic 7.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Avira Antivir Server 6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Avira Antivir Personnal Edition Premium 7.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Avira Antivir Unix Mailgate 2.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Avira Antivir Workstation 7.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités dans le traitement de dossiers archives\nexistent dans l'antivirus Avira Antivir :\n\n-   le traitement des fichiers de type LZH peut provoquer un débordement\n    de mémoire (buffer overflow). Ce débordement est exploitable par un\n    utilisateur malintentionné pour exécuter un code arbitraire à\n    distance ;\n-   le traitement des fichiers de type UPX peut provoquer une division\n    par zéro et provoquer l'arrêt inopiné (crash) du programme. Par le\n    biais d'un fichier UPX spécialement conçu, un utilisateur\n    malveillant peut provoquer un déni de service à distance ;\n-   le traitement des fichiers de type TAR peut provoquer une boucle\n    infinie. Par le biais d'un fichier TAR spécialement conçu, un\n    utilisateur malveillant peut provoquer un déni de service à\n    distance.\n\n## Solution\n\nLa version 7.03.00.09 du composant AVPack et la version 7.04.00.24 du\ncomposant Engine corrigent le problème. Se référer au bulletin de\nsécurité de l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Article du forum Avira du 23 mai 2007 :",
+      "url": "http://forum.antivir-pe.de/thread.php?threadid=22528"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-232",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-05-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans le traitement de dossiers archives par\nl'antivirus <span class=\"textit\">Avira Antivir</span> permettent à un\nutilisateur malveillant de provoquer un déni de service à distance ou\nd'exécuter un code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités d'Antivir",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Article Avira du 23 mai 2007",
+      "url": null
+    }
+  ]
+}

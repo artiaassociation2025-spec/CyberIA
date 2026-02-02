@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Samba versions 3.3.x, 3.4.x et 3.5.x.</p>",
+  "content": "## Description\n\nLa configuration par défaut du serveur Samba contient la directive :\nwide links = yes.\n\nConjuguée aux extensions Unix des clients et à certains droits sur des\npartages, elle permet à un utilisateur distant d'accéder à tous les\nfichiers présents sur le serveur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0926",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0926"
+    }
+  ],
+  "links": [
+    {
+      "title": "Rapport d'erreur du projet Samba :",
+      "url": "http://www.samba.org/samba/news/symlink_attack.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-133",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-03-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le serveur Samba donne à un utilisateur distant\nl'accès en lecture à tous les fichiers du serveurs.\n",
+  "title": "Vulnérabilité dans Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ubuntu USN-918-1 du 24 mars 2010",
+      "url": "http://www.ubuntulinux.org/usn/usn-918-1"
+    }
+  ]
+}

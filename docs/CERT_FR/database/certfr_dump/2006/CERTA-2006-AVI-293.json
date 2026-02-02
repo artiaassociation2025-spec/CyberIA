@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Unified Call Manager version 5.0(3) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified Call Manager version 5.0(2) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified Call Manager version 5.0(1) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified Call Manager version 5.0(3a) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCUCM est l'application Cisco en charge du traitement des appels sur un\nréseau VOIP.\n\nPlusieurs vulnérabilités sont présentes sur Cisco Unified Call Manager\n(CUCM) :\n\n-   Deux vulnérabilités sont présentes dans le traitement de certaines\n    commandes de l'interface en ligne de commande (CLI) qui permet\n    d'administrer cet équipement. La première vulnérabilité permet à un\n    utilisateur déjà connecté sur l'interface avec les privilèges\n    administrateur d'exécuter des commandes arbitraires sur le système.\n    La seconde vulnérabilité permet de rediriger n'importe quelle\n    commande vers un répertoire précisé dans la ligne de commande.\n-   Une autre vulnérabilité de type débordement de mémoire est présente\n    dans le traitement des requêtes SIP. Cette vulnérabilité peut être\n    utilisé par un utilisateur distant mal intentionné afin de réaliser\n    un déni de service ou d'exécuter du code arbitraire sur l'équipement\n    vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2006-AVI-293",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-07-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans Cisco Unified Call Manager\n(CUCM) sur l'interface en ligne de commande et sur le protocole SIP\npeuvent être exploitées par un utilisateur mal intentionné pour exécuter\ndu code arbitraire avec les privilèges administrateur ou realiser un\ndéni de service sur l'équipement vulnérable.\n",
+  "title": "Multiples vulnérabilités sur Cisco Unified Call Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20060712-cucm.shtml"
+    }
+  ]
+}

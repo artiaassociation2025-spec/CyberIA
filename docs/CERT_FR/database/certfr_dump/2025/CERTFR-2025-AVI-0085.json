@@ -1,0 +1,87 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMware Aria Operations versions 8.x antérieures à 8.18.3",
+      "product": {
+        "name": "Aria Operations",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Cloud Foundation versions 4.x et 5.x sans le correctif KB92148",
+      "product": {
+        "name": "Cloud Foundation",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Aria Operations for logs versions 8.x antérieures à 8.18.3",
+      "product": {
+        "name": "Aria Operations",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-22219",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-22219"
+    },
+    {
+      "name": "CVE-2025-22218",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-22218"
+    },
+    {
+      "name": "CVE-2025-22220",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-22220"
+    },
+    {
+      "name": "CVE-2025-22222",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-22222"
+    },
+    {
+      "name": "CVE-2025-22221",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-22221"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0085",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-01-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits VMware. Elles permettent à un attaquant de provoquer une élévation de privilèges, une atteinte à la confidentialité des données et une injection de code indirecte à distance (XSS).",
+  "title": "Multiples vulnérabilités dans les produits VMware",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-01-30",
+      "title": "Bulletin de sécurité VMware 25329",
+      "url": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/25329"
+    }
+  ]
+}

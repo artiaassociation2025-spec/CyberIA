@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Lotus Domino 7.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Lotus Domino 6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nQuatre vulnérabilités ont été identifiées dans Lotus Domino :\n\n-   la première faille est un débordement de mémoire dans le module IMAP\n    de Domino qui permet à une personne malintentionnée d'exécuter du\n    code arbitraire à distance avec les privilèges du serveur ;\n-   la deuxième vulnérabilité est une erreur dans la méthode Evaluate de\n    LotusScript qui peut provoquer la divulgation de données\n    confidentielles ;\n-   la troisième vulnérabilité concerne un manque de restrictions dans\n    les zones de mémoire partagée, ce qui peut permettre à un\n    utilisateur local d'accéder aux données d'autres utilisateurs locaux\n    ;\n-   la dernière faille concerne certaines commandes relatives à\n    l'autorité de certification (activate et unlock) et peut résulter en\n    l'affichage du mot de passe utilisé en clair.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). Les versions 7.0.3 et 8.0 de\nLotus Domino corrigent toutes les failles. Deux vulnérabilités ne sont\npas corrigées dans les versions 6.x.\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3510",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3510"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg21261095 du 23 octobre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21261095"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg21273266 du 24 octobre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21273266"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg21270623 du 23 octobre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21270623"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg21257030 du 23 octobre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21257030"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-461",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-10-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans Lotus Domino permettent à une personne\nmalintentionnée d'exécuter du code arbitraire à distance ou de porter\natteinte à la confidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans IBM Lotus Domino",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité IBM",
+      "url": null
+    }
+  ]
+}

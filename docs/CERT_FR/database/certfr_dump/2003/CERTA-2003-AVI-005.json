@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>ISC DHCPD versions 3.0 à 3.0.1RC10.</P>",
+  "content": "## Description\n\nISC DHCPD possède une option `NSUPDATE` permettant la mise à jour\nautomatique d'un serveur DNS.\n\nPlusieurs vulnérabilités présentes dans `NSUPDATE` utilisé lors de la\nrésolution de noms DNS, permettent à un utilisateur mal intentionné\nd'exécuter du code arbitraire à distance par l'envoi d'un message DHCP\nastucieusement constitué.\n\n## Contournement provisoire\n\nMettre en place un fitrage au niveau du garde-barrière sur les ports\nsuivants, afin d'empêcher l'exploitation de cette vulnérabilité depuis\nl'Internet :\n\n-   67/TCP (Bootstrap Protocol Server)\n-   67/UDP (Bootstrap Protocol Server)\n-   68/TCP (Bootstrap Protocol Client)\n-   68/UDP (Bootstrap Protocol Client)\n\n## Solution\n\nAppliquer les correctifs ou mettre à jour par les versions 3.0p12 et\n3.0.1RC11 corrigant ces vulnérabilités.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SuSE-SA:2003:0006 de SuSE :",
+      "url": "http://www.suse.com/de/security/2003_006_dhcp.html"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2003:011-07 de RedHat :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2003-011.html"
+    },
+    {
+      "title": "Bulletin de sécurité MDKSA-2003:007 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:007"
+    },
+    {
+      "title": "Bulletin de sécurité DSA-231 de Debian :",
+      "url": "http://www.debian.org/security/2003/dsa-231"
+    },
+    {
+      "title": "Bulletin de sécurité CA-2003-001 du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2003-01.html"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-005",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-01-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de RedHat.",
+      "revision_date": "2003-01-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de Debian, Mandrake et Suse.",
+      "revision_date": "2003-01-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "ISC DHCPD est une implémentation de DHCP (Dynamic Host Configuration\nProtocol) fournie par l'Internet Software Consortium, et conforme à la\nRFC 2131.\n\nPlusieurs vulnérabilités sont présentes dans ISC DHCP.\n",
+  "title": "Vulnérabilité dans ISC DHCPD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2003-001 du CERT/CC",
+      "url": null
+    }
+  ]
+}

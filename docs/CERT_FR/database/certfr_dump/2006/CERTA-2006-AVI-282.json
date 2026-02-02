@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Information Services (IIS) 6.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Information Services (IIS) 5.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Information Services (IIS) 5.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nASP (Microsoft Active Server Pages) est une technologie de script côté\nserveur qui permet de créer des applications Web dynamiques et\ninteractives. Une page ASP est une page HTML qui contient des scripts\ncôté serveur qui sont traités par le serveur Web avant d'être envoyés au\nnavigateur de l'utilisateur.\n\nIIS (pour Internet Information Services) comporte une vulnérabilité\nd'exécution de code à distance due à son mode de contrôle des pages ASP.\nUne personne malveillante peut exploiter cette vulnérabilité en créant\nune page ASP spécialement conçue, et ainsi, exécuter du code à distance\nlorsqu'IIS traite ce fichier sur le système vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0026",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0026"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-034 du 11 juillet 2006    :",
+      "url": "http://www.microsoft.com/france/technet/security/Bulletin/MS06-034.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-034 du 11 juillet 2006    :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-034.mspx"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-282",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-07-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de Microsoft IIS utilisant ASP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft du 11 juillet 2006",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Sun Solaris 8 pour les plates-formes  SPARC et x86.</p>",
+  "content": "## Description\n\nUne vulnérabilité dans l'implémentation IPv6 de Sun Solaris 8 permet à\nun utilisteur mal intentionné, local ou distant, de créer un paquet IPv6\nmalicieusement construit afin de provoquer un déni de service (system\npanic).\n\n## Contournement provisoire\n\nDésactiver le support de IPv6 dans le système d'exploitation Sun Solaris\n8.  \n\nPour savoir si le système utilise IPv6, exécuter la commande suivante\n:  \n\\$ ifconfig -a6  \nSi des entrées sont marquées avec le drapeau UP and RUNNING, le support\npour IPv6 est activé.  \n\nPour désactiver le support IPv6, exécuter la commande suivante:  \n\\$ ifconfig -a6 down\n\n## Solution\n\nAppliquer le correctif de sécurité relatif à la plate-forme utilisée\n(SPARC ou x86):\n\n-   Plate-forme SPARC, correctif 108528-21 ;\n-   plate-forme x86, correctif 108529-21.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Sun - SUN Alert ID 55301:",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F55301"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-119",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Suite à l'envoi d'un paquet IPv6 malicieusement construit, un\nutilisateur mal intentionné peut provoquer un déni de service.\n",
+  "title": "Vulnérabilité IPv6 dans Solaris 8",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Sun - SUN Alert ID: 55301",
+      "url": null
+    }
+  ]
+}

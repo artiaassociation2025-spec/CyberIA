@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Drupal versions 6.x antérieures à 6.13.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Drupal versions 5.x antérieures à 5.19 ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Drupal :\n\n-   le module de forum ne gère pas correctement certains paramètres. En\n    incitant un utilisateur disposant de privilèges élevés à suivre un\n    lien spécifiquement construit, il est possible de réaliser une\n    injection de code indirecte (versions 6.x) ;\n-   dans des cas très particuliers, il est possible d'exécuter du code\n    par l'intermédiaire des signatures des utilisateurs (versions 6.x) ;\n-   lorsqu'un utilisateur se trompe en saisissant ses identifiants lors\n    d'une connexion, et si sa page actuelle contient une table de tri,\n    alors les informations saisies sont stockées dans la table sous\n    forme de liens. En suivant l'un de ces liens, ces informations\n    peuvent accidentellement être divulguées.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Drupal SA-CORE-2009-007 du 01 juillet    2009 :",
+      "url": "http://drupal.org/node/507572"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-265",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-07-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Drupal</span>\npermettent de réaliser une injection de code indirecte et, dans certains\ncas particuliers, d'exécuter du code arbitraire à distance ou de\nprovoquer la divulgation d'un mot de passe.\n",
+  "title": "Multiples vulnérabilités dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Drupal SA-CORE-2009-007 du 01 juillet 2009",
+      "url": null
+    }
+  ]
+}

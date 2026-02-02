@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Sun Java System Web Application Server 8.x ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Java System Web Application Server 9.x.",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Java JDK 1.6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Java System Web Server 7.x ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Java JRE 1.6.x (6.x) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nLa machine virtuelle Java de Sun comporte une vulnérabilité dans la mise\nen œuvre du traitement des fichiers au format XSLT (eXtended Stylesheet\nLanguage Transformations) permettant la manipulation de signatures au\nformat XML (eXtensible Markup Language) . Il est donc possible à un\nutilisateur distant malintentionné d'exécuter du code arbitraire par le\nbiais d'une signature XML construite de façon particulière.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2007-AVI-301",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la machine virtuelle Java de Sun ainsi que dans\nun produit associé : Java System Web Application Server permet à un\nutilisateur distant d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité dans la machine virtuelle Java de Sun",
+  "vendor_advisories": [
+    {
+      "published_at": "2007-07-10",
+      "title": "Bulletin de sécurité Sun #102993 relatif à JRE et JDK",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-102993-1"
+    },
+    {
+      "published_at": "2007-07-10",
+      "title": "Bulletin de sécurité Sun relatif à Java System Web Application Server",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-102992-1"
+    }
+  ]
+}

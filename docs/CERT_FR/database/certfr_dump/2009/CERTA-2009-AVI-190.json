@@ -1,0 +1,47 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions antérieures à la 0.7.2</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans IPsec Tools et\npermettent à une personne distante de provoquer un déni de service :\n\n-   une erreur est présente dans racoon/isakmp_frag.c (CVE-2009-1574) ;\n-   des erreurs sont présentes dans src/racoon/crypto_openssl.c et dans\n    src/racoon/crypto_openssl.c (CVE-2009-1632) ;\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1632",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1632"
+    },
+    {
+      "name": "CVE-2009-1574",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1574"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin du NIST CVE-2009-1632 du 14 mai 2009 :",
+      "url": "http://nvd.nist.gov/nvd.cfm?cvename=CVE-2009-1632"
+    },
+    {
+      "title": "Bulletin du NIST CVE-2009-1574 du 13 mai 2009 :",
+      "url": "http://nvd.nist.gov/nvd.cfm?cvename=CVE-2009-1574"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-190",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-05-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans IPsec Tools permettent à une personne\nmalintentionnée de provoquer un déni à distance.\n",
+  "title": "Vulnérabilités dans IPsec Tools",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de nouvelle version IPsec Tools du 22 avril 2009",
+      "url": "http://sourceforge.net/project/shownotes.php?group_id=74601&release_id=677611"
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "AquaLogic Service Bus 2.0, 2.1 et 2.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "AquaLogic Enterprise Security 2.1, jusqu'au Service Pack 1 ;",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "AquaLogic Enterprise Security 2.0, jusqu'au Service Pack 2 ;",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "AquaLogic Enterprise Security 2.2.",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nBEA est une suite de produits pour gérer les services au sein d'un\nenvironnement hétérogène, ou SOA (pour Service-Oriented Architecture).\nPlusieurs vulnérabilités ont été identifiées :\n\n-   le service proxy ne manipulerait pas correctement certaines\n    requêtes, et permettrait donc de contourner la politique d'accès\n    autorisée par BEA AquaLogic Service Bus ;\n-   les utilisateurs ayant un compte désactivé mais non supprimé\n    pourraient, sous certaines conditions, continuer à se connecter au\n    serveur BEA AquaLogic Enterprise Security.\n\nCes vulnérabilités semblent nécessiter un serveur d'authentification\nActive Directory LDAP pour être exploitable.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0433",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0433"
+    },
+    {
+      "name": "CVE-2007-0432",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0432"
+    },
+    {
+      "name": "CVE-2007-0434",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0434"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité BEA dev2dev :",
+      "url": "http://dev2dev.bea.com/advisoriesnotifications/index.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-037",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE.",
+      "revision_date": "2007-01-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités de BEA AquaLogic",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mises à jour BEA du 16 janvier 2007",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "toutes les versions de APR-util antérieures à 1.3.7 : CVE-2009-1955.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "toutes les versions de APR-util antérieures à 1.3.5 : CVE-2009-0023 et CVE-2009-1956 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nAPR-util (Apache Portable Runtime) est une bibliothèque de fonctions\nconstituant un socle commun et multi-platforme d'outils sur lesquels\ns'appuie le serveur Web Apache pour fonctionner. Trois vulnérabilités\nsont présentes dans cette bibliothèque :\n\n-   La première (CVE-2009-1955) est relative à la manipulation des\n    fichiers au format XML et permet à un utilisateur distant de\n    provoquer un déni de service par le biais d'un fichier XML\n    particulier ;\n-   la seconde (CVE-2009-0023) concerne la fonction\n    apr_strmatch_precompile() et permet à un utilisateur distant de\n    provoquer un déni de service ;\n-   la dernière (CVE-2009-1956) est présente dans la fonction\n    apr_brigade_vprintf() et permet à un utilisateur distant de\n    provoquer un déni de service ou d'obtenir un contenu partiel de la\n    mémoire.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0023",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0023"
+    },
+    {
+      "name": "CVE-2009-1956",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1956"
+    },
+    {
+      "name": "CVE-2009-1955",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1955"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2009:131 du 06 juin    2009 :",
+      "url": "http://www.mandriva.com/archives/security/advisories"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-786-1 du 10 juin 2009 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-786-1"
+    },
+    {
+      "title": "liste des changements apportés aux versions 1.3.5 et 1.3.7    de APR-util :",
+      "url": "http://www.apache.org/dist/apr/CHANGES-APR-UTIL-1.3"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1812 du 04 juin 2009 :",
+      "url": "http://www.debian.org/security/2009/dsa-1812"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-244",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-06-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans APR-util permettent à un\nutilisateur distant de provoquer un déni de service ou de porter\natteinte à la confidentialité de certaines données.\n",
+  "title": "Multiples vulnérabilités de APR-util",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés à la version 1.3.7 de APR-util",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>RealSecure Server Sensor versions 6.0.1  et 6.5 sur plate-forme Windows.</p>",
+  "content": "## Description\n\nEn générant un nombre important de paquets ICMP de type Echo Request\n(ping) à destination d'une machine utilisant RealSecure Server Sensor,\nun utilisateur mal intentionné peut forcer l'arrêt brutal du serveur.\n\nD'autres produits de l'éditeur Internet Security Systems sont également\nconcernés par cette vulnérabilité : BlackICE Defender et BlackIce Agent\nDesktop (se référer à l'avis de sécurité de l'éditeur).\n\n## Contournement provisoire\n\nMettre en place un filtrage des paquets ICMP au niveaux des pare-feux si\nla politique de sécurité le permet afin d'empêcher les attaques\nprovenant de l'extérieur.\n\n## Solution\n\nSe référer à l'avis de sécurité \\#109 de l'éditeur (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité \"Remote denial of service  vulnerability in BlackICE products\" d'Internet Security Systems :",
+      "url": "http://www.iss.net/security_center/alerts/advise109.php"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-027",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "RealSecure Server Sensor est un détecteur d'intrusions analysant\ndifférentes sources d'informations (trafic réseau sur les interfaces,\nenregistrements des journeaux systèmes...) sur un serveur.\n\nUne vulnérabilité dans le traitement des paquets ICMP permet à un\nutilisateur mal intentionné de réaliser un déni de service par arrêt du\nserveur.\n",
+  "title": "Déni de service dans Realsecure Server Sensor d'ISS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité #109 d'Internet Security Scanner",
+      "url": null
+    }
+  ]
+}

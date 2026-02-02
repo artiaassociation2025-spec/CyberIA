@@ -1,0 +1,102 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Asterisk Open Source 1.6.x ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Open Source 1.8.x ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Business Edition C.3.",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Open Source 1.4.x ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans différentes versions\nd'Asterisk.\n\nLa vulnérabilité dénommée AST-2011-008 permet à une personne\nmalintentionnée de causer un déni de service à distance grâce à l'envoi\nde requêtes SIP contenant un octet nul. Cette vulnérabilité affecte les\nversions 1.6.0.x, 1.6.1.x, 1.6.2.x et 1.8.x de Asterisk Open Source.\n\nLa faille AST-2011-009 concerne le pilote de canal SIP. Le problème\nsurvient lors de la réception d'un paquet SIP contenant un en-tête\nContact malformé. Elle touche le produit Asterisk Open Source dans ses\nversions 1.8.x.\n\nLa dernière vulnérabilité corrigée, AST-2011-010, résoud un problème\nprésent dans le pilote de canal IAX2. Lors de l'utilisation de ce\nprotocole, le message transmis contient une adresse mémoire à laquelle\nle poste récepteur va tenter d'accéder, provoquant ainsi un arrêt brutal\nde l'application. Cette vulnérabilité touche les versions 1.4.x\ninférieures à 1.4.37, 1.6.2.x inférieures à 1.6.2.15 et 1.8.x de\nAsterisk Open Source ainsi que les versions C.3.x inférieures à C.3.6 de\nAsterisk Business Edition.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2529",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2529"
+    },
+    {
+      "name": "CVE-2011-2535",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2535"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Asterisk AST-2011-009 :",
+      "url": "http://downloads.asterisk.org/pub/security/AST-2011-009.html"
+    },
+    {
+      "title": "Bulletin de sécurité Asterisk AST-2011-010 :",
+      "url": "http://downloads.asterisk.org/pub/security/AST-2011-010.html"
+    },
+    {
+      "title": "Bulletin de sécurité Asterisk AST-2011-008 :",
+      "url": "http://downloads.asterisk.org/pub/security/AST-2011-008.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-371",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-06-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans <span\nclass=\"textit\">Asterisk</span> permettent à un utilisateur distant\nmalintentionné, authentifié ou non sur le système, de provoquer un déni\nde service.\n",
+  "title": "Vulnérabilités dans Asterisk",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Asterisk AST-2011-010 du 22 juin 2011",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Asterisk AST-2011-008 du 20 juin 2011",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Asterisk AST-2011-009 du 23 juin 2011",
+      "url": null
+    }
+  ]
+}

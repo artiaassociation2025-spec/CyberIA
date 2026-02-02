@@ -1,0 +1,35 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Solaris fonctionnant avec SEAM version 1.0.2.</P>",
+  "content": "## Description\n\n`Sun Entreprise Authentication Mechanism` (SEAM) est une mise en œuvre\npour Solaris d'un mécanisme d'authentification utilisant le protocole\nKerberos. Une vulnérabilité est présente dans le service de distribution\ndes clefs `Key Distribution Center` (KDC) de SEAM permettant à un\nindividu distant mal intentionné, non authentifié, d'élever ses\nprivilèges ou d'effectuer un déni de service sur le système vulnérable.\n\n## Solution\n\nAppliquer le correctif fourni par SUN (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-362",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-11-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans Kerberos Key Distribution sous SOLARIS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #57631 de SUN",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert/57631"
+    }
+  ]
+}

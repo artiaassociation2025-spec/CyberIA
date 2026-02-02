@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de vim antérieures  à 7.2.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités de vim ont été découvertes :\n\n-   la première (CVE-2007-2953) concerne un défaut de validation des\n    données fournies à la commande helptags ;\n-   la seconde (CVE-2008-2712) concerne un défaut de validation\n    d'arguments lors d'appel système par un script vim ;\n-   la troisième (CVE-2008-3074) concerne un manque de validation des\n    noms de fichier par l'extension tar de vim ;\n-   la quatrième (CVE-2008-3075) concerne un manque de validation des\n    noms de fichier par l'extension zip de vim ;\n-   la cinquième (CVE-2008-3076 et CVE-2008-6235) concerne un manque de\n    validation des noms de fichier par l'extension netrw de vim ;\n-   la dernière (CVE-2008-4101) vient d'un défaut de contrôle des\n    caractères par la fonctionnalité de recherche de mots clef.\n\nToutes ces vulnérabilités permettent à un individu malintentionné\nd'exécuter du code arbitraire à distance par le biais d'un fichier\nspécialement construit ou en invitant un utilisateur à exécuter des\ncommandes vim spécifiques.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-6235",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-6235"
+    },
+    {
+      "name": "CVE-2008-3075",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3075"
+    },
+    {
+      "name": "CVE-2007-2953",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2953"
+    },
+    {
+      "name": "CVE-2008-3074",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3074"
+    },
+    {
+      "name": "CVE-2008-2712",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2712"
+    },
+    {
+      "name": "CVE-2008-4101",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4101"
+    },
+    {
+      "name": "CVE-2008-3076",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3076"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2008:0580 du 25 novembre    2008 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2008-0580.html"
+    },
+    {
+      "title": "Annonce du lancement de la version 7.2 de vim du 09 août    2008 :",
+      "url": "http://groups.google.com/group/vim_announce/browse_thread/thread/2c89671dd928812f"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1733 du 03 mars 2009 :",
+      "url": "http://www.debian.org/security/2009/dsa-1733"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-101",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-03-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de vim permettent à un individu malintentionné\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans vim",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce du lancement de la version 7.2 de vim du 09 août 2008",
+      "url": null
+    }
+  ]
+}

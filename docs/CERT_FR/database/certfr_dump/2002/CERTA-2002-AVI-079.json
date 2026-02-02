@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>IRIX 6.5 à 6.5.11 (possédant un système de fichiers XFS).</P>",
+  "content": "## Description\n\nSous certaines conditions, un utilisateur mal intentionné ayant un accès\nlocal au système peut créer un fichier afin de suspendre toutes les\napplications qui chercheraient à y accéder. Cette vulnérabilité peut\nêtre exploitée afin de réaliser un déni de service.\n\n## Solution\n\nSe référer à l'avis de sécurité de SGI afin de connaître la liste des\nversions vulnérables et leurs correctifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité 2002042-01-P de SGI disponible à l'adresse  suivante :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20020402-01-P"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-079",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-04-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "XFS est le système de fichiers utilisé par défaut sous IRIX 6.5. Une\nvulnérabilité présente dans ce système de fichier permet à un\nutilisateur mal intentionné de réaliser un déni de service.\n",
+  "title": "Déni de service sous IRIX/SGI",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis 20020402-01-P de SGI",
+      "url": null
+    }
+  ]
+}

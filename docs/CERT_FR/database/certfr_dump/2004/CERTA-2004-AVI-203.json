@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco IOS 11.x ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS 12.x ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS R12.x.",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS R11.x ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe protocole BGP (Border Gateway Protocol) est un protocole de routage\nstandard de l'Internet.\n\nUne vulnérabilité présente dans le traitement des paquets BGP permet à\nune personne mal intentionnée, via l'envoi d'un paquet malicieusement\nconstruit, de rédémarrer les équipements configurés pour prendre en\ncharge la gestion de BGP (par défaut, la gestion de ce protocole n'est\npas activée).\n\nLe paquet malicieusement construit doit avoir une adresse source\nappartenant à un pair (peer) de confiance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-203",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-06-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le traitement des paquets BGP (Border Gateway\nProtocol) par Cisco IOS permet à une personne mal intentionnée de\nréaliser un déni de service sur l'équipement vulnérable.\n",
+  "title": "Vulnérabilité dans le traitement des paquets BGP par Cisco IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 53021",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20040616-bgp.shtml"
+    }
+  ]
+}

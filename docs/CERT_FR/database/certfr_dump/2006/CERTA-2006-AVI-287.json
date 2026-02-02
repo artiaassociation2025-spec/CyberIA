@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Server 2003 et Microsoft Windows Server    2003 Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 1 et Service Pack 2    ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 pour les systèmes Itanium ou    Édition x64 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "<P>Les systèmes d'exploitation Microsoft Windows 98, Microsoft  Windows 98 Deuxième Édition (SE) et Microsoft Windows Millennium  Edition (ME) ne sont pas concernés.</P>",
+  "content": "## Description\nUne vulnérabilité a été identifiée dans le client DHCP de Microsoft Windows. DHCP (pour Dynamic Host Configuration Protocol) est une norme IP conçue pour réduire la complexité de gestion de la configuration des adresses réseaux. DHCP y parvient en utilisant un serveur pour la gestion centralisée des adresses IP et de certains autres détails de configuration utilisés sur le réseau. Les relations client-serveur sont décrites dans le RFC 2131 de l'IETF.\n\nLe client DHCP de Microsoft Windows ne contrôlerait pas correctement un espace mémoire. Un utilisateur malveillant distant peut profiter de cette vulnérabilité pour envoyer un paquet DHCP mal formé au système affecté, et y exécuter du code arbitraire.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2372",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2372"
+    }
+  ],
+  "links": [
+    {
+      "title": "Une vulnérabilité a été identifiée dans le client DHCP de  Microsoft Windows. DHCP (pour Dynamic Host  Configuration Protocol) est une norme IP conçue pour  réduire la complexité de gestion de la configuration des adresses  réseaux. DHCP y parvient en utilisant un serveur pour la gestion  centralisée des adresses IP et de certains autres détails de  configuration utilisés sur le réseau. Les relations  client-serveur sont décrites dans le RFC 2131 de l'IETF.",
+      "url": "http://www.microsoft.com/france/technet/security/Bulletin/MS06-036.mspx"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-287",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-07-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "",
+  "title": "Vulnérabilité du client DHCP de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": "2006-07-11",
+      "title": "Bulletin de sécurité de Microsoft ",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-036.mspx"
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Kaseya VSA versions antérieures à 9.5.7a",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-30117",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-30117"
+    },
+    {
+      "name": "CVE-2021-30119",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-30119"
+    },
+    {
+      "name": "CVE-2021-30201",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-30201"
+    },
+    {
+      "name": "CVE-2021-30120",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-30120"
+    },
+    {
+      "name": "CVE-2021-30121",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-30121"
+    },
+    {
+      "name": "CVE-2021-30118",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-30118"
+    }
+  ],
+  "links": [
+    {
+      "title": "[2] Guide de durcissement et des bonnes pratiques d'un VSA On-Premises",
+      "url": "https://helpdesk.kaseya.com/hc/en-gb/articles/4403760102417"
+    },
+    {
+      "title": "[1] Guide de lancement d'un VSA On-Premises",
+      "url": "https://helpdesk.kaseya.com/hc/en-gb/articles/4403709150993"
+    }
+  ],
+  "reference": "CERTFR-2021-AVI-514",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-07-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Kaseya VSA. Elles\npermettent à un attaquant de provoquer un contournement de la politique\nde sécurité, une atteinte à la confidentialité des données et une\ninjection de code indirecte à distance (XSS).\n\n<u>Par ailleurs</u>, l'éditeur a par la même occasion, publié les\nvulnérabilités fixées dans les versions précédentes de son produit\nKaseya VSA. Ainsi, la version 9.5.6 corrige les vulnérabilités suivantes\n: CVE-2021-30118, CVE-2021-30117, CVE-2021-30121 permettant entre autres\nune injection de code (SQLi) et la version 9.5.5 corrige la\nvulnérabilité suivante : CVE-2021-30201 permettant à un attaquant de\nréaliser une <u>exécution de code arbitraire à distance</u>.\n",
+  "title": "Multiples vulnérabilités dans Kaseya  VSA",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Kaseya 4403785889041 du 11 juillet 2021",
+      "url": "https://helpdesk.kaseya.com/hc/en-gb/articles/4403785889041"
+    }
+  ]
+}

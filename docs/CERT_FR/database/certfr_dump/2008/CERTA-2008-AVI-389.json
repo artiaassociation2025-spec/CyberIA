@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions françaises de  <SPAN class=\"textit\">Microsoft Windows</SPAN> hormis <SPAN class=\n  \"textit\">Windows Vista</SPAN>.</p>",
+  "content": "## Description\n\nMicrosoft a implanté le mécanisme de Protected Storage (PStore) au sein\nde systèmes d'exploitation aujourd'hui obsolètes. Pour des raisons liées\nà la législation française jusqu'en 1999, la cryptographie de PStore\navait été modifiée par Microsoft. Depuis, la législation française s'est\nassouplie et il n'était plus nécessaire pour Microsoft de conserver dans\nses systèmes d'exploitation cette version particulière du Protected\nStorage. Cependant, celle-ci a perduré jusqu'à la version XP Service\nPack 2 de Microsoft Windows. Ce correctif permet donc de combler ce\nretard.\n\nIndépendement de ce correctif, le CERTA rappelle qu'il n'est pas\nrecommandé d'utiliser le mécanisme du Protected Storage qui n'offre\nqu'une faible protection des éléments secrets de l'utilisateur d'une\nmachine.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Page de téléchargement de la mise à jour Microsoft :",
+      "url": "http://www.microsoft.com/downloads/details.aspx?displaylang=fr&FamilyID=c99e2424-d5d8-4828-8133-3451ed66a7e1"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-389",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-08-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une faiblesse dans le composant <span class=\"textit\">Protected\nStorage</span> de <span class=\"textit\">Microsoft Windows</span> permet à\nun utilisateur malintentionné de porter atteinte à la confidentialité de\ncertaines données du système.\n",
+  "title": "Faiblesse du Microsoft Protected Storage",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Entrée dans la base de connaissances Microsoft KB955417",
+      "url": "http://support.microsoft.com/kb/955417/fr"
+    }
+  ]
+}

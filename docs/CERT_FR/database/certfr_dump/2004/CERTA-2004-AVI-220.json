@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de FreeBSD 4.x et  5.x.</p>",
+  "content": "## Description\n\nUne vulnérabilité présente dans la gestion des appels système linux sous\nFreeBSD permet à un utilisateur mal intentionné de lire ou d'écrire dans\nl'espace mémoire du noyau.\n\nCette vulnérabilité est exploitable en local sur un système où la\ncompatibilité linux a été activée.\n\n## Solution\n\nAppliquer le correctif correspondant à votre version de FreeBSD (cf.\nsection documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD-SA-04:13 pour la comptabilité    linux du 30 juin 2004 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-04:13.linux.asc"
+    },
+    {
+      "title": "Correctif pour FreeBSD 4.8, 4.9 et 4.10 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/patches/SA-04:13/linux4.patch"
+    },
+    {
+      "title": "Correctif pour FreeBSD 5.2 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/patches/SA-04:13/linux5.patch"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-220",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans la gestion d'appels système sous FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD SA-04:13",
+      "url": null
+    }
+  ]
+}

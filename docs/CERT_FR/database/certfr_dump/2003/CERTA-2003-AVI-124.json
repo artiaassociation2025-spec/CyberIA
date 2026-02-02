@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>VMware GSX Server versions 2.5.1 et antérieures pour    plates-formes Linux ;</LI>    <LI>VMware Workstation versions 4.0 et antérieures pour    plates-formes Linux.<BR></LI>  </UL>  <P>Les versions de VMware GSX Server et VMware Workstation pour  plates-formes Windows ne sont pas vulnérables.</P>",
+  "content": "## Description\n\nDans les applications VMware GSX Server et VMware Worksation sur\nplates-formes Linux, lorsqu'une machine virtuelle est lancée, il est\npossible pour un utilisateur local de modifier certaines variables\nd'environnement pour exécuter des applications avec les privilèges\nroot.  \n\nIl est alors possible pour cet utilisateur d'avoir un accès total au\nsystème hébergeant la machine virtuelle.\n\n## Solution\n\nLes versions GSX Server 2.5.1 patch 1 et VMware Workstation 4.0.1\ncorrigent cette vulnérabilité.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-124",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité des produits VMware permet à un utilisateur mal\nintentionné de lancer des applications avec les privilèges du\nsuper-utilisateur (<span class=\"textit\">root</span>).\n",
+  "title": "Vulnérabilité de VMware pour plates-formes Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité VMware",
+      "url": "http://www.vmware.com/support/"
+    }
+  ]
+}

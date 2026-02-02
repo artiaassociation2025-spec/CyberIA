@@ -1,0 +1,113 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Firefox, versions 3.6.x, 3.5.x, 3.0.x.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent Firefox :\n\n-   dans certaines circonstances, le navigateur s'arrête de manière\n    inopinée, permettant à un attaquant de provoquer un déni de service\n    à distance ;\n-   plusieurs défauts dans l'allocation de la mémoire et dans la gestion\n    des pointeurs permettent à un utilisateur malveillant d'exécuter du\n    code arbitraire à distance ;\n-   la possibilité pour une applette de détourner des clics de souris\n    permet à un utilisateur malveillant d'exécuter du code arbitraire à\n    distance ;\n-   un défaut dans l'extension Firebug permet à un utilisateur\n    malveillant d'exécuter du code arbitraire à distance ;\n-   un défaut dans le traitement du protocole SSL permet à un\n    utilisateur distant de contourner la politique de sécurité ;\n-   la présence d'un lien mailto: dans un objet image provoque le\n    lancement du client de messagerie. L'impact est un désagrément ;\n-   des vérifications omises pendant le traitement de documents XML\n    peuvent conduire au chargement d'objets non permis par la politique\n    de sécurité.\n\n## Solution\n\nLes versions Firefox 3.6.2 et 3.5.9 remédient à toutes les\nvulnérabilités.\n\nLa version 3.0.19 remédie aux vulnérabités sauf les deux dernières. La\nbranche 3.0 n'étant désormais plus maintenue, la migration vers les\nbranches 3.5 ou 3.6 offre une solution de plus long terme.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0178",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0178"
+    },
+    {
+      "name": "CVE-2010-0181",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0181"
+    },
+    {
+      "name": "CVE-2010-0175",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0175"
+    },
+    {
+      "name": "CVE-2009-3555",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3555"
+    },
+    {
+      "name": "CVE-2010-0177",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0177"
+    },
+    {
+      "name": "CVE-2010-0173",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0173"
+    },
+    {
+      "name": "CVE-2010-0176",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0176"
+    },
+    {
+      "name": "CVE-2010-0179",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0179"
+    },
+    {
+      "name": "CVE-2010-0174",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0174"
+    },
+    {
+      "name": "CVE-2010-0182",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0182"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2010/mfsa2010-19 du 30 mars 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-19.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2010/mfsa2010-21 du 30 mars 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-21.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2010/mfsa2010-20 du 30 mars 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-20.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2010/mfsa2010-23 du 30 mars 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-23.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2010/mfsa2010-16 du 30 mars 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-16.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2010/mfsa2010-22 du 30 mars 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-22.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2010/mfsa2010-18 du 30 mars 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-18.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2010/mfsa2010-17 du 30 mars 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-17.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2010/mfsa2010-24 du 30 mars 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-24.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-149",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-04-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités affectent Firefox dont les plus importantes\npermettent à un utilisateur malveillant d'exécuter du code arbitraire à\ndistance sur le système vulnérable.\n",
+  "title": "Multiples vulnérabilités dans Firefox",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de la fondation Mozilla 2010/mfsa2010-16 à 24 du 30 mars 2010",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "RealOne Player v1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Rhapsody 3",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealOne Player v2",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Helix Player 1.x",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealPlayer 8",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealPlayer Enterprise 1.x",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealPlayer 10.x",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nPlusieurs vulnérabilités existent dans des produits multimédia\nRealNetworks, incluant RealPlayer, RealOne, Helix et Rhapsody. Elles\npeuvent être utilisées par une personne malveillante pour exécuter du\ncode arbitraire sur la machine de l'utilisateur. Nous listons ci-dessous\nun rapide détail de trois d'entre elles :\n\n-   Une erreur dans la manipulation des pages internet peut être\n    utilisée par une personne malveillante pour effectuer un débordement\n    de tampon et exécuter du code arbitraire.\n-   Une erreur dans l'appel à la fonction CreateProcess() permet à un\n    utilisateur local malveillant d'exécuter des programmes placés dans\n    le même répertoire que celui d'un exécutable de RealNetworks.\n-   Une erreur dans la manipulation de fichiers Flash Media SWF permet à\n    un utilisateur malveillant d'effectuer un débordement de tampon et\n    d'exécuter du code arbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0323",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0323"
+    },
+    {
+      "name": "CVE-2005-2936",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-2936"
+    },
+    {
+      "name": "CVE-2005-2922",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-2922"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD du 4 avril 2006 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-linux-realplayer.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200603-24 du 26 mars 2006    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200603-24.xml"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SA:2006:018 du 23 mars 2006    :",
+      "url": "http://www.novell.com/linux/security/advisories/2006_18_realplayer.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0257 du 23 mars 2006    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0257.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-127",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-03-23T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2006-04-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans des produits de RealNetworks\npermettent à un utilisateur malveillant de lancer une attaque par\ndébordement de tampon et donc d'exécuter du code arbitraire sur la\nmachine de l'utilisateur.\n",
+  "title": "Multiples vulnérabilités dans RealPlayer",
+  "vendor_advisories": [
+    {
+      "published_at": "2006-03-23",
+      "title": "Bulletin de sécurité du vendeur RealNetworks",
+      "url": "http://service.real.com/realplayer/security"
+    }
+  ]
+}

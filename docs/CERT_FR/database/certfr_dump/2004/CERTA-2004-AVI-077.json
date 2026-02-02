@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Pour les plates-formes SPARC :</P>  <UL>    <LI>Sun Solaris 2.6 sans le patch 106468-06 ;</LI>    <LI>Sun Solaris 7 sans le patch 106952-04 ;</LI>    <LI>Sun Solaris 8 sans le patch 111570-03 ;</LI>    <LI>Sun Solaris 9 sans le patch 113322-02.<BR></LI>  </UL>  <P>Pour les plates-formes x86 :</P>  <UL>    <LI>Sun Solaris 2.6 sans le patch 106469-06 ;</LI>    <LI>Sun Solaris 7 sans le patch 106953-04 ;</LI>    <LI>Sun Solaris 8 sans le patch 111571-03 ;</LI>    <LI>Sun Solaris 9 sans le patch 115880-01.</LI>  </UL>",
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans l'application uucp\nsous Solaris.  \n\nElles permettent à un utilisateur local mal intentionné d'obtenir les\ndroits de l'administrateur root.\n\n## Contournement provisoire\n\nEnlever le drapeau set-user-ID du binaire uucp avec la commande suivante\n:  \n`# chmod u-s /usr/bin/uucp`\n\n## Solution\n\nAppliquer le correctif proposé par Sun, suivant la version de Solaris\n(cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-077",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités de uucp sous Sun Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Alerte de Sun #57508",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert/57508"
+    }
+  ]
+}

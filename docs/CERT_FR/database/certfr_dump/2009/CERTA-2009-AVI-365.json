@@ -1,0 +1,113 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Java 5.x :",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Java 6.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Une vulnérabilité dans le système audio du Java Runtime Environment\n    peut être exploitée afin de porter atteinte à la confidentialité des\n    propriétés du système (CVE-2009-2670) ;\n-   trois vulnérabilités dans la mise en œuvre du serveur mandataire\n    (proxy) dans Java Runtime Environment permettent à un utilisateur de\n    porter atteinte à la confidentialité des données et d'obtenir un\n    cookie de session de navigation ou de réaliser des connexions non\n    autorisées depuis le système vulnérable (CVE-2009-2671,\n    CVE-2009-2672 et CVE-2009-2673) ;\n-   une vulnérabilité de type débordement de mémoire permet à un\n    utilisateur de faire exécuter une appliquette Java non-sûre avec des\n    privilèges élevés (CVE-2009-2675).\n-   une vulnérabilité présente dans l'appliquette JNLPAppletLauncher\n    permet à un utilisateur distant malveillant de porter atteinte à\n    l'intégrité du système et potentiellement d'exécuter du code\n    arbitraire sous la forme d'une appliquette.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2673",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2673"
+    },
+    {
+      "name": "CVE-2009-2672",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2672"
+    },
+    {
+      "name": "CVE-2009-2670",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2670"
+    },
+    {
+      "name": "CVE-2009-2671",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2671"
+    },
+    {
+      "name": "CVE-2009-2675",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2675"
+    },
+    {
+      "name": "CVE-2009-2676",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2676"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2009:1201 du 06 août 2009    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2009-1201.html"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SA:2009:043 du 07 août 2009    :",
+      "url": "http://www.novell.com/linux/security/advisories/2009_43_sunjava.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2009:1199 du 06 août 2009    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2009-1199.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2009:1236 du 28 août 2009    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2009-1236.html"
+    },
+    {
+      "title": "Bulletin de sécurité IBM Java du 10 août 2009 :",
+      "url": "http://www.ibm.com/developerworks/java/jdk/alerts/"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-814-1 du 11 août 2009 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-814-1"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2009:1200 du 06 août 2009    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2009-1200.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-365",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-09-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans IBM Java permettent à un utilisateur\ndistant malintentionné de porter atteinte à la confidentialité et à\nl'intégrité des données, de contourner la politique de sécurité, de\nprovoquer un déni de service ou encore d'exécuter du code arbitraire\navec des privilèges élevés.\n",
+  "title": "Vulnérabilités dans IBM Java",
+  "vendor_advisories": []
+}

@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Solaris 2.4, 2.5, 2.5.1, 2.6 pour SPARC et Intel ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 7 pour Intel sans le correctif 107375-02 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "et Solaris 8 pour Intel sans le correctif 111627-01.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 7 pour Sparc, sans le correctif 107374-02 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 8 pour Sparc, sans le correctif 111626-01 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nXview est une librairie graphique pour l'interface graphique (GUI) Open\nLook.\n\nToute application ayant les drapeaux positionnés SUID ou GUID et\nutilisant cette librairie permet d'exécuter du code arbitraire avec les\npermissions du compte propriétaire de l'application.\n\nDe plus, si le propriétaire de l'application est l'utilisateur root, ce\ndébordement de mémoire permet d'obtenir les privilèges de\nl'administrateur de la machine..\n\n## Contournement provisoire\n\nRechercher les applications liées à la librairie Xview au moyen de la\ncommande ldd. Si une ligne contenant libxview.so apparait, l'application\nest liée à Xview.\n\nVérifier qu'elles ne sont pas SUID ou GUID par la commande ls -l. Si un\n's' apparaît dans la liste des permissions pour l'utilisateur ou le\ngroupe, alors cette application est S/GUID.\n\nSupprimer le bit SUID ou GUID de l'application à l'aide de la commande\nchmod.\n\nATTENTION : Ce contournement provisoire ne protège pas le système contre\nle débordement de mémoire. Il faut donc enlever le bit SUID ou GUID à\ntoute autre application liée à Xview ajoutée ultérieurement.\n\n## Solution\n\nPour les systèmes 7 et 8, appliquer le correctif selon la verion :\n\n-   Pour Sparc :\n    -   Solaris 7 : correctif numéro 107374-02 ;\n    -   Solaris 8 : correctif numéro 111626-01.\n-   Sur Intel :\n    -   Solaris 7 : correctif numéro 107375-02 ;\n    -   Solaris 8 : correctif numéro 111627-01.\n\nCes correctifs sont disponibles sur le site de Sun :\n\n    http://sunsolve.sun.com/pub-cgi/show.pl?target=patches/patch-access\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-151",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-11-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire en local avec les privilèges de l'utilisateur root"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Il est possible d'obtenir en local les privilèges de l'utilisateur\npropriétaire d'une application liée à Xview grâce à un débordement de\nmémoire de cette librairie.\n",
+  "title": "Vulnérabilité de Xview sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sun",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=salert%2F27513&&wholewords=on"
+    }
+  ]
+}

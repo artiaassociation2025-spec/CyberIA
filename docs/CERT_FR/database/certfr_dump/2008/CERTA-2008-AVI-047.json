@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions de Symantec Backup Exec System Recovery Manager dans la branche 7.0 antérieures à 7.0.3.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans Symantec Backup Exec System\nRecovery Manager. Elle concerne FileUpdate Class du serveur Apache\nTomcat Symantec Livestate. Une personne malveillante pourrait émettre\nune requête HTTP POST afin de télécharger n'importe où sur le serveur\nvulnérable un fichier ou un script. Cela lui permettrait donc d'exécuter\ndu code à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité SYM08-001 de Symantec pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0457",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0457"
+    }
+  ],
+  "links": [
+    {
+      "title": "Document 297171 de Symantec relatif au bulletin SYM08-001 :",
+      "url": "http://seer.entsupport.com/docs/297171.htm"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-047",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans <span class=\"textit\">Symantec\nBackup Exec System Recovery Manager</span>. L'exploitation de cette\ndernière permettrait à une personne malveillante distante de télécharger\nn'importe où sur le serveur vulnérable tout fichier ou script.\n",
+  "title": "Vulnérabilité dans Symantec Backup Exec System Recovery Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symantec SYM08-001 du 04 février 2008",
+      "url": "http://securityresponse.symantec.com/avcenter/security/Content/"
+    }
+  ]
+}

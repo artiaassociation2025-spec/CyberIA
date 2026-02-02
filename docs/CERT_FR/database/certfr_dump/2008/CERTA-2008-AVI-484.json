@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "pam_krb5 versions antérieures à 2.3.2-1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité découverte dans pam_krb5 permet à un utilisateur local\nde contourner la politique de sécurité.\n\nCette vulnérabilité peut-être exploitée par une personne malveillante\nafin de changer de compte d'utilisateur en affectant une valeur\nspécifique à la variable KRB5CCNAME.\n\nL'option existing_ticket doit être activée afin de rendre la\nvulnérabilité exploitable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3825",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3825"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2008:0907 du 02 octobre    2008 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2008-0907.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-484",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-10-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans pam_krb5",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RedHat RHSA-2008:0907 du 02 octobre 2008",
+      "url": null
+    }
+  ]
+}

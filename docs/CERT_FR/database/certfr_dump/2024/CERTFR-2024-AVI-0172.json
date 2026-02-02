@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Zimbra Collaboration Daffodil versions antérieures à 10.0.7",
+      "product": {
+        "name": "Zimbra Collaboration",
+        "vendor": {
+          "name": "Synacor",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Zimbra Collaboration Kepler versions antérieures à 9.0.0 Patch 39",
+      "product": {
+        "name": "Zimbra Collaboration",
+        "vendor": {
+          "name": "Synacor",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-41741",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-41741"
+    },
+    {
+      "name": "CVE-2022-41742",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-41742"
+    },
+    {
+      "name": "CVE-2024-27443",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-27443"
+    },
+    {
+      "name": "CVE-2024-27442",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-27442"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0172",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-02-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Zimbra\nCollaboration. Certaines d'entre elles permettent à un attaquant de\nprovoquer un déni de service à distance, une atteinte à la\nconfidentialité des données et une élévation de privilèges.\n",
+  "title": "Multiples vulnérabilités dans Zimbra  Collaboration",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Zimbra 9.0.0 du 28 février 2024",
+      "url": "https://wiki.zimbra.com/wiki/Zimbra_Releases/9.0.0/P39"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Zimbra 10.0.7 du 28 février 2024",
+      "url": "https://wiki.zimbra.com/wiki/Zimbra_Releases/10.0.7"
+    }
+  ]
+}

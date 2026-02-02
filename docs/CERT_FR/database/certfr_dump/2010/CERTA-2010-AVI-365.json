@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Windows, toutes versions, toutes  éditions.</p>",
+  "content": "## Description\n\nDeux vulnérabilités affectent le composant Secure Channel de Windows :\n\n-   (CVE-2009-3555) un problème réside dans les implantation des\n    protocoles TLS et SSL lors de renégociations de sessions. Un\n    utilisateur interposé dans une connexion (man in the middle) peut,\n    dans certaines circonstances, injecter des données à l'encontre d'un\n    utilisateur et contourner la politique de sécurité ;\n-   (CVE-2010-2566) une erreur de traitement des certificats de clef\n    publique par Secure Channel sur Windows XP SP3 et Windows Server\n    2003 (toutes éditions) permet à un utilisateur distant\n    malintentionné d'exécuter du code arbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2566",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2566"
+    },
+    {
+      "name": "CVE-2009-3555",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3555"
+    }
+  ],
+  "links": [
+    {
+      "title": "Document du CERTA CERTA-2009-AVI-482 du 11 août 2010 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2009-AVI-482/index.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-365",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-08-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités affectent le composant Secure Channel de Windows,\nqui implémente notamment les protocoles TLS et SSL. Leur exploitation\npermet de contourner la politique de sécurité ou d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilités dans SSL/TLS et Secure Channel de Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS10-049 du 10 août 2010",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-049.mspx"
+    }
+  ]
+}

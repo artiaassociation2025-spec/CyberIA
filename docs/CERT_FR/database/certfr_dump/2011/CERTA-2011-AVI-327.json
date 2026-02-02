@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Module mod_dav_svn pour Apache HTTPD  versions 1.5.0 à 1.6.16.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été corrigées dans la version 1.6.17 du\nmodule Subversion mod_dav_svn pour le serveur Apache:\n\n-   un déréférencement de pointeur NULL permet à une personne\n    malveillante d'arrêter le serveur de manière inopinée\n    (CVE-2011-1752) ;\n-   dans certaines configurations du serveur, un attaquant peut réaliser\n    un déni de service en utilisant des requêtes specialement conçues\n    qui font entrer le programme dans une boucle infinie (CVE-2011-1783)\n    ;\n-   dans certaines configurations du serveur, un utilisateur peut\n    accéder au contenu des fichiers de manière illégitime\n    (CVE-2011-1921).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1921",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1921"
+    },
+    {
+      "name": "CVE-2011-1783",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1783"
+    },
+    {
+      "name": "CVE-2011-1752",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1752"
+    }
+  ],
+  "links": [
+    {
+      "title": "Note de sécurité Apache Subversion n° CVE-2011-1752 :",
+      "url": "http://subversion.apache.org/security/CVE-2011-1752-advisory.txt"
+    },
+    {
+      "title": "Note de sécurité Apache Subversion n° CVE-2011-1783 :",
+      "url": "http://subversion.apache.org/security/CVE-2011-1783-advisory.txt"
+    },
+    {
+      "title": "Note de sécurité Apache Subversion n° CVE-2011-1921 :",
+      "url": "http://subversion.apache.org/security/CVE-2011-1921-advisory.txt"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-327",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-06-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Trois vulnérabilités ont été corrigées dans le module Subversion du\nserveur Apache. L'une d'entre-elles permet à un attaquant de réaliser un\ndéni de service à distance.\n",
+  "title": "Multiples vulnérabilités dans Apache Subversion",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes de sécurité Apache Subversion n° CVE-2011-1752, CVE-2011-1783 et CVE-2011-1921",
+      "url": null
+    }
+  ]
+}

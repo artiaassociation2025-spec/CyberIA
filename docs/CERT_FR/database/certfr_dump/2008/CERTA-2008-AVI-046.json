@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions IBM Informix Dynamic Server 10.00 n'ayant pas le correctif 10.00.xC8.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans IBM Informix Dynamic Server\n:\n\n1.  l'une concerne la manipulation de paramètres passés à la commande\n    onedcu, qui peut provoquer la création et l'écriture de fichiers\n    avec des droits élevés ;\n2.  l'autre concerne la variable d'environnement SQLIDEBUG, qui ne gère\n    pas correctement les droits associés aux fichiers binaires lors de\n    leur exécution.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0369",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0369"
+    },
+    {
+      "name": "CVE-2008-0368",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0368"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg27011556 du 01 février 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg27011556"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-046",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été identifiées dans IBM Informix Dynamic\nServer. Elles permettraient à une personne malveillante d'élever ses\nprivilèges à ceux d'administrateur (<span class=\"textit\">root</span>).\n",
+  "title": "Vulnérabilités dans IBM Informix Dynamic Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de modification IBM 27011556 du 01 février 2008",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Solaris 2.5.1, 2.6, 7 et 8 (architectures SPARC et Intel).</P>  <P>La version 9 de Solaris n'est pas vulnérable.</P>",
+  "content": "## Description\n\nLa commande `pkgadd` est utilisée pour installer de nouveaux paquetages\nsur le système.\n\nIl est possible que cette commande installe les fichiers avec les\npermissions `set-uid` et/ou `set-gid`. De plus, la commande `pkgadd` ne\ndemande aucune confirmation et n'avertit pas l'utilisateur que des\nfichiers sont installés avec les privilèges `set-uid` ou `set-gid`.\n\n## Contournement provisoire\n\nRetirez les privilèges `set-uid` ou `set-gid` lorsque ceux-ci ne sont\npas nécessaires.\n\n## Solution\n\nAppliquer le correctif selon la version de Solaris.\n\nSe référer au bulletin 45693 de Sun (cf. section Documentation) pour\nconnaître la version du correctif à appliquer.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-151",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-07-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "La commande `pkgadd` peut installer des fichiers avec les permissions\n`set-uid` ou `set-gid`.\n",
+  "title": "Vulnérabilité de pkgadd sur Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis 45693 de Sun",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F45693"
+    }
+  ]
+}

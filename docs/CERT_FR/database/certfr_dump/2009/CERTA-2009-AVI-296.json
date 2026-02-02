@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>VLC versions 1.0.0 et antérieures.</p>",
+  "content": "## Description\n\nUne vulnérabilité de type débordement d'entier est présente dans le\nlecteur multimedia VLC. Elle est relative à la mise en œuvre du support\ndes flux au format RTSP (Real Time Streaming Protocol) et permet à un\nutilisateur distant malintentionné d'exécuter du code arbitraire via un\nflux RTSP particulier.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nLa version 1.0.1 corrige le problème :\n\n    http://download.videolan.org/pub/videolan/vlc/1.0.1/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de VLC :",
+      "url": "http://videolan.org"
+    },
+    {
+      "title": "Liste des changements apportés à la version 1.0.1 de VLC :",
+      "url": "http://wiki.videolan.org/Changelog/1.0.1/"
+    },
+    {
+      "title": "Correctif apporté à la dernière version de VLC :",
+      "url": "http://git.videolan.org/?p=vlc.git;a=commitdiff;h=dc74600c97eb834c08674676e209afa842053aca"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-296",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-07-28T00:00:00.000000"
+    },
+    {
+      "description": "ajout du lien vers la liste des changements apportés à la version 1.0.1.",
+      "revision_date": "2009-07-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans VLC permet à un utilisateur distant d'exécuter du\ncode arbitraire.\n",
+  "title": "Vulnérabilité dans VLC",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Correctif apporté dans la dernière version de VLC",
+      "url": null
+    }
+  ]
+}

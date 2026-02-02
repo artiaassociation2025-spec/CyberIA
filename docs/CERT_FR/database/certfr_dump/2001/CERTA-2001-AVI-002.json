@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Office 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Millenium Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn composant (Web Extender Client) est installé lors de la mise en place\nd'Office 2000, Windows 2000 et Windows M.E. Ce composant apporte des\nfacilités sous Internet Explorer comme la présentation, la copie ou la\nmodification des fichiers via HTTP avec une présentation identique à\nl'explorateur Windows.\n\nLa gestion de l'authentification NTLM (NT Lan Manager) sous WEC présente\nune vulnérabilité en ne tenant pas compte de la configuration d'Internet\nExplorer concernant l'authentification NTLM.\n\nUn concepteur de site mal intentionné peut donc faire effectuer\nsystématiquement l'authentification et récupérer les paramètres\nd'authentification dans le but de les transformer en identification en\nclair.\n\n## Contournement provisoire\n\nBloquer le trafic NetBIOS au niveau du garde barrière.\n\n## Solution\n\nCorrectif pour Office 2000 (version internationale) :\n\n    http://officeupdate.microsoft.com/2000/downloaddetail/wecsec.htm\n\n  \n  \n\nCorrectif pour Windows 2000 (version US) (sans office 2000) :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=26889\n\n  \n  \n\nCorrectif pour Windows M.E (version US) (sans office 2000) :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=26705\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms01-001.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-002",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-01-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement des mécanismes d'authentification"
+    }
+  ],
+  "summary": "Un concepteur d'un site web peut, par le biais d'une vulnérabilité dans\nl'authentification NTLM, obtenir les informations d'authentification\nd'un utilisateur navigeant sur le site.\n",
+  "title": "Vulnérabilité de l'authentification NTLM sous Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-001",
+      "url": null
+    }
+  ]
+}

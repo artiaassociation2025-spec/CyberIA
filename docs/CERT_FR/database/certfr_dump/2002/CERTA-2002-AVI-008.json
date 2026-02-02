@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Pine versions 4.43 et antérieures.</p>",
+  "content": "## Description\n\nPine est un client de messagerie disponible sur de nombreuses\nplates-formes Linux, Unix, et Windows.  \n\nPine permet à un utilisateur de lancer un butineur Web pour visualiser\nle document associée à une URL contenue dans un mél.\n\nUn utilisateur mal intentionné peut fabriquer une URL contenant des\ncommandes qui seront exécutées avec les privilèges de l'utilisateur\nessayant de visualiser l'URL.\n\n## Contournement provisoire\n\nNe pas lancer de butineur Web à partir de Pine.\n\n## Solution\n\nLa version 4.44 de Pine corrige le problème :\n\n    http://www.washington.edu/pine\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité FreeBSD-SA-02:04 de FreeBSD :",
+      "url": "ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-02:05.pine.asc"
+    },
+    {
+      "title": "Avis de sécurité RHSA-2002:009 de RedHat :",
+      "url": "http://www.redhat.com/support/errata/RHSA-2002-009.html"
+    },
+    {
+      "title": "Annonce disponibilité de Pine 4.44 :",
+      "url": "http://www.washington.edu/pine/changes/4.43-to-4.44.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-008",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-01-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de commandes arbitraires"
+    }
+  ],
+  "summary": "En envoyant un mél contenant une URL habilement constituée, un\nutilisateur mal intentionné peut parvenir à exécuter du code arbitraire\nà l'insu du destinataire du message.\n",
+  "title": "Vulnérabilité dans pine",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RHSA-2002:009 de RedHat",
+      "url": null
+    }
+  ]
+}

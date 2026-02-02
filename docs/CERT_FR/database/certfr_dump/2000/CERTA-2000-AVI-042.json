@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Office sous Windows 9x, NT 4.0 et 2000.</P>",
+  "content": "## Description\n\nSous Windows, chaque fichier porte une extension permettant l'ouverture\ndu logiciel concerné par ce fichier (ex :  .doc, .txt ...). Si une\nextension de fichier est inconnue de l'OS, une boîte de dialogue\ns'affiche afin de sélectionner une application à utiliser.\n\nSi un fichier est crée avec Microsoft Office, mais sauvegardé avec une\nextension inconnue, windows reconnaît néanmoins ce fichier et l'ouvre\nautomatiquement avec le programme Office correspondant, Windows\nutilisant alors l'en-tête du fichier pour en déterminer le type.\n\nD'autre part, la plupart des logiciels d'anti-virus, lors d'une\nvérification, mettent les fichiers infectés en quarantaine en modifiant\nleur extension. Ainsi lors de vérifications ultérieures l'anti-virus ne\nrecontrôle pas ce fichier.\n\nSi un utilisateur mal intentionné crée un fichier sous Office contenant\nun virus macro puis l'enregistre avec l'extension d'un fichier en\nquarantaine, il ne sera pas vérifié lors de l'exécution de l'antivirus\net sera quand même ouvert par Office..\n\n## Solution\n\n-   Concernant office :\n\n    Il n'existe pas de correctif pour cette vulnérabilité, cependant\n    lorsqu'il est bien configuré, Word ouvre une boîte de dialogue\n    proposant à l'utilisateur le choix d'exécuter ou non les macros. Il\n    est nécessaire d'activer ce type d'alerte.\n\n    Sous Word :\n\n    -   Menu : Outil\n    -   Choix : Option\n    -   Onglet : Général\n    -   Sélectionner : Protection contre les virus contenus dans les\n        macros.\n\n    En résumé, si le lancement d'un fichier ayant une extension inconnue\n    ouvre Office et présente la boite de dialogue concernant les macros,\n    il est impératif de sélectionner « Ne pas ouvrir » afin d'éviter\n    l'exécution de la macro.  \n      \n\n-   Concernant l'anti-virus :\n\n    Par défaut, les anti-virus sont paramètrés afin de ne pas scanner\n    différents types d'extension de fichiers. Il est recommandé de\n    supprimer ces types d'extension de la liste d'exclusion de votre\n    anti-virus.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-042",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-09-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement des protections anti virales"
+    }
+  ],
+  "summary": "Une personne mal intentionnée peut, en insérant des macros dans un\ndocument Office dont l'extension a été modifiée, contourner la\nprotection de l'anti-virus.\n",
+  "title": "Vulnérabilité dans les extensions de fichiers sous Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Security Focus",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Drupal versions 6.x antérieures à 6.3.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Drupal versions 5.x antérieures à 5.8 ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Drupal :\n\n-   plusieurs attaques de type cross-site scripting sont possibles dans\n    Drupal versions 6.x ;\n-   des attaques de type cross-site request forgery ce qui peut\n    entraîner l'effacement de certains éléments dans Drupal versions 5.x\n    et 6.x ;\n-   en incitant sa victime à suivre un lien spécifiquement constitué,\n    une personne malintentionnée peut obtenir un accès non autorisé à\n    Drupal versions 5.x et 6.x ;\n-   des injections SQL sont possibles dans Drupal versions 6.x.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2008-AVI-365",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-07-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Injection SQL"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Drupal</span>\npermettent de réaliser diverses injections de code et d'obtenir un accès\nnon autorisé.\n",
+  "title": "Multiples vulnérabilités dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DRUPAL-SA-2008-044 du 09 juillet 2008",
+      "url": "http://drupal.org/node/280571"
+    }
+  ]
+}

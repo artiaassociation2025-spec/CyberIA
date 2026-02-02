@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>File versions antérieures à 4.12.</p>",
+  "content": "## Description\n\nLa commande file sur les systèmes Unix et Linux est utilisée pour\ndéterminer le type d'un fichier.\n\nUne erreur de type débordement de mémoire est présente dans la commande\nfile. En incitant un utilisateur à employer cette commande pour\nidentifier le type d'un fichier malicieusement constitué, un utilisateur\nmal intentionné peut forcer l'exécution de code arbitraire avec les\nprivilèges de l'utilisateur employant la commande.\n\n## Solution\n\nLa version 4.12 corrige cette vulnérabilité.\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SR:2004:04 du 16 décembre    2004 :",
+      "url": "http://www.suse.de/de/security/2004_04_sr.html"
+    },
+    {
+      "title": "Source de file :",
+      "url": "ftp://ftp.astron.com"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-407",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-12-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence CVE.",
+      "revision_date": "2004-12-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de la commande file",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA-200412-07",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200412-07.xml"
+    }
+  ]
+}

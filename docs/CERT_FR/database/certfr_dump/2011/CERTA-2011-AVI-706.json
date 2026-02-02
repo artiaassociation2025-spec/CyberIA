@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "NetBSD-current de sources antérieures au 09 novembre 2011 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetBSD 4.0, 5.0 et 5.1 de sources antérieures au 09 novembre 2011 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Correctif de sécurité NetBSD OpenPAM antérieur au 13 decembre 2011.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans OpenPAM permettant d'effectuer une élévation de\nprivilèges a été corrigée. Un manque de validation sur le paramètre\nservice fourni par l'utilisateur dans la configuration d'OpenPAM est à\nl'origine de cette vulnérabilité.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).  \nLe problème est corrigé à partir des sources postérieures au 09 novembre\n2011.\n",
+  "cves": [
+    {
+      "name": "CVE-2011-4122",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4122"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité FreeBSD FreeBSD-SA-11:10 du 23 décembre    2011 :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-11:10.pam.asc"
+    },
+    {
+      "title": "Avis de sécurité NetBSD NetBSD-SA2011-008 du 15 decembre    2011 :",
+      "url": "http://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2011-008.txt.asc"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-706",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-12-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout des correctifs FreeBSD.",
+      "revision_date": "2011-12-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité permettant une élévation de privilèges sur OpenPAM a\nété corrigée.\n",
+  "title": "Vulnérabilité dans OpenPAM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité NetBSD NetBSD-SA2011-008 du 15 decembre 2011",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 98 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 98 Second Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Millenium ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT 4.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe contrôle ActiveX \\`\\`Certificate Enrollment Control'' permet de\ncontrôler le numéro d'identification d'un certificat. L'appel de ce\ncontrôle, via une page web, permet à un utilisateur mal intentionné\nd'effacer des certificats sur l'ordinateur cible, empêchant alors\nl'utilisation des fonctions associées à ces certificats (ex: chiffrement\nEFS, signature de mail, ...).\n\n## Contournement provisoire\n\nDésactiver l'usage des ActiveX.\n\n## Solution\n\nAppliquer le correctif \\#Q323172 fournit par Microsoft (consultez la\nsection Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-194",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Toutes les versions de Windows sont livrées avec un contrôle ActiveX\ndestiné à vérifier les certificats. Une vulnérabilité permet à un\nutilisateur mal intentionné d'effacer à distance des certificats de la\nmachine cible et donc de provoquer un déni de service.\n",
+  "title": "Vulnérabilité dans un contrôle ActiveX sur Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #MS02-048 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-048.asp"
+    }
+  ]
+}

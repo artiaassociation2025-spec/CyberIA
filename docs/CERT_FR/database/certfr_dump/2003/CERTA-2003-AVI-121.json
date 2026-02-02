@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Oracle E-Business Suite version 11.0 et toutes les versions de  11.5.1 à 11.5.8 incluses.</P>",
+  "content": "## Description\n\nLe programme Oracle Applications Web Report Review (FNDWRR) est un\nprogramme CGI utilisé pour visualiser les rapports et les journaux au\ntravers d'un navigateur web.\n\nCe programme est installé sous le nom FNDWRR.exe sur les plates-formes\nUNIX et Windows.  \n\nUne vulnérabilité de cette application de type débordement de mémoire\npermet à un utilisateur distant d'exécuter du code arbitraire sur la\nmachine.\n\nCette vulnérabilité peut être exploitée à l'aide d'un navigateur web,\npar le biais d'une URL malicieusement construite.\n\n## Solution\n\nAppliquer le correctif fourni par Oracle (cf. section Documentation).  \n\nIl est fortement recommandé d'effectuer des sauvegardes avant\nl'application du correctif, et de tester la stabilité du système une\nfois la mise à jour installée.  \n\nLa prochaine version de la suite Oracle E-Business (11.5.9) corrigera la\nvulnérabilité.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-121",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de type débordement de mémoire a été découverte dans\nun programme de la suite Oracle E-Business, et permet à un utilisateur\nmal intentionné d'exécuter du code arbitraire sur la machine.\n",
+  "title": "Débordement de mémoire dans le programme FNDWRR de la suite Oracle E-Business",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Alerte de sécurité Oracle #56",
+      "url": "http://otn.oracle.com/deploy/security/pdf/2003alert56.pdf"
+    }
+  ]
+}

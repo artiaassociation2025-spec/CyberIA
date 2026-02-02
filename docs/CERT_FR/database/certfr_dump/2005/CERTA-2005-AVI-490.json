@@ -1,0 +1,104 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache versions 2.0.35 à 2.0.55 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache versions 1.3.0 à 1.3.34 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe module mod_imap est le module chargé de prendre en charge les\nfichiers au format .map.\n\nUne vulnérabilité dans la directive Referer du module mod_imap peut être\nexploitée par un utilisateur mal intentionné pour faire exécuter un\nscript par le navigateur d'un utilisateur tierce à partir d'un site\nvulnérable.\n\n## Solution\n\nLes corrections de cette vulnérabilité sont effectuées dans les versions\n1.3.35-dev et 2.0.56-dev d'Apache.  \n",
+  "cves": [
+    {
+      "name": "CVE-2005-3352",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-3352"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de mise à jour pour IBM HTTP Server du 13 juin    2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg24012511"
+    },
+    {
+      "title": "Bulletin de sécurité pour les versions 1.3.x d'Apache :",
+      "url": "http://httpd.apache.org/security/vulnerabilities_13.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDSKA-2006:007 du 05 janvier    2006 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDSKA-2006:007"
+    },
+    {
+      "title": "Bulletin de sécurité de Red Hat numéro RHA-2006-0158 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0158.html"
+    },
+    {
+      "title": "Bulletin de sécurité Freebsd du 1 janvier 2006 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Site internet pour le module mod_imap :",
+      "url": "http://httpd.apache.org/docs/1.3/mod/mod_imap.html"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SR:2006:004 du 24 février    2006 :",
+      "url": "http://www.novell.com/linux/security/advisories/2006_04_sr.html"
+    },
+    {
+      "title": "Bulletin de sécurité pour les versions 2.0.x d'Apache :",
+      "url": "http://httpd.apache.org/security/vulnerabilities_20.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-490",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2005-12-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD ;",
+      "revision_date": "2006-01-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva.",
+      "revision_date": "2006-01-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SUSE.",
+      "revision_date": "2006-02-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de mise à jour IBM.",
+      "revision_date": "2006-06-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de type « cross site scripting » est présente dans le\nmodule mod_imap d'Apache. Cette vulnérabilité peut être utilisée par un\nutilisateur mal intentionné pour faire exécuter un script par le\nnavigateur d'un utilisateur consultant le site vulnérable..\n",
+  "title": "Vulnérabilité sur le module mod_imap d'Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Apacheweek",
+      "url": null
+    }
+  ]
+}

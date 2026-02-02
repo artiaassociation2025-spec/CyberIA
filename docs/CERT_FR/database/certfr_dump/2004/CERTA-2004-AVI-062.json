@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>Squid</TT> versions 2.5.STABLE4 et  antérieures.",
+  "content": "## Description\n\nSquid est un serveur mandataire (proxy) pour les protocoles HTTP, HTTPS\net FTP. Deux vulnérabilités ont été identifiées dans Squid permettant à\nun utilisateur mal intentionné de contourner la politique de sécurité,\nnotamment de contourner les contrôles d'accès basés sur la directive\nurl_regex.\n\n## Solution\n\nMettre à jour Squid en version 2.5.STABLE5 ou appliquer le correctif\nfournit par l'éditeur :\n\n-   Site pour le téléchargement de Squid :\n\n        http://www.squid-cache.org/Versions/v2/2.5/\n\n-   Bulletin de sécurité RHSA-2004:133 pour Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2004-133.html\n\n-   Bulletin de sécurité RHSA-2004:134 pour Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2004-134.html\n\n-   Bulletin de sécurité MDKSA-2004:025 de Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:025\n\n-   Bulletin de sécurité GLSA 200403-11 de Gentoo :\n\n        http://www.securityfocus.com/advisories/6495\n\n-   Bulletin de sécurité DSA-474 de Debian :\n\n        http://www.debian.org/security/2004/dsa-474\n\n-   Bulletin de sécurité SGI 20040404-01-U du 21 avril 2004 :\n\n        ftp://patches.sgi.com/support/free/security/advisories/20040404-01-U.asc\n\n  \n\nNote : pour vérifier la version de Squid, taper la commande :  \nsquid -v\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD squid :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/vulnerabilities"
+    },
+    {
+      "title": "Avis de sécurité FreeBSD du 26 mars mars 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-062",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Red Hat. Ajout référence CVE.",
+      "revision_date": "2004-03-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Mandrake.",
+      "revision_date": "2004-03-31T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Gentoo.",
+      "revision_date": "2004-04-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Debian.",
+      "revision_date": "2004-04-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité RedHat et SGI.",
+      "revision_date": "2004-05-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité FreeBSD et NetBSD.",
+      "revision_date": "2004-05-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans Squid permettent à un utilisateur mal\nintentionné de contourner la politique de sécurité mise en place.\n",
+  "title": "Vulnérabilité de Squid",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de Squid SQUID-2004:1",
+      "url": "http://www.squid-cache.org/Advisories/SQUID-2004_1.txt"
+    }
+  ]
+}

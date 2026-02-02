@@ -1,0 +1,109 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tout système possédant les versions  <CODE>0.9.6d</CODE> et antérieures, les versions  <CODE>0.9.7-beta2</CODE> et antérieures (y compris les versions  en développement collectées sur le CVS) de <CODE>OpenSSL</CODE>  est vulnérable. Un système 32 bits possédant la version  <CODE>0.9.6d</CODE> sur laquelle <CODE>SSL 2.0</CODE> est  désactivé n'est pas vulnérable.<BR>  <P>De nombreux produits incluent <CODE>OpenSSL</CODE> en standard  et sont donc tout autant vulnérables (Consultez la section  Documentation).</P></p>",
+  "content": "## Description\n\nOpenSSL est une librairie de fonctions créée pour implémenter les\nprotocoles SSL (Secure Sockets Layer), TLS (Transport Layer Security)\nainsi que de nombreux utilitaires de cryptographie. Plusieurs\nvulnérabilités ont été découvertes permettant à un utilisateur mal\nintentionné d'exécuter du code arbitraire ou de provoquer un déni de\nservice.\n\n## Contournement provisoire\n\nDésactiver le support de `SSL 2.0`, désactiver les applications\nutilisant `SSL` ou `TLS` en attendant que le correctif soit appliqué.\nLes utilisateurs des versions de développement `pr�-0.9.7` utilisant\n`Kerberos` doivent aussi désactiver `Kerberos`.\n\n## Solution\n\nTéléchargez le ou les correctifs correspondants à la version d'OpenSSL\ninstallée sur votre système (cf. section documentation)\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité #46424 de SUN :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F46424"
+    },
+    {
+      "title": "Bulletin de sécurité #RHSA-2002:160-21 de RedHat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-160.html"
+    },
+    {
+      "title": "Bulletin de sécurité #37 d'Oracle :",
+      "url": "http://technet.oracle.com/deploy/security/pdf/openssl/Alert.pdf"
+    },
+    {
+      "title": "Bulletin de sécurité 2002-08-02 de apple :",
+      "url": "http://www.info.apple.com/usen/security/security_updates.html"
+    },
+    {
+      "title": "Avis #CA-2002-23 du CERT CC",
+      "url": "http://www.cert.org/advisories/CA-2002-23.html"
+    },
+    {
+      "title": "Bulletin de sécurité #SuSE-SA:2002:027 de SuSE :",
+      "url": "http://www.suse.com/de/security/2002_027_openssl.html"
+    },
+    {
+      "title": "Bulletin de sécurité #46605 de SUN :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F46605"
+    },
+    {
+      "title": "Le site du module SSL du serveur WEB Apache :",
+      "url": "http://www.apache-ssl.org/"
+    },
+    {
+      "title": "Bulletin de sécurité #NETBSD-SA2002-009 de NetBSD :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2002-009.txt.asc"
+    },
+    {
+      "title": "Bulletin de sécurité #MDKSA-2002:046 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-046.php"
+    },
+    {
+      "title": "Bulletin de sécurité #DSA-136-2 Debian :",
+      "url": "http://www.debian.org/security/2002/dsa-136"
+    },
+    {
+      "title": "Bulletin de sécurité de #SSRT2310a de Hewlett    Packard/Compaq",
+      "url": "http://thenew.hp.com/country/fr/fre/support.html"
+    },
+    {
+      "title": "Le site d'OpenSSL :",
+      "url": "http://www.openssl.org/"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-162",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2002-07-31T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins de Mandrake, NetBSD et apple ;",
+      "revision_date": "2002-08-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin #46424 de SUN ;",
+      "revision_date": "2002-08-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout de l'avis Oracle et modification de l'avis RedHat ;",
+      "revision_date": "2002-08-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout de l'avis HP/Compaq ;",
+      "revision_date": "2002-09-04T00:00:00.000000"
+    },
+    {
+      "description": "M.A.J. de l'avis Debian, ajout de l'avis du CERT CC ;",
+      "revision_date": "2002-09-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout de l'avis #46605 de SUN.",
+      "revision_date": "2002-09-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de type débordement de mémoire permettent à un\nutilisateur mal intentionné de provoquer l'exécution de code arbitraire\nou un déni de service.\n",
+  "title": "Multiples vulnérabilités dans OpenSSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2002-23 du CERT/CC",
+      "url": null
+    }
+  ]
+}

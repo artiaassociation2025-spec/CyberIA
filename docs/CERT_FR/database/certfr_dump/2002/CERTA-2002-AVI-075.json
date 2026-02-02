@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Information Server 5.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Information Server 4.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Information Server 5.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe nombreuses vulnérabilités ont été mises en évidence dans plusieurs\nversions de Microsoft Internet Information Server, permettant à un\nutilisateur mal intentionné d'exécuter du code arbitraire, d'effectuer\ndes dénis de service ou bien d'exploiter des vulnérabilités de type\n\"Cross Site Scripting\".  \nLes produits Cisco installés sur une plateforme Windows avec un serveur\nIIS peuvent être affectés si aucun correctif n'a été appliqué (se\nréférer au bulletin de Cisco afin de connaître la liste des produits\naffectés).\n\n## Solution\n\nSe référer au bulletin de sécurité Microsoft (section Patch\navailability) afin d'obtenir la liste des correctifs selon les versions\naffectées :\n\n    http://www.microsoft.com/technet/security/bulletin/MS02-018.asp\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité CISCO \"Microsoft IIS Vulnerability in    Cisco Products - MS02-018\" :",
+      "url": "http://www.cisco.com/warp/public/707/Microsoft-IIS-vulnerabilities-MS02-018.shtml"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-075",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-04-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout de l'avis Cisco.",
+      "revision_date": "2002-04-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Vulnérabilité de type \"cross site scripting\" (cf. bulletin d'information certa-2002-inf-001)"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été mises en évidence dans le serveur web\nde Microsoft Internet Information Server (IIS).\n",
+  "title": "Multiples vulnérabilités dans Microsoft IIS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS02-018 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-018.asp"
+    }
+  ]
+}

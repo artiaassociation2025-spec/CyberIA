@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Horde IMP versions 4.1.2 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Horde",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Horde IMP versions 4.0.4 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Horde",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn manque de contrôle sur le nom des répertoires passés en paramètres à\nHorde IMP permet à un utilisateur distant mal intentionné d'injecter une\npage web ou du script arbitraire dans le contexte du navigateur de la\nvictime consultant le site vulnérable.\n\n## Solution\n\nLes versions 4.0.5 et 4.1.3 de Horde IMP corrigent le problème :\n\n    http://ftp.horde.org/pub/imp/imp-h3-4.0.5.tar.gz\n\n    http://ftp.horde.org/pub/imp/imp-h3-4.1.3.tar.gz\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Horde #294 concernant la version 4.1.3    :",
+      "url": "http://lists.horde.org/archives/announce/2006/000294.html"
+    },
+    {
+      "title": "Bulletin de sécurité Horde #293 concernant la version 4.0.5    :",
+      "url": "http://lists.horde.org/archives/announce/2006/000293.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-368",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Cross-site scripting"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans Horde IMP permettent à un utilisateur\ndistant mal intentionné de réaliser une attaque de type Cross-Site\nScripting.\n",
+  "title": "Multiples vulnérabilités dans Horde IMP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Horde #293 et #294 du 17 août 2006",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Sun Java System Access Manager versions 7.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Java System Access Manager versions 6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans Sun Java System Access Manager :\n\n-   la première affectant uniquement les versions 7.x est de nature\n    non-précisée par l'éditeur. Elle permet à un utilisateur de sous\n    domaine (sub-realm) d'obtenir les privilèges de l'administrateur du\n    domaine racine (root-realm) ;\n-   la seconde touche les versions 6.x et 7.x et permet à un utilisateur\n    distant d'obtenir les mots de passe d'utilisateurs arbitraires.\n    Cette vulnérabilité nécessite d'avoir un accès à la console\n    d'administration pour être exploitée.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sun Solaris #242166 du 12 janvier 2009    :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-242166-1"
+    },
+    {
+      "title": "Bulletin de sécurité Sun Solaris #249106 du 12 janvier 2009    :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-249106-1"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-022",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-01-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans Sun Java System Access Manager\npermettent à un utilisateur distant d'élever ses privilèges ou de porter\natteinte à la confidentialité de certaines données.\n",
+  "title": "Multiples vulnérabilités dans Sun Java System Access Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Sun #249106 et #242166 du 12 janvier 2009",
+      "url": null
+    }
+  ]
+}

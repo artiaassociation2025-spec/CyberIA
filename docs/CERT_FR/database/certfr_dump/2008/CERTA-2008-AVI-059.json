@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les versions d'Apple iPhoto antérieures à 7.1.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Les versions d'Apple QuickTime antérieures à 7.4.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans les applications Apple\nQuickTime et iPhoto.\n\nL'une d'elles, sur QuickTime, a d'ailleurs fait l'objet de l'alerte\nCERTA-2008-ALE-001 publiée le 11 janvier 2008. Elle concerne un\ndépassement de mémoire tampon lors d'une tentative infructueuse de\nlecture de lecture d'un fichier via le protocole Real Time Streaming\nProtocol (RTSP).\n\niPhoto, quant à lui, ne manipulerait pas correctement certaines\ndiffusions de photos (photocast) spécialement construites.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0234",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0234"
+    },
+    {
+      "name": "CVE-2008-0043",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0043"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Apple 307407 du 04 février 2008 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=307407"
+    },
+    {
+      "title": "Bulletin de sécurité Apple 307398 du 04 février 2008 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=307398"
+    },
+    {
+      "title": "Document du CERTA CERTA-2008-ALE-001 du 14 janvier 2008 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2008-ALE-001/index.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-059",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans les applications Apple\nQuickTime et iPhoto. L'une d'elles a d'ailleurs fait l'objet de l'alerte\nCERTA-2008-ALE-001 publiée le 11 janvier 2008.\n\nLes conséquences de l'exploitation de ces vulnérabilités sont variées,\npermettant pour certaines d'exécuter du code arbitraire à distance sur\nun système vulnérable.\n",
+  "title": "Vulnérabilités dans Apple QuickTime et iPhoto",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Apple 307407 et 307398 du 04 février 2008",
+      "url": null
+    }
+  ]
+}

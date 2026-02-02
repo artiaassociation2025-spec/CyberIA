@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions de <TT>CUPS</TT> antérieures à la version  1.3.23.</P>",
+  "content": "## Description\n\nCUPS est un logiciel qui fournit aux systèmes d'exploitation basés sur\nUNIX un système d'impression portable.\n\nPlusieurs vulnérabilités ont été publiées sur CUPS :\n\n**CAN-2004-1267**\n\n:   HPGL est format de fichier contenant des graphiques vectoriels, tels\n    que ceux produits par exemple par les systèmes de conception\n    assistés par ordinateur à destination de certaines tables traçantes.\n\n    Le logiciel CUPS offre à ses utilisateurs la possibilité d'imprimer\n    un fichier au format HPGL sur n'importe quelle imprimante gérée par\n    CUPS, grace à un programme appelé hpgltops.\n\n    hpgltops est vulnérable à un débordement de variable. Un utilisateur\n    mal intentionné peut soumettre à l'impression un fichier au format\n    HPGL astucieusement construit. Cela permet d'exécuter du code\n    arbitraire avec les droits du gestionnaire d'impression (souvent\n    c'est l'utilisateur « lp »). Un tel code en particulier pourrait en\n    particulier lire ou modifier les documents en cours d'impression.\n\n**CAN-2004-1268**  \n**CAN-2004-1269**\n\n:   Le programme lppasswd fait partie du logiciel CUPS. Il permet de\n    définir, de changer et de supprimer des mots de passe spécifiques\n    pour la gestion des imprimantes. Une faille du programme lppasswd\n    permet à un utilisateur mal intentionné de corrompre le contenu du\n    fichier des mots de passe ou d'empêcher tout accès ultérieur à\n    celui-ci. Ceci a pour effet de produire un déni de service sur la\n    gestion des imprimantes.\n\n**CAN-2004-1270**\n\n:   Le programme lppasswd permet à un utilisateur malicieux capable de\n    produire un message d'erreur astucieusement construit de modifier le\n    contenu du fichier des mots de passe servant à la gestion des\n    imprimantes.\n\n## Solution\n\nUn correctif de sécurité est proposé par les différentes distributions.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "le correctif Red-HAT (RHSA-2005:013-20) :      \n;",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-013.html"
+    },
+    {
+      "title": "le projet CUPS :      \n;",
+      "url": "http://www.cups.org"
+    },
+    {
+      "title": "le correctif Red-HAT (RHSA-2005:053-19) du 15 février 2005    :      \n;",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-053.html"
+    },
+    {
+      "title": "le correctif Mandrake (MDKSA-2005:008) :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2005:008"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-018",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-01-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat RHSA-2005:053.",
+      "revision_date": "2005-02-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Intégrité et confidentialité des données"
+    },
+    {
+      "description": "Déni de service sur la gestion des imprimantes"
+    }
+  ],
+  "summary": "\n",
+  "title": "Multiples vulnérabilité dans CUPS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CVE : CAN-2004-1267",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "CVE : CAN-2004-1269",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "CVE : CAN-2005-1270",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "CVE : CAN-2004-1268",
+      "url": null
+    }
+  ]
+}

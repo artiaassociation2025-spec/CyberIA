@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Security Manager versions 3.2.x antérieures à 3.2.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Security Manager versions 3.1.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCisco IPS Event Viewer (IEV) est un service de Cisco Security Manager\n(CSM) qui permet de visualiser et gérer les alertes de sécurité de cinq\ncapteurs maximum. L'accès à ce service permet de configurer les filtres,\nd'importer et d'exporter des journaux, etc.\n\nIEV est installé par défaut dans Cisco Security Manager mais n'est pas\nautomatiquement démarré. Lorsqu'IEV est démarré, de nombreux ports TCP\nsont ouverts à la fois sur le serveur et sur le client. Lorsque le\nclient IEV arrête sa session, les ports TCP du client sont fermés, mais\npas ceux du serveur. En se connectant directement à un des ports TCP\nserveur, un utilisateur malintentionné peut obtenir un accès\nadministrateur au service IEV et à sa base de données.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3820",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3820"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco cisco-sa-20090121-csm du 21    janvier 2009 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20090121-csm.shtml"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-028",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-01-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès à distance à un service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans <span class=\"textit\">Cisco Security\nManager</span> permet d'accéder à distance au service <span\nclass=\"textit\">IPS Event Viewer</span>.\n",
+  "title": "Vulnérabilité dans Cisco Security Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-20090121-csm du 21 janvier 2009",
+      "url": null
+    }
+  ]
+}

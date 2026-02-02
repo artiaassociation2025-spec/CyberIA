@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Xen 3.x ;",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix XenServer 5.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix XenServer 5.6.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix XenServer 5.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité, causée par un manque de contrôle lors de l'appel à la\nversion x86_64 de la macro \\_\\_addr_ok(), permet à une personne\nmalveillante de provoquer l'arrêt inopiné du système hôte depuis un\nsystème virtualisé.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2901",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2901"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Citrix CTX130325 du 06 septembre 2011    :",
+      "url": "http://support.citrix.com/article/CTX130325"
+    },
+    {
+      "title": "Bulletin de sécurité Xen OpenWall du 02 septembre 2011 :",
+      "url": "http://www.openwall.com/lists/oss-security/2011/09/02/2"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-500",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-09-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité Xen permet à une personne malveillante de provoquer un\ndéni de service du système hôte depuis un système virtualisé.\n",
+  "title": "Vulnérabilité dans Xen",
+  "vendor_advisories": []
+}

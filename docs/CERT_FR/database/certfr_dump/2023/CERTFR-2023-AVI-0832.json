@@ -1,0 +1,97 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache Tomcat versions 9.x.x antérieures à 9.0.81",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat versions 10.x.x antérieures à 10.1.14",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat versions 8.x.x antérieures à 8.5.94",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-44487",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-44487"
+    },
+    {
+      "name": "CVE-2023-42795",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-42795"
+    },
+    {
+      "name": "CVE-2023-45648",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-45648"
+    },
+    {
+      "name": "CVE-2023-42794",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-42794"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0832",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-10-12T00:00:00.000000"
+    },
+    {
+      "description": "Ajout des versions 10.x.x dans les systèmes affectés",
+      "revision_date": "2023-10-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans <span\nclass=\"textit\">les produits Apache Tomcat</span>. Elles permettent à un\nattaquant de provoquer un contournement de la politique de sécurité, une\natteinte à la confidentialité des données et un déni de service à\ndistance.\n",
+  "title": "Multiples vulnérabilités dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache Tomcat 10.1.14 du 10 octobre 2023",
+      "url": "https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.14"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache Tomcat 8.5.94 du 10 octobre 2023",
+      "url": "https://tomcat.apache.org/security-8.html#Fixed_in_Apache_Tomcat_8.5.94"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache Tomcat 9.0.81 du 10 octobre 2023",
+      "url": "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.81"
+    }
+  ]
+}

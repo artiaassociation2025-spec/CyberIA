@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>xinetd</TT> version 2.3.4 et  versions antérieures.",
+  "content": "## Description\n\nxinetd est le démon responsable du lancement de services réseau tels\ntelnet, ftp etc.  \nxinetd est une extension du démon inetd.  \nUne vulnérabilté à été découverte dans la façon dont xinetd gère\ncertains descripteurs de fichier, permettant à un utilisateur mal\nintentionné de créer un déni de service.\n\n## Solution\n\nMettre à jour le paquetage xinetd (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité DSA-151-1 de Debian :",
+      "url": "http://www.debian.org/security/2002/dsa-151"
+    },
+    {
+      "title": "Avis de sécurité MDKSA-2002:053 de Mandrake :",
+      "url": "http://www.linux-mandrake.com/en/updates/2002/MDKSA-2002-053.php"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-195",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le démon xinetd permet à un utilisateur mal\nintentionné de provoquer un déni de service sur tous les démons gérés\npar xinetd : telnet, ftp etc.\n",
+  "title": "Vulnérabilité de xinetd",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Mandrake",
+      "url": null
+    }
+  ]
+}

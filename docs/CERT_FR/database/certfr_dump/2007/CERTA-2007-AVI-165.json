@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Content Management Server (CMS) 2002 Service Pack 2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Content Management Server (CMS) 2001 Service Pack 1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans Microsoft Content\nManagement Server (CMS), un outil permettant de créer et maintenir du\ncontenu de sites Web :\n\n1.  la première serait dûe à une mauvaise manipulation d'adresses\n    réticulaires (ou URLs) se trouvant dans les requêtes HTTP pour le\n    CMS. Une personne malveillante pourrait construire un paquet\n    particulier, et l'envoyer vers la machine vulnérable, afin d'en\n    prendre le contrôle complet à distance.\n2.  la seconde consisterait en une vérification incorrecte des entrées\n    fournies par une requête de redirection HTML adressée au client. Une\n    personne malveillante pourrait exploiter cette vulnérabilité pour\n    faire une injection de code indirecte (cross site scripting), ce qui\n    lui permettrait de contourner la politique de sécurité (accès\n    illégitime aux données de l'utilisateur, modification des caches de\n    navigation, etc.).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0938",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0938"
+    },
+    {
+      "name": "CVE-2007-0939",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0939"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-165",
+  "revisions": [
+    {
+      "description": "version initiale;",
+      "revision_date": "2007-04-11T00:00:00.000000"
+    },
+    {
+      "description": "mise à jour du bulletin MS07-018 le 12 juin 2007 par l'éditeur.",
+      "revision_date": "2007-06-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été identifiées dans Microsoft Content\nManagement Server (CMS). Exploitées par une personne, celles-ci\npermettraient l'exécution de code arbitraire à distance sur le système\nvulnérable ou le contournement de la politique de sécurité (accès\nillégitime aux données de l'utilisateur, modification des caches de\nnavigation, etc.).\n",
+  "title": "Vulnérabilités dans Microsoft Content Management Server (CMS)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-018 du 10 avril 2007",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-018.mspx"
+    }
+  ]
+}

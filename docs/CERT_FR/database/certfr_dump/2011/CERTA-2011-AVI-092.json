@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>OpenLDAP versions 2.4.23 et  antérieures.</p>",
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans OpenLDAP :\n\n-   La première concerne le composant back-ldap et permet à un\n    utilisateur distant de s'authentifier correctement malgré un mot de\n    passe erroné. Pour être exploitable, il est nécessaire que les\n    serveurs OpenLDAP maître et esclave soient configurés avec l'option\n    ppolicy_forward_updates.\n-   la seconde est relative au composant back-ndb qui, sous certaines\n    conditions, peut autoriser certaines actions sans authentification\n    préalable. Afin de conduire une exploitation l'attaquant doit\n    connaître le contenu de la directive rootdn présente dans le fichier\n    slapd.conf.\n\n## Solution\n\nLa version 2.4.24 corrige ces problèmes :\n\n    http://www.openldap.org/software/download\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de OpenLDAP :",
+      "url": "http://www.openldap.org"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-092",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-02-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans OpenLDAP permettent à un\nutilisateur malintentionné distant de contourner la politique de\nsécurité du système.\n",
+  "title": "Multiples vulnérabilités dans OpenLDAP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapports d'erreurs n°6607 et n°6661 de OpenLDAP",
+      "url": "http://www.openldap.org/its/index.cgi/Software%20Bugs?id=6661"
+    }
+  ]
+}

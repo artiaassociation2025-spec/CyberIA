@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Windows avec Visual FoxPro 6.0 installé.</P>",
+  "content": "## Description\n\nIl est possible, lors de l'installation d'un logiciel sur le système\nWindows, d'indiquer la façon dont Internet Explorer traitera les\napplications qui y sont associées. Lors de son installation, Visual\nFoxPro 6.0 n'indique pas à Internet Explorer la façon dont seront\ntraités les fichiers qui lui sont associés (extension en .app).\n\nPar conséquent, il est possible de lancer automatiquement Visual FoxPro\n6.0, voire d'exécuter un fichier dont l'extension est .app au moyen d'un\nfichier HTML habilement conçu (dans un message au format HTML ou sur un\nserveur web malicieux par exemple).\n\n## Solution\n\nAppliquer le correctif comme indiqué dans le bulletin de sécurité\nMS02-049 de Microsoft (consulter le paragraphe Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-201",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-09-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut lancer à distance le logiciel Visual\nFoxPro 6.0 (s'il est installé sur la machine cible) ainsi qu'une\napplication qui y est associée au moyen d'une page HTML habilement\nconçue.\n",
+  "title": "Exécution à distance de Visual FoxPro 6.0 ou des documents associés",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS02-049 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-049.asp"
+    }
+  ]
+}

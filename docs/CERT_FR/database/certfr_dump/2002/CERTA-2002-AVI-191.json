@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Oracle9i versions 9.0.x et 9.2.</p>",
+  "content": "## Description\n\nLe service réseau Oracle Net Listener (port 1521/tcp par défaut) est le\ncomposant principal d' Oracle Net, l'application qui permet d'accéder à\ndistance à une base de données Oracle.\n\nUn utilisateur mal intentionné peut, par le biais de requêtes\nmalicieusement construites, réaliser un déni de service du service\nréseau Oracle Net Listener.\n\n## Contournement provisoire\n\nEn attendant d'appliquer le correctif, il peut-être nécessaire de\nfiltrer les adresses IP des postes clients du gestionnaire de base de\ndonnées. Pour cela, dans le fichier\n`$ORACLE_HOME/NETWORK/ADMIN/SQLNET.ORA` ajouter les lignes suivantes :\n\n-   tcp.validnode_checking = YES  \n-   tcp.invited_nodes = (liste d'adresses IP)  \n-   tcp.excluded_nodes = (liste d'adresses IP)\n\n## Solution\n\nAppliquer le correctif correspondant à votre plate-forme (voir avis de\nsécurité, section documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-191",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans Oracle Net de Oracle9i permet à un\nutilisateur mal intentionné de réaliser un déni de service sur le\nservice Oracle Net Listener.\n",
+  "title": "Vulnérabilité sur Oracle Net",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité #38 d'Oracle",
+      "url": "http://technet.oracle.com/deploy/security/pdf/2002alert38rev1.pdf"
+    }
+  ]
+}

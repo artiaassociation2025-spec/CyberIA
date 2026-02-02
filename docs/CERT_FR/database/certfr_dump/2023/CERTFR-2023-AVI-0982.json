@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Tomcat versions 8.x antérieures à 8.5.96",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tomcat versions 10.x antérieures à 10.1.16",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tomcat versions 9.x antérieures à 9.0.83",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-46589",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-46589"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0982",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-11-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Apache Tomcat. Elle permet à un\nattaquant de provoquer un contournement de la politique de sécurité.\n",
+  "title": "Vulnérabilité dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache Tomcat 9 du 28 novembre 2023",
+      "url": "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.83"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache Tomcat 8 du 28 novembre 2023",
+      "url": "https://tomcat.apache.org/security-8.html#Fixed_in_Apache_Tomcat_8.5.96"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache Tomcat 10 du 28 novembre 2023",
+      "url": "https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.16"
+    }
+  ]
+}

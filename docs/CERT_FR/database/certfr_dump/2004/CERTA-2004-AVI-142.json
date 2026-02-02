@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Quelle que soit le système d'exploitation :</P>  <UL>    <LI><SPAN class=\"textit\">WebLogic Server</SPAN> et <SPAN class=\n    \"textit\">Express 8.1</SPAN> jusqu'au <SPAN class=\n    \"textit\">Service Pack 2</SPAN> ;</LI>    <LI><SPAN class=\"textit\">WebLogic Server</SPAN> et <SPAN class=\n    \"textit\">Express 7.0</SPAN> jusqu'au <SPAN class=\n    \"textit\">Service Pack 4</SPAN> ;</LI>    <LI><SPAN class=\"textit\">WebLogic Server</SPAN> et <SPAN class=\n    \"textit\">Express 6.1</SPAN> jusqu'au <SPAN class=\n    \"textit\">Service pack 6</SPAN>.</LI>  </UL>",
+  "content": "## Description\n\nLes serveurs WebLogic de la société BEA, fournissent un support pour le\ndéploiement d'applications Java distribuées (serveur J2EE). Les failles\nrecensées sont les suivantes :\n\n1.  l'accès au journaux de l'assistant de configuration (\\`\\`assistant\n    wizard'') permet d'obtenir l'identifiant et l'authentifiant de\n    l'administrateur (version 8.1) ;\n2.  un utilisateur ayant des privilèges pour installer et exécuter du\n    code peut dérober l'identifiant et le mot de passe du compte ayant\n    démarré le serveur (versions 8.1 et 7.0) ;\n3.  les sites utilisant un gestionnaire de confiance personnalisé\n    (\\`\\`custom trust manager'') pour les certificats X509 risquent\n    qu'un certicat refusé par le gestionnaire soit tout de même accepté\n    par le serveur (versions 8.1 et 7.0) ;\n4.  une application EJB possédant une méthode remove(), peut voir cette\n    dernière activée par des utilisateurs n'en ayant normalement pas le\n    privilège (version 8.1, 7.0 et 6.1) ;\n5.  dans certains cas, l'utilisateur et le mot de passe d'accès à une\n    base de données sont écrits en clair dans un fichier config.xml\n    (versions 8.1, 7.0 et 6.1) ;\n6.  la re-création d'un groupe auparavant supprimé maintient les\n    privilèges initiaux si des membres de la première version existent\n    toujours (versions 8.1 et 7.0) ;\n7.  un mauvais format dans la spécification d'une adresse réticulaire au\n    sein d'une application permet à un utilisteur mal intentionné de\n    contourner les restrictions d'accès (versions 8.1 et 7.0).\n\n## Solution\n\nMettre à jour en suivant les recommendations du distributeur :\n\n1.  usurpation des privilèges administrateur :\n\n        http://dev2dev.bea.com/resourcelibrary/advisoriesnotifications/BEA04_58.00.jsp\n\n2.  usurpation du compte de démarrage :\n\n        http://dev2dev.bea.com/resourcelibrary/advisoriesnotifications/BEA04_55.00.jsp\n\n3.  mauvaise validation SSL :\n\n        http://dev2dev.bea.com/resourcelibrary/advisoriesnotifications/BEA04_54.00.jsp\n\n4.  suppression d'objets EJB :\n\n        http://dev2dev.bea.com/resourcelibrary/advisoriesnotifications/BEA04_57.00.jsp\n\n5.  risque d'accès à la base de donnée :\n\n        http://dev2dev.bea.com/resourcelibrary/advisoriesnotifications/BEA04_53.00.jsp\n\n6.  conservation de privilèges :\n\n        http://dev2dev.bea.com/resourcelibrary/advisoriesnotifications/BEA04_52.01.jsp\n\n7.  contournement des restrictions d'accès :\n\n        http://dev2dev.bea.com/resourcelibrary/advisoriesnotifications/BEA04_56.00.jsp\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Notes de vulnérabilité de l'US-CERT :",
+      "url": "http://www.kb.cert.org/vuls/id/574222"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-142",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-04-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Usurpation de privilèges"
+    }
+  ],
+  "summary": "Sept vulnérabilités différentes ont été publiées par <span\nclass=\"textit\">BEA</span> :\n\n1.  il est possible d'obtenir l'identifiant et l'authentifiant de\n    l'administrateur ;\n2.  il est possible, dans certains cas, de dérober l'identifiant et\n    l'authentifiant de l'utilisateur ayant lancé le serveur ;\n3.  un certificat X509 habilement construit peut permettre d'usurper\n    l'identité d'un utilisateur légitime lors d'une connexion SSL ;\n4.  certains objets EJB (<span class=\"textit\">\\`\\`Enterprise Java\n    Beans''</span>) peuvent être retirés par des utilisateurs n'en ayant\n    pas les droits ;\n5.  l'identifiant et l'authentifiant d'accès à la base de données sont\n    stockés en clair ;\n6.  les privilèges d'un groupe supprimé peuvent être indûment accordés à\n    ses membres lors de sa re-création ;\n7.  une faiblesse peut être utilisée pour contourner une restriction sur\n    les adresses réticulaires (<span class=\"textit\">URL</span>)\n    accessibles.\n",
+  "title": "Failles multiples des serveurs WebLogic de BEA",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de BEA",
+      "url": null
+    }
+  ]
+}

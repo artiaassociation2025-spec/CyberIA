@@ -1,0 +1,115 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Sun ONE Web Server 6.0 Service Pack 9 et les versions antérieures ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun ONE Application Server 7 Platform Edition Update 6 et les versions antérieures ;",
+      "product": {
+        "name": "Platform",
+        "vendor": {
+          "name": "SolarWinds",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Java System Web Server version 6.1 Service Pack 4 et les versions antérieures ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun ONE Application Server 7 Standard Edition Update 6 et les versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SolarWinds",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Java System Application Server version 7 2004Q2 Standard Edition Update 2 et les versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Java System Application Server version 7 2004Q2 Enterprise Edition Update 2 et les versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SolarWinds",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans certaines versions de Sun Java\nSystem Server et Sun ONE Server. Ceux-ci ne vérifient pas correctement\ncertaines adresses réticulaires (ou URI pour Universal Resource\nIdentifier) retournées dans une page d'erreur et contenant le caractère\nguillemet \". Un utilisateur malveillant peut utiliser cette\nvulnérabilité en injectant une URI spéciale dans un serveur. Ceci\nreprésente une attaque par injection de code arbitraire (ou Cross-Site\nScripting) : du code arbitraire peut être exécuté sur la machine d'un\nutilisateur qui visite la page d'erreur sur le site où le serveur Sun\nfonctionne.\n\n## Solution\n\nSe référer au bulletin de mise à jour de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de mise à jour Sun ONE Application Server 7    Platform Edition :",
+      "url": "http://www.sun.com/download/products.xml?id=42ae3178"
+    },
+    {
+      "title": "Bulletin de mise à jour Sun Java System Application Server    version 7 2004Q2 Standard Edition :",
+      "url": "http://www.sun.com/download/products.xml?id=427fe06d"
+    },
+    {
+      "title": "Bulletin de mise à jour Sun ONE Application Server 7    Standard Edition :",
+      "url": "http://www.sun.com/download/products.xml?id=42ae317c"
+    },
+    {
+      "title": "Bulletin de mise à jour Sun Java System Application Server    version 7 2004Q2 Enterprise Edition :",
+      "url": "http://javashoplm.sun.com"
+    },
+    {
+      "title": "Bulletin de mise à jour Sun ONE Web Server 6.0 :",
+      "url": "http://www.sun.com/download/products.xml?id=43a84f89"
+    },
+    {
+      "title": "Bulletin de mise à jour Java System Web Server version 6.1    :",
+      "url": "http://www.sun.com/download/products.xml?id=434aec1d"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-207",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans certaines versions de Sun Java\nSystem Server et Sun ONE Server. Elle permet à un utilisateur\nmalveillant utilisant une technique d'injection de code indirecte (ou\n<span class=\"textit\">Cross-Site Scripting</span>) pour exécuter du code\narbitraire à distance sur une machine se connectant au serveur.\n",
+  "title": "Vulnérabilité de Sun Java System Server et Sun ONE Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Sun",
+      "url": null
+    }
+  ]
+}

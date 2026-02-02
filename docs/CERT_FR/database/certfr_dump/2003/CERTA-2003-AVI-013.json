@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Apache versions antérieures à la  version 2.0.44 sur les plates-formes Windows.</p>",
+  "content": "## Description\n\nUn utilisateur distant mal intentionné peut, par le biais de requête\ncontenant le nom d'un périphérique MS-DOS, réaliser un déni de service\nde la plate-forme sur laquelle se trouve le serveur http Apache.\n\nUne seconde vulnérabilité permet, dans les mêmes conditions, d'exécuter\ndu code arbitraire sur la machine cible.\n\nCes deux vulnérabilités ne sont exploitables que sur les plates-formes\nwindows 98 ou windows ME.\n\nLa troisième vulnérabilité porte sur la non vérification de caractères\nspécifiques dans une requête qui permet à un utilisateur mal\nintentionné, par le biais de requêtes malicieusement construites,\nd'accèder à des fichiers non autorisés.\n\n## Solution\n\nLa version 2.0.44 corrige ces vulnérabilités.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis sur le site Apache :",
+      "url": "http://httpd.apache.org/dist/httpd/Announcement2.html"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-013",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-01-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Accès non-autorisé à des fichiers du système"
+    }
+  ],
+  "summary": "Trois vulnérabilités ont été découvertes sur le serveur http Apache\ninstallé sur les plates-formes Windows.\n",
+  "title": "Vulnérabilité sur le serveur http Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste de diffusion Bugtraq",
+      "url": null
+    }
+  ]
+}

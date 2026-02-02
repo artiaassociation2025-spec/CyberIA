@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Windows, toutes versions, toutes  éditions.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent les pilotes en mode noyau de\nWindows :\n\n-   (CVE-2010-1887) lors d'un appel système, des paramètres transmis ne\n    sont pas validés correctement. Ce défaut est exploitable par un\n    utilisateur malveillant pour réaliser un déni de service ;\n-   (CVE-2010-1894) une erreur dans le traitement des exceptions est\n    exploitable par un utilisateur malveillant pour élever ses\n    privilèges ;\n-   (CVE-2010-1895) les pilotes en mode noyau allouent de manière\n    incorrecte de la mémoire dans certaines circonstances. Ce problème\n    est exploitable par un utilisateur malveillant pour élever ses\n    privilèges ;\n-   (CVE-2010-1896) des entrées transmises depuis le mode utilisateur ne\n    sont pas validées correctement. Ce problème est exploitable par un\n    utilisateur malveillant pour élever ses privilèges ;\n-   (CVE-2010-1897) des paramètres ne sont pas validées correctement\n    lors de la création de fenêtres par les pilotes. Ce problème est\n    exploitable par un utilisateur malveillant pour élever ses\n    privilèges.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-1895",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1895"
+    },
+    {
+      "name": "CVE-2010-1894",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1894"
+    },
+    {
+      "name": "CVE-2010-1897",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1897"
+    },
+    {
+      "name": "CVE-2010-1896",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1896"
+    },
+    {
+      "name": "CVE-2010-1887",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1887"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-364",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-08-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent les pilotes en mode noyau de Windows.\nLeur exploitation permet à un utilisateur local malveillant de réaliser\nun déni de service ou d'élever ses privilèges.\n",
+  "title": "Vulnérabilités de pilotes en mode noyau de Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS10-048 du 10 août 2010",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-048.mspx"
+    }
+  ]
+}

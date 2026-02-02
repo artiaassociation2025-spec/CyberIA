@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD 7.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 7.2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 8.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur est présente dans la mise en œuvre du système de fichiers ZFS\ndans FreeBSD. Cette erreur est liée à un problème dans la gestion des\ntransactions d'écritures par le pilote vulnérable. Elle permet à un\nutilisateur local de porter atteinte à l'intégrité ou à la\nconfidentialité des données ou d'élever ses privilèges.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-10:03.zfs du 06 janvier    2010 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-10:03.zfs.asc"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-005",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-01-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans FreeBSD permet à un utilisateur local de\nporter atteinte à l'intégrité ou à la confidentialité des données ou\nd'élever ses privilèges.\n",
+  "title": "Vulnérabilité dans FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD-SA-10:03.zfs du 06 janvier 2010",
+      "url": null
+    }
+  ]
+}

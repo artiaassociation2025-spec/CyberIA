@@ -1,0 +1,96 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco IOS 12.0 ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS 12.3 ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS 12.1 ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS 12.2 ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS 12.4.",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur dans la mise en œuvre des timers internes des IOS Cisco\npermet d'exécuter du code arbitraire précédement injecté en mémoire par\nune attaque de type débordement de tas (heap overflow). Ceci permet à un\nutilisateur distant mal intentionné de provoquer un déni de service ou\nd'exécuter du code arbitraire à distance en exploitant cette\nvulnérabilité combinée à une autre de type heap overflow comme celle\ndécrite dans l'avis CERTA-2005-AVI-309 sur la pile IPv6 des équipements\nCisco.\n\n## Solution\n\nSe référer au bulletin de sécurité Cisco pour appliquer le correctif\napproprié (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco #20051102-timers du 02 novembre    2005 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20051102-timers.shtml"
+    },
+    {
+      "title": "Site de l'éditeur :",
+      "url": "http://www.cisco.com"
+    },
+    {
+      "title": "Avis CERTA-2005-AVI-309 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2005-AVI-309/CERTA-2005-AVI-309.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-431",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans les produits Cisco équipés d'un IOS (Internal\nOperating System) permet à un utilisateur distant de provoquer un déni\nde service ou d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité dans les produits Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco #20051102-timers du 02 novembre 2005",
+      "url": null
+    }
+  ]
+}

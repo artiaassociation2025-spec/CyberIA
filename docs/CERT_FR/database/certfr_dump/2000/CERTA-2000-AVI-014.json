@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Linux Caldera.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Linux RedHat 5.2 et 6.2 ayant l'utilitaire « makewhatis »,",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'utilitaire makewhatis génère des fichiers temporaires dont les noms\nsont prévisibles. En appliqaunt les méthodes d'attaques utilisant des\nliens symboliques, l'utilisateur mal intentionné peut détourner l'usage\ndu script makewhatis afin de modifier des fichiers, les renommer, ou en\nchanger les permissions.\n\n## Solution\n\nRedhat recommande de mettre à jour makewhatis avec les correctifs\nproposés aux adresses suivantes :\n\n-   Red Hat Linux 5.2 :\n\n    **i386**\n\n    :   ftp://updates.redhat.com/5.2/i386/man-1.5h1-2.5.x.i386.rpm\n\n    **alpha**\n\n    :   ftp://updates.redhat.com/5.2/alpha/man-1.5h1-2.5.x.alpha.rpm\n\n    **sparc**\n\n    :   ftp://updates.redhat.com/5.2/sparc/man-1.5h1-2.5.x.sparc.rpm\n-   Red Hat Linux 6.2 :\n\n    **alpha**\n\n    :   ftp://updates.redhat.com/6.2/alpha/man-1.5h1-2.6.x.alpha.rpm\n\n    **i386**\n\n    :   ftp://updates.redhat.com/6.2/i386/man-1.5h1-2.6.x.i386.rpm\n\n    **sparc**\n\n    :   ftp://updates.redhat.com/6.2/sparc/man-1.5h1-2.6.x.sparc.rpm\n-   Caldera :\n    -   ftp://ftp.calderasystems.com/pub/updates/OpenLinux/2.3/current/RPMS/man-1.5f-6.i386.rpm\n\n    -   ftp://ftp.calderasystems.com/pub/updates/OpenLinux/2.3/current/SRPMS/man-1.5f-6.src.rpm\n\n    -   ftp://ftp.calderasystems.com/pub/updates/eServer/2.3/current/RPMS/man-1.5f-6.i386.rpm\n\n    -   ftp://ftp.calderasystems.com/pub/updates/eServer/2.3/current/SRPMS/man-1.5f-6.src.rpm\n\n    -   ftp://ftp.calderasystems.com/pub/updates/eDesktop/2.4/current/RPMS/man-1.5g-2.i386.rpm\n\n    -   ftp://ftp.calderasystems.com/pub/updates/eDesktop/2.4/current/SRPMS/man-1.5g-2.src.rpm\n\nPour chaque fichier RPM exécuter la commande :\n\n> `rpm -Fvh nom_du_fichier.rpm`\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de Sécurité RedHat :",
+      "url": "http://www.redhat.com/support/errata/RHSA-2000-041-02.html"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-014",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-07-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement des règles de sécurité et à terme, accès root"
+    }
+  ],
+  "summary": "L'utilitaire « makewhatis » est utilisé sous unix pour mettre à jour les\nbases de données utilisées par les commandes whatis et apropos. Redhat a\ntrouvé une vulnérabilité qui permet à un utilisateur local de modifier\ndes fichiers auxquel il n'a normalement pas accès. L'utilisateur mal\nintentionné pourrait augmenter ses privilèges en tirant partie de cette\nvulnérabilité.\n",
+  "title": "Vulnérabilité dans l'utilitaire makewhatis sous Unix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis du CERT-IST",
+      "url": null
+    }
+  ]
+}

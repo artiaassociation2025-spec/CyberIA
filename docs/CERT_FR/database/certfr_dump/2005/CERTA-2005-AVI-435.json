@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><TT>OpenVPN</TT> versions 2.0 antérieures à la 2.0.4 :</P>  <UL>    <LI>pour les versions Unix en mode client,</LI>    <LI>pour les versions Unix comme Windows en mode serveur.</LI>  </UL>",
+  "content": "## Description\n\nOpenVPN est une solution de réseau privé virtuel, existant pour Unix et\nWindows, et utilisant SSL/TLS pour assurer la phase d'authentification.\n\nUne vulnérabilité dans une chaîne de format peut être utilisée pour\nexécuter du code arbitraire sur une station cliente se connectant à un\nserveur volontairement malicieux ou préalablement compromis\n(CVE-2005-3393).\n\nUne faille dans le mode serveur avec transport TCP peut provoquer\nl'arrêt du serveur lors d'une connexion (CVE-2005-3409).\n\n## Solution\n\nSe reporter au bulletin de l'éditeur pour l'obtention des correctifs\n(cf. Documentation) ou mettre à jour les sources en version 2.0.4 au\nmoins.\n",
+  "cves": [
+    {
+      "name": "CVE-2005-3393",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-3393"
+    },
+    {
+      "name": "CVE-2005-3409",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-3409"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SR:2005:025 du 04 novembre    2005 :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2005-Nov/0001.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200511-07.xml du 06    novembre 2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200511-07.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:206 du 08 novembre    2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:206"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD du 01 novembre 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-openvpn.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-885 du 07 novembre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-885"
+    },
+    {
+      "title": "Site internet d'OpenVPN :",
+      "url": "http://openvpn.net"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-435",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo, Debian et SUSE.",
+      "revision_date": "2005-11-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva MDKSA-2005:206.",
+      "revision_date": "2005-11-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service en mode serveur"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance en mode client"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été identifiées dans le code d'OpenVPN. L'une\npermet d'exécuter du arbitraire sur un client se connectant à un serveur\nmalicieux.\n",
+  "title": "Vulnérabilité du système de réseau privé virtuel OpenVPN",
+  "vendor_advisories": []
+}

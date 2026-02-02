@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Office 2003 Service Pack 2 : Microsoft Outlook 2003.",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2000 Service Pack 3 : Microsoft Outlook 2000 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office XP Service Pack 3 : Microsoft Outlook 2002 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDes vulnérabilités ont été identifiées dans Microsoft Outlook. Parmi\ncelles-ci :\n\n-   Outlook ne gère pas correctement certaines informations contenues\n    dans les en-têtes de courriels. Une personne pourrait envoyer un\n    courriel construit avec une en-tête particulière, afin de perturber\n    le client de messagerie Outlook qui chercherait à réceptionner le\n    message.\n-   Outlook ne manipulerait pas correctement les fichiers contenant un\n    enregistrement VEVENT. Cet enregistrement est issu du standard\n    iCalendar (RFC 2445) pour des échanges de données liées au\n    calendrier : il décrit un évènement dans une fenêtre de temps donné.\n    Cette vulnérabilité permettrait à une personne malveillante envoyant\n    un fichier iCalendar (.ICS) exploitant celle-ci d'exécuter des\n    commandes arbitraires à distance, avec les droits de l'utilisateur\n    local.\n-   Outlook ne manipulerait pas correctement les fichiers au format .oss\n    (pour Office Saved Searches) associés à la fonction Recherche\n    avancée. Ils sont utilisés dans le cas de sauvegardes des résultats\n    de recherches (menu \"Fichier\", option \"Enregistrer la recherche en\n    tant que dossier de recherche\"). Une personne malveillante pourrait\n    envoyer un courriel contenant en pièce jointe un document .oss\n    spécialement conçu. Le fait d'ouvrir cette pièce jointe provoquerait\n    alors l'exécution de code arbitraire sur la machine ayant une\n    version d'Outlook vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0033",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0033"
+    },
+    {
+      "name": "CVE-2007-0034",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0034"
+    },
+    {
+      "name": "CVE-2006-1305",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1305"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-017",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Des vulnérabilités ont été identifiées dans Microsoft Outlook. Elles\npermettraient à une personne malveillante qui exploiterait l'une\nd'elles, de prendre le contrôle de la machine ayant une version\nd'Outlook vulnérable.\n",
+  "title": "Vulnérabilités de Microsoft Outlook",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-003 du 09 janvier 2007",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-003.mspx"
+    }
+  ]
+}

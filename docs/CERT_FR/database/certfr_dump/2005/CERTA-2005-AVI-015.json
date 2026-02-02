@@ -1,0 +1,107 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM DB2 7.x.",
+      "product": {
+        "name": "Db2",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM DB2 8.1 ;",
+      "product": {
+        "name": "Db2",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'application DB2 d'IBM est une base de données pour les systèmes\nd'exploitation Linux, UNIX et Windows.\n\nCette application présente de multiples vulnérabilités :\n\n-   Une vulnérabilité de type débordement de pile dans db2fmp permet à\n    un utilisateur local mal intentionné d'élever ses privilèges.\n    Remarque : Cette vulnérabilité ne concerne pas le système\n    d'exploitation Microsoft Windows.\n-   La bibliothèque libdb2.so.1 présente une vulnérabilité de type\n    débordement de mémoire. Un utilisateur peut exploiter cette\n    vulnérabilité afin d'élever ses privilèges à l'égal du compte root\n    (administrateur).\n-   Une vulnérabilité de type débordement de pile découverte dans la\n    commande call permet à une personne malveillante d'élever ses\n    privilèges à l'égal du compte root.\n-   Une vulnérabilité découverte dans JDBC Applet Server de DB2 présente\n    une vulnérabilité de type débordement de pile. Cette vulnérabilité\n    peut être exploité par une personne mal intentionnée afin d'exécuter\n    du code arbitraire à distance.\n-   La fonction SATENCRYPT présente une vulnérabilité de type\n    débordement de pile qui permet à un utilisateur mal intentionné\n    d'élever ses privilèges à l'égal du compte root.\n-   La version Windows de l'application DB2 d'IBM présente une\n    vulnérabilité permettant à une personne malveillante de porter\n    atteinte à la confidentialité et à l'intégrité des données partagées\n    sur le système vulnérable.\n-   Une vulnérabilité découverte dans la fonction to_char() et dans la\n    fonction to_date() permet à un utilisateur mal intentionné\n    d'effectuer un déni de service sur l'application DB2.\n-   Quatre fonctions XML (eXtensible Markup Language) présentent une\n    vulnérabilité de type débordement de pile. Une personne malveillante\n    peut exploiter ces vulnérabilités afin d'exécuter du code arbitraire\n    et/ou d'élever ses privilèges à l'égal du compte root.\n-   Une seconde vulnérabilité découverte dans les fonctions XML permet à\n    un utilisateur distant mal intentionné de porter atteinte à la\n    confidentialité et à l'intégrité des données.\n\n## Solution\n\nSe réferer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour d'IBM concernant DB2 7.x :",
+      "url": "http://www-306.ibm.com/software/data/db2/udb/support/downloadv7.html"
+    },
+    {
+      "title": "Bulletin de sécurité NGS Research #NISR05012005B :",
+      "url": "http://www.nextgenss.com/advisories/db205012005B.txt"
+    },
+    {
+      "title": "Bulletin de sécurité NGS Research #NISR05012005G :",
+      "url": "http://www.nextgenss.com/advisories/db205012005G.txt"
+    },
+    {
+      "title": "Bulletin de sécurité NGS Research #NISR05012005F :",
+      "url": "http://www.nextgenss.com/advisories/db205012005F.txt"
+    },
+    {
+      "title": "Mise à jour d'IBM concernant DB2 8.1 :",
+      "url": "http://www-306.ibm.com/software/data/db2/udb/support/downloadv8.html"
+    },
+    {
+      "title": "Bulletin de sécurité NGS Research #NISR05012005C :",
+      "url": "http://www.nextgenss.com/advisories/db205012005C.txt"
+    },
+    {
+      "title": "Bulletin de sécurité NGS Research #NISR05012005E :",
+      "url": "http://www.nextgenss.com/advisories/db205012005E.txt"
+    },
+    {
+      "title": "Bulletin de sécurité NGS Research #NISR05012005I :",
+      "url": "http://www.nextgenss.com/advisories/db205012005I.txt"
+    },
+    {
+      "title": "Bulletin de sécurité NGS Research #NISR05012005H :",
+      "url": "http://www.nextgenss.com/advisories/db205012005H.txt"
+    },
+    {
+      "title": "Bulletin de sécurité NGS Research #NISR05012005D :",
+      "url": "http://www.nextgenss.com/advisories/db205012005D.txt"
+    },
+    {
+      "title": "Bulletin de sécurité NGS Research #NISR05012005A :",
+      "url": "http://www.nextgenss.com/advisories/db205012005A.txt"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-015",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-01-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités découvertes dans l'application DB2 d'IBM\npermettent à un utilisateur local ou distant d'exécuter du code\narbitraire, d'élever ses privilèges ou de porter atteinte à la\nconfidentialité et à l'intégrité des données présentes sur le système\nvulnérable.\n",
+  "title": "Multiples vulnérabilité dans IBM DB2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité de NGS Research",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>OpenBSD, FreeBSD, toute distribution Linux et tout système  utilisant OpenSSH dans une version comprise entre 2.0 et  3.0.2.</P>",
+  "content": "## Description\n\nUne mauvaise vérification de la taille d'un tampon permet un débordement\nde mémoire, exploitable après authentification, que ce soit sur le\nserveur sshd au profit d'un utilisateur mal intentionné, ou sur le\nclient au travers d'un serveur malicieux.\n\n## Solution\n\n-   Télécharger et compiler la dernière version d'OpenSSH (au moins 3.1)\n    depuis le site officiel :\n\n        http://www.openssh.com\n\n-   Télécharger et installer le port/paquetage correspondant à la\n    distribution lorsqu'il sera disponible :\n    -   Linux Red Hat 7.0 à 7.2 :\n\n            http://www.redhat.com/support/errata/RHSA-2002-043.html\n\n    -   Linux Mandrake 7.1 à 8.1 :\n\n            http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-019.php\n\n    -   Distribution Debian : SSHv1 uniquement, donc non concernée.\n\n    -   SuSE Linux 6.4 à 7.3 :\n\n            http://www.suse.com/de/support/security/2002_009_openssh_txt.txt\n\n    -   Conectiva Linux 5.0 à 7.0 :\n\n            http://distro.conectiva.com/atualizacoes/?id=a&anuncio=000467\n\n    -   FreeBSD :\n\n            ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-02%3A13.openssh.asc\n\n    -   OpenBSD :\n\n            http://www.openbsd/advisories/ssh_channelalloc.txt\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis original :",
+      "url": "http://www.pine.nl/advisories/pine-cert-20020301.txt"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-053",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-03-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges d'un utilisateur légitime"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut exécuter du code arbitraire avec les\nprivilèges du service <span class=\"textit\">sshd</span>, soit\ngénéralement <span class=\"textit\">root</span>.\n",
+  "title": "Débordement de mémoire dans OpenSSH v2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste de diffusion Bugtraq",
+      "url": null
+    }
+  ]
+}

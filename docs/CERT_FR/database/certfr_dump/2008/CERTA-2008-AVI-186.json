@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les versions de UnZip antérieures à 5.50-31.EL2 et 5.50-36.EL3 pour les distributions Red Hat ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Red Hat",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Les versions de UnZip antérieures à 5.52-9etch1 pour les distributions Debian stables (etch) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les versions de UnZip antérieures à 5.50-9.4 et 5.52-3.1 pour les distributions Mandriva.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans l'utilitaire UnZip. Elle\nconcerne la macro NEEDBITS de la fonction inflate_dynamic() dans le\nfichier inflate.c.\n\nL'exploitation de cette vulnérabilité à l'ouverture d'un fichier\nspécialement construit peut perturber le système, voire exécuter des\ncommandes arbitraires sur celui-ci.\n\n## Solution\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0888",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0888"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité rPath 2008-0116-1 du 21 mars 2008 :",
+      "url": "http://wiki.rpath.com/wiki/Advisories:rPSA-2008-0116"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-589-1 du 20 mars 2008 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-589-1"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2008:0196-3 du 18 mars    2008 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2008-0196.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1522 du 17 mars 2008 :",
+      "url": "http://www.debian.org/security/2008/dsa-1522"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200804-06 du 06 avril 2008    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200804-06.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2008:068 du 18 mars    2008 :",
+      "url": "http://www.mandriva.com/en/security/advisories?name=MDVSA-2008:068"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-186",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-04-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans l'utilitaire UnZip.\nL'exploitation de celle-ci peut conduire à exécuter du code arbitraire\nsur un système vulnérable sous certaines conditions.\n",
+  "title": "Vulnérabilité dans UnZip",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise à jour Red Hat RHSA-2008:0196-3 du 18 mars 2008",
+      "url": null
+    }
+  ]
+}

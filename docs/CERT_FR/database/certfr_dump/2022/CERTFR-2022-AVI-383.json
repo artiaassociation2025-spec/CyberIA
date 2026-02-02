@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Liferay Portal versions 7.4.x antérieures à 7.4 GA2",
+      "product": {
+        "name": "Portal",
+        "vendor": {
+          "name": "Liferay",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Liferay Portal version 7.3.7 GA8 sans le dernier correctif de sécurité",
+      "product": {
+        "name": "Portal",
+        "vendor": {
+          "name": "Liferay",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-26594",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-26594"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-383",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-04-25T00:00:00.000000"
+    },
+    {
+      "description": "Modification de la version 7.3.7 affectée.",
+      "revision_date": "2022-04-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Liferay Portal. Elle permet à un\nattaquant de provoquer une injection de code indirecte à distance (XSS).\n",
+  "title": "Vulnérabilité dans Liferay Portal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Liferay du 24 janvier 2022",
+      "url": "https://portal.liferay.dev/learn/security/known-vulnerabilities/-/asset_publisher/HbL5mxmVrnXW/content/cve-2022-26594-xss-vulnerability-with-form-field-help-text"
+    }
+  ]
+}

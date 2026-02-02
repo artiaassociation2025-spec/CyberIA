@@ -1,0 +1,101 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "CIFS/9000 Server 2.2 versions A.01.08, A.01.08.01 et A.01.09.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Samba versions 2.2.2 à 2.2.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSamba est une implémentation du protocole SMB.\n\nUne vulnérabilité de type débordement de mémoire est présente dans la\nroutine calculant la longueur utilisée lors de la demande de changement\nd'un mot de passe réalisée par un client.\n\nL'exploitation de cette vulnérabilité peut permettre à un utilisateur\nmal intentionné d'exécuter, à distance, du code arbitraire avec les\nprivilèges de l'administrateur système root.\n\n## Solution\n\nLa version 2.2.7 de Samba corrige cette vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité DSA-200 de Debian :",
+      "url": "http://www.debian.org/security/2002/dsa-200"
+    },
+    {
+      "title": "Site de Samba :",
+      "url": "http://www.samba.org"
+    },
+    {
+      "title": "Bulletin de sécurité 20021204-01-I de SGI :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20021204-01-I"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE-SA:2002:045 de SuSE :",
+      "url": "http://www.suse.com/de/security/2002_045_samba.html"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2002:266 de Red Hat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-266.html"
+    },
+    {
+      "title": "Bulletin de sécurité HPSBUX0212-0230 de Hewlett-Packard :",
+      "url": "http://itrc.hp.com"
+    },
+    {
+      "title": "Bulletin de sécurité MDKSA-2002:081 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2002:081"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-252",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-11-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité MDKSA-2002:081 de Mandrake.",
+      "revision_date": "2002-11-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité 20021204-01-I de SGI.",
+      "revision_date": "2002-12-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité HPSBUX0212-0230 de Hewlett-Packard.",
+      "revision_date": "2002-12-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de type débordement de mémoire présente dans le\nserveur smbd permet à un utilisateur mal intentionné de réaliser, sous\ncertaines conditions, une élévation de privilèges.\n",
+  "title": "Vulnérabilité de Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de Sécurité DSA-200 de Debian",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de Sécurité RHSA-2002:266 de Red Hat",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de Sécurité SuSE-SA:2002:045 de SuSE",
+      "url": null
+    }
+  ]
+}

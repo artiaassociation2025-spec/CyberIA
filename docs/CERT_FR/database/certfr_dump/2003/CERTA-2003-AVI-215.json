@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Macromedia JRun 4.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Macromedia Coldfusion MX 6.0, 6.1 ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM WebSphere 5.0.0, 5.0.1, 5.0.2, 5.0.2.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité présente sur les interpréteurs XML des serveurs WEB\nutilisant SOAP permet à un utilisateur mal intentionné de réaliser un\ndéni de service.\n\nPar le biais d'une requête SOAP malicieusement construite, un\nutilisateur mal intentionné peut consommer toutes les ressources CPU du\nsystème et réaliser un déni de service.\n\n## Solution\n\nAppliquer les correctifs disponibles (cf section documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctif de l'interpréteur XML de macromédia :",
+      "url": "http://download.macromedia.com/pub/security/mpsb03-07.zip"
+    },
+    {
+      "title": "Avis de sécurité sur la liste de diffusion BugTraq :",
+      "url": "http://www.securityfocus.com/archive/1/346992"
+    },
+    {
+      "title": "Avis de sécurité Macromedia :",
+      "url": "http://www.macromedia.com/devnet/security/security_zone/mpsb03-07.html"
+    },
+    {
+      "title": "Correctif IBM Websphere de l'interpréteur XML :",
+      "url": "ftp://ftp.software.ibm.com/software/websphere/appserv/support/fixes/PQ81278/"
+    },
+    {
+      "title": "Avis de sécurité IBM :",
+      "url": "http://www-1.ibm.com/support/docview.wss?rs=180&context=SSEQTP&q=PQ81278&uid=swg24005943"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-215",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-12-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente sur les interpréteurs XML des serveurs WEB\naffectés permet à un utilisateur mal intentionné de réaliser un déni de\nservice du système.\n",
+  "title": "Vulnérabilité des interpréteurs XML de serveurs WEB (SOAP)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste de diffusion BugTraq",
+      "url": null
+    }
+  ]
+}

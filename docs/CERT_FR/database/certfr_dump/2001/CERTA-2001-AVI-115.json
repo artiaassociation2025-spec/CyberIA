@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout Unix , Windows 9x, NT incluant une version de Zope depuis  la 2.2.0 jusqu'à la 2.4.1.</P>",
+  "content": "## Description\n\nZope est une boîte à outils de gestion/création de portails ou sites\n\\`\\`web'' dynamiques. Elle inclut nativement un modèle de sécurité et\nutilise un langage de création de pages dynamiques proche du HTML, le\nDTML.\n\nLes versions depuis la 2.2.0 jusqu'à la 2.4.1, n'effectuent pas de\ncontrôle de sécurité sur l'attribut fmt (attribut de mise en forme d'une\nbalise) de la balise d'inclusion de variables \\<dtml-var\\>. Un\nutilisateur mal intentionné peut alors utiliser cette faiblesse pour\naccéder à des méthodes qui lui sont normalement interdites.\n\n## Solution\n\n-   Pour Red Hat Powertools 6.2, 7.0 et 7.1, utiliser up2date ou\n    télécharger les RPMs depuis :\n\n        http://www.redhat.com/mailing-lists/linux-security/msg00043.html\n\n-   Pour Mandrake 7.1, 7.2 et Corporate Server 1.0.1, utiliser\n    MandrakeUpdate ou télécharger les RPMs depuis :\n\n        http://www.linux-mandrake.com/en/security/2001/MDKSA-2001-080.php3\n\n-   Télécharger et installer le correctif de l'éditeur (instructions\n    d'installation présentes) depuis :\n\n        http://www.zope.org/Products/Zope/Products/Zope/Hotfix_2001-09-28/Hotfix_2001-09-28.tgz/view\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Red Hat",
+      "url": "http://www.redhat.com/mailing-lists/linux-security/msg00043.html"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-115",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-12T00:00:00.000000"
+    },
+    {
+      "description": "rajout de la distribution Linux Mandrake.",
+      "revision_date": "2001-10-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Un utilisateur légitime de Zope peut, par le biais de pages <span\nclass=\"textit\">DTML</span> mal formées, accéder à des méthodes qui lui\nsont en principe inacessibles.\n",
+  "title": "Faille de sécurité dans Zope",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de l'éditeur",
+      "url": "http://www.zope.org/Products/Zope/Hotfix_2001-09-28/security_alert"
+    }
+  ]
+}

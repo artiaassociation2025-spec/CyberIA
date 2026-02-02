@@ -1,0 +1,94 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Unified Communications Manager 6.x.",
+      "product": {
+        "name": "Unified Communications Manager",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified Communications Manager 4.x ;",
+      "product": {
+        "name": "Unified Communications Manager",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified Communications Manager 5.x ;",
+      "product": {
+        "name": "Unified Communications Manager",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans Cisco Unified\nCommunications Manager :\n\n-   la première, relative au Certificate Trust List Provider (CTL\n    Provider) de la version 5.x de CUCM, permet à un utilisateur distant\n    de provoquer un déni de service via une série de paquets envoyés sur\n    le port 2444/TCP de l'équipement ;\n-   une seconde, relative au même composant (CTL Provider) mais des\n    versions 5.x et 6.x des CUCM, permet à un utilisateur distant de\n    provoquer une consommation excessive de mémoire sur l'équipement\n    vulnérable via une série de paquets sur le port 2444/TCP ;\n-   une troisième est présente dans la Certificate Authority Proxy\n    Function (CAFP) et peut être exploitée par le biais d'un envoi d'un\n    paquet particulier sur le port 3804/TCP pour causer un déni de\n    service d'un CUCM versions 4.1, 4.2 ou 4.3 ;\n-   une quatrième vulnérabilité permet de causer un déni de service des\n    CUCM versions 5.x et 6.x via l'envoi de messages SIP de type JOIN\n    construits de façon particulière ;\n-   une cinquième peut être exploitée via un envoi de paquets SIP de\n    type INVITE pour provoquer un déni de service sur les CUCM versions\n    4.1, 4.2, 4.3, 5.x et 6.x ;\n-   la dernière vulnérabilité concerne le service SNMP Trap Agent et\n    permet à un utilisateur distant de provoquer un déni de service sur\n    les versions 4.1, 4.2, 4.3, 5.x et 6.x des CUCM via des paquets UDP\n    sur le port 61441/TCP de l'équipement vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1748",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1748"
+    },
+    {
+      "name": "CVE-2008-1746",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1746"
+    },
+    {
+      "name": "CVE-2008-1744",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1744"
+    },
+    {
+      "name": "CVE-2008-1742",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1742"
+    },
+    {
+      "name": "CVE-2008-1743",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1743"
+    },
+    {
+      "name": "CVE-2008-1745",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1745"
+    },
+    {
+      "name": "CVE-2008-1747",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1747"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 100995 du 14 mai 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080514-cucmdos.shtml"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-255",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-05-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités sont présentes dans Cisco Unified\nCommunications Manager permettant à un utilisateur distant de provoquer\nun déni de service de l'équipement vulnérable.\n",
+  "title": "Multiples vulnérabilités dans Cisco Unified Communications Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco n˚100995 du 14 mai 2008",
+      "url": null
+    }
+  ]
+}

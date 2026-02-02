@@ -1,0 +1,84 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Paquet bzip2 version inférieures à 1.0.5-6ubuntu1.11.04.1 pour système Ubuntu 11.04 ;",
+      "product": {
+        "name": "Ubuntu",
+        "vendor": {
+          "name": "Ubuntu",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Paquet bzip2 version inférieures à 1.0.5-4ubuntu0.2 pour système Ubuntu 10.04 LTS ;",
+      "product": {
+        "name": "Ubuntu",
+        "vendor": {
+          "name": "Ubuntu",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Paquet bzip2 version inférieures à 1.0.5-6ubuntu1.11.10.1 pour système Ubuntu 11.10 ;",
+      "product": {
+        "name": "Ubuntu",
+        "vendor": {
+          "name": "Ubuntu",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Paquet bzip2 version inférieures à 1.0.4-2ubuntu4.2 pour système Ubuntu 8.04 LTS.",
+      "product": {
+        "name": "Ubuntu",
+        "vendor": {
+          "name": "Ubuntu",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Paquet bzip2 version inférieures à 1.0.5-4ubuntu1.1 pour système Ubuntu 10.10 ;",
+      "product": {
+        "name": "Ubuntu",
+        "vendor": {
+          "name": "Ubuntu",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'exécutable bzexe permet de compresser des exécutables « en ligne ».\nUne faille dans la création des fichiers temporaires lors de cette\ncompression permet à un attaquant local d'élever ses privilèges en\nexploitant une situation de concurrence (« race condition »).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-4089",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4089"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-1308-1 du 14 décembre 2011    :",
+      "url": "http://www.ubuntu.com/usn/usn-1308-1/"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-711",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-12-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le binaire <span class=\"textit\">bzexe</span>\ninclus dans le paquet <span class=\"textit\">bzip2</span> permet à un\nutilisateur local d'élever ses privilèges.\n",
+  "title": "Vulnérabilité dans bzexe",
+  "vendor_advisories": []
+}

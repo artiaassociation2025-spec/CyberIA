@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Windows 2000.</P>",
+  "content": "## Description\n\nUn utilisateur mal intentionné peut, en simulant un serveur telnet sous\nwindows 2000, faire émettre à tout poste possédant un client telnet\n(installé par défaut), une réponse d'authentification NTLM pour une\nouverture de session, à l'insu de la victime.\n\nL'utilisateur malicieux pourrait alors déchiffrer le mot de passe.\n\nUne autre attaque consiste à soumettre au client telnet sous windows\n2000 le challenge envoyé à l'utilisateur malicieux par un serveur sur\nlequel la victime possède un compte, afin d'utiliser la réponse\nd'authentification pour ouvrir une session sous l'identité de la\nvictime.\n\nLa demande d'ouverture de session peut être très simplement camouflée\ndans un lien sur une page web (voire dans un contrôle Active X) lue par\nla victime à travers son navigateur ou son client de messagerie.\n\n## Contournement provisoire\n\nSupprimer le client telnet s'il n'est jamais utilisé sur le poste sous\nwindows 2000.\n\n## Solution\n\nAppliquer le correctif Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=24319\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-048",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-09-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité, et vol de mot de passe"
+    }
+  ],
+  "summary": "Une vulnérabilité du client telnet sous Windows 2000 a été décelée. Elle\nréside dans le fait qu'il effectue par défaut, et sans intervention de\nl'utilisateur, une authentification NTLM (<span class=\"textit\">NT Lan\nManager</span>) lorsqu'il se connecte à un serveur telnet sous windows\n2000.\n",
+  "title": "Vulnérabilité du client telnet sous Windows 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bugtraq",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-067.asp"
+    }
+  ]
+}

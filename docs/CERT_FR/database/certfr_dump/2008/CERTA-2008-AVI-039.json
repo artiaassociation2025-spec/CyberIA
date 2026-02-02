@@ -1,0 +1,113 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BIND 9.2 (toutes versions) ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND 9.1 (toutes versions) ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND 9.3.0, 9.3.1, 9.3.2, 9.3.3, 9.3.4 ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND 9.5.0a1, 9.5.0a2, 9.5.0a3, 9.5.0a4, 9.5.0a5, 9.5.0a6, 9.5.0a7, 9.5.0b1.",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND 8.x (toutes versions) ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND 9.4.0, 9.4.1, 9.4.2 ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND 9.0 (toutes versions) ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne faille a été identifiée dans une fonction de la bibliothèque libbind\nfournie avec le serveur DNS : BIND. Cette vulnérabilité peut conduire à\nune corruption de mémoire permettant ainsi à un utilisateur\nmalintentionné de provoquer un déni de service ou, selon l'éditeur,\nd'exécuter du code arbitraire.\n\nIl est à noter que la fonction vulnérable n'étant pas mise en œuvre par\nBIND lui même, le serveur n'est pas vulnérable. Seules des applications\ns'appuyant sur la bibliothèque libbind et sur cette fonction seront\nvulnérables.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0122",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0122"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité ISC BIND du 18 janvier 2008 :",
+      "url": "http://www.isc.org/index.pl?/sw/bind/bind-security.php"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-039",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-01-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans ISC BIND permet à un utilisateur malintentionné\nde provoquer un déni de service ou potentiellement d'exécuter du code\narbitraire.\n",
+  "title": "Vulnérabilité dans ISC BIND",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ISC du 18 janvier 2008",
+      "url": null
+    }
+  ]
+}

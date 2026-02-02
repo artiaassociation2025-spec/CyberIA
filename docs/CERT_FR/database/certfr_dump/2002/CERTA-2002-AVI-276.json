@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Commande <SPAN class=\"textit\">dvips</SPAN> contenue dans le  paquetage <SPAN class=\"textit\">tetex</SPAN>.</P>",
+  "content": "## Description\n\ndvips est un filtre d'impression utilisé pour imprimer les documents\nDVI.\n\nPour gérer les polices de caractères, la commande dvips fait un appel à\nla fonction system() de manière non sécurisée.  \n\nCette vulnérabilité peut être exploitée par un utilisateur mal\nintentionné pour exécuter du code arbitraire à distance avec les droits\nde l'utilisateur lp.\n\n## Solution\n\nConsultez votre éditeur pour connaître la disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-276",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité de la commande <span class=\"textit\">dvips</span>\npermet à un utilisateur mal intentionné d'exécuter du code arbitraire à\ndistance.\n",
+  "title": "Vulnérabilité de la commande dvips",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Debian DSA 207-1",
+      "url": "http://www.debian.org/security/"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMware vRealize Log Insight versions antérieures à 3.3.2",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware NSX Edge versions 6.1.x antérieures à 6.1.7",
+      "product": {
+        "name": "NSX",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware NSX Edge versions 6.2.x antérieures à 6.2.3",
+      "product": {
+        "name": "NSX",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware vCNS Edge versions 5.5.x antérieures à 5.5.4.3",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2016-2081",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2016-2081"
+    },
+    {
+      "name": "CVE-2016-2079",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2016-2079"
+    },
+    {
+      "name": "CVE-2016-2082",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2016-2082"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2016-AVI-198",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2016-06-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans <span\nclass=\"textit\">les produits VMware</span>. Elles permettent à un\nattaquant de provoquer une atteinte à la confidentialité des données,\nune injection de code indirecte à distance (XSS) et une injection de\nrequêtes illégitimes par rebond (CSRF).\n",
+  "title": "Multiples vulnérabilités dans les produits VMware",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware VMSA-2016-0008 du 09 juin 2016",
+      "url": "http://www.vmware.com/security/advisories/VMSA-2016-0008.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware VMSA-2016-0007 du 09 juin 2016",
+      "url": "http://www.vmware.com/security/advisories/VMSA-2016-0007.html"
+    }
+  ]
+}

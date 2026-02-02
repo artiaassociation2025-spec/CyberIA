@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Ops Manager versions 5.0.x antérieures à 5.0.22",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Ops Manager versions 6.0.x antérieures à 6.0.17",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-4009",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-4009"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0646",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-08-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans MongoDB Ops Manager. Elle permet\nà un attaquant de provoquer un contournement de la politique de sécurité\net une élévation de privilèges.\n",
+  "title": "Vulnérabilité dans MongoDB Ops Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MongoDB onprem-server-6-0 du 03 août 2023",
+      "url": "https://www.mongodb.com/docs/ops-manager/current/release-notes/application/#onprem-server-6-0"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MongoDB onprem-server-5-0 du 31 juillet 2023",
+      "url": "https://www.mongodb.com/docs/ops-manager/current/release-notes/application/#onprem-server-5-0"
+    }
+  ]
+}

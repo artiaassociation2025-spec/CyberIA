@@ -1,0 +1,33 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>La commande <TT>login</TT> est issue du  paquetage <TT>util-linux</TT> livré avec la plupart des  distributions Linux.  <P>Les versions <TT>util-linux-2.11l</TT> et antérieures sont  vulnérables.</P></p>",
+  "content": "## Description\n\nSous certaines conditions, un utilisateur se connectant sur un système\nutilisant une version vulnérable de la commande /bin/login peut obtenir\nune élévation de privilèges (droits de l'administrateur root par\nexemple).\n\nCette vulnérabilité n'est exploitable que si l'utilisateur a pu\ns'authentifier au préalable.\n\n## Solution\n\nLe paquetage util-linux est utilisé sur la plupart des distributions\nLinux. Contactez votre revendeur pour obtenir le correctif.\n\nPour la distribution RedHat, se référer à l'avis de sécurité\nRHSA-2001:132-03.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-118",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout références avis SuSE et Mandrake dans la section Documentation.",
+      "revision_date": "2001-11-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans la commande login peut permettre une\nélévation de privilèges.\n",
+  "title": "Vulnérabilité dans login sous Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité RedHat RHSA-2001:132-03",
+      "url": "http://www.redhat.com/support/errata/RHSA-2001-132.html"
+    }
+  ]
+}

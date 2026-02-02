@@ -1,0 +1,134 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "toutes les versions de Cisco IronPort Encrytion Appliance/ 6.3 antérieures à la 6.3.0.4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Toutes les versions de Cisco PostX 6.2.1 antérieures à la 6.2.1.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "toutes les versions de Cisco IronPort Encrytion Appliance/PostX 6.2.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "toutes les versions de Cisco IronPort Encrytion Appliance/PostX 6.2.7 antérieures à la 6.2.7.7 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "toutes les versions de Cisco PostX 6.2.2 antérieures à la 6.2.2.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "toutes les versions de Cisco IronPort Encrytion Appliance/PostX 6.2.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "toutes les versions de Cisco IronPort Encrytion Appliance/PostX 6.2.4 antérieures à la 6.2.4.1.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "toutes les versions de Cisco IronPort Encrytion Appliance 6.5 antérieures à la 6.5.0.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans Cisco IronPort :\n\n-   la première permet à un utilisateur distant d'obtenir la clef de\n    déchiffrement d'un message ne lui étant pas destiné et ainsi de\n    consulter son contenu ;\n-   la deuxième, de nature non précisée par l'éditeur, permet également\n    à un utilisateur distant malintentionné d'obtenir les identifiants\n    d'un autre utilisateur ainsi que le contenu « en clair » de ses\n    messages chiffrés.\n-   la dernière vulnérabilité est relative à l'interface\n    d'administration du produit qui présente une faille de type\n    injection de code indirecte. Elle permet à un utilisateur distant\n    malintentionné de modifier à l'insu d'un utilisateur cible les\n    données de son profil, y compris ses identifiants de connexion, par\n    le biais d'une page web construite de façon particulière.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0055",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0055"
+    },
+    {
+      "name": "CVE-2009-0056",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0056"
+    },
+    {
+      "name": "CVE-2009-0053",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0053"
+    },
+    {
+      "name": "CVE-2009-0054",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0054"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-016",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2009-01-15T00:00:00.000000"
+    },
+    {
+      "description": "correction des versions affectées pour les versions 6.3 et 6.5.",
+      "revision_date": "2009-01-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte ( cross-site scripting )"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans Cisco IronPort permettent à un\nutilisateur distant de porter atteinte à la confidentialité de certaines\ndonnées ou de réaliser des attaques de type injection de code indirecte.\n",
+  "title": "Multiples vulnérabilités dans Cisco IronPort",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco #109329 du 14 janvier 2009",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20090114-ironport.shtml"
+    }
+  ]
+}

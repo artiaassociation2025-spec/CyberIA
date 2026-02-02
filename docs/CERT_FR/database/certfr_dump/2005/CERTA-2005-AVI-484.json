@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>phpMyAdmin 2.x.</P>",
+  "content": "## Description\n\nUne vulnérabilité dans l'émulation register_global dans le fichier\ngrab_globals.php permet à un utilisateur mal intentionné d'écraser la\nvaleur de la variable import_blacklist afin d'exécuter du code\narbitraire à distance sur les postes clients accédant au serveur\ncompromis.\n\n## Solution\n\nAppliquer la mise à jour de sécurité phpMyAdmin en passant à la version\n2.7.0-pl1 disponible à l'adresse suivante :\n\n    http://sourceforge.net/project/showfiles.php?group_id=23067\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200512-03 du 11 décembre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200512-03.xml"
+    },
+    {
+      "title": "Bulletin de sécurité phpMyAdmin PMASA-2005-8 du 05 décembre    2005 :",
+      "url": "http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2005-8"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SA:2006:004 du 26 janvier    2006 :",
+      "url": "http://www.novell.com/linux/security/advisories/2006_04_phpmyadmin.html"
+    },
+    {
+      "title": "Bulletin de sécurité Hardened-PHP du 07 décembre 2005 :",
+      "url": "http://www.hardened-php.net/advisory_252005.110.html"
+    },
+    {
+      "title": "Mise à jour de sécurité phpMyAdmin version 2.7.0-pl1 :",
+      "url": "http://sourceforge.net/project/showfiles.php?group_id=23067"
+    },
+    {
+      "title": "Bulletin de sécurité phpMyAdmin PMASA-2005-9 du 07 décembre    2005 :",
+      "url": "http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2005-9"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour phpMyAdmin du 07 décembre    2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-phpMyAdmin.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-484",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-12-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Hardened-PHP, ajout des références aux bulletins de sécurité phpMyAdmin PMASA-2005-8 et PMASA-2005-9, ajout des références aux bulletins de sécurité Gentoo GLSA 200512-03 et FreeBSD et ajout des références CVE CAN-2005-3665 et CAN-2005-4079.",
+      "revision_date": "2005-12-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SUSE.",
+      "revision_date": "2006-01-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans phpMyAdmin permet à un utilisateur mal\nintentionné de porter atteinte à la confidentialité des données, de\nréaliser des attaques de type Cross Site Scripting ou d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilité dans phpMyAdmin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise à jour de sécurité de phpMyAdmin du 07 décembre 2005",
+      "url": null
+    }
+  ]
+}

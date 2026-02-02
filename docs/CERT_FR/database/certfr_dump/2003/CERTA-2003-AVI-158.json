@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les équipements NetScreen Firewall/VPN fonctionnant en tant  que serveur DHCP et possédant une version de ScreenOS inférieure  à 4.0.3r3.</P>",
+  "content": "## Description\n\nLa réutilisation d'un tampon mémoire précédemment utilisé pour la\ngestion du contexte d'une session d'administration via HTTP peut\nentraîner, dans certains cas, la divulgation des informations lors du\ntraitement d'une réponse à une requête DHCP.\n\n## Solution\n\nAppliquer le correctif suivant la version affectée (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-158",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-10-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Fuite d'informations"
+    }
+  ],
+  "summary": "Dans certaines conditions, les équipements fonctionnant en tant que\nserveur DHCP et administrés par HTTP peuvent divulguer des informations\nsensibles telles que des noms d'utilisateur ou des mots de passe\nencodés.\n",
+  "title": "Vulnérabilité dans les équipements NetScreen Firewall/VPN",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #57983 de NetScreen",
+      "url": "http://www.netscreen.com/services/security/alerts/10_01_03_57983_v003.jsp"
+    }
+  ]
+}

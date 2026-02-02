@@ -1,0 +1,186 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Catalyst 6500 Series Wireless Service Module (WiSM)",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco 2100 Series Wireless LAN Controllers",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "l'application Cisco Wireless Control System (WCS) pour les versions antérieures à 4.0.96.0 (incluse) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Aironet 1000 Series",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Aironet 1500 Series",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco 4400 Series Wireless LAN Controllers",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "l'application Cisco Wireless LAN Controller (WLC) pour les versions antérieures à 4.0 et 3.2 (incluses) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Wireless LAN Controller Module",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Catalyst 3750 Series Integrated Wireless LAN Controllers",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été identifiées dans deux applications\nutilisées avec des produits sans-fil Cisco : le Cisco Wireless LAN\nController (WLC) et le Cisco Wireless Control System (WCS).\n\nCisco Wireless LAN Controller (WLC) est une application qui permet\nd'administrer les points d'accès Cisco (Aironet), par le biais du\nprotocole LWAPP (pour Lightweight Access Point Protocol. Parmi les\nvulnérabilités :\n\n-   les paramètres de connexion SNMP sont les valeurs connues public et\n    private. Cette vulnérabilité permet donc à une personne malveillante\n    distante d'utiliser ces paramètres pour lire et modifier la\n    configuration de WLC via SNMP.\n-   le NPU (Network Processing Unit) de WLC ne manipulerait pas\n    correctement certains paquets (802.11 ou SNAP par exemple), pouvant\n    perturber le fonctionnement du système.\n-   un compte d'administration serait imposé et non modifiable. Une\n    personne malveillante pourrait donc utiliser ce compte, par un accès\n    physique sur un port console, pour prendre le contrôle total du\n    système.\n-   les listes de contrôle d'accès ne sont pas maintenues après le\n    redémarrage du système.\n\nCisco Wireless Control System (WCS) fournit à d'autres systèmes Cisco un\nensemble d'outils de gestion et d'administration. Parmi les\nvulnérabilités le concernant :\n\n-   un compte FTP serait non modifiable ni désactivable. Une personne\n    malveillante pourrait ainsi accéder à des fichiers arbitraires\n    hébergeant cette application.\n-   Le système d'authentification permettrait sous certaines conditions\n    à un utilisateur d'élever ses privilèges à ceux de l'administrateur\n    (SuperUsers).\n-   Certaines pages de WCS seraient accessibles sans demande de mot de\n    passe, par tout utilisateur, même non authentifié. Cette\n    vulnérabilité permettrait ainsi de récupérer des informations sur la\n    topologie du réseau, la position des points d'accès, etc.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-2038",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2038"
+    },
+    {
+      "name": "CVE-2007-2035",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2035"
+    },
+    {
+      "name": "CVE-2007-2037",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2037"
+    },
+    {
+      "name": "CVE-2007-2041",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2041"
+    },
+    {
+      "name": "CVE-2007-2036",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2036"
+    },
+    {
+      "name": "CVE-2007-2039",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2039"
+    },
+    {
+      "name": "CVE-2007-2032",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2032"
+    },
+    {
+      "name": "CVE-2007-2034",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2034"
+    },
+    {
+      "name": "CVE-2007-2033",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2033"
+    },
+    {
+      "name": "CVE-2007-2040",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2040"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 82128 du 12 avril 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070412-wcs.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco ID 82129 du 12 avril 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070412-wlc.shtml"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-172",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-04-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE.",
+      "revision_date": "2007-04-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été identifiées dans deux applications\nutilisées avec des produits sans-fil Cisco : le Cisco Wireless LAN\nController (WLC) et le Cisco Wireless Control System (WCS). Les\nconséquences de l'exploitation de celles-ci sont variées, incluant un\ndéni de service du point d'accès, un accès illégitime à la configuration\n(lecture et écriture), ou une élévation de privilèges.\n",
+  "title": "Vulnérabilités dans des produits sans-fil Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de CISO du 12 avril 2007",
+      "url": null
+    }
+  ]
+}

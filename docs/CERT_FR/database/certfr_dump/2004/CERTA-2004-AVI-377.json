@@ -1,0 +1,104 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Ces vulnérabilités affectent :</P>  <UL>    <LI>JRE 1.3.x et versions antérieures ;</LI>    <LI>JRE 1.4.x et versions antérieures ;</LI>    <LI>SDK 1.3.x et versions antérieures ;</LI>    <LI>SDK 1.4.x et versions antérieures.</LI>  </UL>  <P>sur les plates-formes Windows, Solaris et Linux. JDK et JRE  5.0 ne sont pas affectés par cette vulnérabilité.</P>",
+  "content": "## Description\n\nLe JRE (Java Runtime Environment) permet l'exécution de code java.\n\nCette vulnérabilité, présente dans le JRE, est dûe à une mauvaise\ngestion lors de l'échange de données entre le code Java et Javascript.\nAu moyen d'un site web malicieusement constitué, une personne\nmalveillante peut porter atteinte à l'intégrité et à la confidentialité\ndes données présentes sur le système. elle peut également exécuter du\ncode arbitraire à distance avec les privilèges de la victime.\n\n## Contournement provisoire\n\nDésactiver dans le navigateur internet la machine virtuelle Java et\nJavascript, cela a pour effet de rendre inexploitable cette\nvulnérabilité.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD pour jdk du 25 novembre 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD sun-jre14,    sun-jdk14, sun-jre13 et sun-jdk13 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/lang/sun-jdk13/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité Apple MacOS X 2005-002 du 22 février    2005 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=61798"
+    },
+    {
+      "title": "Bulletin de sécurité iDEFENSE du 22 novembre 2004 :",
+      "url": "http://www.idefense.com/application/poi/display?id=158"
+    },
+    {
+      "title": "Référence CVE CAN-2004-1029 :",
+      "url": "http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-1029"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD sun-jre14,    sun-jdk14, sun-jre13 et sun-jdk13 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/lang/sun-jre14/README.html"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD sun-jre14,    sun-jdk14, sun-jre13 et sun-jdk13 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/lang/sun-jre13/README.html"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD sun-jre14,    sun-jdk14, sun-jre13 et sun-jdk13 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/lang/sun-jdk14/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité HP HPSBUX01100 du 01 décembre 2004 :",
+      "url": "http://www5.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBUX01100"
+    },
+    {
+      "title": "Site de l'éditeur :",
+      "url": "http://java.sun.com"
+    },
+    {
+      "title": "Bulletin de sécurité Sun #57591 du 22 novembre 2004 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-57591-1"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200411-38 du 29 novembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200411-38.xml"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-377",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-11-23T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux mises à jour de sécurité NetBSD.",
+      "revision_date": "2004-11-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2004-11-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2004-11-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité HP HPSBUX01100.",
+      "revision_date": "2004-12-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Apple MacOS X.",
+      "revision_date": "2005-02-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans la machine virtuelle Java permet à une\npersonne mal intentionnée de contourner les mesures de sécurité imposées\npar une applet.\n",
+  "title": "Vulnérabilité dans la machine virtuelle Java de SUN",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDefense du 22 novembre 2004",
+      "url": null
+    }
+  ]
+}

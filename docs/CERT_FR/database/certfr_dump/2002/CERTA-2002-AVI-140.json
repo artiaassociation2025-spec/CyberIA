@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de Sendmail  antérieures à la version 8.12.5.</p>",
+  "content": "## Description\n\nSendmail est une application permettant l'envoi de courrier électronique\nsur l'Internet. Selon la configuration de cette application, un\nutilisateur mal intentionné peut exécuter du code arbitraire sur le\nserveur avec les privilèges de l'utilisateur ayant lancé le service\n(généralement `root`). Ceci peut conduire à un déni de service. Cette\nvulnérabilité ne peut se produire que si le service Sendmail est\nconfiguré pour utiliser une table DNS au format TXT et si l'utilisateur\nmal intentionné contrôle un serveur DNS.\n\n## Solution\n\nLa version 8.12.5 de Sendmail corrige cette vulnérabilité. Elle est\ndisponible en téléchargement sur le site web de Sendmail (cf.\nDocumentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-140",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un débordement de mémoire peut aboutir à l'exécution de code arbitraire\nou à un déni de service.\n",
+  "title": "Vulnérabilité dans Sendmail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Site Internet de Sendmail",
+      "url": "http://www.sendmail.org/"
+    }
+  ]
+}

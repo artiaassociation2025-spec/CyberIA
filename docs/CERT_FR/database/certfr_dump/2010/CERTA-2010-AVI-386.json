@@ -1,0 +1,56 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Drupal versions 6.x antérieures à 6.18 ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Drupal versions 5.x antérieures à 5.23.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Drupal :\n\n-   l'authentification par le module OpenID peut être contournée du fait\n    d'un manque de vérifications. Cette vulnérabilité est présente dans\n    les versions 6.x de Drupal. Les versions 5.x ne sont affectées que\n    si le module tiers OpenID a été installé ;\n-   un utilisateur malintentionné peut déposer un fichier dont le nom\n    correspond à un fichier existant déjà dans la base de données, à la\n    casse près. Dans ce cas, un accès à l'autre fichier portant le même\n    nom est accordé ;\n-   une vulnérabilité dans le module des commentaires permet de\n    republier des commentaires n'apparaissant pas ;\n-   plusieurs injections de code indirectes existent dans divers modules\n    (versions 6.x).\n\n## Solution\n\nLes versions 5.23 et 6.18 ou 6.19 corrigent ces vulnérabilités. La\nversion 6.19 ne corrige aucune vulnérabilité par rapport à la version\n6.18.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2010-AVI-386",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-08-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Drupal</span>\npermettent notamment de lire certains fichiers, de se connecter indûment\net de réaliser des injections de code indirectes.\n",
+  "title": "Multiples vulnérabilités dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SA-CORE-2010-002 du 11 août 2010",
+      "url": "http://drupal.org/node/880476"
+    }
+  ]
+}

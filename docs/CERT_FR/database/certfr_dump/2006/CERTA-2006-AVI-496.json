@@ -1,0 +1,103 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Explorer 6 pour Windows XP Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 6 pour Windows XP Professional x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 6 Service Pack 1 pour Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 5.01 Service Pack 4 pour Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 6 pour Windows 2003 Server et Windows 2003 Server Service Pack 1 (versions pour systèmes Itanium comprises);",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 6 pour Windows 2003 x64 Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été identifiées dans le navigateur\nMicrosoft Internet Explorer. Deux d'entre elles concernent des contrôles\nActiveX nommés DirectAnimation (dont les fonctions de HTML+TIME 1.0).\nUne personne malveillante pourrait exploiter celles-ci, en construisant\nune page Web particulière. La visite de cette dernière avec une version\nvulnérable d'Internet Explorer pourrait alors provoquer l'exécution de\ncode arbitraire sur la machine hébergeant le navigateur.\n\nUne autre vulnérabilité concerne le rendu HTML par le navigateur. Une\npersonne malveillante pourrait constuire une page HTML contenant une\nmise en page particulière (ou layout). La visite de cette dernière avec\nune version vulnérable d'Internet Explorer pourrait également provoquer\nla prise de contrôle totale de la machine hébergeant le navigateur.\n\n## Solution\n\nSe référer au bulletin de sécurité MS06-067 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4446",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4446"
+    },
+    {
+      "name": "CVE-2006-4687",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4687"
+    },
+    {
+      "name": "CVE-2006-4777",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4777"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2006-AVI-496",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été identifiées dans Microsoft Internet\nExplorer. Exploitées par une personne malveillante, elles pourraient\nconduire à l'exécution de code arbitraire sur le système ayant un\nnavigateur vulnérable.\n",
+  "title": "Multiples vulnérabilités de Microsoft Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-067 du 14 novembre 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-067.mspx"
+    }
+  ]
+}

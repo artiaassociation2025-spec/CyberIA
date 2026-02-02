@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Courier MTA versions antérieures à la version 0.45 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Courier SqWebMail version 4.0.4 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Courier-IMAP versions antérieures à la version 3.0.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCourier MTA (Mail Transfer Agent) est un serveur de messagerie.\nCourier-IMAP est un serveur IMAP (Internet Message Access Protocol).\nCourier SqWebMail est un module de type webmail pour le serveur de\nmessagerie Courier MTA. Plusieurs vulnérabilités ont été identifiées\nCourier MTA, Courier-IMAP et Courier SqWebMail :\n\n-   Plusieurs débordements de mémoire dans Courier MTA, Courier-IMAP et\n    Courier SqWebMail (CVE CAN-2004-0224) ;\n-   une vulnérabilité de type Cross-site Scripting dans la fonction\n    print_header_uc de Courier SqWebMail (CVE CAN-2004-0591) ;\n\nCes vulnérabilités permettent à un utilisateur mal intentionné de\nréaliser de l'injection de données, réaliser un déni de service ou\nexécuter du code arbitraire à distance.\n\n## Solution\n\n-   Mettre à jour Courier MTA en version 0.45 ou supérieure ;\n-   Mettre à jour Courier-IMAP en version 3.0.0 ou supérieure ;\n-   Mettre à jour Courier SqWebMail en version 4.0.5 ou supérieure.\n\n```{=html}\n<!-- -->\n```\n-   A partir des sources :\n\n        http://www.courier-mta.org/download.php\n\n-   Se référer au bulletin de sécurité de l'éditeur pour l'obtention des\n    correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200403-06 du 26 mars 2004    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200403-06.xml"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD courier-auth,    courier-imap et sqwebmail :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/mail/sqwebmail/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-533 du 22 juillet 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-533"
+    },
+    {
+      "title": "Site Internet de Courier MTA, Courier-IMAP et Courier    SqWebMail :",
+      "url": "http://www.courier-mta.org"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD courier-auth,    courier-imap et sqwebmail :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/mail/courier-auth/README.html"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD courier-auth,    courier-imap et sqwebmail :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/mail/courier-imap/README.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-252",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Cross-site scripting"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Courier MTA, Courier-IMAP et Courier\nSqWebMail permettent à un utilisateur mal intentionné de réaliser de\nl'injection de données, réaliser un déni de service ou exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilité de Courier MTA, Courier-IMAP et Courier SqWebMail",
+  "vendor_advisories": []
+}

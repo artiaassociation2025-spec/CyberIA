@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Versions des Machines Virtuelles Java concernées :</P>  <UL>    <LI>Série 2000 ;</LI>    <LI>Série 3100 ;</LI>    <LI>Série 3200 ;</LI>    <LI>Série 3300 ;</LI>  </UL>  <P>sous Windows 9x, NT et 2000.<BR>  <BR></P>  <P>Nota : Pour connaître la version de la Machine Virtuelle Java  utilisée, exécuter la commande <TT>jview</TT> dans une session  DOS.</P>",
+  "content": "## Description\n\nPar conception une application Java doit seulement pouvoir communiquer\navec le site internet visité qui l'accueille. Cependant une\nvulnérabilité permet à un concepteur mal intentionné d'établir une\nnouvelle session sous le couvert de l'utilisateur visitant. Ainsi la\nvulnérabilité peut être employée pour accèder à un site intranet,\nprotégé par un garde barrière, par exemple ou pour accèder à des\ninformations sous l'identité de l'utilisateur.\n\nBien que cette application puisse se servir des droits d'accès pour\ns'authentifier sur un site, elle ne permet pas de les compromettre.\n\n## Solution\n\nCorrectif pour la série 2000 (version US) :\n\n    http://www.microsoft.com/java/vm/dl_vmsp2.htm\n\n  \n  \n\nCorrectif pour la série 3100 (Version US) :\n\n    http://www.microsoft.com/java/vm/dl_vm40.htm\n\nPuis le correctif 3314 (Version US) :\n\n    http://download.microsoft.com/download/vm/patch/3314/WIN98Me/EN-US/vmsecfix.exe\n\n  \n  \n\nCorrectif pour les séries 3229-3234 (Version US) :\n\n    http://www.microsoft.com/java/vm/dl_vm40.htm\n\nPuis le correctif 3314 (Version US) :\n\n    http://download.microsoft.com/download/vm/patch/3314/WIN98Me/EN-US/vmsecfix.exe\n\n  \n  \n\nCorrectif pour la série 3214 (Version US) :\n\n    http://download.microsoft.com/download/vm/patch/3314/WIN98Me/EN-US/vmsecfix.exe\n\n  \n  \n\nCorrectif pour les séries 3300 (Version US) :\n\n    http://download.microsoft.com/download/vm/patch/3314/WIN98Me/EN-US/vmsecfix.exe\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS00-059.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-032",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité lors de la navigation"
+    },
+    {
+      "description": "Accès en lecture à des données non autorisées"
+    }
+  ],
+  "summary": "Un concepteur mal intentionné d'un site internet peut, par le biais\nd'une application Java, prendre l'identité d'un visiteur de son site\npour établir une connexion avec d'autres sites.\n",
+  "title": "Vulnérabilité dans la machine virtuelle Java de Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Tout système offrant un service DNS par  l'intermédiaire de <SPAN class=\"textit\">BIND</SPAN> en versions  8.4.4, 8.4.5 et 9.3.0.",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\n-   Versions 8.4.4 et 8.4.5 (CAN-2005-0033) :\n\n    les interrogations déjà réalisées sont stockées dans un tableau dont\n    les limites mémoire sont mal gérées et peuvent donc provoquer un\n    déni de service par débordement.\n\n-   Version 9.3.0 (CAN-2005-0034) :\n\n    Un test de validation DNSSEC est basé sur un postulat incorrect et\n    peut donc interrompre le service lors d'une requête légitime d'après\n    la norme.\n\n## Contournement provisoire\n\n-   Versions 8.4.4 et 8.4.5 :\n\n    Désactiver l'interrogation récursive («recursion»), s'il ne s'agit\n    pas d'un serveur cache, ainsi que la récupération des\n    enregistrements annexes («glue fetching» : récupération de l'adresse\n    IP en sus lors d'une interrogation NS, par exemple).\n\n-   Version 9.3.0 :\n\n    Désactiver DNSSEC ou simplement la validation DNSSEC dans les\n    options.\n\n## Solution\n\nMettre à jour les sources en version 8.4.6 ou 9.3.1beta2 au moins.\n",
+  "cves": [
+    {
+      "name": "CVE-2005-1278",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-1278"
+    },
+    {
+      "name": "CVE-2005-0034",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0034"
+    }
+  ],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD bind8 et    bind9 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/net/bind8/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2005:023 du 26 janvier    2005 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2005:023"
+    },
+    {
+      "title": "Site Internet d'ISC BIND :",
+      "url": "http://www.isc.org"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD bind8 et    bind9 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/net/bind9/README.html"
+    },
+    {
+      "title": "Note de vulnérabilité #938617 de l'US-CERT sur      BIND 9 :",
+      "url": "http://www.kb.cert.org/vuls/id/938617"
+    },
+    {
+      "title": "Note de vulnérabilité #327633 de l'US-CERT sur      BIND 8 :",
+      "url": "http://www.kb.cert.org/vuls/id/327633"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD FreeBSD-SA-05:12 du 09 juin    2005 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-05:12.bind9.asc"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-033",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-01-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence CVE et des références aux bulletins de sécurité Mandrake et NetBSD.",
+      "revision_date": "2005-01-31T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2005-06-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur distant mal intentionné peut provoquer l'arrêt du service\nDNS (et par ricochet de tout service utilisant la résolution de nom), en\nabusant d'une faille concernant soit les versions 8.4.4 et 8.4.5, soit\nla version 9.3.0.\n",
+  "title": "Vulnérabilité des serveurs DNS BIND",
+  "vendor_advisories": [
+    {
+      "published_at": "2005-01-25",
+      "title": "Bulletin de sécurité 20050125-00060 du NISCC sur BIND 9",
+      "url": "http://www.niscc.gov.uk/niscc/docs/al-20050125-00060.html"
+    },
+    {
+      "published_at": "2005-01-25",
+      "title": "Bulletin de sécurité 20050125-00059 du NISCC sur BIND 8",
+      "url": "http://www.niscc.gov.uk/niscc/docs/al-20050125-00059.html"
+    }
+  ]
+}

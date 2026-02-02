@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de fetchmail  antérieures à 5.9.10.</p>",
+  "content": "## Description\n\nFetchmail est un utilitaire permettant de récupérer ses méls depuis un\nserveur de méls distant via divers protocoles (POP, IMAP...). Lors de la\nrécupération des méls depuis un serveur IMAP, fetchmail alloue une zone\nmémoire afin de stocker la taille des messages. La taille de cette zone\nmémoire dépend du nombre de méls à récupérer sur le serveur.\n\nEn annonçant un nombre de méls incorrect, un serveur malicieux peut\nprovoquer un débordement de mémoire dans la commande fetchmail, pouvant\nentraîner l'exécution de code arbitraire avec les privilèges de\nl'utilisateur qui se sert de cette commande.\n\n## Solution\n\nLa version 5.9.10 corrige cette vulnérabilité. Cette version est\ndisponible sur le site :\n\n    http://www.tuxedo.org/~esr/fetchmail\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité MDKSA-2002:0036 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-036.php"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-112",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-05-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Un débordement de mémoire dans la commande fetchmail permet à un\nutilisateur mal intentionné de provoquer l'exécution de code arbitraire\navec les privilèges de l'utilisateur qui se sert de cette commande.\n",
+  "title": "Vulnérabilité dans fetchmail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité RHSA-2002:047 de RedHat",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-047.html"
+    }
+  ]
+}

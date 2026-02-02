@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Symfony versions 6.x antérieures à 6.3.8",
+      "product": {
+        "name": "Symfony",
+        "vendor": {
+          "name": "Symfony",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symfony versions 2.x à 4.x antérieures à 4.4.51",
+      "product": {
+        "name": "Symfony",
+        "vendor": {
+          "name": "Symfony",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symfony versions 5.x antérieures à 5.4.31",
+      "product": {
+        "name": "Symfony",
+        "vendor": {
+          "name": "Symfony",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-46735",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-46735"
+    },
+    {
+      "name": "CVE-2023-46734",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-46734"
+    },
+    {
+      "name": "CVE-2023-46733",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-46733"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0930",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-11-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans<span\nclass=\"textit\"> Symfony</span>. Elles permettent à un attaquant de\nprovoquer une injection de code indirecte à distance (XSS) et un\ncontournement de la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans Symfony",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symfony GHSA-72x2-5c85-6wmr du 10 novembre 2023",
+      "url": "https://github.com/symfony/symfony/security/advisories/GHSA-72x2-5c85-6wmr"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symfony GHSA-q847-2q57-wmr3 du 10 novembre 2023",
+      "url": "https://github.com/symfony/symfony/security/advisories/GHSA-q847-2q57-wmr3"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symfony GHSA-m2wj-r6g3-fxfx du 10 novembre 2023",
+      "url": "https://github.com/symfony/symfony/security/advisories/GHSA-m2wj-r6g3-fxfx"
+    }
+  ]
+}

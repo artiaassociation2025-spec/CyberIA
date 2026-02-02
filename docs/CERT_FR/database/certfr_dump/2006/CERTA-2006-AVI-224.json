@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>libTIFF versions 3.8.0 et antérieures.</p>",
+  "content": "## Description\n\nLa bibliothèque de fonctions libTIFF est utilisée pour l'affichage ou la\nmanipulation d'images au format TIFF dans diverses applications comme\nl'éditeur d'images The GIMP.  \nTrois vulnérabilités sont présentes dans la libTIFF :\n\n-   Une erreur non spécifiée dans la fonction TIFFFetchAnyArray() permet\n    de provoquer un déni de service de l'application utilisant cette\n    fonction ;\n-   une erreur dans la fonction TIFFFectchData() permet de provoquer un\n    déni de service de l'application utilisant cette fonction ou\n    d'exécuter du code arbitraire à distance ;\n-   une erreur dans le fichier tif_jpeg.c permet à un utilisateur\n    distant mal intentionné de provoquer un déni de service de\n    l'application utilisant une fonction vulnérable de ce fichier ou\n    d'exécuter du code arbitraire.\n\nToutes ces vulnérabilités sont exploitables par le biais d'une image\nparticulière au format TIFF.\n\n## Solution\n\nLa version 3.8.1 corrige ces problèmes :\n\n    http://www.remotesensing.org/libtiff/\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2024",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2024"
+    },
+    {
+      "name": "CVE-2006-0405",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0405"
+    },
+    {
+      "name": "CVE-2006-2026",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2026"
+    },
+    {
+      "name": "CVE-2006-2025",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2025"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 1054 du 27 mai 2006 :",
+      "url": "http://www.debian.org/security/dsa-1054"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200605-17 du 31 mai 2006 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200605-17.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1078 du 27 mai 2006 :",
+      "url": "http://www.debian.org/security/dsa-1078"
+    },
+    {
+      "title": "Liste des changements apportés à la version 3.8.1 de    libTIFF :",
+      "url": "http://www.remotesensing.org/libtiff/3.8.1.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-224",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-06-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans la bibliothèque de fonctions libTIFF\npermettent à un utilisateur distant mal intentionné de provoquer un déni\nde service ou d'exécuter du code arbitraire.\n",
+  "title": "Multiples Vulnérabilités dans libTIFF",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés dans la version 3.8.1 de libTIFF",
+      "url": null
+    }
+  ]
+}

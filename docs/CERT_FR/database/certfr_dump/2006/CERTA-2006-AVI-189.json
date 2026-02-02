@@ -1,0 +1,101 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windwos XP Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windwos Server 2003 (Itanium).",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windwos Server 2003 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans Microsoft Windows MSDTC\n(Microsoft Distributed Transaction Coordinator):\n\n-   La première consiste en une erreur présente au niveau de la fonction\n    CRpcIoManagerServer::BuildContext\n-   La deuxième consiste en une erreur présente au niveau de la fonction\n    MIDL_user_allocate\n\nCes deux erreurs sont issues d'une mauvaise gestion de certains messages\nmalformés. Ces deux vulnérabilités peuvent être utilisées par un\nutilisateur mal intentionné afin de provoquer un déni de service et/ou\nexécuter du code arbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0034",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0034"
+    },
+    {
+      "name": "CVE-2006-1184",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1184"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-018 du 10 mai 2006 :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-018.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-018 du 10 mai 2006 :",
+      "url": "http://www.microsoft.com/france/technet/securite/MS06-018.mspx"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-189",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été identifiées dans le service MSDTC de\nMicrosoft Windows. Ces deux vulnérabilités peuvent être utilisées par un\nutilisateur mal intentionné afin de provoquer un déni de service et/ou\nexécuter du code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités du service Windows MSDTC",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-018 du 09 Mai 2006",
+      "url": null
+    }
+  ]
+}

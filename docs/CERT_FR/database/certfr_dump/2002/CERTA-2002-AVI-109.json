@@ -1,0 +1,79 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "talkd sous Redhat Linux antérieure à la version 6.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "talkd Système IRIX versions 6.5.9 et antérieures (les versions antérieures, non maintenues, n'ont pas été testées).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "talkd sous Solaris 2.5.1 et 2.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "talkd sous OpensBSD antérieure à la version 2.8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe service talk permet de dialoguer en temps réel à travers le réseau.\nC'est une application de type client/serveur.\n\nUne vulnérabilité présente sur le serveur talkd permet à un utilisateur\nmal intentionné d'exécuter du code arbitraire à distance avec les\nprivilèges du super utilisateur par l'envoi d'un message malicieusement\nconstruit. Cette vulnérabilité est présente lorsque un appel est\neffectuée d'un client vers le serveur.\n\n## Contournement provisoire\n\nDésactiver le daemon talkd.\n\n## Solution\n\nAppliquer le correctif correspondant à votre système d'exploitation (se\nréférer à la section documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Alerte de Sécurité #1764 de Sun :  \n  Site de SecurityFocus : http://online.securityfocus.com/bid/1764\n Avis de sécurité de SGI : http://www.sgi.com/support/security/",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2f44646"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-109",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-05-23T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de l'avis de sécurité Irix.",
+      "revision_date": "2002-06-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de type « chaîne de format » présente dans le daemon\ntalkd permet à un utilisateur distant d'obtenir les privilèges du super\nutilisateur du système (root).\n",
+  "title": "Vulnérabilité dans talkd",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Alerte de sécurité #44646 de Sun",
+      "url": null
+    }
+  ]
+}

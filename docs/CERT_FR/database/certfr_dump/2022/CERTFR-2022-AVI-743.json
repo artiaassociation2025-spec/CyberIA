@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PostgreSQL JDBC versions antérieures à 42.2.26",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PostgreSQL JDBC versions 42.3.x et 42.4.x antérieures à 42.4.1",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-31197",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-31197"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-743",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-08-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans PostgreSQL JDBC. Elle permet à\nun attaquant de provoquer une exécution de code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans PostgreSQL JDBC",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PostgreSQL du 15 août 2022",
+      "url": "https://www.postgresql.org/about/news/postgresql-jdbc-versions-424142226-security-update-2492/"
+    }
+  ]
+}

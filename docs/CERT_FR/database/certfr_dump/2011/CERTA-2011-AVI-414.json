@@ -1,0 +1,51 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Nagios, version 3.2.3 et versions  antérieures.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans Nagios et permettent de\nréaliser de l'injection de code indirecte :\n\n-   un des paramètres en entrée de config.cgi est insuffisament\n    vérifié ;\n-   un des paramètres en entrée de statusmap.cgi est insuffisament\n    vérifié.\n\n## Solution\n\nLa version 3.3.1 de Nagios remédie à ces problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2179",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2179"
+    },
+    {
+      "name": "CVE-2011-1523",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1523"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-1151-1 du 15 juin 2011 :",
+      "url": "http://www.ubuntu.com/usn/usn-1151-1/"
+    },
+    {
+      "title": "Bulletin de sécurité Novell CVE-2011-2179 du 25 juillet    2011 :",
+      "url": "http://support.novell.com/security/cve/CVE-2011-2179.html"
+    },
+    {
+      "title": "Bulletin de sécurité Novell CVE-2011-1523 du 25 juillet    2011 :",
+      "url": "http://support.novell.com/security/cve/CVE-2011-1523.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-414",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-07-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Nagios permettent de réaliser de\nl'injection de code indirecte (XSS).\n",
+  "title": "Vulnérabilités dans Nagios",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Site de téléchargement de Nagios",
+      "url": "http://www.nagios.org/"
+    }
+  ]
+}

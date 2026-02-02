@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "QuickTime 7.2 ainsi que les versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans le lecteur multimédia\nApple QuickTime. Parmi celles-ci :\n\n-   l'application ne manipulerait pas correctement les vidéos au format\n    H.264. Ce problème peut ainsi provoquer une corruption de la\n    mémoire.\n-   l'application ne manipulerait pas correctement les fichiers au\n    format .m4v. Ce problème peut ainsi provoquer un débordement\n    d'entier.\n-   l'application ne manipulerait pas correctement les fichiers au\n    format SMIL. Ce problème peut ainsi provoquer un débordement\n    d'entier.\n-   les vérifications de sécurité (permissions) peuvent être\n    contournées, dans QuickTime pour Java. L'exploitation de cette\n    vulnérabilité, comme les précédentes, peut entraîner, sous certaines\n    conditions, l'exécution de code arbitraire à distance sur le système\n    vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité d'Apple pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-2402",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2402"
+    },
+    {
+      "name": "CVE-2007-2394",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2394"
+    },
+    {
+      "name": "CVE-2007-2392",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2392"
+    },
+    {
+      "name": "CVE-2007-2397",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2397"
+    },
+    {
+      "name": "CVE-2007-2393",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2393"
+    },
+    {
+      "name": "CVE-2007-2396",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2396"
+    },
+    {
+      "name": "CVE-2007-2295",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2295"
+    },
+    {
+      "name": "CVE-2007-2296",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2296"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité iDefense du 11 juillet 2007 :",
+      "url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=556"
+    },
+    {
+      "title": "Bulletin de sécurité Apple du 11 juillet 2007 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=305947"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-308",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans le lecteur multimédia\nApple QuickTime. L'exploitation de ces dernières peut entraîner un\ndysfonctionnement de l'application, voire l'exécution de code arbitraire\nà distance sur le système vulnérable.\n",
+  "title": "Multiples vulnérabilités dans Apple QuickTime",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Apple 305947 du 11 juillet 2007",
+      "url": null
+    }
+  ]
+}

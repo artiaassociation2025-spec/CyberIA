@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>AWStats</TT> versions 6.3 et  antérieures.",
+  "content": "## Description\n\nAWStats est un outil d'analyse de fichiers de journalisation et de\ngénération de statistiques pour les serveurs web, FTP ou mail.  \nUne vérification insuffisante de la validité du champ referrer présent\ndans des requêtes http permet à un utilisateur distant mal intentionné,\npar le biais d'une requête http malicieusement construite enregistrée\ndans les fichiers de journalisation du serveur web, d'exécuter du code\narbitraire sur le système effectuant l'analyse de ces même fichiers.\n\n## Solution\n\nLa version 6.4 de AWStats corrige le problème et est disponible à\nl'adresse :\n\n    http://awstats.sourceforge.net/#DOWNLOAD\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de AWStats :",
+      "url": "http://awstats.sourceforge.net/"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE du 19 août 2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_19_sr.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200508-07 du 16 août 2005    :",
+      "url": "http://security.gentoo.org/glsa/glsa-200508-07.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian dsa-892 du 10 novembre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-892"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD :",
+      "url": "http://www.vuxml.org/freebsd/pkg-awstats.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-307",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-08-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité FreeBSD.",
+      "revision_date": "2005-08-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Gentoo et SuSE.",
+      "revision_date": "2005-08-31T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Debian.",
+      "revision_date": "2005-11-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de AWStats",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDEFENSE 08.09.05",
+      "url": "http://www.idefense.com/application/poi/display?id=290&type=vulnerabilities"
+    }
+  ]
+}

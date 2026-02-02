@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>OpenBSD versions 3.4, 3.5 et 3.6.</P>",
+  "content": "## Description\n\n`isakmpd` est un service basé sur le protocole IKE. `isakmpd` sert\nnotamment à la négociation et à la gestion des associations de sécurité\n(SA) pour du trafic réseau chiffré et/ou authentifié (IPSEC).\n\nUne vulnérabilité a été découverte dans le service `isakmpd` lors de son\nutilisation avec le protocole IPSEC.\n\nUn utilisateur local mal intentionné peut exploiter cette vulnérabilité\nafin de créer un déni de service.\n\n## Solution\n\nAppliquer le correctif suivant la version affectée :\n\n-   OpenBSD version 3.4 :\n\n        ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.4/common/035_pfkey.patch\n\n-   OpenBSD version 3.5 :\n\n        ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.5/common/024_pfkey.patch\n\n-   OpenBSD version 3.6 :\n\n        ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.i6/common/007_pfkey.patch\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité OpenBSD #007 du 14 décembre 2004 :",
+      "url": "http://www.openbsd.org/errata.html#pfkey"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-399",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-12-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans ISAKMPD sous OpenBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Correctif de sécurité OpenBSD du 14 décembre 2004",
+      "url": null
+    }
+  ]
+}

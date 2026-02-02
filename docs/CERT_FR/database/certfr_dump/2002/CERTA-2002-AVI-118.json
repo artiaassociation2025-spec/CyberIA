@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>IRIX versions 6.5 à 6.5.15.</P>",
+  "content": "## Description\n\n`NIS` (Network Information Service) est un service utilisé pour la\ncentralisation des informations relatives aux comptes utilisateur du\nréseau.\n\nyppasswd permet aux utilisateurs de modifier leur mot de passe. Ces\nmodifications sont alors gérées par le service rpc.passwd.\n\nUne vulnérabilité présente dans le démon rpc.passwd peut permettre à un\nindividu mal intentionné d'obtenir les privilèges du compte `root`.\n\n## Contournement provisoire\n\nIl est possible de désactiver le démon rpc.passwd :  \n\n`chmod 444 /usr/etc/rpc.passwd`\n\n`killall rpc.passwd`  \n\nCeci aura pour conséquence d'empêcher les utilisateurs de modifier leur\nmot de passe à distance.\n\n## Solution\n\nSe référer au bulletin de SGI afin d'appliquer le correctif suivant la\nversion affectée (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-118",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le serveur rpc.passwd peut permettre à un\nindividu mal intentionné d'obtenir les privilèges du compte `root`.\n",
+  "title": "Vulnérabilité rpc.passwd sous IRIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #20020601-01-P de SGI",
+      "url": "http://www.sgi.com/support/security"
+    }
+  ]
+}

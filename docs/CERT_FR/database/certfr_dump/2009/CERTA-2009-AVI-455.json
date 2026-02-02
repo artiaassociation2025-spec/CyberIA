@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OS/400 5.x",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "i5/OS 5.x",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe module mod_proxy du serveur Apache ne pose aucune limite quant au\nnombre de réponses qu'il transfère. Ceci a pour conséquence la\npossibilité de provoquer un déni de service par le biais d'un nombre\nimportant de demandes de transfert.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2364",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2364"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-455",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-10-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité affecte le serveur web Apache embarqué dans les\nserveurs IBM i5/OS et IBM OS/400. Une exploitation réussie conduit à un\ndéni de service à distance.\n",
+  "title": "Vulnérabilité dans IBM OS/400 HTTP Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM SE39219 du 22 octobre 2009",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=nas2f960f9e1d5d7811786257655003c8e7a"
+    }
+  ]
+}

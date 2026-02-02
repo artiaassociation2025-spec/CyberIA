@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions de ESRI ArcSDE antérieures à 9.2 Service Pack 3.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans ESRI ArcSDE (Advanced Spatial\nData Server). Cette technologie est intégrée dans ArcGIS Server pour\naccéder aux bases de données géographiques multi-utilisateurs GIS\n(Geographical Information Systems.\n\nLa vulnérabilité est un débordement de tampon, exploitable à distance\npar des entrées particulières au format ASCII de l'utilisateur. Les\nconséquences d'une telle exploitation seraient la perturbation du\nservice, voire l'exécution de code arbitraire à distance.\n\nPar défaut, le serveur est en écoute sur le port 5151/TCP.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur ESRI Inc. pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-4278",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4278"
+    }
+  ],
+  "links": [
+    {
+      "title": "Détails des correctifs effectués pour ESRI ArcSDE 9.2    Service Pack 3 :",
+      "url": "http://download.esri.com/support/downloads/other_/ArcSDE-92sp3-issues.htm"
+    },
+    {
+      "title": "Page officielle du produit ESRI ArcSDE :",
+      "url": "http://www.esri.com/software/arcgis/arcsde/index.html"
+    },
+    {
+      "title": "Bulletin de sécurité iDefense du 15 août 2007 :",
+      "url": "http://labs.idefense.com/intelligence/vulnerabilities/display?id=577"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-367",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-08-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans ESRI ArcSDE. L'exploitation de\ncette dernière permettrait à une personne malveillante de perturber le\nservice, donc d'empêcher les utilisateurs d'accéder au serveur, voire\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans ESRI ArcSDE",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDefense 577 du 15 août 2007",
+      "url": null
+    }
+  ]
+}

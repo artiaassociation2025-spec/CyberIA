@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Cisco Unified Communications Manager  versions 4.x, 5.x, 6.x et 7.x.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités de Cisco Unified Communications Manager ont été\npubliées et corrigées :\n\n-   le traitement défectueux des paquets SIP malformés, émis vers les\n    ports 5060 et 5061, en UDP comme en TCP, conduit à l'arrêt d'un\n    processus essentiel du système. Le service de transport de la voix\n    est interrompu ;\n-   le suivi des connexions TCP par le pare-feu intégré au système\n    d'exploitation est vulnérable à une attaque par saturation d'une\n    table du système ;\n-   les processus de gestion des protocoles SIP (ports 5060 et 5061) et\n    SCCP (ports 2000 et 2443) en TCP sont vulnérables à une attaque\n    épuisant les ressources du système en descripteurs de fichiers.\n    L'exploitation de cette vulnérabilité rend impossible la création de\n    nouvelles connexions.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2054",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2054"
+    },
+    {
+      "name": "CVE-2009-2052",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2052"
+    },
+    {
+      "name": "CVE-2009-2053",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2053"
+    },
+    {
+      "name": "CVE-2009-2050",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2050"
+    },
+    {
+      "name": "CVE-2009-2051",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2051"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-357",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de Cisco Unified Communications Manager\npermettent à un utilisateur malveillant de réaliser un déni de service à\ndistance.\n",
+  "title": "Vulnérabilités de Cisco Unified Communications Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20090826-cucm du 26 août 2009",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20090826-cucm.shtml"
+    }
+  ]
+}

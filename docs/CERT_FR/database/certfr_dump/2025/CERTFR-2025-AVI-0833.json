@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Joomla! versions 5.x antérieures à 5.3.4",
+      "product": {
+        "name": "Joomla!",
+        "vendor": {
+          "name": "Joomla!",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Joomla! versions 3.x-elts et 4.x antérieures à 4.4.14",
+      "product": {
+        "name": "Joomla!",
+        "vendor": {
+          "name": "Joomla!",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-54476",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-54476"
+    },
+    {
+      "name": "CVE-2025-54477",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-54477"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0833",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-10-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Joomla!. Elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données et une injection de code indirecte à distance (XSS).",
+  "title": "Multiples vulnérabilités dans Joomla!",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-09-30",
+      "title": "Bulletin de sécurité Joomla! 1011-20250902",
+      "url": "https://developer.joomla.org/security-centre/1011-20250902-core-user-enumeration-in-passkey-authentication-method.html"
+    },
+    {
+      "published_at": "2025-09-30",
+      "title": "Bulletin de sécurité Joomla! 1010-20250901",
+      "url": "https://developer.joomla.org/security-centre/1010-20250901-core-inadequate-content-filtering-within-the-checkattribute-filter-code.html"
+    }
+  ]
+}

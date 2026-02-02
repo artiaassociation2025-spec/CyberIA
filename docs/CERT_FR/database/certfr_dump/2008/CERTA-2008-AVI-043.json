@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions de Novell GroupWise 7 antérieures à SP 3 Public Beta.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Novell",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans Novell GroupWise WebAccess. Le\nprogramme webacc ne manipulerait pas correctement certaines variables\ncomme User.html, Error, User.Theme.index ou User.lang.\n\nUne personne malveillante pourrait profiter de cette vulnérabilité pour\ncréer une adresse réticulaire (URL) spécialement construite afin\nd'exécuter du code arbitraire dans le navigateur d'une victime qui\naurait cliqué sur celui-ci.\n\n## Solution\n\nSe référer au bulletin de sécurité de Novell pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4220",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4220"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de mise à jour Novell GroupWise 7 Support Pack 3    Public Beta du 31 janvier 2008 :",
+      "url": "http://www.novell.com/documentation/gw7/"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-043",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans Novell GroupWise WebAccess.\nL'exploitation de cette dernière permettrait à une personne malveillante\nde lancer une attaque de type injection de code indirecte, ou <span\nclass=\"textit\">cross-site scripting</span> et d'exécuter du code\narbitraire sur le navigateur d'un poste victime.\n",
+  "title": "Vulnérabilité dans Novell GroupWise WebAccess",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Changement de version GroupWise 7 Support Pack 3 Public Beta du 31 janvier 2008",
+      "url": null
+    }
+  ]
+}

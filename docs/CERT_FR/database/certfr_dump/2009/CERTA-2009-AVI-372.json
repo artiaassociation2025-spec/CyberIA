@@ -1,0 +1,215 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2003 x64 Edition Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Vista Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Vista x64 Edition Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Vista ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2008 for x64-based Systems ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2003 with SP2 for Itanium-based Systems ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Vista Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2008 for 32-bit Systems Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Vista x64 Edition Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2008 for Itanium-based Systems ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Vista x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2008 for x64-based Systems Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2008 for 32-bit Systems ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2003 Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2008 for Itanium-based Systems Service Pack 2.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans l'implémentation de\nTCP/IP sous Microsoft Windows :\n\n-   un déni de service à distance est possible dû à la façon dont\n    Microsoft Windows gère un nombre excessif de connexions TCP. Cette\n    vulnérabilité est amplifiée lorsque la taille de la fenêtre a une\n    valeur proche de 0 (CVE-2008-4609) ;\n-   une exécution de code arbitraire à distance est possible car la pile\n    TCP/IP de Microsoft Windows ne nettoie pas correctement les\n    informations d'état (CVE-2009-1925) ;\n-   un déni de service à distance est possible du fait d'une erreur dans\n    la gestion des paquets ayant une taille de fenêtre proche de 0\n    (CVE-2009-1926).\n\n## Solution\n\nSe référer au bulletin de sécurité Microsoft MS09-048 pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1926",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1926"
+    },
+    {
+      "name": "CVE-2008-4609",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4609"
+    },
+    {
+      "name": "CVE-2009-1925",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1925"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS09-048 du 08 septembre    2009 :",
+      "url": "http://www.microsoft.com/france/technet/security/Bulletin/MS09-048.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS09-048 du 08 septembre    2009 :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-048.mspx"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-372",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-09-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans l'implémentation de TCP/IP sous <span\nclass=\"textit\">Microsoft Windows</span> permettent d'exécuter du code\narbitraire ou de réaliser un déni de service à distance.\n",
+  "title": "Multiples vulnérabilités dans TCP/IP sous Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS09-048 du 08 septembre 2009",
+      "url": null
+    }
+  ]
+}

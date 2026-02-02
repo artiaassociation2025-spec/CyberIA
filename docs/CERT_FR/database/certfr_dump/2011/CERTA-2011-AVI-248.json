@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "CA Output Management Web Viewer 11.0 ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA Output Management Web Viewer 11.5.",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités, de type débordement de mémoire, ont été découvertes\ndans les contrôles ActiveX PPSView.ocx et UOMWV_HelperActiveX.ocx de CA\nOutput Management Web Viewer. L'exploitation de ces vulnérabilités, par\nle biais d'une page Web spécifiquement construite, permet l'exécution de\ncode arbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1719",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1719"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-248",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-04-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans <span class=\"textit\">CA Output Management Web\nViewer</span> permettent d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans CA Output Management Web Viewer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CA20110420-02 du 20 avril 2011",
+      "url": "https://support.ca.com/irj/portal/anonymous/phpsupcontent?contentID=DED5B724-B500-46DA-A855-B2AF457B5364"
+    }
+  ]
+}

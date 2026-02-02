@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "strongSwan versions antérieures à 6.0.3 avec le Greffon eap-mschapv2",
+      "product": {
+        "name": "strongSwan",
+        "vendor": {
+          "name": "StrongSwan",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-62291",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-62291"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0931",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-10-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans StrongSwan. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance et un déni de service à distance.",
+  "title": "Vulnérabilité dans StrongSwan",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-10-27",
+      "title": "Bulletin de sécurité StrongSwan cve-2025-62291",
+      "url": "https://www.strongswan.org//blog/2025/10/27/strongswan-vulnerability-(cve-2025-62291).html"
+    }
+  ]
+}

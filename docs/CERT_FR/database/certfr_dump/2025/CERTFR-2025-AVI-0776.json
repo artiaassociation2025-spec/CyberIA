@@ -1,0 +1,91 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GitLab Community Edition (CE) et Gitlab Enterprise Edition (EE) versions 18.2.x antérieures à 18.2.6",
+      "product": {
+        "name": "GitLab Community Edition (CE) et Gitlab Enterprise Edition (EE)",
+        "vendor": {
+          "name": "GitLab",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GitLab Community Edition (CE) et Gitlab Enterprise Edition (EE) versions 18.3.x antérieures à 18.3.2",
+      "product": {
+        "name": "GitLab Community Edition (CE) et Gitlab Enterprise Edition (EE)",
+        "vendor": {
+          "name": "GitLab",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GitLab Community Edition (CE) et Gitlab Enterprise Edition (EE) versions antérieures à 18.1.6",
+      "product": {
+        "name": "GitLab Community Edition (CE) et Gitlab Enterprise Edition (EE)",
+        "vendor": {
+          "name": "GitLab",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-6454",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-6454"
+    },
+    {
+      "name": "CVE-2025-2256",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-2256"
+    },
+    {
+      "name": "CVE-2025-1250",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-1250"
+    },
+    {
+      "name": "CVE-2025-10094",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-10094"
+    },
+    {
+      "name": "CVE-2025-7337",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-7337"
+    },
+    {
+      "name": "CVE-2025-6769",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-6769"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0776",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-09-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Falsification de requêtes côté serveur (SSRF)"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans GitLab. Elles permettent à un attaquant de provoquer un déni de service à distance, une atteinte à la confidentialité des données et une falsification de requêtes côté serveur (SSRF).",
+  "title": "Multiples vulnérabilités dans GitLab",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-09-10",
+      "title": "Bulletin de sécurité GitLab",
+      "url": "https://about.gitlab.com/releases/2025/09/10/patch-release-gitlab-18-3-2-released/"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "LibTIFF 3.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités de type débordement de mémoire ont été découvertes\ndans les fonctions LZWDecodeCompat(), tiffcvt() et cvt_whole_image().\nCes vulnérabilités peuvent être exploitées à distance afin de provoquer\nun déni de service ou d'exécuter du code arbitraire au moyen d'un\nfichier au format TIFF spécialement construit.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2347",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2347"
+    },
+    {
+      "name": "CVE-2009-2285",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2285"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-797-1 du 06 juillet 2009 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-797-1"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2009:1159 du 16 juillet    2009 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2009-1159.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-801-1 du 13 juillet 2009 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-801-1"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1835 du 15 juillet 2009 :",
+      "url": "http://www.debian.org/security/2009/dsa-1835"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-284",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-07-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités découvertes dans la bibliothèque LibTIFF permettent\nà un utilisateur distant malintentionné de provoquer un déni de service\nou d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilités dans la bibliothèque libtiff",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-1835 du 15 juillet 2009",
+      "url": null
+    }
+  ]
+}

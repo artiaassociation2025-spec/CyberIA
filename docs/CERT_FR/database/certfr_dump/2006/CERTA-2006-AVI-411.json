@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenSSH 3.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenSSH",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenSSH 4.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenSSH",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCette vulnérabilité n'est exploitable que si le support de la version 1\ndu protocole ssh est activé.\n\nUne vulnérabilié causée par une erreur dans le traitement des paquets\nssh ayant plusieurs block identiques permet de provoquer un déni de\nservice en utilisant toutes les ressources du processeur. Cette\nvulnérabilité peut être exploitée au moyen d'un paquet ssh spécialement\nconstuit.\n\n## Contournement provisoire\n\nVérifier que la directive Protocol dans le fichier sshd_config est fixée\nà 2 et non à 1.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4924",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4924"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SCO SCOSA-2008.2 du 12 mars 2008 :",
+      "url": "ftp://ftp.sco.com/pub/unixware7/714/security/p534336/p534336.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200609-17 du 27 septembre    2006 :",
+      "url": "http://Www.gentoo.org/security/en/glsa/glsa-200609-17.xml"
+    },
+    {
+      "title": "Référence CVE CVE-2006-4924 :",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4924"
+    },
+    {
+      "title": "Mise à jour de sécurité OpenSSH du 16 septembre 2006 :",
+      "url": "http://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/deattack.h.diff?r1=1.9&r2=1.10&sortby=date&f=h"
+    },
+    {
+      "title": "Mise à jour de sécurité OpenSSH du 16 septembre 2006 :",
+      "url": "http://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/deattack.c.diff?r1=1.29&r2=1.30&sortby=date&f=h"
+    },
+    {
+      "title": "Mise à jour de sécurité OpenSSH du 16 septembre 2006 :",
+      "url": "http://www.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/packet.c.diff?r1=1.143&r2=1.144&sortby=date&f=h"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-411",
+  "revisions": [
+    {
+      "description": "ajout de la section <TT>Contournement provisoire</TT>.",
+      "revision_date": "2006-09-28T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SCO.",
+      "revision_date": "2008-03-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans OpenSSH permet à un utilisateur distant mal\nintentionné de provoquer un déni de service à distance.\n",
+  "title": "Vulnérabilité dans OpenSSH",
+  "vendor_advisories": []
+}

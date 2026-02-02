@@ -1,0 +1,98 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "libreOffice versions antérieures à la 3.5.3.",
+      "product": {
+        "name": "LibreOffice",
+        "vendor": {
+          "name": "Libreoffice",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenOffice version 3.3, 3.4 Beta et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenOffice",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-2334",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-2334"
+    },
+    {
+      "name": "CVE-2012-2149",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-2149"
+    },
+    {
+      "name": "CVE-2012-1149",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-1149"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité OpenOffice CVE-2012-2334 du 16 mai    2012 :",
+      "url": "http://www.openoffice.org/security/cves/CVE-2012-2334.html"
+    },
+    {
+      "title": "Bulletin de sécurité OpenOffice CVE-2012-1149 du 16 mai    2012 :",
+      "url": "http://www.openoffice.org/security/cves/CVE-2012-1149.html"
+    },
+    {
+      "title": "Bulletin de sécurité OpenOffice CVE-2012-2149 du 16 mai    2012 :",
+      "url": "http://www.openoffice.org/security/cves/CVE-2012-2149.html"
+    },
+    {
+      "title": "Bulletin de sécurité LibreOffice CVE-2012-1149 du 16 mai    2012 :",
+      "url": "http://www.libreoffice.org/advisories/cve-2012-1149/"
+    },
+    {
+      "title": "Bulletin de sécurité LibreOffice CVE-2012-2334 du 16 mai    2012 :",
+      "url": "http://www.libreoffice.org/advisories/cve-2012-2334/"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-285",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-05-18T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de la vulnérabilité concernant la référence CVE CVE-2012-2334.",
+      "revision_date": "2012-05-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Trois vulnérabilités ont été corrigées dans <span\nclass=\"textit\">OpenOffice</span> et deux dans <span\nclass=\"textit\">LibreOffice</span>. La première est un débordement\nd'entier dans « vclmi.dll » et provoque un débordement de mémoire tampon\ndans le tas. Une image JPEG spécialement conçue dans un fichier DOC peut\nêtre utilisée pour exploiter cette vulnérabilité. La deuxième concerne\nle format WPD et permet l'exécution de code arbitraire. La troisième\najoute des vérifications d'allocations mémoire lors de l'utilisation\nd'éléments graphiques dans un document de type POWERPOINT.\n",
+  "title": "Vulnérabilités dans OpenOffice et LibreOffice",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenOffice et LibreOffice CVE-2012-2334 du 16 mai 2012",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenOffice CVE-2012-2149 du 16 mai 2012",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenOffice et LibreOffice CVE-2012-1149 du 16 mai 2012",
+      "url": null
+    }
+  ]
+}

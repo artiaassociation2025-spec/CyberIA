@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD 5.1-Release ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 5.2-Release.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa commande jail, une extension de la primitive chroot sous Unix, permet\nà un processus de s'exécuter dans un environnement restreint.\n\nLa primitive système jail_attach permet de faire passer un processus\nd'un environnement non restreint vers un environnement restreint.\n\nUne vulnérabilité présente dans cette fonction permet à un processus\ns'exécutant dans un environnement restreint de pouvoir s'exécuter dans\nun autre environnement restreint sans contrôle des privilèges du premier\nprocessus.\n\n## Solution\n\nAplliquer le correctif correspondant à votre version (cf. section\ndocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité FreeBSD :",
+      "url": "http://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-04:03.jail.asc"
+    },
+    {
+      "title": "Correctif disponible à l'adresse suivante :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/patches/SA-04:03/jail.patch"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-057",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation des privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans la primitive système jail_attach permet\nà un utilisateur mal intentionné dans un environnement d'exécution\nrestreint d'utiliser un autre environnement d'exécution restreint.\n",
+  "title": "Vulnérabilité sur jail_attach sous FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité FreeBSD (FreeBSD-SA-04:03.jail)",
+      "url": null
+    }
+  ]
+}

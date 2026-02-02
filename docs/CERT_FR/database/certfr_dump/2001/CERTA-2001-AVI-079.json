@@ -1,0 +1,31 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Version 3.0.0 de SSH Secure Shell sur les systèmes suivants  :</P>  <UL>    <LI>Red Hat Linux versions 6.1 à 7.1 incluses ;</LI>    <LI>Solaris versions 2.6 à 2.8 incluses ;</LI>    <LI>HP-UX versions 10.20 et 11.00 ;</LI>    <LI>Caldera Linux version 2.4 ;</LI>    <LI>SuSE Linux versions 6.4 à 7.0 incluses.<BR></LI>  </UL>  <P>Notons que la version 3.0.0 de SSH Secure Shell n'est pas  installée par défaut sur ces systèmes.</P>",
+  "content": "## Description\n\nLors de l'authentification par mot de passe, si le mot de passe contenu\ndans le fichier /etc/passwd ou /etc/shadow n'est composé que de 2\ncaratères ou moins, n'importe quel utilisateur pourra se connecter sur\nce compte sans mot de passe.\n\nCette vulnérabilité est dûe à un bogue dans la partie du code qui\neffectue la comparaison entre le résultat de la fonction\ncrypt(mot_de_passe, salt) et le mot de passe chiffré. La fonction\ncrypt() renvoie une chaîne de 13 caractères, dont les 2 premiers sont le\n\"salt\". La comparaison est ensuite faite entre les n premiers caractères\nde la chaîne et le mot de passe chiffré, n étant le nombre de caractères\ndu mot de passe chiffré (2 dans notre cas). Or la valeur choisie pour le\n\"salt\" par la fonction crypt() sont les deux premiers caractères du mot\nde passe chiffré.\n\nLa correspondance des 2 chaînes est donc toujours vérifiée.\n\n## Contournement provisoire\n\nN'autoriser l'accès au démon sshd2 qu'aux utilisateurs dont le mot de\npasse chiffré dans /etc/passwd ou /etc/shadow excède 2 caratcères.\n\n## Solution\n\nMettre à jour SSH Secure Shell et installer la version 3.0.1. Cette\nversion est disponible sur le site FTP de SSH :\n\n    ftp://ftp.ssh.com/pub/ssh/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "L'avis de sécurité de SSH :",
+      "url": "http://www.ssh.com/products/ssh/exploits.cfm"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-079",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-07-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès non autorisés"
+    },
+    {
+      "description": "Compromission de la machine"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut exploiter une vulnérabilité dans le\nsystème d'authentification pour se connecter sans mot de passe sur un\ncompte.\n",
+  "title": "Vulnérabilité dans SSH Secure Shell 3.0.0",
+  "vendor_advisories": []
+}

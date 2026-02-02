@@ -1,0 +1,89 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenOffice versions 2.2.0 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenOffice",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "StarOffice 6.0 Office Suite ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenOffice",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "StarOffice 8 Office Suite.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenOffice",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "StarOffice 7 Office Suite ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenOffice",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0245",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0245"
+    },
+    {
+      "name": "CVE-2007-2754",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2754"
+    }
+  ],
+  "links": [
+    {
+      "title": "Mise à jour d'OpenOffice (version 2.2.1) :",
+      "url": "http://download.openoffice.org/index.html"
+    },
+    {
+      "title": "Bulletin de sécurité Sun Microsystems 102917 du 15 juin    2007 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-102917-1"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-264",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-06-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence à StarOffice.",
+      "revision_date": "2007-06-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité découverte dans OpenOffice.org pourrait être\nexploitée, via un fichier rtf malicieusement cronstruit, pour réaliser\nun déni de service ou exécuter du code arbitraire sur la machine\nvulnérable. Cette vulnérabilité est due à un débordement de tampon dans\nla fonction SwRTFParser::ReadPrtData().\n",
+  "title": "Vulnérabilité dans OpenOffice",
+  "vendor_advisories": []
+}

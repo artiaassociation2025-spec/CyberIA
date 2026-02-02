@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Adobe Reader 7.x.",
+      "product": {
+        "name": "Acrobat Reader",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Adobe Reader 6.x ;",
+      "product": {
+        "name": "Acrobat Reader",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités touchent le greffon Adobe Acrobat Reader, et\nceci quelque soit le navigateur utilisé. Ces vulnérabilités permettent à\nune personne malintentionnée qui les exploiterait de conduire des\nattaques par exécution croisée de code (Cross Site Scripting), par\ndécoupage de réponse HTTP (HTTP Response Splitting) ou par exécution\nforcée de code arbitraire à distance.\n\n## Solution\n\nRemplacer la version actuelle par la version 8.0.0 (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Page de téléchargement de la nouvelle version d'Acrobat    Reader :",
+      "url": "http://www.adobe.com/products/acrobat/readstep2.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-003",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Exécution croisée de code ( cross site scripting )"
+    },
+    {
+      "description": "Découpage de réponse http ( http response splitting )"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités du greffon Adobe Acrobat Reader",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VU#815960 de l'US-CERT",
+      "url": "http://www.kb.cert.org/vuls/id/815960"
+    }
+  ]
+}

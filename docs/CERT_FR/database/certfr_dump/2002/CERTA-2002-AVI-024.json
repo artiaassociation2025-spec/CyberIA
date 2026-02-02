@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Office v.X pour Mac OS X.</P>",
+  "content": "## Description\n\nChaque version de Microsoft Office v.X possède un numéro unique\nd'identification (PID). Lors du lancement d'une application Office sur\nune machine, ce numéro est transmis sur le réseau IP dans le but de\nvérifier que deux licences identiques ne sont pas utilisées\nsimultanement. Dans cette éventualité, l'application est automatiquement\nfermée ( sans sauvegarde des données ) sur les deux postes possédant le\nmême PID. Ce numéro PID est également transmis à intervalles réguliers.\n\nUne vulnérabilité dans la gestion de certains paquets PID permet à un\nutilisateur distant mal intentionné, par le biais de requêtes IP\njudicieusement composées d'interrompre le service Network PID de la\nmachine cible. L'interruption de ce service entraîne la fermeture sans\nsauvegarde de l'application Office.\n\n## Contournement provisoire\n\nBloquer le port 2222 sur le garde barrière pour éviter les attaques\nprovenant de l'extérieur.\n\n## Solution\n\nTélécharger le correctif sur le site Microsoft :\n\n    http://www.microsoft.com/mac/download\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-002.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-024",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Perte de données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la gestion des PID ( Product Identifier ) permet\nà utilisateur distant mal intentionné, par le biais de requêtes IP\nspécifiques, d'interrompre les applications Office d'une machine cible.\n",
+  "title": "Vulnérabilité dans Microsoft Office v.X pour Mac OS X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-002",
+      "url": null
+    }
+  ]
+}

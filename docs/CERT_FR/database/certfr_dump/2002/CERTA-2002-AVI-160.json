@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Solaris 7 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SunOS 2.5.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 8.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SunOS 2.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nXSun est un serveur Xwindow (pour X11) sous Solaris.\n\nUn débordement de mémoire de cette application, lorsqu'on l'utilise avec\nles paramètres -co, permet à un utilisateur mal intentionné d'exécuter\ndu code arbitraire avec les privilèges de l'administrateur root sur les\nversions Intel de Solaris. Sur les plateformes Sparc, les privilèges\nobtenus seront ceux du groupe root.\n\n## Contournement provisoire\n\nSupprimer le bit SUID et SGID de l'exécutable :\n\n/usr/openwin/bin/xsun\n\n## Solution\n\nConsulter le bulletin de sécurité \\#44843 de Sun (voir paragraphe\nDocumentation) pour connaître la disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-160",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-07-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire en local"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Un débordement de mémoire de XSun permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire avec des privilèges élevés.\n",
+  "title": "Débordement de mémoire dans XSun sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #44843 de Sun",
+      "url": "http://www.sunsolve.com/pub-cgi/retrieve.pl?doc=fsalert%2f44843"
+    }
+  ]
+}

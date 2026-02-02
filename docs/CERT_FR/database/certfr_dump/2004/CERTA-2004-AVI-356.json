@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toute distribution Linux utilisant un noyau 2.6 non  corrigé.</P>",
+  "content": "## Description\n\n-   Vulnérabilité du système de filtrage IP netfilter (référence CVE\n    CAN-2004-0816) :\n\n    un individu distant mal intentionné peut transmettre un paquet IP\n    habilement construit qui provoquera un déni de service, suite à\n    débordement d'entier, lors de sa journalisation par netfilter.\n\n-   Vulnérabilité de l'architecture s390 (référence CVE CAN-2004-0887) :\n\n    la mauvaise gestion d'une instruction privilégiée permet à un\n    utilisateur mal intentionné d'exécuter du code arbitraire.\n\n## Solution\n\nLa version 2.6.8 des sources du noyau corrige la vulnérabilité\nnetfilter.\n\nSe référer aux bulletins de sécurité des éditeurs (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Secunia du 21 octobre 2004 concernant le    pare-feu Linux :",
+      "url": "http://secunia.com/advisories/11202/"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2004:037 du 20 octobre    2004 :",
+      "url": "http://www.suse.com/de/security/2004_37_kernel.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-356",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-10-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Exécution de code arbitraire (architecture s390)"
+    }
+  ],
+  "summary": "Deux failles ont été identifiées dans les versions 2.6 du noyau Linux :\n\n-   il est possible d'envoyer au système vulnérable un paquet IP\n    volontairement mal formé qui provoquera un déni de service ;\n-   une faille sur architecture s390 peut être exploitée par un\n    utilisateur mal intentionné pour exécuter du code arbitraire.\n",
+  "title": "Vulnérabilités des noyaux Linux 2.6",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité SuSE SA:2004:037 du 20 octobre 2004",
+      "url": null
+    }
+  ]
+}

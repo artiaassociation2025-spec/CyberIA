@@ -1,0 +1,93 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Solaris 7,8 et 9 pour les architectures Sparc et x86;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP Tru64 UNIX V5.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP-UX 11.00 et 11.11;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCDE (Common Desktop Environment) est une interface graphique utilisée\nnotamment sur les plates-formes Solaris.\n\n  \nEn manipulant la variable d'environnement DTHELPUSERSEARCHPATH, un\nutilisateur mal intentionné peut exploiter une vulnérabilité de type\ndébordement de mémoire présente dans la bibliothèque libDtHelp de CDE\nafin d'exécuter du code arbitraire.\n\nAvec certains utilitaires tels que dtprintinfo possédant le drapeau\nsuid, l'exploitation de cette vulnérabilité permet d'obtenir les\nprivilèges du super-utilisateur root.\n\nCette vulnérabilité n'est exploitable qu'en local.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HPSBUX0311-297 de Hewlett-Packard :",
+      "url": "http://itrc.hp.com"
+    },
+    {
+      "title": "Bulletin de sécurité de SGI 20040801-01-P du 01 août 2004 :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20040801-01-P.asc"
+    },
+    {
+      "title": "Bulletin de sécurité SSRT3657-Tru64 de Hewlett-Packard :",
+      "url": "http://itrc.hp.com"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-183",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-11-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de HP.",
+      "revision_date": "2003-11-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité SSRT3657-Tru64.",
+      "revision_date": "2003-12-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité SGI.",
+      "revision_date": "2004-08-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans la bibliothèque libDtHelp de CDE (Common\nDesktop Environment) peut être exploitée par un utilisateur mal\nintentionné afin de réaliser une élévation de privilèges.\n",
+  "title": "Vulnérabilité de libDtHelp (CDE)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note VU#575804 du CERT/CC",
+      "url": "http://www.kb.cert.org/vuls/id/575804"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #57414 de Sun",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F57414"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>ImageMagick versions antérieures à  6.7.5.3.</p>",
+  "content": "## Description\n\nDeux vulnérabilités ont été corrigées dans ImageMagick :\n\n-   le traitement d'une image spécialement conçues avec position et\n    compte incorrect dans l'étiquette « ResolutionUnit » d'IFD0 EXIF,\n    peut provoquer une exécution de code arbitraire ;\n-   le traitement d'une image spécialement conçues avec un « IFD » dont\n    toutes les valeurs de position d'étiquettes pointent au début de\n    l'IFD lui-même, peut provoquer un déni de service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-0248",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0248"
+    },
+    {
+      "name": "CVE-2012-0247",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0247"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-201203-09 du 06 mars 2012    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-201203-09.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 2427 du 06 mars 2012 :",
+      "url": "http://www.debian.org/security/2012/dsa-2427"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-125",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-03-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités, permettant notamment l'exécution de code arbitraire\nà distance, ont été corrigées dans <span\nclass=\"textit\">ImageMagick</span>.\n",
+  "title": "Vulnérabilités dans ImageMagick",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-2427-1 du 06 mars 2012",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Serveur HTTP Apache versions 1.3.31,  1.3.29, 1.3.28, 1.3.27 et 1.3.26.</p>",
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire a été découverte dans\nle module mod_proxy du serveur HTTP Apache.  \n\nCette vulnérabilité peut être exploitée à l'aide d'un en-tête\nContent-Length malicieusement choisi. Il faudra pour cela qu'un\nutilisateur mal intentionné puisse utiliser un serveur Apache vulnérable\ncomme serveur mandataire (proxy) pour se connecter à un site web\nmalveillant.  \n\nCela provoquera l'arrêt du processus fils Apache chargé de traiter la\nrequête.\n\n## Contournement provisoire\n\nDésactiver le module mod_proxy.\n\n## Solution\n\nLa version 1.3.32-dev du serveur HTTP Apache corrige cette\nvulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-525 du 24 juin 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-525"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200406-16 du 21 juin 2004    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200406-16.xml"
+    },
+    {
+      "title": "Article sur la vulnérabilité mod_proxy sur le site d'Apache :",
+      "url": "http://www.apacheweek.com/features/security-13"
+    },
+    {
+      "title": "Bulletin de sécurité SUN #57628 du 24 août 2004 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-57628-1"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:065 du 29 juin    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:065"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:245 du 14 juin 2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-245.html"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD pour Apache du 12 juin 2004 :",
+      "url": "http://www.openbsd.org/errata.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-195",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-06-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité de Gentoo et OpenBSD.",
+      "revision_date": "2004-06-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian.",
+      "revision_date": "2004-06-28T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandrake.",
+      "revision_date": "2004-06-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat.",
+      "revision_date": "2004-07-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SUN.",
+      "revision_date": "2004-09-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité du module <span class=\"textit\">mod_proxy</span> permet\nà un utilisateur mal intentionné de provoquer un déni de service sur le\nserveur vulnérable.\n",
+  "title": "Vulnérabilité du module mod_proxy du serveur HTTP Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de Georgi Guninski #69 du 10 juin 2004",
+      "url": "http://www.guninski.com/modproxy1.html"
+    }
+  ]
+}

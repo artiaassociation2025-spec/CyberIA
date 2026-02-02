@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SAP RFC Library 6.40 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SAP RFC Library 7.00.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs fonctions de la bibliothèque RFC de SAP sont vulnérables. Ces\nfonctions font partie de l'installation par défaut de SAP RFC Library :\n\n-   une vulnérabilité de la fonction RFC_SET_SERVER_PROPERTY permettrait\n    de réaliser un déni de service en interdisant les clients de se\n    connecter au serveur RFC (note SAP 1005397) ;\n-   une vulnérabilité de la fonction RFC_START_GUI permettrait à un\n    utilisateur distant d'exécuter du code arbitraire par le biais d'un\n    débordement de la mémoire (note SAP 1003908) ;\n-   une vulnérabilité de la fonction RFC_START_PROGRAM permettrait à un\n    utilisateur distant d'obtenir des informations sur la configuration\n    du serveur RFC et d'exécuter du code arbitraire par le biais d'un\n    débordement de la mémoire (note SAP 1003908) ;\n-   une vulnérabilité de la fonction SYSTEM_CREATE_INSTANCE permettrait\n    à un utilisateur distant d'exécuter du code arbitraire par le biais\n    d'un débordement de la mémoire (note SAP 1003910) ;\n-   une vulnérabilité de la fonction TRUSTED_SYSTEM_SECURITY permettrait\n    à un utilisateur distant d'obtenir des informations sur les comptes\n    utilisateurs et les groupes des serveurs RFC.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2007-AVI-164",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-04-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans la bibliothèque de fonctions RFC de SAP\npermettraient à un utilisateur distant de réaliser des actions\nmalveillantes.\n",
+  "title": "Multiples vulnérabilités dans SAP RFC Library",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de mise à jour de sécurité SAP 1005397",
+      "url": "http://service.sap.com/sap/support/notes/1005397"
+    },
+    {
+      "published_at": null,
+      "title": "Note de mise à jour de sécurité SAP 1003910",
+      "url": "http://service.sap.com/sap/support/notes/1003910"
+    },
+    {
+      "published_at": null,
+      "title": "Note de mise à jour de sécurité SAP 1003908",
+      "url": "http://service.sap.com/sap/support/notes/1003908"
+    }
+  ]
+}

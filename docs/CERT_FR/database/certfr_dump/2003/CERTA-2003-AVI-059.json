@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Certains clients FTP présents dans  plusieurs systèmes :  <UL>    <LI>Mandrake ;</LI>    <LI>RedHat ;</LI>    <LI>SUN ;</LI>    <LI>SCO ;</LI>    <LI>IRIX.</LI>  </UL></p>",
+  "content": "## Description\n\nFTP (File Transfert Protocol) est un protocole client/serveur permettant\nl'échange de fichiers.  \nCertains clients ont un problème dans la gestion des noms de fichiers\ndébutant par un \"pipe\". Un individu mal intentionné possédant les droits\nd'administration sur le serveur peut créer un fichier avec un nom\njudicieusement choisi afin d'exécuter des commandes arbitraires lors de\nson téléchargement par un client FTP vulnérable.\n\n## Solution\n\nAppliquer les correctifs fournis suivant la plate-forme et la version\naffectée (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IRIX :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20030304-01-P"
+    },
+    {
+      "title": "Avis VU#258721 du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/258721"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKASA-2003:021"
+    },
+    {
+      "title": "Bulletin de sécurité SUN :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert/50222"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-020.html"
+    },
+    {
+      "title": "Bulletin de sécurité SCO :",
+      "url": "ftp://ftp.sco.com/pub/updates/UnixWare/CSSA-2003-SCO.3"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-059",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de commandes arbitraires à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans certains clients FTP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Vulnérabilité VU#258721 du CERT/CC",
+      "url": null
+    }
+  ]
+}

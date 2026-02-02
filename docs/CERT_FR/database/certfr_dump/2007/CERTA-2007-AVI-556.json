@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>HP Quick Launch Button (<TT>QLB</TT>) est installé par défaut  sur plusieurs modèles de portables de type <SPAN class=\n  \"textit\">Notebooks</SPAN>, dont :</P>  <UL>    <LI>la famille des Compaq Presario Notebook PCSeries (A900,    B1200, C500, C700, F500, F700, M2000, V2000, V3000, V3500,    V3700, V4000, V6500 et V6700) ;</LI>    <LI>la famille des HP Notebook PC (500, 510, 520, 530, G5000,    G6000, G7000 et Special Edition L2000) ;</LI>    <LI>la famille des HP Compaq Notebook PC (2210b, 2510p, 2710p,    6510b, 6515b, 6520s, 6710b, 6710s, 6715b, 6715s, 6720s, 6820s,    6910p, 8510p, 8510w, 8710p, 8710w, nc2400, nc4200, nc4400,    nc6110, nc6120, nc6140, nc6220, nc6320, nc6400, nc8230, nc8430,    nw8240, nw8440, nw9440, nw4820, nx6110, nx6115, nx6120, nx6125,    nx6310, nx6315, nx6320, nx6325, nx7300, nx7400, nx8220, nx8420    et nx9420) ;</LI>    <LI>la famille des HP Compaq Tablet PC (tc4200 et tc4400)    ;</LI>    <LI>la famille des HP Pavillon Notebook PC Series (dv1000,    dv2000, dv2500, dv2700, dv4000, dv6500, dv6700, dv9500, dv9700,    dx6500, HDX, tx1000 et ze2000).</LI>  </UL>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans le logiciel HP Quick\nLaunch Button (QLB) servant notamment à gérer les raccourcis de\ncertaines touches. Il est installé par défaut sur la majorité des\nportables HP et Compaq de type Notebook équipés de Microsoft Windows\n(2000, XP et Vista).\n\nCes vulnérabilités concernent en particulier le contrôle ActiveX\nHPInfoDLL.HPInfo.1 de HPInfoDLL.dll 1.0 fourni avec l'application HP\nInfo Center (hpinfocenter.exe).\n\nElles peuvent être exploitées par une personne malveillante distante\npour exécuter des applications arbitraires ou lire et modifier les\nvaleurs du registre de la machine vulnérable par les méthodes\nSetRegValue et GetRegValue.\n\nLa désinstallation de l'application HP Quick Launch Button (QLB) n'est\npas suffisante pour corriger le problème.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-6331",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6331"
+    },
+    {
+      "name": "CVE-2007-6332",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6332"
+    },
+    {
+      "name": "CVE-2007-6333",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6333"
+    }
+  ],
+  "links": [
+    {
+      "title": "Annonce de sécurité HP de référence HPSBGN02298 SSRT071502    rev.1 du 14 décembre 2007 :",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c01300486"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-556",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans le logiciel HP Quick\nLaunch Button (QLB) servant notamment à gérer les raccourcis de\ncertaines touches. Il est installé par défaut sur la majorité des\nportables HP et Compaq de type <span class=\"textit\">Notebook</span>\néquipés de Microsoft Windows (2000, XP et Vista).\n\nCes vulnérabilités peuvent être exploitées par une personne malveillante\ndistante, par exemple par le biais d'une page web spécialement\nconstruite, pour exécuter des applications arbitraires ou lire et\nmodifier les valeurs du registre de la machine vulnérable.\n",
+  "title": "Multiples vulnérabilités dans HP Quick Launch Button (QLB)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de sécurité HP sp38166 du 12 décembre 2007",
+      "url": "ftp://ftp.hp.com/pub/sotfpaq/sp38001-38500/sp38166.html"
+    }
+  ]
+}

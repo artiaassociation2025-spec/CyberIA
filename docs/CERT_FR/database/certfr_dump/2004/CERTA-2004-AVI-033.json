@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Versions de Mutt antérieures à la version 1.4.2 (stable) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "versions de Mutt antérieures à la version 1.3.28 (instable).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nMutt est un client de messagerie en mode texte très utilisé sur les\nplates-formes Linux. Il supporte les protocoles POP3 (Post Office\nProtocol) et IMAP (Internet Message Access Protocol) pour\nl'interrogation des serveurs de messagerie.\n\n  \n\nUne vulnérabilité de type débordement de mémoire est présente dans Mutt.\n\nUn utilisateur mal intentionné peut, par le biais d'un message\nélectronique habilement constitué, exploiter cette vulnérabilité afin\nd'exécuter du code arbitraire à distance sur la plate-forme cliente avec\nles privilèges du compte utilisant l'application Mutt.\n\n## Solution\n\nLes versions de Mutt 1.3.28 et postérieures ne sont pas vulnérables\n(branche instable).\n\nPour la branche stable, installer la version 1.4.2 de Mutt :\n\n    http://www.mutt.org\n\n  \n\nou appliquer le correctif de l'éditeur :\n\n-   Bulletin de sécurité RHSA-2004:050 de Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2004-050.html\n\n-   Bulletin de sécurité RHSA-2004:051 de Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2004-051.html\n\n-   Bulletin de sécurité MDKSA-2004:010 de Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:010\n\n-   Bulletin de sécurité FreeBSD du 12 février 2004 :\n\n        http://www.vuxml.org/freebsd\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Annonce de la version 1.4.2 sur le site de Mutt :",
+      "url": "http://www.mutt.org/news.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-033",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-02-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité FreeBSD.",
+      "revision_date": "2004-05-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le client de messagerie Mutt peut être\nexploitée afin d'exécuter du code arbitraire sur la plate-forme\nvulnérable.\n",
+  "title": "Vulnérabilité du client de messagerie Mutt",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité de Red Hat",
+      "url": null
+    }
+  ]
+}

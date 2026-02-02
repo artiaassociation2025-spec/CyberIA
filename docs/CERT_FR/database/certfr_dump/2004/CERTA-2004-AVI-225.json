@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Noyau Linux versions 2.4.x et 2.6.x.</p>",
+  "content": "## Description\n\nPlusieurs distributions ont fourni des correctifs pour des\nvulnérabilités du noyau Linux. Certaines de ces vulnérabilités ont déjà\nfait l'objet d'avis du CERTA.\n\n-   Une vulnérabilité de type débordement de mémoire est présente dans\n    deux fonctions du noyau Linux relatives à la gestion des liens\n    symboliques du système de fichiers ISO9600 (CVE CAN-2004-0109).\n    Cette vulnérabilité a fait l'objet de l'avis CERTA-2004-AVI-131 du\n    27 avril 2004.\n-   Une vulnérabilité est présente dans le code du système de fichiers\n    XFS, et provoque une fuite d'informations (CVE CAN-2004-0133). Des\n    vulnérabilités similaires existent pour le système de fichiers ext3\n    (CVE CAN-2004-0177) et pour le système de fichiers JFS (CVE\n    CAN-2004-0181).\n-   Une vulnérabilité du code OSS pour le pilote Sound Blaster permet à\n    un utilisateur mal intentionné de provoquer un déni de service (CVE\n    CAN-2004-0178).\n-   Une vulnérabilité dans la gestion des entiers non signés du\n    composant cpufreq permet à un utilisateur local d'élever ses\n    privilèges (CVE CAN-2004-0228).\n-   Une vulnérabilité existe dans la fonction fb_copy_cmap (CVE\n    CAN-2004-0299).\n-   Une vulnérabilité de type débordement de mémoire est présente dans\n    la fonction panic() des noyaux 2.4.x (CVE CAN-2004-0394).\n-   Une mauvaise gestion du compteur mm_count par la fonction do_fork\n    permet de provoquer un déni de service (CVE CAN-2004-0427).\n-   Une vulnérabilité du noyau Linux pour les systèmes ia64 permet de\n    provoquer un déni de service (CVE CAN-2004-0447).\n-   Plusieurs vulnérabilités ont été découvertes par l'outil de\n    vérification de code source Sparse (CVE CAN-2004-0495).\n-   D'autres vulnérabilités ont également été découvertes, qui\n    permettent à un utilisateur local d'élever ses privilèges ou\n    d'accéder à l'espace mémoire du noyau (CVE CAN-2004-0496).\n-   Des vulnérabilités du noyau Linux permettent à un utilisateur local\n    de modifier l'identifiant du groupe de fichiers (CVE CAN-2004-0497).\n-   Une mauvaise gestion de la mémoire dans le pilote e1000 permet à un\n    utilisateur de lire certaines portions de l'espace mémoire du noyau\n    (CVE CAN-2004-0535).\n-   Une vulnérabilité de x86 permet à un utilisateur local mal\n    intentionné de provoquer un déni de service (CVE CAN-2004-0554).\n-   Une vulnérabilité est présente pour les systèmes ia64 (CVE\n    CAN-2004-0565).\n-   Des permissions non appropriées du fichier\n    /proc/scsi/qla2300/HbaApiNode permettent à un utilisateur local mal\n    intentionné de provoquer un déni de service (CVE CAN-2004-0587).\n-   Une vulnérabilité de la fonction tcp_find_option du sous-système\n    netfilter lors de l'utilisation d'iptables et des options TCP permet\n    à un utilisateur distant de provoquer un déni de service (CVE\n    CAN-2004-0626). Cette vulnérabilité a fait l'objet de l'avis\n    CERTA-2004-AVI-224 du 06 juillet 2004.\n\n## Solution\n\nAppliquer le correctif proposé par votre éditeur.\n\n-   Le correctif Gentoo GLSA 200407-02 corrige les vulnérabilités\n    suivantes :\n    -   CVE CAN-2004-0109 ;\n    -   CVE CAN-2004-0133 ;\n    -   CVE CAN-2004-0177 ;\n    -   CVE CAN-2004-0178 ;\n    -   CVE CAN-2004-0181 ;\n    -   CVE CAN-2004-0228 ;\n    -   CVE CAN-2004-0229 ;\n    -   CVE CAN-2004-0394 ;\n    -   CVE CAN-2004-0427 ;\n    -   CVE CAN-2004-0495 ;\n    -   CVE CAN-2004-0535 ;\n    -   CVE CAN-2004-0554.\n-   Le correctif Gentoo GLSA 200407-16 corrige les vulnérabilités\n    suivantes :\n    -   CVE CAN-2004-0447 ;\n    -   CVE CAN-2004-0496 ;\n    -   CVE CAN-2004-0497 ;\n    -   CVE CAN-2004-0565.\n-   Les correctifs RedHat corrigent les vulnérabilités suivantes :\n    -   CVE CAN-2004-0497 (RHSA-2004:354 et RHSA-2004:360) ;\n    -   CVE CAN-2004-0427, CAN-2004-0495 et CAN-2004-0554\n        (RHSA-2004:255).\n-   Le correctif SuSE corrige les vulnérabilités suivantes:\n    -   CVE CAN-2004-0495 ;\n    -   CVE CAN-2004-0496 ;\n    -   CVE CAN-2004-0497 ;\n    -   CVE CAN-2004-0535 ;\n    -   CVE CAN-2004-0626.\n-   Le correctif Mandrake MDKSA-2004:062 corrige les vulnérabilités\n    suivantes :\n    -   CVE CAN-2004-0535 ;\n    -   CVE CAN-2004-0554.\n-   Le correctif Mandrake MDKSA-2004:066 corrige les vulnérabilités\n    suivantes :\n    -   CVE CAN-2004-0495 ;\n    -   CVE CAN-2004-0497 ;\n    -   CVE CAN-2004-0565 ;\n    -   CVE CAN-2004-0587.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:360 du 02 juillet    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-360.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:066 du 06 juillet    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:066"
+    },
+    {
+      "title": "Avis de sécurité CERTA-2004-AVI-131 du 27 avril 2004 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2004-AVI-131/index.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200407-16 du 22 juillet    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200407-16.xml"
+    },
+    {
+      "title": "Avis de sécurité CERTA-2004-AVI-224 du 06 juillet 2004 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2004-AVI-224/index.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200407-02 du 03 juillet    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200407-02.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:062 du 23 juin    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:062"
+    },
+    {
+      "title": "Site Internet du noyau Linux :",
+      "url": "http://www.kernel.org"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:354 du 02 juillet    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-354.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-225",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE CAN-2004-0565 et CVE CAN-2004-0587 et ajout de la référence au bulletin de sécurité Mandrake MDKSA-2004:066.",
+      "revision_date": "2004-07-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au second bulletin de sécurité Gentoo GLSA 200407-16 ainsi que la description de la vulnérabilité CVE CAN-2004-0447.",
+      "revision_date": "2004-07-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Divulgation d'informations confidentielles"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans le noyau Linux.\n",
+  "title": "Multiples vulnérabilités du noyau Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA-200407-02 du 03 juillet 2004",
+      "url": null
+    }
+  ]
+}

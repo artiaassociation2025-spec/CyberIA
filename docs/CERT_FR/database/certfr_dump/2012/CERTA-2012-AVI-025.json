@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache Tomcat versions 6.0.30 à 6.0.33 ;",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat versions 7.0.0 à 7.0.21.",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans Apache Tomcat provoque une fuite de données\npermettant à un utilisateur malintentionné de contourner la politique de\nsécurité. Une partie de la mémoire utilisée par Apache Tomcat pour\nstocker les requêtes n'est pas correctement recyclée. La réutilisation\nde cette memoire provoque, sous certaines conditions, une fuite\nd'information entre deux requêtes.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). Les versions 6.0.35 et 7.0.22\ncorrigent le problème.\n",
+  "cves": [
+    {
+      "name": "CVE-2011-3375",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3375"
+    }
+  ],
+  "links": [
+    {
+      "title": "Rapport de bug Apache Tomcat du 22 septembre 2011 :",
+      "url": "https://issues.apache.org/bugzilla/show_bug.cgi?id=51872"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-025",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-01-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité portant atteinte à la confidentialité des données et\npermettant un contournement de la politique de sécurité a été corrigée\ndans Apache Tomcat.\n",
+  "title": "Vulnérabilité dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes de mise à jour de sécurité Apache Tomcat",
+      "url": "http://tomcat.apache.org/security-7.html"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GnuPG / gpg versions antérieures à la version 1.4.9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GnuPG / gpg versions antérieures à la version 2.0.9.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été découverte dans le logiciel GnuPG. Cette\nvulnérabilité due à une erreur dans la gestion de clefs, lorsque\ncelles-ci disposent de numéros d'identification dupliqués, provoquant\nune corruption de la mémoire.\n\nCette vulnérabilité peut être exploitée par un utilisateur\nmalintentionné afin de réaliser un déni de service, ou d'exécuter du\ncode arbitraire, à partir de la machine, ou via un serveur de clefs\ndistant.\n\n## Solution\n\nMettre à jour vers les versions 1.4.8 ou 2.0.8 (cf. Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1530",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1530"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de l'oCERT numéro 2008-01 :",
+      "url": "http://www.ocert.org/advisories/ocert-2008-1.html"
+    },
+    {
+      "title": "Annonce de mise à jour GnuPG du 26 mars 2008 :",
+      "url": "ftp://ftp.gnupg.org/gcrypt/gnupg"
+    },
+    {
+      "title": "Annonce de mise à jour GnuPG du 26 mars 2008 :",
+      "url": "http://lists.gnupg.org/pipermail/gnupg-announce/2008q1/000272.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-172",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-04-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans le logiciel GnuPG. Cette\nvulnérabilité peut être exploitée à distance afin de réaliser un déni de\nservice ou d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité du logiciel GnuPG",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de mise à jour GnuPG du 26 mars 2008",
+      "url": null
+    }
+  ]
+}

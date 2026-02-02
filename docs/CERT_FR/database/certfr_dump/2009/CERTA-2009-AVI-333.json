@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Safari 4.x pour Windows et Mac OS X.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans Safari :\n\n-   un débordement de zone mémoire affecte le traitement de certaines\n    chaînes de caractères. Il est exploitable par un utilisateur\n    malveillant pour exécuter du code arbitraire à distance ;\n-   un débordement de zone mémoire affecte le traitement de métadonnées\n    EXIF. Il est exploitable par un utilisateur malveillant pour\n    exécuter du code arbitraire à distance ;\n-   un débordement de zone mémoire affecte le traitement de l'entrée des\n    nombres en virgule flottante. Il est exploitable par un utilisateur\n    malveillant pour exécuter du code arbitraire à distance ;\n-   le support des noms de domaines étendus (avec lettres accentuées,\n    etc.) est utilisable par un utilisateur malveillant pour tromper\n    l'utilisateur sur l'identité réelle du serveur sur lequel il est\n    connecté ;\n-   la gestion des greffons (plug-in) de type inconnu permet à un\n    utilisateur malveillant d'accéder à des informations sensibles ;\n-   la gestion de l'aperçu des sites favoris peut faciliter les actions\n    de filoutage.\n\n## Solution\n\nLa version Safari 4.0.3 remédie à ces vulnérabilités. Se référer au\nbulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf.\nsection Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2195",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2195"
+    },
+    {
+      "name": "CVE-2009-2196",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2196"
+    },
+    {
+      "name": "CVE-2009-2188",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2188"
+    },
+    {
+      "name": "CVE-2009-2200",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2200"
+    },
+    {
+      "name": "CVE-2009-2468",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2468"
+    },
+    {
+      "name": "CVE-2009-2199",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2199"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-333",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans Safari. Certaines\nd'entre elles permettent à un utilisateur malveillant d'exécuter du code\narbitraire à distance sur un système vulnérable.\n",
+  "title": "Vulnérabilités de Safari",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apple HT3733 du 11 août 2009",
+      "url": "http://support.apple.com/kb/HT3733"
+    }
+  ]
+}

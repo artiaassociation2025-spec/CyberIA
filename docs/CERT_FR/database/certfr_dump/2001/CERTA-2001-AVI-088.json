@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions de SunOS 5.8, 5.8x86, 5.7, 5.7_x86, 5.6 et  5.6_x86 sont vulnérables.</P>",
+  "content": "## Description\n\nLe daemon snmpXdmid est un service RPC effectuant la traduction des\nstandards d'administration à distance SNMP (Simple Network Management\nProtocol) et DMI (Desktop Management Protocol). Il est installé par\ndéfaut sur Sun Solaris.\n\nUne vulnérabilité de SnmpXdmid sous Sun Solaris permet à un utilisateur\nmal intentionné de prendre le contrôle d'une machine à distance.\n\n## Contournement provisoire\n\n-   Filtrer les ports : 111/tcp (sunrpc - portmapper) ; 6500/udp ;\n    113/tcp (identd).\n\n-   Arrêter le service smpdXdmid en renommant le fichier\n    /etc/rc?.d/S??dmi en /etc/rc?.d/K07dmi (où ? correspond au niveau de\n    lancement) et en lançant la commande\n\n    `/etc/init.d/init.dmi stop`.\n\n-   Il est également recommandé de changer les droits d'accès du binaire\n    en utilisant la commande :\n\n    `chmod 000 /usr/lib/dmi/snmpXdmid`.\n\n## Solution\n\nAppliquer le correctif de Sun, selon la version, disponible sur\n\n    http://sunsolve.sun.com/securitypatches\n\n:\n\n-   Pour SunOS 5.8 : 108869-07 ;\n-   pour SunOS 5.8_x86 : 108870-07 ;\n-   pour SunOS 5.7 : 107709-15 ;\n-   pour SunOS 5.7_x86 : 107710-15 ;\n-   pour SunOS 5.6 : 106787-15 ;\n-   pour SunOS 5.6_86 : 106872-15 ;\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis CA-2001-05 du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2001-05.html"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-088",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-08-31T00:00:00.000000"
+    },
+    {
+      "description": "première révision : référence erronée du bulletin de sécurité du CERT/CC",
+      "revision_date": "2002-06-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance avec les privilèges de root"
+    }
+  ],
+  "summary": "Une vulnérabilité de SnmpXdmid sous Sun Solaris permet à un utilisateur\nmal intentionné d'exécuter du code arbitraire à distance avec les\nprivilèges de root.\n\nCette faille a déja été décrite dans l'alerte CERTA-2001-ALE-004.\n",
+  "title": "Vulnérabilité de SnmpXdmid sur Sun",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Alerte CERTA-2001-ALE-004 et ALE-007",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #00207 de Sun",
+      "url": "http://sunsolve.sun.com/pub-cgi/secBulletin.pl"
+    },
+    {
+      "published_at": null,
+      "title": "Avis CA-2001-05 CERT/CC",
+      "url": null
+    }
+  ]
+}

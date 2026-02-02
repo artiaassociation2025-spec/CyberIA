@@ -1,0 +1,96 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Unified Communications Manager versions 6.x antérieures à 6.1(2).",
+      "product": {
+        "name": "Unified Communications Manager",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified Communications Manager versions 5.x antérieures à 5.1(3c) ;",
+      "product": {
+        "name": "Unified Communications Manager",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified CallManager versions 4.1 ;",
+      "product": {
+        "name": "Unified Communications Manager",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified Communications Manager versions 4.2 antérieures à 4.2(3)SR4 ;",
+      "product": {
+        "name": "Unified Communications Manager",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified Communications Manager versions 4.3 antérieures à 4.3(2)SR1 ;",
+      "product": {
+        "name": "Unified Communications Manager",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans Cisco Unified\nCommunications Manager (CUCM) :\n\n-   le service Computer Telephony Integration Manager des versions 5.x\n    et 6.x de CUCM ne traite pas correctement certaines données, ce qui\n    peut conduire à un déni de service à distance (CVE-2008-2061) ;\n-   l'authentification intégrée au service Real-Time Information Server\n    Data Collector des versions 4.x, 5.x et 6.x de CUCM peut être\n    contournée, ce qui permet d'avoir accès à certaines informations\n    confidentielles (CVE-2008-2062 et CVE-2008-2730).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2061",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2061"
+    },
+    {
+      "name": "CVE-2008-2730",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2730"
+    },
+    {
+      "name": "CVE-2008-2062",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2062"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2008-AVI-339",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-06-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans <span class=\"textit\">Cisco Unified\nCommunications Manager</span> permettent de réaliser un déni de service\nà distance et de contourner la politique de sécurité.\n",
+  "title": "Vulnérabilités dans Cisco Unified Communications Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20080625-cucm du 25 juin 2008",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080625-cucm.shtml"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Windows Media Player 6.4 et 7</P>",
+  "content": "## Description\n\nMedia Player est un utilitaire de Windows utilisé pour lire les fichiers\nmultimédias, et donc .asx entre autres choses. Une première\nvulnérabilité peut être exploitée si un utilisateur a lu un fichier .asx\nmodifié par une personne mal intentionnée. Cette personne peut alors\navoir les mêmes droits que l'utilisateur sur la machine de celui-ci.\n\nUne seconde vulnérabilité concerne les raccourcis Internet. Lorsqu'un\nraccourcis Internet pointant sur un fichier .asx est lu, Windows Media\nPlayer copie celui-ci dans le répertoire des fichiers temporaires de\nl'utilisateur sous un nom fixe connu. Un raccourcis Internet habilement\nconçu permettrait à une personne mal intentionnée de lire des fichiers\nsur la machine.\n\n## Solution\n\nTélécharger le correctif de Microsoft.\n\n-   Pour Windows Media Player 6.4 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=29921\n\n-   Pour Windows Media Player 7, passer à la version 7.1 :\n\n        http://download.microsoft.com/download/winmediaplayer/wmp71/7.1/W982KMe/FR/mp71.exe\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-058",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-05-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Une exploitation de ces vulnérabilités permet l'exécution de code"
+    }
+  ],
+  "summary": "<span class=\"textit\">Windows Media Player</span> est affecté par deux\nvulnérabilités. La première est un dépassement de capacité dans\nl'exécution des fichiers Active Stream Redirector (.asx). Celle-ci\npermet l'exécution de code à distance. La seconde concerne les\nraccourcis Internet utilisés par Windows Media Player. Celle-ci permet\nla lecture à distance des fichiers contenus sur l'ordinateur.\n",
+  "title": "Vulnérabilités dans Windows Media Player",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS01-029",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-029.asp"
+    }
+  ]
+}

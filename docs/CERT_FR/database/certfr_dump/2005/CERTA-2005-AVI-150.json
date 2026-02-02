@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mac OS X Server v10.3.8.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mac OS X v10.3.8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   CAN-2005-0969 : une vulnérabilité de type débordement de la mémoire\n    permet à un utilisateur mal intentionné d'effectuer localement un\n    déni de service ;\n-   CAN-2005-0970 : le système d'exploitation autorise par défaut la\n    création et l'exécution de script SUID/SGID (hérité de FreeBSD),\n    cette mise à jour de sécurité ne permet plus au système\n    d'exploitation d'exécuter de tels scripts, pouvant être exploités\n    par un individu mal intentionné afin d'élever ses privilèges ;\n-   CAN-2005-0971 : une vulnérabilité dans la fonction semop() de type\n    débordement de mémoire permet à un utilisateur local mal intentionné\n    d'élever ses privilèges ;\n-   CAN-2005-0972 : une vulnérabilité dans la fonction searchfs() de\n    type débordement d'entier permet à un utilisateur local mal\n    intentionné d'exécuter du code arbitraire sur le système avec des\n    privilèges élevés ;\n-   CAN-2005-0973 : une vulnérabilité de la fonction setsockopt() permet\n    à un individu local mal intentionné d'effectuer un déni de service\n    en consommant toutes les ressources CPU du système ;\n-   CAN-2005-0974 : une vulnérabilité découverte dans la fonction\n    nfs_mount() permet à un utilisateur local mal intentionné\n    d'effectuer un déni de service ;\n-   CAN-2005-0975 : une vulnérabilité lors de l'analyse syntaxique de\n    certains fichiers exécutables permet à un individu malveillant de\n    figer temporairement le système vulnérable ;\n-   CAN-2005-0976 : une vulnérabilité présente dans l'application Safari\n    permet à une personne mal intentionnée, au moyen d'un site web\n    malicieusement construit d'exécuter du code Javascript ou HTML dans\n    le domaine local du système vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité Mac OS X Combined Update 10.3.9 :",
+      "url": "http://www.apple.com/support/downloads/macosxcombinedupdate1039.html"
+    },
+    {
+      "title": "Bulletin de sécurité d'Apple du 15 avril 2005 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=301327"
+    },
+    {
+      "title": "Mise à jour de sécurité Mac OS X Update 10.3.9 :",
+      "url": "http://www.apple.com/support/downloads/macosxupdate1039.html"
+    },
+    {
+      "title": "Mise à jour de sécurité Mac OS X Server Update 10.3.9 Combo    :",
+      "url": "http://www.apple.com/support/downloads/macosxserverupdate1039combo.html"
+    },
+    {
+      "title": "Mise à jour de sécurité Mac OS X Server Update 10.3.9 :",
+      "url": "http://www.apple.com/support/downloads/macosxserverupdate1039.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-150",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-04-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De nombreuses vulnérabilités permettent à un utilisateur local ou\ndistant d'effectuer un déni de service, d'élever ses privilèges ou\nd'exécuter du code arbitraire sur le système vulnérable.\n",
+  "title": "Multiples vulnérabilités dans Mac OS X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apple du 15 avril 2005",
+      "url": null
+    }
+  ]
+}

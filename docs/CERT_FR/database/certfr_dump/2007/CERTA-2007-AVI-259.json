@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mail sous Windows Vista.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Outlook Express 6 sous Windows 2003 server et XP ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent les clients de messagerie Outlook\nExpress et Mail :\n\n-   trois vulnérabilités permettent, par le biais de courriels\n    spécialement conçus, de contourner le contrôle d'accès dans le\n    navigateur et de divulguer des informations.\n-   une vulnérabilité dans Mail permet, par le biais d'un courriel\n    spécialement conçu, d'exécuter du code arbitraire sur la machine\n    vulnérable ;\n\nL'exploitation de ces vulnérabilités exige la participation du\ndestinataire des courriels malveillants (clic sur un lien).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-1658",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1658"
+    },
+    {
+      "name": "CVE-2007-2227",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2227"
+    },
+    {
+      "name": "CVE-2006-2111",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2111"
+    },
+    {
+      "name": "CVE-2007-2225",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2225"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-259",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-06-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités des clients de messagerie <span\nclass=\"textit\">Outlook Express</span> et <span\nclass=\"textit\">Mail</span> permettraient la divulgation non autorisée\nd'informations. Dans <span class=\"textit\">Mail</span> seulement, une\nautre vulnérabilité permettrait à un utilisateur malveillant d'exécuter\ndu code arbitraire à distance.\n",
+  "title": "Vulnérabilité de Outlook Express et Mail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-034",
+      "url": "http://www.microsoft.com/france/technet/securite/MS07-034.mspx"
+    }
+  ]
+}

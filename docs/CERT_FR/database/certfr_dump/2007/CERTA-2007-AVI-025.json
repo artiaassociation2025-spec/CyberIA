@@ -1,0 +1,172 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Xfree86 4.6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xfree86 4.4.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xfree86 4.1.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "X Window System 11 (X11) 7.X.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xfree86 4.2.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "X Window System 11 (X11) 6.X ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xfree86 4.3.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xfree86 4.5.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois vulnérabilités ont été découvertes dans X.org. Ces vulnérabilités\nsont dues à une erreur dans le traitement des entrées des fonctions\nProcRenderAddGlyphs(), ProcDbeSwapBuffers() et ProcDbeGetVisualInfo().\nCes vulnérabilités peuvent être exploitées par un utilisateur\nmalintentionné afin d'obtenir les privilèges de l'utilisateur sous\nlequel est lancé le serveur X (en général, root).\n\nUn système ne présente ces vulnérabilités que s'il est configuré avec\nles extensions DBE et Render (l'extension Render est installée par\ndéfaut).\n\n## Solution\n\nSe référer au bulletin de sécurité des éditeurs pour l'obtention des\ncorrectifs, ou installer la version 7.2RC3 du serveur X.org (cf. section\nDocumentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-6101",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6101"
+    },
+    {
+      "name": "CVE-2006-6103",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6103"
+    },
+    {
+      "name": "CVE-2006-6102",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6102"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-1249 du 15 janvier 2007 :",
+      "url": "http://www.us.debian.org/security/2007/dsa-1249"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007-005 du 09 janvier    2007 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDKSA-2007-005"
+    },
+    {
+      "title": "Bulletin de sécurité Suse SUSE-SA:2007:008 du 12 janvier    2007 :",
+      "url": "http://support.novell.com/techcenter/pdsb/380666439b7217bd698fe6e5213851c.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2007:0003 du 10 janvier    2007 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0003.html"
+    },
+    {
+      "title": "Bulletin de sécurité iDefense du 09 janvier 2007 :",
+      "url": "http://www.idefense.com/application/poi/display?id=463"
+    },
+    {
+      "title": "Bulletin de sécurité iDefense du 09 janvier 2007 :",
+      "url": "http://www.idefense.com/application/poi/display?id=465"
+    },
+    {
+      "title": "Bulletin de sécurité iDefense du 09 janvier 2007 :",
+      "url": "http://www.idefense.com/application/poi/display?id=464"
+    },
+    {
+      "title": "Bulletin de sécurité de HP HPSPBUX02225 du 12 juin 2007 :",
+      "url": "http://h20000.www.2.hp.com/bizsupport/techSupport/Document.jsp?objectID=c01075678"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200701-25 du 27 janvier    2007 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200701-25.xml"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-025",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-10T00:00:00.000000"
+    },
+    {
+      "description": "systèmes affectés et référence Suse.",
+      "revision_date": "2007-01-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo et Debian.",
+      "revision_date": "2007-01-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin HP.",
+      "revision_date": "2007-06-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans X.org. Ces\nvulnérabilités peuvent être exploitées afin d'obtenir une élévation de\nprivilèges.\n",
+  "title": "Multiples vulnérabilités de X.org",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité iDefense 463 à 465",
+      "url": null
+    }
+  ]
+}

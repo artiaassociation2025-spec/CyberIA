@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenSSL versions 1.1.x antérieures à 1.1.1o",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenSSL versions 3.0.x antérieures à 3.0.3",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenSSL versions 1.0.x antérieures à 1.0.2ze (support premium)",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-1343",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-1343"
+    },
+    {
+      "name": "CVE-2022-1473",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-1473"
+    },
+    {
+      "name": "CVE-2022-1292",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-1292"
+    },
+    {
+      "name": "CVE-2022-1434",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-1434"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-411",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-05-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans OpenSSL. Certaines\nd'entre elles permettent à un attaquant de provoquer une exécution de\ncode arbitraire, un déni de service et un contournement de la politique\nde sécurité.\n",
+  "title": "Multiples vulnérabilités dans OpenSSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenSSL 20220503 du 03 mai 2022",
+      "url": "https://www.openssl.org/news/secadv/20220503.txt"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Intel Active Management Technology (AMT), Intel Standard Manageability (ISM), et Intel Small Business Technology versions 10.x antérieures à 10.0.55.3000",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Intel Active Management Technology (AMT), Intel Standard Manageability (ISM), et Intel Small Business Technology versions 9.5.x antérieures à 9.5.61.3012",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Intel Active Management Technology (AMT), Intel Standard Manageability (ISM), et Intel Small Business Technology versions 6.x antérieures à 6.2.61.3535",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Intel Active Management Technology (AMT), Intel Standard Manageability (ISM), et Intel Small Business Technology versions 8.x antérieures à 8.1.71.3608",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Intel Active Management Technology (AMT), Intel Standard Manageability (ISM), et Intel Small Business Technology versions 7.x antérieures à 7.1.91.3272",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Intel Active Management Technology (AMT), Intel Standard Manageability (ISM), et Intel Small Business Technology versions 11.5.x et 11.6.x antérieures à 11.6.27.3264",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Intel Active Management Technology (AMT), Intel Standard Manageability (ISM), et Intel Small Business Technology versions 9.0.x et 9.1.x antérieures à 9.1.41.3024",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Intel Active Management Technology (AMT), Intel Standard Manageability (ISM), et Intel Small Business Technology versions 11.0.x antérieures à 11.0.25.3001",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2017-5689",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2017-5689"
+    }
+  ],
+  "links": [
+    {
+      "title": "1 Guide Intel",
+      "url": "https://communities.intel.com/docs/DOC-5693"
+    },
+    {
+      "title": "2 Contre-mesures Intel",
+      "url": "https://downloadcenter.intel.com/download/26754"
+    }
+  ],
+  "reference": "CERTFR-2017-AVI-136",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2017-05-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été corrigée dans <span class=\"textit\">les\nmicrologiciels Intel</span>. Elle permet à un attaquant de provoquer une\nexécution de code arbitraire à distance et une élévation de privilèges.\n\nLa vulnérabilité impacte le composant Advanced Management Technology\n(AMT) des micro-logiciels Intel vulnérables. AMT est une technologie\nIntel permettant d'administrer (surveiller la disponibilité, mettre à\njour, redémarrer, etc.) des systèmes à distance via un canal de\ncommunication séparé du système d'exploitation. Les produits ISM (Intel\nStandard Manageability) et SBT (Small Business Technology) permettent\nd'accéder à un sous ensemble des fonctionnalités AMT.\n\nLes produits AMT et ISM exposent la fonctionnalité vulnérable sur le\nréseau et permettraient à un attaquant la prise de contrôle à distance\nd'un système sans authentification au préalable.\n\nD'autre part, un attaquant ayant un accès local au système vulnérable\npourrait élever ses privilèges en exploitant cette vulnérabilité.\n\nIntel a mis à disposition un guide permettant d'identifier si un système\nest vulnérable \\[1\\] ainsi qu'une procédure proposant des contre-mesures\nlorsque la mise à jour n'est pas disponible pour le composant impacté\n\\[2\\].\n",
+  "title": "Vulnérabilité dans les micrologiciels Intel",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Intel INTEL-SA-00075 du 01 mai 2017",
+      "url": "https://security-center.intel.com/advisory.aspx?intelid=INTEL-SA-00075&languageid=en-fr"
+    }
+  ]
+}

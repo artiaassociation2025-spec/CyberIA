@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de Squid de la  branche stable 2.5.<BR>  Ces versions sont vulnérables sous la condition que la prise en  compte du protocole NTLM soit activée lors de la compilation.</p>",
+  "content": "## Description\n\nSquid est un serveur mandataire (proxy) pour les protocoles HTTP, HTTPS\net FTP.  \nDeux failles dans des fonctions relatives à la gestion du protocole\nd'authentification NTLM (ntlm_fetch_string() et ntlm_get_string())\npermettent à un utilisateur mal intentionné de réaliser un déni de\nservice sur la plate-forme vulnérable.\n\n## Contournement Provisoire\n\nRecompiler Squid en désactivant la prise en charge du protocole NTLM.\n\n## Solution\n\nSe référer à la section Documentation pour l'obtention du correctif.  \nUn correctif pour le code source de Squid est disponible à l'adresse\nsuivante :\n\n    http://www1.uk.squid-cache.org/squid/Versions/v2/2.5/bugs/squid-2.5.STABLE6-ntlm_fetch_string.patch\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de Squid :",
+      "url": "http://www.squid-cache.org"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:093 du 15    septembre 2004 :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:093"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200409-04 du 02 septembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200409-04.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Squid du 20 août 2004 :",
+      "url": "http://www1.uk.squid-cache.org/squid/Versions/v2/2.5/bugs/#squid-2.5.STABLE6-ntlm_fetch_string"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-297",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Mandrake. Ajout référence CVE.",
+      "revision_date": "2004-09-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la gestion du protocole d'authentification NTLM\npermet à un utilisateur mal intentionné de réaliser un déni de service.\n",
+  "title": "Vulnérabilité de Squid",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA 200409-04 du 02 septembre 2004",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows XP Professional x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 x64 Edition et Itanium Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 (Service Pack 1 inclus) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 1 et Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité de type débordement de tampon a été identifiée dans le\nServer Service du système d'exploitation Microsoft Windows. Ce service\nest utilisé pour les RPC (Remote Procedure Call), et de manière plus\ngénérale, pour le partage de ressources (fichiers, imprimantes, etc)\ndans un réseau local. Il est accessible à distance par les ports 139/tcp\net 445/tcp.\n\nUne personne malveillante exploitant cette vulnérabilité pourrait\nexécuter du code arbitraire à distance, voire prendre le contrôle\nintégral de la machine vulnérable.\n\nCette vulnérabilité est différente de celle évoquée dans le précédent\nbulletin Microsoft MS06-035 (CERTA-2006-AVI-283). Il est par ailleurs\nvivement conseillé de bloquer les ports impliqués à la sortie du réseau\nou sur les machines n'utilisant pas ce service.\n\n## Solution\n\nSe référer au bulletin de sécurité MS06-040 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n\nLe bulletin de sécurité MS06-040 a été publié de nouveau par Microsoft\nle 12 septembre 2006. L'application du précédent correctif semblait\nposer problème avec les versions Microsoft Windows Server 2003 SP1 et\nWindows XP Preofessionnel Edition x64. De plus amples informations sont\ndisponibles dans l'article 921883 de la base de données Microsoft.\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3439",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3439"
+    }
+  ],
+  "links": [
+    {
+      "title": "Article 921883 concernant MS06-040 mis à jour le 12    septembre 2006 :",
+      "url": "http://support.microsoft.com/kb/921883"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-338",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-09T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la mise à jour du bulletin MS06-040 par Microsoft.",
+      "revision_date": "2006-09-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité est identifiée dans le Server Service de Microsoft\nWindows. Une personne malveillante pourrait l'exploiter afin d'exécuter\ndu code arbitraire à distance et prendre le contrôle complet de la\nmachine vulnérable.\n",
+  "title": "Vulnérabilité dans le Service Serveur de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-040 du 08 août 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-040.mspx"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "module d'exécution du format Windows Media 9.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "module d'exécution du format Windows Media 9.5 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "module d'exécution du format Windows Media 7.1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Media Services Série 9 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Media Services 4.1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Media Services 2008.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Lecteur Windows Media 6.4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "module d'exécution du format Windows Media 11 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été corrigées dans les composants Windows Media\n:\n\n-   la première vulnérabilité concerne l'implémentation du Service\n    Principal Name dans les composants Windows Media permettant la\n    réflexion des informations d'identification NTLM et donc l'exécution\n    de code arbitraire à distance (CVE-2008-3009) ;\n-   la deuxième vulnérabilité concerne l'implémentation du protocole\n    ISATAP (Intra-Site Automatic Tunnel Addressing Protocol) par des\n    composants Windows Media (CVE-2008-3010). Une personne\n    malintentionnée pourrait récupérer les informations d'identification\n    NTLM d'un utilisateur en l'incitant à visiter une page spécialement\n    conçue et à exécuter certaines actions.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3009",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3009"
+    },
+    {
+      "name": "CVE-2008-3010",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3010"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2008-AVI-590",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-12-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans les composants <span\nclass=\"textit\">Windows Media</span> permettent à une personne\nmalintentionnée d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans les composants Windows Media",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS08-076 du 09 décembre 2008",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-076.mspx"
+    }
+  ]
+}

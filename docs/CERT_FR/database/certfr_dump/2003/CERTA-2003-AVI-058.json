@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>SGI IRIX 6.5.x.</P>",
+  "content": "## Description\n\nLe démon `ftpd` (File Transfert Protocol) est installé par défaut sur le\nserveur IRIX.\n\nSGI met à disposition plusieurs correctifs permettant de corriger des\nvulnérabilités présentes dans le service `ftpd` :\n\n-   une vulnérabilité permet à un utilisateur mal intentionné de voler\n    une session FTP lorsqu'un client effectue une connexion en mode\n    passif (`PASV`) ;\n-   une vulnérabilité permet d'effectuer une connexion entre le serveur\n    FTP et un port arbitraire d'une autre machine. Cette vulnérabilité\n    peut être exploitée par un individu mal intentionné afin de\n    contourner des régles de filtrage.\n\n## Solution\n\nMettre à jour la version d'IRIX ou appliquer les correctifs fournis par\nSGI.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-058",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Vol de session ftp"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités dans le serveur FTPD sous IRIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité SGI",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20030304-01-P"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Concentrateurs CISCO VPN3000 possédant une version logicielle  inférieure à 3.0.00.</P>  <P>Cette série inclue les modèles 3005, 3015, 3030, 3060, et  3080.</P>",
+  "content": "## Description\n\nLe service telnet/SSL ( port 992/tcp ) et le port telnet standard ( port\n23/tcp ) des concentrateurs de la série VPN3000 ne mettent pas fin à la\nconnexion après la réception de requêtes malformées sur leurs ports.\n\nSi un utilisateur distant mal intentionné « inonde » ces ports de\nfausses requêtes, le concentrateur ne peut plus interpréter les demandes\nentraînant un redémarrage du système.\n\n## Contournement provisoire\n\nPar défaut ces deux services ne sont pas activés uniquement sur\nl'interface externe. Désactiver ces services dans vos configurations\npour toutes les interfaces.\n\n## Solution\n\nUn correctif est disponible sur le site CISCO :\n\n    http://www.cisco.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis Cisco :",
+      "url": "http://www.cisco.com/warp/public/707/vpn3k-telnet-vuln-pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-040",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-03-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur distant mal intentionné peut, par l'envoi de multiples\nrequêtes malformées, engendrer un déni de service obligeant le\nconcentrateur à redémarrer.\n",
+  "title": "Vulnérabilité dans les concentrateurs CISCO VPN3000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CISCO",
+      "url": null
+    }
+  ]
+}

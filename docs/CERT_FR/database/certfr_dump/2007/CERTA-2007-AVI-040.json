@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenBSD 3.x ;",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenBSD 4.0 ;",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe système OpenBSD peut utiliser le protocole IPv6. Le traitement des\nrequêtes ICMP6 echo malformées est défectueux. Un utilisateur\nmalveillant peut réaliser un déni de service à distance en provoquant\nune boucle infinie sur le serveur vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0343",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0343"
+    }
+  ],
+  "links": [
+    {
+      "title": "Correctif de sécurité OpenBSD pour icmp6 du 16 janvier 2007    :",
+      "url": "http://openbsd.org/errata.html#icmp6"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-040",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité d'<span class=\"textit\">OpenBSD</span> permettrait de\nprovoquer un déni de service à distance.\n",
+  "title": "Vulnérabilité IPv6 sur OpenBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CVE-2007-0343",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0343"
+    }
+  ]
+}

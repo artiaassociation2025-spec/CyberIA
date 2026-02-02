@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Parmi les produits CISCO :</P>  <UL>    <LI>Toutes les versions de CISCO IOS 12.0 et suivantes    supportant SSH sont vulnérables.</LI>    <LI>Les versions Pix Firewall 5.2 et 5.3 sont affectées.</LI>    <LI>Il en est de même pour Cat OS 6.2 sur Catalyst 6000.</LI>    <LI>Enfin Sur CSS11000 toutes les versions de WebNS strictement    antérieures à R4.01 B42s, R4.10 B22s, R5.0 B11s et 5.01 B6s    sont touchées par cette vulnérabilité.</LI>  </UL>",
+  "content": "## Description\n\nDes vulnérabilités du protocole SSH 1.5 permettent à un utilisateur mal\nintentionné d'introduire des commandes SSH dans une session en cours et\nd'obtenir des informations permettant de faciliter l'attaque des clés\npar force brute.\n\nCertains produits des gammes IOS, PIX, Cat OS et CSS11000 sont équipés\nde ce protocole et sont par conséquent vulnérables.\n\n## Solution\n\nAppliquer les correctifs de CISCO selon les produits et leurs versions\nsur le site de CISCO :\n\n    http://www.cisco.com\n\n-   Pour Cat OS passer à la version 6.1(2.13), 6.2(0.111) et 6.3(0.7)PAN\n-   WebNS passer aux versions R4.01 B42s, R4.10 B22s, R5.0 B11s et 5.01\n    B6s.\n-   pour PIX passer aux versions 5.2(6), 5.3(2) ou 6.0(1).\n-   Pour IOS passer aux versions indiquées dans le tableau récapitulatif\n    du bulletin CISCO dont l'adresse est indiquée dans le paragraphe\n    Documentation.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le bulletin de sécurité CISCO :",
+      "url": "http://www.cisco.com/warp/public/707/SSH-multiple-pub.html"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-097",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-09-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    },
+    {
+      "description": "Modification de la configuration"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités de SSH sur CISCO",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de securite CISCO",
+      "url": null
+    }
+  ]
+}

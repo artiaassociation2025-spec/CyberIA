@@ -1,0 +1,140 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "X.Org X11 6.8.2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "X.Org X11 7.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "XFree86 4.6.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "X.Org X11 7.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "X.Org X11 6.9.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDes vulnérabilités ont été identifiées dans les services graphiques\nX.Org X11 et XFree86. Ils ne manipuleraient pas correctement des\ncaractères CID (pour Character IDentifier) de Type 1. Les fonctions\nmises en cause sont :\n\n-   Type1/scanfont.c\n-   Type1/afm.c\n\nIl est cependant possible de restreindre les formats de caractères dans\nle fichier de configuration de ces applications (par exemple dans :\n/etc/X11/xorg.conf) en activant le seul module freetype, et en\ndésactivant le module posant problème type1.\n\nUn utilisateur local au système pourrait exploiter ces vulnérabilités,\nsous certaines conditions, en obligeant le serveur X.Org X11 ou XFree86\nà interpréter les caractères impliqués. Il pourrait alors provoquer un\ndéni de service ou exécuter des commandes arbitraires sur le système\nvulnérable avec les droits du serveur (souvent associés à ceux de\nl'administrateur).\n\n## Solution\n\nSe référer au bulletin de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3740",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3740"
+    },
+    {
+      "name": "CVE-2006-3739",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3739"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité X.Org du 12 septembre 2006 :",
+      "url": "http://wiki.x.org/wiki/SecurityPage"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200609-07 du 13 septembre    2006 :",
+      "url": "http://www.gentoo.org/security/en/glsa-200609-07.xml"
+    },
+    {
+      "title": "Mises à jour de XFree86 :",
+      "url": "http://www.xfree86.org/releases/rel460.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-344-1 du 12 septembre 2006    :",
+      "url": "http://www.ubuntu.com/usn/usn-344-1"
+    },
+    {
+      "title": "Bulletin de sécurité Avaya ASA-2006-190 du 26 septembre    2006 :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2006-190.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0665 du 12 septembre    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0665.html"
+    },
+    {
+      "title": "Bulletin de sécurité Avaya ASA-2006-191 du 23 octobre 2006    :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2006-191.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:164 du 14    septembre 2006 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:164"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0666 du 12 septembre    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0666.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-397",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-09-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Avaya.",
+      "revision_date": "2006-10-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Avaya, Red Hat et Gentoo.",
+      "revision_date": "2006-12-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Plusieurs vulnérabilités dans X.org X11 et XFree86",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RedHat RHSA-2006-0665 du 12 septembre 2006",
+      "url": null
+    }
+  ]
+}

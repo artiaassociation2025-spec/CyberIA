@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>phpMyAdmin</TT> versions 2.6.4-pl2  et antérieures.",
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans phpMyAdmin :\n\n-   La première vulnérabilité est due à un manque de contrôle des\n    paramètres passés à certains scripts php permettant à un utilisateur\n    mal intentionné de modifier certains paramètres sensibles de\n    phpMyAdmin par le biais d'une requête malicieusement construite.\n-   la seconde vulnérabilité est due à une vérification trop faible des\n    paramètres passés aux scripts : left.php, queryframe.php et\n    server_databases.php. Ceci permet d'exécuter du script\n    potentiellement malveillant au cours d'une consultation par un\n    navigateur tierce.\n\nCes deux failles permettent soit de porter atteinte à la confidentialité\ndes données soit d'effectuer une attaque de type Cross-Site Scripting.\n\n## Solution\n\nLa version 2.6.4-pl3 de phpMyAdmin corrige le problème :\n\n    http://www.phpmyadmin.net/home_page/downloads.php\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de phpMyAdmin :",
+      "url": "http://www.phpmyadmin.net"
+    },
+    {
+      "title": "Bulletin de sécurité phpMyAdmin PMASA-2005-5 du 22 octobre    2005 :",
+      "url": "http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2005-5"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-422",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-10-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Attaque de type cross-site scripting"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans phpMyAdmin permettent à un\nutilisateur distant de porter atteinte à la confidentialité des données\nou d'effectuer une attaque de type <span class=\"textit\">Cross-Site\nScripting</span>.\n",
+  "title": "Vulnérabilité dans phpMyAdmin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité phpMyAdmin PMASA-2005-5 du 22 octobre 2005",
+      "url": null
+    }
+  ]
+}

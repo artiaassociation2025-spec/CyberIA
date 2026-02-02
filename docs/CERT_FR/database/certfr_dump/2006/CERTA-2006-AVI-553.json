@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<SPAN class=\"textit\">ClamAV  0.88.6</SPAN> et versions antérieures.",
+  "content": "## Description\n\nLe format MIME (RFC 2045 à 2049, RFC 2077) est une extension du format\nde courriel qui permet l'intégration des caractères autres que ceux de\nl'ASCII : caractères accentués, pièces jointes en binaire, messages\nchiffrés ou signés. Un message MIME peut contenir plusieurs parties\n(type MIME multipart), par exemple une pour le corps du courriel et une\npar pièce jointe. Chaque partie peut à son tour contenir plusieurs\nparties (imbrication).\n\nLorsque ClamAV analyse un courriel de type MIME multipart avec de\nnombreux niveaux d'imbrications, un débordement de mémoire provoque\nl'arrêt du programme. L'envoi d'un courriel spécialement construit\npermet à un utilisateur distant de provoquer un déni de service.\n\n## Solution\n\nPasser à la version 0.88.7 (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-6481",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6481"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site du projet clamav :",
+      "url": "http://www.clamav.net/stable.php"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200612-18 du 18 décembre    2006 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200612-18.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:230 du 13 décembre    2006 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:230"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SA:2006:078 du 18 décembre    2006 :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2006-Dec/0007.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1238 du 17 décembre 2006 :",
+      "url": "http://www.us.debian.org/security/2006/dsa-1238"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-553",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-12-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo, SuSE, Debian et Mandriva.",
+      "revision_date": "2006-12-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "<span class=\"textit\">ClamAV</span> est un antivirus en ligne de commande\npour les systèmes Unix.\n\nUne vulnérabilité dans l'analyse des courriels à parties MIME imbriquées\npermet à un utilisateur malintentionné de provoquer un déni de service à\ndistance.\n",
+  "title": "Vulnérabilité de ClamAV",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CVE-2006-6481",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6481"
+    }
+  ]
+}

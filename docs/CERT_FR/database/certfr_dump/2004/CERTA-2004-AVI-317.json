@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>CUPS versions 1.1.20 et antérieures.</p>",
+  "content": "## Description\n\nCUPS (Common UNIX Printing System) est un service d'impression\ndisponible sur de nombreux systèmes Unix.\n\nCUPS utilise le protocole IPP (Internet Printing Protocol) sur le port\n631/udp. Au moyen d'un paquet udp envoyé à destination du port 631/udp,\nun utilisateur mal intentionné peut forcer l'arrêt du service CUPS.\n\n## Solution\n\nLa version 1.1.21rc2 de CUPS corrige cette vulnérabilité.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-545 du 15 septembre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-545"
+    },
+    {
+      "title": "Bulletin de sécurité Sun #57646 du 07 octobre 2004 :",
+      "url": "http://www.sunsolve.sun.com/search/document.do?assetkey=1-26-57646-1"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour CUPS du 15 septembre 2004    :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2004:449 de Red Hat du 15    septembre 2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-449.html"
+    },
+    {
+      "title": "Site de CUPS :",
+      "url": "http://www.cups.org"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:097 du 15    septembre 2004 :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:097"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SuSE-SA:2004:031 du 15 septembre    2004 :",
+      "url": "http://www.suse.com/de/security/2004_31_cups.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200409-25 du 20 septembre    2004 :",
+      "url": "http://security.gentoo.org/glsa/glsa-200409-25.xml"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-317",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Gentoo.",
+      "revision_date": "2004-09-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Sun.",
+      "revision_date": "2004-10-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une faille présente dans le serveurs CUPS peut être exploitée par un\nutilisateur mal intentionné pour réaliser un déni de service sur le\nservice d'impression.\n",
+  "title": "Vulnérabilité de CUPS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RHSA-2004:449 de Red Hat",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MDKSA-2004:097 de Mandrake",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DSA 545 de Debian",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SuSE-SA:2004:031 de SuSE",
+      "url": null
+    }
+  ]
+}

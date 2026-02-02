@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<SPAN class=\"textit\">McAfee Command  Line Scanner</SPAN> pour Linux.",
+  "content": "## Description\n\nLe répertoire courant est inclus dans la liste des répertoires parcourus\nlors de la recherche les librairies utilisées pour l'analyse antivirale.\nUn utilisateur malveillantattaquant peut créer un objet malveillant dans\nun répertoire et inciter à utiliser McAfee Command Line Scanner depuis\nce répertoire. L'attaquant fera exécuter le code malveillant avec les\nprivilèges du logiciel antivirus.\n\nIl convient de n'exécuter l'analyser en ligne de commande que depuis un\nrépertoire sûr.  \n  \n\nLa version pour Windows n'est pas concernée.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-6474",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6474"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200612-15 du 14 décembre    2006 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200612-15.xml"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-564",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-12-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "<span class=\"textit\">McAfee Viruscan</span> est un logiciel antivirus\nqui peut être exécuté en ligne de commande. Une mauvaise gestion des\nrépertoires permet à un utilisateur malintentionné d'élever ses\nprivilèges et d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité de McAfee",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Gentoo 200612-15",
+      "url": null
+    }
+  ]
+}

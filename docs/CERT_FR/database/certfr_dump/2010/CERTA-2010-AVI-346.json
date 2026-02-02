@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MediaWiki versions antérieures à la 1.15.5 ;",
+      "product": {
+        "name": "MediaWiki",
+        "vendor": {
+          "name": "Mediawiki",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MediaWiki versions antérieures à la 1.16.0.",
+      "product": {
+        "name": "MediaWiki",
+        "vendor": {
+          "name": "Mediawiki",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans MediaWiki :\n\n-   une erreur dans la gestion du paramètre Cache-Control du fichier\n    api.php permet de porter atteinte à la confidentialité des données ;\n-   une vulnérabilité, de type injection de code indirecte, a été\n    corrigée dans le fichier profileinfo.php. Celle-ci n'est exploitable\n    que si le paramètre \\$wgEnableProfileInfo = True est placé dans le\n    fichier LocalSettings.php.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2010-AVI-346",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-07-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans MediaWiki permettent à une personne\nmalintentionnée de porter atteinte à la confidentialité des données ou\nd'effectuer une injection de code indirecte.\n",
+  "title": "Vulnérabilités dans MediaWiki",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MediaWiki du 28 juillet 2010",
+      "url": "http://lists.wikimedia.org/pipermail/mediawiki-announce/2010-july/000092.html"
+    }
+  ]
+}

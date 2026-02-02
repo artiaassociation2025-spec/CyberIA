@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Windows 9x, Millenium Edition, NT et 2000 ayant  installé la machine virtuelle Java de Microsoft (quasiment  tous).</P>",
+  "content": "## Description\n\nLa machine virtuelle Java de Microsoft contient une fonctionnalité qui\npermet à une appliquette java de créer, modifier et exécuter un contrôle\nactiveX. Normalement, ceci n'est possible que dans le cas où cette\nappliquette est exécuté de façon isolée (localement, sur la machine) ou\nsi elle est signée.\n\nUne vulnérabilité dans la machine virtuelle permet à une appliquette\njava, contenue, par exemple, dans une page web ou un mél au format HTML,\nde manipuler les contrôles ActiveX, même non marqués « reconnu sûr pour\nl'écriture de scripts ». Ceci permet à un utilisateur mal intentionné,\npar le biais d'un site malicieux, ou d'un mél de prendre entièrement\npossession à distance d'une machine.\n\n## Solution\n\nComme indiqué dans les bulletin CERTA-2000-AVI-002, CERTA-2000-ALE-001\net CERTA-2000-ALE-002, CERTA-2000-INF-002 :\n\nDésactiver l'exécution des appliquettes Java et des javascript dans les\nparamètres de sécurité d'internet explorer et d'Outlook (ou Outlook\nExpress).\n\nDésactiver les contrôles ActiveX dans les paramètres de sécurité\nd'internet explorer et dans toute application en pemettant l'exécution.\n\nPour savoir si la machine virtuelle est installée et connaître sa\nversion, taper la commande JVIEW à l'invite de commande.\n\nUn numéro de version du type X.YY.zzzz apparaît, où zzzz est le numéro\nde construction. Seules les versions ayant le numéro de construction\n(build number) dans la série 2000, 3100, 3200 et 3300 sont vulnérables.\n\nAppliquer le correctif de Microsoft, dont le numéro de construction sera\n3318, pour les séries 3100 à 3300 :\n\n    http://www.microsfot.com/java/vm/dl_vm40.htm\n\nPour la série 2000, il n'existe pas de correctif actuellement.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "la FAQ du bulletin :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-075.asp"
+    },
+    {
+      "title": "Le bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-075.asp"
+    },
+    {
+      "title": "la base de connaissances Microsoft :",
+      "url": "http://www.microsoft.com/technet/support/kb.asp?ID=275609"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-059",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-10-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Compromission de la machine"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la machine virtuelle Java de tous les systèmes\nMicrosoft Windows permet à un utilisateur mal intentionné de faire\nexécuter par une machine tout ce qui est permis à l'utilisateur courant\npar le biais d'une appliquette java sur un site web malicieux ou un\nemail au format HTML, par exemple.\n",
+  "title": "Vulnérabilité dans la machine virtuelle Java de Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Microsoft",
+      "url": null
+    }
+  ]
+}

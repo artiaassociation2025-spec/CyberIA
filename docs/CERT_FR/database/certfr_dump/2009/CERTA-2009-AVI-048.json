@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions de Firefox 3 antérieures à la version  3.0.6.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans Mozilla Firefox :\n\n-   plusieurs erreurs dans la gestion de la mémoire permettent de\n    réaliser un déni de service ou une exécution de code arbitraire à\n    distance ;\n-   une vulnérabilité affectant une méthode chrome XLB permet d'exécuter\n    du code JavaScript malveillant ;\n-   une erreur dans le système de restauration des sessions permet à une\n    personne malintentionnée de récupérer des données dans un fichier\n    stocké en local lors de la réouverture des onglets sauvegardés ;\n-   un contournement de la vulnérabilité corrigée dans le bulletin\n    MFSA2008-47 permet à une personne malveillante d'injecter du code\n    arbitraire dans un document chrome et de l'exécuter avec les\n    privilèges chrome ;\n-   un contournement de la protection HTTPOnly permet de lire des\n    fichiers de session via un code JavaScript utilisant certaines API ;\n-   certaines directives HTTP de non mise en cache ne sont pas\n    respectées par le navigateur et permettent de porter atteinte à la\n    confidentialité de données personnelles lorsque le système est\n    partagé entre plusieurs utilisateurs.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0355",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0355"
+    },
+    {
+      "name": "CVE-2009-0356",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0356"
+    },
+    {
+      "name": "CVE-2009-0357",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0357"
+    },
+    {
+      "name": "CVE-2009-0352",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0352"
+    },
+    {
+      "name": "CVE-2009-0354",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0354"
+    },
+    {
+      "name": "CVE-2009-0358",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0358"
+    },
+    {
+      "name": "CVE-2009-0353",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0353"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla MFSA2009-06 du    03 février 2009 :",
+      "url": "http://www.mozilla.org/security/announce/2009/MFSA2009-06.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla MFSA2009-02 du    03 février 2009 :",
+      "url": "http://www.mozilla.org/security/announce/2009/MFSA2009-02.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla MFSA2009-03 du    03 février 2009 :",
+      "url": "http://www.mozilla.org/security/announce/2009/MFSA2009-03.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla MFSA2009-05 du    03 février 2009 :",
+      "url": "http://www.mozilla.org/security/announce/2009/MFSA2009-05.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla MFSA2009-04 du    03 février 2009 :",
+      "url": "http://www.mozilla.org/security/announce/2009/MFSA2009-04.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla MFSA2008-47 du    12 novembre 2008 :",
+      "url": "http://www.mozilla.org/security/announce/2008/MFSA2008-47.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla MFSA2009-01 du    03 février 2009 :",
+      "url": "http://www.mozilla.org/security/announce/2009/MFSA2009-01.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-048",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-02-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent Mozilla Firefox et permettent à une\npersonne malintentionnée de réaliser un grand nombre d'actions\nmalveillantes dont exécuter du code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans Mozilla Firefox",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Mozilla 2009-01 à 2009-06 du 03 février 2009",
+      "url": null
+    }
+  ]
+}

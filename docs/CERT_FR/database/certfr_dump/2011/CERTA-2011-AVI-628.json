@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Xen version 4.x.",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen version 3.x ;",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   CVE-2011-1166 : une machine virtuelle (VM) 64-bits peut placer un de\n    ses microprocesseurs (vCPU) en mode non-noyau sans au préalable\n    avoir fourni une table des pages non-noyau valide ;\n-   CVE-2011-1583, CVE-2011-3262 : la fonction qui interprète l'image\n    noyau d'une VM paravirtualisée contient des vulnérabilités. Des\n    utilisateurs locaux peuvent provoquer un déni de service ou exécuter\n    du code arbitraire à l'aide une image noyau spécialement conçue\n    d'une VM paravirtualisée ;\n-   CVE-2011-1898 : une vulnérabilité est présente lorsqu'une puce Intel\n    VT-d sans mécanisme d'isolation des interruptions (interrupt\n    remapping) est utilisée pour passer le contrôle de dispositifs PCI à\n    une VM (PCI passthrough). Un utilisateur de la VM pourrait écrire\n    dans les registres d'injection d'interruption et obtenir le contrôle\n    sur le système d'exploitation hôte.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1898",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1898"
+    },
+    {
+      "name": "CVE-2011-3262",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3262"
+    },
+    {
+      "name": "CVE-2011-1583",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1583"
+    },
+    {
+      "name": "CVE-2011-1166",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1166"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 2337-1 du 06 novembre 2011    :",
+      "url": "http://www.debian.org/security/2011/dsa-2337-1"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-628",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-11-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans l'hyperviseur <span\nclass=\"textit\">Xen</span>.\n",
+  "title": "Multiples vulnérabilités dans l'hyperviseur <SPAN class=\"textit\">Xen</SPAN>",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin d'alerte Debian DSA-2337-1 du 06 novembre 2011",
+      "url": null
+    }
+  ]
+}

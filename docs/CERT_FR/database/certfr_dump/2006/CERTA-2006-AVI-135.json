@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Pour l'instant, la vulnérabilité porte sur la version 4.5 MR1a  pour les systèmes Windows.</P>",
+  "content": "## Description\n\nCette vulnérabilité sur l'application McAfee WebShield SMTP, peut être\nexploitée afin de compromettre la machine vulnérable et d'y exécuter du\ncode arbitraire à distance. Cette vulnérabilité est liée au format des\nchaînes de caractères pour les messages d'erreur dans le cadre des\nmessages retournés (\\`\\`bounce messages''). Ce type de message d'erreur\nest appelé DSN, \\`\\`Delivery Status Notification'' (note du CERTA sur le\nspam, cf. section Documentation). Un \\`\\`bounce message'' est un message\nretourné à l'expéditeur indiquant que l'adresse du destinataire n'a pas\nété trouvée. Dans le cas présent, la vulnérabilité exploite les\n\\`\\`bounce messages'' indiquant des domaines qui n'existent pas.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur qui recommande\nl'installation de la version 4.5 MR2 de l'application (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de McAfee :",
+      "url": "http://www.mcafee.com/fr/support/default.asp"
+    },
+    {
+      "title": "Note du CERTA sur le SPAM :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2005-INF-004/index.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-135",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-04-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans McAfee WebShield SMTP",
+  "vendor_advisories": []
+}

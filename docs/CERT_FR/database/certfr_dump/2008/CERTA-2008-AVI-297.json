@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "le noyau Linux versions 2.6.25.4 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "le noyau Linux versions 2.4.36.5 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité est présente dans le noyau Linux. Celle-ci est\nrelative à la mise en œuvre du standard ASN.1 (Abstract Syntax Notation\nversion 1) par le decodeur BER des modules cifs et ip_nat_nmp_basic. Un\nutilisateur distant malintentionné peut provoquer un déni de service ou\npotentiellement exécuter du code arbitraire via des données encodées au\nformat BER ASN.1.\n\n## Solution\n\nLes versions 2.4.36.6 et 2.6.25.5 corrigent le problème :\n\n-   http://www.kernel.org\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1673",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1673"
+    }
+  ],
+  "links": [
+    {
+      "title": "liste des changements apportées aux versions 2.4.36.6 et    2.6.25.5 du noyau Linux :",
+      "url": "http://kernel.org/pub/linux/kernel/v2.4/ChangeLog-2.4.36.6"
+    },
+    {
+      "title": "liste des changements apportées aux versions 2.4.36.6 et    2.6.25.5 du noyau Linux :",
+      "url": "http://kernel.org/pub/linux/kernel/v2.6/ChangeLog-2.6.25.5"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-297",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-06-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le noyau Linux permet à un utilisateur\ndistant de provoquer un déni de service ou potentiellement d'éxécuter du\ncode arbitraire.\n",
+  "title": "Vulnérabilité du noyau Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés aux versions 2.4.36.6 et 2.6.25.5 du noyau Linux",
+      "url": null
+    }
+  ]
+}

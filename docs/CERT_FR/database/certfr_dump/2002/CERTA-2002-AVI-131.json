@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Cisco VPN Clients versions 3.5.1 et précédentes pour Linux,  Solaris et Mac OS X.</P>",
+  "content": "## Description\n\nLe client VPN (Virtual Private Network) CISCO permet d'établir un tunnel\nchiffré entre le système local et un concentrateur VPN CISCO. Le tunnel\nfournit alors une confidentialité et une intégrité des données\ntransmises, permettant à un utilisateur de se connecter à un réseau\nd'entreprise à travers un réseau public.\n\nUne vulnérabilité présente dans le client VPN CISCO peut être exploitée\npar un individu mal intentionné possédant un compte local sur le système\nafin d'exécuter du code arbitraire avec les privilèges de\nl'administrateur.\n\n## Contournement provisoire\n\nPar défaut, l'installation du fichier binaire s'effectue avec les\npermissions `setuid`. Il est possible de minimiser la vulnérabilité en\nsupprimant les droits `setuid` sur le binaire permettant l'exécution du\nclient VPN avec la commande suivante :\n\n`/bin/chmod 755 /usr/local/bin/vpnclient`\n\n## Solution\n\nInstaller la version 3.5.2 du client VPN de CISCO disponible chez CISCO\n:\n\n    http://www.cisco.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité CISCO \"Buffer overflow in UNIX VPN  Client\" :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-unix-vpnclient-buffer-overflow-pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-131",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Un individu mal intentionné peut exécuter du code arbitraire en local\navec les privilèges de l'administrateur.\n",
+  "title": "Vulnérabilité du client VPN de Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de CISCO \"Buffer overflow in UNIX VPN Client\"",
+      "url": null
+    }
+  ]
+}

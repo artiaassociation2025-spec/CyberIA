@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft SQL Server 2000 SP4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft SQL Server 2005 SP2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Internal Database SP2.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft SQL Server 2000 Desktop Engine ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité concernant une erreur de vérification des paramètres\ndans la procédure stockée sp_replwritetovarbin a été corrigée. Elle\npermet l'exécution de code arbitraire à distance par une personne\nmalveillante, connectée au serveur ou utilisant une injection de code\nSQL.\n\n## Solution\n\nSe référer au bulletin de sécurité Microsoft MS09-004 pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-5416",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-5416"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-061",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-02-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité affectant <span class=\"textit\">Microsoft SQL\nServer</span> permettant l'exécution de code arbitraire à distance a été\ncorrigée.\n",
+  "title": "Vulnérabilité dans Microsoft SQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS09-004 du 10 février 2009",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-004.mspx"
+    }
+  ]
+}

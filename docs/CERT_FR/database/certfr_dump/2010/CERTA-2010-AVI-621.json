@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IBM Tivoli Storage Manager 5.x et 6.x,  sur plateforme Unix, Linux et MacOS.</p>",
+  "content": "## Description\n\nDes vulnérabilités sont présentes dans IBM Tivoli Storage Manager :\n\n-   un débordement de mémoire dans le module Trusted Communication Agent\n    permet l'arrêt inopiné ou l'injection de code sur le client ;\n-   le module de sauvegarde peut servir à un utilisateur malveillant\n    pour remplacer des fichiers du système ;\n-   le client HSM permet de réaliser de l'injection de scripts à\n    distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2010-AVI-621",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Des vulnérabilités présentes dans IBM Tivoli Storage Manager permettent\nà un utilisateur malveillant d'exécuter du code arbitraire à distance ou\nd'élever ses privilèges.\n",
+  "title": "Vulnérabilités dans IBM Tivoli Storage Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg21454745 du 14 décembre 2010",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21454745"
+    }
+  ]
+}

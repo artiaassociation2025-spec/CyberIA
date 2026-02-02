@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PostgreSQL 7.4.26 ;",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PostgreSQL 8.x.",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans PostgreSQL :\n\n-   une erreur dans la fonction RESET SESSION AUTHORIZATION permet à une\n    personne malintentionnée d'élever ses privilèges sur le système ;\n-   une erreur dans la liaison avec un annuaire LDAP permet dans\n    certaines conditions de contourner le mécanisme d'authentification ;\n-   une erreur dans la gestion du rechargement de la librairie\n    \\$libdir/plugins permet de provoquer un déni de service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3231",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3231"
+    },
+    {
+      "name": "CVE-2009-3230",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3230"
+    },
+    {
+      "name": "CVE-2009-3229",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3229"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2009:1485 du 10 octobre    2009 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2009-1485.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1900 du 02 octobre 2009 :",
+      "url": "http://www.debian.org/security/2009/dsa-1900"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2009:1484 du 07 octobre    2009 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2009-1484.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-380",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-09-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian, et RedHat et des références CVE.",
+      "revision_date": "2009-10-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans PostgreSQL permettent à une personne\nmalintentionnée de provoquer un déni de service à distance, de\ncontourner la politique de sécurité ou d'élever ses privilèges sur le\nsystème.\n",
+  "title": "Multiples vulnérabilités dans PostgreSQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PostgreSQL",
+      "url": "http://www.postgresql.org/support/security.html"
+    }
+  ]
+}

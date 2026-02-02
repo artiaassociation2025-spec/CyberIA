@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "NuFW versions comprises entre 2.2.0 et 2.2.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne régression par rapport à la version 2.0 de NuFW a introduit une\nvulnérabilité permettant à un utilisateur distant de contourner la\npolitique de sécurité par le biais de paquets arrivant au delà du temps\nescompté.\n\n## Solution\n\nLa version 2.2.4 de NuFW corrige le problème.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-4461",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4461"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-373",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2007-08-22T00:00:00.000000"
+    },
+    {
+      "description": "la vulnérabilité ne touche pas les versions 2.0.x.",
+      "revision_date": "2007-08-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans NuFW permet de contourner la politique\nde sécurité.\n",
+  "title": "Vulnérabilité dans NuFW",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin des mises à jour NuFW du 20 août 2007",
+      "url": "http://www.nufw.org/+NuFW-2-2-4,201+.html"
+    }
+  ]
+}

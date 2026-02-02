@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Foxit Reader 3.x.",
+      "product": {
+        "name": "PDF Reader",
+        "vendor": {
+          "name": "Foxit",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Foxit Reader 2.x ;",
+      "product": {
+        "name": "PDF Reader",
+        "vendor": {
+          "name": "Foxit",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités de type débordement de mémoire permettent à une\npersonne malintentionnée d'exécuter du code arbitraire à distance au\nmoyen d'un fichier au format PDF spécialement construit. L'une des deux\nvulnérabilités a fait l'objet de l'alerte CERTA-2009-ALE-001.\n\nUne troisième vulnérabilité permet de contourner la politique de\nsécurité afin d'exécuter une action définie dans le fichier au format\nPDF sans confirmation de l'utilisateur.\n\n## Solution\n\nSe référer au bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0191",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0191"
+    },
+    {
+      "name": "CVE-2009-0837",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0837"
+    },
+    {
+      "name": "CVE-2009-0836",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0836"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurité Foxit Reader :",
+      "url": "http://www.foxitsoftware.com/pdf/reader/security.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-090",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-03-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans Foxit Reader permettent à un\nutilisateur malveillant de contourner la politique de sécurité ou\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans Foxit Reader",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Foxit Software",
+      "url": null
+    }
+  ]
+}

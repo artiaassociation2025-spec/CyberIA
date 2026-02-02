@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Indexing Service 3.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Index Server 2.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn contrôle ActiveX concernant l'indexation est inexactement marqué\ncomme «reconnu sûr pour l'écriture de script». Cette vulnérabilité\npermet à un concepteur mal intentionné de site internet d'effectuer une\nrequête afin d'énumérer les fichiers et dossiers de la machine distante.\nThéoriquement cette vulnérabilité ne permet que la lecture des\npropriétés des fichiers (date de création, taille etc...), cependant par\nle biais de recoupement, il est possible d'établir la liste des\ncaractères contenus dans les fichiers et reconstruire ainsi ces\nderniers.  \n  \n\nSur Windows 2000, ce serveur d'indexation est installé par défaut. Sur\nWindows NT4, il est installé seulement sur les machines comportant\nInternet Information Server.\n\n## Solution\n\nUn correctif n'a seulement été publié que pour le service d'indexation\n3.0 concernant Windows 2000. Microsoft jugeant que l'administrateur d'un\nsystème NT4 comportant lui-même un serveur internet (IIS) ne se sert pas\nde cette machine pour naviguer sur d'autres sites.  \n  \n\nCorrectif pour Indexing Service 3.0 (Windows 2000 - Version US) :\n\n    http://www.microsoft.com/Download/Release.asp?ReleaseID=26595\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS00-098.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-090",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-12-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès aux données"
+    }
+  ],
+  "summary": "Un concepteur de site internet mal intentionné peut par le biais d'une\nrequête ActiveX sur le serveur d'indexation, avoir connaissance des\nfichiers contenus dans le disque de la machine cible.\n",
+  "title": "Vulnérabilité dans le serveur d'indexation sous Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft (MS00-098)",
+      "url": null
+    }
+  ]
+}

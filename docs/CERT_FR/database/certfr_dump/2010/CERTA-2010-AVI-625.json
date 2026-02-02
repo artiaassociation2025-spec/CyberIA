@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Kerio Control (version 7);",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Kerio WinRoute Firewall (versions 5 et 6) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans Kerio WinRoute Firewall et Kerio Control permet à\nun utilisateur malveillant de polluer le cache HTTP et, par ce biais, de\ntransmettre des données malveillantes aux utilisateurs.\n\nLe cache HTTP est desactivé dans la configuration par défaut.\n\n## Solution\n\nUtiliser Kerio Control 7.1.0 Patch 1 et les versions postérieures.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2010-AVI-625",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans des produits Kerio permet de contourner la\npolitique de sécurité.\n",
+  "title": "Vulnérabilité de produits Kerio",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Kerio KSEC-2010-12-20-01",
+      "url": "http://www.kerio.com/support/security-advisories#1006"
+    }
+  ]
+}

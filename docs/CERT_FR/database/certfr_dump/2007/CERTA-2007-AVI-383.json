@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Subversion, pour les versions antérieures à 1.4.5.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans l'application de gestion de\nversions Subversion (aussi écrit en abrégé svn). Le concept, similaire à\nCVS, repose sur un dépôt centralisé. Il offre aux clients un ensemble de\ncommandes, incluant checkout (co) et update (up).\n\nCependant, des bibliothèques installées chez le client permettrait de\ncréer des fichiers sur le poste, pendant l'une de ces opérations, même\nsi le fichier ne se trouve pas dans le contexte de la copie de travail\nsvn.\n\nUne personne malveillante distante pourrait ainsi profiter de cette\nvulnérabilité pour écraser des fichiers existants, et exécuter des\ncommandes arbitraires sur le système du client vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3846",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3846"
+    }
+  ],
+  "links": [
+    {
+      "title": "Annonce du changement de version Subversion le 27 août 2007    :",
+      "url": "http://subversion.tigris.org/servlets/NewsItemView?newsItemID=1941"
+    },
+    {
+      "title": "Détails du changement de version Subversion publiés le 28    août 2007 :",
+      "url": "http://subversion.tigris.org/servlets/ReadMsg?list=users&msgNo=69413"
+    },
+    {
+      "title": "Annonce de la vulnérabilité par le laboratoire CRISP :",
+      "url": "http://crisp.cs.du.edu/q=node/36"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-383",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-08-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans l'application de gestion de\nversions Subversion (aussi écrit en abrégé svn). Elle permettrait à une\npersonne malveillante, sous certaines conditions, d'exécuter du code\narbitraire à distance sur le système vulnérable.\n",
+  "title": "Vulnérabilité dans Subversion (svn)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de la version 1.4.5 de Subversion le 27 août 2007",
+      "url": null
+    }
+  ]
+}

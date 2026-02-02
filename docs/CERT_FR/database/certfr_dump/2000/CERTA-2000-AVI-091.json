@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>CheckPoint VPN-1/Firewall-1 4.1 et 4.0</P>",
+  "content": "## description\n\nUne erreur dans Fast Mode rend vulnérable une machine et tout le réseau\nqui l'entoure lorsque l'on ouvre l'accès à un des services de celle-ci.\nEn effet : lorsqu'on modifie les règles du garde-barrière afin d'ouvrir\nl'accès à un service sur une machine, le garde-barrière permet l'accès à\ntous les services auxquels « Fast Mode » est appliqué pour cette machine\net pour celles qui se situent dans le même sous-réseau qu'elle.\n\n## Contournement provisoire\n\nDésactiver Fast Mode sur le garde barrière.\n\nNote : l'option Fast Mode n'est pas activée sur le garde-barrière par\ndéfaut.\n\n## Solution\n\nAppliquer le Service Pack (SP) qui convient à votre garde-barrière.\n\n-   SP3 pour la version 4.1 ;\n-   SP8 pour la version 4.0.\n\n```{=html}\n<!-- -->\n```\n    http://www.checkpoint.com/cgi-bin/download.cgi\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité de Checkpoint :",
+      "url": "http://www.checkpoint.com/techsupport/alerts/fastmode.html"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-091",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-12-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement des règles de sécurité"
+    }
+  ],
+  "summary": "« Fast Mode » est un mode permettant d'améliorer les performances de\nFireWall-1 vis-à-vis du protocole TCP/IP.\n\nUne vulnérabilité de ce mode de fonctionnement permet à un utilisateur\nmal intentionné d'avoir accès à des services qui sont normalement\ninterdits par le garde barrière.\n",
+  "title": "Vulnérabilité de « Fast Mode » sous Firewall-1",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CheckPoint",
+      "url": null
+    }
+  ]
+}

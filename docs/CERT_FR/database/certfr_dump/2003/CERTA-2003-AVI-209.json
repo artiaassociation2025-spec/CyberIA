@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Cisco FWSM versions 1.1.2 et  antérieures.</p>",
+  "content": "## Description\n\n-   Première vulnérabilité : au moyen d'un message SNMPv3 habilement\n    constitué, un utilisateur mal intentionné peut forcer l'arrêt brutal\n    du module FWSM. Cette vulnérabilité n'est exploitable que si le\n    module FWSM est configuré pour recevoir les messages SNMP\n    (snmp-server host \\<adresseIP\\>).\n-   Deuxième vulnérabilité : une vulnérabilité de type débordement de\n    mémoire est présente lors du traitement de l'authentification auprès\n    d'un serveur TACACS+ ou RADIUS d'un utilisateur se connectant via\n    les protocoles FTP, TELNET ou HTTP.\n\n## Contournement provisoire\n\nDeux mesures de protection peuvent être mises en oeuvre pour prévenir\nl'exploitation de la première vulnérabilité :\n\n-   Restreindre l'accès au serveur SNMP du garde-barrière :\n\n         snmp-server host <interface> <adresseIp> poll\n\n-   ou arrêter le serveur SNMP du garde-barrière :\n\n         no snmp-server location \n         no snmp-server contact \n         snmp-server community public \n         no snmp-server enable-traps\n\n## Solution\n\nSe référer au bulletin de sécurité du constructeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-209",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-12-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes dans le module Cisco Firewall\nServices (FWSM) pour les équipements Cisco Catalyst 6500 et 7600.\n",
+  "title": "Multiples vulnérabilités du module Cisco Firewall Services (FWSM)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Cisco",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20031215-fwsm.shtml"
+    }
+  ]
+}

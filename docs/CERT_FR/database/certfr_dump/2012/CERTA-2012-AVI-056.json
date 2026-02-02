@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Blue Coat Reporter versions antérieures à 9.3.1.1.",
+      "product": {
+        "name": "Reporter",
+        "vendor": {
+          "name": "Broadcom",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Blue Coat Reporter versions antérieures à 9.2.5.1 ;",
+      "product": {
+        "name": "Reporter",
+        "vendor": {
+          "name": "Broadcom",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans Blue Coat Reporter. Elles\nconcernent la version de la bibliothèque OpenSSL utilisée dans Blue Coat\nReporter et permettent en outre de causer un déni de service, d'obtenir\ndes informations sensibles et d'exécuter du code arbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3864",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3864"
+    },
+    {
+      "name": "CVE-2011-0014",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0014"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2012-AVI-056",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-02-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités permettant à un utilisateur malintentionné de\ncauser un déni de service, d'obtenir des informations sensibles et\nd'exécuter du code à distance sont présentes dans <span\nclass=\"textit\">Blue Coat Reporter</span>.\n",
+  "title": "Vulnérabilités dans Blue Coat Reporter",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Blue Coat SA68 du 01 février 2012",
+      "url": "https://kb.bluecoat.com/index?page=content&id=SA68"
+    }
+  ]
+}

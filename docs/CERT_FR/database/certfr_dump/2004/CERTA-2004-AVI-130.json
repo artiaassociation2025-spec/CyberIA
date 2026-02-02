@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Version de CVS 1.11.14 et antérieures.</p>",
+  "content": "## Description\n\nCVS (Concurrent Versions System) est un système client/serveur pour la\ngestion des versions de fichiers.  \nUn individu mal intentionné peut maintenir un serveur CVS malicieux\nrenvoyant des noms de fichiers avec un chemin d'accès absolu et non\nrelatif. Un utilisateur réalisant une opération de chargement d'un\nfichier depuis ce serveur au moyen d'un client CVS vulnérable pourra\nalors, à son insu, écraser ou installer un fichier arbitraire sur sa\nmachine.  \nUne vulnérabilité est également présente dans le serveur CVS. Un client\npeut, en spécifiant des chemins d'accès relatifs contenant la chaine de\ncaractères \"../\", accéder à des fichiers RCS situés en dehors de\nl'arborescence du serveur CVS (\\$CVSROOT).\n\n## Solution\n\nInstaller la version 1.11.15 de CVS ou appliquer les correctifs des\néditeurs :\n\n-   Bulletin de sécurité SuSE-SA:2004:008 de SuSE :\n\n        http://www.suse.com/de/security/2004_08_cvs.html\n\n-   Bulletin de sécurité RHSA-2004:153 de Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2004-153.html\n\n-   Bulletin de sécurité RHSA-2004:154 de Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2004-154.html\n\n-   Bulletin de sécurité MDKSA-2004:028 de Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:028\n\n-   Bulletin de sécurité GLSA 200404-13 de Gentoo :\n\n        http://www.gentoo.org/security/en/glsa/glsa-200404-13.xml\n\n-   Bulletin de sécurité FreeBSD-SA-04:07.cvs de FreeBSD :\n\n        ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-04:07.cvs.asc\n\n-   Bulletin de sécurité DSA-486 de Debian :\n\n        http://www.debian.org/security/2004/dsa-486\n\n-   Correctifs de sécurité pour OpenBSD 3.3, OpenBSD 3.4 et OpenBSD 3.5\n    :\n\n        ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.5/common/002_cvs.patch\n\n        ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.4/common/017_cvs.patch\n\n        ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.3/common/022_cvs.patch\n\n-   Bulletin de sécurité SGI 20040404-01-U du 21 avril 2004 :\n\n        ftp://patches.sgi.com/support/free/security/advisories/20040404-01-U.asc\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-130",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-04-15T00:00:00.000000"
+    },
+    {
+      "description": "mention de la vulnérabilité de type \"directory traversal\" sur le serveur CVS ; ajout du bulletin de sécurité de FreeBSD.",
+      "revision_date": "2004-04-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence CVE CAN-2004-0405 et du bulletin de sécurité de Debian.",
+      "revision_date": "2004-04-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux correctifs de sécurité pour OpenBSD.",
+      "revision_date": "2004-05-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité RedHat et SGI.",
+      "revision_date": "2004-05-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le client CVS peut permettre, sous\ncertaines conditions, de réaliser la prise de contrôle à distance d'un\nsystème vulnérable. Une vulnérabilité est également présente dans le\nserveur CVS. L'exploitation de cette vulnérabilité permet de récupérer\ndes fichiers hors de l'arborescence du serveur CVS.\n",
+  "title": "Vulnérabilité du client CVS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SuSE-SA:2004:008 de SuSE",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MDKSA-2004:028 de Mandrake",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RHSA-2004:154 de Red Hat",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité GLSA 200404-13 de Gentoo",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions de FreeBSD.</P>",
+  "content": "## Description\n\n`Procfs` est un système de fichiers spéciaux permettant d'obtenir une\nvue hiérarchique de la table des processus à travers le système de\nfichier ( `/proc`). `Linprocfs` est la mise en oeuvre d'un sous-système\nde fichiers sous FreeBSD nécessaire à l'exécution des binaires Linux.\n\nUne faille dans le contrôle de certains champs de la structure `uio`\nutilisée dans le traitement des requêtes de ces systèmes de fichiers\npermet à un utilisateur mal intentionné d'effectuer un déni de service\nou d'obtenir des informations présentes dans une partie de la mémoire du\nnoyau.\n\n## Solution\n\nMettre à jour les systèmes vulnérables avec les correctifs disponibles\n(cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité #FreeBSD-SA-03:17.procfs de FreeBSD :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-03:17.procfs.asc"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-161",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-10-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Fuite d'informations"
+    }
+  ],
+  "summary": "Un problème dans la mise en œuvre des systèmes de fichiers spéciaux\n`procfs` et `linprocfs` sous FreeBSD a été découvert.\n",
+  "title": "Vulnérabilité dans procfs et linprocfs sous FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis FreeBSD-SA-03:17.procfs de FreeBSD",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis PINE-CERT-20030902 de Pine Digital Security",
+      "url": null
+    }
+  ]
+}

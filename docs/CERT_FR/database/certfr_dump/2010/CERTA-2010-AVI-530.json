@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Linux PAM versions antérieures à 1.1.3.</p>",
+  "content": "## Description\n\nLes vulnérabilités découvertes dans Linux PAM sont les suivantes :\n\n-   une erreur dans le module pam_mail permet de vérifier la présence de\n    certains courriels ;\n-   une erreur dans le module pam_env permet à un utilisateur\n    malveillant d'afficher un fichier arbitraire situé sur le système ;\n-   une erreur dans le module pam_namespace permet à un utilisateur\n    malveillant d'élever ses privilèges.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3853",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3853"
+    },
+    {
+      "name": "CVE-2010-3431",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3431"
+    },
+    {
+      "name": "CVE-2010-3430",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3430"
+    },
+    {
+      "name": "CVE-2010-3435",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3435"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-530",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-11-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Linux PAM. Elles\npermettent à un utilisateur malveillant d'élever ses privilèges et de\ndévoiler des informations sensibles.\n",
+  "title": "Multiples vulnérabilités dans Linux PAM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PAM du 28 octobre 2010",
+      "url": "http://pam.cvs.sourceforge.net/viewvc/pam/Linux-PAM/ChangeLog?revision=1.546&view=markup&pathrev=Linux-PAM-1_1_3"
+    }
+  ]
+}

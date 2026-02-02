@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Debian Jessie (stable) avec un noyau dans une version antérieure à 3.16.7-ckt11-1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Debian Wheezy (ancienne stable) avec un noyau dans une version antérieure à 3.2.68-1+deb7u2",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2015-4167",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2015-4167"
+    },
+    {
+      "name": "CVE-2015-1805",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2015-1805"
+    },
+    {
+      "name": "CVE-2015-3636",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2015-3636"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2015-AVI-261",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2015-06-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans <span\nclass=\"textit\">le noyau Linux Debian</span>. Certaines d'entre elles\npermettent à un attaquant de provoquer un déni de service, une atteinte\nà l'intégrité des données et une atteinte à la confidentialité des\ndonnées.\n",
+  "title": "Multiples vulnérabilités dans le noyau Linux Debian",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-3290 du 18 juin 2015",
+      "url": "https://www.debian.org/security/2015/dsa-3290"
+    }
+  ]
+}

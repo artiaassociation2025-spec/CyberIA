@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft XML Core Services 4.0 (pour toutes les versions de Windows) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft XML Core Services 6.0 (pour toutes les versions de Windows).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-5745",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5745"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité Microsoft 927892 du 03 novembre 2006 :",
+      "url": "http://www.microsoft.com/technet/security/advisory/927892.mspx"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-500",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans Microsoft XML Core Services\n(<span class=\"textit\">MSXML</span>). Il s'agit plus précisément du\ncontrôle ActiveX XMLHTTP.\n\nUne personne malveillante pourrait exploiter cette vulnérabilité, afin\nde prendre le contrôle, à distance ou localement, de la machine\nfonctionnant sur un système vulnérable. Un scénario d'attaque possible\nserait une page Web construite de manière particulière : la visite de\ncette dernière par un navigateur autorisant les contrôles ActiveX,\npermettrait l'exécution de code sur le système.\n\nMême si MSXML n'est pas distribué par défaut avec Windows, il est\ninstallé avec plusieurs logiciels.\n",
+  "title": "Vulnérabilité de Microsoft XML Core Services",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-071 du 14 novembre 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-071.mspx"
+    }
+  ]
+}

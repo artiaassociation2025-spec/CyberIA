@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Serveurs HP9000 utilisant les versions  suivantes:  <UL>    <LI>HP-UX version 10.01;</LI>    <LI>HP-UX version 10.10;</LI>    <LI>HP-UX version 10.20;</LI>    <LI>HP-UX version 11.00;</LI>    <LI>HP-UX version 11.11.</LI>  </UL></p>",
+  "content": "## Description\n\nLe service d'impression rlpdaemon sous HP-UX permet le partage des\nimprimantes sur un réseau.\n\nL'exploitation d'une vulnérabilité de type débordement de mémoire\nprésente dans ce service permet à un utilisateur mal intentionné\nd'exécuter du code arbitraire avec les privilèges de root.\n\nCette vulnérabilité est exploitable à distance.\n\n## Contournement provisoire\n\nArrêter le service rlpdaemon en attendant l'application des correctifs.\n\nA défaut, filtrer les accès au port 515/tcp utilisé par ce service afin\nde limiter l'accès aux seuls clients autorisés.\n\n## Solution\n\nUn correctif sera publié par Hewlett-Packard avec les références\nsuivantes:\n\n-   HPCO_25107 pour HP-UX version 10.01;\n-   HPCO_25108 pour HP-UX version 10.10;\n-   HPCO_25109 pour HP-UX version 10.20;\n-   HPCO_25110 pour HP-UX version 11.00;\n-   HPCO_25111 pour HP-UX version 11.11.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité #0176 de Hewlett-Packard disponible    sur le site      \n;",
+      "url": "http://itrc.hp.com"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-148",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-11-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le service d'impression rlpdaemon de\nHP-UX permet à un utilisateur mal intentionné d'exécuter du code\narbitraire à distance avec les privilèges de root.\n",
+  "title": "Vulnérabilité dans le service d'impression sous HP-UX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2001-32 du CERT/CC",
+      "url": "http://www.cert.org/advisories/CA-2001-32.html"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Netscape 6.x et Mozilla versions 0.9.5 et antérieures.</P>",
+  "content": "## Description\n\nUn administrateur de site web mal intentionné peut, par le biais d'une\nURL habilement conçue (placée dans un courrier éléctronique écrit au\nformat HTML ou sur une page web), lire des cookies qui ne sont pas\ndestinés à son site web.\n\n## Contournement provisoire\n\n-   Si possible, le format HTML ne doit pas être interprété par le\n    logiciel de messagerie.\n-   Désactiver les cookies pour la navigation quand ils ne sont pas\n    nécessaires (c'est à dire la plupart du temps).\n\n## Solution\n\n-   Passer à la version 6.21 de Netscape :\n\n        http://home.netscape.com/computing/download/index.html\n\n-   Passer à la version 0.9.7 de Mozilla :\n\n        http://www.mozilla.org/releases/\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-014",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-01-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    },
+    {
+      "description": "Divulgation de données personnelles"
+    },
+    {
+      "description": "Vol de cookies"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut lire les cookies présents sur une\nmachine distante.\n",
+  "title": "Vulnérabilité dans les cookies sous Netscape et Mozilla",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes de sécurité de Netscape",
+      "url": "http://home.netscape.com/security/"
+    }
+  ]
+}

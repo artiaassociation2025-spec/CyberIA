@@ -1,0 +1,176 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Pour la branche 8.12.x, Sendmail version 8.12.11 et versions antérieures ;",
+      "product": {
+        "name": "sendmail",
+        "vendor": {
+          "name": "Sendmail",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "pour la branche 8.13.x, Sendmail version 8.13.5 et versions antérieures.",
+      "product": {
+        "name": "sendmail",
+        "vendor": {
+          "name": "Sendmail",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSendmail est un logiciel de routage de messages électroniques (Mail\nTransport Agent ou MTA).  \nUne vulnérabilité dans la gestion de messages asynchrones par le\nlogiciel Sendmail permet à un utilisateur distant mal intentionné\nd'exécuter du code arbitraire à distance sur la machine vulnérable.\n\n## Solution\n\nMettre à jour Sendmail en version 8.13.6. En plus de ce problème de\nsécurité, Sendmail version 8.13.6 corrige d'autres problèmes de sécurité\net d'autres faiblesses dans le code. Sendmail 8.13.6 peut se télécharger\nà l'adresse suivante :\n\n    http://www.sendmail.org/8.13.6.html\n\nSi la mise à jour de Sendmail en version 8.13.6 n'est paspossible,\nappliquer les correctifs pour Sendmail 8.12.11 et 8.13.5.Les correctifs\nsont disponibles aux adresses suivantes :\n\n    ftp://ftp.sendmail.org/pub/sendmail/8.12.11.p0\n\n    ftp://ftp.sendmail.org/pub/sendmail/8.13.5.p0\n\nDans tous les cas, se référer au bulletin de sécurité del'éditeur pour\nl'obtention des correctifs (cf. sectionDocumentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0058",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0058"
+    }
+  ],
+  "links": [
+    {
+      "title": "Mises à jour de sécurité pour Fedora du 22 mars 2006 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/4/"
+    },
+    {
+      "title": "Bulletin de sécurité Avaya ASA-2006-078 du 12 avril 2006 :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2006-078.htm"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1015 du 23 mars 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1015"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200603-21 du 22 mars 2006    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200603-21.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:058 du 22 mars    2006 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDKSA-2006:058"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD 3.8 et OpenBSD 3.9 pour    sendmail du 25 mars 2006 :",
+      "url": "http://www.openbsd.org/errata38.html#sendmail"
+    },
+    {
+      "title": "Bulletin de sécurité ISS du 22 mars 2006 :",
+      "url": "http://xforce.iss.net/xforce/alerts/id/216"
+    },
+    {
+      "title": "Bulletin de sécurité IBM AIX du 23 mars 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY82992"
+    },
+    {
+      "title": "Bulletin de sécurité Avaya ASA-2006-074 du 24 mars 2006 :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2006-074.htm"
+    },
+    {
+      "title": "Bulletin de sécurité IBM AIX du 23 mars 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY82994"
+    },
+    {
+      "title": "Site Internet de Sendmail :",
+      "url": "http://www.sendmail.com"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0265 du 22 mars 2006    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0265.html"
+    },
+    {
+      "title": "Bulletin de sécurité de SGI du 4 avril 2006 :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20060302-01-P.asc"
+    },
+    {
+      "title": "Alerte de sécurité de l'US-CERT TA06-081A et VU#834865 du    22 mars 2006 :",
+      "url": "http://www.us-cert.gov/cas/techalerts/TA06-081A.html"
+    },
+    {
+      "title": "Bulletin de sécurité HP-UX #c00629555 (HPSBUX02108    SSRT061133) du 25 mars 2006 :",
+      "url": "http://itrc.hp.com/service/cki/docDisplay.do?docId=c00629555"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD 3.8 et OpenBSD 3.9 pour    sendmail du 25 mars 2006 :",
+      "url": "http://www.openbsd.org/errata.html#sendmail"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0264 du 22 mars 2006    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0264.html"
+    },
+    {
+      "title": "Bulletin de sécurité IBM AIX du 23 mars 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY82993"
+    },
+    {
+      "title": "Page Internet de la version 8.13.6 de Sendmail :",
+      "url": "http://www.sendmail.org/8.13.6.html"
+    },
+    {
+      "title": "Bulletin de sécurité IBM :",
+      "url": "http://www14.software.ibm.com/webapp/set2/sas/f/hmc/power5/install/v52.Readme.html#MH00688"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-06:13.sendmail du 22 mars    2006 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-06:13.sendmail.asc"
+    },
+    {
+      "title": "Alerte de sécurité de l'US-CERT TA06-081A et VU#834865 du    22 mars 2006 :",
+      "url": "http://www.kb.cert.org/vuls/id/834865"
+    },
+    {
+      "title": "Mises à jour de sécurité pour Fedora du 22 mars 2006 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/5/"
+    },
+    {
+      "title": "Bulletin de sécurité Sun Alerte #102262 du 22 mars 2006 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetKey=1-26-102262-1"
+    },
+    {
+      "title": "Bulletin de sécurité Slackware SSA:2006-081-01 du 22 mars    2003 :",
+      "url": "http://slackware.com/security/viewer.php?l=slackware-security&y=2006&m=slackware-security.619600"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2006:017 du 22 mars 2006    :",
+      "url": "http://www.novell.com/linux/security/advisories/2006_17_sendmail.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-124",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-03-23T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité OpenBSD et Avaya.",
+      "revision_date": "2006-03-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SGI IRIX.",
+      "revision_date": "2006-04-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Avaya.",
+      "revision_date": "2006-04-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité IBM.",
+      "revision_date": "2006-06-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le logiciel de messagerie Sendmail permet à un\nutilisateur distant mal intentionné d'exécuter du code arbitraire à\ndistance.\n",
+  "title": "Vulnérabilité de Sendmail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sendmail du 22 mars 2006",
+      "url": "http://www.sendmail.com/company/advisory/index.shtml"
+    }
+  ]
+}

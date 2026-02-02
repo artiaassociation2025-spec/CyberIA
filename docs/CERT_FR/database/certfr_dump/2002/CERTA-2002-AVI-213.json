@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Windows 2000 et Windows XP.</P>",
+  "content": "## Description\n\nRDP est un protocole utilisé par les systèmes Windows pour établir des\nsessions entre un client et un terminal distant.  \n\nLa première vulnérabilité concerne le chiffrement des sessions RDP. Même\nsi celles-ci sont chiffrées, les empreintes (checksums) des données sont\nenvoyées en clair sur le réseau.\n\nIl est alors possible pour un utilisateur mal intentionné, pouvant\nécouter le réseau, de décrypter l'intégralité de la session.  \n\nLa deuxième vulnérabilité ne concerne que l'implémentation du protocole\nRDP sur les systèmes Windows 2000. Elle se situe au niveau du traitement\ndes paquets de données.\n\nUn utilisateur mal intentionné peut envoyer des paquets malicieusement\nforgés pour provoquer l'arrêt brutal du service Remote Desktop, et avec\nlui, l'arrêt du système.\n\nCette vulnérabilité peut être exploitée sans authentification préalable.\n\n## Contournement provisoire\n\nPour se protéger contre une attaque venant de l'extérieur exploitant la\ndeuxième vulnérabilité, il est recommandé de filtrer le port 3389 (TCP\net UDP) sur les pare-feux.\n\n## Solution\n\nAppliquer le correctif founi par l'éditeur (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-213",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-09-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut exploiter deux vulnérabilités du\nprotocole RDP pour récupérer des informations ou pour provoquer un déni\nde service.\n",
+  "title": "Vulnérabilité du protocole RDP dans les systèmes Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS02-051",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-051.asp"
+    }
+  ]
+}

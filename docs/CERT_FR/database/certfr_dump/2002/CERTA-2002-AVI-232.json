@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft SQL Server 7.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft SQL Server 2000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Desktop Engine (MSDE) 2000.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Data Engine (MSDE) 1.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSQL Server 7.0 et 2000 fournissent des procédures stockées qui sont un\nensemble de commandes Transact-SQL traitées en groupe et auxquelles on\nattribue un nom.\n\nUne vulnérabilité permet à un utilisateur mal intentionné possédant de\nfaibles privilèges d'exécuter, de détruire, d'inscrire ou de mettre à\njour une tâche web en combinant une procédure stockée et une procédure\nstockée étendue. Cet utilisateur peut également exécuter toutes les\ntâches web déjà créées dans le contexte de l'auteur de la tâche.\n\n## Solution\n\nAppliquer le correctif cumulatif disponible sur le site de Microsoft\n(cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-232",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans les tâches web de SQL Server.\n",
+  "title": "Elévation de privilèges dans SQL Server Web Tasks",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS02-61 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-61.asp"
+    }
+  ]
+}

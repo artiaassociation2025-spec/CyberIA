@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Solaris version 2.5.1 à 7 incluse.  Solaris 8 et Solaris 9 ne sont pas affectées.</p>",
+  "content": "## Description\n\nLa commande lpq est utilisée pour visualiser le contenu des files\nd'impression. Une vulnérabilité de type débordement de mémoire présente\ndans cette commande peut être exploitée par un utilisateur mal\nintentionné pour obtenir les privilèges du super-utilisateur root.\n\n## Contournement provisoire\n\nEn attendant d'appliquer les correctifs, enlever le drapeau suid sur\nl'exécutable /usr/bin/lpstat (la commande lpq est en réalité un lien sur\ncet exécutable).\n\n## Solution\n\nAppliquez les correctifs fournis par l'éditeur. Bulletin de sécurité\n\\#52443 de Sun :\n\n    http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F52443\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SA2003-02 \"Solaris lpq stack buffer    overflow vulnerability\" de nsfocus :",
+      "url": "http://www.nsfocus.com/english/homepage/research/0302.htm"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-070",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-04-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans la commande lpq permet à un utilisateur\nmal intentionné de réaliser une élévation de privilèges.\n",
+  "title": "Vulnérabilité de la commande lpq sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SA2003-02 de nsfocus",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #52443 de Sun",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ioLogik E1200 versions v3.3 et antérieures sans le dernier correctif de sécurité",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-5962",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-5962"
+    },
+    {
+      "name": "CVE-2023-5961",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-5961"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-1059",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-12-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Moxa ioLogik E1200.\nElles permettent à un attaquant de provoquer une atteinte à la\nconfidentialité des données et une injection de requêtes illégitimes par\nrebond (CSRF).\n",
+  "title": "Multiples vulnérabilités dans Moxa ioLogik E1200",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Moxa MPSA-235250 du 23 décembre 2023",
+      "url": "https://www.moxa.com/en/support/product-support/security-advisory/mpsa-235250-iologik-e1200-series-web-server-vulnerability"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Linux Debian.</P>  <P>Probablement d'autres distribution sont touchée, renseignez  vous auprès du distributeur.</P>",
+  "content": "## Description\n\nCron est un outil permettant de planifier l'exécution de tâches à heures\nprécises ou périodiquement. Une vulnérabilité dans la gestion des\nfichiers temporaires par crontab lors de la programmation des tâches\n(crontab -e permet à un utilisateur local mal intentionné de faire\nexécuter par crond le code qu'il désire avec les permissions du\npropriétaire de la tâche programmée. Si le propriétaire de la tâche qui\nest exécutée est root, le code sera exécuté avec les privilèges de ce\ndernier. Des exploitations de cette vulnérabilités permettent entre\nautre d'obtenir un shell root.\n\n## Contournement provisoire\n\nAffiner les permissions d'accès du répertoire crontabs :\n\nchmod go-rx /var/spool/cron/crontabs\n\nen tant que root.\n\n## Solution\n\nAppliquer le correctif proposé sur le site Debian :\n\n    http://security.debian.org/dists/potato/updatesmain\n\nLe correctif à télécharger s'appelle cron_3.0p11-57.1\\_\\[arch\\].deb où\n\\[arch\\] peut être : i386 (pour architechture intel), arm, alpha,\npowerpc, mk68k ou sparc.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-076",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-11-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès root en local. une exploitation de la vulnérabilité a été publiée"
+    }
+  ],
+  "summary": "Une vulnérabilité est présente dans Vixie Crond sous debian. D'autres\ndistributions de Linux peuvent être touchées. Elle permet d'obtenir des\nprivilèges <span class=\"textit\">root</span> en local.\n",
+  "title": "Vulnérabilité de Vixie Cron",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Debian",
+      "url": "http://www.debian.org/security/2000/20001118a"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SAP Internet Graphics Service (IGS) version 6.40 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SAP Internet Graphics Service (IGS) version 7.00 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités de type débordement de mémoire, causées par une\nerreur dans le traitement des adresses réticulaires (URL), permettent à\nun utilisateur distant mal intentionné de provoquer un déni de service\nou d'exécuter du code arbitraire via une requête HTTP spécialement\nconstruite.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2006-AVI-352",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans SAP Internet Graphics Service permettent à un\nutilisateur distant mal intentionné d'exécuter du code arbitraire à\ndistance ou de provoquer un déni de service également à distance.\n",
+  "title": "Vulnérabilité dans SAP Internet Graphics Service",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité CYBSEC du 10 août 2006",
+      "url": "http://www.cybsec.com/vuln/CYBSEC-Security_Pre-Advisory_SAP_IGS_Remote_Buffer_Overflow.pdf"
+    }
+  ]
+}

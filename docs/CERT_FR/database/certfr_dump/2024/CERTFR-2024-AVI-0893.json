@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BIG-IP versions 16.1.x antérieures à 16.1.5",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIG-IQ Centralized Management version 8.2.0 antérieure à 8.3.0 ou 8.2.0.1",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIG-IP versions 17.1.x antérieures à 17.1.4",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIG-IP versions 15.1.x antérieures à 15.1.10.5",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2024-45844",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-45844"
+    },
+    {
+      "name": "CVE-2024-47139",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-47139"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0893",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-10-17T00:00:00.000000"
+    },
+    {
+      "description": "Correction du lien de l'avis de sécurité F5",
+      "revision_date": "2024-10-17T00:00:00.000000"
+    },
+    {
+      "description": "Correction d'une erreur de version.",
+      "revision_date": "2024-10-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits F5. Elles permettent à un attaquant de provoquer une élévation de privilèges et une injection de code indirecte à distance (XSS).",
+  "title": "Multiples vulnérabilités dans les produits F5",
+  "vendor_advisories": [
+    {
+      "published_at": "2024-10-16",
+      "title": "Bulletin de sécurité F5 K000141302",
+      "url": "https://my.f5.com/manage/s/article/K000141302"
+    }
+  ]
+}

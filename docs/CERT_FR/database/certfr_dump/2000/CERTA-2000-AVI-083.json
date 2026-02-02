@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Routeurs Cisco CBOS Série 600</P>",
+  "content": "## Description\n\n## 4.1 Première vulnérabilité\n\nUn utilisateur mal intentionné peut, par l'envoi d'une URL malformée sur\nl'interface web du routeur, provoquer un déni de service.\n\nNota : Par défaut l'interface Web est désactivée sur les routeurs.\n\n## 4.2 Deuxième vulnérabilité\n\nUn utilisateur distant peut épuiser toutes les ressources TCP du routeur\npar l'envoi d'un flux important de connexions TCP SYN.\n\n## 4.3 Troisième vulnérabilité\n\nUne vulnérabilité présente dans le module d'enregistrement des\ntentatives de connexions au routeur permet à un utilisateur distant de\ntenter un accès par force brute (Essais exhaustifs : login - mot de\npasse) sur l'interface d'administration Web sans que ces tentatives\nsoient enregistrées.\n\n## 4.4 Quatrième vulnérabilité\n\nLes routeurs CISCO série 600 sont vulnérables à des paquets\n«ECHO_REQUEST» de grande taille (requête PING), entraînant un arrêt du\nrouteur.\n\n## Solution provisoire\n\n## 5.1 Première vulnérabilité\n\n-Restreindre l'accès au serveur Web de gestion :\n\nDans le mode «enable» :\n\ncbos# set web remote \\[IP MACHINE AUTORISEE\\]\n\ncbos# set web remote enabled  \n  \n\n-Désactiver le serveur Web de gestion :\n\nDans le mode «enable» :\n\ncbos# set web remote disable\n\n## 5.2 Troisième vulnérabilité\n\n-Désactiver le serveur Web de gestion :\n\nDans le mode «enable» :\n\ncbos# set web remote disable\n\n## 5.3 Quatrième vulnérabilité\n\nFiltrer le trafic ICMP ECHO à destination du routeur :\n\ncbos# set filter \\[numéro\\] on deny incoming all 0.0.0.0\n\n0.0.0.0 \\<eth0_IP_address\\> 255.255.255.255 protocol ICMP\n\ncbos# set filter \\[numéro+1\\] on deny incoming all 0.0.0.0\n\n0.0.0.0 \\<wan0_IP_address\\> 255.255.255.255 protocol ICMP\n\n## Solution\n\nCorrectifs disponible sur le site CISCO :\n\n    http://www.cisco.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis CISCO :",
+      "url": "http://www.cisco.com/warp/public/707/CBOS-multiple.shtml"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-083",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-12-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement des journaux d'enregistrements"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités découvertes dans le système d'exploitation\n(CBOS) des routeurs CISCO permettent à un utilisateur distant\nd'engendrer des dénis de service voire de tenter une attaque par force\nbrute sans laisser de traces dans les fichiers journaux.\n",
+  "title": "Vulnérabilités dans les routeurs CISCO serie 600",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "FIRST",
+      "url": null
+    }
+  ]
+}

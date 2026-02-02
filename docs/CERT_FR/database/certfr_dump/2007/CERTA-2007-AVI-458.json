@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "HP Oracle for OpenView (OfO) versions 10gR2 et antiérieurs.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP OpenView Configuration Management (CM) Infrastructure (Radia) versions 4.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP OpenView Client Configuration Management (CCM) version 2.0 pour Windows ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités dans HP OpenView permettent de contourner la\npolitique de sécurité :\n\n-   la première vulnérabilité affecte le module httpd.tkd présent dans\n    OpenView Configuration Management et OpenView Client Configuration\n    Management (CM et CCM). Cette vulnérabilité permet à un utilisateur\n    malintentionné distant de contourner la politique de sécurité. Il\n    peut y avoir plusieurs occurences du module httpd.tkd sur un même\n    système, chacun doit être corrigé ;\n-   les autres vulnérabilités affectent HP Oracle for OpenView (OfO) et\n    sont détaillées dans l'avis CERTA-2007-AVI-443 du 17 octobre 2007.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HP c01205079 du 25 octobre 2007 :",
+      "url": "http://itrc.hp.com/service/cki/docDisplay.do?docId=c01205079"
+    },
+    {
+      "title": "Bulletin de sécurité Oracle d'octobre 2007 :",
+      "url": "http://www.oracle.com/technology/deploy/security/critical-patch-updates/cpuoct2007.html"
+    },
+    {
+      "title": "Bulletin de sécurité HP c00727143 du 24 octobre 2007 :",
+      "url": "http://itrc.hp.com/service/cki/docDisplay.do?docId=c00727143"
+    },
+    {
+      "title": "Document du CERTA CERTA-2007-AVI-443 du 17 octobre 2007 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2007-AVI-443/index.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-458",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-10-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans HP OpenView permettent de contourner la\npolitique de sécurité.\n",
+  "title": "Multiples vulnérabilités de HP OpenView",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité HP c00727143 et c01205079 des 23 et 24 octobre 2007",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Alerte TA05-023A de l'US-CERT",
+      "url": null
+    }
+  ]
+}

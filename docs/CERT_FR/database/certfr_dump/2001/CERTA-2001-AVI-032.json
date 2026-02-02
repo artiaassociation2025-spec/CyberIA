@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">IBM HTTP Serve</SPAN>r sous Windows NT 4  et Windows 2000.</P>",
+  "content": "## Description\n\nFast Response Cache Accelerator (FRCA) est une fonctionnalité de gestion\ndu cache du module AFPA des serveurs web IBM HTTP Server.\n\nUn problème dans la gestion de la mémoire de cette fonctionnalité permet\nà un utilisateur mal intentionné, attaquant de façon répétitive cette\nvulnérabilité par le biais d'une requête HTTP habilement construite, de\nbloquer le logiciel, engendrant ainsi un déni de service HTTP.\n\n## Contournement provisoire\n\nEn attendant d'appliquer le correctif, désactiver le module afpa\ncontenant la fonctionnalité FRCA.\n\nDans le fichier httpd.conf, commenter les 3 lignes contenant la chaîne «\nafpa ».\n\n## Solution\n\nAppliquer le correctif d'IBM :\n\n    http://www-4.ibm.com/software/webservers/httpservers/efix.html\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-032",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-03-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité d'IBM HTTP Server sous Windows NT 4 ou 2000 permet à\nun utilisateur mal intentionné de bloquer à distance le service web.\n",
+  "title": "Vulnérabilité de IBM HTTP Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité IBM",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Sudo versions 1.6.9 à 1.7.2p3.",
+      "product": {
+        "name": "Sudo",
+        "vendor": {
+          "name": "Sudo",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nUne vulnérabilité dans la commande Sudo permet à un utilisateur, ayant\nla permission d'utiliser l'option « -e » (sudoedit), d'exécuter des\ncommandes arbitraires.\n\n## Solution\n\nMettre à jour Sudo dans sa dernière version stable (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Page de téléchargement de la dernière version stable de    Sudo :",
+      "url": "http://www.sudo.ws/sudo/stable.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-095",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-03-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Sudo permet à une personne malintentionnée de\ncontourner la politique de sécurité.\n",
+  "title": "Vulnérabilité dans Sudo",
+  "vendor_advisories": [
+    {
+      "published_at": "2010-02-22",
+      "title": "Bulletin de sécurité Sudo",
+      "url": "https://www.sudo.ws/security/advisories/sudoedit_escalate/"
+    }
+  ]
+}

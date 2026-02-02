@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "NetScaler ADC 13.1-FIPS antérieures à 13.1-37.159",
+      "product": {
+        "name": "NetScaler ADC",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetScaler ADC et NetScaler Gateway versions 13.1-x antérieures à 13.1-49.13",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetScaler ADC 12.1-FIPS antérieures à 12.1-55.297",
+      "product": {
+        "name": "NetScaler ADC",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetScaler ADC et NetScaler Gateway versions 13.0-x antérieures à 13.0-91.13",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetScaler ADC 12.1-NDcPP antérieures à 12.1-55.297",
+      "product": {
+        "name": "NetScaler ADC",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-3519",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-3519"
+    },
+    {
+      "name": "CVE-2023-3466",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-3466"
+    },
+    {
+      "name": "CVE-2023-3467",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-3467"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0568",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-07-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Citrix NetScaler\nADC et NetScaler Gateway. Elles permettent à un attaquant de provoquer\nune exécution de code arbitraire à distance, une élévation de privilèges\net une injection de code indirecte à distance (XSS).\n",
+  "title": "Multiples vulnérabilités dans Citrix NetScaler ADC et NetScaler Gateway",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Citrix CTX561482 du 18 juillet 2023",
+      "url": "https://support.citrix.com/article/CTX561482/citrix-adc-and-citrix-gateway-security-bulletin-for-cve20233519-cve20233466-cve20233467"
+    }
+  ]
+}

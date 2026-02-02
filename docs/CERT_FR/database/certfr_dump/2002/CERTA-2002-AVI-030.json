@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système d'exploitation Windows muni du navigateur  Internet Explorer version 5.01, 5.5 ou 6.</P>",
+  "content": "## Description\n\n-   Un utilisateur mal intentionné peut, en créant une page web\n    invoquant des directives HTML permettant d'incorporer un document\n    dans une page web, effectuer un débordement de mémoire du navigateur\n    de l'internaute qui lit cette page. Ce débordement de mémoire permet\n    d'exécuter du code arbitraire sur le système de la victime.\n\n-   La fonction GetObject effectue des tests de sécurité lors d'une\n    requête vers un objet du système.\n\n    Une vulnérabilité de cette fonction permet d'éviter ces tests de\n    sécurité préalables en utilisant une représentation habilement\n    conçue du chemin d'un fichier. Il est notamment possible d'accéder à\n    des fichier non-autorisés sur la machine victime par le biais d'une\n    opération incluse dans une page web astucieusement construite.\n\n-   Un mauvais fonctionnement de l'affichage des noms de fichiers à\n    télécharger par le navigateur permet à un utilisateur mal\n    intentionné de tromper la vigilance de sa victime en modifiant\n    l'affichage du nom (type) de fichier à télécharger au moyen des\n    champs des entêtes MIME.\n\n-   Une vulnérabilité de la gestion des applications listées dans\n    Internet Explorer permet d'ouvrir un document situé sur un site au\n    moyen d'une application ne correspondant pas à celle préconisée pour\n    ce type de document. De plus, une application n'apparaissant pas\n    dans la liste des applications sûres d'Internet Explorer peut aussi\n    être utilisée pour l'ouverture de ce document.\n\n-   Une vulnérabilité du navigateur permet d'exécuter des scripts même\n    si ce paramètre a été désactivé. En effet la vérification de la\n    présence de scripts se fait avant l'affichage de la page. Or il\n    existe un moyen d'incorporer des objets qui répondent à des\n    évènements asynchrones ce qui permet l'exécution de scripts contenus\n    dans ces objets après la vérification préalable de l'absence de\n    scripts.\n\n-   Une variante de la vulnérabilité décrite dans le bulletin MS01-058\n    (CERTA-2001-AVI-163) permet à un administrateur de site web mal\n    intentionné de faire ouvrir deux fenêtres par le navigateur de sa\n    victime et de lire au travers de l'une d'entre elles n'importe quel\n    fichier présent sur la machine de la victime par le biais de la\n    fonction Document.Open par exemple.\n\n## Contournement provisoire\n\n-   Pour que certaines de ces vulnérabilités ne soient pas exploitables\n    trop simplement (utilisation de GetObject ou Document.Open),\n    désactiver les scripts (Java, JavaScripts et ActiveX).\n-   Concernant le télechargement d'un fichier, il ne faut jamais\n    l'ouvrir directement sans le sauvegarder. Après sa sauvegarde et\n    avant son ouverture, il est recommandé de l'analyser avec un\n    antivirus à jour. Enfin, il est déconseillé de double-cliquer sur un\n    fichier. Il vaut mieux choisir judicieusement l'application qui\n    permet de le visualiser et l'ouvrir par le menu fichier/ouvrir de\n    cette dernière.\n-   En attendant de télécharger le correctif, utiliser temporairement un\n    autre navigateur web.\n\n## Solution\n\nAppliquer le correctif cumulatif de Microsoft :\n\n    http://www.microsoft.com/windows/ie/downloads/critical/q316059/default.asp\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-030",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-12T00:00:00.000000"
+    },
+    {
+      "description": "seconde version : erreur dans l'URL du correctif (paragraphe Solution)",
+      "revision_date": "2002-02-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Accès non-autorisé aux données"
+    },
+    {
+      "description": "Contournement des règles de sécurité"
+    }
+  ],
+  "summary": "Six vulnérabilités différentes ont été découvertes sur les navigateurs\nInternet Explorer 5.01, 5.5 et 6.\n",
+  "title": "Multiples vulnérabilités d'Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS02-005",
+      "url": null
+    }
+  ]
+}

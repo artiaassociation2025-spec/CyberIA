@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Media Player pour Windows XP.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Media Player 7.1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Media Player 6.4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Première vulnérabilité :\n\n    Une vulnérabilité dans le traitement de l'autorisation des fichiers\n    exécutés par Windows Media Player permet l'exécution de code\n    arbitraire avec les privilèges de l'utilisateur ayant lancé\n    l'application.\n\n-   Seconde vulnérabilité :\n\n    Cette vulnérabilité de gestion de privilèges permet à un utilisateur\n    mal intentionné d'ouvrir une session locale sous Windows 2000 avec\n    les droits de Window Media Player.\n\n    Cette vulnérabilité affecte uniquement Windows Media Player 7.1 sous\n    Windows 2000.\n\n-   Troisième vulnérabilité :\n\n    Une vulnérabilité dans la gestion des scripts permet à un\n    utilisateur mal intentionné de faire exécuter un script avec les\n    droits de l'utilisateur ayant lancé l'application Windows Media\n    Player.\n\n## Solution\n\nTélécharger le correctif correspondant à votre version de Microsoft\nWindows Media Player sur le site de Microsoft (se référer à la section\ndocumentation).\n\nNota : le correctif de Microsoft disponible après le 24 juillet 2002\ncouvre plus de vulnérabilités que le précédent.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-032.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-134",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-27T00:00:00.000000"
+    },
+    {
+      "description": "première révision : correctif Microsoft révisé.",
+      "revision_date": "2002-07-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Microsoft a réalisé un correctif cumulatif concernant trois nouvelles\nvulnérabilités de Windows Media Player.\n\nCe correctif intègre également la correction d'anciennes vulnérabilités.\n",
+  "title": "Multiples vulnérabilités dans Windows Media Player",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS02-032",
+      "url": null
+    }
+  ]
+}

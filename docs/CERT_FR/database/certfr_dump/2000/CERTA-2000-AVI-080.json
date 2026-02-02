@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Millenium Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft NT 4 (Server, Terminal Server et Workstation).",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 9x ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité à été découverte dans les systèmes NT4, 95, 98, 98SE\net ME dans l'exploitation du protocole NetBIOS.\n\nUne succession de paquets TCP/IP malformés peut entraîner un blocage\ntemporaire ou complet des fonctionnalités réseau de la machine cible\nobligeant son redémarrage.\n\nCette vulnérabilité ne peut être exploitée que si le port 139 (NetBios\nsession - Partage de ressources) est ouvert sur la machine cible.\n\n## Contournement provisoire\n\nIl est possible de bloquer l'exploitation de cette vulnérabilité depuis\nInternet en stoppant le trafic NetBIOS à la périphérie du réseau\ninterne.\n\n## Solution\n\nCorrectif pour NT4 :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=25114\n\n  \n  \n\nSolution pour Windows 95, 98 et Me :\n\nAucun correctif n'est proposé par Microsoft.\n\nIl est uniquement recommandé de désactiver le partage de fichiers et\nd'imprimantes :\n\n    http://www.microsoft.com/technet/support/kb.asp?ID=199346\n\n  \n  \n\nBloquer les ports NetBIOS (135, 137 et 139) sur le pare-feu.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-080",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-12-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, par le biais de paquets TCP/IP\nmalformés, provoquer un déni de service sur une machine distante.\n",
+  "title": "Vulnérabilité NetBIOS sous Windows 9x, NT et Me",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-091.asp"
+    }
+  ]
+}

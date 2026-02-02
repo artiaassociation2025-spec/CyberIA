@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Information Server 4.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Information Server 5.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn utilisateur mal intentionné peut, par l'intermédiaire d'une URL\nmalformée, obtenir des privilèges sur des fichiers avec des permissions\naccordées différentes de celles du répertoire où se situent ces\nfichiers.  \n  \n\nFichiers concernés par cette vulnérabilité :\n\n-   Scripts CGI ;\n-   Fichiers implantés par des extensions ISAPI (Internet Server\n    Application Program Interface).\n\nFichiers non concernés :\n\n-   Pages web statiques ;\n-   Fichiers non web (ex : .exe, .doc etc...)\n\n## Solution\n\nCorrectif pour IIS version 4.0 (version US) :\n\n    http://www.microsoft.com/Downloads/release.asp?ReleaseID=23667\n\nCorrectif pour IIS version 5.0 (version US) :\n\n    http://www.microsoft.com/Downloads/release.asp?ReleaseID=23665\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-057.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-028",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement des permissions sur les fichiers du serveur"
+    }
+  ],
+  "summary": "Une vulnérabilité d'IIS permet a un utilisateur mal intentionné\nd'obtenir des permissions non prévues sur des fichiers présents sur le\nserveur.\n",
+  "title": "Vulnérabilité dans les permissions de fichiers sous IIS version 4.0 et 5.0",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Microsoft",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis du CERT IST",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ftpd sur OpenBSD ;",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ftpd sur NetBSD.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans la gestion de requêtes longues dans ftpd permet à\nune personne malintentionnée de réaliser des attaques de type cross-site\nrequest forgery. Cette vulnérabilité est la même que celle décrite dans\nl'avis CERTA-2008-AVI-471.\n\n## Solution\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-4247",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4247"
+    }
+  ],
+  "links": [
+    {
+      "title": "Correction dans le CVS de OpenBSD :",
+      "url": "http://www.openbsd.org/cgi-bin/cvsweb/src/libexec/ftpd/ftpd.c?rev=1.184"
+    },
+    {
+      "title": "Avis CERTA-2008-AVI-471 du 23 septembre 2008 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2008-AVI-471/CERTA-2008-AVI-471.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-531",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-10-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    }
+  ],
+  "summary": "Une vulnérabilité dans ftpd permet à une personne malintentionnée\nd'effectuer une attaque de type <span class=\"textit\">cross-site request\nforgery</span>.\n",
+  "title": "Vulnérabilité dans ftpd",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité NetBSD 2008-014",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2008-014.txt.asc"
+    }
+  ]
+}

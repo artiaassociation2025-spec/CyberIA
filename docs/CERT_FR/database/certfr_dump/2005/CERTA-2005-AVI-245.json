@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenLDAP versions 2.2.26 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenLDAP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "nss_ldap versions 2.239 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenLDAP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "pam_ldap versions 1.76 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenLDAP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nOpenLDAP est un logiciel mettant en œuvre le protocole LDAP (Lightweight\nDirectory Access). nss_ldap est un service de nommage NSS (Name Service\nSwitch) s'interfaçant avec un annuaire LDAP. pam_ldap est un module\nd'authentification PAM (Pluggable Layer Security) s'interfaçant avec un\nannuaire LDAP. Une erreur dans la façon dont un serveur LDAP esclave\nredirige un client vers un serveur maître lors d'une connexion utilisant\nTLS (Transport Layer Security) permet à un utilisateur mal intentionné\nconnecté au réseau local d'intercepter des informations de type\nidentifiant et mot de passe.\n\n## Contournement provisoire\n\nConfigurer les serveurs LDAP pour qu'ils n'acceptent que des connexions\nen LDAPS et configurer les clients pour qu'ils utilisent des liens de\ntype : ldaps://.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200507-13 du 14 juillet    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200507-13.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:121 du 18 juillet    2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:121"
+    },
+    {
+      "title": "Bulletin de sécurité OpenLDAP du 21 juin 2005 :",
+      "url": "http://www.openldap.org/its/index.cgi/Incoming?id=3791"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-245",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-07-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo 200507-13, correction de la référence CVE.",
+      "revision_date": "2005-07-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva MDKSA-2005:121.",
+      "revision_date": "2005-07-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans OpenLDAP, nss_ldap et pam_ldap permet à un\nutilisateur local mal intentionné de porter atteinte à la\nconfidentialité des données.\n",
+  "title": "Vulnérabilités dans OpenLDAP, nss_ldap et pam_ldap",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de OpenLDAP du 21 juin 2005",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>les versions d'ISC BIND antérieures à 9.5.0-P1 ;</LI>    <LI>les versions d'ISC BIND antérieures à 9.4.2-P1 ;</LI>    <LI>les versions d'ISC BIND antérieures à 9.3.5-P1.</LI>  </UL>  <P>La branche 8.x d'ISC BIND n'est plus maintenue depuis la fin  du mois d'août 2007 et la dernière version disponible 8.4.7-P1  n'est donc pas corrigée.</P>",
+  "content": "## Description\n\nDes vulnérabilités ont été identifiées dans le serveur DNS ISC BIND. En\nparticulier, le serveur ISC BIND utilise une plage de ports source trop\nrestreinte pour émettre des requêtes DNS. Le serveur ne change également\npas assez fréquemment ces valeurs de ports source. Ceci peut être\nexploité sous certaines conditions par une personne malveillante afin de\ncorrompre le cache et rediriger du trafic vers des machines illégitimes.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1447",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1447"
+    }
+  ],
+  "links": [
+    {
+      "title": "Liste des mises à jour OpenBSD 4.3 :",
+      "url": "http://www.openbsd.org/errata43.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD FreeBSD-SA-08:06.bind du 13    juillet 2008 :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-08:06.bind"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1604-1 du 08 juillet 2008 :      http://lists.debian.org/debian-security-announce/2008/msg00185.html",
+      "url": "http://list.debian.org/debian-security-announce/2008/msg00185.html"
+    },
+    {
+      "title": "Référence CVE CVE-2008-1447 :",
+      "url": "http://cve/mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-1447"
+    },
+    {
+      "title": "Bulletin de sécurité Sun Solaris #239392 du 08 juillet 2008    :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-239392-1"
+    },
+    {
+      "title": "Liste des mises à jour OpenBSD 4.2 :",
+      "url": "http://www.openbsd.org/errata42.html"
+    },
+    {
+      "title": "Notes de mise à jour pour la version 9.4.2-P1 :",
+      "url": "http://www.isc.org/sw/bind/view/?release=9.4.2-P1#RELEASE"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1603-1 du 08 juillet 2008 :",
+      "url": "http://list.debian.org/debian-security-announce/2008/msg00184.html"
+    },
+    {
+      "title": "Notes de mise à jour pour la version 9.3.5-P1 :",
+      "url": "http://www.isc.org/sw/bind/view/?release=9.3.5-P1#RELEASE"
+    },
+    {
+      "title": "Bulletin de sécurité HP-UX HPSBUX02351 SSRT080058 du 17    juillet 2008 :",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c01506861"
+    },
+    {
+      "title": "Notes de mise à jour pour la version 9.5.0-P1 :",
+      "url": "http://www.isc.org/sw/bind/view/?release=9.5.0-P1#RELEASE"
+    },
+    {
+      "title": "Site officiel de l'ISC BIND :",
+      "url": "http://www.isc.org/sw/bind/"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RSA-2008:0533-3 du 08 juillet    2008 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2008-0533.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-359",
+  "revisions": [
+    {
+      "description": "ajout des références au CVE et aux bulletins de sécurité Debian, Red Hat et Sun.",
+      "revision_date": "2008-07-09T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2008-07-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux correctifs pour OpenBSD et du bulletin de sécurité HP-UX.",
+      "revision_date": "2008-07-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Des vulnérabilités ont été identifiées dans le serveur DNS ISC BIND.\nElles permettraient à des personnes malveillantes de corrompre, sous\ncertaines conditions, le cache et ainsi de rediriger du trafic vers des\nmachines illégitimes.\n",
+  "title": "Vulnérabilités dans ISC BIND",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de mise à jour ISC BIND du 08 juillet 2008",
+      "url": null
+    }
+  ]
+}

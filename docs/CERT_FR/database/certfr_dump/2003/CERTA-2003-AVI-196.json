@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>HP-UX B.11.00;</LI>    <LI>HP-UX B.11.11.</LI>  </UL>La seconde vulnérabilité est également présente sur les  systèmes suivants :  <UL>    <LI>HP-UX B.10.20;</LI>    <LI>HP-UX B.11.22.</LI>  </UL>",
+  "content": "## Description\n\nUn débordement de mémoire dans les programmes setuid root (swinstall,\nswmodify) du logiciel Software Distributor permet à un utilisateur mal\nintentionné du système d'exécuter du code arbitraire avec les privilèges\ndu super utilisateur root.  \n\nUne vulnérabilité de type chaîne de format présente lors du traitement\nde la variable NLSPATH par des programmes setuid root permet à un\nutilisateur du système d'exécuter du code arbitraire avec les privilèges\ndu super utilisateur root.\n\n## Solution\n\nAppliquer les correctif disponibles sur le site HP (cf section\ndocumentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-196",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-11-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes sur HP-UX permettent à un utilisateur mal\nintentionné ayant déjà un compte sur le système d'éxécuter du code\narbitraire avec les privilèges du super utilisateur (root).\n",
+  "title": "Vulnérabilités sur HP-UX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité SA2003-08 de NSFOCUS",
+      "url": "http://www.nsfocus.com/english/homepage/research/0307.htm"
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité SA2003-07 de NSFOCUS",
+      "url": "http://www.nsfocus.com/english/homepage/research/0307.htm"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mysql 3.x ;",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mysql 5.x antérieures à la version 5.0.24.",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mysql 4.x antérieures à la version 4.1.21 ;",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nTrois vulnérabilités dans le traitement de certaines fonctions sont\nprésentes dans MySQL :\n\n-   Une vulnérabilité est présente dans le traitement de la fonction\n    STR_TO_DATE. Cette vulnérabilité peut être exploitée par un\n    utilisateur mal intentionné, via une requête malveillante contenant\n    la clause STR_TO_DATE, pour réaliser un déni de service du\n    gestionnaire de base de données (CVE-2006-3081) ;\n-   une seconde vulnérabilité présente dans le traitement de la clause\n    DATE_FORMAT peut être exploitée pour réaliser un déni de service\n    (CVE-2006-3469) ;\n-   une troisième vulnérabilité est présente dans la fonction\n    mysql_real_escape_string. Un utilisateur mal intentionné peut, via\n    une requête SQL malveillante, réaliser une attaque par injection\n    SQLi (CVE-2006-2753).\n\nUne autre vulnérabilité est présente sur la fonction MERGE. Cette\nvulnérabilité permet à un utilisateur d'élever ses privilèges sur le\nsystème.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3469",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3469"
+    },
+    {
+      "name": "CVE-2006-2753",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2753"
+    },
+    {
+      "name": "CVE-2006-3081",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3081"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité MySQL 5.x : ",
+      "url": "http://dev.mysql.com/doc/refman/5.0/en/news-5-0-24.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian :",
+      "url": "http://www.vuxml.org/freebsd/pkg-mysql-server.html"
+    },
+    {
+      "title": "Bulletin de sécurité MySQL 4.x :",
+      "url": "http://dev.mysql.com/doc/refman/4.1/en/news-4-1-21.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-350",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-09T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2006-08-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilité présentes dans MySQL peuvent être exploitées par\nun utilisateur mal intentionné pour porter atteinte à l'intégrité et à\nla confidentialité des données ou encore pour élever ses privilèges dans\nle gestionnaire de base de données.\n",
+  "title": "Vulnérabilités dans Mysql",
+  "vendor_advisories": [
+    {
+      "published_at": "2006-08-09",
+      "title": "Bulletin de sécurité MySQL",
+      "url": "http://dev.mysql.com/doc/refman/4.1/en/news-5-0-24.html"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows NT Server 4.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Me ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT 4.0 Terminal Server Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT Workstation 4.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n\\`\\`Help and Support Center'' est un service unifié permettant à\nl'utilisateur d'obtenir divers types d'assistance. Il fournit par\nexemple de la documentation, l'accès à \\`\\`Windows Update'',\nl'assistance de la compabilité matérielle... Il peut être accédé à\nl'aide d'adresses commençant par \\`\\`hcp://'' au lieu du classique\n\\`\\`http://'' du protocole HTTP. Bien que présent sur toutes les\nplateformes, il n'est en principe utilisable que depuis Windows XP.\n\nIl existe un débordement de tampon dans un des composants du protocole\nHCP. Il permet à un utilisateur mal intentionné de faire exécuter du\ncode arbitraire par le biais d'un message ou d'une page Internet au\nformat HTML.\n\n## Contournement provisoire\n\nSupprimer le support du protocole HCP dans la base de registre.\n\n## Solution\n\nAppliquer le correctif fourni par Microsoft suivant la version du\nsystème d'exploitation (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité MS03-044 de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms03-044.asp"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-169",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-10-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance avec les droits de l'utilisateur courant"
+    }
+  ],
+  "summary": "Une adresse réticulaire (<span class=\"textit\">\\`\\`URL''</span>)\nhabilement conçue permet d'exécuter du code arbitraire lorsque\nl'utilisateur courant clique desssus. Les droits correspondent à ceux de\nce dernier (Administrateur dans le cas d'une installation personnelle\npar défaut).\n",
+  "title": "Vulnérabilité dans le protocole \"Help and Support Center\" de Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS03-044",
+      "url": null
+    }
+  ]
+}

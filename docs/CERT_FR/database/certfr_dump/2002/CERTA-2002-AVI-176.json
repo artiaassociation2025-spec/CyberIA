@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Serveur Apache HTTP versions 2.0 à 2.0.39 incluse sur les  plates-formes Windows, OS2 et Netware.</P>",
+  "content": "## Description\n\nUne vulnérabilité dans les versions 2.0 du serveur Apache HTTP permet à\nun utilisateur distant mal intentionné d'avoir accès à des informations\nnon autorisées, et de provoquer un déni de service.\n\n## Contournement provisoire\n\nDans le fichier httpd.conf, ajouter la ligne suivante avant la première\ninstruction Alias ou Redirect :\n\n`RedirectMatch 400 \"\\\\\\.\\.\"`\n\n## Solution\n\nLa version 2.0.40 corrige la vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de la fondation Apache Software :",
+      "url": "http://httpd.apache.org/info/security_bulletin_20020809a.txt"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-176",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès à des informations non autorisées"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité du serveur Apache 2.0",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de la fondation Apache Sotfware",
+      "url": null
+    }
+  ]
+}

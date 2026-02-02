@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft RDP version 5.0&nbsp;;</LI>    <LI>Microsoft RDP version 5.1&nbsp;;</LI>    <LI>Microsoft RDP version 5.2&nbsp;;</LI>    <LI>Microsoft RDP version 6.0&nbsp;;</LI>    <LI>Microsoft RDP version 6.1.</LI>  </UL>  <P>Le Client Connexion Bureau à distance pour Mac 2.0 est  également affecté.</P>",
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans la Connexion Bureau à\ndistance de Microsoft. La première provient du fait que les paramètres\nrenvoyés par le serveur RDP ne sont pas correctement traités. La seconde\nconcerne le contrôle ActiveX du client. Dans les deux cas, seuls les\nclients RDP sont donc affectés.\n\nCes vulnérabilités pourraient permettre l'exécution de code à distance\nsi un attaquant parvenait à persuader un utilisateur des Services de\nterminaux (Terminal Services) de se connecter à un serveur RDP\nmalveillant ou si un utilisateur visitait un site Web spécialement\nconçu.\n\n## Solution\n\nSe référer au bulletin de sécurité MS09-044 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1133",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1133"
+    },
+    {
+      "name": "CVE-2009-1929",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1929"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-332",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été identifiées dans la Connexion Bureau à\ndistance de Microsoft (ou <span class=\"textit\">Remote Desktop\nProtocol</span>, RDP). Ces vulnérabilités pourraient permettre\nl'exécution de code à distance si un attaquant parvenait à persuader un\nutilisateur des Services de terminaux (Terminal Services) de se\nconnecter à un serveur RDP malveillant ou si un utilisateur visitait un\nsite Web spécialement conçu.\n",
+  "title": "Multiples vulnérabilités dans la Connexion Bureau à distance Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS09-044 du 11 août 2009",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-044.mspx"
+    }
+  ]
+}

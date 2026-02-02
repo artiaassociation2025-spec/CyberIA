@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Vulnérabilité indépendante de la plate-forme.</P>",
+  "content": "## Description\n\novactiond est un élément de HP Openview et Tivoli Netview\n\nUne vulnérabilité de ces logiciels permet à un utilisateur mal\nintentionné d'accéder à distance aux privilèges de ovactiond au moyen\nd'une commande SNMP particulière.\n\nPour HP Openview la configuration par défaut permet l'exploitation de\ncette vulnérabilité. En ce qui concerne Tivoli Netview, une modification\nde la configuration peut rendre le système vulnérable.\n\nSous Unix, il s'agit le plus souvent des privilèges de bin. Sous Windows\nNT, LocalSystem.\n\n## Solution\n\nAppliquer le correctif selon le système sur lequel est installé\novactiond.\n\n-   Pour HP-UX 11.00 : télécharger PHSS_23780.\n-   Pour HP-UX 10.20 : télécharger PHSS_23779.\n-   Pour Solaris 2.x : télécharger PSOV_02905.\n-   Pour Windows NT4 ou 2000 : télécharger le correctif NNM_00698.\n\nSur le site de HP :\n\n    http://ovweb.external.hp.com/cpe/patches/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité HP :",
+      "url": "http://www.itresourcecenter.hp.com/"
+    },
+    {
+      "title": "Avis de sécurité du CIAC :",
+      "url": "http://www.ciac.org/ciac/bulletins/l-102.shtml"
+    },
+    {
+      "title": "Avis de sécurité du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2001-24.html"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-087",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-08-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire avec des privilèges élevés"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut exécuter du code arbitraire avec les\nprivilèges du <span class=\"textit\">daemon</span> ovactiond.\n",
+  "title": "Vulnérabilité de HP Openview NNM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis du CERT/CC CA-2001-24",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité HP",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis du CIAC L-102",
+      "url": null
+    }
+  ]
+}

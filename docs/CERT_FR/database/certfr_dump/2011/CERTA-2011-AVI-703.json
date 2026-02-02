@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>JBoss Enterprise Portal Platform,  versions antérieures à la version 5.2.0.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent JBoss :\n\n-   la page de connexion au serveur permet de rediriger l'utilisateur\n    vers un site web quelconque ;\n-   dans certaines configurations, l'authentification de l'utilisateur\n    peut être contournée ;\n-   de l'injection de code indirecte est possible dans plusieurs\n    programmes de JBoss.\n\n## Solution\n\nLa version 5.2.0 de JBoss corrige ces vulnérabilités.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-4085",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4085"
+    },
+    {
+      "name": "CVE-2011-4580",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4580"
+    },
+    {
+      "name": "CVE-2011-2941",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2941"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2011:1822 du 14 décembre    2011 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2011-1822.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-703",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-12-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent JBoss. Elles permettent de contourner\nla politique de sécurité du serveur ou de réaliser de l'injection de\ncode indirecte (XSS).\n",
+  "title": "Vulnérabilités dans JBoss",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RedHat RHSA-2011:1822 du 14 décembre 2011",
+      "url": null
+    }
+  ]
+}

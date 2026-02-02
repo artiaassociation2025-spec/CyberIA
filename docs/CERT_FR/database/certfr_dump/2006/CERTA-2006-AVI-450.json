@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Linux Kernel versions antérieures à 2.6.18.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Linux Kernel versions antérieures à 2.4.34-pre4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur dans la fonction clip_mkip() peut permettre à un utilisateur\nmal intentionné de réaliser un déni de service à distance (via un Kernel\npanic) sur une machine utilisant la technologie ATM (Asynchronous\nTransfer Mode).\n\n## Solution\n\nLes versions du noyau Linux 2.4.34-pre4 et 2.6.18 corrigent le\nproblème.  \nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4997",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4997"
+    }
+  ],
+  "links": [
+    {
+      "title": "Journal de changement du noyau Linux 2.6 :",
+      "url": "http://www.kernel.org/pub/linux/kernel/v2.6/ChangeLog-2.6.18"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0689 du 05 octobre    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0689.html"
+    },
+    {
+      "title": "Journal de changement du noyau Linux 2.4 :",
+      "url": "http://www.kernel.org/pub/linux/kernel/v2.4/testing/patch-2.4.34.log"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-450",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le noyau Linux peut permettre à un utilisateur\nmal intentionné de réaliser un déni de service à distance.\n",
+  "title": "Vulnérabilité dans le noyau Linux 2.4.x",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Secunia du 11 octobre 2006",
+      "url": null
+    }
+  ]
+}

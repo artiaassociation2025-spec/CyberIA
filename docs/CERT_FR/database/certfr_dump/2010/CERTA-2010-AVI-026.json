@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BusinessObjects XI 3.x ( 12.x) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SAP WebAS 6.x et 7.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités concernent le produit BusinessObjects :\n\n-   plusieurs manques de vérification des données entrées par\n    l'utilisateur permettent de réaliser des injections de code\n    indirectes ;\n-   plusieurs manques de vérification dans les redirecteurs permettent\n    de détourner les utilisateurs vers des sites tiers à leur insu ;\n-   plurieurs vulnérabilités permettent à un utilisateur malveillant\n    d'accéder à des informations sensibles.\n\nUne vulnérabilité concerne SAP WebAS. Elle permet à un utilisateur\nmalveillant local ou distant, d'exécuter du code arbitraire, de modifier\nou de lire les données sur le serveur vulnérable.\n\n## Solution\n\nPour BusinessObjects, les correctifs sont les fixpacks 1.8 et 2.3.\n\nPour SAP WebAS, les correctifs sont accessibles par le bulletin SAP Note\n1412112 (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de téléchargement de BusinessObjects :",
+      "url": "http://www.sap.com/solutions/sapbusinessobjects/index.epx"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-026",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-01-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent les produits SAP permettant de\ncompromettre le serveur vulnérable ou de tromper ses utilisateurs.\n",
+  "title": "Vulnérabilités des produits SAP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "SAP Note 1412112",
+      "url": "https://service.sap.com/sap/support/notes/1414112"
+    }
+  ]
+}

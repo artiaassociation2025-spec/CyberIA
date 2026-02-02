@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Websense Enterprise 5.5.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Websense Enterprise 6.3.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans l'application Websense\nEnterprise. Le contenu de requêtes HTTP ne serait pas correctement\nfiltré. Certains champs User-Agent bénéficient d'un traitement\nprivilégié.\n\nUn utilisateur local pourrait donc usurper l'un de ces champs, afin de\ncontourner la politique de filtrage mise en place.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-6511",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6511"
+    }
+  ],
+  "links": [
+    {
+      "title": "Annonce de sécurité IBM ISS 39023 du 12 décembre 2007 :",
+      "url": "http://xforce.iss.net/xforce/xfdb/39023"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-561",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans l'application Websense\nEnterprise. Le contenu de requêtes HTTP ne serait pas correctement\nfiltré, ce qui permettrait à un utilisateur de contourner la politique\nde sécurité mise en place.\n",
+  "title": "Vulnérabilité de Websense Enterprise",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Websense KB 976 du 12 décembre 2007",
+      "url": "http://www.websense.com/SupportPortal/SupportKbs/976.aspx"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mitel MiCollab versions R9.4 SP1 et antérieures",
+      "product": {
+        "name": "MiCollab",
+        "vendor": {
+          "name": "Mitel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MiVoice Business Express versions R8.1 et antérieures",
+      "product": {
+        "name": "MiVoice",
+        "vendor": {
+          "name": "Mitel",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\n## Contournement provisoire\n\nMitel déclare fournir un script qui permet de mettre en place une mesure\nde contournement provisoire pour Micollab versions R8.0 à R9.4 ainsi que\npour les versions R8.0 et R8.1 de MiVoice Business Express.\n\nLa version R9.4 SP1 FP1 de Micollab est prévue pour mars 2022.\n",
+  "cves": [
+    {
+      "name": "CVE-2022-26143",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-26143"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-173",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-02-23T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de l'identifiant CVE CVE-2022-26143.",
+      "revision_date": "2022-03-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Mitel MiCollab et MiVoice\nBusiness Express. Elle permet à un attaquant de provoquer une exécution\nde code arbitraire à distance, un déni de service à distance et une\natteinte à la confidentialité des données.\n",
+  "title": "Vulnérabilité dans Mitel MiCollab et MiVoice Business Express",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Mitel 22-0001 du 22 février 2022",
+      "url": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-22-0001"
+    }
+  ]
+}

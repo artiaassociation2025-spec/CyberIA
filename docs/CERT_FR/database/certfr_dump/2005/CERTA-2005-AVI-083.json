@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>PuTTY 0.x.</P>",
+  "content": "## Description\n\nPuTTY est une mise en œuvre libre de Telnet et SSH pour les\nplates-formes Windows et Linux.\n\nDeux vulnérabilités de type débordement d'entier (integer overflow)\nprésente dans la fonction fxp_readdir_recv() et dans la fonction\nsftp_pkt_getstring() permettent à un utilisateur mal intentionné, via un\nserveur SFTP (SSH File Tranfer Protocol) qui retourne des réponses\nmalicieusement construites d'exécuter du code arbitraire à distance sur\nle système vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour disponible :",
+      "url": "http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200502-28 / PuTTY du 21    février 2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200502-28.xml"
+    },
+    {
+      "title": "Annonce de sécurité ``PuTTY vulnérability    vuln-sftp-string'' du 20 février 2005 :",
+      "url": "http://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/vuln-sftp-string.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour PuTTY du 20 février 2005    :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Annonce de sécurité ``PuTTY vulnérability    vuln-sftp-readdir'' du 20 février 2005 :",
+      "url": "http://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/vuln-sftp-readdir.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-083",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-02-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo et FreeBSD.",
+      "revision_date": "2005-02-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans le logiciel PuTTY permet à un\nindividu mal intentionné d'exécuter du code arbitraire à distance avec\nles droits de l'utilisateur ayant démarré PuTTY.\n",
+  "title": "Vulnérabilité dans PuTTY",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité de l'éditeur du 20 février 2005",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Drupal versions 6.x antérieures à 6.5.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Drupal versions 5.x antérieures à 5.11 ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans Drupal :\n\n-   des utilisateurs non privilégiés peuvent attacher des fichiers au\n    contenu (Drupal 6.x) ou récupérer des fichiers attachés au contenu\n    (Drupal 5.x) ;\n-   un problème dans le module de gestion des utilisateurs permet de se\n    connecter malgré des restrictions d'accès ;\n-   le module BlogAPI ne valide pas correctement certains champs ;\n-   une vulnérabilité dans le module node API permet de contourner la\n    validation de certaines pages (Drupal 5.x).\n\n## Solution\n\nMettre Drupal à jour en version 5.11 ou 6.5 (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2008-AVI-488",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-10-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans <span class=\"textit\">Drupal</span>\npermettent de contourner la politique de sécurité et d'accéder à\ncertains fichiers.\n",
+  "title": "Multiples vulnérabilités dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Drupal SA-2008-060 du 08 octobre 2008",
+      "url": "http://drupal.org/node/318706"
+    }
+  ]
+}

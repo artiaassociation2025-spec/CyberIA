@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "DXP versions antérieures à 2023.Q4.9",
+      "product": {
+        "name": "DXP",
+        "vendor": {
+          "name": "Liferay",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Portal versions 7.4.x antérieures à 7.4.3.113",
+      "product": {
+        "name": "Portal",
+        "vendor": {
+          "name": "Liferay",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "DXP versions antérieures à 2024.Q1.1 et 2024.Q2.0",
+      "product": {
+        "name": "DXP",
+        "vendor": {
+          "name": "Liferay",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-43814",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-43814"
+    },
+    {
+      "name": "CVE-2025-43806",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-43806"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0811",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-09-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Liferay. Elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans Liferay",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-09-22",
+      "title": "Bulletin de sécurité Liferay cve-2025-43806",
+      "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2025-43806"
+    },
+    {
+      "published_at": "2025-09-22",
+      "title": "Bulletin de sécurité Liferay cve-2025-43814",
+      "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2025-43814"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "NetBSD 1.4.x versions 1.4.3 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenBSD version 3.0 ;",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD versions 4.4 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetBSD 1.5.x versions 1.5.2 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa commande ptrace est une fonction de débuggage qui permet de contrôler\nl'exécution d'un processus fils, et d'éditer son image mémoire. Il y a\ndes restrictions sur son utilisation avec des processus ayant le drapeau\nSUID ou SGID activé.\n\nUne vulnérabilité de ces contrôles dans les noyaux BSD permet à un\nutilisateur mal intentionné d'obtenir les droits de l'utilisateur root.\n\n## Solution\n\nAppliquer les correctifs des éditeurs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité OpenBSD :",
+      "url": "http://www.openbsd.org/security.html"
+    },
+    {
+      "title": "Avis de sécurité NetBSD SA-2002-001 :",
+      "url": "http://www.netbsd.org/Security/"
+    },
+    {
+      "title": "Avis de sécurité FreeBSD SA-02-08 :",
+      "url": "http://www.freebsd.org/security/index.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-016",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-01-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, en local, obtenir les droits de\nl'utilisateur <span class=\"textit\">root</span> en utilisant la fonction\n<span class=\"textit\">ptrace</span>.\n",
+  "title": "Vulnérabilité de ptrace dans les systèmes BSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité NetBSD 2002-001",
+      "url": null
+    }
+  ]
+}

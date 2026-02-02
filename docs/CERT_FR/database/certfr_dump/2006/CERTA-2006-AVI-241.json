@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les plates-formes suivantes sont  affectées par la vulnérabilité :  <UL>    <LI>Microsoft Windows 2000 SP4 ;</LI>    <LI>Microsoft Windows XP SP1, SP2 et x64 Edition ;</LI>    <LI>Microsoft Windows XP x64 Edition ;</LI>    <LI>Microsoft Windows 2003 Server sans et avec SP1 ;</LI>    <LI>Microsoft Windows 2003 Server sans et avec SP1 pour    processeurs Itanium ;</LI>    <LI>Microsoft Windows 2003 Server x64 Edition ;</LI>    <LI>Microsoft Windows 98, 98SE et Me ;</LI>  </UL>Les composants suivants sont affectés par la vulnérabilité :  <UL>    <LI>Microsoft JScript 5.1 sous Microsoft Windows 2000 SP4    ;</LI>    <LI>Microsoft JScript 5.5 sous Microsoft Windows 2000 SP4    ;</LI>    <LI>Microsoft JScript 5.6 sous Microsoft Windows XP SP1 et SP2    ;</LI>    <LI>Microsoft JScript 5.6 sous Microsoft Windows XP x64 Edition    ;</LI>    <LI>Microsoft JScript 5.6 sous Microsoft Windows 2003 sans et    avec SP1 ;</LI>    <LI>Microsoft JScript 5.6 sous Microsoft Windows 2003 sans et    avec SP1 pour processeurs Itanium ;</LI>    <LI>Microsoft JScript 5.6 sous Microsoft Windows 2003 x64    Edition ;</LI>    <LI>Microsoft JScript 5.6 sous Microsoft Windows 98, 98SE et    Me.</LI>  </UL></p>",
+  "content": "## Description\n\nUne vulnérabilité dans Microsoft JScript permet à un utilisateur mal\nintentionné de réaliser un déni de service ou d'exécuter du code\narbitraire à distance sur la plate-forme vulnérable au moyen d'un script\nJScript malicieusement construit. L'exploitation de cette vulnérabilité\npeut se faire au moyen d'un message électronique ou un site Internet\nmalicieux.\n\n## Contournement provisoire\n\n-   Désactiver le Active Scripting. Pour cela, dans l'onglet Sécurité\n    des options Microsoft Internet Explorer, cliquer sur le bouton\n    Personnaliser le niveau..., puis dans la section Script et Active\n    Scripting, cocher Désactiver ;\n-   modifier la liste des contrôles d'accès (ACL) à la bibliothèque\n    partagée jscript.dll. Pour cela, taper la commande echo y\\|cacls\n    %windir%/system32/jscript.dll /d everyone puis relancer le\n    navigateur ;\n-   utiliser un navigateur alternatif ;\n-   ne naviguer que sur des sites Internet de confiance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-1313",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1313"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2006-AVI-241",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-06-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de Microsoft JScript",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-023 du 13 juin 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-023.mspx"
+    }
+  ]
+}

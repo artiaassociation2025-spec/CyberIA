@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Debian Sid (unstable) : versions antérieures à 4.76-1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Debian Squeeze (stable) : versions antérieures à 4.72-6+squeeze2",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur dans le code de traitement des signatures DKIM (DomainKeys\nIdentified Mail) utilisé par Exim, permet à une personne malveillante\nd'exécuter du code arbitraire à distance au moyen d'un courrier\nélectronique spécialement conçu.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1407",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1407"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Fedora FEDORA-2011-7059 du 17 mai 2011    (exim-4.76-1.fc13) :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2011-May/060227.html"
+    },
+    {
+      "title": "Bulletin de sécurité Fedora FEDORA-2011-7047 du 17 mai 2011    (exim-4.76-1.fc14) :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2011-May/060220.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-297",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-05-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout des correctifs Fedora.",
+      "revision_date": "2011-05-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans l'agent de transport de courrier par défaut de\nDebian, Exim, permet à une personne malveillante d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilité dans Debian Exim",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA 2236 du 12 mai 2011",
+      "url": "http://www.debian.org/security/2011/dsa-2236"
+    }
+  ]
+}

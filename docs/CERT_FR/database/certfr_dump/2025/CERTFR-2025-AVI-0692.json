@@ -1,0 +1,107 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "activerecord versions 7.2.x antérieures à 7.2.2.2",
+      "product": {
+        "name": "activerecord",
+        "vendor": {
+          "name": "Ruby on Rails",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "activestorage versions 8.x antérieures à 8.0.2.1",
+      "product": {
+        "name": "activestorage",
+        "vendor": {
+          "name": "Ruby on Rails",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "activestorage versions antérieures à 7.1.5.2",
+      "product": {
+        "name": "activestorage",
+        "vendor": {
+          "name": "Ruby on Rails",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "activerecord versions antérieures à 7.1.5.2",
+      "product": {
+        "name": "activerecord",
+        "vendor": {
+          "name": "Ruby on Rails",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "activestorage versions 7.2.x antérieures à 7.2.2.2",
+      "product": {
+        "name": "activestorage",
+        "vendor": {
+          "name": "Ruby on Rails",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "activerecord versions 8.x antérieures à 8.0.2.1",
+      "product": {
+        "name": "activerecord",
+        "vendor": {
+          "name": "Ruby on Rails",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-24293",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-24293"
+    },
+    {
+      "name": "CVE-2025-55193",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-55193"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0692",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-08-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Ruby on Rails. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans Ruby on Rails",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-08-13",
+      "title": "Bulletin de sécurité Ruby on Rails 89670",
+      "url": "https://discuss.rubyonrails.org/t/cve-2025-24293-active-storage-allowed-transformation-methods-potentially-unsafe/89670"
+    },
+    {
+      "published_at": "2025-08-13",
+      "title": "Bulletin de sécurité Ruby on Rails 89669",
+      "url": "https://discuss.rubyonrails.org/t/cve-2025-55193-ansi-escape-injection-in-active-record-logging/89669"
+    }
+  ]
+}

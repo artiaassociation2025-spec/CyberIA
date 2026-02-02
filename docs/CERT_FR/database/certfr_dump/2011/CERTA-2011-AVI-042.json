@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM DB2 9.5 ;",
+      "product": {
+        "name": "Db2",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM DB2 9.7 ;",
+      "product": {
+        "name": "Db2",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM DB2 9.1.",
+      "product": {
+        "name": "Db2",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été corrigées dans IBM DB2. En\nparticulier :\n\n-   une vulnérabilité de type dépassement de tampon dans DB2\n    Administrative Server(DAS) permet à un utilisateur malintentionné\n    d'exécuter du code arbitraire à distance (IC71203, IC72028 et\n    IC72029) ;\n-   une vulnérabilité non spécifiée permet à un utilisateur\n    malintentionné de contourner la politique de sécurité lors de la\n    révocation des droits DBADM (IC66811, IC66814 et IC66815).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité ISS X-Force 65008 du 28 janvier 2011 :",
+      "url": "http://xforce.iss.net/xforce/xfdb/65008"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-042",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-02-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été corrigées dans IBM DB2. Une d'entre\nelles peut être exploitée par une personne malintentionnée afin\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans IBM DB2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg21426108 du 28 janvier 2011",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21426108"
+    }
+  ]
+}

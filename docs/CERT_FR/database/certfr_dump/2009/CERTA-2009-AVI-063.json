@@ -1,0 +1,31 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>TYPO3 versions 3.x et 4.x</p>",
+  "content": "## Description\n\nDeux vulnérabilités de TYPO3 sont publiées :\n\n-   la première réside dans un défaut de validation de données entrées\n    par l'utilisateur. Elle permet à un utilisateur malveillant de\n    réaliser de l'injection de code indirecte (XSS ou cross-site\n    scripting) ;\n-   la deuxième réside dans une faiblesse du mécanisme de suivi des\n    accès aux pages, jumpUrl. Son exploitation permet à un utilisateur\n    malveillant non authentifié de lire des informations sensibles.\n    L'attaquant peut également exécuter du code arbitraire à distance.\n\nUn code d'exploitation de la seconde vulnérabilité est disponible sur\nl'internet.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité TYPO3-SA-2009-002 du 10 février 2009 :",
+      "url": "http://typo3.org/teams/security/security-bulletins/typo3-sa-2009-002/"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-063",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-02-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Des vulnérabilités dans TYPO3 permettent à un utilisateur malveillant\nd'exécuter du code à distance et de porter atteinte à la confidentialité\nde données.\n",
+  "title": "Vulnérabilités de TYPO3",
+  "vendor_advisories": []
+}

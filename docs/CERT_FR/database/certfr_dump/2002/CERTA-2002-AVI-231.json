@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tous les commutateurs Catalyst  utilisant une version de CatOS comprise entre les versions 5.4 et  7.3 incluse avec les caractères <TT>cv</TT> présents dans le nom  de l'image.</p>",
+  "content": "## Description\n\nCertains commutateurs Cisco de la série Catalyst possèdent un serveur\nHTTP utilisé par le logiciel Cisco View (supervision de réseaux).\n\nUne vulnérabilité de type débordement de mémoire est présente dans ce\nserveur HTTP et permet à un utilisateur mal intentionné de forcer, à\ndistance, le redémarrage du commutateur (reset).\n\n## Contournement provisoire\n\n-   Ne pas démarrer le serveur HTTP si celui-ci n'est pas utilisé ;\n-   Filtrer le port 80/TCP (HTTP) sur le garde barrière afin d'éviter\n    une attaque provenant de l'extérieur.\n\n## Solution\n\nSe référer au bulletin de sécurité Cisco (cf. section Documentation)\npour l'obtention d'un correctif.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de Sécurité \"Cisco CatOS Embedded HTTP Server Buffer  Overflow\" de Cisco :",
+      "url": "http://www.cisco.com/warp/public/707/catos-http-overflow-vuln.shtml"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-231",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le service HTTP permet à un utilisateur\nmal intentionné de forcer, à distance, le redémarrage des commutateurs.\n",
+  "title": "Vulnérabilité du serveur HTTP des commutateurs Catalyst de Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de Sécurité \"Cisco CatOS Embedded HTTP Server Buffer Overflow\" de Cisco",
+      "url": null
+    }
+  ]
+}

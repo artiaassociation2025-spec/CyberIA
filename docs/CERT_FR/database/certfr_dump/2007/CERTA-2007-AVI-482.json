@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Plone versions 2.5.4 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Plone versions 3.0.2 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été découverte dans les composants statusmessages et\nlinkintegrity du logiciel de gestion de contenu Plone. Des données\nréseau spécifiquement constituées peuvent être interprétées par Plone\ncomme des Python pickles (mécanisme permettant de transposer un objet\nPython en chaîne de caractères et inversement), permettant ainsi\nd'exécuter du code Python dans le contexte de Zope/Plone.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5741",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5741"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-482",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-11-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans deux composants de <span\nclass=\"textit\">Plone</span> permet d'exécuter du code Python à distance.\n",
+  "title": "Vulnérabilité dans Plone",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Plone du 06 novembre 2007",
+      "url": "http://plone.org/about/security/advisories/cve-2007-5741"
+    }
+  ]
+}

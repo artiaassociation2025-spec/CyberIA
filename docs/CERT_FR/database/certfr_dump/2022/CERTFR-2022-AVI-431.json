@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<ul> <li>Liferay Portal versions 7.4.x antérieures à 7.4 GA2 (7.4.1)</li> <li>Liferay Portal version 7.3.7 GA8 (7.3.7) sans le dernier correctif de sécurité</li> <li>Liferay Portal version 7.2 GA2 (7.2.1) sans le dernier correctif de sécurité</li> </ul> <p>Les versions 7.1.x de Liferay Portal ne bénéficient pas du correctif de sécurité, l'éditeur conseille une mise à niveau vers Liferay Portal version 7.2.1 avec le dernier correctif de sécurité.</p> ",
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-26595",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-26595"
+    },
+    {
+      "name": "CVE-2022-26596",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-26596"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-431",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-05-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Liferay Portal.\nElles permettent à un attaquant de provoquer une injection de code\nindirecte à distance (XSS).\n",
+  "title": "Multiples vulnérabilités dans Liferay Portal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Liferay du 10 mai 2022",
+      "url": "https://portal.liferay.dev/learn/security/known-vulnerabilities/-/asset_publisher/HbL5mxmVrnXW/content/cve-2022-26596-stored-xss-with-template-name"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Liferay du 24 janvier 2022",
+      "url": "https://portal.liferay.dev/learn/security/known-vulnerabilities/-/asset_publisher/HbL5mxmVrnXW/content/cve-2022-26595-unauthorized-access-to-site-group-list"
+    }
+  ]
+}

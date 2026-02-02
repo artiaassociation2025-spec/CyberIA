@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "H2 Console versions antérieures à 2.0.206",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-42392",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-42392"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-013",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-01-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans la base de données H2. Elle\npermet à un attaquant de provoquer une exécution de code arbitraire à\ndistance.\n\nCette vulnérabilité est similaire à la vulnérabilité Log4Shell décrite\ndans l'alerte\n[CERTFR-2021-ALE-022](/alerte/CERTFR-2021-ALE-022/)\npubliée par le CERT-FR.  \n<span class=\"mx_MTextBody mx_EventTile_content\"><span\nclass=\"mx_EventTile_body\" dir=\"auto\">La configuration par défaut de la\nconsole H2 n'autorise pas de connexion à distance, ce service est\nprobablement moins exposé que ceux vulnérables à log4j.</span></span>\n",
+  "title": "Vulnérabilité dans la base de données H2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité base de données H2 du 05 janvier 2022",
+      "url": "https://github.com/h2database/h2database/security/advisories/GHSA-h376-j262-vhq6"
+    }
+  ]
+}

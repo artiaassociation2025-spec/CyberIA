@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GravityZone Update Server versions antérieures à 3.5.2.689",
+      "product": {
+        "name": "GravityZone Update Server",
+        "vendor": {
+          "name": "Bitdefender",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GravityZone Console versions antérieures à 6.41.2-1",
+      "product": {
+        "name": "GravityZone Console",
+        "vendor": {
+          "name": "Bitdefender",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-2243",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-2243"
+    },
+    {
+      "name": "CVE-2025-2244",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-2244"
+    },
+    {
+      "name": "CVE-2025-2245",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-2245"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0299",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-04-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Falsification de requêtes côté serveur (SSRF)"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Bitdefender. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et une falsification de requêtes côté serveur (SSRF).",
+  "title": "Multiples vulnérabilités dans les produits Bitdefender",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-04-04",
+      "title": "Bulletin de sécurité Bitdefender insecure-php-deserialization-issue-in-gravityzone-console-va-12634",
+      "url": "https://www.bitdefender.com/support/security-advisories/insecure-php-deserialization-issue-in-gravityzone-console-va-12634/"
+    },
+    {
+      "published_at": "2025-04-04",
+      "title": "Bulletin de sécurité Bitdefender server-side-request-forgery-in-gravityzone-update-server-using-null-bytes-va-12646",
+      "url": "https://www.bitdefender.com/support/security-advisories/server-side-request-forgery-in-gravityzone-update-server-using-null-bytes-va-12646/"
+    },
+    {
+      "published_at": "2025-04-04",
+      "title": "Bulletin de sécurité Bitdefender ssrf-in-gravityzone-console-via-dns-truncation-va-12634",
+      "url": "https://www.bitdefender.com/support/security-advisories/ssrf-in-gravityzone-console-via-dns-truncation-va-12634/"
+    }
+  ]
+}

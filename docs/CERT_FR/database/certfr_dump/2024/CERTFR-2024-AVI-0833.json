@@ -1,0 +1,112 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Meraki MX et Z versions postérieures à 16.2 et antérieures à 18.211.2",
+      "product": {
+        "name": "Meraki MX",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Nexus Dashboard Fabric Controller  versions 12.0 antérieures à 12.2.2",
+      "product": {
+        "name": "Nexus Dashboard Fabric Controller",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "Les périphériques Small Business RV340, RV340W, RV345, et RV345P Dual WAN Gigabit VPN ne sont plus supportés et ne seront pas mis à jour par Cisco.",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2024-20501",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20501"
+    },
+    {
+      "name": "CVE-2024-20499",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20499"
+    },
+    {
+      "name": "CVE-2024-20449",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20449"
+    },
+    {
+      "name": "CVE-2024-20393",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20393"
+    },
+    {
+      "name": "CVE-2024-20500",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20500"
+    },
+    {
+      "name": "CVE-2024-20432",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20432"
+    },
+    {
+      "name": "CVE-2024-20502",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20502"
+    },
+    {
+      "name": "CVE-2024-20513",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20513"
+    },
+    {
+      "name": "CVE-2024-20498",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20498"
+    },
+    {
+      "name": "CVE-2024-20470",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20470"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0833",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-10-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Cisco. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service à distance.",
+  "title": "Multiples vulnérabilités dans les produits Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": "2024-10-02",
+      "title": "Bulletin de sécurité Cisco cisco-sa-ndfc-ptrce-BUSHLbp",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ndfc-ptrce-BUSHLbp"
+    },
+    {
+      "published_at": "2024-10-02",
+      "title": "Bulletin de sécurité Cisco cisco-sa-ndfc-cmdinj-UvYZrKfr",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ndfc-cmdinj-UvYZrKfr"
+    },
+    {
+      "published_at": "2024-10-02",
+      "title": "Bulletin de sécurité Cisco cisco-sa-meraki-mx-vpn-dos-QTRHzG2",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-meraki-mx-vpn-dos-QTRHzG2"
+    },
+    {
+      "published_at": "2024-10-02",
+      "title": "Bulletin de sécurité Cisco cisco-sa-rv34x-privesc-rce-qE33TCms",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-rv34x-privesc-rce-qE33TCms"
+    }
+  ]
+}

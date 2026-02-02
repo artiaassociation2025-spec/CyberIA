@@ -1,0 +1,140 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMware ESX Server 3.0.x",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESX Server 2.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans le produit VMware\nESX Server. Celles-ci concernent :\n\n-   Une mauvaise gestion des droits sur les clés SSL générées par\n    vmware-config (CVE-2006-3589) ;\n-   certaines bibilothèques OpenSSL (CVE-2006-2937, CVE-2006-2940,\n    CVE-2006-4339, CVE-2006-4343, CVE-2006-3738) ;\n-   OpenSSH (CVE-2004-2069, CVE-2006-0225, CVE-2003-0386, CVE-2006-4924,\n    CVE-2006-5051, CVE-2006-5794) ;\n-   un débordement de tampon dans la fonction repr() utilisée par\n    certaines applications en Python (CVE-2006-4980) ;\n-   un problème concernant les fichiers de disques virtuels ( .vmdk ou\n    .dsk ) nouvellement créés, qui contiennent des blocs de fichiers de\n    disques récemment effacés.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4339",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4339"
+    },
+    {
+      "name": "CVE-2006-3589",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3589"
+    },
+    {
+      "name": "CVE-2006-2940",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2940"
+    },
+    {
+      "name": "CVE-2004-2069",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2004-2069"
+    },
+    {
+      "name": "CVE-2006-4924",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4924"
+    },
+    {
+      "name": "CVE-2003-0386",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2003-0386"
+    },
+    {
+      "name": "CVE-2006-4343",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4343"
+    },
+    {
+      "name": "CVE-2006-5794",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5794"
+    },
+    {
+      "name": "CVE-2006-3738",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3738"
+    },
+    {
+      "name": "CVE-2006-0225",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0225"
+    },
+    {
+      "name": "CVE-2006-2937",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2937"
+    },
+    {
+      "name": "CVE-2006-5051",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5051"
+    },
+    {
+      "name": "CVE-2006-4980",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4980"
+    }
+  ],
+  "links": [
+    {
+      "title": "Patch pour VMWare ESX Server 2.5.3 :",
+      "url": "http://www.vmware.com/support/esx25/doc/esx-253-200612-patch.html"
+    },
+    {
+      "title": "Patch pour VMware ESX Server 2.0.2 :",
+      "url": "http://www.vmware.com/support/esx2/doc/esx-202-200612-patch.html"
+    },
+    {
+      "title": "Patch pour VMware ESX Server 3.0.0 :",
+      "url": "http://www.vmware.com/support/vi3/doc/esx-3069097-patch.html"
+    },
+    {
+      "title": "Patch pour VMWare ESX Server 2.1.3 :",
+      "url": "http://www.vmware.com/support/esx21/doc/esx-213-200612-patch.html"
+    },
+    {
+      "title": "Patch pour VMware ESX Server 2.5.4 :",
+      "url": "http://www.vmware.com/support/esx25/doc/esx-254-200612-patch.html"
+    },
+    {
+      "title": "Patch pour VMware ESX Server 3.0.1 :",
+      "url": "http://www.vmware.com/support/vi3/doc/esx-9986131-patch.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-026",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées pour les produits VMware\nESX Server 2.x et 3.0.x.\n",
+  "title": "Multiples vulnérabilités dans VMware",
+  "vendor_advisories": [
+    {
+      "published_at": "2007-01-09",
+      "title": "Bulletin de sécurité VMware VMSA-2007-0001",
+      "url": "None"
+    }
+  ]
+}

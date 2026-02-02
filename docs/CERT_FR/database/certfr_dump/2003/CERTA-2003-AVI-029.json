@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>OpenSSL versions antérieures à 0.9.6i et 0.9.7a.</P>",
+  "content": "## Description\n\nLors d'une session SSL/TLS utilisant le mode de chiffrement CBC (Cipher\nBlock Chaining) les temps de réponses du serveur peuvent différer\nsuivant le type d'erreur rencontré.\n\nUn utilisateur mal intentionné peut, sous certaines conditions,\nreconstituer un même bloc de données transitant dans plusieurs sessions\nchiffrées en injectant des paquets judicieusement composés et en\nmesurant le temps de traitement de ces paquets.\n\nCette attaque peut permettre, par exemple, d'identifier un mot de passe\ndans une session SSL/TLS.\n\n## Solution\n\nAppliquer le correctif fourni par l'éditeur (Cf. section Documentation)\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SuSE-SA:2003:011 de SuSE :",
+      "url": "http://www.suse.com/de/security/2003_011_openssl.html"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2003-062 de Red Hat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-062.html"
+    },
+    {
+      "title": "Bulletin de sécurité d'OpenBSD du 22 février 2003 :",
+      "url": "http://www.openbsd.org/errata.html#ssl"
+    },
+    {
+      "title": "Mise à jour pour Mac OS X du 2003-03-03 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=61798"
+    },
+    {
+      "title": "Bulletin de sécurité MDKSA-2003:020 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:020"
+    },
+    {
+      "title": "Bulletin de sécurité DSA-253 de Debian :",
+      "url": "http://www.debian.org/security/2003/dsa-253"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD-SA-03:02.openssl de FreeBSD :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-03:02.openssl.asc"
+    },
+    {
+      "title": "Avis de sécurité OpenSSL :",
+      "url": "http://www.openssl.org/news/secadv_20030219.txt"
+    },
+    {
+      "title": "Bulletin de sécurité 2003-001 de NetBSD :",
+      "url": "http://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2003-001.txt.asc"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-029",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-02-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de Debian, Mandrake, SuSE, OpenBSD, FreeBSD.",
+      "revision_date": "2003-02-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de NetBSD, Apple et Red Hat.",
+      "revision_date": "2003-03-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans certaines implémentations du protocole\nSSL/TLS permet à un utilisateur mal intentionné de retrouver le clair\nd'un contenu chiffré.\n",
+  "title": "Vulnérabilité dans SSL/TLS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin OpenSSL",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Ces vulnérabilités affectent les versions d'Internet Explorer  suivantes :</P>  <UL>    <LI>Internet Explorer 6 Service Pack 1;</LI>    <LI>Internet Explorer 6 Service Pack 1 (64-Bit Edition);</LI>    <LI>Internet Explorer 6 for Windows Server 2003;</LI>    <LI>Internet Explorer 6 for Windows Server 2003 (64-Bit    Edition);</LI>    <LI>Internet Explorer 6;</LI>    <LI>Internet Explorer 5.5 Service Pack 2;</LI>    <LI>Internet Explorer 5.01 Service Pack 2, 3 et 4.</LI>  </UL>  <P>sur les plateformes :</P>  <UL>    <LI>Microsoft Windows NT Workstation 4.0 Service Pack 6a;</LI>    <LI>Microsoft Windows NT Server 4.0, Service Pack 6a;</LI>    <LI>Microsoft Windows NT Server 4.0 Terminal Server Edition et    Service Pack 6;</LI>    <LI>Microsoft Windows 2000 Service Pack 2, 3 et 4;</LI>    <LI>Microsoft Windows XP et Service Pack 1;</LI>    <LI>Microsoft Windows XP 64-Bit Edition et Service Pack 1;</LI>    <LI>Microsoft Windows XP 64-Bit Edition Version 2003;</LI>    <LI>Microsoft Windows Server 2003;</LI>    <LI>Microsoft Windows Server 2003, 64-Bit Edition.</LI>  </UL>  <P>Les applications utilisant le moteur d'Internet Explorer  (Outlook, Outlook Express ,...) de ces versions afin  d'interpréter des documents au format HTML se trouvent également  affectées.</P>",
+  "content": "## Description\n\n-   Une vulnérabilité présente dans le modèle de sécurité d'Internet\n    Explorer (cloisonnement inter-domaines), permet à un individu mal\n    intentionné d'exécuter du code arbitraire avec les privilèges de\n    l'utilisateur connecté, dans un domaine différent de celui dans\n    lequel il doit être exécuté (par exemple `Local Machine Zone`) à\n    l'aide un mél au format HTML ou un site malicieusement constitué ;\n-   une vulnérabilité présente dans l'opération de \"glisser-déposer\"\n    d'Internet Explorer permet dans certaines conditions\n    l'enregistrement d'un fichier sur le système sans aucun\n    avertissement ;\n-   une vulnérabilité est présente dans le traitement de certaines\n    adresses réticulaires (URL). Cette faille peut être utilisée par un\n    individu mal intentionné afin de créer un site malicieux et d'en\n    masquer l'adresse réelle par une autre (cf. CERTA-2003-ALE-006).\n\n## Solution\n\nAttention, l'installation du correctif interdit l'emploi de\nl'authentification de type `Basic Authentication` avec Internet Explorer\n(passage de l'identifiant et du mot de passe dans l'URL) pour les\nprotocoles HTTP, HTTP avec SSL (HTTPS).\n\nAppliquer le correctif suivant la plateforme et la version affectée :\n\n-   Bulletin de sécurité MS04-004 de Microsoft :\n\n        http://www.microsoft.com/technet/security/bulletin/MS04-004.asp\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-020",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-02-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Trois nouvelles vulnérabilités ont été découvertes dans certaines\nversions d'Internet Explorer et font l'objet d'un correctif.\n",
+  "title": "Multiples vulnérabilités dans Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS04-004 de Microsoft",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Le paquet cups de Mandrakelinux.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Le paquet cupsys de Debian dans toute version antérieure à 1.1.14-5woody12 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa vulnérabilité CAN-2005-0064 affecte le logiciel xpdf. Le logiciel\ncupsys/cups ayant un code similaire présente la même vulnérabilité qui\npermet à un utilisateur mal intentionné de fabriquer un fichier au\nformat pdf malicieux. L'interprétation de ce fichier par le logiciel\ncupsys/cups se traduit par l'exécution de code arbitraire.\n\nEn ce qui concerne la distribution Debian, Cette vulnérabilité n'affecte\nque la version stable. Les autres versions n'utilisent plus leur propre\nversion de xpdf.\n\n## Solution\n\nAppliquer le correctif (cf. section [5](#sec:doc)).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-645 du 19 janvier 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-645"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrakelinux MDKSA-2005:018 du 25    janvier 2005 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2005:018"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-017",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2005-01-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandrakelinux.",
+      "revision_date": "2005-01-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": null,
+  "title": "CUPS : vulnérabilité dans l'impression de certains documents PDF",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CVE : CAN-2005-0064",
+      "url": null
+    }
+  ]
+}

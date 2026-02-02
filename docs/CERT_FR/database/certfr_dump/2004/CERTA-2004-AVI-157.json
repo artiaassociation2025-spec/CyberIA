@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Exim 3.35 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Exim",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "exim 4.32 (pour certaines vulnérabilités).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Exim",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nExim est un routeur de mail (Message Transfert Agent) fonctionnant sous\nLinux. Deux vulnérabilités ont été découvertes dans exim :\n\n-   Un défaut de vérification des adresses de l'émetteur des messages\n    électroniques permet l'exploitation d'un débordement de tampon afin\n    d'exécuter du code arbitraire. L'exploitation de cette vulnérabilité\n    nécessite le positionnement du paramètre `sender_verify` à `true`.\n    Cette vulnérabilité n'affecte pas la version 4.32 d'exim.\n-   une vulnérabilité est présente dans la mise en œuvre de la\n    vérification de la syntaxe de l'entête d'un message éléctronique.\n    Celle-ci peut être exploitée par un individu mal intentionné afin\n    d'exécuter du code arbitraire. Cette option n'est pas positionnée\n    par défaut.\n\n## Solution\n\nMettre à jour Exim avec la version 4.32 et désactiver l'option\n`headers_check_syntax`.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2004:012 du 14 mai 2004 :",
+      "url": "http://www.suse.com/de/security/2004_12_mc.html"
+    },
+    {
+      "title": "Bulletin de sécurité #68 de Georgi Guninski :",
+      "url": "http://www.guninski.com/exim1.html"
+    },
+    {
+      "title": "Bulletin de sécurité #DSA-501 de Debian :",
+      "url": "http://www.debian.org/security/2004/dsa-501"
+    },
+    {
+      "title": "Bulletin de sécurité #DSA-502 de Debian :",
+      "url": "http://www.debian.org/security/2004/dsa-502"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200405-07 du 14 mai 2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200405-07.xml"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-157",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-05-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout de l'avis de sécurité Debian.",
+      "revision_date": "2004-05-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout des deux références CVE et ajout de l'avis de sécurité Debian relatif à exim-tls..",
+      "revision_date": "2004-05-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité SUSE et Gentoo.",
+      "revision_date": "2004-05-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Georgi Guninski a découvert deux vulnérabilités affectant certaines\nversions d'`exim`.\n",
+  "title": "Vulnérabilités dans Exim",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité #68 de Georgi Guninski",
+      "url": null
+    }
+  ]
+}

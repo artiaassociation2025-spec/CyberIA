@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>D'une façon générale, tous les systèmes utilisant une version  de <TT>libmcrypt</TT> antérieure à 2.5.5 sont affectés.</P>  <UL>    <LI>SuSE 7.1, 7.2, 7.3, 8.0, 8.1 ;</LI>    <LI>SuSE eMail Server 3.1, III ;</LI>    <LI>SuSE Linux Connectivity Server ;</LI>    <LI>SuSE Linux Enterprise Server 7, 8 ;</LI>    <LI>SuSE Linux Office Server ;</LI>    <LI>Debian Linux (Woody et Sid), la version stable Potato ne    mettait pas ce paquetage à disposition ;</LI>    <LI>Gentoo Linux.</LI>  </UL>",
+  "content": "## Description\n\nlibmcrypt est un ensemble de fonctions utilisées pour le chiffrement de\ndonnées. Cette librairie est utilisée seulement dans quelques\napplications (notamment par les développeurs de scripts PHP).\n\nDe multiples débordements de mémoires dans plusieurs fonctions de\nlibmcrypt permettent à un utilisateur local d'augmenter ses privilèges.\n\nD'autre part, la façon dont libmcrypt charge les algorithmes (via la\nlibrairie libtool ou libtld selon le système) dans les applications\npermanentes (serveurs web par exemple, ...), conduit à de petites fuites\nde mémoire (libération incomplète de la mémoire après chaque\nutilisation) qui peuvent aboutir à une saturation de la mémoire.\n\n## Contournement provisoire\n\nPour les système SuSE : se référer au bulletin de sécurité\nSuSE-SA:2003:0010 afin de connaître la démarche à suivre pour contourner\nles fuites de mémoire.\n\n## Solution\n\nConsulter les bulletins de sécurité concernant les systèmes affectés\npour connaître la disponibilité des correctifs.\n\nLa version 2.5.5 de libmcrypt corrige ces vulnérabilités.\n\nElle est disponible à l'adresse suivante :\n\n    ftp://mcrypt.hellug.gr/pub/mcrypt/libmcrypt\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SuSE-SA:2003:0010 de SuSE :",
+      "url": "http://www.suse.com/de/security/2003_010_libmcrypt.html"
+    },
+    {
+      "title": "Le site web de mcrypt :",
+      "url": "http://mcrypt.hellug.gr/"
+    },
+    {
+      "title": "La liste des mises à jour de libmcrypt :",
+      "url": "http://cvs.hellug.gr/cgi-bin/viewcvs.cgi/mcrypt/libmcrypt/NEWS?rev=HEAD"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-037",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Augmentation de privilèges en local"
+    }
+  ],
+  "summary": "Des débordements de mémoires dans plusieurs fonctions de libmcrypt\npermettent à un utilisateur local mal intentionné d'augmenter ses\nprivilèges.\n\nDes fuites de mémoires de libmcrypt permettent de saturer la mémoire\ndans des applications exécutées à distance.\n",
+  "title": "Débordements de mémoire dans de multiples fonctions de <TT>libmcrypt</TT> sous Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "bulletin de sécurité SuSE:2003:0010 de SuSE",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DSA-228-1 de Debian",
+      "url": "http://www.debian.org/security/2003/dsa-228"
+    }
+  ]
+}

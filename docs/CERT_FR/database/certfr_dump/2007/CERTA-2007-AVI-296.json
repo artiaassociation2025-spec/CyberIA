@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Information Services (IIS) version 5.1 pour Windows XP Professional Service Pack 2.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le logiciel serveur Web\nMicrosoft IIS 5.1. L'envoi de multiples requêtes vers le répertoire .dll\nsuivis d'arguments précis provoquerait un dysfonctionnement de\nntdll.dll. Ce problème serait dû à l'absence de contrôle d'un tampon.\nUne personne malveillante pourrait également profiter de cette\nvulnérabilité pour exécuter du code arbitraire à distance sur le serveur\nWeb vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité MS07-041 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2005-4360",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-4360"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-296",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans Microsoft Internet Information Services (IIS)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-041 du 10 juillet 2007",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-041.mspx"
+    }
+  ]
+}

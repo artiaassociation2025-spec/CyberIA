@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft Windows XP, Microsoft Windows XP SP1 ;</LI>    <LI>Microsoft Windows XP 64-Bit Edition SP1, Microsoft Windows    XP 64-Bit Edition 2003 ;</LI>    <LI>Microsoft Windows server 2003, Microsoft Windows Server    2003 64-Bit Edition ;</LI>    <LI>Microsoft Office XP SP3, Microsoft Office 2003 ;</LI>    <LI>Microsoft Project 2002 SP1, Microsoft Project 2003 ;</LI>    <LI>Microsoft Visio 2002 SP2, Microsoft Visio 2003 ;</LI>    <LI>Microsoft Visual Studio .NET 2002 , Microsoft Visual Studio    .NET 2003 ;</LI>    <LI>Microsoft .NET Framework version 1.0 SDK SP2 ;</LI>    <LI>Microsoft Picture IT! 2002, Microsoft Picture IT! version    7.0, Microsoft Picture IT! version 9.0 ;</LI>    <LI>Microsoft Greetings 2002 ;</LI>    <LI>Microsoft Digital Image Pro version 7.0, Microsoft Digital    Image Pro version 9 ;</LI>    <LI>Microsoft Digital Image Suite version 9 ;</LI>    <LI>Microsoft Producer for Microsoft Office Powerpoint ;</LI>    <LI>Microsoft Plateform SDK redistributable: GDI+ ;</LI>    <LI>Internet Explorer 6 SP1 ;</LI>    <LI>Microsoft .NET Framework version 1.0 SP2, Microsoft .NET    Framework version 1.1.</LI>  </UL>  <P>Microsoft livre un outil, <TT>GDI+ detection tool</TT>,  permettant de détecter la présence de logiciels installant le  composant vulnérable sur un système.<BR></P>  <P><SPAN class=\"textit\">NB</SPAN> : la liste ci-dessus des  systèmes affectés n'est pas exhaustive. Il est possible que  d'autres applications non référencées par Microsoft utilisent  leur propre bibliothèque <SPAN class=\"textit\">gdiplus.dll</SPAN>  vulnérable.</P>",
+  "content": "## Description\n\ngdiplus.dll est un composant graphique utilisé pour le traitement des\nimages, le dessin vectoriel, etc. disponible en natif sur plusieurs\nsystème d'exploitation Windows ou installé avec certains logiciels\nMicrosoft.\n\nUne vulnérabilité de type débordement de mémoire est présente dans le\ncomposant gdiplus.dll lors du traitement des images au format JPEG. En\nincitant un utilisateur à visualiser une image au format JPEG habilement\nconstituée, une personne mal intentionnée peut exploiter cette\nvulnérabilité afin d'exécuter du code arbitraire à distance sur une\nplate-forme vulnérable.\n\n## Solution\n\nLes applications n'utilisent pas forcément la bibliothèque gdiplus.dll\nqui se trouve dans l'arborescence système de Windows. Il s'agit donc de\ncorriger le fichier qui aurait pu être créé par l'installation de\nWindows, puis d'appliquer les correctifs pour toutes les applications\nvulnérables.  \n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS04-028 du 14 septembre    2004 :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms04-028.mspx"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-312",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-15T00:00:00.000000"
+    },
+    {
+      "description": "précision concernant les applicatifs tiers affectés par la vulnérabilité.",
+      "revision_date": "2004-09-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité de type débordement de mémoire présente dans un des\ncomposants permettant le traitement des images au format JPEG peut être\nexploitée afin de réaliser l'exécution de code arbitraire sur un système\nvulnérable.\n",
+  "title": "Vulnérabilité de GDI+ de Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "BUlletin de sécurité MS04-028 de Microsoft",
+      "url": null
+    }
+  ]
+}

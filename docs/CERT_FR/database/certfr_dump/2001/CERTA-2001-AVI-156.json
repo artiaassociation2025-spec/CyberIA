@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Potentiellement tout système d'exploitation Unix.</P>",
+  "content": "## Description\n\nLorsque l'opérateur de redirection \\<\\< est utilisé, le shell crée un\nfichier temporaire dont le nom est prédictible. Ceci peut être exploité\npar un utilisateur local pour corrompre n'importe quel fichier du\nsystème, lorsque le shell est invoqué avec des droits root.\n\n## Solution\n\nAppliquer les correctifs fournis par les vendeurs :\n\n-   Linux Mandrake (bash1, tcsh)\n\n        http://www.linux-mandrake.com/en/security/2000/MDKSA-2000-075.php3\n\n        http://www.linux-mandrake.com/en/security/2000/MDKSA-2000-069.php3\n\n-   Linux RedHat (tcsh)\n\n        http://www.redhat.com/support/errata/RHSA-2000-121.html\n\n-   Debian (tcsh)\n\n        http://www.debian.org/security/2000/20001111a\n\n-   Trustix (tcsh)\n\n        http://archives.neohapsis.com/archives/bugtraq/2000-12/0275.html\n\n-   Conectiva (tcsh)\n\n        http://distro.conectiva.com/atualizacoes/?id=a&anuncio=000354\n\n-   Caldera (bash, tcsh)\n\n        http://www.caldera.com/support/security/advisories/CSSA-2000-042.0.txt\n\n        http://www.caldera.com/support/security/advisories/CSSA-2000-042.0.txt\n\n-   Immunix (bash1)\n\n        http://archives.neohapsis.com/archives/linux/immunix/2000-q4/0034.html\n\n-   Sun Solaris (tcsh, csh, sh, ksh)\n\n        http://sunsolve.Sun.COM/pub-cgi/retrieve.pl?doc=salert%2F27694\n\n-   SGI Irix (tcsh, bsh, ksh)\n\n        ftp://patches.sgi.com/support/free/security/advisories/20011103-01-I\n\n-   FreeBSD (bash1)\n\n        ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-01%3A03.bash1.asc\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-156",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-11-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Corruption de fichiers"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le shell <span class=\"textit\">sh</span> permet, à\nun utilisateur mal intentionné, de corrompre n'importe quel fichier du\nsystème. Les shells <span class=\"textit\">tcsh</span>, <span\nclass=\"textit\">csh</span>, <span class=\"textit\">ksh</span> et <span\nclass=\"textit\">bash</span>, qui en sont dérivés, peuvent être concernés.\n",
+  "title": "Fichiers temporaires mal sécurisés créés par divers shells",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport de vulnérabilité VU#10277 du CERT/CC",
+      "url": "http://www.kb.cert.org/vuls/id/10277"
+    }
+  ]
+}

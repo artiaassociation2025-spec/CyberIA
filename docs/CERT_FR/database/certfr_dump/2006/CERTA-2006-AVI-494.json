@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Novell BoarderManager 3.8, avec le Support Pack 4, ainsi que les versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Novell",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le produit Novell BoarderManager\n3.8. Il semblerait que les fichiers de sessions ISAKMP (ou cookies) ne\nsoient pas générés correctement à chaque nouvelle session. Une personne\nse connectant (avec une adresse source IP et un port donné), risque de\ngarder les mêmes fichiers de sessions pour toutes les requêtes dans une\npériode de plusieurs heures, ce qui les rend prévisibles.\n\nUne personne malveillante qui récupérerait de tels fichiers pourrait\ncontourner la politique de sécurité imposée par IPsec, afin de lancer un\ndéni de service contre le système BoarderManager vulnérable, voire\nlancer des attaques en réinjectant tout ou partie des paquets\ninterceptés.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur Novell pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2006-AVI-494",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de Novell BorderManager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Document 3003139 de Novell du 10 novembre 2006",
+      "url": "https://secure-support.novell.com/KanisaPlatform/Publishing/201/3003139_f.SAL_Public.html"
+    }
+  ]
+}

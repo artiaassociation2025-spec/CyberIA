@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>La série CSS 11000 des commutateurs Cisco CSS (également  connus sous le nom Arrowpoint), est composée des modèles CSS  11050, CSS 11150 et CSS 11800. Le logiciel Cisco WebNS permet une  gestion de l'équipement grâce à une interface web.</P>  <P>Toutes les versions du logiciel Cisco WebNS sont vulnérables  sur l'ensemble des produits de la série CSS 11000. Les autres  produits Cisco ne sont pas vulnérables.</P>",
+  "content": "## Description\n\nLe logiciel Cisco WebNS permet une gestion des commutateurs CSS grâce à\nune interface web. Après une phase d'authentification sur le navigateur,\nl'utilisateur est redirigé vers une URL de gestion de l'équipement.\n\n  \n\nLa connexion directe à cette URL permet à un utilisateur mal intentionné\nd'accéder à l'interface de gestion sans passer par la phase\nd'authentification. La connexion directe peut en particulier être\nfacilitée par le stockage de l'adresse dans les favoris du navigateur.\n\n## Contournement provisoire\n\n-   Désactiver la gestion du commutateur via une interface web.\n\n-   Filtrer le trafic HTTP vers le commutateur, grâce à une liste de\n    contrôle d'accès. Cette possibilité doit être envisagée avec\n    précaution, car elle peut introduire des effets négatifs. La\n    documentation sur la mise en place de listes de contrôle d'accès sur\n    les équipements CSS se trouve sur le site de Cisco :\n\n        http://www.cisco.com/universcd/cc/td/doc/product/webscale/css/bsccfggd/profiles.htm\n\n        http://www.cisco.com/universcd/cc/td/doc/product/webscale/css/advcfggd/sqacleql.htm\n\n## Solution\n\nLa vulnérabilité sera corrigée dans la nouvelle version du logiciel\nWebNS, qui ne sera pas disponible avant décembre 2002.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-181",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la gestion par interface web des commutateurs\nCisco CSS séries 1100 permet à un utilisateur mal intentionné\nd'outrepasser la phase d'authentification.\n",
+  "title": "Vulnérabilité des commutateurs Cisco CSS séries 11000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco",
+      "url": null
+    }
+  ]
+}

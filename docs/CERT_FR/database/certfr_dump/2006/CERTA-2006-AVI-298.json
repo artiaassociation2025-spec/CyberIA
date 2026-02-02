@@ -1,0 +1,51 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les noyaux Linux versions 2.6.17.4 et  antérieures.</p>",
+  "content": "## Description\n\nUne erreur dans la mise en œuvre du système de fichier virtuel /proc\npermet à un utilisateur local au système d'élever ses privilèges. Ceci\nlui est possible en modifiant les attributs d'un processus qu'il\ncontrôle via le système de fichier /proc puis en mettant ce même\nprocessus dans un état particulier.\n\n## Solution\n\nSe référer au bulletin de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3626",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3626"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 1111 du 18 juillet 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1111"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-319-2 du 18 juillet 2006 :",
+      "url": "http://www.ubuntu.com/usn/usn-319-2"
+    },
+    {
+      "title": "Liste des changements apportés à la version 2.6.17.5 du    noyau Linux :",
+      "url": "http://www.kernel.org/pub/linux/kernel/v2.6/ChangeLog-2.6.17.5"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-298",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2006-07-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Ubuntu.",
+      "revision_date": "2006-07-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le noyau Linux permet à un utilisateur local au\nsystème d'élever ses privilèges.\n",
+  "title": "Vulnérabilité du noyau Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés à la version 2.6.17.5 du noyau Linux",
+      "url": null
+    }
+  ]
+}

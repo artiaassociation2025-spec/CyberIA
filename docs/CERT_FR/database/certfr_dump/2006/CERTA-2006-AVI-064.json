@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les noyaux Linux versions 2.6.15.2 et  antérieures.</p>",
+  "content": "## Description\n\nUne erreur dans la fonction ip_options_echo() du fichier icmp.c servant\nà la construction d'une réponse ICMP (Internet Control Message Protocol)\npermet à un utilisateur distant de provoquer un déni de service sur le\nsystème vulnérable par le biais d'un paquet ICMP malicieusement\nconstruit.\n\n## Solution\n\nLa version 2.6.15.3 du noyau Linux corrige le problème :\n\n    http://www.kernel.org\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site du noyau Linux :",
+      "url": "http://www.kernel.org"
+    },
+    {
+      "title": "Liste des changements apportés dans la version 2.6.15.3 du    noyau Linux :",
+      "url": "http://wwww.kernel.org/pub/linux/kernel/v2.6/ChangeLog-2.6.15.3"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-064",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-02-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité du noyau Linux permet à un utilisateur distant de\nprovoquer un déni de service du système vulnérable.\n",
+  "title": "Vulnérabilité du noyau Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements appliqués dans la version 2.6.15.3 du noyau Linux",
+      "url": null
+    }
+  ]
+}

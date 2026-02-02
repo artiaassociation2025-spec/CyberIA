@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Bugzilla versions :  <UL>    <LI>3.2.x antérieures à 3.2.9 ;</LI>    <LI>3.4.x antérieures à 3.4.9 ;</LI>    <LI>3.6.x antérieures à 3.6.3.</LI>  </UL></p>",
+  "content": "## Description\n\nUne erreur dans la validation d'une entrée non spécifiée par l'éditeur\npermet d'insérer des en-têtes arbitraires dans la réponse retournée par\nle serveur à l'utilisateur. Une personne malintentionnée peut réaliser\npar ce biais une injection de code indirecte à distance (CVE-2010-3172).\n\nLes noms des graphes créés dans le répertoire graphs/ sont prédictibles.\nIl est alors possible à un utilisateur non autorisé d'accéder à ces\ngraphes (CVE-2010-3764).\n\nEnfin, une vulnérabilité permettant l'injection de code indirecte à\ndistance affecte la version 2.8.1 de la Yahoo! UI Library qui est\nincluse dans Bugzilla.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3764",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3764"
+    },
+    {
+      "name": "CVE-2010-3172",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3172"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-533",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-11-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Trois failles ont été corrigées dans <span\nclass=\"textit\">Bugzilla</span> dont l'exploitation permet, entre autres,\nl'injection de code indirecte à distance.\n",
+  "title": "Multiples vulnérabilités dans Bugzilla",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Bugzilla du 2 novembre 2010",
+      "url": "http://www.bugzilla.org/security/3.2.8/"
+    }
+  ]
+}

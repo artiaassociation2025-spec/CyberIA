@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de PHP antérieures  ou égales à la version 4.3.0.</p>",
+  "content": "## Description\n\nPHP (Personal Home Page) est un langage de script très largement utilisé\ndans le domaine des développements internet. Une vulnérabilité dans PHP\nCGI SAPI permet à un utilisateur mal intentionné d'avoir accès à\nn'importe quel fichier accessible en lecture par l'utilisateur sous\nlequel est lancé le serveur web, à la condition que le serveur web\nutilise le module CGI.\n\n## Solution\n\nLa version 4.3.1 de PHP corrige cette vulnérabilité. Cette version est\ndisponible à l'adresse suivante :\n\n    http://www.php.net/downloads.php\n\nLa version 4.3.0 corrige une vulnérabilité dans la fonction wordwrap()\nsujette à un débordement de mémoire. Les versions affectées par ce\ndébordement de tampon sont les versions de PHP ultérieures à la version\n4.1.2 et antérieures à la version 4.3.0.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité du PHP Group du 17 février  2003 :",
+      "url": "http://www.php.net/release_4_3_1.php"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-025",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-02-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout d'une référence à une vulnérabilité (fonction wordwrap()) dans PHP version ultérieure à la version 4.1.2 et antérieure à la version 4.3.0.",
+      "revision_date": "2003-02-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans PHP permet à un utilisateur mal intentionné de\ncontourner la politique de sécurité (accès en lecture à des fichiers non\nautorisés).\n",
+  "title": "Vulnérabilité dans PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité du PHP Group du 17/02/2003",
+      "url": null
+    }
+  ]
+}

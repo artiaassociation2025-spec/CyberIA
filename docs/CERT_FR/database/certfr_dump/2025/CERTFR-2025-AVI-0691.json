@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Nginx Plus versions antérieures à R35, R34 P2, R33 P3 et R32 P3 avec le module ngx_mail_smtp_module activé",
+      "product": {
+        "name": "Nginx",
+        "vendor": {
+          "name": "Nginx",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Nginx versions antérieures à 1.29.1 avec le module ngx_mail_smtp_module activé",
+      "product": {
+        "name": "Nginx",
+        "vendor": {
+          "name": "Nginx",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-53859",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-53859"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0691",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-08-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Nginx. Elle permet à un attaquant de provoquer une atteinte à la confidentialité des données.",
+  "title": "Vulnérabilité dans Nginx",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-08-14",
+      "title": "Bulletin de sécurité F5 K000152786",
+      "url": "https://my.f5.com/manage/s/article/K000152786"
+    }
+  ]
+}

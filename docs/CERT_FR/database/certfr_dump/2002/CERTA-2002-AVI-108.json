@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>ISC DHCPD versions 3.0 à 3.0.1rc8.</p>",
+  "content": "## Description\n\nLe serveur ISC DHCPD enregistre le résultat des requêtes de type\ndns-update destinées au serveur DNS. Une vulnérabilité de type chaîne de\nformat présente dans la routine de traitement de ces requêtes permet à\nun utilisateur mal intentionné d'exécuter du code arbitraire à distance\nsur le serveur DHCP avec les privilèges de l'administrateur système\n(root).\n\nLa vulnérabilité n'est exploitable que si ISC DHCPD est compilé avec\nl'option NSUPDATE (configuration par défaut).\n\n## Contournement provisoire\n\nMettre en place un fitrage au niveau du garde-barrières sur les ports\nsuivants, afin d'empêcher l'exploitation de cette vulnérabilité depuis\nl'Internet :\n\n-   67/TCP (Bootstrap Protocol Server)\n-   67/UDP (Bootstrap Protocol Server)\n-   68/TCP (Bootstrap Protocol Client)\n-   68/UDP (Bootstrap Protocol Client)\n\n## Solution\n\nLa version 3.0.1rc9 d'ISC DHCPD corrige cette vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "RFC 2131 \"Dynamic Host Configuration Protocol\" :",
+      "url": "ftp://ftp.isi.edu/in-notes/rfc2131.txt"
+    },
+    {
+      "title": "Avis de sécurité MDKSA-2002:037-1 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-037-1.php"
+    },
+    {
+      "title": "Avis de sécurité CA-2002-12 du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2002-12.html"
+    },
+    {
+      "title": "Avis de sécurité NGSEC-2002-2 de Next Generation Security    Technologies :",
+      "url": "http://www.ngsec.com/docs/advisories/NGSEC-2002-2.txt"
+    },
+    {
+      "title": "Avis de sécurité MDKSA-2002:037 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-037.php"
+    },
+    {
+      "title": "Avis de sécurité SuSE-SA:2002:019 de SuSE :",
+      "url": "http://www.suse.com/de/support/security/2002_19_dhcp.html"
+    },
+    {
+      "title": "Internet Software Consortium :",
+      "url": "http://www.isc.org"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-108",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-05-23T00:00:00.000000"
+    },
+    {
+      "description": "Ajout lien sur l'avis SuSE et ajout références aux avis Mandrake.",
+      "revision_date": "2002-05-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "ISC DHCPD est un logiciel libre mis à disposition par l'Internet\nSoftware Consortium.\n\nDHCP (Dynamic Host Configuration Protocol) est basé sur un modèle\nclient-serveur dans lequel un serveur DHCP fournit dynamiquement des\nadresses IP et autres paramètres de configuration à des machines\nclientes. DHCP s'appuie sur le protocole BOOTP (BOOTstrap Protocol).\n\nUne vulnérabilité présente dans le traitement des requêtes de mise à\njour DNS (dns-update) permet à un utilisateur mal intentionné d'exécuter\ndu code arbitraire à distance sur le serveur DHCP avec les privilèges de\nl'administrateur système (root).\n",
+  "title": "Vulnérabilité du service ISC DHCPD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2002-12 du CERT/CC",
+      "url": null
+    }
+  ]
+}

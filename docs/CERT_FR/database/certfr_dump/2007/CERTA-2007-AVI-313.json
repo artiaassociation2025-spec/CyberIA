@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "libarchive 1.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "libarchive 2.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans la bibliothèque de fonctions libarchive a été\nidentifiée. Cette bibliothèque est, en particulier, utilisée par la\ncommande d'archivage tar. Un utilisateur distant malintentionné peut\nainsi provoquer un arrêt de l'application vulnérable ou exécuter du code\narbitraire via une archive de type tar particulière.  \n<span class=\"textbf\">NB :</span> un simple listage (tar -t) de l'archive\nsuffit pour exploiter la vulnérabilité.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3641",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3641"
+    },
+    {
+      "name": "CVE-2007-3645",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3645"
+    },
+    {
+      "name": "CVE-2007-3644",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3644"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200708-03 du 08 août 2007    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200708-03.xml"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SR:2007:015 du 03 août 2007    :",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2007-08/msg00003.htm"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-07:05.libarchive du 12    juillet 2007 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-07:05.libarchive.asc"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-313",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-18T00:00:00.000000"
+    },
+    {
+      "description": "modification des systèmes affectés, ajout des références CVE et des références aux bulletins de sécurité Gentoo et SuSE.",
+      "revision_date": "2007-08-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la vulnérabilité libarchive permet à un\nutilisateur distant de provoquer un déni de service ou potentiellement\nd'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité dans la bibliothèque libarchive",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD du 12 juillet 2007",
+      "url": null
+    }
+  ]
+}

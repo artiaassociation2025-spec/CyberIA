@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "AVS 3120 version 5.0.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "AVS 3110 versions 4.0 et 5.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité est présente dans la configuration par défaut de Cisco\nAVS. Un utilisateur mal intentionné peut exploiter, via une requête HTTP\nmalveillante, le système vulnérable et l'utiliser comme serveur\nmandataire (proxy) transparent pour accéder à des ports de destination\narbitraires.  \nUn changement dans la configuration par défaut permet de ne plus être\nvulnérable.  \n  \nLa version 5.0.1 n'est pas impactée par cette vulnérabilité.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 20060510-avs du 10 mai 2006 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20060510-avs.shtml"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-201",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité présente sur Cisco AVS (Application Velocity System's)\npeut être exploitée par un utilisateur mal intentionné pour contourner\nla politique de sécurité via une requête HTTP malicieusement construite.\n",
+  "title": "Vulnérabilité dans Cisco AVS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO 20060510-avs",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Debian Squeeze</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans FFmpeg.\n\nLa première (CVE-2010-3908) permet à une personne malintentionnée\nd'effectuer un déni de service, voire d'exécuter du code arbitraire,\nlors de l'ouverture d'un fichier WMV spécialement conçu.\n\nLa deuxième (CVE-2010-4704) permet de provoquer un déni de service lors\nde l'ouverture d'un fichier Ogg contrefait.\n\nLa troisième (CVE-2011-0480) concerne différents dépassements de tampon\ndans le décodeur Vorbis, pouvant avoir lieu lors de l'ouverture d'un\nfichier WebM spécialement formé. Il est alors possible de rendre\nl'application inopérante (déni de service). Ce problème pourrait avoir\nd'autres conséquences non déterminées.\n\nLa dernière (CVE-2011-0722) permet à un utilisateur malintentionné de\nprovoquer un déni de service ou une exécution de code arbitraire lors de\nla lecture d'un fichier RealMedia contrefait.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-4704",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4704"
+    },
+    {
+      "name": "CVE-2011-0480",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0480"
+    },
+    {
+      "name": "CVE-2011-0722",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0722"
+    },
+    {
+      "name": "CVE-2010-3908",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3908"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 2306 du 11 septembre 2011 :",
+      "url": "http://www.debian.org/security/2011/dsa-2306"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-507",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-09-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découverte dans  <span\nclass=\"textit\">FFmpeg</span>.\n",
+  "title": "Vulnérabilités dans FFmpeg",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Buleltin de sécurité Debian DSA-2306-1 du 11 septembre 2011",
+      "url": null
+    }
+  ]
+}

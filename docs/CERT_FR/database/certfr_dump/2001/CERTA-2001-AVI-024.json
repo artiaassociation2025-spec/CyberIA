@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Cette vulnérabilité des versions 4.6.x et 5.x du client Lotus  Notes est indépendante du système exploitation.</P>",
+  "content": "## Description\n\nLe client Notes possède un outil permettant de faciliter l'affichage de\ndonnées dans un courrier. Il permet de saisir les informations qui\nseront envoyées dans le document à partir d'un formulaire. Il est aussi\npossible d'envoyer ce formulaire au destinataire du message pour le cas\noù ce dernier ne le possède pas encore.\n\nIl est possible d'insérer des scripts (LotusScript par exemple) dans ces\nformulaires. Selon son paramétrage le client risque d'exécuter le script\nautomatiquement à la réception du courrier.\n\n## Contournement provisoire\n\nUtiliser les ECL (Execution Control List) comme indiqué dans l'avis de\nsécurité de Lotus :\n\n    http://www.notes.net/today.nsf/9148b29c86ffdcd385256658007aaa0f/3a9da544637a69b2852568310078b649?OpenDocument\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de Lotus :",
+      "url": "http://support.lotus.com/sims2.nsf/eb5fbc0ab175cf0885256560005206cf/89e023ae7ee59e5d852569f90059fd5e?OpenDocument"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-024",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-03-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, à l'aide d'un formulaire Lotus\n(<span class=\"textit\">Stored Form</span>) habilement construit et inséré\ndans un courrier électronique, faire exécuter du code par le client de\nson destinataire.\n",
+  "title": "Vulnérabilité dans la gestion des clients sous Lotus Notes",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de Lotus",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco ACE 4710 versions antérieures à A3(2.1) ou à A1(8a) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco ACE Module versions antérieures à A2(1.3).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Cisco ACE\n(Application Control Engine) :\n\n-   des noms d'utilisateur avec mot de passe par défaut permettent des\n    accès distants à divers comptes d'administration (CVE-2009-0620 et\n    CVE-2009-0621) ;\n-   une élévation des privilèges est possible via l'interface en ligne\n    de commande CLI (CVE-2009-0622) ;\n-   un déni de service à distance est possible par l'envoi d'un paquet\n    SSH spécifiquement constitué (CVE-2009-0623) ;\n-   un utilisateur authentifié peut provoquer un déni de service à\n    l'aide d'un paquet SNMPv2 spécifiquement constitué (CVE-2009-0624) ;\n-   l'envoi d'un paquet SNMPv3 spécifique peut provoquer un déni de\n    service à distance (CVE-2009-0625).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0620",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0620"
+    },
+    {
+      "name": "CVE-2009-0624",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0624"
+    },
+    {
+      "name": "CVE-2009-0621",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0621"
+    },
+    {
+      "name": "CVE-2009-0622",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0622"
+    },
+    {
+      "name": "CVE-2009-0625",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0625"
+    },
+    {
+      "name": "CVE-2009-0623",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0623"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20090225-ace du 25 février 2009    :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20090225-ace.shtml"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-078",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-02-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Accès au système avec des droits administrateur"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Cisco ACE</span>\npermettent, entre autres, d'accéder au système avec des droits\nd'administration.\n",
+  "title": "Multiples vulnérabilités dans Cisco ACE",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-sa-20090225-ace du 25 février 2009",
+      "url": null
+    }
+  ]
+}

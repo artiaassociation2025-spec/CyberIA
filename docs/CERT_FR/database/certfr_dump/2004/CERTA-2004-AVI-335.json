@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft Windows NT Server 4.0 Service Pack 6a ;</LI>    <LI>Microsoft Windows NT Server 4.0 Terminal Server Edition    Service Pack 6 ;</LI>    <LI>Microsoft Windows 2000 Service Pack 3 et Microsoft Windows    2000 Service Pack 4 ;</LI>    <LI>Microsoft Windows XP et Microsoft Windows XP Service Pack 1    ;</LI>    <LI>Microsoft Windows XP 64-Bit Edition Service Pack 1 ;</LI>    <LI>Microsoft Windows XP 64-Bit Edition Version 2003 ;</LI>    <LI>Microsoft Windows Server 2003 ;</LI>    <LI>Microsoft Windows Server 2003 64-Bit Edition ;</LI>    <LI>Microsoft Windows 98 ;</LI>    <LI>Microsoft Windows 98 Second Edition ;</LI>    <LI>Microsoft Windows Millenium Edition.</LI>  </UL>  <P>Sur les systèmes Microsoft Windows Server 2003, Microsoft  Windows 98, Microsoft Windows 98 Second Edition et Microsoft  Windows Millenium Edition, le service NetDDE n'est pas activé par  défaut.</P>",
+  "content": "## Description\n\nNetDDE (Network Dynamic Data Exchange) est un service qui permet à des\napplications de communiquer entre elles à travers un réseau.  \n\nUne vulnérabilité de type débordement de mémoire permet à un utilisateur\ndistant mal intentionné d'exécuter du code arbitraire sur la machine.\n\n## Contournement provisoire\n\n-   Désactiver le service NetDDE ;\n-   ou bloquer les ports suivants : 135/udp, 137/udp, 138/udp, 445/udp,\n    135/tcp, 139/tcp, 445/tcp, 593/tcp.\n\n## Solution\n\nAppliquer les correctifs fournis par Microsoft (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-335",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-10-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité du service NetDDE permet à un utilisateur distant mal\nintentionné d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité du service Microsoft NetDDE",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS04-031",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms04-031.mspx"
+    }
+  ]
+}

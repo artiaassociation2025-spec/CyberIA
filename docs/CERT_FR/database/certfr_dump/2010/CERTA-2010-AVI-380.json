@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "iPhone avec iOS 3.1.2 à 4.0.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "iPad avec iOS 3.2 à 3.2.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "iPod Touch avec iOS 3.1.2 à 4.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans le système embarqué iOS de Apple\n:\n\n-   la première (CVE-2010-1797) est relative à la mise en œuvre du\n    support des fichiers au format PDF. Elle permet à un utilisateur\n    distant de provoquer un déni de service ou d'exécuter du code\n    arbitraire au moyen d'un fichier PDF contenant une police de type\n    FreeType construite de façon particulière ;\n-   la seconde (CVE-2010-2973) concerne le composant IOSurface du\n    système et permet à un utilisateur standard d'élever ses privilèges\n    jusqu'au niveau système.\n\nCes deux vulnérabilités ont fait l'objet de l'alerte CERTA-2010-ALE-011\net sont, à la date de cette publication, activement exploitées de façon\ncombinées sur l'Internet afin de compromettre des équipements\nvulnérables.\n\n## Solution\n\nLa version 4.0.2 de l'iOS corrige le problème.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2973",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2973"
+    },
+    {
+      "name": "CVE-2010-1797",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1797"
+    }
+  ],
+  "links": [
+    {
+      "title": "Document du CERTA CERTA-2010-ALE-011 du 04 août 2010 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2010-ALE-011/index.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-380",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-08-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans Apple iOS permettent à un utilisateur\ndistant malintentionné de provoquer un déni de service, d'exécuter du\ncode arbitraire et d'élever ses privilèges.\n",
+  "title": "Multiples vulnérabilités dans Apple iOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apple HT4291 du 11 août 2010",
+      "url": "http://support.apple.com/kb/HT4291"
+    }
+  ]
+}

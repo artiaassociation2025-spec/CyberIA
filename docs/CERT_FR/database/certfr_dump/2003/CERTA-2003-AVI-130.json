@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Stunnel versions 3.24 et antérieures et versions 4.03 et  antérieures.</P>",
+  "content": "## Description\n\nStunnel est une application utilisée pour encapsuler des connexions\nréseau. Elle permet de créer un tunnel sécurisé en utilisant SSL/TLS.  \n\nLorsque l'application Stunnel est en écoute des connexions entrantes\n(sans être invoquée par xinetd), elle peut être configurée pour lancer\nsoit un fil d'exécution (thread), soit un processus fils. Dans le second\ncas, un signal SIGCHLD sera reçu lorsque le processus fils sera lancé.\n\nUne mauvaise gestion des signaux SIGCHLD par l'application permet à un\nutilisateur mal intentionné de provoquer un déni de service.\n\n## Solution\n\nAppliquer le correctif de votre éditeur.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-130",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité de l'application Stunnel permet à un utilisateur mal\nintentionné de provoquer un déni de service.\n",
+  "title": "Vulnérabilité de l'application Stunnel",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité RedHat RHSA-2003:221-01",
+      "url": "http://www.redhat.com/apps/support/errata/"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>La vulnérabilité affecte dtmail dans les versions 1.4 et 1.5  de CDE sur les plates-formes Solaris 8 et 9.</P>",
+  "content": "## Description\n\n`dtmail` est un agent de messagerie (MUA) disponible dans\nl'environnement CDE (Common Desktop Environment).\n\nUne vulnérabilité de type \"chaîne de format\" (format string) est\nprésente dans l'une des fonctions utilisées par `dtmail`. Cette\nvulnérabilité peut être exploitée par un utilisateur local mal\nintentionné pour obtenir les droits du groupe `mail` et pouvoir lire,\nmodifier ou détruire les méls des autres utilisateurs.\n\n## Contournement provisoire\n\nEnlever le bit `gid` du binaire `dtmail` :\n\n        chmod 0555 /usr/dt/bin/dtmail\n\nAttention, cette command rend impossible l'accès des boîtes aux lettres\nprésentes sur les partages NFS.\n\n## Solution\n\nAppliquer le correctif suivant la version affectée (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-285",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élevation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans l'agent de messagerie dtmail de CDE\npermet à un individu mal intentionné d'élever ses privilèges.\n",
+  "title": "Vulnérabilité dans l'agent de messagerie dtmail de CDE",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité 57627 de SUN",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-57627-1"
+    }
+  ]
+}

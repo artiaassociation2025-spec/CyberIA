@@ -1,0 +1,89 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>gaim versions antérieures à la 1.3.0.</p>",
+  "content": "## Description\n\ngaim est un client de messagerie instantanée multi-protocoles (ICQ, MSN\nMessenger, Yahoo!, IRC, Jabber, AIM, ...).\n\n  \n\nUne vulnérabilité de type débordement de mémoire est présente lors du\ntraitement d'URLS malicieusement constituées (CVE CAN-2005-161). En\nexploitant cette vulnérabilité, un utilisateur distant mal intentionné\npeut exécuter du code arbitraire à distance sur un client gaim\nvulnérable.\n\n  \n\nUne autre vulnérabilité (CVE CAN-2005-162) pouvant entrainer un déni de\nservice par arrêt brutal de l'application est également présente dans\ngaim lors du traitement de certains messages MSNSLP (utilisé par le\nlogiciel de messagerie instantanée MSN Messenger).\n\n## Solution\n\nLa version 1.3.0 de gaim corrige ces vulnérabilités.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Sources de gaim :",
+      "url": "http://gaim.sourceforge.net"
+    },
+    {
+      "title": "Bulletin \"MSN remote Dos\" du 10 mai 2005 :",
+      "url": "http://gaim.sourceforge.net/security/?id=17"
+    },
+    {
+      "title": "Bulletin de sécurité pour OpenBSD \"gaim - multiples    vulnerabilities\" du 13 mai 2005 :",
+      "url": "http://www.vuxml.org/openbsd/"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:429 du 10 mai 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-429.html"
+    },
+    {
+      "title": "Bulletin de sécurité pour FreeBSD \"gaim - remote crash on    some protocols\" du 14 mai 2005 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SR:2005:015 du 07 juin 2005    :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_15_sr.html"
+    },
+    {
+      "title": "Bulletin \"Remote crash on some protocols\" du 10 mai 2005 :",
+      "url": "http://gaim.sourceforge.net/security/?id=16"
+    },
+    {
+      "title": "Mise à jour de sécurité pour Fedora Core 3 du 12 mai 2005 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/3/"
+    },
+    {
+      "title": "Bulletin de sécurité pour FreeBSD \"gaim - MSN remote DoS    vulnerability\" du 14 mai 2005 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:432 du 11 mai 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-432.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200505-09 du 12 mai 2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200505-09.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:086 du 12 mai 2005    :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:086"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-163",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-05-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins de sécurité pour OpenBSD et FreeBSD.",
+      "revision_date": "2005-06-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité SUSE et RedHat RHSA-2005:432.",
+      "revision_date": "2005-06-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans gaim permettent à un utilisateur\ndistant mal intentionné d'exécuter du code arbitraire à distance ou\nréaliser un déni de service sur le poste client vulnérable.\n",
+  "title": "Multiples vulnérabilités de gaim",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité #16 et #17 de gaim",
+      "url": null
+    }
+  ]
+}

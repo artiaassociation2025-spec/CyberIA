@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Serveurs FTP suivants :</P>  <UL>    <LI>FreeBSD 4.2 ;</LI>    <LI>Fujitsu UXP/V ;</LI>    <LI>HP-UX 11 ;</LI>    <LI>NetBSD 1.5 ;</LI>    <LI>OpenBSD 2.8 ;</LI>    <LI>SGI IRIX 6.5.x ;</LI>    <LI>Solaris 8.</LI>  </UL>",
+  "content": "## Description\n\nUne fonction glob permet, lors de la consultation d'un serveur ftp, de\nmettre des caractères de substitution, tels que « \\* » ou « ˜ », dans\nles noms des fichiers.\n\nL'utilisation de ces caractères permet, par exemple lors de\nl'utilisation de la commande « mget \\*.c », de récupérer tous les\nfichiers portant l'extension « .c ».\n\nUne vulnérabilité dans la fonction glob(), lors de l'utilisation\nconjointe des caractères « \\* » et « ˜ », peut provoquer un débordement\nde pile. Un utilisateur mal intentionné effectuant une requête, avec des\ncaractères de substitution judicieusement placés, peut provoquer\nl'exécution de code arbitraire avec les droits du serveur ftp (trop\nsouvent root).\n\n## Solution\n\n-   Procédure de mise à jour et correctif NetBSD :\n\n        ftp://ftp.netbsd.org/pub/NetBSD/misc/security/advisories/NetBSD-SA2001-005.txt.asc\n\n-   FreeBSD n'a pas diffusé de correctif mais FreeBSD 5.0-CURRENT et\n    FreeBSD 4.2-STABLE du 10 avril 2001 n'est pas vulnérable.\n\n        ftp://ftp.freebsd.org/pub/FreeBSD\n\n-   Pour les autres plates formes, les correctifs ne sont actuellement\n    pas disponibles.\n\nRecommandation : Lancer le serveur ftp en tant qu'utilisateur afin de\ndiminuer les droits.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis du CERT CC :",
+      "url": "http://www.cert.org/advisories/CA-2001-07.html"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-043",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-04-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Un utilisateur distant mal intentionné peut, par l'emploi des caractères\nde substitution, exécuter du code arbitraire sur le serveur cible.\n",
+  "title": "Vulnérabilité de la fonction glob() dans les serveurs FTP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2001-07 du CERT CC",
+      "url": null
+    }
+  ]
+}

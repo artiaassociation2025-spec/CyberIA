@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les commutateurs Catalyst suivants :  <UL>    <LI>Catalyst série 6000 ;</LI>    <LI>Catalyst série 5000 ;</LI>    <LI>Catalyst série 4500 ;</LI>    <LI>Catalyst série 4000 ;</LI>    <LI>Catalyst 2948G, 2980G, 2980G-A, 4912G</LI>    <LI>Catalyst 2901, 2902, 2926(T,F,GS,GL), 2948.</LI>  </UL>  <P>avec les versions de CatOS égales ou antérieures à :</P>  <UL>    <LI>8.3(2)GLX ;</LI>    <LI>8.2(2) ;</LI>    <LI>7.6(6) ;</LI>    <LI>6.4(9) ;</LI>    <LI>5.5(20).</LI>  </UL></p>",
+  "content": "## Description\n\nSur un système vulnérable, si la phase d'établissement de connexion TCP\nn'est pas terminée, il est possible de réaliser un déni de service sur\nle système cible par consommation excessive des ressources.\n\nSelon Cisco, l'exploitation de cette vulnérabilité n'est possible que\nsur un système ayant les services Telnet, HTTP ou SSH activés.\n\n## Contournement provisoire\n\nDésactiver les services ou mettre en place des filtres afin de\nrestreindre l'accès au services Telnet, HTTP ou SSH.\n\n## Solution\n\nSe référer au bulletin de sécurité du constructeur pour l'obtention des\ncorrectifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité \"Cisco CatOS Telnet, HTTP  and SSH vulnerability\" de Cisco :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20040609-catos.shtml"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-191",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-06-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans CatOS permet à un utilisateur mal\nintentionné d'effectuer un déni de service sur les commutateurs CISCO.\n",
+  "title": "Vulnérabilité de Cisco CatOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité \"Cisco CatOS Telnet, HTTP and SSH vulnerability\" de Cisco",
+      "url": null
+    }
+  ]
+}

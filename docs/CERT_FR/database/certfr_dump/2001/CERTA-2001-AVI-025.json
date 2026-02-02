@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Internet Information Server 5.0 (IIS) et/ou Exchange 2000 en  fonctionnement sur Windows NT ou 2000.</P>",
+  "content": "## Description\n\nUn utilisateur mal intentionné peut, par le biais d'une URL habilement\nconstruite, effectuer un dépassement de mémoire, qui aura pour\nconséquence de bloquer à distance le service web.\n\nCette vulnérabilité est aussi présente sur Exchange 2000 car il est\npossible de traiter le courrier au travers d'une interface HTML.\n\nÉtant donné qu'il s'agit d'un dépassement de mémoire, il est possible\nd'exploiter cette vulnérabilité dans le but d'exécuter du code\narbitraire sur le serveur victime.\n\n## Contournement provisoire\n\nPour Microsoft Exchange 2000 :\n\nSi le traitement du mail au travers d'une interface HTML n'est pas\nnécessaire, désactiver cette fonction ou ne pas l'installer au départ.\n\n## Solution\n\nAppliquer le correctif de Microsoft :\n\n-   Pour IIS 5.0 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=28155\n\n-   Pour Exchange 2000 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=28369\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-025",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-03-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Possibilité d'exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Un mauvais traitement des URL envoyées au serveur IIS ou Exchange 2000\npermet à un utilisateur mal intentionné de bloquer à distance le service\nHTTP.\n",
+  "title": "Vulnérabilité d'Internet Information Server 5.0 et Exchange 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms01-014.asp"
+    }
+  ]
+}

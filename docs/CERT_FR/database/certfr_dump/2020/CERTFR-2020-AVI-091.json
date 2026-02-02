@@ -1,0 +1,100 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PostgreSQL 10.x versions antérieures à 10.12",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PostgreSQL 9.4.x versions antérieures à 9.4.26",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PostgreSQL 9.5.x versions antérieures à 9.5.21",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PostgreSQL 9.6.x versions antérieures à 9.6.17",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PostgreSQL 12.x versions antérieures à 12.2",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PostgreSQL 11.x versions antérieures à 11.7",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\n**NOTE** : l'éditeur stoppe le support de la version 9.4. La version\n9.4.26 est donc la dernière mise à jour. L'éditeur recommande aux\nutilisateurs de PostgreSQL 9.4 de programmer la transition vers une\nversion supportée\\[1\\].\n",
+  "cves": [
+    {
+      "name": "CVE-2020-1720",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-1720"
+    }
+  ],
+  "links": [
+    {
+      "title": "[1]Politique de gestion des versions PostgreSQL",
+      "url": "https://www.postgresql.org/support/versioning/"
+    }
+  ],
+  "reference": "CERTFR-2020-AVI-091",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2020-02-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans PostgreSQL . Elle permet à un\nattaquant de provoquer un contournement de la politique de sécurité.\n",
+  "title": "Vulnérabilité dans PostgreSQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PostgreSQL 2011 du 13 février 2020",
+      "url": "https://www.postgresql.org/about/news/2011/"
+    }
+  ]
+}

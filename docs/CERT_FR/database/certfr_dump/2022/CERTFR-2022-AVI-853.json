@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<ul> <li>Sophos Firewall versions antérieures à v18.5 MR5 (18.5.5), v19.0 MR2 (19.0.2) et v19.5 GA</li> <li>Sophos Firewall versions v19.0 GA, MR1 et MR1-1 sans le correctif de sécurité du 21 septembre 2022</li> <li>Sophos Firewall versions v18.5 GA, MR1, MR1-1, MR2, MR3 et MR4 sans le correctif de sécurité du 21 septembre 2022</li> <li>Sophos Firewall versions v18.0 MR3, MR4, MR5 et MR6 sans le correctif de sécurité du 23 septembre 2022</li> <li>Sophos Firewall versions v17.5 MR12, MR13, MR14, MR15, MR16 et MR17 sans le correctif de sécurité du 23 septembre 2022</li> <li>Sophos Firewall version v17.0 MR10 sans le correctif de sécurité du 23 septembre 2022</li> </ul> <p>Sophos indique que, par défaut, les pare-feux se mettent à jour automatiquement.</p> ",
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-3236",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-3236"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-853",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-09-26T00:00:00.000000"
+    },
+    {
+      "description": "Correction coquille.",
+      "revision_date": "2023-12-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Sophos Firewall. Elle permet à\nun attaquant de provoquer une exécution de code arbitraire à distance.\n\nSophos indique que la vulnérabilité CVE-2022-3236 est activement\nexploitée dans le cadre d'attaques ciblées.\n\nDe plus, le portail utilisateur ainsi que l'interface de gestion ne\ndevraient pas être accessibles sur Internet.\n",
+  "title": "Vulnérabilité dans Sophos Firewall",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sophos sophos-sa-20220923-sfos-rce du 23 septembre 2022",
+      "url": "https://www.sophos.com/fr-fr/security-advisories/sophos-sa-20220923-sfos-rce"
+    }
+  ]
+}

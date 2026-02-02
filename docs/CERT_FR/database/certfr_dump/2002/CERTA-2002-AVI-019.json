@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Utilitaire <SPAN class=\"textit\">gzip</SPAN> version 1.2.4.</P>",
+  "content": "## Description\n\nL'utilitaire gzip est utilisé pour la compression.\n\nDeux vulnérabilités sont présentes dans gzip.\n\nLa première provoque un déni de service si le fichier en entrée possède\nun nom supérieur à 1020 caractères.\n\nLa deuxième vulnérabilité est un dépassement de mémoire qui peut être\nexploitée si gzip est utilisé sur un serveur (un serveur FTP par\nexemple).\n\n## Solution\n\nContacter votre éditeur pour obtenir une mise à jour. Un correctif est\ndisponible sur le site de gzip (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Mandrake MDKSA-2002:011 :",
+      "url": "http://www.linux-mandrake.com/en/security/2002/MDKSA-2002-011.php"
+    },
+    {
+      "title": "Site de gzip :",
+      "url": "http://www.gzip.org"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-019",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités de <span class=\"textit\">gzip</span> permettent à un\nutilisateur mal intentionné de provoquer un déni de service ou d'éléver\nses privilèges.\n",
+  "title": "Vulnérabilités de gzip",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de Sécurité Mandrake MDKSA-2002:011",
+      "url": null
+    }
+  ]
+}

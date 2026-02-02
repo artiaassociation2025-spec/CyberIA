@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>mod_ssl</TT> pour le serveur web  Apache version 2.0.50 et versions antérieures.",
+  "content": "## Description\n\nLe module Apache mod_ssl est le module chargé du traitement des\nconnexions https pour le serveur web Apache.\n\nUne vulnérabilité a été découverte dans le filtre d'entrée du module\nmod_ssl. Un attaquant distant peut provoquer l'arrêt des connexions ssl\ndans un état bloquant et provoquer ainsi un déni de service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet du serveur web Apache :",
+      "url": "http://www.apache.org"
+    },
+    {
+      "title": "Bulletin de sécurité Suse SUSE-SA:2004:030 du 06 septembre    2004 :",
+      "url": "http://www.suse.com/de/security/2004_30_apache2.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:349 du 01 septembre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-349.html"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD apache :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/www/apache/README.html"
+    },
+    {
+      "title": "Site Internet du module mod_ssl :",
+      "url": "http://www.modssl.org"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-301",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence à la mise à jour de sécurité NetBSD.",
+      "revision_date": "2004-09-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le module mod_ssl d'Apache permet à un\nutilisateur mal intentionné de réaliser un déni de service.\n",
+  "title": "Vulnérabilité dans le module mod_ssl du serveur web Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RedHat RHSA-2004:349 du 01 septembre 2004",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Asterisk Business Edition, série C.2.x pour les versions antérieures à C.2.4.1 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Open Source, série 1.2.x pour les versions antérieures à 1.2.34 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Business Edition, série A.x.x ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "boitiers s800i, série 1.2.x pour les versions antérieures à 1.3.0.3.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Business Edition, série B.x.x pour les versions antérieures à B.2.5.9 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Open Source, série 1.4.x pour les versions antérieures à 1.4.26.1 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Business Edition, série C.3.x pour les versions antérieures à C.3.1 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Open Source, série 1.6.0.x pour les versions antérieures à 1.6.0.12 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Open Source, série 1.6.1.x pour les versions antérieures à 1.6.1.4 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans la plateforme de\ntéléphonie (PBX) Asterisk. Elles concernent l'usage incorrect de la\nfonction C sscanf dans le code de l'application. Les données qui lui\nsont passées en entrée sont de longueur arbitraire et non contrôlée. Ce\nmauvais contrôle peut être exploité par une personne distante via des\ntrames spécialement construites (Invite SIP par exemple) afin de\nperturber le service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2726",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2726"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Asterisk AST-2009-005 du 10 août    2009 :",
+      "url": "http://downloads.asterisk.org/pub/security/AST-2009-005.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-322",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans la plateforme de\ntéléphonie (PBX) Asterisk. L'exploitation de ces dernières peut\nprovoquer un dysfonctionnement du service.\n",
+  "title": "Multiples vulnérabilités dans Asterisk",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Asterisk AST-2009-005 du 10 août 2009",
+      "url": null
+    }
+  ]
+}

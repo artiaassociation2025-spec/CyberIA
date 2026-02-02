@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Data Access Components version 2.6 (inclus avec Microsoft SQL Server 2000) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Data Access Components version 2.7 (inclus avec Microsoft Windows XP) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Data Access Components version 2.5 (inclus avec Microsoft Windows 2000) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Data Access Components version 2.8 (inclus avec Microsoft Windows Server 2003 64-Bit Edition).",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Data Access Components version 2.8 (inclus avec Microsoft Windows Server 2003).",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nMDAC permet d'effectuer de nombreuses opérations sur les bases de\ndonnées : se connecter à une base de données, récupérer des données, ...\n\nLorsqu'un client recherche la liste des serveur SQL présents sur son\nréseau, il envoie une requête en diffusion (broadcast) à toutes les\nmachines du réseau.\n\nUne vulnérabilité présente dans le traitement des réponses à cette\nrequête peut être exploitée par un utilisateur mal intentionné pour\nprovoquer un débordement de mémoire.\n\nIl est alors possible pour l'attaquant d'exécuter du code arbitraire sur\nla machine avec les privilèges de l'application ayant lancé la requête\nen diffusion.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité MS04-003 de Microsoft  :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS04-003.asp"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-006",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-01-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Microsoft Data Access Components (MDAC) permet à\nun utilisateur mal intentionné d'exécuter du code arbitraire sur le\nsystème.\n",
+  "title": "Vulnérabilité de Microsoft Data Access Components",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Microsoft MS04-003",
+      "url": null
+    }
+  ]
+}

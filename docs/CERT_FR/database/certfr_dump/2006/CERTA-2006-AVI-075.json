@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Office 2000 Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft PowerPoint 2000.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité présente dans PowerPoint autorise l'accès au\nrépertoire Temporary Internet Files (TIFF). Or, celui-ci peut contenir\ndes documents sensibles ne devant pas être accessibles à distance. Un\nutilisateur mal intentionné peut avoir accès à des fichiers présents\ndans ce répertoire en incitant la victime à consulter une page web\nmalicieusement construite. Cependant, il doit, pour réussir son attaque,\nconnaître le nom du fichier auquel il désire accéder.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2006-AVI-075",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-02-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Microsoft PowerPoint permet à un utilisateur\ndistant de porter atteinte à la confidentialité de certaines données.\n",
+  "title": "Vulnérabilité dans Microsoft PowerPoint",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-010 du 14 février 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-010.mspx"
+    }
+  ]
+}

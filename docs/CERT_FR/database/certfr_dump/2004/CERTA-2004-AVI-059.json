@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD 5.2.1 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 4.9 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPar l'envoi de segments ne respectant pas l'ordre des séquences TCP sur\nune connexion légitime, un utilisateur mal intentionné peut réaliser un\ndéni de service sur un système vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs :  \nBulletin de sécurité FreeBSD-SA-04:04.tcp de FreeBSD :\n\n    ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-04:04.tcp.asc\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-059",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans la gestion des tampons mémoire (mbuf) de\nla pile IP peut être exploitée par un utilisateur mal intentionné pour\nréaliser un déni de service sur un système vulnérable.\n",
+  "title": "Déni de service sous FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD-SA-04:04.tcp de FreeBSD",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité 03.02.04 d'iDEFENSE",
+      "url": "http://www.idefense.com/application/poi/display?id=78&type=vulnerabilities"
+    }
+  ]
+}

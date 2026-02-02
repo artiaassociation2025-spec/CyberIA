@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "WinZip FR version 8.1 SR-1 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "WinZip US version 8.1 SR-1 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nWinZip est un programme pour Microsoft Windows de gestion des archives\naux formats tels que CAB, TAR, gzip, UUencode, BinHex, et MIME. Un\ndébordement de mémoire dans la gestion des archives de type MIME\n(fichiers d'extensions .b64, .bhx, .hqx, .mim, .uu, .uue et .xxe) permet\nà un utilisateur mal intentionné d'exécuter du code arbitraire à\ndistance par l'intermédiaire d'une archive habilement constituée.\n\n## Contournement provisoire\n\nDésactiver l'association entre WinZip et les fichiers d'extensions .b64,\n.bhx, .hqx, .mim, .uu, .uue et .xxe. Pour cela, dans le menu Options\nchoisir Configuration..., dans l'onglet Système cliquer sur le bouton\nAssociations et décocher les extensions .B64, .BHX, .HQX, .MIM, .UU,\n.UUE et .XXE.\n\n## Solution\n\nMettre à jour WinZip en version 8.1 SR-2.\n\n-   La page de téléchargement de la mise à jour pour la version FR se\n    situe à l'adresse suivante :\n\n        http://www.absoft.fr/FR/produits/Winzip/service_maj.asp\n\n-   La page de téléchargement de la mise à jour pour la version US se\n    situe à l'adresse suivante :\n\n        http://www.winzip.com/wz81sr2.htm\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site internet de WinZip :",
+      "url": "http://www.winzip.com"
+    },
+    {
+      "title": "Site internet de WinZip français :",
+      "url": "http://www.absoft.fr/FR/produits/Winzip/"
+    },
+    {
+      "title": "Site internet de WinZip français :",
+      "url": "http://www.winzip.com/french.htm"
+    },
+    {
+      "title": "Avis de sécurité de WinZip Computing :",
+      "url": "http://www.winzip.com/fmwz90.htm"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-056",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-01T00:00:00.000000"
+    },
+    {
+      "description": "correction de l'avis pour prendre en compte la spécificité des versions localisées.",
+      "revision_date": "2004-03-04T00:00:00.000000"
+    },
+    {
+      "description": "prise en compte du correctif WinZip 8.1 SR-2 (y compris WinZip FR).",
+      "revision_date": "2004-03-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité de WinZip dans la gestion des archives de type MIME\npermet à un utilisateur mal intentionné de réaliser un débordement de\nmémoire et ainsi d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité de WinZip",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité iDEFENSE 02.27.04a",
+      "url": "http://www.idefense.com/application/poi/display?id=76&type=vulnerabilites"
+    }
+  ]
+}

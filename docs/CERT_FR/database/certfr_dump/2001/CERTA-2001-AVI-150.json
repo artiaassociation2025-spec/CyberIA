@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Solaris 8 et version antérieures.</p>",
+  "content": "## Description\n\nXsun est un serveur X démarré sur les stations de travail utilisant\nl'environnement graphique X11.\n\nUne vulnérabilité de type débordement de mémoire permet à un utilisateur\nmal intentionné d'exécuter du code arbitraire avec les privilèges de\nl'administrateur root.\n\nCette vulnérabilité n'est exploitable qu'en local.\n\n## Contournement provisoire\n\nSelon SUN, une solution de contournement provisoire consiste à changer\nles permissions de l'exécutable au moyen de la commande suivante: chmod\n0755 /usr/openwin/bin/Xsun.\n\nRéaliser cette modification empêche le démarrage du serveur Xsun par les\ncommandes telles que openwin et xinit. Il convient donc de s'assurer que\nle démarrage du serveur X est réalisé au moyen des gestionnaires\nd'environnement graphique tels que xdm ou dtlogin.\n\n## Solution\n\nDes correctifs sont disponibles. Se référer au bulletin de sécurité de\nSUN (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-150",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-11-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire avec les privilèges de l'administrateur root"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le serveur Xsun permet à un utilisateur\nmal intentionné d'exécuter du code arbitraire avec les privilèges de\nl'administrateur root.\n",
+  "title": "Vulnérabilité du serveur Xsun sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Sun Alert Notification #26359",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=salert%2F26359&&wholewords=on"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous les systèmes sur lesquels sont installés le <SPAN class=\n  \"textit\">daemon</SPAN> <TT>smap/smapd</TT> (ou <TT>CSMAP</TT> sur  certains systèmes).</P>  <P>Parmis ceux ci :</P>  <UL>    <LI>Gauntlet Firewall versions 5.x pour Unix ;</LI>    <LI>PGP e-ppliance série 300 version 1.0, 1.5, 2.0 ;</LI>    <LI>PGP e-ppliance séries 100 et 120 ;</LI>    <LI>PGP e-ppliance série 300 versions 1,5 et 2,0 ;</LI>    <LI>PGP e-ppliance série 1000 versions 1,5 et 2,0 ;</LI>    <LI>MacAfee Webshield pour Solaris 4.1 ;</LI>    <LI>MacAfee e-ppliance séries 100 et 120 ;</LI>  </UL>  <P>D'autres systèmes peuvent être affectés. Contactez votre  distributeur.</P>  <H4><A name=\"SECTION00030010000000000000\" id=  \"SECTION00030010000000000000\"><SPAN class=\n  \"arabic\">2</SPAN>.<SPAN class=\"arabic\">0</SPAN>.<SPAN class=\n  \"arabic\">0</SPAN>.<SPAN class=\"arabic\">1</SPAN></A></H4>  <P>D'après l'éditeur de M-Wall, les versions 4.5 et 4.0 ne sont  pas vulnérables.</P>",
+  "content": "## Description\n\nsmap/smapd (ou CSMAP) est un service permettant le transfert de courrier\nà travers des systèmes tels que des garde-barrières.\n\nGrâce à un débordement de mémoire du service smap/smapd (ou CSMAP), un\nutilisateur mal intentionné peut exécuter du code arbitraire à distance\navec les privilèges de ce service.\n\n## Contournement provisoire\n\nDésactiver ce daemon si vous ne l'utilisez pas.\n\n## Solution\n\nAppliquer le correctif selon le système :\n\n-   Pour les produits PGP :\n\n        http://www.pgp.com/naicommon/download/upgrade/upgrade-patch.asp\n\n-   Pour les produits NAI :\n\n        ftp://www.nai.com/security\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2001-25.html"
+    },
+    {
+      "title": "Le bulletin de sécurité de PGP :",
+      "url": "http://www.pgp.com/support/product-advisories/csmap.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-095",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-09-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire sur le garde-barrière avec les privilèges du daemon smap/smapd"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut exécuter du code arbitraire à\ndistance avec les privilèges des <span class=\"textit\">daemons</span>\nsmap/smapd (ou CSMAP).\n",
+  "title": "Vulnérabilité des <SPAN class= \"textit\">daemons</SPAN> <TT>smap/smapd</TT> ( ou <TT>CSMAP</TT>)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2001-25 du CERT/CC",
+      "url": null
+    }
+  ]
+}

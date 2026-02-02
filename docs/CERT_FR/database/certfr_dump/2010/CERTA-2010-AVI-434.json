@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IIS sur toutes les éditions de Windows  XP, Vista, Seven, Server 2003 et Server 2008, et pour toutes les  architectures.</p>",
+  "content": "## Description\n\nTrois vulnérabilité du serveur IIS viennent d'être publiées :\n\n-   (CVE-2010-1899) le traitement défectueux de certaines URL par les\n    serveurs IIS ASP est exploitable par un utilisateur malveillant pour\n    provoquer un déni de service à distance ;\n-   (CVE-2010-2730) le traitement défectueux de certaines requêtes HTTP\n    par les serveurs IIS 7.5 avec fonctionnalité FastCGI activée est\n    exploitable par un utilisateur malveillant pour exécuter du code\n    arbitraire à distance ;\n-   (CVE-2010-2731) un défaut dans IIS 5.1 sur windows XP SP3 permet à\n    un utilisateur malveillant de s'affranchir de l'authentification\n    pour accéder à des ressources protégées.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2731",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2731"
+    },
+    {
+      "name": "CVE-2010-2730",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2730"
+    },
+    {
+      "name": "CVE-2010-1899",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1899"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-434",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-09-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent le serveur IIS. La plus grave permet\nà un utilisateur malintentionné d'exécuter du code arbitraire à\ndistance.\n",
+  "title": "Vulnérabilités dans IIS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS10-065",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-065.mspx"
+    }
+  ]
+}

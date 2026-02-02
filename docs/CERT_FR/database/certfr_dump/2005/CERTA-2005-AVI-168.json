@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ZoneAlarm Antivirus 5.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ZoneAlarm Security Suite 5.x.",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nZone Labs propose des solutions logicielles de sécurité.\n\nCertains produits Zone Labs sont touchés par une vulnérabilité affectant\nla bibliothèque de liaison dynamique (Dynamic Link Library) Vet\nAntivirus Engine VetE.dll.\n\nCette vulnérabilité de type débordement de mémoire permet à un\nutilisateur distant mal intentionné d'exécuter du code arbitraire,\nd'effectuer un déni de service ou d'élever ses privilèges, au moyen de\npaquets malicieusement contruits basés sur des protocoles courants\n(SMTP, FTP, SMB etc.).\n\n## Solution\n\nEffectuer la mise à jour des logiciels affectés au moyen de l'option\nUpdate Now.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de l'éditeur :",
+      "url": "http://www.zonelabs.com"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-168",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-05-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité affectant certains produits de Zone Labs permet à un\nutilisateur distant mal intentionné d'exécuter du code arbitraire,\nd'effectuer un déni de service ou d'élever ses privilèges.\n",
+  "title": "Vulnérabilité dans les produits Zone Labs",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Zone Labs du 24 mai 2005",
+      "url": "http://www.securityfocus.com/archive/1/398921"
+    }
+  ]
+}

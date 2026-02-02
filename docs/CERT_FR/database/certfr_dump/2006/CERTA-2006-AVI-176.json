@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>ClamAV versions 0.80 à 0.88.1.</P>",
+  "content": "## Description\n\nFreshclam est un utilitaire de ClamAV en ligne de commande permettant de\ntélécharger et d'installer les mises à jour des bases de signatures des\nvirus. Une vulnérabilité a été découverte dans le client HTTP de\nFreshclam lors de la vérification de la taille des en-têtes des données\nprovenant d'un serveur HTTP. L'exploitation de cette vulnérabilité, qui\nrequiert un serveur HTTP malveillant d'hébergement des bases de\nsignatures, permet de réaliser un déni de service ou d'exécuter du code\narbitraire.\n\n## Solution\n\nMettre à jour en version 0.88.2 (voir Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-1989",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1989"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-1050 du 02 mai 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1050"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:080 du 01 mai 2006    :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:080"
+    },
+    {
+      "title": "Version 0.88.2 de ClamAV :",
+      "url": "http://www.clamav.net/stable.php#pagestart"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200605-03 du 02 mai 2006 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200605-03.xml"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-176",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Mandriva, Debian.",
+      "revision_date": "2006-05-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans <span\nclass=\"textit\">Freshclam</span> permettant de réaliser un déni de\nservice ou d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité dans ClamAV",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ClamAV 0.88.2",
+      "url": "http://www.clamav.net/security/0.88.2.html"
+    }
+  ]
+}

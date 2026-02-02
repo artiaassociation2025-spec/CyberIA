@@ -1,0 +1,79 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Ivanti Endpoint Manager (EPM) 2022 SU3 et antérieures sans le dernier correctif publié par l'éditeur",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Ivanti Secure Access Client versions antérieures à 22.6R1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\n## Contournement provisoire\n",
+  "cves": [
+    {
+      "name": "CVE-2023-38041",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-38041"
+    },
+    {
+      "name": "CVE-2023-35083",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-35083"
+    },
+    {
+      "name": "CVE-2023-35084",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-35084"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0891",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-10-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits\nIvanti. Elles permettent à un attaquant de provoquer une exécution de\ncode arbitraire, une atteinte à la confidentialité des données et une\nélévation de privilèges.\n",
+  "title": "Multiples vulnérabilités dans les produits Ivanti",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ivanti SA-2023-08-08-CVE-2023-35084 du 10 octobre 2023",
+      "url": "https://forums.ivanti.com/s/article/SA-2023-08-08-CVE-2023-35084?language=en_US"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ivanti CVE-2023-38041 du 19 octobre 2023",
+      "url": "https://forums.ivanti.com/s/article/CVE-2023-38041-New-client-side-release-to-address-a-privilege-escalation-on-Windows-user-machines?language=en_US"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ivanti SA-2023-08-08-CVE-2023-35083 du 10 octobre 2023",
+      "url": "https://forums.ivanti.com/s/article/SA-2023-06-20-CVE-2023-35083?language=en_US"
+    }
+  ]
+}

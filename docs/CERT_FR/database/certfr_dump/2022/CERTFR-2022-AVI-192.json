@@ -1,0 +1,79 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM QRadar SIEM version 7.5.0 GA sans le correctif de sécurité Update Pack 1",
+      "product": {
+        "name": "QRadar SIEM",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM QRadar SIEM versions 7.4.3 GA antérieures à 7.4.3 Fix Pack 4 Interim Fix 04",
+      "product": {
+        "name": "QRadar SIEM",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM QRadar SIEM versions 7.3.3 GA antérieures à 7.3.3 Fix Pack 10 Interim Fix 02",
+      "product": {
+        "name": "QRadar SIEM",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-39275",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-39275"
+    },
+    {
+      "name": "CVE-2021-34798",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-34798"
+    },
+    {
+      "name": "CVE-2021-44790",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-44790"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-192",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-03-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans IBM QRadar SIEM.\nElles permettent à un attaquant de provoquer une exécution de code\narbitraire à distance, un déni de service à distance et une atteinte à\nl'intégrité des données.\n",
+  "title": "Multiples vulnérabilités dans IBM QRadar SIEM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM 6560142 du 28 février 2022",
+      "url": "https://www.ibm.com/support/pages/node/6560142"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2000 Professional",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Advanced Server",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDans les mécanismes de sécurité de Windows 2000, des objets isolent les\nprocessus les uns des autres. Chaque « session » contient une ou\nplusieurs « stations » (windows station). Chaque station contient un ou\nplusieurs « bureaux » (desktop). Normalement, chaque processus n'a accès\nqu'à son propre bureau.\n\nDans la vulnérabilité découverte, il est permis à un processus d'accéder\nà des bureaux appartenant à un autre processus. Dès lors, un utilisateur\nmal intentionné, pourra accéder aux données des autres processus, tels\nque les mots de passes utilisés par le processus « winlogon ».  \n  \n\nNota : Windows 2000 Terminal Server n'est pas affecté par cette\nvulnérabilité, car chaque utilisateur est propriétaire de sa session.\n\n## Solution\n\nAppliquer le correctif (version US) :  \n  \n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=20836\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-008",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-06-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Perte de confidentialité des données"
+    },
+    {
+      "description": "Compromission des mots de passe"
+    },
+    {
+      "description": "Contournement des mécanismes de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans les mécanismes de sécurité de Windows 2000 a été\ndécouverte. Elle permet à un utilisateur mal intentionné d'obtenir, en\naccès local, des privilèges qui ne lui ont pas été attribués.\n",
+  "title": "Vulnérabilité sous Windows 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Microsoft security bulletin",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "CERT IST",
+      "url": null
+    }
+  ]
+}

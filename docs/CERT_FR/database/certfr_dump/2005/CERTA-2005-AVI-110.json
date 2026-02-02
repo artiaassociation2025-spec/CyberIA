@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>MySQL versions 4.x antérieures à la  version 4.0.24.</p>",
+  "content": "## Description\n\nDeux vulnérabilités sont présentes sur MySQL :\n\n-   Une vulnérabilié présente dans la fonction udf_init() permet à un\n    utilisateur mal intentionné, via l'utilisation des commandes INSERT\n    INTO ou CREATE FUNCTION de charger une librairie. Cette\n    vulnérabilité ne peut être exploitée que si le serveur MySQL a été\n    compilé avec les options permettant aux utilisateurs de charger des\n    focntions udf (User Defined Fonction).\n-   La seconde vulnérabilité concerne une mauvaise gestion des fichiers\n    temporaires lors de l'utilisation de la fonction CREATE TEMPORARY\n    TABLE. Un utilisateur mal intentionné peut exploiter cette\n    vulnérabilité via l'utilisation d'un lien symbolique pour écraser\n    des fichiers arbitraires sur le système.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SUSE-SA:2005:019 du 24 mars 2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_19_mysql.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:334-07 du 28 mars    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-334.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200503-19 du 16 mars 2005    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200503-19.xml"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour mysql-server du 14 mars    2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-mysql-server.html"
+    },
+    {
+      "title": "Site internet de MySQL :",
+      "url": "http://www.mysql.com"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2005:060 du 21 mars    2005 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2005:060"
+    },
+    {
+      "title": "Bulletin de sécurité MySQL :",
+      "url": "http://www.mysql.com/news-and-events/news/article_883.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-110",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-03-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence aux bulletins de sécurité Gentoo, Mandrake, SuSE et FreeBSD.",
+      "revision_date": "2005-03-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité RedHat et aux références CVE.",
+      "revision_date": "2005-03-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Élévation de priviléges"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans MySQL peuvent être exploitées par un\nutilisateur local mal intentionné pour accèder au système ou élever ses\npriviléges sur le système vulnérable.\n",
+  "title": "Vulnérabilités dans Mysql",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité MySQL",
+      "url": null
+    }
+  ]
+}

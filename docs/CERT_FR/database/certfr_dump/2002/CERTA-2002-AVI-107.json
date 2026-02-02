@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Certaines versions de Cisco IOS 11.X et 12.X.<BR></P>  <P>Matériels connus comme vulnérables :</P>  <UL>    <LI>Cisco 1005 IOS 11.0(18) ;</LI>    <LI>Cisco 1603 IOS 11.3(11b) ;</LI>    <LI>Cisco 1603 IOS 12.0(3) ;</LI>    <LI>Cisco 2503 IOS 11.0(22a) ;</LI>    <LI>Cisco 2503 IOS 11.1(24a).</LI>  </UL>",
+  "content": "## Description\n\nLes messages ICMP Redirect sont utilisés dans les réseaux de type IP\nafin de modifier dynamiquement les tables de routage d'un équipement\nréseau (annonce de nouvelles routes). Certaines versions d'IOS possédent\nune mauvaise gestion de ce type de messages. Cette vulnérabilité peut\nêtre exploitée par un individu mal intentionné afin d'effectuer un déni\nde service sur les routeurs vulnérables.\n\n## Contournement provisoire\n\nIl est possible d'interdir les messages de type ICMP Redirect à\ndestination du routeur vulnérable, s'ils ne sont pas utilisés.\n\n`access-list 101 deny icmp any host <adresse  routeur> redirect`\n\n## Solution\n\nContacter CISCO afin d'obtenir le correctif.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Bugtraq :",
+      "url": "http://online.securityfocus.com/bid4786/discussion"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-107",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-05-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Certaines versions de l'IOS (Internetwork Operating System) des\nmatériels de CISCO sont vulnérables aux attaques par déni de service de\ntype ICMP Redirect.\n",
+  "title": "Vulnérabilité Cisco IOS aux dénis de service de type ICMP Redirect",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de securite Bugtraq",
+      "url": null
+    }
+  ]
+}

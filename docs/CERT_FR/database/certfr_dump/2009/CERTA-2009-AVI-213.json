@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Server 2000 SP 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 SP2 (y compris pour les Èditions x64 et Itanium).",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Professionnel SP2 et SP3 (y compris pour l'Èdition x64) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans la mise en oeuvre des\nservices d'annuaire Microsoft Active Directory :\n\n-   le service ne manipule pas correctement certaines requêtes LDAP ou\n    LDAPS (Lightweight Directory Access Protocol). Cette vulnérabilité\n    peut être exploitée à distance par le biais de trames spécialement\n    construites afin de perturber le service, voire d'exécuter des\n    commandes arbitraires sur le système vulnérable ;\n-   le service ne manipule pas correctement certaines requêtes LDAP ou\n    LDAPS incluant des filtres OID (Object Identifier) particuliers.\n    L'exploitation de cette vulnérabilité peut se faire à distance et\n    provoque le dysfonctionnement du service.\n\n## Solution\n\nSe référer au bulletin de sécurité Microsoft MS09-018 pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1138",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1138"
+    },
+    {
+      "name": "CVE-2009-1139",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1139"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-213",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-06-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été identifiées dans Microsoft Active Directory.\nL'exploitation de ces dernières peut provoquer un dysfonctionnement du\nservice, voire l'exploitation de code à distance.\n",
+  "title": "Vulnérabilité dans Microsoft Active Directory",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS09-018 du 09 juin 2009",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-018.mspx"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BIND versions antérieures à 9.18.33",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND versions 9.21.x antérieures à 9.21.4",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND versions 9.20.x antérieures à 9.20.5",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND Supported Preview Edition versions antérieures à 9.18.33-S1",
+      "product": {
+        "name": "BIND Supported Preview Edition",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2024-11187",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-11187"
+    },
+    {
+      "name": "CVE-2024-12705",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-12705"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0092",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-02-04T00:00:00.000000"
+    },
+    {
+      "description": "Retrait de la vulnérabilité CVE-2024-28872 et modification des dates des bulletins éditeur.",
+      "revision_date": "2025-02-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans ISC BIND. Elles permettent à un attaquant de provoquer un déni de service à distance.",
+  "title": "Multiples vulnérabilités dans ISC BIND",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-01-29",
+      "title": "Bulletin de sécurité ISC BIND cve-2024-12705",
+      "url": "https://kb.isc.org/v1/docs/cve-2024-12705"
+    },
+    {
+      "published_at": "2025-01-29",
+      "title": "Bulletin de sécurité ISC BIND cve-2024-11187",
+      "url": "https://kb.isc.org/v1/docs/cve-2024-11187"
+    }
+  ]
+}

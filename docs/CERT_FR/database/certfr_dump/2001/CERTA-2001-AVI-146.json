@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows Media Player 6.4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Media Player 7 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Media Player pour Windows XP.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Media 7.1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes fichiers « ASF » (Advanced Streaming Format) sont utilisés pour la\ndiffusion de flux vidéo. Un utilisateur mal intentionné peut concevoir\nun fichier de ce format pour y inclure du code arbitraire qui sera\nexécuté sur la machine cible avec les droits de l'utilisateur.\n\nSelon Microsoft, seule la version 6.4 de Windows Media Player est\nvulnérable mais il préconise aux possesseurs de versions supérieures de\ntélécharger le correctif afin de corriger quelques variantes des\nvulnérabilités décrites notamment dans les avis CERTA-2001-AVI-083 et\nCERTA-2001-AVI-058.\n\n## Solution\n\nTélécharger le correctif sur le site Microsoft :\n\n-   Windows Media Player 6.4, 7 et 7.1 (version US):\n\n        http://download.microsoft.com/download/winmediaplayer/Update/308567/WIN98MeXP/EN-US/wm308567.exe\n\n-   Windows Media Player pour Windows XP :\n\n        http://windowsupdate.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-056.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-146",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-11-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un débordement de mémoire dans la gestion des fichiers « ASF » de\nWindows Media Player permet de réaliser un arrêt de cette application ou\nl'exécution de code arbitraire.\n",
+  "title": "Vulnérabilité dans Windows Media Player",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-056",
+      "url": null
+    }
+  ]
+}

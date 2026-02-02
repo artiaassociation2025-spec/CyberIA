@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Spring Framework versions 2.x et 3.x.</p>",
+  "content": "## Description\n\nSpring Framework permet le développement d'application Java/JEE.\n\nPlusieurs vulnérabilités de Spring Framework ont été corrigées :\n\n-   (CVE-2011-2730) une double interprétation d'éléments en langage EL\n    permet à un utilisateur malveillant d'obtenir des informations sans\n    en avoir le droit ;\n-   (CVE-2011-2731) un problème de concurrence dans RunAsManager permet\n    à un utilisateur malveillant d'élever ses privilèges ;\n-   (CVE-2011-2732) une erreur dans le traitement de connexions et des\n    déconnexions permet à un utilisateur malveillant d'injecter du code\n    dans une réponse HTTP ;\n-   (CVE-2011-2894) des erreurs dans la de-serialization d'objets\n    permettent à un utilisateur malveillant d'exécuter du code\n    arbitraire à distance.\n\n## Solution\n\nLes versions 2.0.7, 2.5.6.SEC03, 2.5.7.SR02 et 3.0.6 remédient à ces\nvulnérabilités.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2894",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2894"
+    },
+    {
+      "name": "CVE-2011-2730",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2730"
+    },
+    {
+      "name": "CVE-2011-2732",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2732"
+    },
+    {
+      "name": "CVE-2011-2731",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2731"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-504",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-09-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de Spring Framework ont été corrigées.\nCertaines permettent l'exécution de code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans Spring Framework",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Springsource du 09 septembre 2011",
+      "url": "http://www.springsource.com/security/cve-2011-2894"
+    }
+  ]
+}

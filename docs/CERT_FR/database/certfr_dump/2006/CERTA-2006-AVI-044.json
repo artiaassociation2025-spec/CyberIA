@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD 6.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 5.4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans le noyau FreeBSD :\n\n-   la première est due à une erreur dans l'initialisation d'un tampon\n    présent dans la pile du noyau FreeBSD (CVE-2006-379) qui, lorsqu'il\n    est consulté par le biais d'un appel système, peut encore contenir\n    des données sensibles appartenant à d'autres utilisateurs ;\n-   la deuxième vulnérabilité est due à erreur dans le calcul de la\n    taille d'un tampon par le noyau FreeBSD (CVE-2006-380). Elle permet\n    à un utilisateur local mal intentionné d'avoir accès à des zones de\n    la pile en dehors de ce tampon et contenant potentiellement des\n    informations sensibles. Dans les deux cas, ces vulnérabilités\n    permettent à un utilisateur local mal intentionné de porter atteinte\n    à la confidentialité des données en réalisant un appel système.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-06:06 du 25 janvier 2006 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-06:06.kmem.asc"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-044",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-01-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités du noyau de FreeBSD permettent à un utilisateur\nlocal mal intentionné de porter atteinte à la confidentialité des\ndonnées.\n",
+  "title": "Vulnérabilités du noyau de FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD SA-06:06.kmem du 25 janvier 2006",
+      "url": null
+    }
+  ]
+}

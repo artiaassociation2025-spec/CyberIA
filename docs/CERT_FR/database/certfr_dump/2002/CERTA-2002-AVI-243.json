@@ -1,0 +1,107 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mandrake ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RedHat ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenLinux.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe mél (SMTP) et les forums de discussion sur Internet (NNTP) ont été\nconçus pour échanger des messages textuels en anglais. De nombreux\nsystèmes ont donc été conçus pour échanger des messages ne contenant que\ndes caractères imprimables du jeux ASCII. En pratique 7 bits suffisent\npour représenter chaque caractère (le bit de poids fort de chaque octet\nest nul).\n\nLorsqu'il faut échanger des textes avec des caractères accentués ou bien\ndes pièces jointes (images, sons, ...) ces systèmes ne fonctionnent\nplus, car ils sont confrontés à des octets dont le bit de poids fort\nvaut 1.\n\nUn contournement de cette limitation est d'encoder les données binaires\nen un ensemble de caractères ASCII avant de les émettre. Une des normes\npour réaliser ce type d'encodage est uuencode (Unix to Unix encode).\n\nPar exemple, l'encodage d'une image :\n\n    begin 644 toto.gif\n    M1TE&.#EA=P!/`/<``.(M,>,N,.,N,M\\N,N$O,>(Q-.(Q,N,R,^(I+MPH+N(J\n    [...]\n    ME!`;%1([L4U1L1:;%!B;L46QL1P;%![[L4;A3\"*+%2%;LCMQLBA[$RJ[LDI!\n    8LBY[L3`;LQK[$#8*>[,XF[,ZZQ`!`0`[\n    `\n    end\n\noù toto.gif désigne le nom du fichier à créerlorsque la pièce jointe\nsera décodée par le logicieluudecode.\n\nLe paquetage GNU Sharutils est un ensemble de logiciels destinés à faire\ndes archives shell pour la transmission de données par le mél. Parmis\nles logiciels de ce paquetage, on trouve une implémentation du logiciel\nuudecode.\n\nCette implémentation d'uudecode ne vérifie pas, avant d'écrire le\nfichier décodé sur le disque, si le fichier existe déjà et notamment\ns'il n'est pas un lien ou un tube nommé.\n\nCeci permet une attaque classique d'écrasement de fichiers en suivant\nles liens symboliques. Cette technique peut permettre dans certains cas\nune élévation de privilèges d'un utilisateur local.\n\nD'autres implémentations de uudecode peuvent être touchées par cette\nvulnérabilité. La page du CERT Coordination Center précise quelles sont\nles implémentations vulnérables connues.\n\n## Solution\n\nAppliquer le correctif proposé pour les implémentations vulnérables. Les\navis de sécurité suivants précisent des implémentations à corriger :\n\n**RedHat**\n:   avis RHSA-2002:065\n\n**OpenLinux**\n:   avis CSSA-2002-040.0\n\n**Mandrake**\n:   avis MDKSA-2002:052\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Page d'accueil du projet GNU Sharutils :      \n;",
+      "url": "http://www.gnu.org/software/sharutils/sharutils.html"
+    },
+    {
+      "title": "description de la vulnérabilité et des implémentations    vulnérables connues sur la page du CERT    Cordination Center :",
+      "url": "http://www.kb.cert.org/vuls/id/336083"
+    },
+    {
+      "title": "avis RedHat",
+      "url": "http://rhn.redhat.com/errata"
+    },
+    {
+      "title": "avis OpenLinux",
+      "url": "http://www.sco.com/support/security"
+    },
+    {
+      "title": "avis Mandrake",
+      "url": "http://www.mandrakesecure.net/archives/2002-08/msg00003.php"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-243",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-11-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Pertes de données"
+    },
+    {
+      "description": "Élévations de privilèges"
+    },
+    {
+      "description": "Dénis de service"
+    }
+  ],
+  "summary": "Une vulnérabilité du logiciel uudecode permet d'écraser des fichiers,\nconduisant dans certains cas à une élévation de privilèges.\n",
+  "title": "uudecode ne vérifie pas les liens symboliques",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis OpenLinux : CSSA-2002-040.0",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "CVE : CAN-2002-0178",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Mandrake : MDKSA-2002:052",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "CERT CC : Vulnerability Note Vu#336083",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "RedHat : RHSA-2002:065",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système avec OpenLDAP de la version 2.0.0 à 2.0.19  installé.</P>",
+  "content": "## Description\n\nUne mauvaise vérification des ACL (Access Control Lists) sous OpenLDAP\npermet à un utilisateur authentifié de remplacer les attributs d'un\nobjet LDAP ne lui appartenant pas par une liste d'attributs vide. Il\nfaut cependant savoir que les attributs propres à l'objet ne seront pas\nsupprimés par cette manipulation.\n\n## Solution\n\nInstaller la version 2.0.21 de OpenLDAP :\n\n    ftp://ftp.openladap.org/pub/OpenLDAP/openldap-release/openldap-2.0.21.tgz\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-013",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-01-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Modification illicite des droits associés à un objet ldap"
+    }
+  ],
+  "summary": "Une mauvaise vérification des permissions des utilisateurs permet à l'un\nd'entre de supprimer des attributs d'un objet LDAP ne lui appartenant\npas.\n",
+  "title": "Vulnérabilité de OpenLDAP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RedHat",
+      "url": null
+    }
+  ]
+}

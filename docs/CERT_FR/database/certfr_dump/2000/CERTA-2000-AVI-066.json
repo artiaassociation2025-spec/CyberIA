@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Exchange serveur 5.5 indépendamment de la  plateforme.</P>",
+  "content": "## Description\n\nDans son fonctionnement normal, Microsoft Exchange 5.5 vérifie la\nvalidité des champs MIME dans l'entête des courriers entrants. Il traite\nde façon particulière les courriers dont l'entête est mal formée.\nCependant le champ MIME nommé « Content Type : », s'il est habilement\nconstruit échappe à ce traitement et bloque le service de messagerie.\n\n## Contournement provisoire\n\nQuand cet incident se produit : redémarrer le service de messagerie\nExchange, et supprimer le courrier ayant engendré l'erreur. Mais cette\nsolution est trés contraignante car elle implique la présence permanente\nd'un administrateur qui agirait manuellement sur le serveur pour le\ndépanner.\n\n## Solution\n\nIl faut appliquer le correctif de Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=25443\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-066",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-11-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la gestion des courriers entrants, permet à un\ncourrier dont l'entête serait habilement construite d'arrêter le service\nde messagerie.\n",
+  "title": "Vulnérabilité de Microsoft Exchange",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de Sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

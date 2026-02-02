@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Explorer 5.01 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 6.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa première vulnérabilité exploite une mauvaise gestion de la libération\nde la mémoire dans certaines situations. Une personne malintentionnée\npeut utiliser cette vulnérabilité afin d'exécuter du code arbitraire à\ndistance par le biais d'une page Web spécialement conçue.\n\nLa seconde vulnérabilité réside dans une mauvaise gestion des appels des\nfonctions des scripts au format DHTML. Un utilisateur malveillant peut\nexploiter cette vulnérabilité afin d'exécuter du code arbitraire à\ndistance par le biais d'une page Web spécialement conçue.\n\nLa troisième vulnérabilité consiste en une mauvaise gestion des\nopérations Glisser-Déplacer (Drag and Drop) dans certaines conditions.\nUn utilisateur malveillant exploitant cette vulnérabilité pourrait\naccéder à certains fichiers présents sur l'ordinateur de sa victime.\n\nLa quatrième vulnérabilité permet de divulguer le contenu mis en cache\ndans le dossier Temporay Internet Files. Une personne malveillante\nexploitant cette vulnérabilité pourrait accéder à certains fichiers\nprésents sur l'ordinateur de sa victime par le biais d'une page Web\nspécialement conçue. L'exploitation de cette vulnérabilité nécessite une\naction de l'utilisateur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-5577",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5577"
+    },
+    {
+      "name": "CVE-2006-5579",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5579"
+    },
+    {
+      "name": "CVE-2006-5581",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5581"
+    },
+    {
+      "name": "CVE-2006-5578",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5578"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2006-AVI-545",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-12-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans Microsoft Internet Explorer\npermettent l'exécution de code arbitraire à distance ou le contournement\nde la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans Microsoft Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-072 du 12 décembre 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-072.mspx"
+    }
+  ]
+}

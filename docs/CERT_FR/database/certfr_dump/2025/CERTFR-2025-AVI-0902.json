@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Xen versions 4.20.x sans les correctifs xsa475-1.patch et xsa475-2.patch",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen versions 4.17.x, 4.18.x et 4.19.x sans les correctifs xsa475-4.19-1.patch et xsa475-4.19-2.patch",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-58147",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-58147"
+    },
+    {
+      "name": "CVE-2025-58148",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-58148"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0902",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-10-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Xen. Certaines d'entre elles permettent à un attaquant de provoquer une élévation de privilèges, une atteinte à la confidentialité des données et un déni de service.",
+  "title": "Multiples vulnérabilités dans Xen",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-10-21",
+      "title": "Bulletin de sécurité Xen xsa/advisory-475",
+      "url": "https://xenbits.xen.org/xsa/advisory-475.html"
+    }
+  ]
+}

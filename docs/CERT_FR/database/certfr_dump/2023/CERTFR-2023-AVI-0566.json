@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VirtualBox versions antéreures à 6.1.46",
+      "product": {
+        "name": "Virtualization",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VirtualBox versions 7.x antéreures à 7.0.10",
+      "product": {
+        "name": "Virtualization",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-22016",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-22016"
+    },
+    {
+      "name": "CVE-2023-0464",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-0464"
+    },
+    {
+      "name": "CVE-2023-22017",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-22017"
+    },
+    {
+      "name": "CVE-2023-22018",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-22018"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0566",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-07-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Oracle\nVirtualization. Elles permettent à un attaquant de provoquer une\nexécution de code arbitraire à distance et un déni de service à\ndistance.\n",
+  "title": "Multiples vulnérabilités dans Oracle Virtualization",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Oracle cpujul2023verbose du 18 juillet 2023",
+      "url": "https://www.oracle.com/security-alerts/cpujul2023verbose.html#OVIR"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Oracle cpujul2023 du 18 juillet 2023",
+      "url": "https://www.oracle.com/security-alerts/cpujul2023.html"
+    }
+  ]
+}

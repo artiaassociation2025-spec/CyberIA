@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>squid</TT> versions 2.4.3 et  antérieures.",
+  "content": "## Description\n\nsquid est un serveur mandataire très utilisé sur les plateformes Unix.\n\n-   Une vulnérabilité de type « débordement de mémoire » présente dans\n    l'interface SNMP de squid permet à un utilisateur mal intentionné\n    d'envoyer des paquets sur le port SNMP de squid afin de réaliser un\n    déni de service du serveur mandataire. Ceci n'est réalisable que si\n    l'interface SNMP est active (Désactivée par défaut).\n\n      \n\n-   Une vulnérabilité de type « débordement de mémoire » présente dans\n    la gestion des URL de type « (ftp://) » permet à un utilisateur mal\n    intentionné de réaliser un déni de service du serveur mandataire ou\n    éventuellement l'éxécution d'un code arbitraire.\n\n      \n\n-   Une vulnérabilité est présente sur la désactivation de l'interface\n    HTCP de squid (interface utilisée pour la communication d'un serveur\n    squid avec les caches des serveurs squid distants). L'interface HTCP\n    est souvent désactivée lors de l'installation de squid cependant\n    quelques revendeurs active cette interface lors de l'installation de\n    squid.\n\n## Contournement provisoire\n\nDésactiver l'interface SNMP de squid.\n\nVerifier que l'interface HTCP n'est pas installée par défaut sur votre\nsystème, au quel cas il serait préférable de réinstaller la Squid.\n\n## Solution\n\nMettre à jour squid avec la version squid-2.4.4.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Squid-2002:1 de Squid  :  \n Bulletin de sécurité FreeBSD-SA-02:12 de FreeBSD : ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-02:12.squid.asc\n Bulletin de sécurité SUSE-SA:2002:008 de Suse : http://www.suse.com/us/support/security",
+      "url": "http://www.squid-cache.org/Advisories/SQUID-2002_1.txt"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-043",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence avis SuSE.",
+      "revision_date": "2002-03-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution d'un code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans squid permettent à un utilisateur mal\nintentionné de provoquer un déni de service du serveur mandataire ( «\nproxy » ) squid, ainsi que l'éxécution de code arbitraire.\n",
+  "title": "Multiples Vulnérabilités sur squid",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de squid",
+      "url": null
+    }
+  ]
+}

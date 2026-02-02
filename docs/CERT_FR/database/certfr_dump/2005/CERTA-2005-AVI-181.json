@@ -1,0 +1,91 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cache DNS DNRD en version antérieure à la 2.18 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Serveur DNS PowerDNS jusqu'à la version 2.9.16 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Plusieurs équipements Cisco (voir avis CERTA-2005-AVI-175).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Serveur mandataire (« proxy ») cache Delegate jusqu'à la version 8.10.2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne mauvaise gestion de la décompression des messages DNS peut conduire\nà l'épuisement des ressources disponibles pour le serveur et entraîner\nun déni de service.\n\n## Solution\n\nSe référer aux sites des constructeurs pour l'obtention du correctif\n(cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité 589088 du NISCC :",
+      "url": "http://www.niscc.gov.uk/niscc/docs/re-20050524-00432.pdf"
+    },
+    {
+      "title": "Site de DNRD :",
+      "url": "http://dnrd.sourceforge.net/"
+    },
+    {
+      "title": "Avis \"Vulnérabilité du DNS de plusieurs produits Cisco\" du    25 mai 2005 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2005-AVI-175/index.html"
+    },
+    {
+      "title": "Site de PowerDNS :",
+      "url": "http://www.powerdns.com"
+    },
+    {
+      "title": "Site de delegate :",
+      "url": "http://www.delegate.org"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-181",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-05-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Mauvais support du protocole DNS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité 589088 du NISCC",
+      "url": null
+    }
+  ]
+}

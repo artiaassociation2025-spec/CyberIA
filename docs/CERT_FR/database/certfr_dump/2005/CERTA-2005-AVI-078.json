@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Application sympa version 4.1.2 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "application sympa versions 5.0b et 5.0b1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'application sympa est un outil de gestion de listes de diffusion.  \nUne vulnérabilité de type débordement de mémoire dans les programmes\nqueue et bouncequeue permet à un utilisateur local mal intentionné\nd'exécuter du code arbitraire sur le système vulnérable. Le code sera\nexécuté avec les privilèges de l'application sympa.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD sympa :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/mail/sympa/README.html"
+    },
+    {
+      "title": "Référence CVE CAN-2005-0073",
+      "url": "http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2005-0073"
+    },
+    {
+      "title": "Site Internet de sympa :",
+      "url": "http://www.sympa.org"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour sympa du 01 juin 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-sympa.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-078",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-02-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au site Internet de sympa. Ajout de la référence au bulletin de sécurité NetBSD. Corrections d'imprécisions sur la nature de la vulnérablité ainsi que les versions de sympa impactées.",
+      "revision_date": "2005-02-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2005-06-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité de l'application <span class=\"textit\">sympa</span>\npermet à un utilisateur mal intentionné d'exécuter du code arbitraire\nsur le système vulnérable avec les privilèges de l'application <span\nclass=\"textit\">sympa</span>.\n",
+  "title": "Vulnérabilité de l'application sympa",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-677 du 11 février 2005",
+      "url": "http://www.debian.org/security/2005/dsa-677"
+    }
+  ]
+}

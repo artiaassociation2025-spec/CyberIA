@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Citrix Presentation Server 4.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix Metaframe Presentation Server 3.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix Access Essentials 1.0 et 1.5.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe Session Reliability Service est utilisé par plusieurs produits Citrix\npour communiquer à travers des réseaux considérés comme non sûrs. Une\nerreur dans ce service permet à un utilisateur malintentionné, par le\nbiais d'une requête spécialement conçue, d'établir une connexion TCP sur\ntout port de la machine vulnérable. L'agresseur peut ainsi contourner la\npolitique d'accès réseau.\n\nL'exploitation de la vulnérabilité n'est possible que sur les systèmes\nayant activé Session Reliability Service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Citrix CTX112964 du 23 mai 2007 :",
+      "url": "http://support.citrix.com/article/CTX112964"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-228",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-05-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans un composant présent dans plusieurs produits\n<span class=\"textit\">Citrix</span> permet de contourner la politique de\nsécurité.\n",
+  "title": "Vulnérabilité d'un produit Citrix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Citrix du 23 mai 2007",
+      "url": null
+    }
+  ]
+}

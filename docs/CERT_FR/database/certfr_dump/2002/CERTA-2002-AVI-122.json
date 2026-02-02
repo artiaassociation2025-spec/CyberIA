@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows XP ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT 4.0 Terminal Server Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT 4.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Routing and Remote Access Server.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe service RAS (Remote Access Service) permet d'effectuer des connexions\ndistantes par des lignes téléphoniques. Ce service est fourni en natif\ndans Windows NT 4.0, 2000 et XP, et peut être délivré séparément comme\nRRAS (Routing and Remote Access Server) sous Windows NT 4.0. Ces\nservices possèdent un annuaire permettant de stocker des informations\nsur des numéros d'appel, de sécurité ou de configuration réseau.  \nUne vulnérabilité présente dans cet annuaire permet d'effectuer un déni\nde sevice, ou bien d'exécuter du code arbitraire avec les privilèges du\ncompte `LocalSystem`.\n\n## Solution\n\nSe référer au bulletin de sécurité MS02-029 de Microsoft (cf.\nDocumentation) pour connaître la disponibilité des correctifs\ndisponibles.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-122",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Un individu mal intentionné peut exécuter du code arbitraire à distance\nen exploitant une vulnérabilité présente dans l'annuaire des services\nRAS et RRAS.\n",
+  "title": "Vulnérabilité dans l'annuaire des services RAS et RRAS de Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS02-029 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-029.asp"
+    }
+  ]
+}

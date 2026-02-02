@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft Netmeeting 3.01 sous Windows NT et 2000</LI>    <LI>Hyper Terminal      <UL>        <LI>Windows 98;</LI>        <LI>Windows98SE;</LI>        <LI>Windows Millenium Edition (ME);</LI>        <LI>et Windows 2000.</LI>      </UL>    </LI>  </UL>",
+  "content": "## Description\n\n-   Microsoft Netmeeting est un outil de visio-conférence dont la\n    composante Shared Desktop permet à la maintenance de prendre la main\n    à distance sur une machine.\n\n    Un utilisateur distant peut, en envoyant un certains type de paquets\n    vers sa victime sur le port de communication de Netmeeting pendant\n    que le logiciel fonctionne, faire monter la charge du processeur\n    jusqu'au blocage du logiciel à la fin de son attaque.\n\n    Il se peut que le gestionnaire des tâches de Windows, n'ai pas accès\n    à la tâche en court, et qu'il faille un autre outils ne faisant pas\n    partie intégrante du système, ou redémarrer la machine, pour arrêter\n    l'effet de l'attaque.\n\n-   Hyper Terminal est un outil ressemblant à telnet installé sur les\n    systèmes Windows 98, 98SE, ME, NT et 2000, et c'est le client\n    répondant par défaut à l'URL telnet:// pour les systèmes Windows 98,\n    98SE et ME.\n\n    Un utilisateur mal intentionné peut, à l'aide d'un lien telnet vers\n    une URL malformée dissimulé par exemple dans une page web ou un\n    mail, générer un dépassement de mémoire sur la machine qui lance le\n    client telnet, et ainsi exécuter du code sur cette machine.\n\n## Contournement provisoire\n\nFiltrer le port 1270 ou bloquer selon les besoins, avec un\ngarde-barrière, afin d'éviter ce type d'attaque.\n\nSupprimer Hyper Terminal, et utiliser telnet ou un équivalent pour se\nconnecter à un serveur telnet.\n\n## Solution\n\nAppliquer le correctif Microsoft :\n\n-   Pour Netmeeting pour Windows 2000 (il n'y a pas encore de correctif\n    pour Windows NT4) :\n\n        http://www.microsoft.com/Downloads/Release/Release.asp?ReleaseID=25029\n\n-   Pour Hyper Terminal pour Windows 98 et 98SE :\n\n        http://download.microsoft.com/download/win98/Update/12395/W98/EN-US/274548USA8.EXE\n\n-   Hyper Terminal pour Windows ME :\n\n        http://download.microsoft.com/download/winme/Update/12395/WinMe/EN-US/274548USAM.EXE\n\n-   Windows 2000 (Gold et SP1 compris) :\n\n        http://www.microsoft.com/download/release.asp?releaseid=25112\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Les bulletins de sécurité de Microsoft et leur FAQ :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-077"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-063",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-10-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service sur microsoft netmeeting shared desktop"
+    },
+    {
+      "description": "Exécution de code arbitraire à cause d'hyper terminal"
+    }
+  ],
+  "summary": "Il existe des vulnérabilités dans <span class=\"textit\">Hyper\nTerminal</span>, un composant de Windows proposé par défaut lors de son\ninstallation, et <span class=\"textit\">Netmeeting</span> qui est un\ncomposant gratuit des systèmes Microsoft, permettant de faire de la\nvisio-conférence et du travail à distance.\n",
+  "title": "Vulnérabilités dans les composants de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Microsoft",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "NTBugTraq",
+      "url": null
+    }
+  ]
+}

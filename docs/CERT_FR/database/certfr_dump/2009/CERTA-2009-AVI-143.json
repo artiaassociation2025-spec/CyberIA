@@ -1,0 +1,103 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Server 2003 Service Pack 1 et 2, y compris pour les systèmes x64 et Itanium ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Vista, Service Pack 1 inclus, y compris pour les versions x64 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2008 pour systèmes 32 bits, x64 et Itanium.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 2 et 3 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Professional Edition pour systèmes x64, Service Pack 2 compris ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDes vulnérabilités ont été identifiées dans les services HTTP Windows.\nCes derniers (WinHTTP) fournissent des interfaces, ou API HTTP cliente\npour communiquer en HTTP. Ces interfaces sont donc utilisées par les\ncomposants Windows (par exemple le service UPnP Universal Plug-and-Play)\nou par des applications tiers.\n\nLes interfaces ne valident pas correctement certains champs retournés\ndans les réponses par les serveurs. Elles peuvent aussi être exploitées\ndans le cas d'attaques par « réflexion » qui permettent de réutiliser\nles informations d'authentification Windows. Enfin, les certificats des\nsites Web ne sont validés qu'en fonction du nom de domaine complet de\nl'URL et WinHTTP peut cacher les incohérences de validation à\nl'utilisateur.\n\nCes vulnérabilités peuvent être exploitées à distance afin d'exécuter du\ncode arbitraire sur le système vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité MS09-013 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0550",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0550"
+    },
+    {
+      "name": "CVE-2009-0089",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0089"
+    },
+    {
+      "name": "CVE-2009-0086",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0086"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-143",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-04-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Des vulnérabilités ont été identifiées dans les services HTTP Windows.\nL'exploitation de ces dernières à distance permet d'exécuter du code\narbitraire sur le système vulnérable.\n",
+  "title": "Vulnérabilités dans les services HTTP Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS09-013 du 14 avril 2009",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-013.mspx"
+    }
+  ]
+}

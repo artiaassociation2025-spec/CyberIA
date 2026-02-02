@@ -1,0 +1,110 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM WebSphere 7.0.0 sur plateforme z/OS.",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM HTTP Server 6.1.0.x ;",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM WebSphere 6.1.0 sur plateforme z/OS ;",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM HTTP Server 7.0.0.x ;",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes serveurs HTTP d'IBM présentent plusieurs vulnérabilités :\n\n-   s'il est activé, le module mod_dav peut provoquer un arrêt inopiné\n    du serveur lors du traitement d'une requête HTTP mal formée ;\n-   une erreur dans la bibliothèque d'exécution Apache (APR) permet à un\n    utilisateur malveillant distant d'épuiser toute la mémoire\n    disponible ;\n-   deux vulnérabilités de la bibliothèque Expat permettent de provoquer\n    un arrêt inopiné du serveur.\n\n## Solution\n\nLes correctifs 6.1.0.35 et 7.0.0.15 résolvent ces problèmes.\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-1623",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1623"
+    },
+    {
+      "name": "CVE-2010-1452",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1452"
+    },
+    {
+      "name": "CVE-2009-3650",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3650"
+    },
+    {
+      "name": "CVE-2009-3720",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3720"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis CERTA-2010-AVI-510 du 21 octobre 2010 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2010-AVI-510/"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-550",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-11-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout des serveurs HTTP hors WebSphere.",
+      "revision_date": "2010-11-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout de WebSphere 7.x.",
+      "revision_date": "2011-02-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités des serveurs HTTP d'IBM permettent à un\nutilisateur malveillant de provoquer un déni de service à distance.\n",
+  "title": "Vulnérabilités dans IBM HTTP Server et WebSphere",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg1PM25599 du 10 novembre 2010",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1PM25599"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg1PM31601 du 02 février 2011",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1PM31601"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg1PM24234 du 19 octobre 2010",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1PM24234"
+    }
+  ]
+}

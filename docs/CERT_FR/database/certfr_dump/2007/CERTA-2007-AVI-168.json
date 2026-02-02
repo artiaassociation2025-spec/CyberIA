@@ -1,0 +1,142 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows XP Professional x64 Edition (Service Pack 2 compris).",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 x64 Edition (Service Pack 2 inclus) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 pour les systèmes Itanium (Service Pack 1 et Service Pack 2 inclus) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Vista x64 Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 (Service Pack 1 et Service Pack 2 inclus) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Vista ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été identifiées dans le processus\nClient/Server Runtime Subsystem ou CSRSS de Microsoft Windows. Ce\ndernier est un élément essentiel du système d'exploitation, qui permet\nentre autres de gérer les fenêtres et des éléments graphiques de\nWindows.\n\n-   csrss.exe ne manipulerait pas correctement certains messages\n    d'erreurs via ses fenêtres MsgBox. Une personne malveillante\n    pourrait donc forcer l'affichage de tels messages particuliers\n    (visite d'une page Web, ou lancement d'une application) afin de\n    prendre le contrôle du système vulnérable ;\n-   csrss.exe ne convertirait pas correctement certaines ressources\n    système, ce qui pourrait également être exploité pour prendre le\n    contrôle d'un système ;\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-1209",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1209"
+    },
+    {
+      "name": "CVE-2006-6696",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6696"
+    },
+    {
+      "name": "CVE-2006-6797",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6797"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité eEye AD20070410b du 10 avril 2007 :",
+      "url": "http://www.eeye.com/html/research/advisories/published/AD20070410b.html"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-021 du 11 avril 2007 :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-021.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-021 du 11 avril 2007 :",
+      "url": "http://www.microsoft.com/france/technet/security/bulletin/MS07-021.mspx"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-168",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-04-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été identifiées dans le processus <span\nclass=\"textit\">Client/Server Runtime Subsystem</span> ou CSRSS de\nMicrosoft Windows. L'exploitation de celles-ci permettraient à une\npersonne malveillante de perturber ou prendre le contrôle complet du\nsystème vulnérable.\n",
+  "title": "Multiples vulnérabilités de CSRSS dans Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-021 du 10 avril 2007",
+      "url": null
+    }
+  ]
+}

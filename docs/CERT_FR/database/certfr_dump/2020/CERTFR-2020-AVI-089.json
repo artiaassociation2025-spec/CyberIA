@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GlobalProtect 5.0.x versions antérieures à 5.0.6",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Palo Alto Networks",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PAN-OS 8.x versions antérieures à 8.1.12",
+      "product": {
+        "name": "PAN-OS",
+        "vendor": {
+          "name": "Palo Alto Networks",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PAN-OS 9.x versions antérieures à 9.0.6",
+      "product": {
+        "name": "PAN-OS",
+        "vendor": {
+          "name": "Palo Alto Networks",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Expedition Migration Tool versions antérieures à 1.1.52",
+      "product": {
+        "name": "Expedition",
+        "vendor": {
+          "name": "Palo Alto Networks",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2020-1975",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-1975"
+    },
+    {
+      "name": "CVE-2020-1976",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-1976"
+    },
+    {
+      "name": "CVE-2020-1977",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-1977"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2020-AVI-089",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2020-02-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Palo Alto . Elles\npermettent à un attaquant de provoquer un déni de service, une élévation\nde privilèges et une injection de requêtes illégitimes par rebond\n(CSRF).\n",
+  "title": "Multiples vulnérabilités dans les produits Palo Alto",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Palo Alto 1 du 12 février 2020",
+      "url": "https://security.paloaltonetworks.com/CVE-2020-1975"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Palo Alto 2 du 12 février 2020",
+      "url": "https://security.paloaltonetworks.com/CVE-2020-1976"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Palo Alto 3 du 12 février 2020",
+      "url": "https://security.paloaltonetworks.com/CVE-2020-1977"
+    }
+  ]
+}

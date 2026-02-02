@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>les versions actuelles ddu système d'exploitation Microsoft    Windows dont :      <UL>        <LI>Windows XP SP2 et SP3 ;</LI>        <LI>Windows XP Professionnel Edition x64, SP2 inclus ;</LI>        <LI>Windows Server 2003 SP1 et SP2 ;</LI>        <LI>Windows Vista, SP1 inclus ;</LI>        <LI>Windows Server 2008.</LI>      </UL>    </LI>    <LI>Internet Explorer 6 pour Windows 2000 SP4 ;</LI>    <LI>Microsoft .NET Framework pour Windows 2000 SP4 ;</LI>    <LI>Microsoft Office XP SP3 ;</LI>    <LI>Microsoft Office 2003 SP2 et SP3 ;</LI>    <LI>Microsoft Office 2007, SP1 compris ;</LI>    <LI>Microsoft Visio 2002 SP2 ;</LI>    <LI>Microsoft Office PowerPoint Viewer 2003 ;</LI>    <LI>Microsoft Works 8 ;</LI>    <LI>Microsoft Digital Image Suite 2006 ;</LI>    <LI>SQL Server 2005 SP2 ;</LI>    <LI>Microsoft Visual Studio .NET 2002 SP1 ;</LI>    <LI>Microsoft Visual Studio .NET 2003 SP1 ;</LI>    <LI>Microsoft Visual Studio 2005 SP1 ;</LI>    <LI>Microsoft Visual Studio 2008 ;</LI>    <LI>Microsoft Report Viewer 2005 et 2008 ;</LI>    <LI>Microsoft Visual FowPro 8.0 et 9.0 ;</LI>    <LI>Microsoft Platform SDK Redistribuable: GDI+ ;</LI>    <LI>Microsoft Forefront Client Security 1.0.</LI>  </UL>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans la bibliothèque\ngraphique GDI+ (GdiPlus.dll) de Microsoft :\n\n-   la bibliothèque ne gère pas correctement certaines informations\n    concernant des grandeurs vectorielles ou gradients d'images basées\n    sur du VML (Vector Markup Language) ;\n-   la bibliothèque ne manipule pas correctement des fichiers aux\n    formats EMF, GIF et WMF. Cela peut entraîner une corruption de la\n    mémoire.\n\n## Solution\n\nSe référer au bulletin de sécurité MS08-052 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3015",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3015"
+    },
+    {
+      "name": "CVE-2008-3013",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3013"
+    },
+    {
+      "name": "CVE-2007-5348",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5348"
+    },
+    {
+      "name": "CVE-2008-3014",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3014"
+    },
+    {
+      "name": "CVE-2008-3012",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3012"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité iDefense 743 du 09 septembre 2008 :",
+      "url": "http://www.idefense.com/ntelligence/vulnerabilities/display.php?id=743"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS08-052 du 09 septembre    2008 :",
+      "url": "http://www.microsoft.com/france/technet/security/Bulletin/MS08-052.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS08-052 du 09 septembre    2008 :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-052.mspx"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-449",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-09-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans la bibliothèque\ngraphique GDI+ de Microsoft. L'exploitation de ces dernières par le\nbiais d'une image spécialement conçue peut provoquer l'exécution de code\narbitraire sur un système vulnérable.\n",
+  "title": "Vulnérabilités dans la bibliothèque Microsoft Windows GDI+",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS08-052 du 09 septembre 2008",
+      "url": null
+    }
+  ]
+}

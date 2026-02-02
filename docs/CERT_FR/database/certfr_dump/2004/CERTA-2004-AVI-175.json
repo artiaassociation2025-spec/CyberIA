@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>SGI Irix versions antérieures à la  version 6.5.25.</p>",
+  "content": "## Description\n\n/usr/sbin/cpr est une commande livrée avec le paquetage eoe.sw.cpr (IRIX\nCheckpoint and Restart) installé par défaut sur les systèmes IRIX 6.5.x.\n\nUne vulnérabilité sur la bibliothèque libcpr permet à un utilisateur non\nprivilègié de redémarrer un processus. Cette vulnérabilité permet à un\nutilisateur mal intentionné d'obtenir les privilèges du\nsuper-utilisateur root.\n\n## Solution\n\nAppliquer les correctifs ou mettre à jour votre système avec la version\nd'Irix 6.5.25 (cf. section documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-175",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-05-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans la bibliothèque libcpr permet à un\nutilisateur local mal intentionné d'obtenir les privilèges du\nsuper-utilisateur root.\n",
+  "title": "Vulnérabilité dans la bibliothèque libcpr sous Irix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité SGI",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20040507-01-P.asc"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ZoneAlarm Security Suite versions 5.x ;",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ZoneAlarm Antivirus versions 5.x, 6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ZoneAlarm versions 2.x, 3.x, 4.x, 5.x, 6.x, 7.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ZoneAlarm Plus versions 3.x, 4.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ZoneAlarm Internet Security Suite versions 6.x ;",
+      "product": {
+        "name": "Internet Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ZoneAlarm Wireless Security versions 5.x.",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ZoneAlarm Pro versions 2.x, 3.x, 4.x, 5.x, 6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ZoneAlarm Anti-Spyware versions 6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans les produits ZoneLabs.\n\nLorsqu'un administrateur installe un produit ZoneLabs de la famille\nZoneAlarm, un paramétrage par défaut permet à tout utilisateur de\nmodifier les fichiers installés (référence CVE-2005-2932). Certains de\nces fichiers sont exécutés avec les droits system.\n\nUne vulnérabilité a été découverte dans le pilote vsdatant.sys. Cette\nvulnérabilité permet à un utilisateur local de modifier directement le\ncontenu de certaines zones de la mémoire (référence CVE-2007-4216).\n\n## Solution\n\nMettre à jour en version 7.0.362 (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2005-2932",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-2932"
+    },
+    {
+      "name": "CVE-2007-4216",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4216"
+    }
+  ],
+  "links": [
+    {
+      "title": "Page de mise à jour de ZoneAlarm :",
+      "url": "http://www.zonealarm.com/store/content/support/zasc/cfu.jsp?dc=12bms&ctry=FR&lang=fr&lid=db_updates"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-370",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-08-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans les produits <span\nclass=\"textit\">ZoneLabs</span> permettent une élévation de privilèges.\n",
+  "title": "Vulnérabilités dans les produits ZoneLabs",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité iDefense du 20 août 2007",
+      "url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=585"
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2000, Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT Workstation 4.0, Service Pack 6a ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP 64-bit Edition Version 2003 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000, Service Pack 3, Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP 64-bit Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT Server 4.0, Terminal Server Edition, Service Pack 6 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT Server 4.0, Service Pack 6a ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 64-bit Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Gold, Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nMicrosoft Messenger Service est un service permettant l'envoi de\nmessages via NetBIOS ou RPC. Une vulnérabilité dans le service permet à\nun utilisateur mal intentionné de réaliser un débordement de tampon et\nainsi exécuter du code arbitraire à distance avec les privilèges Local\nSystem.\n\n## Contournement Provisoire\n\n-   Filtrer les ports UDP 135, 137 et 138 et les ports TCP 135, 139 et\n    445 ;\n-   Désactiver le service Microsoft Messenger Service.\n\n## Solution\n\nAppliquer le correctif fourni par Microsoft suivant la version du\nsystème d'exploitation (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité MS03-043 de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS03-043.asp"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-168",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-10-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le service d'envoi de messages Microsoft\n(Microsoft Messenger Service) permet à un utilisateur mal intentionné\nd'exécuter du code arbitraire à distance avec les privilèges Local\nSystem.\n",
+  "title": "Vulnérabilité dans Microsoft Messenger Service",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS03-043",
+      "url": null
+    }
+  ]
+}

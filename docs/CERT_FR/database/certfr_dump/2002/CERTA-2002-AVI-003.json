@@ -1,0 +1,35 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Versions d'Oracle9iAS Web Cache  antéreiures à la version 2.0.0.3</p>",
+  "content": "## Description\n\nUn utilisateur mal intentionné peut arrêter à distance le service web\npar le biais de requêtes HTTP habilement constituées.\n\nDe plus, sous unix, le programme d'installation ne positionne pas\ncorrectement les droits d'accès à certains fichiers, permettant ainsi à\nun utilisateur mal intentionné de corrompre ces fichiers ou d'éxécuter\ndes commandes avec les privilèges de l'utilisateur \"oracle\".\n\n## Solution\n\nInstaller les correctifs de l'éditeur (se référer à la section\ndocumentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-003",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-01-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Corruption de données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Il est possible d'arrêter le service web à distance.\n\nUne autre vulnérabilité présente sous unix permet à un utilisateur local\nde corrompre des données ou de réaliser une élévation de privilèges.\n",
+  "title": "Multiples vulnérabilités dans Oracle 9iAS Web Cache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Alerte de sécurité #27 d'Oracle",
+      "url": "http://otn.oracle.com/deploy/security/pdf/webcache2.pdf"
+    }
+  ]
+}

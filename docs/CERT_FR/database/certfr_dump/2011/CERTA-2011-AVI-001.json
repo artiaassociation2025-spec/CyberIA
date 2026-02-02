@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Wireshark versions 1.4.2 et inférieures.</P>",
+  "content": "## Description\n\nUn débordement de tampon est réalisable dans le greffon (« plugin »)\nWireshark d'analyse du protocole DMX des matériels ENNTEC. Un\nutilisateur malveillant peut exécuter du code arbitraire à distance avec\nun paquet spécialement conçu, si celui-ci est ensuite analysé avec\nWireshark.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-4538",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4538"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-001",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-01-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une erreur dans la gestion du protocole DMX (système de multiplexage\nnumérique) des matériels <span class=\"textit\">ENTTEC</span>.\n",
+  "title": "Vulnérabilité dans Wireshark",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Système de suivi de bugs Wireshark, bug 5539",
+      "url": "https://bugs.wireshark.org/bugzilla/show_bug.cgi?id=5539"
+    }
+  ]
+}

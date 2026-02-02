@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions de ht://Dig de 3.1.0 à 3.1.5.</P>",
+  "content": "## Description\n\nLe moteur d'indexation ht://Dig se compose de plusieurs outils, dont le\nprogramme `htsearch`, utilisé pour effectuer les recherches sur la base\nd'indexation.\n\nCe script peut être lancé soit comme CGI, soit par ligne de commande,\nqui accepte alors l'option `-c  [nom_de_fichier]`. Cette option permet\nde lire un fichier de configuration particulier.\n\nLe script CGI n'effectuant aucun filtrage pour l'empêcher d'utiliser des\narguments de ligne de commande, un utilisateur distant peut alors\nutiliser l'option -c pour lire des fichiers sur le système et, dans\ncertains cas, réaliser un déni de service.\n\n## Solution\n\nAppliquer les correctifs de sécurité.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-114",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Récupération d'informations"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, en exploitant une faille du script\nCGI htsearch, réaliser un déni de service et récupérer des informations\nsur le système.\n",
+  "title": "Vulnérabilité dans le moteur d'indexation ht://Dig",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Caldera",
+      "url": "http://caldera.com/support/security/advisories/CSSA-2001-035.0.txt"
+    }
+  ]
+}

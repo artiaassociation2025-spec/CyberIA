@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes versions du serveur de messagerie Lotus Notes Domino 5  jusqu'à la 5.0.5 incluse.</P>",
+  "content": "## Description\n\nLe serveur de messagerie Lotus est pourvu d'une fonctionnalité\npermettant de gérer les règles de relayages. Cette fonctionnalité ne\nvérifiant pas correctement la taille de certaines variables, un\nutilisateur mal intentionné peut faire exécuter du code arbitraire sur\nle serveur avec les droits de ce dernier ou créer un déni de service.\n\n## Solution\n\nCorrectif à télécharger sur le site Lotus :\n\n    http://www.notes.net/qmrdown.nsf/LookupViewTemplate?openform&RestricttoCategory=5.0.6&ExpandView\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-008",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-01-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut provoquer un débordement de pile sur\nun serveur Lotus Notes Domino 5 entraînant l'exécution de code\narbitraire ou un déni de service sur la machine cible.\n",
+  "title": "Vulnérabilité sous Lotus Notes (Domino 5)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Site Lotus",
+      "url": "http://www.notes.net/r5fixlist.nsf/6d4eae9850a5c2c28525690400551b57/5eea8322c479de968525697d00737ad5?OpenDocument"
+    }
+  ]
+}

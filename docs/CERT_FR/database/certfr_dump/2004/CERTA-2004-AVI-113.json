@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Dreamweaver MX sous IIS ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Dreamweaver UltraDev 4 sous IIS.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité présente dans le script mmhttpdb.asp, utilisé pour\ntester la connexion à la base de données, permet à un utilisateur\nnon-authentifié, via un numéro d'opération défini dans le script,\nd'obtenir la liste des informations constituant la base de données.\n\nUn autre numéro d'opération permet d'exécuter n'importe quelle requête\nSQL sur la base de données.\n\nUn utilisateur mal intentionné peut, via ces deux opérations, accéder en\nlecture et en écriture à la base de données.\n\n## Solution\n\nSupprimer les répertoires de test où se trouve le script mmhttpdb.asp :\n\n-   \\_mmServerScripts sous Dreamweaver MX ;\n-   \\_mmDBScripts sous Dreamweaver Ultradev.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-113",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-04-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité et à l'intégrité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans un script de test permet à un\nutilisateur mal intentionné de récupérer des informations\nconfidentielles.\n",
+  "title": "Vulnérabilité sur Dreamweaver",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Macromedia",
+      "url": "http://www.macromedia.com/devnet/security/security_zone/mpsb04-05.html"
+    }
+  ]
+}

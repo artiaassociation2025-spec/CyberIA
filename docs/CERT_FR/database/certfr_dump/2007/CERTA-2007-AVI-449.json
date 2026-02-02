@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>L'ensemble des éléments Cisco mettant en œuvre le protocole  <TT>EAP</TT> seraient vulnérables. Cela comprend en particulier  les points d'accès sans-fil et les commutateurs fonctionnant sous  Cisco IOS ou Cisco CatOS.</P>  <P>Une liste complète des éléments vulnérables est disponible aux  clients Cisco sous les identifiants de bogues CSCsj56438,  CSCsb45696 et CSCsc55249.</P>",
+  "content": "## Description\n\nEAP (pour Extensible Authentication Protocol) est un mécanisme\nd'authentification défini dans le RFC 3748. Il peut être mis en place\ndans des architectures aussi bien filaires que sans-fil, et prendre\ndifférentes formes, dont LEAP (Lightweight Extensible Authentication\nProtocol) développé par Cisco Systems, ou EAP-TLS, EAP-TTLS, PEAP, etc.\n\nUne vulnérabilité a été identifiée dans la mise en œuvre du protocole\nEAP des produits Cisco. Ils ne manipuleraient pas correctement des\npaquets de réponse EAP, ce qui pourrait être exploité par une personne\nmalveillante à distance afin de perturber le fonctionnement du système.\nLa réception d'un paquet construit à de mauvaises fins est facilitée\ndans le cas d'une architecture sans-fil.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur Cisco pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 98727 du 19 octobre 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sr-20071019-eap.shtml"
+    },
+    {
+      "title": "RFC 3748, \"Extensible Authentication Protocol (EAP)\", juin    2004 :",
+      "url": "http://www.ietf.org/rfc/rfc3748.txt"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-449",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-10-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans la mise en œuvre du protocole\nEAP des produits Cisco. L'exploitation de cette dernière par le biais de\npaquets spécialement construits permettrait de perturber le\nfonctionnement du sytème.\n",
+  "title": "Vulnérabilité EAP dans les produits Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Réponse de sécurité Cisco 98727 du 19 octobre 2007",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<SPAN class=\"textit\">KAME Racoon</SPAN>  versions antérieures à la version 20040408a.",
+  "content": "## Description\n\nKAME est une mise en oeuvre des protocoles IPSec et IPv6 sur les\nplates-formes BSD.  \nKAME Racoon est le service chargé de négocier les associations de\nsécurité (SA) pour IPSec (utilisation des protocoles ISAKMP et IKE).  \nUn mauvais traitement du champ longueur des en-têtes des paquets ISAKMP\npermet à un utilisateur distant mal intentionné d'utiliser une grande\npartie de la mémoire du système. Cela peut provoquer l'arrêt brutal du\nservice.\n\n## Solution\n\nLa version 20040408a corrige cette vulnérabilité.  \nAppliquer le correctif proposé sur le site de KAME (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:069 du 14 juillet    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:069"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200404-17 du 24 avril 2004    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200404-17.xml"
+    },
+    {
+      "title": "Correctif proposé sur le site de KAME :",
+      "url": "http://www.kame.net/dev/cvsweb2.cgi/kame/kame/kame/racoon/isakmp.c.diff?r1=1.180&r2=1.181"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD du 14 avril 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:165 du 11 mai 2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-165.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-136",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-04-20T00:00:00.000000"
+    },
+    {
+      "description": "correction de la référence CVE. Ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2004-04-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat.",
+      "revision_date": "2004-05-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandrake.",
+      "revision_date": "2004-07-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité du service <span class=\"textit\">KAME Racoon</span>\npermet à un utilisateur mal intentionné de provoquer un déni de service.\n",
+  "title": "Vulnérabilité de KAME Racoon",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD Vuxml du 14 avril 2004",
+      "url": null
+    }
+  ]
+}

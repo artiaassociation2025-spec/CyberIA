@@ -1,0 +1,103 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GnuPG versions 1.4.3 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GnuPG versions 1.9.20 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn manque de contrôle dans la taille du champ user ID d'un message GPG\ndans GnuPG permet à un utilisateur de provoquer un déni de service de\nl'application ou d'exécuter du code arbitraire par le biais d'un message\nconstruit de façon particulière. Cette action malveillante peut se faire\nlocalement, ou à distance, par le biais d'une application tierce comme\nun client de messagerie.\n\n## Solution\n\nLes versions 1.4.4 (stable) et 1.9.21 (développement) de GnuPG corrigent\nle problème :\n\n    http://www.gnupg.org/download\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3082",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3082"
+    }
+  ],
+  "links": [
+    {
+      "title": "Liste des changements apportés à la version 1.4.4 de GnuPG    :",
+      "url": "http://lists.gnupg.org/pipermail/gnupg-announce/2006q2/000226.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1107 du 10 juillet 2006 :",
+      "url": "http://www.debian.org/security/2006/DSA-1107"
+    },
+    {
+      "title": "Bulletin de sécurité SGI 20060701-01-U du 20 juillet 2006 :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20060701-01-U.asc"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0571 du 18 juillet    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0571"
+    },
+    {
+      "title": "Bulletin de sécurité Suse SUSE-SR:2006:015 du 30 juin 2006    :",
+      "url": "http://www.novell.com/linux/security/advisories/2006_38_security.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1115 du 21 juillet 2006 :",
+      "url": "http://www.debian.org/security/2006/DSA-1115"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:110 du 29 juin    2006 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:110"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-304-1 du 26 juin 2006 :",
+      "url": "http://www.ubuntu.com/usn/usn-304-1"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-267",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2006-06-29T00:00:00.000000"
+    },
+    {
+      "description": "précision sur les risques associés ;",
+      "revision_date": "2006-07-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références au bulletins de sécurité Debian.",
+      "revision_date": "2006-07-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références au bulletins de sécurité RedHat, SGI, Suse et Ubuntu.",
+      "revision_date": "2006-08-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service local ou distant"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité dans GnuPG permet à un utilisateur local de provoquer\nun déni de service ou d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité dans GnuPG",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés à la version 1.4.4 de GnuPG du 25 juin 2006",
+      "url": null
+    }
+  ]
+}

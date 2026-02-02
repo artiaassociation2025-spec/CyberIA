@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BEA Weblogic Express, versions 6.x, 7.x, 8.x et 9.x.",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA Weblogic Server, versions 6.x, 7.x, 8.x, 9.x et 10.x ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe logiciel BEA Weblogic est un serveur d'applications Java (J2EE).\n\nPlusieurs vulnérabilités affectent les produits BEA Weblogic :\n\n-   deux vulnérabilités dans la négociation des algorithmes de\n    chiffrement utilisés pour une session SSL peuvent provoquer\n    l'utilisation de l'algorithme null. Les données sont alors\n    transmises en clair et accessibles à un utilisateur malveillant ;\n-   des requêtes particulières permettent à un utilisateur malveillant\n    de bloquer les fils (threads) du serveur, donc de provoquer un déni\n    de service à distance ;\n-   des requêtes avec des en-têtes malformés permettent à un utilisateur\n    malveillant d'épuiser les ressources disque du serveur, donc de\n    provoquer un déni de service à distance.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletins de sécurité de BEA :",
+      "url": "http://dev2dev.bea.com/pub/advisory/246"
+    },
+    {
+      "title": "Bulletins de sécurité de BEA :",
+      "url": "http://dev2dev.bea.com/pub/advisory/244"
+    },
+    {
+      "title": "Bulletins de sécurité de BEA :",
+      "url": "http://dev2dev.bea.com/pub/advisory/247"
+    },
+    {
+      "title": "Bulletins de sécurité de BEA :",
+      "url": "http://dev2dev.bea.com/pub/advisory/245"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-385",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-08-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent les produits <span class=\"textit\">BEA\nWeblogic</span> et permettent à un utilisateur malveillant d'accéder à\ndes données sensibles ou de provoquer un déni de service à distance.\n",
+  "title": "Multiples vulnérabilités de BEA Weblogic",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité de <SPAN class=\"textit\">BEA</SPAN>",
+      "url": null
+    }
+  ]
+}

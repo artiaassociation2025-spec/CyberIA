@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Lotus Notes versions 8.0 pour GNU/Linux.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Lotus",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes deux vulnérabilités concernent des défauts d'affectation de droits\nsur les fichiers d'installation de Lotus Notes client. Un utilisateur\nmalveillant ayant accès aux sources d'installation du client Lotus Notes\npeut, en modifiant certains fichiers, contourner la politique de\nsécurité.\n\n## Contournement provisoire\n\nDans l'attente de la sortie de la version 8.0.1 de Lotus Notes client\npour GNU/Linux, IBM recommande de réaliser les actions suivantes :\n\n-   concernant la première vulnérabilité : lancer la commande chmod -R\n    700 ./ dans le dossier contenant les fichiers d'installation ;\n-   concernant la seconde vulnérabilité : modifier le fichier setup.sh\n    en remplaçant la ligne chmod 777 ''\\${0%setup.sh}/installdata'' par\n    chmod 700 ''\\${0%setup.sh}/installdata''\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg21289273 du 28 novembre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21289273"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-515",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-11-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans Lotus Notes client permettent à un utilisateur\nmalveillant d'élever ses privilèges en contournant la politique de\nsécurité.\n",
+  "title": "Vulnérabilités dans IBM Lotus Notes",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM 1289273 du 28 Novembre 2007",
+      "url": null
+    }
+  ]
+}

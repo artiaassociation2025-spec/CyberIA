@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>ImageMagick</TT> versions 6.3.3-3  et antérieures.",
+  "content": "## Description\n\nImageMagick est un ensemble d'outils permettant la manipulation de\ndivers formats d'images. Trois vulnérabilités de type débordement de\nmémoire y ont été identifiées :\n\n-   la première concerne la mise en œuvre du support des images au\n    format DCM ;\n-   les deux autres se rapportent à la gestion des images au format XWD.\n\nCes vulnérabilités peuvent être exploitées par le biais d'images\nspécialement conçues et permettent d'exécuter du code arbitraire.\n\n## Solution\n\nLa version 6.3.3-5 de ImageMagick corrige le problème :\n\n    http://www.imagemagick.org/script/download.php\n",
+  "cves": [
+    {
+      "name": "CVE-2007-1797",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1797"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site de ImageMagick :",
+      "url": "http://www.imagemagick.org"
+    },
+    {
+      "title": "Liste des changements apportés à la version 6.3.3-5 de       ImageMagick :",
+      "url": "http://www.imagemagick.org/script/changelog.php"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-152",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-04-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans ImageMagick permettent à un utilisateur\nd'exécuter du code arbitraire sur la machine vulnérable.\n",
+  "title": "Multiples vulnérabilités dans ImageMagick",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés à la version 6.3.3-5 de ImageMagick",
+      "url": null
+    }
+  ]
+}

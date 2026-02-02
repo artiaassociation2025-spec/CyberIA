@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco IOS R12.x ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS 12.x ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS 15000 series.",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe protocole DHCP (Dynamic Host Configuration Protocol) est un protocole\nqui permet à un système d'obtenir une configuration dynamique.\n\nUne vulnérabilité présente dans le traitement des paquets DHCP permet à\nune personne mal intentionnée, connectée au réseau local, d'arrêter le\ntrafic à destination du routeur, via l'envoi d'un paquet DHCP\nmalicieusement construit.\n\nLes équipements Cisco (routeurs et commutateurs) suivants utilisent une\nversion vulnérable de Cisco IOS :\n\n-   Cisco 7200, 7300, 7500 platforms ;\n-   Cisco 2650, 2651, 2650XM, 2651XM Multiservice platform ;\n-   Cisco ONS15530, ONS15540 ;\n-   Cisco Catalyst 4000, Sup2plus, Sup3, Sup4 and Sup5 modules ;\n-   Cisco Catalyst 4500, Sup2Plus TS ;\n-   Cisco Catalyst 4948, 2970, 3560, and 3750 ;\n-   Cisco Catalyst 6000, Sup2/MSFC2 and Sup720/MSFC3 ;\n-   Cisco 7600 Sup2/MSFC2 and Sup720/MSFC3.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-366",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-11-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le traitement des paquets DHCP (Dynamic Host\nConfiguration Protocol) par Cisco IOS permet à une personne mal\nintentionnée, ayant accès au réseau local, de réaliser un déni de\nservice sur l'équipement vulnérable.\n",
+  "title": "Vulnérabilité sur Cisco IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 63312 du 10 novembre 2004",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20041110-dhcp.shtml"
+    }
+  ]
+}

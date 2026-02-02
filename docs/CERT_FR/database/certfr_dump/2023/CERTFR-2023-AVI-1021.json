@@ -1,0 +1,149 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "CRYHOD versions antérieures à 2023.5 pour Windows",
+      "product": {
+        "name": "CRYHOD",
+        "vendor": {
+          "name": "PrimX",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ZED! features dans ZEDMAIL versions antérieures à 2023.5 pour Windows",
+      "product": {
+        "name": "ZEDMAIL",
+        "vendor": {
+          "name": "PrimX",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ZEDFREE versions antérieures à 2023.5 pour Windows, macOS et Linux",
+      "product": {
+        "name": "macOS",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ZED! Enterprise versions antérieures à 2023.5 pour Windows, macOS et Linux",
+      "product": {
+        "name": "macOS",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ZEDPRO versions antérieures à 2023.5 pour Windows, macOS et Linux",
+      "product": {
+        "name": "macOS",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ZED! features dans ZONECENTRAL versions antérieures à 2023.5 pour Windows (à l'exception de la vulnérabilité CVE-2023-50442 qui affecte toutes les versions)",
+      "product": {
+        "name": "ZONECENTRAL",
+        "vendor": {
+          "name": "PrimX",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\n**<span style=\"color: #ff0000;\">IMPORTANT :</span>** Déployer les\nnouvelles versions des logiciels n'est pas suffisant, il est également\nnécessaire de prendre les mesures suivantes :\n\n-   créer de nouveaux conteneurs Zed! et ne pas réutiliser les anciens ;\n-   appliquer une politique de mot de passe forte pour les mots de passe\n    utilisateurs (si la liste d'accès est protégée par mot de passe) ;\n-   contrôler les droits d'accès aux fichiers de zone utilisés par\n    ZoneCentral enfin d'en limiter les droits d'écriture aux seuls\n    administrateurs ZoneCentral.\n\n \n",
+  "cves": [
+    {
+      "name": "CVE-2023-50441",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-50441"
+    },
+    {
+      "name": "CVE-2023-50442",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-50442"
+    },
+    {
+      "name": "CVE-2023-50444",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-50444"
+    },
+    {
+      "name": "CVE-2023-50439",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-50439"
+    },
+    {
+      "name": "CVE-2023-50440",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-50440"
+    },
+    {
+      "name": "CVE-2023-50443",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-50443"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-1021",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-12-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits\nPRIM'X. Certaines d'entre elles permettent à un attaquant de provoquer\nun contournement de la politique de sécurité, une atteinte à l'intégrité\ndes données et une atteinte à la confidentialité des données.\n\nLa très forte réactivité de l'éditeur a permis de corriger ces\nvulnérabilités et publier des correctifs dans un délai de 3 mois.\n",
+  "title": "Multiples vulnérabilités dans les produits PRIM'X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PRIM'X 23b30874 du 13 décembre 2023",
+      "url": "https://www.primx.eu/en/bulletins/security-bulletin-23b30874/"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PRIM'X 23b30930 du 13 décembre 2023",
+      "url": "https://www.primx.eu/en/bulletins/security-bulletin-23b30930/"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PRIM'X 23b3093a du 13 décembre 2023",
+      "url": "https://www.primx.eu/en/bulletins/security-bulletin-23b3093a/"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PRIM'X 23b30933 du 13 décembre 2023",
+      "url": "https://www.primx.eu/en/bulletins/security-bulletin-23b30933/"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PRIM'X 23b3093b du 13 décembre 2023",
+      "url": "https://www.primx.eu/en/bulletins/security-bulletin-23b3093b/"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PRIM'X 23b30931 du 13 décembre 2023",
+      "url": "https://www.primx.eu/en/bulletins/security-bulletin-23b30931/"
+    }
+  ]
+}

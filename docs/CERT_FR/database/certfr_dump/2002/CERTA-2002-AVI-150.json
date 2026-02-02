@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Solaris 2.5.1, 2.6, 7 et 8  (architectures SPARC et Intel). La version 9 de Solaris n'est pas  vulnérable.</p>",
+  "content": "## Description\n\n`vold` (VOLume management Daemon) est un service permettant de monter\nautomatiquement les médias amovibles tels que les lecteurs de disquettes\nou les lecteurs de CD-ROMs.  \nUne vulnérabilité présente sur ce service permet à un utilisateur mal\nintentionné de provoquer un débordement de mémoire conduisant à une\nélévation de privilège ou à un déni de service.  \nAucune trace dans les fichiers journaux ne permet de savoir si le\nsystème à subit ce type d'attaque, seul le service `vold` ne\nfonctionnera plus en cas d'échec.\n\n## Contournement provisoire\n\n-   Désactiver le montage automatique des médias amovibles en stoppant\n    le service `vold` ;\n-   Renommer le script de démarrage du service `vold` de façon qu'il ne\n    soit pas exécuté lors de la prochaine réinitialisation.\n\nLes utilisateurs ne pourront plus 'monter' les médias amovibles, seul\nl'administrateur (`root`) en aura le pouvoir.\n\n## Solution\n\nAppliquer le correctif correspondant à votre version de Solaris. Se\nréférer au bulletin \\#45707 de sun (cf. section Documentation) pour\nconnaître la version du correctif à appliquer.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité #45707 de Sun:",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F45707"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-150",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-07-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut provoquer un débordement de mémoire.\n",
+  "title": "Vulnérabilité de vold sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de Sun #45707",
+      "url": null
+    }
+  ]
+}

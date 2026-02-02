@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>La vulnérabilité concerne tous les Cisco IOS qui acceptent le  protocole PPTP. Les versions de Cisco IOS acceptant PPTP sont  :</P>  <UL>    <LI>12.1 train, versions T, E, EZ, YA, YD et YC;</LI>    <LI>12.2 train, toutes les versions.</LI>  </UL>",
+  "content": "## Description\n\nLe protocole PPTP (Point to Point Tunneling Protocol) permet à un\nutilisateur d'établir un tunnel vers un réseau IP (Internet Protocol) en\nutilisant le protocole PPP (Point to Point Protocol).\n\nEn envoyant un paquet judicieusement composé vers le port 1723/tcp (port\nde contrôle de PPTP), un utilisateur mal intentionné peut forcer l'arrêt\ndu routeur.\n\nCette vulnérabilité ne nécessite pas de configuration particulière au\nniveau du routeur. Le routeur s'arrêtera au premier paquet reçu.\n\n## Solution\n\nTélécharger les mises à jour sur le site de Cisco\n\n    http://www.cisco.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Cisco :",
+      "url": "http://www.cisco.com/warp/public/707/PPTP-vulnerability-pub.html"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-076",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-07-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service entraînant l'arrêt du routeur cisco"
+    }
+  ],
+  "summary": "Une vulnérabilité dans l'implémentation de PPTP sous Cisco IOS permet\nd'arrêter les routeurs Cisco à l'aide de paquets judicieusement\ncomposés.\n",
+  "title": "Vulnérabilité dans PPTP sous CISCO IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis Cisco",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Explorer s5.01 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Scripting Host 5.5.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 5.5 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Scripting Host 5.1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n## 4.1 Première vulnérabilité\n\nL'architecture de sécurité d'Internet Explorer fournit un mécanisme de\ngestion du cache afin de stocker sur la machine locale les pages\ninternet visitées. Une vulnérabilité de ce système permet à un site\ndistant d'avoir accès aux fichiers du cache.\n\nUn concepteur de site mal intentionné peut, en consultant les\n«raccourcis» utilisés par le cache, lancer l'exécution de fichiers\nexécutables avec les droits de l'utilisateur local.\n\n## 4.2 Deuxième vulnérabilité\n\nUne variante des vulnérabilités décrites dans les bulletins Microsoft\nMS00-33, MS00-55 et MS00-093 (Référence CERTA : CERTA-2000-AVI-082)\npermet à un concepteur de site d'avoir accès en lecture aux fichiers se\ntrouvant sur la machine distante.\n\n## 4.3 Troisième vulnérabilité\n\nCette vulnérabilité identique sur le principe à la deuxième\nvulnérabilité concerne Microsoft Windows Scripting Host 5.1 et 5.5.\n\nPour connaître la version de Windows Host Scripting :\n\n-   Dans le menu Démarrer, selectionner : Rechercher fichiers ou\n    dossiers\n-   Effectuer la recherche sur le fichier jscript.dll ou vbscript.dll\n-   Effectuer un clic droit sur le fichier trouvé afin de vérifier sa\n    version.\n\n## 4.4 Quatrième vulnérabilité\n\nL'installation du service UNIX 2.0 permet d'intrégrer des stations\nWindows NT 4 et Windows 2000 dans un réseau UNIX existant. Cependant ce\nservice, par l'intermédiaire du client Telnet fourni, apporte une\nvulnérabilité.\n\nUn concepteur de site mal intentionné peut, lors de la consultation de\nson site, forcer Internet Explorer à utiliser le client Telnet pour\ntélécharger un programme malicieux sur le disque de la machine distante.\n\n## Solution\n\nLes différents correctifs sont téléchargeables sur le site Microsoft :\n\n-   Première et seconde vulnérabilité :\n\n        http://www.microsoft.com/windows/ie/downloads/critical/q286045/default.asp\n\n-   troisième vulnérabilité :\n    -   Windows Host Scripting version 5.1 :\n\n            http://www.microsoft.com/msdownload/vbscript/scripting51.asp\n\n    -   Windows Host Scripting version 5.5 :\n\n            http://www.microsoft.com/msdownload/vbscript/scripting.asp\n\n-   Quatrième vulnérabilité :\n\n        http://www.microsoft.com/windows/ie/download/critical/q286043/default.asp\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms01-015.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-027",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-03-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Compromission des données"
+    }
+  ],
+  "summary": "Le bulletin MS01-015 de Microsoft comprend quatre vulnérabilités. Deux\nvulnérabilités concernent Internet Explorer, une vulnérabilité concerne\nWindows Scripting Host et une autre le client Telnet du service Unix\n2.0.\n",
+  "title": "Vulnérabilités d'Internet Explorer et de Windows Scripting Host",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-015",
+      "url": null
+    }
+  ]
+}

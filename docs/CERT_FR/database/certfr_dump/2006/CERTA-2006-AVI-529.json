@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM TSM versions antérieures à 5.2.9 ;",
+      "product": {
+        "name": "Tivoli",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM TSM versions antérieures à 5.3.4.",
+      "product": {
+        "name": "Tivoli",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans IBM Tivoli Storage\nManager (TSM). Ces vulnérabilités de type buffer overeflow sont\nexploitables sans que l'authentification auprès du serveur ne soit\nnécessaire. Ces vulnérabilités peuvent au minimum provoquer l'arrêt\nbrutal du serveur mais éventuellement l'éxécution de code arbitraire à\ndistance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-5855",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5855"
+    }
+  ],
+  "links": [
+    {
+      "title": "Référence CVE :",
+      "url": "http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-5855"
+    },
+    {
+      "title": "Bulletin de sécurité de TippingPoint      l",
+      "url": "http://www.tippingpoint.com/security/advisories/TSRT-06-14.htm"
+    },
+    {
+      "title": "Bulletin de sécurité d'IBM :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21250261"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-529",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-12-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités dans IBM Tivoli",
+  "vendor_advisories": []
+}

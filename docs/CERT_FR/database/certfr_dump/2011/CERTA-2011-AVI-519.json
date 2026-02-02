@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Django 1.3.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Django 1.2.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nQuatre vulnérabilités ont été découvertes dans Django :\n\n-   une erreur dans la gestion des données de session permet à une\n    personne malintentionnée de porter à atteinte à l'intégrité de\n    données de session ;\n-   une vulnérabilité dans le champ URLField permet une consommation\n    excessive des ressources du système ;\n-   une erreur dans la validation des adresses réticulaires permet de\n    porter atteinte à la confidentialité de certaines données ;\n-   une vulnérabilité dans le traitement des requêtes permet à une\n    personne malintentionnée de corrompre la mémoire tampon.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2011-AVI-519",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-09-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Django permettent à une personne\nmalintentionnée de porter atteinte à la confidentialité et l'intégrité\ndes données, de provoquer un déni de service à distance ou d'injecter\nillégitimement des requêtes par rebond.\n",
+  "title": "Multiples vulnérabilités dans Django",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Django du 09 septembre 2011",
+      "url": "https://www.djangoproject.com/weblog/2011/sep/09/security-releases-issued/"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Routeurs Cisco Series 12000.</P>  <P>Les autres produits Cisco ne sont pas affectés.</P>",
+  "content": "## Description\n\nLa fonction d'un routeur est d'envoyer les paquets IP vers la bonne\ninterface, en fonction de l'adresse destination incluse dans le paquet\nIP. Lorsqu'il n'y a pas de chemin valide vers la destination ou que le\nchemin valide est l'interface Null0, le paquet IP est écarté et le\nrouteur envoie à son émetteur un paquet ICMP de type 3 Destination\nUnreachable.\n\nLorsqu'un nombre important de paquets IP est écarté par un routeur et\nnécessite l'envoi de beaucoup de réponses Destination Unreachable, les\nressources du processeur du routeur peuvent être saturées.\n\nCette situation peut se produire lorsque le routeur est utilisé au\nmilieu d'un mécanisme de filtrage trou noir (\\*), ou lorsqu'il est\nvictime d'une attaque en déni de service.  \n\n(\\*) La méthode de filtrage trou noir au sein d'un réseau étendu\nconsiste en l'annonce, par un routeur trou noir, de routes statiques\nd'adresses, dans le but de les filtrer. En effet, les paquets IP\ncirculant sur ce réseau et possédant une des adresses destination\nconcernées, arriveront jusqu'au routeur trou noir, où ils seront alors\nécartés.\n\n## Contournement provisoire\n\nL'envoi de réponse Destination Unreachable peut être supprimé ou limité\nsur l'interface du routeur par les commandes suivantes :\n\n-   suppression : no ip unreachables\n-   limitation : ip icmp rate-limit unreachable n ou n est le nombre de\n    millisecondes entre deux paquets ICMP Destination Unreachable\n    consécutifs.\n\n## Solution\n\nCisco tient à disposition de ses clients un correctif pour éliminer\ncette vulnérabilité et leur conseille d'utiliser les canaux habituels de\nmise à jour et de maintenance.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis Cisco :",
+      "url": "http://www.cisco.com/warp/public/707/GSR-unreachables-pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-143",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-11-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Dégradation des performances du routeur"
+    }
+  ],
+  "summary": "La performance des routeurs Cisco de la série 12000 peut être dégradée\nlorsqu'ils doivent envoyer un grand nombre de paquets ICMP de type 3\n<span class=\"textit\">Destination Unreachable</span>. Cette situation\npeut se produire notamment lors de scans réseau très importants.\n",
+  "title": "Vulnérabilité dans les routeurs Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Cisco",
+      "url": null
+    }
+  ]
+}

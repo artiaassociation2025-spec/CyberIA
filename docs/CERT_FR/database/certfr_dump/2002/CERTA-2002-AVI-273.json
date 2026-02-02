@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Microsoft Windows XP.</p>",
+  "content": "## Description\n\nUn débordement de tampon a été découvert dans l'une des fonctions\nd'extraction d'attributs de fichier audio (extensions \".mp3\" et \".wma\").\nUn utilisateur mal intentionné peut créer habilement un fichier audio et\nle placer sur une page internet, dans un dossier partagé, ou l'envoyer\ndans un courrier électronique au format HTML. Lors du simple passage de\nla souris au dessus de ce fichier, la fonction vulnérable du langage de\ncommande Windows XP est appelée, et le code malicieux exécuté.  \nNote: Cette vulnérabilité concerne le langage de commande de Windows XP\net non le lecteur Windows Media Player.\n\n## Solution\n\nConsulter le bulletin MS02-072 de Microsoft pour connaître la\ndisponibilité des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS02-072  :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-072.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-273",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans une fonction d'extraction d'attributs de fichier\naudio permet à un utilisateur mal intentionné de réaliser un déni de\nservice ou d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité du langage de commande Windows XP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis Foundstone Research Labs",
+      "url": null
+    }
+  ]
+}

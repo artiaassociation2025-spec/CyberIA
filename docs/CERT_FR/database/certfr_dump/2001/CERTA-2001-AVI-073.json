@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Oracle 8i.</P>",
+  "content": "## Description\n\nTNS (Transparent Network Substate) Listener est un élément de\nl'interface réseau des base de données Oracle 8i.\n\nUne vulnérabilité de TNS Listener permet à un utilisateur mal\nintentionné d'obtenir, par le biais d'un débordement de mémoire, les\nprivilèges de l'administrateur de la base de données sans\nauthentification préalable.\n\n## Solution\n\nInstaller la version d'Oracle 9i qui ne présente pas cette\nvulnérabilité.\n\nUn numéro à été donné à cette vulnérabilité : 1489683 et Oracle met au\npoint un correctif pour les versions 8.1.7, 8.1.6 et 8.0.6 qui sera\ndisponible à l'adresse suivante :\n\n    http://metalink.oracle.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le bulletin de sécurité du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2001-16.html"
+    },
+    {
+      "title": "L'avis de sécurité de Oracle :",
+      "url": "http://otn.oracle.com/deploy/security/pdf/nai_net8_bof.pdf"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-073",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-07-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire sur le serveur avec les privilèges du compte utilisé par le processus, permettant aussi la modification de la base de données oracle"
+    },
+    {
+      "description": "Dans le cas de windows nt ou 2000, ces privilèges sont ceux de local_system"
+    }
+  ],
+  "summary": "Une vulnérabilité de <span class=\"textit\">TNS listener</span> permet de\ncompromettre à distance une base de données Oracle sans authentification\npréalable.\n",
+  "title": "Vulnérabilité d'Oracle",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis du CERT/CC CA-2001-16",
+      "url": null
+    }
+  ]
+}

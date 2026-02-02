@@ -1,0 +1,47 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>WordPress, version 2.6.1 et versions  précédentes.</p>",
+  "content": "## Description\n\nUne première vulnérabilité affecte la création et la gestion des\nutilisateurs. Son exploitation permet à un utilisateur malveillant de\nréinitialiser le mot de passe d'un utilisateur légitime. Le mot de passe\nde ce dernier est remplacé par un mot de passe créé aléatoirement.\n\nUne deuxième vulnérabilité affecte la fonction PHP mt_rand. Dans\ncertaines conditions, la suite pseudoaléatoire produite par cette\nfonction est prédictible.\n\nCette fonction est notamment utilisée pour la réinitialisation des mots\nde passe.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-4107",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4107"
+    },
+    {
+      "name": "CVE-2008-4106",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4106"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site de téléchargement du WordPress :",
+      "url": "http://wordpress.org/"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-453",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-09-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout de références CVE.",
+      "revision_date": "2008-09-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans WordPress permettent à un utilisateur\nmalveillant de contourner la politique de sécurité.\n",
+  "title": "Vulnérabilités de WordPress",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin WordPress du 08 septembre 2008",
+      "url": "http://wordpress.org/development"
+    }
+  ]
+}

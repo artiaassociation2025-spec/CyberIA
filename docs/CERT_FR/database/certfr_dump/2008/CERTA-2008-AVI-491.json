@@ -1,0 +1,120 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "CA Business Protection Suite r2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA ARCserve Backup Windows r12.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA Business Protection Suite for Microsoft Small Business Server Standard Edition r2 ;",
+      "product": {
+        "name": "Small Business",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA ARCserve Backup Windows r11.5 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA ARCserve Backup Windows r11.1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA Server Protection Suite r2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA Business Protection Suite for Microsoft Small Business Server Premium Edition r2.",
+      "product": {
+        "name": "Small Business",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nQuatre vulnérabilités ont été découvertes dans CA ARCserve Backup :\n\n-   une validation insuffisante des paramètres passés à certains appels\n    RPC permet d'exécuter du code arbitraire à distance (CVE-2008-4397)\n    ;\n-   une faille dans le service tape engine permet de réaliser un déni de\n    service à distance (CVE-2008-4398) ;\n-   une vulnérabilité dans le service database engine permet de réaliser\n    un déni de service à distance (CVE-2008-4399) ;\n-   une vérification incorrecte des identifiants de connexion permet de\n    réaliser plusieurs dénis de service (CVE-2008-4400).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-4397",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4397"
+    },
+    {
+      "name": "CVE-2008-4399",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4399"
+    },
+    {
+      "name": "CVE-2008-4400",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4400"
+    },
+    {
+      "name": "CVE-2008-4398",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4398"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2008-AVI-491",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-10-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans <span class=\"textit\">CA ARCserve\nBackup</span> permettent à distance d'exécuter du code arbitraire ou de\nprovoquer des dénis de service.\n",
+  "title": "Multiples vulnérabilités dans CA ARCserve Backup",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CA du 09 octobre 2008",
+      "url": "http://support.ca.com/irj/portal/anonymous/phpsupcontent?contentID=188143"
+    }
+  ]
+}

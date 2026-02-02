@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Symantec Reporting Server</SPAN> versions  1.0.197.0 et antérieures.</P>",
+  "content": "## Description\n\nTrois vulnérabilités ont été découvertes dans Symantec Reporting Server.\n\nLa première de ces vulnérabilités concerne une application Web\noptionnelle de la console de Symantec System Center. Un échec lors d'une\ntentative de connexion à Reporting Server peut entraîner l'affichage du\ncondensé du mot de passe de l'administrateur. Ce condensé peut être\nrejoué par un utilisateur malintentionné pour obtenir un accès à la base\nde données (référence CVE-2007-3022).\n\nUne deuxième vulnérabilité permet de contourner le mécanisme\nd'authentification à la base de données de Symantec Client Security\nReporting Server (référence CVE-2007-3022).\n\nLa troisième vulnérabilité est présente lors de la création d'un fichier\npar Reporting Server. Ce fichier peut être manipulé par un utilisateur\nmalintentionné distant afin d'exécuter du code arbitraire à distance\n(référence CVE-2007-3021).\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3021",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3021"
+    },
+    {
+      "name": "CVE-2007-3022",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3022"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SYM-011 du 05 juin 2007 :",
+      "url": "http://www.symantec.com/avcenter/security/Content/2007.06.05.html"
+    },
+    {
+      "title": "Bulletin de sécurité SYM-012 du 05 juin 2007 :",
+      "url": "http://www.symantec.com/avcenter/security/Content/2007.06.05a.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-250",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-06-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans <span class=\"textit\">Symantec Reporting\nServer</span> permettent d'avoir accès à la base de données de ce\nproduit et, dans un cas très particulier, d'exécuter du code arbitraire\nà distance.\n",
+  "title": "Vulnérabilités dans Symantec Reporting Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Symantec SYM-011 et SYM-012 du 05 juin 2007",
+      "url": null
+    }
+  ]
+}

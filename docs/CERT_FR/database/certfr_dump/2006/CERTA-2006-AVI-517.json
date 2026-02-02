@@ -1,0 +1,215 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apple Mac OS X Server v10.3.9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple Mac OS X v10.4.8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple Mac OS X Server v10.4.8.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple Mac OS X v10.3.9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été identifiées dans le système\nd'exploitation Apple Mac OS X. Parmi celles-ci :\n\n-   une vulnérabilité des pilotes de cartes sans-fil Airport : ils\n    n'interpreteraient pas correctement des paquets répondant à une\n    requête de sondage (de type Probe). Une personne malveillante\n    pourrait donc émettre un paquet malformé, en réponse à une requête,\n    afin de provoquer l'exécution de commandes arbitraires à distance.\n    Les solutions de sécurité comme WPA, VPN, 802.11i ne protègent pas\n    de cette catégorie d'attaques visant directement le pilote de la\n    carte réseau. Le CERTA mentionne ce problème dans le bulletin\n    d'actualité CERTA-2006-ACT-046 ;\n-   une vulnérabilité de CFNetwork : les URI (pour Uniform Resource\n    Identifier) FTP ne sont pas validées correctement. Une personne\n    pourrait, en visitant un site FTP construit de manière malveillante,\n    lancer à son insu des commandes FTP contre un site tiers ;\n-   plusieurs vulnérabilités dans clamAV pour Mac OS X Server ;\n-   des vulnérabilités dans OpenSSL pour MacOS. Celles-ci ont été\n    abordées dans des avis du CERTA, notamment CERTA-2006-AVI-421 et\n    CERTA-2006-AVI-448 ;\n-   des vulnérabilités de PHP : certaines ont été décrites dans l'avis\n    du CERTA CERTA-2006-AVI-481 ;\n-   une vulnérabilité de PPP : une personne malveillante pourrait, sur\n    le même réseau qu'une machine vulnérable, envoyer un paquet\n    spécialement conçu, afin de perturber PPPoE. Cela permettrait sous\n    certaines conditions d'exécuter des commandes arbitraires à\n    distance. PPPoE n'est cependant pas activé par défaut.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur Apple pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4339",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4339"
+    },
+    {
+      "name": "CVE-2006-1990",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1990"
+    },
+    {
+      "name": "CVE-2006-4398",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4398"
+    },
+    {
+      "name": "CVE-2006-5465",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5465"
+    },
+    {
+      "name": "CVE-2006-4403",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4403"
+    },
+    {
+      "name": "CVE-2006-2940",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2940"
+    },
+    {
+      "name": "CVE-2006-4182",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4182"
+    },
+    {
+      "name": "CVE-2006-4404",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4404"
+    },
+    {
+      "name": "CVE-2006-4334",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4334"
+    },
+    {
+      "name": "CVE-2006-4343",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4343"
+    },
+    {
+      "name": "CVE-2006-4408",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4408"
+    },
+    {
+      "name": "CVE-2006-4335",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4335"
+    },
+    {
+      "name": "CVE-2006-4396",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4396"
+    },
+    {
+      "name": "CVE-2006-4401",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4401"
+    },
+    {
+      "name": "CVE-2006-4407",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4407"
+    },
+    {
+      "name": "CVE-2006-3403",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3403"
+    },
+    {
+      "name": "CVE-2006-4400",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4400"
+    },
+    {
+      "name": "CVE-2006-4336",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4336"
+    },
+    {
+      "name": "CVE-2006-4337",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4337"
+    },
+    {
+      "name": "CVE-2006-4402",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4402"
+    },
+    {
+      "name": "CVE-2006-3738",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3738"
+    },
+    {
+      "name": "CVE-2006-1490",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1490"
+    },
+    {
+      "name": "CVE-2006-2937",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2937"
+    },
+    {
+      "name": "CVE-2006-4409",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4409"
+    },
+    {
+      "name": "CVE-2006-4410",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4410"
+    },
+    {
+      "name": "CVE-2006-4411",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4411"
+    },
+    {
+      "name": "CVE-2006-5710",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5710"
+    },
+    {
+      "name": "CVE-2006-4338",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4338"
+    },
+    {
+      "name": "CVE-2006-4412",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4412"
+    },
+    {
+      "name": "CVE-2006-3962",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3962"
+    },
+    {
+      "name": "CVE-2006-4406",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4406"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin d'actualité du CERTA CERTA-2006-ACT-046 du 17    novembre 2006 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2006-ACT-046.pdf"
+    },
+    {
+      "title": "Avis du CERTA CERTA-2006-AVI-448 du 11 octobre 2006 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2006-AVI-448/"
+    },
+    {
+      "title": "Bulletin de sécurité Apple 2006-007 du 28 novembre 2006 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=304829"
+    },
+    {
+      "title": "Avis du CERTA CERTA-2006-AVI-421 du 03 octobre 2006 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2006-AVI-421/"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-517",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été identifiées dans le système\nd'exploitation Apple Mac OS X. Certaines pourraient, si elles sont\nexploitées par une personne malveillante, provoquer l'exécution de code\narbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans Apple Mac OS X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mises à jour Apple 2006-007 du 28 novembre 2006",
+      "url": null
+    }
+  ]
+}

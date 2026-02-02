@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco ASA et PIX pour les versions de la branche 8.0.x antérieures à 8.0(3)10 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco ASA et PIX pour les versions de la branche 7.1.x antérieures à 7.1(2)70 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco ASA et PIX pour les versions de la branche 8.1.x antérieures à 8.1(1)2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco ASA et PIX pour les versions de la branche 7.2.x antérieures à 7.2(4) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans les équipements\nréseaux de sécurité Cisco PIX (Private Internet EXchange) et Cisco ASA\n(Adaptive Security Appliance) :\n\n-   les trames d'accusé de réception TCP ACK ne sont pas correctement\n    interprétées lorsqu'elles sont adressés à l'interface de\n    l'équipement. L'exploitation de cette vulnérabilité peut perturber\n    le fonctionnement du système ;\n-   les requêtes TLS (Transport Layer Security) ne sont pas correctement\n    interprétées lorsqu'elles sont adressées au serveur Web (HTTPS) de\n    l'équipement. L'exploitation de cette vulnérabilité peut perturber\n    le fonctionnement du système ;\n-   certaines trames de messagerie instantanée ne sont pas correctement\n    interprétées par le moteur d'inspection de l'équipement.\n    L'exploitation de cette vulnérabilité peut perturber le\n    fonctionnement du système ;\n-   le système ne gère pas correctement des tentatives de balayage\n    adressées à l'équipement sur le port 443/tcp ;\n-   des règles de contrôles d'accès pourraient être contournées sous\n    certaines conditions non spécifiées par l'éditeur.\n\n## Solution\n\nSe référer au bulletin de sécurité de Cisco pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2055",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2055"
+    },
+    {
+      "name": "CVE-2008-2059",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2059"
+    },
+    {
+      "name": "CVE-2008-2058",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2058"
+    },
+    {
+      "name": "CVE-2008-2056",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2056"
+    },
+    {
+      "name": "CVE-2008-2057",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2057"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20080604-asa (105444) du 04 juin    2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080604-asa.shtml"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-287",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-06-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans les équipements\nréseaux de sécurité Cisco PIX (<span class=\"textit\">Private Internet\nEXchange</span>) et Cisco ASA (<span class=\"textit\">Adaptive Security\nAppliance</span>). Celles-ci peuvent être exploitées à distance par le\nbiais de trames spécialement construites afin de perturber le\nfonctionnement de l'équipement. Une autre vulnérabilité offre la\npossibilité de contourner la politique de sécurité mise en place au\nmoyen de listes d'accès.\n",
+  "title": "Plusieurs vulnérabilités dans Cisco PIX et ASAX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Cisco 105444 du 04 juin 2008",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Postfix dans les version suivantes :  <UL>    <LI>branche 2.3, avant la version 2.3.15 ;</LI>    <LI>branche 2.4, avant la version 2.4.8 ;</LI>    <LI>branche 2.5, avant la version 2.5.4 ;</LI>    <LI>branche 2.6, avant la version 2.6-20080814.</LI>  </UL></p>",
+  "content": "## Description\n\nLe support des liens sur certains systèmes d'exploitation permet à un\nutilisateur malveillant de modifier des fichiers ne lui appartenant pas\nou d'élever ses privilèges par la construction de liens et l'envoi de\nmessages.\n\nUn défaut de vérification des droits sur les boîtes aux lettres permet à\nun utilisateur malintentionné de lire des courriels qui ne lui sont pas\ndestinés.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2937",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2937"
+    },
+    {
+      "name": "CVE-2008-2936",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2936"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2008:0839 du 14 août 2008    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2008-0839.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200808-12 du 14 août 2008    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200808-12.xml"
+    },
+    {
+      "title": "Bulletin de sécurité OpenSuse SUSE-SA:2008:040 du 14 août    2008 :",
+      "url": "http://lists.opensuse-security-announce/2008-08/msg00002.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-420",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-08-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans Postfix permettent à un utilisateur malveillant\nd'élever ses privilèges et de porter atteinte à l'intégrité et à la\nconfidentialité de données.\n",
+  "title": "Vulnérabilités de Postfix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CVE-2008-2936 et CVE-2008-2937",
+      "url": null
+    }
+  ]
+}

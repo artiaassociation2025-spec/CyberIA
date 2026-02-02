@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>OpenSSL pour Debian versions 0.9.8c-4etch2 et antérieures    ;</LI>    <LI>les versions d'OpenSSL mises en œuvre dans les versions    7.04, 7.10 et 8.04 de Ubuntu.</LI>  </UL>  <P>La version présente dans l'ancienne version stable de Debian :  <SPAN class=\"textit\">sarge</SPAN> n'est pas vulnérable.</P>",
+  "content": "## Description\n\nUne vulnérabilité est présente dans la version spécifique de OpenSSL\nmise en œuvre dans les distributions GNU/Linux Debian et Ubuntu.\nCelle-ci est relative à une faiblesse dans le générateur de nombres\npseudo-aléatoires. Cette faille permet potentiellement à un utilisateur\nmalintentionné de prédire les clefs engendrées au moyen de OpenSSL.\n\nRemarque : les clefs créées avec la version vulnérable d'OpenSSL sont\ndonc considérées comme non-fiables et doivent être remplacées par de\nnouvelles après application du correctif.\n\n## Solution\n\nSe référer au bulletin de sécurité de Debian et Ubuntu pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-612-1 du 13 mai 2008 :",
+      "url": "http://www.ubuntu.com/usn/usn-612-1"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1571 du 13 mai 2008 :",
+      "url": "http://www.debian.org/security/2008/dsa-1571"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-239",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2008-05-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout de Ubuntu dans les systèmes vulnérables, ajout de la non-vulnérabilité de la Debian sarge.",
+      "revision_date": "2008-05-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la version de OpenSSL propre aux distributions\nDebian, Ubuntu ou à leurs dérivés permet à un utilisateur distant de\ncontourner la politique de sécurité ou de porter atteinte à la\nconfidentialité du système vulnérable.\n",
+  "title": "Vulnérabilité dans la version OpenSSL de Debian",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DSA-1571 du 13 mai 2008",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>MIT Kerberos 5 version krb5-1.4.1 et  versions antérieures.</p>",
+  "content": "## Description\n\nKerberos est un protocole d'authentification.  \nPlusieurs vulnérabilités ont été découvertes dans MIT Kerberos 5 :\n\n-   Une vulnérablité au niveau du KDC (Key Distribution Center) dans la\n    gestion de la mémoire lors de la réception d'un paquet TCP\n    habilement construit (référence CVE CAN-2005-1174) ;\n-   une vulnérablité au niveau du KDC (Key Distribution Center) de type\n    débordement de mémoire lors de la réception d'un paquet TCP ou UDP\n    habilement construit (référence CVE CAN-2005-1175) ;\n-   une vulnérabilité dans la gestion de la mémoire par la fonction\n    krb5_recvauth() (référence CVE CAN-2005-1689).\n\n## Solution\n\nLa future version krb5-1.4.2 corrigera ces vulnérabilités.  \n  \nEn attendant, appliquer les correctifs pour la version krb5-1.4.1 :\n\n-   http://web.mit.edu/kerberos/advisories/2005-002-patch_1.4.1.txt\n\n-   http://web.mit.edu/kerberos/advisories/2005-003-patch_1.4.1.txt\n\nMIT Kerberos 5 peut se télécharger à l'adresse suivante :\n\n    http://web.mit.edu/kerberos/dist/index.html\n\n  \nDans tous les cas, se référer au bulletin de sécurité de l'éditeur (cf.\nsection Documentation) pour l'obtention des correctifs.  \n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-757 du 17 juillet 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-757"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SR:2005:017 du 13 juillet    2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_17_sr.html"
+    },
+    {
+      "title": "Bulletin de sécurité MITKRB5-SA-2005-002 du 12 juillet 2005    :",
+      "url": "http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2005-002-kdc.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:119 du 13 juillet    2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:119"
+    },
+    {
+      "title": "Bulletin de sécurité SUN #101810 du 12 juillet 2005 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-101810-1"
+    },
+    {
+      "title": "Bulletin de sécurité SGI 20050703-01-U du 15 juillet 2005 :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20050703-01-U.asc"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:562 du 12 juillet    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-562.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:567 du 12 juillet    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-567.html"
+    },
+    {
+      "title": "Bulletin de sécurité HP-UX du 25 septembre 2006:",
+      "url": "http://itrc.hp.com/service/cki/docDisplay.do?docId=c00768776"
+    },
+    {
+      "title": "Bulletin de sécurité SUN #101809 du 12 juillet 2005 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-101809-1"
+    },
+    {
+      "title": "Site Internet de MIT Kerberos 5 :",
+      "url": "http://web.mit.edu/kerberos/"
+    },
+    {
+      "title": "Bulletin de sécurité MITKRB5-SA-2005-003 du 12 juillet 2005    :",
+      "url": "http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2005-003-recvauth.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200507-11 du 12 juillet    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200507-11.xml"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-257",
+  "revisions": [
+    {
+      "description": "ajout de la référence au bulletin de sécurité SUSE SUSE-SR:2005:017.",
+      "revision_date": "2005-07-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva MDKSA-2005:119.",
+      "revision_date": "2005-07-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité RedHat RHSA-2005:562 et SGI 20050703-01-U.",
+      "revision_date": "2005-07-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité HP-UX",
+      "revision_date": "2006-10-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans MIT Kerberos 5 permettent à un utilisateur\nmal intentionné de réaliser un déni de service ou d'exécuter du code\narbitraire à distance sur la plate-forme vulnérable.\n",
+  "title": "Vulnérabilité de MIT Kerberos 5",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité MITKRB5-SA-2005-002 et MITKRB5-SA-2005-003",
+      "url": null
+    }
+  ]
+}

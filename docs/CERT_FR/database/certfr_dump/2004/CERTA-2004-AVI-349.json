@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Plusieurs antivirus sont affectés par  cette vulnérabilité :  <UL>    <LI>eTrsut antivirus</LI>    <LI>Kaspersky antivirus ;</LI>    <LI>Sophos antivirus ;</LI>    <LI>McAfee ;</LI>    <LI>NOD32 ;</LI>    <LI>RAV antivirus.</LI>  </UL>  <P>Pour plus de détails sur les versions des systèmes affectées,  se référer au bulletin de sécurité de l'éditeur (cf. section  Documentation).</P></p>",
+  "content": "## Description\n\nL'information sur les fichiers compressés à l'intérieur d'un fichier au\nformat zip est stockée dans un en-tête local (créé avant la compression\nde chaque fichier) et un en-tête global (créé après la compression de\ntous les fichiers).\n\nUn utilisateur mal intentionné peut changer la taille des fichiers à\nl'intérieur des entêtes local et global afin de contourner la protection\nantivirale apportée par l'antivirus.\n\n## Contournement provisoire\n\nFiltrer les messages contenant une pièce jointe au format zip.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nPour l'antivirus NOD32 la vulnérabilité a été corrigée dans la version\n1.020 du module archive-support disponible lors de la mise à jour des\nsignatures de virus.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sophos du 19 octobre 2004 :",
+      "url": "http://sophos.com/support/knowledgebase/article/2074.html"
+    },
+    {
+      "title": "Bulletin de sécurité Computer Associates :",
+      "url": "http://supportconnectw.ca.com/public/ca_common_docs/arclib_vuln.asp"
+    },
+    {
+      "title": "Bulletin de sécurité Mcafee (Utilisateur) :",
+      "url": "http://download.mcafee.com/uk/updates/updates.asp"
+    },
+    {
+      "title": "Bulletin de sécuité Mcafee (Entreprise) :",
+      "url": "http://www.mcafeesecurity.com/uk/downloads/updates/dat.asp?id=1"
+    },
+    {
+      "title": "Bulletin de sécurité de iDefense du 18 octobre 2004 :",
+      "url": "http://www.idefense.com/application/poi/display?id=153&type=vulnerabilities"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-349",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-10-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la protection antivirale"
+    }
+  ],
+  "summary": "Une vulnérabilité présente lors du traitement des fichiers au format zip\npar les antivirus permet à un utilisateur mal intentionné de contourner\nla protection apportée par ces antivirus.\n",
+  "title": "Vulnérabilité dans plusieurs antivirus",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDefense 10.18.04",
+      "url": null
+    }
+  ]
+}

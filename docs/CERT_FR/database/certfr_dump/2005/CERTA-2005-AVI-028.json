@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système Windows, Linux ou Solaris avec un greffon  («plug-in») Java de Sun installé dans le navigateur courant ;  Java étant en version 1.4 et antérieur à la révision  1.4.2_06.</P>",
+  "content": "## Description\n\nDeux failles ont été identifiées dans la gestion des appliquettes :\n\n-   une erreur dans l'appel à du code Javascript peut être détournée\n    pour accéder ou exécuter des fichiers ;\n-   un second problème permet à une appliquette d'en influencer une\n    autre afin de lui faire charger des pages web ou des fichiers.\n\n## Contournement provisoire\n\nLa première faille peut-être combattue en désactivant le Javascript pour\nle cas où cela n'aurait pas déjà été fait.\n\n## Solution\n\nSe référer à l'avis de sécurité de Sun pour l'obtention et\nl'installation d'une version 1.4.2_06 au moins de Java (cf section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sun #57708 du 19 janvier 2005 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-57708-1"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-028",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-01-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Il est possible pour une appliquette, disponible sur un site Internet\nmalicieux, soit d'exécuter ou d'accéder à des fichiers quelconques sur\nle système client, soit de corrompre le fonctionnement d'une autre\nappliquette.\n",
+  "title": "Failles dans les greffons Java de Sun",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Sun #57708",
+      "url": null
+    }
+  ]
+}

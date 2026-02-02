@@ -1,0 +1,100 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ggv versions 1.0.2 et précédentes ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "gv versions 3.5.8 et précédentes ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "KGhostView livré avec les versions 1.1 à 3.0.a du projet KDE.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n## 4.1 La vulnérabilité\n\nghostscript est un logiciel qui interprète les langages PostScript et\nPortable Document Format (PDF) et qui s'utilise en ligne de commande\npour, le plus souvent :\n\n-   afficher un fichier PostScript ou PDF à l'écran ;\n-   imprimer un tel fichier sur une imprimante qui ne connaît pas le\n    PostScript ;\n-   ainsi que diverses autres manipulations du PostScript ou du PDF.\n\ngv est une interface graphique qui dispense d'utiliser ghostscript en\nligne de commande. gv est utilisé pour lire à l'écran un fichier\nPostScript ou PDF.\n\nggv est l'intégration du logiciel gv dans le projet GNOME.\n\nKGhostView est l'intégration du logiciel gv dans le projet KDE. Le\nlogiciel KGhostView est contenu dans le paquetage kdegraphics.\n\nUn débordement de variable dans le programme gv (versions 3.5.8 et\ninférieures) permet à un utilisateur mal intentioné de construire un\nfichier PDF ou PostScript et inciter un utilisateur naïf à le visualiser\navec gv. Ce fichier astucieusement construit, lors de sa visualisation\npar le biais des versions vulnérables de gv, exécute un code choisi par\nl'utilisateur mal intentionné.\n\nggv étant un développement basé sur gv, les versions de ggv antérieures\nà 1.0.2 sont vulnérables à ce débordement de variables.\n\nKGhostView est aussi basé sur gv. Les versions non corrigées antérieures\nà la version 3.0.4 de kdegraphics sont vulnérables.\n\n## 4.2 Suis-je vulnérable ?\n\nPour déterminer la version de gv, il suffit d'entrer la commande\nsuivante dans un terminal :\n\n    $ gv -v\n    gv 3.5.8\n    $\n\nIci la version de gv est vulnérable.\n\n    $ ggv --version\n    Gnome gnome-ghostview 1.1.96\n    $\n\nCette version de ggv n'est pas vulnérable.\n\n    $ kghostview -v\n    Qt: 2.3.1\n    KDE: 2.2.2\n    KGhostView 0.12\n    $\n\nCette version de KGhostView est vulnérable.\n\n## Solution\n\nSi vous utilisez ggv, assurez-vous qu'il s'agit d'une version récente de\nggv (version supérieure à 1.0.2), si besoin, mettre à jour ggv.\n\nSi vous utilisez KDE, mettez à jour KGhostView. Des patches sont\ndisponibles sur le site ftp du projet KDE, pour les versions 2.2.2 et\n3.0.3 de KDE. Une autre solution est d'utiliser une version récente de\nkdegraphics. La version 3.0.4 corrige cette vulnérabilité.\n\nCertains vendeurs proposent des correctifs pour cette vulnérabilité, par\nexemple :\n\n**Mandrake**\n\n:   http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-069.php\n\n        http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-071.php\n\n**RedHat**\n\n:   https://rhn.redhat.com/errata/RHSA-2002-207.html\n\n**SUN Linux**\n\n:   http://sunsolve.Sun.COM/pub-cgi/retrieve.pl?doc=fsalert%2F47780&zone_32=category%3Asecurity\n\n**Debian**\n\n:   http://www.debian.org/security\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le projet KDE propose des correctifs sur le site",
+      "url": "ftp://ftp.kde.org/pub/kde/security_patches"
+    },
+    {
+      "title": "Le logiciel gv est fournit par le site      \n;",
+      "url": "http://wwwthep.physik.uni-mainz.de/~plass/gv"
+    },
+    {
+      "title": "Les logiciel ggv est développé dans le cadre du    projet GNOME :",
+      "url": "ftp://ftp.gnome.org/pub/gnome/sources/ggv"
+    },
+    {
+      "title": "la version de KGhostView à jour (vis-à-vis de    cette vulnérabilité) est disponible à l'adresse suivante dans    le paquetage kdegraphics :",
+      "url": "http://download.kde.org/stable/3.0.4"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-227",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence SUN Linux et Debian.",
+      "revision_date": "2002-10-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence Mandrake Linux.",
+      "revision_date": "2002-10-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité dans les logiciels gv, ggv et KGhostView permet par le\nbiais d'un document PostScript ou PDF astucieusement construit\nd'exécuter un code arbitraire.\n",
+  "title": "Débordement de variable dans gv",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CVE CAN-2002-0838",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Mandrake MDKSA-2002-069 et MDKSA-2002-071",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Alerte SUN : 47780",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Debian DSA 176-1",
+      "url": null
+    }
+  ]
+}

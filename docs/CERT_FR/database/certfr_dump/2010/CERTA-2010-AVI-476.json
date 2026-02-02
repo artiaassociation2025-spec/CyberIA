@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>MIT krb5-1.8 à MIT krb5-1.8.3</p>",
+  "content": "## Description\n\nUne vulnérabilité de type déréférencement de pointeur nul est présente\ndans MIT Kerberos. Elle concerne le KDC (Key Distribution Center). Elle\npeut être exploitée par le biais d'un certain type de message envoyé\ndepuis le TGS (Ticket Granting Server). Cette vulnérabilité peut\nentrainer un déni de service, une exécution de code à distance ou porter\natteinte à la confidentialité des données.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-1322",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1322"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité MIT Kerberos MITKRB5-SA-2010-006 :",
+      "url": "http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2010-006.txt"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-476",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-10-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "MIT Kerberos présente une vulnérabilité permettant à un utilisateur\ndistant d'effectuer un déni de service, de porter atteinte à la\nconfidentialité des données ou d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité dans MIT Kerberos",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MITKRB5-SA-2010-006 du 05 octobre 2010",
+      "url": null
+    }
+  ]
+}

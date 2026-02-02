@@ -1,0 +1,91 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MiCollab versions antérieures à 9.8 SP3 FP1 (9.8.3.103)",
+      "product": {
+        "name": "MiCollab",
+        "vendor": {
+          "name": "Mitel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MiVoice MX-ONE versions 7.8 sans le correctif MXO-15711_78SP0",
+      "product": {
+        "name": "MiVoice MX-ONE",
+        "vendor": {
+          "name": "Mitel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MiVoice MX-ONE versions 7.8 SP1 sans le correctif MXO-15711_78SP1",
+      "product": {
+        "name": "MiVoice MX-ONE",
+        "vendor": {
+          "name": "Mitel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MiCollab versions 10.x antérieures à 10.1 (10.1.0.10)",
+      "product": {
+        "name": "MiCollab",
+        "vendor": {
+          "name": "Mitel",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "Les correctifs pour MiVoice MX-ONE version 7.3 et postérieures sont disponibles à la discrétion de Mitel.",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-52914",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-52914"
+    },
+    {
+      "name": "CVE-2025-67822",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-67822"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0618",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-07-24T00:00:00.000000"
+    },
+    {
+      "description": "Ajout Référence CVE CVE-2025-67822",
+      "revision_date": "2026-01-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection SQL (SQLi)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Mitel. Elles permettent à un attaquant de provoquer une injection SQL (SQLi) et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans les produits Mitel",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-07-23",
+      "title": "Bulletin de sécurité Mitel 2025-0008",
+      "url": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2025-0008"
+    },
+    {
+      "published_at": "2025-07-23",
+      "title": "Bulletin de sécurité Mitel 2025-0009",
+      "url": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2025-0009"
+    }
+  ]
+}

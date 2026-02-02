@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous les systèmes utilisant <TT>CDE Tooltalk</TT>  (<TT>rpc.ttdbserverd</TT>).</P>",
+  "content": "## Description\n\nCDE (Common Desktop Environment) est une interface graphique qui\nfonctionne sous les systèmes UNIX et Linux. CDE Tooltalk est un système\nde gestion des messages qui permet aux applications de communiquer entre\nelles sur des machines différentes.\n\nDeux vulnérabilités de CDE Tooltalk permettent à un utilisateur mal\nintentionné de réaliser un déni de service ou d'exécuter du code\narbitraire à distance.\n\nLa première de ces vulnérabilités concerne la procédure \\_TT_ISCLOSE().\nCette procédure ne contrôle pas les paramètres passés en argument, ce\nqui permet d'écrire en mémoire.\n\nLa seconde vulnérabilité concerne les opérations sur les fichiers. Il\nest possible d'écraser n'importe quel fichier du système en référençant\ndes liens symboliques.\n\n## Contournement provisoire\n\nDésactiver rpc.ttdbserverd si ce service n'est pas nécessaire.\n\nFiltrer les ports 111/tcp, 111/udp et 32773/tcp au niveau du\ngarde-barrière.\n\n## Solution\n\nAppliquer les correctifs indiqués dans le bulletin de sécurité 46022 de\nSun (voir Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-147",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-07-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout du lien vers les correctifs de Sun.",
+      "revision_date": "2002-09-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités de CDE Tooltalk (rpc.ttdbserverd) permettent à un\nutilisateur mal intentionné de réaliser un déni de service ou d'exécuter\ndu code arbitraire sur le système à distance.\n",
+  "title": "Vulnérabilités de CDE Tooltalk",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis du CERT/CC CA-2002-20",
+      "url": "http://www.cert.org/advisories/CA-2002-20.html"
+    },
+    {
+      "published_at": null,
+      "title": "Avis 46022 de Sun",
+      "url": null
+    }
+  ]
+}

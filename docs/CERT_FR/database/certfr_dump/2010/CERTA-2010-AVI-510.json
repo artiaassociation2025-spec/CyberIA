@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Apache 2.2.</p>",
+  "content": "## Description\n\nTrois vulnérabilités présentes dans Apache sont exploitables pour\nprovoquer un déni de service à distance :\n\n-   CVE-2009-3560 un problème dans la bibliothèque Expat permet de\n    provoquer un arrêt inopiné lors de la lecture d'un fichier XML\n    spécialement conçu ;\n-   CVE-2009-3720 un autre problème dans la bibliothèque Expat permet de\n    provoquer un arrêt inopiné lors de la lecture d'un fichier XML\n    spécialement conçu ;\n-   CVE-2010-1623 la fonction apr_brigade_split_line peut servir à un\n    utilisateur malveillant pour épuiser la mémoire du serveur.\n\n## Solution\n\nLa version 2.2.17 d'Apache corrige ces problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3560",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3560"
+    },
+    {
+      "name": "CVE-2010-1623",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1623"
+    },
+    {
+      "name": "CVE-2009-3720",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3720"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sun du 26 novembre 2010 :",
+      "url": "http://blogs.sun.com/security/entry/cve_2010_1623_memory_leak"
+    },
+    {
+      "title": "Bulletins de sécurité Fedora FEDORA-2010-15916 et 15953 du    28 octobre 2010 :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-October/049939.html"
+    },
+    {
+      "title": "Bulletins de sécurité Fedora FEDORA-2010-15916 et 15953 du    28 octobre 2010 :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-October/049885.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2010:192 du 02 octobre    2010 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:192"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-510",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-10-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins de sécurité Fedora, Mandriva et Sun.",
+      "revision_date": "2010-11-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Apache permettent à un utilisateur\nmalveillant de provoquer un déni de service à distance.\n",
+  "title": "Vulnérabilités dans Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de version Apache 2.2 du 19 octobre 2010",
+      "url": "http://www.apache.org/dist/httpd/Announcement2.2.html"
+    }
+  ]
+}

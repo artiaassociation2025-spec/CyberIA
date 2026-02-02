@@ -1,0 +1,79 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Squid 2.5.Stable6 et versions  antérieures.</p>",
+  "content": "## Description\n\nSquid est un serveur mandataire (proxy) pour les protocoles HTTP, HTTPS\net FTP.\n\n  \n\nUne vulnérabilité est présente dans la routine asn_parse_header()\nappelée lors du traitement des paquets SNMP. Via le biais de requêtes\nSNMP habilement constituées, un utilisateur mal intentionné peut forcer\nl'arrêt brutal du serveur Squid.\n\n## Contournement provisoire\n\nDésactiver le support SNMP au niveau du serveur Squid ou filtrer les\naccès au port utilisé par le module SNMP du serveur Squid (3401/UDP par\ndéfaut).\n\n## Solution\n\nLa version 2.5.Stable7 corrige cette vulnérabilité.\n\nSe référer aux bulletins de sécurité des éditeurs (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-576 du 29 octobre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-576"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200410-15 de Gentoo :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200410-15.xml"
+    },
+    {
+      "title": "Nouveautés de la version 2.5.Stable7 sur le site de Squid :",
+      "url": "http://www.squid-cache.org/Versions/v2/2.5/squid-2.5.STABLE7-RELEASENOTES.html"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2004:591 du 20 octobre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-591.html"
+    },
+    {
+      "title": "Sources de Squid :",
+      "url": "http://www.squid-cache.org"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD pour squid du 20 octobre 2004    :",
+      "url": "http://www.vuxml.org/openbsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:112 du 22 octobre    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:112"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-348",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-10-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de Red Hat.",
+      "revision_date": "2004-10-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de Mandrake.",
+      "revision_date": "2004-10-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de Debian.",
+      "revision_date": "2004-10-29T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de OpenBSD.",
+      "revision_date": "2004-11-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de Squid",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité GLSA 200410-15 de Gentoo",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité d'iDEFENSE du 11 octobre 2004",
+      "url": "http://www.idefense.com/application/poi/display?id=152&type=vulnerabilities"
+    }
+  ]
+}

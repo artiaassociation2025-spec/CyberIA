@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tomcat, versions 6.0.x et 5.5.x.</p>",
+  "content": "## Description\n\nLe composant JULI (Java Util Logging Interface) de Tomcat autorise les\napplications web à fournir leurs propres configurations de\njournalisation. La politique de sécurité par défaut est trop laxiste\nvis-à-vis de ces configurations. Cette vulnérabilité permet à une\napplication qui n'est pas de confiance de modifier ou d'ajouter des\nfichiers avec les droits du processus Tomcat.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5342",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5342"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurité Apache Tomcat :",
+      "url": "http://tomcat.apache.org/security-5.html"
+    },
+    {
+      "title": "Bulletins de sécurité Apache Tomcat :",
+      "url": "http://tomcat.apache.org/security-6.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-569",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Apache Tomcat permet à un utilisateur malveillant\nd'élever ses privilèges.\n",
+  "title": "Vulnérabilité de Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CVE-2007-5342",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5342"
+    }
+  ]
+}

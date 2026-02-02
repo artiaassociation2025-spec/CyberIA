@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Bibliothèque libpng :  <UL>    <LI>branche 1.0, versions antérieures à la version    1.0.57&nbsp;;</LI>    <LI>branche 1.2, versions antérieures à la version    1.2.47&nbsp;;</LI>    <LI>branche 1.4, versions antérieures à la version    1.4.9&nbsp;;</LI>    <LI>branche 1.5, versions antérieures à la version 1.5.9.</LI>  </UL>  <P>Les applications qui utilisent cette bibliothèque peuvent être  vulnérables.</P></p>",
+  "content": "## Description\n\nDans la bibliothèque libpng, une erreur d'allocation de mémoire permet à\nun attaquant, au moyen d'une image au format PNG spécialement\nconstruite, d'exécuter du code arbitraire avec les droits de\nl'utilisateur qui ouvre cette image.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-3026",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3026"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 2410 du 15 février 2012 :",
+      "url": "http://www.debian.org/security/2012/dsa-2410"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-1367-1 du 16 février 2012 :",
+      "url": "http://www.ubuntu.com/usn/usn-1367-1/"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2012:022 du 22 février    2012 :",
+      "url": "http://www.mandriva.com/fr/support/security/advisories/?name=MDVSA-2012:022"
+    },
+    {
+      "title": "Avertissement sur le site du projet libpng du 19 février    2012 :",
+      "url": "http://www.libpng.org/pub/png/libpng.html"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-087",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-02-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin Mandriva.",
+      "revision_date": "2012-02-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la bibliothèque libpng permet à un attaquant\nd'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité dans libpng",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avertissement sur le site du projet libpng du 19 février 2012",
+      "url": null
+    }
+  ]
+}

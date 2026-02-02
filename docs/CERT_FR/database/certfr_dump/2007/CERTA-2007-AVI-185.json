@@ -1,0 +1,187 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apple MacOS X server version 10.3.x et 10.4.x.",
+      "product": {
+        "name": "macOS",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple MacOS X version 10.3.x et 10.4.x ;",
+      "product": {
+        "name": "macOS",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes sous Apple MacOS X :\n\n-   une vulnérabilité du client AFP permet à un utilisateur local de\n    créer des fichiers ou d'exécuter des commandes avec les privilèges\n    système ;\n-   une vulnérabilité dans Airport de type débordement de mémoire\n    permettrait l'exécution d'un code arbitraire avec des privilèges\n    élevés ;\n-   une vulnérabilité de CarbonCore permet l'exécution d'un code\n    arbitraire avec des privilèges élevés ;\n-   une vulnérabilité dans fsck permet à un utilisateur d'exécuter du\n    code arbitraire à distance en incitant un utilisateur à charger un\n    fichier image (.dmg) spécialement conçu;\n-   une vulnérabilité dans fetchmail provoque l'envoi d'informations\n    d'authentification en clair, même lorsque la configuration exige\n    l'utilisation de TLS ;\n-   un débordement de mémoire dans ftpd permet à un utilisateur\n    authentifié d'exécuter un code arbitraire à distance ;\n-   une mauvaise gestion de format dans Help Viewer et un débordement de\n    mémoire dans GNU Tar permettent à un utilisateur malintentionné de\n    provoquer un arrêt inopiné de l'application ou d'exécuter du code\n    arbitraire ;\n-   un contrôle insuffisant dans HID permet à un utilisateur malveillant\n    de capturer les entrées au clavier, y compris les données sensibles\n    ;\n-   une erreur de gestion de format dans Installer permet à un\n    utilisateur malintentionné de provoquer un arrêt inopiné de\n    l'application ou d'exécuter du code arbitraire à distance ;\n-   une erreur dans WebFoundation permet à un domaine parent de lire un\n    cookie positionné par l'un de ses sous-domaines ;\n-   le défaut de gestion de l'environnement par WebDav permet à un\n    utilisateur local malintentionné de créer des fichiers ou d'exécuter\n    des commandes avec les privilèges système ;\n-   un défaut de validation des paquets SIP par Videoconference permet à\n    un utilisateur malintentionné d'exécuter un code arbitraire à\n    distance ;\n-   URLMount monte des systèmes de fichiers distants via un serveur SMB\n    en appelant la commande mount_smb ; Les identifiants et les mots de\n    passe sont transmis comme arguments en ligne de commande, ce qui les\n    expose à être divulgués à d'autres utilisateurs ;\n-   un manque de contrôle dans launchctl permet aux administrateurs\n    locaux de lancer des commandes avec les privilèges système sans\n    s'authentifier ;\n-   le défaut de gestion de l'environnement par le serveur SMB\n    permettrait à un utilisateur local malintentionné de créer des\n    fichiers ou d'exécuter des commandes avec les privilèges système ;\n-   lorsque le partage Internet Sharing est actif, un mauvais traitement\n    de paquets RTSP permet à un utilisateur mal intentionné de provoquer\n    un déni de service ou l'exécution de code arbitraire à distance ;\n-   des erreurs dans Login Window permettent à un utilisateur local de\n    se connecter sans authentification ou d'élever ses privilèges ;\n-   des erreurs dans Libinfo permettent à un utilisateur malintentionné\n    de provoquer un déni de service ou d'exécuter du code arbitraire à\n    distance ;\n-   des vulnérabilités dans le démon d'administration de Kerberos\n    permettent à un utilisateur malintentionné de provoquer un arrêt\n    inopiné de l'application ou l'exécution de code arbitraire avec les\n    droits système.\n\nApple a publié le 01 mai 2007 deux mises à jour de correctifs. La\npremière concerne les pilotes sans-fil Airport pour Mac OS X v10.3.9, et\nla seconde le serveur FTP FTPServer sous Mac OS X v10.4.9. Le précédent\ncorrectif applique un fichier de configuration FTP incorrect, qui\npermettrait aux utilisateurs d'accéder illégitimement à certains\nrépertoires.\n\n## Solution\n\nAppliquer la mise à jour de sécurité 2007-004., ainsi que le correctif\nde cette mise à jour (v1.1). Se référer au bulletin de sécurité de\nl'éditeur pour l'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0744",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0744"
+    },
+    {
+      "name": "CVE-2007-0646",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0646"
+    },
+    {
+      "name": "CVE-2007-0732",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0732"
+    },
+    {
+      "name": "CVE-2007-0738",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0738"
+    },
+    {
+      "name": "CVE-2006-5867",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5867"
+    },
+    {
+      "name": "CVE-2007-0741",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0741"
+    },
+    {
+      "name": "CVE-2007-0957",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0957"
+    },
+    {
+      "name": "CVE-2007-0742",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0742"
+    },
+    {
+      "name": "CVE-2007-0729",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0729"
+    },
+    {
+      "name": "CVE-2007-0743",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0743"
+    },
+    {
+      "name": "CVE-2007-0736",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0736"
+    },
+    {
+      "name": "CVE-2007-0465",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0465"
+    },
+    {
+      "name": "CVE-2007-0724",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0724"
+    },
+    {
+      "name": "CVE-2007-0739",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0739"
+    },
+    {
+      "name": "CVE-2007-1216",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1216"
+    },
+    {
+      "name": "CVE-2007-0734",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0734"
+    },
+    {
+      "name": "CVE-2007-0746",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0746"
+    },
+    {
+      "name": "CVE-2007-0927",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0927"
+    },
+    {
+      "name": "CVE-2006-0300",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0300"
+    },
+    {
+      "name": "CVE-2007-0745",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0745"
+    },
+    {
+      "name": "CVE-2007-0725",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0725"
+    },
+    {
+      "name": "CVE-2007-0747",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0747"
+    },
+    {
+      "name": "CVE-2007-0022",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0022"
+    },
+    {
+      "name": "CVE-2007-0735",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0735"
+    },
+    {
+      "name": "CVE-2007-0737",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0737"
+    },
+    {
+      "name": "CVE-2006-6652",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6652"
+    },
+    {
+      "name": "CVE-2006-6143",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6143"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Apple du 19 avril 2007 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=305391"
+    },
+    {
+      "title": "Mise à jour du bulletin précédent, faite le 01 mai 2007 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=305445"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-185",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-04-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la mise à jour du bulletin d'avril 2007, ainsi que la référence au CVE CVE-2007-0745.",
+      "revision_date": "2007-05-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités sous <span class=\"textit\">Apple MacOS X</span>\npermettent à un utilisateur malveillant de compromettre un système\nvulnérable, localement ou à distance.\n",
+  "title": "Multiples vulnérabilités dans Apple MacOS X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour Apple",
+      "url": null
+    }
+  ]
+}

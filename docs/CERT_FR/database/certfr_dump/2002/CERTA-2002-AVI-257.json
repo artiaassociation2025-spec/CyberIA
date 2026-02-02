@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Pare-feux Netscreen avec <TT>ScreenOS 1.7</TT>, <TT>2.6</TT>,  <TT>2.7.1</TT>, <TT>2.8</TT>, <TT>3.0</TT>, <TT>3.1</TT>,  <TT>4.0</TT>.</P>",
+  "content": "## Description\n\nTrois vulnérabilités affectent les pare-feux Netscreen :\n\n-   Vulnérabilité de la fonctionnalité Malicious-URLs :\n\nLa fonctionnalité Malicious-URLs permet de bloquer l'accès à certains\nsites HTTP externes. Il est possible de contourner le mécanisme de\nblocage en fragmentant l'en-tête HTTP.\n\n-   Vulnérabilité des numéros de séquence TCP :\n\nLes numéros de séquence TCP (ISN TCP) des pare-feux Netscreen sont\nprévisibles. En exploitant cette vulnérabilité, et en la combinant à\nl'usurpation d'adresse IP, il est possible de contourner certaines\nrègles de sécurité.\n\n-   Vulnérabilité dans le contrôle des sessions H.323 :\n\nLes sessions H.323 semi-ouvertes ne sont pas purgées assez\nrégulièrement. En exploitant cette vulnérabilité, un utilisateur mal\nintentionné peut saturer les entrées de la table de sessions.\n\n## Solution\n\nAppliquer le correctif de Netscreen selon la version de ScreenOS, ou\nbien passer en version 4.0.1.\n\nConsulter le site de Netscreen pour connaître la disponibilité des\ncorrectifs.\n\nLes correctifs peuvent être téléchargés à l'adresse suivante :\n\n    http://www.netscreen.com/support/updates.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité 51929 de Netscreen :",
+      "url": "http://www.netscreen.com/support/alerts/malicious_URL.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-257",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement des règles de sécurité du pare-feu"
+    },
+    {
+      "description": "Contournement du mécanisme de blocage des urls"
+    }
+  ],
+  "summary": "De multiples vulnérabilités des gardes-barrières Netscreen permettent de\ncontourner divers mécanismes de sécurité ou de réaliser un déni de\nservice.\n",
+  "title": "Multiples vulnérabilités dans les pare-feux Netscreen",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Netscreen",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Flex versions 2.5.52 et antérieures.</p>",
+  "content": "## Description\n\nFlex est un outil libre permettant la création d'analyseurs lexicaux\n(parsers) en langage C. Il est utilisé dans de nombreux autres logiciels\nlibres pour y faciliter la création d'analyseurs lexicaux.  \nUne erreur dans le fichier flex.skl permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire à distance par le biais d'un\nanalyseur lexical créé avec Flex et mettant en œuvre une grammaire\ncomportant des règles utilisant la directive REJECT ou de type trailing\ncontext.\n\n## Solution\n\nSe référer au bulletin de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-260-1 du 14 mars 2006 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-260-1"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1020 du 28 mars 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1020"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200603-07 du 14 mars 2006    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200603-07.xml"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-110",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-03-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian.",
+      "revision_date": "2006-03-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Flex permet à un utilisateur mal intentionné\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans Flex",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des mises à jour Freshmeat du 22 février 2006",
+      "url": "http://archives.neohapsis.com/archives/apps/freshmeat/2006-02/0022.html"
+    }
+  ]
+}

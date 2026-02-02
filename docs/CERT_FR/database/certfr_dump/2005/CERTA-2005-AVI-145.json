@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Sun Java System Web Server.",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun ONE Directory Server ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Java System Directory Server ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Une vulnérabilité présente dans le serveur LDAP (LDAP est un\n    protocole d'annuaire standard) permet à un utilisateur mal\n    intentionné, local ou distant d'exécuter du code arbitraire ou de\n    forcer l'arret du processus LDAP ;\n-   une seconde vulnérabilité découverte dans certaines publications de\n    Sun Java System Web Server permet à un individu mal intentionné\n    d'effectuer un déni de service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2005-AVI-145",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-04-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités affectant des produits de Sun permettent à un\nutilisateur mal intentionné, local ou distant d'exécuter du code\narbitraire ou effectuer un déni de service.\n",
+  "title": "Multiples vulnérabilités de la machine virtuelle Java de SUN",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sun #57754 du 13 avril 2005",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-57754-1"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sun #57760 du 13 avril 2005",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-57760-1"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Plateformes :  <UL>    <LI>Microsoft .NET Framework 2.0 SP1 et SP2 ;</LI>    <LI>Microsoft .NET Framework 3.5 et 3.5 SP1.</LI>  </UL>sur systèmes d'exploitation :  <UL>    <LI>Windows Vista et Vista SP1, versions x64 comprises ;</LI>    <LI>Windows Server 2008 pour architectures 32 bits, x64 et    Itanium.</LI>  </UL></p>",
+  "content": "## Description\n\nLe composant Microsoft .NET Framework de Microsoft Windows ne gère pas\ncorrectement les files de requêtes quand Internet Information Services\n7.0 (IIS) est installé et que ASP.NET est configuré pour utiliser le\nmode « intégré » et non le mode « classique ». Un attaquant peut créer\ndes requêtes HTTP anonymes spécialement conçues pour épuiser les\nressources du serveur Web vulnérable.\n\nLes versions Vista Starter et Familiale Basique ne sont pas concernées\ncar elles ne supportent pas IIS 7.\n\n## Solution\n\nSe référer au bulletin de sécurité MS09-036 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1536",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1536"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-324",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans ASP.NET permet à un utilisateur malveillant de\nréaliser un déni de service à distance.\n",
+  "title": "Vulnérabilité dans ASP.NET de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS09-036 du 11 août 2009",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-036.mspx"
+    }
+  ]
+}

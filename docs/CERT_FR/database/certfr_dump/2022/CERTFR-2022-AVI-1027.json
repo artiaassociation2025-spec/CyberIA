@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Db2 versions 11.5.6 et 11.5.7 sans le correctif de sécurité",
+      "product": {
+        "name": "Db2",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Db2 versions 11.5.x antérieures à 11.5.8",
+      "product": {
+        "name": "Db2",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-45105",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-45105"
+    },
+    {
+      "name": "CVE-2021-4104",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-4104"
+    },
+    {
+      "name": "CVE-2021-45046",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-45046"
+    },
+    {
+      "name": "CVE-2021-44228",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-44228"
+    },
+    {
+      "name": "CVE-2021-44832",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-44832"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-1027",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-11-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans IBM Db2. Elles\npermettent à un attaquant de provoquer une exécution de code arbitraire\nà distance, un déni de service à distance et une atteinte à la\nconfidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans IBM Db2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM 6528672 du 11 novembre 2022",
+      "url": "https://www.ibm.com/support/pages/node/6528672"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM 6526462 du 11 novembre 2022",
+      "url": "https://www.ibm.com/support/pages/node/6526462"
+    }
+  ]
+}

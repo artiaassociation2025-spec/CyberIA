@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Adaptive Security Device Manager versions 5.1 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Security Monitoring, Analysis and Response System (CS-MARS) versions 4.2.2 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes solutions Cisco CS-MARS et Cisco ASDM utilisent du chiffrement pour\nconsulter ou configurer certains produits Cisco (Cisco PIX, Cisco\nCatalyst...). Ce chiffrement, basé sur SSL/TLS, utilise des certificats\net des bi-clefs SSH. Or, ces solutions ne s'assurent pas de la validité\ndes certificats ou des clefs publiques présentés par les produits\nqu'elles administrent. Il est donc possible à un utilisateur malveillant\nd'usurper l'identité d'un produit Cisco afin de contourner la politique\nde sécurité ou de porter atteinte à la confidentialité des données.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 81583 du 18 janvier 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070118-certs.shtml"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-039",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans les produits Cisco CS-MARS et Cisco ASDM permet à\nun utilisateur distant de contourner la politique de sécurité et de\nporter atteinte à la confidentialité des données.\n",
+  "title": "Vulnérabilité dans les produits Cisco CS-MARS et ASDM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20070118-certs",
+      "url": null
+    }
+  ]
+}

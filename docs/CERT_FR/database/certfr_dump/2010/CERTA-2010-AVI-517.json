@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "CiscoWorks Common Services est inclus dans de nombreux produits Cisco. La liste complète des logiciels Cisco contenant une version vulnérable du logiciel est disponible dans l'avis publié sur le site de l'éditeur.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CiscoWorks Common Services versions 3.0.5 et postérieures pour Microsoft Windows et Oracle Solaris. Les versions 4.0 et postérieures corrigent cette vulnérabilité ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCiscoWorks Common Services est un ensemble de modules sous-jacents qui\nfournit des services communs aux outils d'administration de réseau\nédités par Cisco. Une vulnérabilité de type débordement de mémoire a été\ncorrigée dans le module serveur Web. L'exploitation de cette\nvulnérabilité permet à un attaquant d'exécuter du code arbitraire à\ndistance avec les privilèges d'un administrateur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3036",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3036"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20101027-cs du 27 octobre 2010 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20101027-cs.shtml"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-517",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-10-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "CiscoWorks Common Services est une application résidante dans les outils\nd'administration de réseau édités par Cisco. Une vulnérabilité a été\ncorrigée qui permet l'execution de code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans CiscoWorks Common Services",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-sa-20101027-cs du 27 octobre 2010",
+      "url": null
+    }
+  ]
+}

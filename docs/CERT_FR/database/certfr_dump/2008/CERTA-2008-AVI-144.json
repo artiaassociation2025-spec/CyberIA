@@ -1,0 +1,47 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions de la bibliothèque Perl Net::DNS antérieures à  0.63.</P>",
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans la bibliothèque Perl Net::DNS,\net plus précisément dans le fichier Net/DNS/RR/A.pm. Il y aurait un\nmauvais contrôle effectué sur la taille d'une adresse IP. Cette\nbibliothèque peut être nécessaire au fonctionnement d'applications\ntierces, comme SpamAssassin ou OTRS.\n\nUne personne malveillante pourrait construire un paquet de réponse DNS\nparticulier, afin de perturber le système distant vulnérable.\n\n## Solution\n\nSe référer à la mise à jour 0.63 de la bibliothèque Perl (cf. section\nDocumentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-6341",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6341"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 1515 du 11 mars 2008 :",
+      "url": "http://www.debian.org/security/2008/dsa-1515"
+    },
+    {
+      "title": "Note de mise à jour 0.63 de la bibliothèque Perl Net::DNS    du 08 février 2008 :",
+      "url": "http://search.cpan.org/src/OLAF/Net-DNS-0.63/Changes"
+    },
+    {
+      "title": "Rapport de bogue CPAN numéro 30316 :",
+      "url": "https://rt.cpan.org/Public/Bug/Display.html?id=30316"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-144",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-03-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans la bibliothèque Perl Net::DNS.\nUne personne pourrait profiter de cette dernière en construisant et en\nenvoyant une réponse DNS construite de manière particulière, afin de\nperturber à distance le système vulnérable.\n",
+  "title": "Vulnérabilité de la bibliothèque Perl Net::DNS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport de bogue Buzilla RedHat 426437",
+      "url": null
+    }
+  ]
+}

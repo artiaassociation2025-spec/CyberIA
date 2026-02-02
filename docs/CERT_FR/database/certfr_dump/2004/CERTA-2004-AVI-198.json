@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>SGI IRIX 6.5.24 et versions  antérieures.</p>",
+  "content": "## Description\n\nsyssgi est une primitive système spécifique au système d'exploitation\nIRIX de SGI.\n\nSelon SGI, une vulnérabilité présente dans la primitive système syssgi\nappellée avec l'argument SGI_IOPROBE peut être utilisée par un\nutilisateur mal intentionné pour lire ou même écrire dans l'espace\nmémoire du noyau et réaliser ainsi une élévation de privilèges.\n\n  \nDeux vulnérabilités permettant de réaliser un déni de service local sont\négalement présentes :\n\n-   faille dans mapelf32exec() (CVE CAN-2004-136) ;\n-   faille dans init (CAN-2004-137).\n\n## Solution\n\nLa version 6.5.25 d'IRIX corrige ces vulnérabilités.\n\nSe référer au bulletin de sécurité de l'éditeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SGI 20040601-01-P du 14 juin 2004 :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20040601-01-P.asc"
+    },
+    {
+      "title": "Bulletin de sécurité Avaya ASA-2005-006 :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2005-006_RHSA-2004-549RHSA-2004-505RHSA-2004-689.pdf"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-198",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-06-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité Avaya ASA-2005-006.",
+      "revision_date": "2005-01-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités sous IRIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité 20040601-01-P de SGI",
+      "url": null
+    }
+  ]
+}

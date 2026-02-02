@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Explorer 5.01 SP2, 5.5 SP1, 5.5 SP2, 6.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Proxy Server 2.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft ISA Server 2000.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nGopher est un protocole empirique utilisé pour la transmission de\ndonnées de type texte sur l'Internet. Le protocole HTTP a rendu depuis\nobsolète son utilisation et l'on ne l'utilise plus que pour traiter les\ndonnées qui n'ont pas encore été transférées vers HTTP. Les différents\nproduits Microsoft permettent encore d'utiliser le protocole gopher dans\nun souci de compatibilité.  \n  \nMicrosoft Internet Explorer, Proxy Server et ISA Server utilisent la\nmême fonction pour traiter le protocole gopher. Ils sont tous les trois\nvulnérables.  \n  \nUn utilisateur mal intentionné peut utiliser cette vulnérabilité pour\nexécuter du code arbitraire sur l'ordinateur cible. Le code ainsi\nexécuté se verra appliquer les restrictions liées à l'utilisateur qui à\ndémarré l'application.  \n\n-   Pour Internet Explorer, les droits de l'utilisateur sont\n    généralement limités ;\n-   Proxy Server et ISA Server fonctionnent généralement avec un haut\n    niveau de privilèges permettant à un utilisateur mal intentionné de\n    prendre le contrôle total du serveur.\n\n## Contournement provisoire\n\nIl est possible de se protéger de cette attaque en configurant les\ndifférents produits de façon à ce qu'ils n'utilisent pas le protocole\ngopher :  \n\n-   Pour Internet Explorer, configurer l'utilisation d'un serveur\n    mandataire (proxy) pour le protocole gopher en faisant pointer\n    l'adresse du serveur mandataire sur une machine ne traitant pas ce\n    protocole (ex : localhost) ;\n-   pour ISA Server et Proxy Server, désactiver l'utilisation du\n    protocole gopher.\n\nConsulter le bulletin \\#MS02-027 de Microsoft pour avoir la procédure\ncomplète.\n\n## Solution\n\nDes correctifs sont disponibles en téléchargement sur le site web de\nMicrosoft.\n\n    http://www.microsoft.com/technet/security/bulletin/MS02-027.asp\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de Microsoft #MS02-027  :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-027.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-128",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2002-06-13T00:00:00.000000"
+    },
+    {
+      "description": "deuxième version (révision de la section Solution).",
+      "revision_date": "2002-06-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut effectuer un débordement de tampon\net exécuter du code arbitraire sur la machine cible.\n",
+  "title": "Vulnérabilité du service gopher dans Microsoft Internet Explorer, Proxy Server et ISA Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft #MS02-027",
+      "url": null
+    }
+  ]
+}

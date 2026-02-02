@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenSSL versions antérieures à la 0.9.8o ;",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenSSL versions antérieures à la 1.0.0a.",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans OpenSSL :\n\n-   une erreur dans la gestion des données OriginatorInfo de la\n    structure CMS permet à une personne malintentionnée d'exécuter du\n    code arbitraire à distance (CVE-2010-0742) ;\n-   une erreur dans la fonction EVP_PKEY_verify_recover() permet à une\n    personne malintentionnée de contourner le système de vérification\n    des clés (CVE-2010-1633).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0742",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0742"
+    },
+    {
+      "name": "CVE-2010-1633",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1633"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HP c2629503 du 01 décembre 2010 :",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c2629503"
+    },
+    {
+      "title": "Bulletin de sécurité HP c2629503 du 01 décembre 2010 :",
+      "url": "http://www13.itrc.hp.com/service/cki/docDisplay.do?docId=emr_na-c2629503"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-237",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-06-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin HP.",
+      "revision_date": "2010-12-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes dans OpenSSL et permettent à une\npersonne malintentionnée de contourner la politique de sécurité ou\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans OpenSSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenSSL du 01 juin 2010",
+      "url": "http://www.openssl.org/news/secadv_20100601.txt"
+    }
+  ]
+}

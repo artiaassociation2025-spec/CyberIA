@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Windows et Windows Server, toutes les  versions et toutes les architectures.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent le client SMB de Microsoft :\n\n-   un problème dans la gestion des réponses incomplètes permet à un\n    utilisateur distant non authentifié de bloquer le système\n    vulnérable, obligeant au redémarrage de celui-ci ;\n-   quatre problèmes dans le traitement des paquets SMB sont\n    exploitables par un utilisateur malveillant non authentifié pour\n    exécuter du code arbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0269",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0269"
+    },
+    {
+      "name": "CVE-2010-0477",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0477"
+    },
+    {
+      "name": "CVE-2010-0270",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0270"
+    },
+    {
+      "name": "CVE-2009-3676",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3676"
+    },
+    {
+      "name": "CVE-2010-0476",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0476"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-168",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-04-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent le client SMB de Microsoft,\npermettant à un utilisateur malveillant distant de provoquer un déni de\nservice ou d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans le client SMB de Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS10-020 du 13 avril 2010",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-020.mspx"
+    }
+  ]
+}

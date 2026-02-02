@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Système d'exploitation HP-UX 11.0 sur stations HP 9000 séries  700/800.</P>",
+  "content": "## Solution\n\n-   désinstaller le correctif initial PHCO_22021,\n-   installer le nouveau correctif PHCO_22096.\n\nLes correctifs sont disponibles sur le site\n\n    http://europe-support.external.hp.com\n\nen activant le lien \\`\\`Search Technical Knowledge Base'' et\nens'identifiant (inscription gratuite).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-031",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Attibution à un utilisateur local de privilèges supplémentaires"
+    }
+  ],
+  "summary": "Un précedant correctif fourni par HP (patch PHCO_22021) a introduit une\nvulnérabilité dans la commande <span class=\"textit\">newgrp</span>. Cette\ncommande permet à un utilisateur de changer son groupe courant pour peu\nqu'il en fasse partie.\n",
+  "title": "Faille dans la commande newgrp sous HP-UX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CERT-IST",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité HPSBUX0008-118 du 9/08/2000",
+      "url": "http://europe-support.external.hp.com"
+    }
+  ]
+}

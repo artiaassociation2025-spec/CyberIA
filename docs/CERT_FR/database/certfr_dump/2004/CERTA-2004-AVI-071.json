@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2000 Server Service Pack 3 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server Service Pack 4.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'envoi de paquets judicieusement construits vers le serveur de média en\nécoute sur les ports 7007/TCP et 7778/TCP permet à un utilisateur mal\nintentionné de réaliser un déni de service.  \nCe serveur n'est pas installé par défaut sur Windows 2000.\n\n## Contournement provisoire\n\nBloquer les ports 7007/TCP et 7778/TCP au niveau du pare-feu afin de\nlimiter les risques provenant de l'internet.\n\n## Solution\n\nTélécharger le correctif disponible sur le site de l'éditeur (cf.\nsection Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS04-008 :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms04-008.mspx"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-071",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le serveur de média de Windows 2000 permet à un\nutilisateur distant mal intentionné de réaliser un déni de service sur\nla machine cible.\n",
+  "title": "Vulnérabilité dans Windows Media Services",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS04-008",
+      "url": null
+    }
+  ]
+}

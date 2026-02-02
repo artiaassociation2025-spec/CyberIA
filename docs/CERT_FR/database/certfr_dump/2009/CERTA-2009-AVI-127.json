@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>nss-ldapd, version 0.6.7 et versions  précédentes.</p>",
+  "content": "## Description\n\nnss-ldapd permet l'utilisation d'un serveur LDAP pour le service NSS\n(Name Service Switch).\n\nUne erreur de positionnement des droits sur un fichier de configuration\npermet à un utilisateur local de lire le mot de passe du serveur LDAP.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1073",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1073"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-127",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-04-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité de nss-ldapd permet à un utilisateur malveillant de\nlire des informations sensibles.\n",
+  "title": "Vulnérabilité de nss-ldap",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA 1758 du 30 mars 2009",
+      "url": "http://www.debian.org/security/2009/dsa-1758"
+    }
+  ]
+}

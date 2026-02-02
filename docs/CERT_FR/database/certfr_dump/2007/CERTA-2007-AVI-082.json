@@ -1,0 +1,235 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows XP Professional x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003, y compris le Service Pack 1, pour les systèmes Itanium ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Visual Studio .NET 2003 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2000 Service Pack 2 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2000 Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2000 Packs Multilangues ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Visual Studio .NET 2002 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Project 2002 Service Pack 1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003, y compris le Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Project 2000 Service Release 1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 x64 Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Visual Studio .NET 2003 Service Pack 1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Learning Essentials 1.0, 1.1 et 1.5 pour Microsoft Office ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2004 pour Mac ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Visual Studio .NET 2002 Service Pack 1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans les produits\nMicrosoft, relatives à l'interprétation d'un objet OLE dans un fichier\nau format RTF (pour Rich Text Format).\n\nUn objet OLE (pour Object Linking and Embedding) permet à une\napplication de dialoguer avec d'autres, bien qu'elles manipulent des\nformats différents. Plusieurs vulnérabilités ont été identifiées liées à\nl'utilisation de tels objets via des fichiers au format RTF (pour Rich\nText Format). RTF est reconnu par la majorité des logiciels de\ntraitement de texte actuels.\n\nLes vulnérabilités concernent :\n\n1.  les composants OLE Dialog de Microsoft Windows ne manipuleraient pas\n    correctement les objets OLE insérés dans les fichiers RTF, pouvant\n    provoquer un débordement de mémoire ;\n2.  les classes Microsoft Foundation Classes (MFC) fournies par\n    Microsoft Windows et Visual Studio, et permettant de manipuler les\n    objets OLE, n'interpréteraient pas correctement les objets OLE\n    insérés dans les fichiers RTF ;\n3.  les composants RichEdit de Windows et Office ne manipuleraient pas\n    correctement les fichiers RTF contenant des objets OLE.\n\nChaque vulnérabilité peut être exploitée par une personne malveillante\nqui construirait de manière particulière un fichier d'extension .rtf.\nUne personne qui ouvrirait ce dernier (téléchargement sur une page\nInternet, ou comme pièce jointe à un courrier électronique par exemple),\nprovoquerait l'exécution de code arbitraire sur sa machine vulnérable.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-1311",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1311"
+    },
+    {
+      "name": "CVE-2007-0025",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0025"
+    },
+    {
+      "name": "CVE-2007-0026",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0026"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-011 du 13 février 2007    :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-011.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-012 du 13 février 2007,    mis à jour le 12 juin 2007 :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-012.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-011 du 13 février 2007    :",
+      "url": "http://www.microsoft.com/france/technet/security/bulletin/MS07-011.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-013 du 13 février 2007    :",
+      "url": "http://www.microsoft.com/france/technet/security/bulletin/MS07-013.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-012 du 13 février 2007,    mis à jour le 12 juin 2007 :",
+      "url": "http://www.microsoft.com/france/technet/security/bulletin/MS07-012.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-013 du 13 février 2007    :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-013.mspx"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-082",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-02-14T00:00:00.000000"
+    },
+    {
+      "description": "mise à jour du bulletin de sécurité Microsoft MS07-012 du 12 juin 2007.",
+      "revision_date": "2007-06-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités de Microsoft concernant un objet OLE associé à un fichier RTF",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Microsoft MS07-011, MS07-012 et MS07-013 du 13 février 2007",
+      "url": null
+    }
+  ]
+}

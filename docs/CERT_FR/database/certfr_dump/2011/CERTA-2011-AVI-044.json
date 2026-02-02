@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Debian exim4 versions 4.69.9+lenny1 et  inférieures.</p>",
+  "content": "## Description\n\nLe manque de gestion d'erreurs dans le système d'appels aux fonctions\nsetuid et setgid permet à l'utilisateur « Debian-exim » de forcer le\ndémon de messagerie à écrire ses données de journalisation dans des\nfichiers arbitraires.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0017",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0017"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-2154-1 du 30 janvier 2011 :",
+      "url": "http://www.debian.org/security/2011/dsa-2154"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-044",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-02-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité permet à un utilisateur distant de faire écrire le\ndémon de messagerie des données de journalisations à des emplacements\narbitraires.\n",
+  "title": "Vulnérabilité dans le paquet exim4",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de securité Debian DSA-2154-1 du 30 janvier 2011",
+      "url": null
+    }
+  ]
+}

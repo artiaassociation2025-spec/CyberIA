@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Xen 3.x ;",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen 4.x.",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans Xen. Les fonctions de\ndécompression du noyau des machines hôtes ne vérifient pas un certain\nnombre de paramètres. Cela permet à un utilisateur malintentionné de :\n\n-   élever ses privilèges et exécuter du code arbitraire via un\n    dépassement d'entier dans la boucle d'allocation mémoire ;\n-   accéder à des informations sensibles via la lecture de la mémoire du\n    processus suite à un dépassement d'entier lors du chargement du\n    noyau ;\n-   causer un déni de service au moyen de la création d'une boucle\n    infini au niveau des outils de gestion.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1583",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1583"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-286",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-05-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités, permettant à une personne malintentionnée de\ncauser un déni de service, porter atteinte à la confidentialité des\ndonnées, d'élever ses privilèges et d'exécuter du code arbitraire, ont\nété découvertes dans <span class=\"textit\">Xen</span>.\n",
+  "title": "Vulnérabilités dans Xen",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Xen du 9 mai 2011",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1583"
+    }
+  ]
+}

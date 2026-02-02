@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les produits ayant une version du ZoneAlarm Spyware Removal Engine (SRE) antérieure à la 5.0.156.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Check Point",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDes vulnérabilités ont été identifiées dans certains produits de\nsécurité Check Point ZoneAlarm, et plus précisément dans le pilote\nsrescan.sys qui gère entre autres des mesures de désinfection (SRE, pour\nSpyware Removal Engine).\n\nLe pilote ne vérifierait pas correctement certaines adresses qui lui\nsont communiquées, ce qui pourrait être exploité pour accéder à des\nzones arbitraires de la mémoire. Une personne malveillante pourrait\nainsi élever ses privilèges à ceux du SYSTEM.\n\n## Solution\n\nSe référer aux mises à jour de l'éditeur pour l'obtention des correctifs\n(cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de Check Point ZoneAlarm pour accéder aux mises à jour    :",
+      "url": "http://www.zonealarm.com/store/content/home.jsp?lang=fr&ctry=FR&dc=34std"
+    },
+    {
+      "title": "Bulletin de sécurité iDefense 517 du 20 avril 2007 :",
+      "url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=517"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-186",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-04-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités dans des produits Check Point ZoneAlarm",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité iDefense 517 du 20 avril 2007",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows XP Professional x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 1 et Microsoft Windows XP Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 et Microsoft Windows Server 2003 Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 (systèmes Itanium) et Microsoft Windows Server 2003 Service Pack 1 (systèmes Itanium) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 x64 Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe service Kerberos de Windows présente deux vulnérabilités :\n\n-   La première vulnérabilité (CAN-2005-1981) permet à un utilisateur\n    mal intentionné du réseau local de provoquer un déni de service sur\n    le système d'authentification des utilisateurs d'un contrôleur de\n    domaine par le biais d'un message malicieusement construit.\n-   La deuxième vulnérabilité (CAN-2005-1982) permet à un utilisateur\n    mal intentionné du réseau local de porter atteinte à la\n    confidentialité des données en substituant un contrôleur de domaine\n    par son propre serveur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2005-AVI-305",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-08-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans le service Kerberos de\nMicrosoft Windows permettent à un utilisateur mal intentionné de\nprovoquer un déni de service ou de porter atteinte à la confidentialité\ndes données de la machine vulnérable.\n",
+  "title": "Multiples vulnérabilités du service Kerberos de Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS05-042 du 09 août 2005",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS05-042.mspx"
+    }
+  ]
+}

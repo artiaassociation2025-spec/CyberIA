@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Outlook 2002.</P>",
+  "content": "## Description\n\nLe logiciel de messagerie Microsoft Outlook 2002 possède la\nfonctionnalité de sécuriser l'envoi des messages. Le protocole utilisé\npar défaut est S/MIME mais il est aussi possible d'utiliser le protocole\npropriétaire V1 Exchange Server.\n\nLors du processus de chiffrement d'un message au format HTML, une\nmauvaise gestion des certificats V1 Exchange Server par le logiciel\nOutlook 2002, entraîne l'envoi du message en clair.\n\n## Contournement provisoire\n\n-   Il est conseillé d'éviter l'envoi de messages au format HTML. Ce\n    format est d'ailleurs un vecteur de propagation de certains types de\n    vers et virus.\n-   Il est préférable d'utiliser les protocoles standards tels que\n    S/MIME plutôt que les protocoles propriétaires.\n\n## Solution\n\nConsulter le bulletin de sécurité \\#MS03-003 de Microsoft (voir\nparagraphe Documentation) pour connaître la disponibilité des\ncorrectifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le bulletin de sécurité #MS03-003 de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms03-003.asp"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-011",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-01-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation du contenu des messages sécurisés"
+    }
+  ],
+  "summary": "Un mauvais fonctionnement du protocole de sécurisation par V1 Exchange\nServer sous Microsoft Outlook 2002 peut entraîner l'envoi de messages\nnon-chiffrés de façon inopinée.\n",
+  "title": "Vulnérabilité de Microsoft Outlook 2002 associé au protocole de sécurisation V1 Exchange Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #MS03-003 de Microsoft",
+      "url": null
+    }
+  ]
+}

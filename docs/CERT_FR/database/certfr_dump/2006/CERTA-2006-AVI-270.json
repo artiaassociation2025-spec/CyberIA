@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>Courier</TT> versions 0.53.2 et  antérieures.",
+  "content": "## Description\n\nCourier est un serveur de messagerie ou MTA (Mail Transfert Agent). Une\nerreur dans la mise en œuvre de la gestion des noms d'utilisateurs dans\nl'application de messagerie Courier permet à un utilisateur distant de\nprovoquer un déni de service de l'application par le biais d'une adresse\nde messagerie dont le nom (avant le caractère @) contient le caractère\n=.\n\n## Solution\n\nSe référer au bulletin de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2659",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2659"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site de Courier :",
+      "url": "http://www.courier-mta.org"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1101 du 23 juin 2006 :",
+      "url": "http://www.debian.org/security/dsa-1101"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200608-06 du 04 août 2006    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200608-06.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-294-1 du 09 juin 2006 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-294-1"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-270",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-06-29T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2006-08-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Courier permet à un utilisateur distant de\nprovoquer un déni de service.\n",
+  "title": "Vulnérabilité dans courier",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ubuntu du 09 juin 2006",
+      "url": null
+    }
+  ]
+}

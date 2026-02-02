@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>evince versions 2.x.</p>",
+  "content": "## Description\n\nQuatres vulnérabilités dans le moteur de rendu de fichiers DVI ont été\ncorrigées. En forçant un utilisateur à afficher un fichier DVI\nspécialement conçu, un attaquant peut terminer l'exécution d'evince ou\nexécuter du code arbitraire avec les droits de cet utilisateur.\n\n## Solution\n\nSe référer aux bulletins de sécurité des différentes distributions\nutilisant ce logiciel pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2642",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2642"
+    },
+    {
+      "name": "CVE-2010-2643",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2643"
+    },
+    {
+      "name": "CVE-2010-2641",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2641"
+    },
+    {
+      "name": "CVE-2010-2640",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2640"
+    }
+  ],
+  "links": [
+    {
+      "title": "Système de gestion de code source du projet evince :",
+      "url": "http://git.gnome.org/browse/evince/commit/?id=d4139205b010ed06310d14284e63114e88ec6de2"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2011-0009.html"
+    },
+    {
+      "title": "Bulletin de sécurité Fedora FEDORA-2011-0208 du 07 janvier    2011 :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2011-January/052910.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-005",
+  "revisions": [
+    {
+      "description": "ajout du correctif Fedora.",
+      "revision_date": "2001-01-11T00:00:00.000000"
+    },
+    {
+      "description": "version initiale ;",
+      "revision_date": "2011-01-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été corrigées dans <span\nclass=\"textit\">evince</span>, un lecteur de documents pouvant lire\ndifférents format de fichiers (PDF, DVI, PostScript) pour\nl'environnement de bureau <span class=\"textit\">GNOME</span>.\nL'exploitation réussie de celles-ci peut permettre l'exécution de code\narbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans evince",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ubuntu USN-1035-1 du 05 janvier 2011",
+      "url": "http://www.ubuntulinux.org/usn/usn-1035-1"
+    }
+  ]
+}

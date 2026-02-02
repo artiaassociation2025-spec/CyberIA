@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Horde Application Framework versions 3.1.2 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Horde",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Horde Application Framework versions 3.0.11 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Horde",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux erreurs ont été identifiées dans le fichier index.php de Horde\nApplication Framework 3. Un manque de contrôle sur les paramètres passés\nà ce fichier permet à un utilisateur distant mal intentionné d'injecter\nune page web ou du script arbitraire dans le contexte du navigateur de\nla victime consultant le site vulnérable.\n\n## Solution\n\nLes versions 3.0.12 et 3.1.3 de Horde Application Framework corrigent le\nproblème :\n\n    http://ftp.horde.org/pub/horde/horde-3.0.12.tar.gz\n\n    http://ftp.horde.org/pub/horde/horde-3.1.3.tar.gz\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Horde #291 concernant la version    3.0.12 :",
+      "url": "http://lists.horde.org/archives/announce/2006/000291.html"
+    },
+    {
+      "title": "Bulletin de sécurité Horde #292 concernant la version 3.1.3    :",
+      "url": "http://lists.horde.org/archives/announce/2006/000292.html"
+    },
+    {
+      "title": "Bulletin de securité FreeBSD du 17 août 2006 :",
+      "url": "http://www.vuxml.org/freebsd/index.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-366",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Cross-site scripting"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans Horde Application Framework 3\npermettent à un utilisateur distant mal intentionné de réaliser une\nattaque de type Cross-Site Scripting.\n",
+  "title": "Multiples vulnérabilités dans Horde Application Framework 3",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Horde #291 et #292 du 17 août 2006",
+      "url": null
+    }
+  ]
+}

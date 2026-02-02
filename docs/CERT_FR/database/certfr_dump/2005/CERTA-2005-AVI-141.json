@@ -1,0 +1,209 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Novell Linux Desktop 9",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Novell",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SUSE Linux Enterprise Server 9",
+      "product": {
+        "name": "SUSE Linux Enterprise Server",
+        "vendor": {
+          "name": "SUSE",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Red Hat Desktop (v.4)",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Red Hat",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Red Hat Entreprise Linux AS (v.4)",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Red Hat",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "kdelibs3",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Red Hat",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sude 9.1, 9., 9.3",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Red Hat Entreprise Linux ES (v.4)",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Red Hat",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Red Hat Entreprise Linux WS (v.4)",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Red Hat",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe logiciel KDE offre un environnement graphique de type « bureau » aux\nutilisateurs des postes de travail Unix. kdelibs est l'ensemble des\nbibliothèques de base nécessaires au fonctionnement d'une application\ns'appuyant sur l'environnement KDE.\n\nkdelibs a fait l'objet de plusieurs publications de vulnérabilités.\n\n## 3.1 Débordement de variable dans le traitement de certaines images\n\nPCX est un format d'image très populaire dans l'environnement Windows.\nUn composant de kdelibs destiné à manipuler de telles images est\nvulnérable. Un utilisateur distant mal intentionné peut fabriquer une\nimage au format PCX astucieusement construite. L'ouverture ou la\nvisualisation d'une telle image à l'aide de kdelibs3 peut conduire à\nl'exécution de code arbitraire.\n\n## 3.2 Recouvrement des IDN\n\nIDN désigne les noms de domaine internationaux. Il s'agit de pouvoir\ndonner à des adresses IP des noms de domaine avec des systèmes\nd'écritures autres que les caractères ASCII traditionnellement utilisés.\nIl est désormais possible de créer de tels noms de domaine (par exemple\n« www.ministère.gouv.fr » avec le caractère « è » à la place de «\nwww.ministere.gouv.fr » avec le caractère « e »).\n\nkdelibs3 interprète les IDN, ce qui permet les attaques dites par «\nhomographe » : un utilisateur mal intentionné peut acquérir un nom de\ndomaine proche visuellement (la proximité visuelle est obtenue par le\nfait que de nombreux systèmes d'écriture utilisent des caractères se\nressemblant) d'un autre nom de domaine connu. Ce type d'attaque peut\nêtre utilisée pour tromper la vigilance de l'internaute dans une\ndémarche de vol d'information de type phishing par exemple.\n\nLe correctif de kdelibs3 n'utilise les homographes que pour les domaines\ndignes de confiance. La gestion des IDN est désactivée pour les domaines\n.com, .org et .net.\n\n## Solution\n\nLes correctifs d'une ou plusieurs de ces vulnérabilités sont couvertes\npar cet avis. Les correctifs de certaines vulnérabilités sont aussi\ndécrits dans l'avis : CERTA-2005-AVI-101.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-714-1 du 26 avril 2005        :",
+      "url": "http://www.debian.org/security/2005/dsa-714"
+    },
+    {
+      "title": "Bulletins de sécurité :       Bulletin de sécurité Gentoo GLSA 200504-22 / KDE du 22        avril 2005 :          \n  Bulletin de sécurité Debian DSA-714-1 du 26 avril 2005        :          \n  Bulletin de sécurité Mandriva MDKSA-2005:085 du 12 mai        2005 :          \n  Mise à jour de sécurité pour Fedora Core 2 pour kdelibs        du 3 mai 2005 :          \n  Mise à jour de sécurité pour Fedora Core 3 pour kdelibs        du 3 mai 2005 :          \n  L'avis SUSE :          \n  Mise à jour de sécurité Red Hat :",
+      "url": "http://archives.mandrivalinux.com/security-announce/2005-05/msg00006.php"
+    },
+    {
+      "title": "Bulletins de sécurité :       Bulletin de sécurité Gentoo GLSA 200504-22 / KDE du 22        avril 2005 :          \n  Bulletin de sécurité Debian DSA-714-1 du 26 avril 2005        :          \n  Bulletin de sécurité Mandriva MDKSA-2005:085 du 12 mai        2005 :          \n  Mise à jour de sécurité pour Fedora Core 2 pour kdelibs        du 3 mai 2005 :          \n  Mise à jour de sécurité pour Fedora Core 3 pour kdelibs        du 3 mai 2005 :          \n  L'avis SUSE :          \n  Mise à jour de sécurité Red Hat :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200504-22.xml"
+    },
+    {
+      "title": "Bulletins de sécurité :       Bulletin de sécurité Gentoo GLSA 200504-22 / KDE du 22        avril 2005 :          \n  Bulletin de sécurité Debian DSA-714-1 du 26 avril 2005        :          \n  Bulletin de sécurité Mandriva MDKSA-2005:085 du 12 mai        2005 :          \n  Mise à jour de sécurité pour Fedora Core 2 pour kdelibs        du 3 mai 2005 :          \n  Mise à jour de sécurité pour Fedora Core 3 pour kdelibs        du 3 mai 2005 :          \n  L'avis SUSE :          \n  Mise à jour de sécurité Red Hat :",
+      "url": "http://www.debian.org/security/2005/dsa-714"
+    },
+    {
+      "title": "Mise à jour de sécurité pour Fedora Core 3 pour kdelibs        du 3 mai 2005 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/3/"
+    },
+    {
+      "title": "L'avis SUSE :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_022_kdelibs3.html"
+    },
+    {
+      "title": "Bulletins de sécurité :       Bulletin de sécurité Gentoo GLSA 200504-22 / KDE du 22        avril 2005 :          \n  Bulletin de sécurité Debian DSA-714-1 du 26 avril 2005        :          \n  Bulletin de sécurité Mandriva MDKSA-2005:085 du 12 mai        2005 :          \n  Mise à jour de sécurité pour Fedora Core 2 pour kdelibs        du 3 mai 2005 :          \n  Mise à jour de sécurité pour Fedora Core 3 pour kdelibs        du 3 mai 2005 :          \n  L'avis SUSE :          \n  Mise à jour de sécurité Red Hat :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/3/"
+    },
+    {
+      "title": "Explications du problème :       La notion d'IDN :          \n;         CVE CAN-2005-0237 :          \n  CVE CAN-2005-0396 :          \n  CVE CAN-2005-1046 :",
+      "url": "http://www.afnic.fr/actu/nouvelles/nommage/NN20030217"
+    },
+    {
+      "title": "Mise à jour de sécurité Red Hat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-393.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200504-22 / KDE du 22        avril 2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200504-22.xml"
+    },
+    {
+      "title": "Bulletins de sécurité :       Bulletin de sécurité Gentoo GLSA 200504-22 / KDE du 22        avril 2005 :          \n  Bulletin de sécurité Debian DSA-714-1 du 26 avril 2005        :          \n  Bulletin de sécurité Mandriva MDKSA-2005:085 du 12 mai        2005 :          \n  Mise à jour de sécurité pour Fedora Core 2 pour kdelibs        du 3 mai 2005 :          \n  Mise à jour de sécurité pour Fedora Core 3 pour kdelibs        du 3 mai 2005 :          \n  L'avis SUSE :          \n  Mise à jour de sécurité Red Hat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-393.html"
+    },
+    {
+      "title": "Bulletins de sécurité :       Bulletin de sécurité Gentoo GLSA 200504-22 / KDE du 22        avril 2005 :          \n  Bulletin de sécurité Debian DSA-714-1 du 26 avril 2005        :          \n  Bulletin de sécurité Mandriva MDKSA-2005:085 du 12 mai        2005 :          \n  Mise à jour de sécurité pour Fedora Core 2 pour kdelibs        du 3 mai 2005 :          \n  Mise à jour de sécurité pour Fedora Core 3 pour kdelibs        du 3 mai 2005 :          \n  L'avis SUSE :          \n  Mise à jour de sécurité Red Hat :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_022_kdelibs3.html"
+    },
+    {
+      "title": "La notion d'IDN :          \n;",
+      "url": "http://www.afnic.fr/actu/nouvelles/nommage/NN20030217"
+    },
+    {
+      "title": "Mise à jour de sécurité pour Fedora Core 2 pour kdelibs        du 3 mai 2005 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/2/"
+    },
+    {
+      "title": "Bulletins de sécurité :       Bulletin de sécurité Gentoo GLSA 200504-22 / KDE du 22        avril 2005 :          \n  Bulletin de sécurité Debian DSA-714-1 du 26 avril 2005        :          \n  Bulletin de sécurité Mandriva MDKSA-2005:085 du 12 mai        2005 :          \n  Mise à jour de sécurité pour Fedora Core 2 pour kdelibs        du 3 mai 2005 :          \n  Mise à jour de sécurité pour Fedora Core 3 pour kdelibs        du 3 mai 2005 :          \n  L'avis SUSE :          \n  Mise à jour de sécurité Red Hat :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/2/"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:085 du 12 mai        2005 :",
+      "url": "http://archives.mandrivalinux.com/security-announce/2005-05/msg00006.php"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-141",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-04-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo, Debian, Mandriva et Fedora.",
+      "revision_date": "2005-05-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout de références aux bulletins de sécurité Red Hat et au dictionnaire de vulnérabilité CVE.",
+      "revision_date": "2005-05-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Nom de domaines homographes"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans kdelibs",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis Red Hat : RHSA-2005:393-05",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis Gentoo : GLSA 200504-22/KDE",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis SUSE : SUSE-SA:2005:022",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis Mandriva : MDKSA-2005:085",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis Debian : DSA-174",
+      "url": null
+    }
+  ]
+}

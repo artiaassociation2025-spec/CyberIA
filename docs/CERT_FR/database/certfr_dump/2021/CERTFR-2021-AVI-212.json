@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Foxit PhantomPDF versions antérieures à 10.1.3",
+      "product": {
+        "name": "PDF Reader",
+        "vendor": {
+          "name": "Foxit",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Foxit Reader versions antérieures à 10.1.3",
+      "product": {
+        "name": "PDF Reader",
+        "vendor": {
+          "name": "Foxit",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-27270",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-27270"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2021-AVI-212",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-03-23T00:00:00.000000"
+    },
+    {
+      "description": "Précision sur les versions non vulnérables.",
+      "revision_date": "2021-03-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Foxit Reader et PhantomPDF. Elle\npermet à un attaquant de provoquer une exécution de code arbitraire, un\ndéni de service et une atteinte à la confidentialité des données.\n",
+  "title": "Vulnérabilité dans Foxit Reader et PhantomPDF",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Foxit du 22 mars 2021",
+      "url": "https://www.foxitsoftware.com/support/security-bulletins.html"
+    }
+  ]
+}

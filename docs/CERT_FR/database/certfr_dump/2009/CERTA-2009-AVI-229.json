@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD 6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 7.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans FreeBSD :\n\n-   la première affecte la commande pipe et permet à un processus de\n    lire des pages de la mémoire appartenant à un autre processus ou au\n    noyau ;\n-   la seconde concerne l'implémentation du protocole IPv6 et permet à\n    un utilisateur d'accéder à des propriétés d'une interface IPv6 ou de\n    la désactiver.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-09:10.ipv6 du 11 juin 2009    :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-09:10.ipv6.asc"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-09:09.pipe du 10 juin 2009    :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-09:09.pipe.asc"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-229",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-06-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes dans FreeBSD et permettent à une\npersonne malveillante de contourner la politique de sécurité et de\nporter atteinte à la confidentialité des données.\n",
+  "title": "Vulnérabilités dans FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité FreeBSD SA-09:09.pipe et SA-09:10.ipv6 du 10 juin 2009",
+      "url": null
+    }
+  ]
+}

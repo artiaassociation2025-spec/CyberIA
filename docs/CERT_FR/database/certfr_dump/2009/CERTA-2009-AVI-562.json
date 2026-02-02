@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Sendmail versions 8.14.3 et  antérieures.</p>",
+  "content": "## Description\n\nUne faiblesse dans la mise en œuvre de la couche SSL dans Sendmail a été\nidentifiée. Un utilisateur distant peut ainsi porter atteinte à la\nconfidentialité et à l'intégrité des données ou contourner la politique\nde sécurité par le biais de certificats construits de façon\nparticulière.\n\n## Solution\n\nLa version 8.14.4 de Sendmail corrige le problème :\n\n    http://www.sendmail.org/releases/8.14.4\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2408",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2408"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-562",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-12-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans Sendmail permet à un utilisateur distant\nde porter atteinte à la confidentialité et à l'intégrité des données ou\nde contourner la politique de sécurité.\n",
+  "title": "Vulnérabilité dans Sendmail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sendmail du 30 décembre 2009",
+      "url": "http://www.sendmail.org/releases/8.14.4"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>mod_tcl</TT> versions 1.0 et  antérieures pour Apache version 2.x.",
+  "content": "## Description\n\nmod_tcl est un module pour le serveur web Apache permettant la mise en\nœuvre de scripts au langage TCL dans le contexte d'un serveur web\nApache. Une erreur de type chaîne de format dans ce module permet à un\nutilisateur distant d'exécuter du code arbitraire par le biais d'une\nrequête construite de façon particulière.\n\n## Solution\n\nLa version 1.0.1 de mod_tcl pour Apache 2.x corrige le problème :\n\n    http://tcl.apache.org/mod_tcl\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4154",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4154"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site de mod_tcl :",
+      "url": "http://tcl.apache.org/mod_tcl"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-455",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans mod_tcl permet à un utilisateur malveillant\ndistant d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité du module mod_tcl de Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDefense du 13 octobre 2006",
+      "url": "http://www.idefense.com/application/poi/display?id=421"
+    }
+  ]
+}

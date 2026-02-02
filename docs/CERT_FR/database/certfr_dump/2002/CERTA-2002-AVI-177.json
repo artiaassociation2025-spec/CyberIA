@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft SQL Server 2000 (incluant MSDE 2000).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft SQL Server 7.0 (incluant MSDE 1.0) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes serveurs SQL de Microsoft installent par défaut des procédures\nétendues (extended stored procedures) qui fournissent des services\nspécifiques aux utilisateurs de la base de données.  \n\nTrois procédures ont une vulnérabilité commune permettant à un\nutilisateur mal intentionné d'élever ses privilèges vers ceux de\nl'application SQL Server (par défaut, les privilèges d'un utilisateur du\ndomaine).  \n\n## Contournement provisoire\n\nL'étendue de la vulnérabilité dépend en grande partie de la\nconfiguration du serveur. Les règles suivantes permettent de minimiser\nles risques :\n\n-   Le service SQL doit, de préférence, fonctionner avec les droits d'un\n    utilisateur du domaine auquel appartient le serveur. Les actions de\n    l'attaquant seront alors réduites aux droits de cet utilisateur ;\n-   seuls les utilisateurs de confiance peuvent avoir un accès à toutes\n    les fonctions du serveur ;\n-   les requêtes publiques doivent être filtrées avant tout traitement.\n\n## Solution\n\nAppliquer le correctif disponible en téléchargement depuis la page web\nde l'avis \\#MS02-043 de Microsoft (consultez la section\nDocumentation).  \n\nCe correctif est cumulatif et inclut les corrections documentées dans\nles avis `CERTA-2002-AVI-082` et `CERTA-2002-AVI-156`.  \n\nLes autres vulnérabilités ne sont pas corrigées par ce correctif.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-177",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Des vulnérabilités présentes dans les procédures étendues (extended\nstored procedures) permettent une élévation de privilèges.\n",
+  "title": "Vulnérabilités dans Microsoft SQL Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis #MS02-043 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-043.asp"
+    }
+  ]
+}

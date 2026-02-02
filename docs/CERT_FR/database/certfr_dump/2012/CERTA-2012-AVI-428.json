@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Xen 4.1 ;",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen 3.4 et antérieures.",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen 4.0 ;",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-3433",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-3433"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2012-AVI-428",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-08-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité a été corrigée dans <span class=\"textit\">Xen</span>.\nUne machine invitée peut modifier son espace d'adressage physique et\nainsi ralentir la résolution des pages partagées. Un utilisateur\nmalintentionné peut ainsi rendre inutilisable la machine hôte en\nprovoquant un « kernel panic ».\n",
+  "title": "Vulnérabilité dans Xen",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Xen XSA-11 du 09 août 2012",
+      "url": "http://lists.xen.org/archives/html/xen-devel/2012-08/msg00855.html"
+    }
+  ]
+}

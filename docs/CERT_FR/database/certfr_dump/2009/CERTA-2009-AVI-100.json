@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "JBoss EAP 4.3, les versions antérieures à la 4.3.0.CP04.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "JBoss EAP 4.2, les versions antérieures à la 4.2.0.CP06 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDans le module JBossWS, un défaut lors du traitement des requêtes d'un\nfichier au format WSDL permet à un attaquant de lire des fichiers\narbitraires au format XML, et cela au moyen d'une requête spécialement\nréalisée.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2002-0027",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2002-0027"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2009:0346 du 06 mars 2009    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2009-0346.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2009:0349 du 06 mars 2009    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2009-0349.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2009:0348 du 06 mars 2009    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2009-0348.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2009:0347 du 06 mars 2009    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2009-0347.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-100",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-03-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Un défaut du module JBossWS permettant de lire des fichiers arbitraires\nau formatXML a été corrigé.\n",
+  "title": "Vulnérabilité de JBoss",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Red Hat RHSA-2009-0346 à 0349 du 06 mars 2009",
+      "url": null
+    }
+  ]
+}

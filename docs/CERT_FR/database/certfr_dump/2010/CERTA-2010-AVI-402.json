@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Serveur <SPAN class=\n  \"textit\">Quagga</SPAN> versions inférieures à 0.99.17.</p>",
+  "content": "## Description\n\nUne erreur de déréférencement de pointeur NULL peut être exploitée pour\nterminer l'exécution du démon BGP en envoyant une requête de mise à jour\nspécialement constituée. Une deuxième erreur, dans le traitement des\nmessages Route-Refresh peut déclencher un débordement de tampon sur le\ntas via un enregistrement ORF envoyé par un poste déjà configuré. Une\nexploitation de ce débordement peut mener à une exécution de code\narbitraire à distance\n\n## Solution\n\nLa version 0.99.17 de Quagga contient la version corrigée du démon BGP.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Notes de mise à jour de Quagga    du 19 août 2010 :",
+      "url": "http://www.quagga.net/news2.php?y=2010&m=8&d=19"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-402",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-08-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Des vulnérabilités dans le démon <span class=\"textit\">BGP</span> de la\nsuite <span class=\"textit\">Quagga</span> permettent à un attaquant de\nréaliser un déni de service et d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans Quagga",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes de mise à jour de <SPAN class=\"textit\">Quagga</SPAN> du 19 août 2010",
+      "url": null
+    }
+  ]
+}

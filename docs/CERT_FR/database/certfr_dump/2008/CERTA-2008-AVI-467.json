@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>IPsec-Tools 0.7.1 et versions antérieures.</P>",
+  "content": "## Description\n\nDeux vulnérabilités ont été corrigées dans IPsec-tools. La première\nfaille est due à une fuite mémoire dans le démon racoon et concerne les\nversions antérieures à 0.7.1 (CVE-2008-3651). La deuxième vulnérabilité\nconcerne en plus la version 0.7.1 et est causée par une mauvaise gestion\ndes ressources lors de la réception de paquets invalides\n(CVE-2008-3652). Ces deux failles peuvent être exploitées par une\npersonne malintentionnée pour effectuer un déni de service à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3652",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3652"
+    },
+    {
+      "name": "CVE-2008-3651",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3651"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2008-0849 du 27 août 2008    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2008-0849.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-641-1 du 09 septembre 2008    :",
+      "url": "https://lists.ubuntu.com/archives/ubuntu-security-announce/2008-September/000746.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-467",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-09-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités permettant d'effectuer un déni de service à distance\nont été corrigées dans IPsec-Tools.\n",
+  "title": "Vulnérabilité dans IPsec-Tools",
+  "vendor_advisories": []
+}

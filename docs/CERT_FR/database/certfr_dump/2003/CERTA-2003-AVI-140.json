@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Data Access Components (MDAC) versions 2.5, 2.6 et  2.7. La version 2.8 n'est pas vulnérable.<BR></P>  <P>MDAC est installé par défaut sur les systèmes suivants :</P>  <UL>    <LI>Microsoft Windows XP ;</LI>    <LI>Microsoft Windows 2000 ;</LI>    <LI>Microsoft Windows Millenium Edition ;</LI>    <LI>Microsoft Windows Server 2003.</LI>  </UL>La version installée sur Windows Server 2003 n'est pas  vulnérable.",
+  "content": "## Description\n\nMDAC permet d'effectuer de nombreuses opérations sur les bases de\ndonnées : se connecter à une base de données, récupérer des données, ...\n\nLorsqu'un client recherche la liste des serveur SQL présents sur son\nréseau, il envoie une requête en diffusion (broadcast) à toutes les\nmachines du réseau.  \n\nUne vulnérabilité présente dans le traitement des réponses à cette\nrequête peut être exploitée par un utilisateur mal intentionné pour\nprovoquer un débordement de mémoire.\n\nIl est alors possible pour l'attaquant d'exécuter du code arbitraire sur\nla machine avec les privilèges de l'application ayant lancé la requête\nen diffusion.\n\n## Solution\n\nAppliquer le correctif proposé par Microsoft.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-140",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-08-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de type débordement de mémoire permet à un utilisateur\nmal intentionné d'exécuter du code arbitraire sur le système.\n",
+  "title": "Vulnérabilité de Microsoft Data Access Components",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Microsoft MS03-033",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS03-033.asp"
+    }
+  ]
+}

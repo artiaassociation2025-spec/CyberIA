@@ -1,0 +1,93 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "linux 2.6.1-rc1 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Linux 2.4.23 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nIl a été reporté qu'une vulnérabilité présente dans l'appel système\nmremap du noyau Linux pourrait être exploitée par un utilisateur mal\nintentionné afin d'obtenir les privilèges du super-utilisateur root ou\nréaliser un déni de service par arrêt brutal du système.\n\n## Solution\n\nLes versions 2.4.24 et 2.6.1-rc3 du noyau Linux corrigent cette\nvulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité GLSA 200401-01 de Gentoo :",
+      "url": "http://marc.theaimsgroup.com/?l=gentoo-announce&m=107360666507658"
+    },
+    {
+      "title": "Sources du noyau Linux :",
+      "url": "http://www.kernel.org"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE-SA:2004:01 de SuSE :",
+      "url": "http://www.suse.com/de/security/2004_01_linux_kernel.html"
+    },
+    {
+      "title": "Bulletin de sécurité MDKSA-2004:001 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:001"
+    },
+    {
+      "title": "Bulletin de sécurité DSA-413 de Debian :",
+      "url": "http://www.debian.org/security/2004/dsa-413"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-002",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-01-07T00:00:00.000000"
+    },
+    {
+      "description": "Modification de la version du correctif pour les noyaux de la série 2.6. Ajout références aux bulletins de sécurité de Gentoo et Mandrake.",
+      "revision_date": "2004-01-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité du noyau linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "BUlletin de sécurité DSA-413 de Debian",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SuSE-SA-2004:001 de SuSE",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RHSA-2003:417 de Red Hat",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-417.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité isec-0013-mremap d'Isec",
+      "url": "http://isec.pl/vulnerabilities/isec-0013-mremap.txt"
+    }
+  ]
+}

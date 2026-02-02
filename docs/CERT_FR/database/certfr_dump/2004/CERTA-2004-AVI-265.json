@@ -1,0 +1,95 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Noyau Linux versions 2.4.26 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "noyau Linux versions 2.6.7 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été découverte dans le traitement des pointeurs vers\nles indices de décalage dans les fichiers (file offset) sur 64 bits.  \n\nUn utilisateur local mal intentionné peut exploiter cette vulnérabilité\npour accèder à certaines parties de la mémoire du noyau. Il est possible\nd'y trouver certaines informations confidentielles (mots de passe par\nexemple).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:413 du 03 août 2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-413.html"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SuSE-SA:2004:024 du 09 août 2004    :",
+      "url": "http://www.suse.com/de/security/2004_24_kernel.html"
+    },
+    {
+      "title": "Mise à jour de sécurité pour ``VMware ESX Server 2.1.2'' :",
+      "url": "http://www.vmware.com/download/esx/esx212-10921update.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200408-24 du 25 août 2004    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200408-24.xml"
+    },
+    {
+      "title": "Site Internet du noyau Linux :",
+      "url": "http://www.kernel.org"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:418 du 03 août 2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-418.html"
+    },
+    {
+      "title": "Mise à jour de sécurité pour ``VMware ESX Server 1.5.2'' :",
+      "url": "http://www.vmware.com/download/esx/esx152-10816update.html"
+    },
+    {
+      "title": "Mise à jour de sécurité pour ``VMware ESX Server 2.0.1'' :",
+      "url": "http://www.vmware.com/download/esx/esx201-11429update.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:087 du 26 août    2004 :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:087"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-265",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-08-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence aux bulletins de sécurité de SuSE, Gentoo et Mandrake.",
+      "revision_date": "2004-08-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence aux mises à jour de sécurité VMware.",
+      "revision_date": "2005-01-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations confidentielles"
+    }
+  ],
+  "summary": "Une vulnérabilité du noyau Linux permet à un utilisateur local mal\nintentionné d'avoir accès à des informations confidentielles.\n",
+  "title": "Vulnérabilité du noyau Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité d'ISEC du 04 août 2004",
+      "url": "http://isec.pl/vulnerabilities/isec-0016-procleaks.txt"
+    }
+  ]
+}

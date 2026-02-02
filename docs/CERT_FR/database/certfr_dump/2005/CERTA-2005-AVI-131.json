@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions 2.6.1 et 2.6.2 du logiciel <TT>WU-FTPD</TT>.</P>  <P>Des versions antérieures peuvent être affectées.</P>",
+  "content": "## Description\n\nWU-FTPD est le serveur FTP de l'université de Washington.\n\nLorsqu'un utilisateur malicieux distant se connecte à un serveur FTP mis\nen œuvre par une version non corrigée de WU-FTPD, il peut lancer la\ncommande ls avec des paramètres astucieusement construits. Ceci aura\npour effet de consommer toute la puissance de calcul du serveur, le\nrendant ainsi inaccessible aux requêtes légitimes.\n\n## Contournement provisoire\n\nNe pas laisser les utilisateurs qui ne sont pas dignes de confiance\naccéder au site WEB.\n\n## Solution\n\nCertaines distributions ont fourni un correctif qu'il convient\nd'appliquer.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Avaya ASA-2005-126 du 06 juin 2005 :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2005-126_SUN-5-20-2005.pdf"
+    },
+    {
+      "title": "Avis de sécurité Debian DSA-705 :",
+      "url": "http://www.debian.org/security/2005/dsa-705"
+    },
+    {
+      "title": "Le site WEB du projet WU-FTPD :",
+      "url": "http://www.wu-ftpd.org"
+    },
+    {
+      "title": "Avis de sécurité FreeBSD :",
+      "url": "http://www.vuxml.org/freebsd/pkg-wu-ftp.html"
+    },
+    {
+      "title": "Avis de sécurité Sun #101699 du 25 mai 2005 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-101699-1"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-131",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2005-04-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Sun ;",
+      "revision_date": "2005-06-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout bulletin de sécurité Avaya ASA-2005-126.",
+      "revision_date": "2005-06-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de WU-FTPD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CVE : CAN-2005-0256",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis Debian : DSA-705",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis FreeBSD",
+      "url": null
+    }
+  ]
+}

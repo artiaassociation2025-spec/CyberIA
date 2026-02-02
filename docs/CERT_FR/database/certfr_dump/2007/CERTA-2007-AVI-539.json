@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Module d'exécution du format Windows Media 7.1 ;</LI>    <LI>Module d'exécution du format Windows Media 9 pour :      <UL>        <LI>Windows 2000 Service Pack 4 ;</LI>        <LI>Windows XP Service Pack 2.</LI>      </UL>    </LI>    <LI>Module d'exécution du format Windows Media 9.5 pour :      <UL>        <LI>Windows XP Service Pack 2 ;</LI>        <LI>Windows XP Professionnel Edition x64 ;</LI>        <LI>Windows XP Professionnel Edition x64 Service Pack 2        ;</LI>        <LI>Windows Server 2003 Service Pack 1 ;</LI>        <LI>Windows Server 2003 Service Pack 2 ;</LI>        <LI>Windows Server 2003 Edition x64 ;</LI>        <LI>Windows Server 2003 Edition x64 Service Pack 2.</LI>      </UL>    </LI>    <LI>Module d'exécution du format Windows Media 9.5 Edition x64    pour :      <UL>        <LI>Windows XP Professionnel Edition x64 ;</LI>        <LI>Windows XP Professionnel Edition x64 Service Pack 2        ;</LI>        <LI>Windows Server 2003 Edition x64 ;</LI>        <LI>Windows Server 2003 Edition x64 Service Pack 2.</LI>      </UL>    </LI>    <LI>Module d'exécution du format Windows Media 11 pour :      <UL>        <LI>Windows XP Service Pack 2 ;</LI>        <LI>Windows XP Professionnel Edition x64 ;</LI>        <LI>Windows XP Professionnel Edition x64 Service Pack 2        ;</LI>        <LI>Windows Vista ;</LI>        <LI>Windows Vista Edition x64.</LI>      </UL>    </LI>    <LI>Windows Media Services 9.1 pour :      <UL>        <LI>Windows Server 2003 Service Pack 1 et Service Pack 2        ;</LI>        <LI>Windows Server 2003 Edition x64 y compris Service Pack        2 compris.</LI>      </UL>    </LI>  </UL>",
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le traitement de certains\nfichiers média (.ASF pour Advanced Streaming Format) par le module\nWindows Media Format Runtime. Ce format est utilisé pour le stockage et\nles échanges de données vidéo et audio. Cela implique en particulier les\nbibliothèques suivantes : wmasf.dll et wmsserver.dll, et concernene\nnotamment les extensions de type .asf, .wmv et .wma.\n\nCette vulnérabilité pourrait être exploitée par une personne\nmalveillante par le biais d'un fichier spécialement construit et inséré\ndans une page Web ou un courriel, afin d'exécuter du code arbitraire sur\nle système.\n\n## Solution\n\nSe référer au bulletin de sécurité MS07-068 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0064",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0064"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité CERTA-2006-AVI-550 du 13 décembre 2006 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2006-AVI-550/"
+    },
+    {
+      "title": "La différence entre les fichiers ASF et WMV/WMA :",
+      "url": "http://support.microsoft.com/kb/284094/fr"
+    },
+    {
+      "title": "Microsoft Windows Media - Spécification ASF (Advanced Systems Format) :",
+      "url": "http://www.microsoft.com/windows/windowsmedia/fr/format/asfspec.aspx"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-539",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans le traitement de certains\nfichiers média (ASF pour <span class=\"textit\">Advanced Streaming\nFormat</span>) par le module Windows Media Format Runtime. Cette\nvulnérabilité pourrait être exploitée par une personne malveillante par\nle biais d'un fichier spécialement construit, afin d'exécuter du code\narbitraire sur le système.\n",
+  "title": "Vulnérabilité dans le format de fichier Windows Media",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-068 du 11 décembre 2007",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-068.mspx"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft Windows 2000 Service Pack 4 ;</LI>    <LI>Microsoft Windows XP Service Pack 2 ;</LI>    <LI>Microsoft Windows XP Professionnel Édition x64 ;</LI>    <LI>Microsoft Windows XP Professionnel Édition x64 Service Pack    2 ;</LI>    <LI>Microsoft Windows Server 2003 Service Pack 1 ;</LI>    <LI>Microsoft Windows Server 2003 Service Pack 2 ;</LI>    <LI>Microsoft Windows Server 2003 Édition x64 ;</LI>    <LI>Microsoft Windows Server 2003 Édition x64 Service Pack 2    ;</LI>    <LI>Microsoft Windows Server 2003 avec SP1 pour les systèmes    Itanium ;</LI>    <LI>Microsoft Windows Server 2003 avec SP2 pour les systèmes    Itanium ;</LI>    <LI>Microsoft Windows Vista ;</LI>    <LI>Microsoft Windows Vista Service Pack 1 ;</LI>    <LI>Microsoft Windows Vista Édition x64 ;</LI>    <LI>Microsoft Windows Vista Édition x64 Service Pack 1 ;</LI>    <LI>Microsoft Windows Server 2008 pour systèmes 32 bits ;</LI>    <LI>Microsoft Windows Server 2008 pour systèmes x64 ;</LI>    <LI>Microsoft Windows Server 2008 pour systèmes Itanium.</LI>  </UL>  <P>Il s'agit en particulier des versions Internet Explorer 5.01  Service Pack 4 et Internet Explorer 6 Service Pack 1.</P>",
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans un contrôle ActiveX hxvz.dll de\nMicrosoft Windows. Ce contrôle ActiveX est associé à l'application\nYahoo! Music Jukebox.\n\nL'exploitation de cette vulnérabilité, par le biais d'une page Web\nspécialement construite par exemple, peut provoquer l'exécution de code\narbitraire sur le système vulnérable ayant visité la page.\n\nInternet Explorer 7 ne serait pas affecté. Cependant, si le contrôle\nActiveX a été utilisé dans des versions précédentes du navigateur sur le\nmême système, celui-ci est activé et fonctionnel dans Internet Explorer\n7, même si le client ne l'a pas approuvé explicitement à l'aide de la\nfonctionnalité « ActiveX Opt-in ».\n\n## Solution\n\nSe référer au bulletin de sécurité MS08-023 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1086",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1086"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2008-AVI-194",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-04-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans un contrôle ActiveX de Microsoft\nWindows. L'exploitation de cette dernière, par le biais d'une page Web\nspécialement construite par exemple, peut provoquer l'exécution de code\narbitraire sur le système vulnérable ayant visité la page.\n",
+  "title": "Vulnérabilité dans un contrôle ActiveX de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS08-023 du 08 avril 2008",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-023.mspx"
+    }
+  ]
+}

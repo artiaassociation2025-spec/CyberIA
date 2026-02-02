@@ -1,0 +1,107 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenOffice 1.1.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenOffice",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenOffice.org 2.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenOffice",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Une vulnérabilité est présente dans le traitement de certaines\n    applet java dans les documents OpenOffice. Cette vulnérabilité peut\n    être exploitée pour coutourner le « bac à sable » de la machine java\n    et obtenir les privilèges de l'utilisateur sur le système.\n-   Une seconde vulnérabilité existe dans le traitement des macros\n    embarquées dans les documents OpenOffice. Cette vulnérabilité peut\n    être utilisée pour faire exécuter du code malveillant à l'ouverture\n    d'une document habilement construit.\n-   Une troisième vulnérabilité existe dans le traitement des documents\n    XML. Cette vulnérabilité de type débordement de mémoire peut être\n    exploitée pour exécuter du code arbitraire sur le système.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2198",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2198"
+    },
+    {
+      "name": "CVE-2006-3117",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3117"
+    },
+    {
+      "name": "CVE-2006-2199",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2199"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-1104 du 30 juin 2006 :",
+      "url": "http://www.us.debian.org/security/dsa-1104"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-313-2 du 19 juillet 2006 :",
+      "url": "http://www.ubuntu.com/usn/usn-313-2"
+    },
+    {
+      "title": "Bulletin de sécurité Suse du 03 juillet 2006 :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2006-Jul/0003.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:118 du 07 juillet    2006 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:118"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2006-0573 du 03 juillet    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0573.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-313-1 du 11 juillet 2006 :",
+      "url": "http://www.ubuntu.com/usn/usn-313-1"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200607-12 du 28 juillet    2006 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200607-12.xml"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-271",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-06-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Red Hat, Debian et Suse.",
+      "revision_date": "2006-07-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité d'Ubuntu.",
+      "revision_date": "2006-07-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo, Mandriva et Ubuntu.",
+      "revision_date": "2006-08-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités sont présentes dans OpenOffice. Ces\nvulnérabilités peuvent être utilisées par un utilisateurs mal\nintentionné pour exécuter du code arbitraire sur le système ou réaliser\nun déni de service.\n",
+  "title": "Multiples vulnérabilités sur OpenOffice",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenOffice",
+      "url": "http://www.openoffice.org/security/bulletin-20060629.html"
+    }
+  ]
+}

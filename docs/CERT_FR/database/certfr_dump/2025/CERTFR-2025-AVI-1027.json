@@ -1,0 +1,84 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SonicOS versions 7.x antérieures à 7.3.1-7013",
+      "product": {
+        "name": "SonicOS",
+        "vendor": {
+          "name": "Sonicwall",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Email Security versions antérieures à 10.0.34.8215",
+      "product": {
+        "name": "Email Security",
+        "vendor": {
+          "name": "Sonicwall",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SonicOS versions 8.x antérieures à 8.0.3-8011 ",
+      "product": {
+        "name": "SonicOS",
+        "vendor": {
+          "name": "Sonicwall",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-40605",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-40605"
+    },
+    {
+      "name": "CVE-2025-40604",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-40604"
+    },
+    {
+      "name": "CVE-2025-40601",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-40601"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-1027",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-11-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits SonicWall. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une atteinte à la confidentialité des données et une atteinte à l'intégrité des données.",
+  "title": "Multiples vulnérabilités dans les produits SonicWall",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-11-19",
+      "title": "Bulletin de sécurité SonicWall SNWLID-2025-0016",
+      "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2025-0016"
+    },
+    {
+      "published_at": "2025-11-19",
+      "title": "Bulletin de sécurité SonicWall SNWLID-2025-0018",
+      "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2025-0018"
+    }
+  ]
+}

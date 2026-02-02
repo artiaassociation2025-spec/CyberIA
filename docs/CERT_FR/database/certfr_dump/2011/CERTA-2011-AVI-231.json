@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Ubuntu 10.04 LTS ;",
+      "product": {
+        "name": "Ubuntu",
+        "vendor": {
+          "name": "Ubuntu",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Ubuntu 10.10 ;",
+      "product": {
+        "name": "Ubuntu",
+        "vendor": {
+          "name": "Ubuntu",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Ubuntu 9.10.",
+      "product": {
+        "name": "Ubuntu",
+        "vendor": {
+          "name": "Ubuntu",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans kde4libs.\n\nLa première (CVE-2011-1094) permet à une personne malintentionnée\nd'effectuer une attaque de type man-in-the-middle. Cette faille provient\nd'une mauvaise gestion des certificats SSL par le module KDE KSSL,\nlorsque que ces derniers ont été émis pour une adresse IP.\n\nLa seconde (CVE-2011-1168) permet d'injecter indirectement du code à\ndistance. Le module KDE KHTML ne protège pas correctement les urls lors\nde la génération de pages d'erreur, autorisant ainsi un attaquant à\ninjecter indirectement du code via une url spécialement conçue.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1094",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1094"
+    },
+    {
+      "name": "CVE-2011-1168",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1168"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-231",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-04-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Man-in-the-middle"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités permettant une injection de code indirecte à\ndistance ainsi qu'une attaque de type <span\nclass=\"textit\">man-in-the-middle</span> ont été découvertes dans <span\nclass=\"textit\">kde4libs</span>.\n",
+  "title": "Vulnérabilités dans kde4libs",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ubuntu USN-1110-1",
+      "url": "http://www.ubuntulinux.org/usn/usn-1110-1"
+    }
+  ]
+}

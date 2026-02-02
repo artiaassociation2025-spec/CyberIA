@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>System Service Processor (SSP) versions  3.5 et antérieures.</p>",
+  "content": "## Description\n\nLe System Service Processor (SSP) est un ensemble logiciel et matériel\n(basé sur une station de travail SUN Solaris) permettant d'administrer\nles systèmes SUN Enterprise 10000.\n\nDes tests effectués par l'université finlandaise d'Oulu ont mis en\névidence la présence de vulnérabilités dans les routines de décodage et\nde traitement des messages SNMP dans de nombreuses implémentations (se\nréférer au bulletin d'alerte CERTA-2002-ALE-004 du CERTA).\n\nSelon SUN, les services snmpd et edd de la console SPP font partie des\nimplémentations vulnérables.\n\n## Contournement provisoire\n\nInstaller la console SPP sur un réseau dédié.\n\nNote : le service snmpd est un agent SNMP mandataire s'appuyant sur le\nservice machine_server pour l'allocation des ports. Le filtrage du port\n161/udp utilisé par le protocole SNMP V1 au niveau du garde-barrière\nn'est donc pas suffisant.\n\n## Solution\n\nSe référer au bulletin de sécurité de SUN (cf. section Documentation)\npour la disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Documentation \"Sun Enterprise 10000 SSP User guide\" :",
+      "url": "http://www.sun.com/products-n-solutions/hardware/docs/806-4871-10.pdf"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-125",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de type débordement de mémoire présente dans les\nservices snmpd et edd permet à un utilisateur mal intentionné d'exécuter\ndu code arbitraire avec les privilèges de l'administrateur root.\n",
+  "title": "Vulnérabilité des services snmpd et edd sur la console SSP (SUN Enterprise 10000)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Sun Alert Notification #43985",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F43985&zone_32=category%3Asecurity"
+    }
+  ]
+}

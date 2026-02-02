@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FirePass version 5.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FirePass version 6.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans F5 FirePass :\n\n-   une vulnérabilité de type injection de code indirecte est présente\n    dans la page de pré-authentification ;\n-   une erreur dans la gestion de la séquence d'authentification permet\n    à une personne malintentionnée de contourner la phase de\n    vérification de conformité de la machine avant l'accès à la page\n    d'authentification.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité F5 SOL11797 du 07 jullet 2010 :",
+      "url": "http://support.f5.com/kb/en-us/solutions/public/11000/700/sol11797.html"
+    },
+    {
+      "title": "Bulletin de sécurité F5 SOL11795 du 07 jullet 2010 :",
+      "url": "http://support.f5.com/kb/en-us/solutions/public/11000/700/sol11795.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-322",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-07-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans F5 FirePass permettent de contourner la\npolitique de sécurité ou d'effectuer une injection de code indirecte.\n",
+  "title": "Vulnérabilités dans F5 FirePass",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité F5 SOL11795 et SOL11797 du 07 juillet 2010",
+      "url": null
+    }
+  ]
+}

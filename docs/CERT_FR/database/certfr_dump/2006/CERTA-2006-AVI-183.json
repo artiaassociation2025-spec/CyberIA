@@ -1,0 +1,23 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>OpenVPN versions 2.0.7 et précédentes.</p>",
+  "content": "## Description\n\nLa vulnérabilité est causée par une mauvaise conception (qui ne serait\npas activée par défaut) dans l'interface d'administration à distance\nd'OpenVPN. Cette vulnérabilité permet d'accéder à cette interface sans\naucune authentification préalable et ceci à partir du réseau local ou\nbien à partir de l'Internet.\n\n## Solution\n\nDans l'attente d'un correctif de la part de l'éditeur, il est recommandé\nd'interdire l'administration à ditance à partir d'Internet mais aussi à\npartir d'un réseau local. N'autoriser cette administration qu'à partir\nd'une machine dédiée bénéficiant d'un contrôle d'accès.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2006-AVI-183",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans OpenVPN permet à un utilisateur distant mal\nintentionné d'exécuter du code arbitraire à partir de l'interface\nd'administration à distance.\n",
+  "title": "Vullnérabilités dans OpenVPN",
+  "vendor_advisories": []
+}

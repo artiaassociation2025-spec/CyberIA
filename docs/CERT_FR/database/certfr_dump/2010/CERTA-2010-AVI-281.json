@@ -1,0 +1,47 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>LibTIFF version 3.9.3 et versions  antérieures.  <P>Les applications utilisant cette bibliothèque peuvent être  vulnérables.</P></p>",
+  "content": "## Description\n\nUn débordement de mémoire peut survenir lors du traitement du champ\nSubjectDistance dans une image au format TIFF. Cette vulnérabilité est\nexploitable par un utilisateur malveillant pour exécuter du code\narbitraire au moyen d'une image TIFF spécialement conçue\n(CVE-2010-2067).\n\nLa correction de la vulnérabilité référencée CVE-2010-2347, permettant\nde l'exécution de code arbitraire, était incomplète.\n\n## Solution\n\nLa version 3.9.4 de la bibliothèque LibTIFF remédie à ce problème.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2067",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2067"
+    },
+    {
+      "name": "CVE-2010-2347",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2347"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de la version 3.9.4 de la bibliothèque LibTIFF du    15 juin 2010 :",
+      "url": "http://www.remotesensing.org/libtiff/v3.9.4.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-281",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-06-23T00:00:00.000000"
+    },
+    {
+      "description": "précision sur une seconde vulnérabilité.",
+      "revision_date": "2010-06-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans le traitement d'images par LibTIFF sont\nexploitables par un utilisateur malveillant pour exécuter du code\narbitraire.\n",
+  "title": "Vulnérabilités dans LibTIFF",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de la version 3.9.4 de la bibliothèque LibTIFF du 15 juin 2010",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Oracle 9i release 1, release 9.0.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Oracle 9i release 2, release 9.2.0.1 et 9.2.0.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nOracle iSQL\\*Plus est une application qui permet l'interrogation d'une\nbase de données via une interface Web.\n\nUn débordement de mémoire présent sur Oracle iSQL\\*Plus permet à un\nutilisateur mal intentionné (non authentifié) de réaliser un déni de\nservice ou d'exécuter du code arbitraire avec les privilèges de\nl'administrateur du gestionnaire de base de données Oracle (utilisateur\nOracle pour la plupart des systèmes et SYSTEM sur windows).\n\n## Solution\n\nAppliquer le correctif disponible sur le site d'Oracle (cf section\ndocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctif disponible à l'URL (numero 2581911) :",
+      "url": "http://metalink.oracle.com"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-245",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-11-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans l'interface Oracle iSQL\\*Plus du\ngestionnaire de base de données Oracle permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire ou de réaliser un déni de\nservice.\n",
+  "title": "Vulnérabilité sur iSQL*Plus dans Oracle 9i",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité #46 d'Oracle",
+      "url": "http://technet.oracle.com/deploy/security/pdf/2002alert46rev1.pdf"
+    }
+  ]
+}

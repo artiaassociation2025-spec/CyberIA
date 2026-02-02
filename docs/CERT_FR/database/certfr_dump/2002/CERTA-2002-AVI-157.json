@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Microsoft SQL Server 2000</p>",
+  "content": "## Description\n\nMicrosoft SQL Server 2000 propose une fonction permettant de faire\nfonctionner plusieurs instances du service SQL sur le même serveur. Le\nport `1433/TCP` est alloué par défaut par le service SQL. Comme\nplusieurs instances fonctionnent en même temps, elle ne peuvent pas\ntoutes allouer le même port. Un service appellé SQL Server Resolution\nService permet de diriger l'utilisateur vers le bon port, et donc la\nbonne instance. C'est ce service qui est vulnérable, il alloue le port\n`1434/UDP`.\n\nDeux débordements de mémoire ainsi qu'une erreur de programmation\npermettent à un utilisateur mal intentionné de provoquer un déni de\nservice, voire l'exécution de code arbitraire avec les droits de\nl'utilisateur ayant démarré le service SQL Server.\n\n## Contournement provisoire\n\nFiltrer les ports `1433` et `1434 UDP` et `TCP` au niveau du\ngarde-barrière afin d'empêcher l'exploitation de cette vulnérabilité\ndepuis l'Internet.\n\n## Solution\n\nCette vulnérabilité est corrigée par le Service Pack 3 pour SQL Server.\n\nConsulter le bulletin de sécurité \\#`MS02-039` de Microsoft pour\nconnaitre la disponibilité des correctifs (voir la section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de Microsoft #MS02-039",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-039.asp"
+    },
+    {
+      "title": "Service Pack 3 pour SQL Server :",
+      "url": "http://www.microsoft.com/sql/downloads/2000/sp3.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-157",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-07-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout du lien vers le service pack 3.",
+      "revision_date": "2003-01-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Trois vulnérabilités existent dans le service de résolution de Microsoft\nSQL Server 2000 permettant un déni de service ou l'exécution de code\narbitraire sur le serveur.\n",
+  "title": "Multiples vulnérabilités dans Microsoft SQL Server 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de securite de Microsoft #MS02-039",
+      "url": null
+    }
+  ]
+}

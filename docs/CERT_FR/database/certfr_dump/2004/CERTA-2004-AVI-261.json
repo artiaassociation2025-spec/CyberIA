@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Netscape versions 7.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mozilla versions 1.6 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été découverte dans la gestion du procotole SOAP\n(Simple Object Access Protocol) par les navigateurs Netscape et\nMozilla.  \n\nUn utilisateur distant mal intentionné peut exploiter cette\nvulnérabilité par le biais d'une page HTML habilement forgée pour\nexécuter du code arbitraire.\n\n## Contournement provisoire\n\nDésactiver le javascript.\n\n## Solution\n\nLa version 1.7.1 de Mozilla corrige cette vulnérabilité (cf. section\nDocumentation).  \n\nNetscape n'a pas fourni d'information concernant cette vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site web de la fondation Mozilla :",
+      "url": "http://www.mozilla.org"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-261",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-08-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité des navigateurs Netscape et Mozilla permet à un\nutilisateur distant d'exécuter du code arbitraire sur la machine\nvulnérable.\n",
+  "title": "Vulnérabilité des navigateurs Netscape et Mozilla",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de iDefense du 02 août 2004",
+      "url": "http://www.idefense.com/application/poi/display?id=117"
+    }
+  ]
+}

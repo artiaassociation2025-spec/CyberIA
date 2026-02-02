@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Pour le déni de service : Windows 2000, Windows XP Pro et Microsoft Exchange 2000.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Pour l'utilisation non autorisée du service : Windows 2000 et Microsoft Exchange 5.5.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe service SMTP est le service de messagerie (envoi et relayage de\ncourrier électronique). Il est installé par défaut sur tous les systèmes\nWindows 2000 Server. Il peut avoir été installé à la demande sur les\nsystèmes Windows XP Pro et Windows 2000 Professional Edition.\n\n-   Une vulnérabilité du système d'authentification par NTLM du service\n    SMTP sur le système Windows 2000 et sur le serveur Exchange 5.5\n    permet à un utilisateur mal intentionné non authentifié d'obtenir\n    les privilèges d'un utilisateur de ce service. Il peut ainsi, par\n    exemple, l'utiliser comme relais de messagerie.\n-   Sur les systèmes Windows 2000, XP Pro et sur le serveur Exchange\n    2000, un utilisateur mal intentionné peut, au moyen d'une commande\n    SMTP habilement transformée, arrêter le service SMTP à distance et\n    sans authentification.\n\n## Contournement provisoire\n\nArrêter le service SMTP s'il n'est pas utilisé sur les systèmes Windows\n2000 et XP Pro du réseau.\n\n## Solution\n\nAppliquer le correctif de Microsoft selon le système affecté :\n\n-   Pour Windows 2000 Server, Advanced Server et Professional Edition\n    (avec ou sans Microsoft Exchange 2000) :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=36556\n\n    Le serveur Exchange 2000 ne peut être installé que sur Windows 2000,\n    et utilise le service SMTP natif de celui-ci. Appliquer le correctif\n    au système Windows 2000 revient à supprimer la vulnérabilité du\n    serveur Exchange 2000.\n\n-   Pour Exchange Server 5.5 (indépendamment du système sur lequel il\n    est installé) :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=33423\n\n    Le service SMTP de Exchange 5.5 est indépendant de celui présent\n    sous Windows 2000. Pour supprimer la vulnérabilité de Exchange 5.5\n    installé sur un système Windows 2000, il n'est pas nécessaire\n    d'appliquer le correctif pour Windows 2000.\n\n-   Pour Windows XP Pro :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=36636\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le bulletin de sécurité Miscrosoft MS02-012 concernant le    déni de service possible sur SMTP :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-012.asp"
+    },
+    {
+      "title": "Le bulletin de sécurité Miscrosoft MS02-011 concernant    l'utilisation non autorisée du service SMTP :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-011.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-046",
+  "revisions": [
+    {
+      "description": "seconde version : Ajout d'informations concernant le correctif pour Exchange 2000 et Exchange 5.5 sur Windows 2000.",
+      "revision_date": "2002-02-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Utilisation non autorisée du service (relayage de spam ...)"
+    }
+  ],
+  "summary": "-   Sur les systèmes Windows 2000 et les serveurs Exchange 5.5, il est\n    possible d'utiliser le service SMTP sans autorisation.\n-   Sur les systèmes Windows 2000, XP Pro et les serveurs Exchange 2000,\n    il est possible d'arrêter à distance et sans authentification le\n    service SMTP (installé par défaut sur ces systèmes).\n",
+  "title": "Multiples vulnérabilités de SMTP pour Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS02-011",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS02-012",
+      "url": null
+    }
+  ]
+}

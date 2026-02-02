@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mac OS X Server v10.4.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mac OS X v10.4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans le système d'exploitation\nMac OS X d'Apple :\n\n-   la première vulnérabilité est dûe à une erreur de gestion des\n    paquets TCP/IP. Une personne malveillante peut exploiter cette\n    vulnérabilité au moyen de paquets TCP/IP malicieusement construits\n    afin de figer le système et de forcer l'utilisateur à le redémarrer\n    (CAN-2005-2194) ;\n-   la seconde vulnérabilité présente dans l'application Dashboard\n    permet à un utilisateur mal intentionné de contourner la politique\n    de sécurité et de porter atteinte à l'intégrité des données, en\n    écrasant des widget pré-installés. Cette vulnérabilité peut être\n    exploitée au moyen d'un widget dont l'identifiant interne est\n    malicieusement constitué (CAN-2005-1333).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site internet d'apple :",
+      "url": "http://www.apple.com"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-258",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-07-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités découvertes dans Mac OS X permettent à un\nutilisateur mal intentionné de réaliser à distance un déni de service ou\nde porter atteinte à l'intégrité des données.\n",
+  "title": "Multiples vulnérabilités dans Mac OS X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apple #301948 du 11 juillet 2005",
+      "url": "http://docs.info.apple.com/article.html?artnum=301948"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MySQL 5.0.",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Toutes les versions de MySQL de la branche 4.1 antérieures à la version 4.1.3 ;",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nMySQL est un serveur de base de données open source.  \nUne première vulnérabilité permet à un utilisateur mal intentionné de\ncontourner le mécanisme d'authentification par mot de passe.  \nUne seconde vulnérabilité permet à un utilisateur mal intentionné de\ndéclencher un débordement de mémoire dans le mécanisme\nd'authentification.\n\n## Solution\n\n-   La version de MySQL 4.1.3 corrige ces vulnérabilités ;\n-   la version de MySQL 5.0 corrigera ces vulnérabilités.\n\nMySQL est téléchargeable à l'adresse suivante :\n\n    http://www.mysql.com/downloads/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de MySQL :",
+      "url": "http://www.mysql.com"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-223",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire possible"
+    },
+    {
+      "description": "Contournement du mécanisme d'authentification"
+    }
+  ],
+  "summary": "Deux vulnérabilités de MySQL permettent à un utilisateur mal intentionné\nde contourner le mécanisme d'authentification.\n",
+  "title": "Vulnérabilité de MySQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité NGS Research du 01 juillet 2004",
+      "url": "http://www.nextgenss.com/advisories/mysql-authbypass.txt"
+    }
+  ]
+}

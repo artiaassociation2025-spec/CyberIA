@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Cadic Intégrale</SPAN> versions 2007  (5.4.x), 2009 (5.5.x) et 2011.</P>",
+  "content": "## Description\n\nTrois vulnérabilités ont été découvertes dans Cadic Intégrale :\n\n-   le serveur Apache installé est sensible au problème du traitement du\n    paramètre range (CVE-2011-3192), ce qui permet de réaliser un déni\n    de service à distance ;\n-   un composant fourni avec Cadic Intégrale permet le dépôt de\n    fichiers. Il est ainsi possible de prendre le contrôle à distance du\n    serveur ou d'exécuter du code arbitraire ;\n-   il est possible, dans une configuration très particulière, de\n    contourner le mécanisme d'authentification.\n\n## Solution\n\nDes correctifs sont disponibles auprès de l'éditeur ou via le site du\nclub.\n",
+  "cves": [
+    {
+      "name": "CVE-2011-3192",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3192"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site du Club Cadic :",
+      "url": "http://club.cadic.fr/"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-560",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-10-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Trois vulnérabilités dans <span class=\"textit\">Cadic Intégrale</span>\npermettent d'exécuter du code arbitraire à distance, de réaliser un déni\nde service ou de contourner le mécanisme d'authentification.\n",
+  "title": "Vulnérabilités dans Cadic Intégrale",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Société Cadic",
+      "url": null
+    }
+  ]
+}

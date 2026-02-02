@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Moodle versions 1.8 antérieures à 1.8.9 ;",
+      "product": {
+        "name": "Moodle",
+        "vendor": {
+          "name": "Moodle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Moodle versions 1.9 antérieures à 1.9.5.",
+      "product": {
+        "name": "Moodle",
+        "vendor": {
+          "name": "Moodle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Moodle versions 1.6.9 et antérieures ;",
+      "product": {
+        "name": "Moodle",
+        "vendor": {
+          "name": "Moodle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Moodle versions 1.7.7 et antérieures ;",
+      "product": {
+        "name": "Moodle",
+        "vendor": {
+          "name": "Moodle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'application d'apprentissage en ligne Moodle utilise un environnement\nLaTeX pour le rendu visuel de certaines images. Le filtre LaTeX peut\nêtre détourné pour provoquer l'affichage des fichiers accessibles en\nlecture par le serveur Web.\n\n## Solution\n\nLes branches 1.8 et 1.9 de Moodle ont, chaque semaine, de nouveaux\npaquetages disponibles en téléchargement. Cette vulnérabilité est\ncorrigée dans les paquetages 1.9.4+ et 1.8.8+ depuis le 27 mars 2009.\n\nLes branches 1.6 et 1.7 ne sont plus maintenues.\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1171",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1171"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site de téléchargement de Moodle :",
+      "url": "http://download.moodle.org/"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-128",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-04-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans <span class=\"textit\">Moodle</span> permet\nd'afficher le contenu des fichiers accessibles en lecture par le serveur\nWeb.\n",
+  "title": "Vulnérabilité dans Moodle",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes des modifications de la version 1.9 de Moodle",
+      "url": null
+    }
+  ]
+}

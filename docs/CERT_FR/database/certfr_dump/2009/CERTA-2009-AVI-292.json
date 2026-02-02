@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "HP-UX 11.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire est présente dans la\nfonction cookedprint(). Elle peut être exploitée au moyen d'un paquet\nspécialement construit afin de provoquer un déni de service ou\nd'exécuter du code arbitraire.\n\nUne seconde vulnérabilité de type débordement de mémoire présente dans\nla fonction crypto_recv() peut être exploitée à distance au moyen d'un\npaquet spécialement construit envoyé au démon xntpd.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0159",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0159"
+    },
+    {
+      "name": "CVE-2009-1252",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1252"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité CERTA-2009-AVI-195 du 19 mai 2009 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2009-AVI-195/CERTA-2009-AVI-195.html"
+    },
+    {
+      "title": "Bulletin de sécurité HP #c01961959 du 23 mars 2010 :",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document/.jsp?objectID=c01961959"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-292",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-07-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité HP #01961959.",
+      "revision_date": "2010-03-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités découvertes dans la mise en œuvre du service NTP\ndans HP-UX permettent à un utilisateur malintentionné de provoquer un\ndéni de service ou d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans HP-UX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité HP #c01763606 du 21 juillet 2009",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document/.jsp?objectID=c01763606"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "McAfee ProtectionPilot 1.1.1 Patch 2 ainsi que les versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "McAfee",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "McAfee ePolicy Orchestrator 3.5.0 Patch 5 ainsi que les versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "McAfee",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans les produits McAfee ePolicy\nOrchestrator et ProtectionPilot. Un débordement de mémoire serait\npossible au cours de la phase de pré-authentification par le serveur\nNAISERV.exe. Il ne manipulerait pas correctement des entêtes HTTP de\ntaille excessivement longue. Une personne malveillante pourrait donc\nconstruire un paquet particulier, et l'envoyer vers un système\nvulnérable, afin d'exécuter sur celui-ci des commandes arbitraires.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur McAfee pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de mises à jour McAfee ProtectionPilot :",
+      "url": "http://www.mcafee.com/apps/downloads/security_updates/hotfixes.asp?region=fr&segment=enterprise"
+    },
+    {
+      "title": "Site de mises à jour McAfee ProtectionPilot :",
+      "url": "http://www.mcafee.com/apps/downloads/security_updates/hotfixes.asp?region=fr&segment=smb"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-427",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "",
+  "title": "Vulnérabilité de certains produits McAfee",
+  "vendor_advisories": [
+    {
+      "published_at": "2006-10-05",
+      "title": "Bulletin de mise à jour McAfee",
+      "url": "None"
+    }
+  ]
+}

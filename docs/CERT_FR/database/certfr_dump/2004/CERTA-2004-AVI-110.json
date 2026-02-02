@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>InterScan VirusWall NT 3.55.</P>",
+  "content": "## Description\n\nLe logiciel InterScan VirusWall NT est une passerelle antivirale. Une\nvulnérabilité dans une fonctionnalité de visualisation permet à un\nutilisateur mal intentionné distant d'accéder aux fichiers de la\nmachine.\n\nPar ailleurs, TrendMicro a mis à disposition un correctif pour le\nscanner MIME.\n\n## Contournement provisoire\n\nFiltrer le port 8080/tcp des passerelles antivirales InterScan VirusWall\nNT.\n\n## Solution\n\n-   Pour la mise à jour du scanner MIME, arrêter le service SMTP\n    d'InterScan, et installer les fichiers contenus dans l'archive\n    suivante :\n\n        http://infoproduit.trendmicro.fr/product/ISNT_355-1018.zip\n\n-   Pour la vulnérabilité de type \"traversée d'arborescence de\n    répertoires\", installer le correctif suivant :\n\n        http://infoproduit.trendmicro.fr/product/ISNT_355-1019.exe\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "HotFix 3.55 Build 1018 SMTP et 1019 HTTP :",
+      "url": "http://php.trendmicro-fr.com/infoproduits/support/contents.php?id=449&prod=1"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-110",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-04-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité de type \"traversée d'arborescence de répertoires\"\npermet l'accès à tous les fichiers du système.\n",
+  "title": "Vulnérabilité dans InterScan VirusWall NT de TrendMicro",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "HotFix 3.55 Build 1018 SMTP et 1019 HTTP de TrendMicro",
+      "url": null
+    }
+  ]
+}

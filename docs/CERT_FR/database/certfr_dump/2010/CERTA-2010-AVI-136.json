@@ -1,0 +1,125 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco IOS XE 2.x ;",
+      "product": {
+        "name": "IOS XE",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS XR 3.x.",
+      "product": {
+        "name": "IOS XR",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS 12.x et 15.x ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans les systèmes Cisco\nIOS :\n\n-   une erreur dans la gestion des flux réseaux servant à l'échange des\n    clés cryptographiques peut être exploitée afin de provoquer un\n    redémarrage de Cisco IOS ;\n-   un message SCCP (protocole propriétaire Skinny Call Control\n    Protocol) spécialement conçu peut faire redémarrer Cisco IOS ;\n-   un paquet réseau LDP UDP (technologie liée aux réseaux MPLS)\n    spécialement conçu peut faire redémarrer Cisco IOS ;\n-   deux vulnérabilités existent dans le code H.323 de Cisco IOS, une\n    exploitation réussie de ces vulnérabilités provoque un déni de\n    service à distance ou une exécution de code arbitraire à distance ;\n-   plusieurs vulnérabilités ont été découvertes dans le code SIP de\n    Cisco IOS, une exploitation réussie de ces vulnérabilités provoquent\n    un déni de service à distance ou une exécution de code arbitraire à\n    distance ;\n-   un segment TCP spécialement conçu peut bloquer ou faire redémarrer\n    Cisco IOS.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0584",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0584"
+    },
+    {
+      "name": "CVE-2010-0583",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0583"
+    },
+    {
+      "name": "CVE-2010-0577",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0577"
+    },
+    {
+      "name": "CVE-2010-0580",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0580"
+    },
+    {
+      "name": "CVE-2010-0581",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0581"
+    },
+    {
+      "name": "CVE-2010-0582",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0582"
+    },
+    {
+      "name": "CVE-2010-0578",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0578"
+    },
+    {
+      "name": "CVE-2010-0579",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0579"
+    },
+    {
+      "name": "CVE-2010-0576",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0576"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-136",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-03-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans les systèmes Cisco IOS permettent de\nprovoquer un déni de service à distance ou d'exécuter du code arbitraire\nà distance.\n",
+  "title": "Multiples vulnérabilités dans Cisco IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20100324-sip du 24 mars 2010",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20100324-sip.shtml"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20100324-ipsec du 24 mars 2010",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20100324-ipsec.shtml"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20100324-sccp du 24 mars 2010",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20100324-sccp.shtml"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20100324-h323 du 24 mars 2010",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20100324-h323.shtml"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20100324-tcp du 24 mars 2010",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20100324-tcp.shtml"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20100324-ldp du 24 mars 2010",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20100324-ldp.shtml"
+    }
+  ]
+}

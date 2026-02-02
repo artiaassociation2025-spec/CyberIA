@@ -1,0 +1,92 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Spectrum Control versions antérieures 5.4.x à 5.4.10",
+      "product": {
+        "name": "Spectrum",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM WebSphere Remote Server versions 9.0 et 8.5 sans les correctifs disponibles pour IBM HTTP Server",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-36760",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-36760"
+    },
+    {
+      "name": "CVE-2022-25147",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-25147"
+    },
+    {
+      "name": "CVE-2006-20001",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-20001"
+    },
+    {
+      "name": "CVE-2022-28331",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-28331"
+    },
+    {
+      "name": "CVE-2022-37436",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-37436"
+    },
+    {
+      "name": "CVE-2018-1000632",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2018-1000632"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0188",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-03-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits IBM.\nCertaines d'entre elles permettent à un attaquant de provoquer une\nexécution de code arbitraire à distance, un déni de service à distance\net un contournement de la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans les produits IBM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM 6959691 du 02 mars 2023",
+      "url": "https://www.ibm.com/support/pages/node/6959691"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM 6959029 du 03 mars 2023",
+      "url": "https://www.ibm.com/support/pages/node/6959029"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">BIND</SPAN>, versions 9.4.x et 9.5.x.</P>",
+  "content": "## Description\n\nBIND est un logiciel DNS couramment utilisé.\n\nUne erreur dans l'appel de la fonction query_addsoa() peut provoquer un\narrêt du programme. Ce comportement peut être exploité pour provoquer un\ndéni de service à distance.\n\nL'exploitation de la vulnérabilité n'est pas possible si la recherche\nrécursive est desactivée. Cette désactivation se traduit par le\nparamétrage recursion no dans le fichier de configuration named.conf.\n\n## Solution\n\nMettre à jour le logiciel dans la version 9.4.1 ou 9.5.0a4. Se référer\nau bulletin de sécurité de l'éditeur pour l'obtention des correctifs\n(cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-2241",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2241"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de l'ISC du 30 avril 2007 :",
+      "url": "http://www.isc.org/sw/bind/bind-security.php"
+    },
+    {
+      "title": "Site de téléchargement de la version 9.4.1 de BIND :",
+      "url": "ftp://ftp.isc.org/isc/bind9/9.4.1/bind-9.4.1.debug.zip"
+    },
+    {
+      "title": "Site de téléchargement de la version 9.4.1 de BIND :",
+      "url": "ftp://ftp.isc.org/isc/bind9/9.4.1/bind-9.4.1.zip"
+    },
+    {
+      "title": "Site de téléchargement de la version 9.4.1 de BIND :",
+      "url": "ftp://ftp.isc.org/isc/bind9/9.4.1/bind-9.4.1.tar.gz"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-199",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-05-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité de <span class=\"textit\">BIND</span> permet à un\nutilisateur malveillant de provoquer un déni de service à distance.\n",
+  "title": "Vulnérabilité de BIND",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis ISC du 30 avril 2007",
+      "url": null
+    }
+  ]
+}

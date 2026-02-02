@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "HP OpenView Network Node Manager (OV NNM) versions 6.20, 6.4x, 7.01 et 7.50 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP OpenView Event Correlation Services (OV ECS) versions 3.10, 3.20, 3.30, 3.31, 3.32 et 3.33.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDes vulnérabilités ont été découvertes dans les fichiers :\n\n-   connectedNodes.ovpl de HP OpenView Network Node Manager ;\n-   ecscmg.ovpl de HP OpenView Event Correlation Services.\n\nL'exploitation de ces vulnérabilités permet l'exécution de code\narbitraire à distance.\n\nDu code malveillant permettant d'exploiter la vulnérabilité d'OpenView\nNetwork Node Manager est disponible sur l'Internet.\n\n## Contournement provisoire\n\nFiltrer le port 3443/tcp (vulnérabilité d'OpenView Network Node\nManager).\n\n## Solution\n\nAppliquer les correctifs de l'éditeur (voir section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SSRT051030 du 03 octobre 2005 :",
+      "url": "http://support.openview.hp.com/news.jsp#ecs"
+    },
+    {
+      "title": "Bulletin de sécurité SSRT051023 du 03 octobre 2005 :",
+      "url": "http://support.openview.hp.com/news.jsp#nnm_security"
+    },
+    {
+      "title": "Site Internet de l'éditeur :",
+      "url": "http://support.openview.hp.com"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-379",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-10-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans HP OpenView Event Correlation Services et dans\nHP OpenView Network Node Manager permettent l'exécution de code\narbitraire à distance.\n",
+  "title": "Vulnérabilités dans HP OpenView",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité SSRT051030 et SSRT051023 du 03 octobre 2005",
+      "url": null
+    }
+  ]
+}

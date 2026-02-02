@@ -1,0 +1,110 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Symantec Client Security 2.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec AntiVirus Corporate Edition 10.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec AntiVirus Corporate Edition 9.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec Client Security 1.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec AntiVirus Corporate Edition 8.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec Client Security 3.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans les suites logicielles\nantivirus de Symantec :\n\n-   la première vulnérabilité résulte d'une erreur dans le traitement\n    d'un message de notification malformé. Un utilisateur mal\n    intentionné peut, grâce à un message spécialement construit,\n    exécuter des commandes arbitraires à distance. Ces commandes sont\n    exécutées avec les privilèges SYSTEM ;\n-   la seconde vulnérabilité est présente au niveau du module de\n    vérification en temps réel. Cette vulnérabilité peut être exploitée\n    par l'intermédiaire d'un message de notification spécialement\n    construit, conduisant alors à un déni de service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3454",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3454"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site de l'éditeur :",
+      "url": "http://www.symantec.com"
+    },
+    {
+      "title": "Bulletin de sécurité de l'éditeur du 13 septembre 2006 :",
+      "url": "http://securityresponse.symantec.com/avcenter/security/Content/2006.09.13.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-394",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-09-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de commandes arbitraires à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités permettant respectivement d'exécuter du code\narbitraire à distance ou de provoquer un déni de service ont été\ndécouverte dans le logiciel antivirus de Symantec.\n",
+  "title": "Multiples vulnérabilités de l'antivirus Symantec",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symantec du 13 septembre 2006",
+      "url": null
+    }
+  ]
+}

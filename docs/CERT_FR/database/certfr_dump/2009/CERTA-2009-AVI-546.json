@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de PostgreSQL.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans PostgreSQL :\n\n-   (CVE-2009-4034) la validation des certificats dans lesquels le nom\n    ou le nom alternatif comportent un caractère nul permet à un\n    utilisateur malveillant de contourner la politique de sécurité ;\n-   (CVE-2009-4136) dans certaines conditions, le changement de l'état\n    d'une session permet à un utilisateur malveillant d'élever ses\n    privilèges.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-4136",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-4136"
+    },
+    {
+      "name": "CVE-2009-4034",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-4034"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-876-1 du 03 janvier 2010 :",
+      "url": "http://www.ubuntu.com/usn/USN-876-1"
+    },
+    {
+      "title": "Bulletin de sécurité de Debian DSA-1964 du 31 décembre 2009    :",
+      "url": "http://www.us.debian.org/security/2009/dsa-1964"
+    },
+    {
+      "title": "Site de téléchargement du projet PostgreSQL :",
+      "url": "http://www.postgresql.org/"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-546",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-12-16T00:00:00.000000"
+    },
+    {
+      "description": "Ajout des références aux bulletins de sécurité Ubuntu et Debian.",
+      "revision_date": "2010-01-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent PostgreSQL et permettent à un\nutilisateur malveillant de contourner la politique de sécurité ou\nd'élever ses privilèges.\n",
+  "title": "Vulnérabilités dans PostgreSQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de version PostgreSQL du 14 décembre 2009",
+      "url": "http://www.postgresql.org/about/news.1170"
+    }
+  ]
+}

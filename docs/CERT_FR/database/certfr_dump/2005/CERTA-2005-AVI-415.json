@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>L'exécutable <TT>pnmtopng</TT> du logiciel NetPBM.</P>",
+  "content": "## Description\n\nNetPBM est une bibliothèque de fonctions destinées à manipuler des\nimages dans les formats .pbm, .pgm, .pnm, .ppm, ...\n\nL'application pnmtopng, qui convertit une image encodée dans le format\nPNM (Portable Anymap) au format PNG (Portable Network Graphics, est\nvulnérable. Un utilisateur mal intentionné peut exécuter du code\narbitraire lorsque ce programme est lancé d'une façon astucieuse.\n\n## Contournement provisoire\n\nNe pas utiliser pnmtopng sur des fichiers dont on n'est pas sûrs.\n\n## Solution\n\nAppliquer le correctif de sécurité (cf. section[6](#sec:documentation)).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité RedHat :      \n;",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-793.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-415",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-10-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de NetPBM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CVE : CAN-2005-2978",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis Redhat RHSA-2005:783-6",
+      "url": null
+    }
+  ]
+}

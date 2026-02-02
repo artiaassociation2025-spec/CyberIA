@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions de <TT>Xmail</TT> antérieures à  <TT>1.22</TT>.</P>  <P>Se reporter au bulletin des vendeurs pour la liste exhaustive  des versions affectées connues.</P>",
+  "content": "## Description\n\nXmail est un serveur qui met en œuvre les protocoles ESMTP et POP3.\n\nCette application a une vulnérabilité de type débordement de variable.\nCette vulnérabilité permettrait l'exécution de code malveillant avec les\ndroits du groupe mail.\n\nLe savoir-faire pour exploiter cette vulnérabilité a été publié. Il\nsuffit de soumettre à Xmail une adresse de messagerie astucieusement\nconstruite.\n\n## Solution\n\nAppliquer le correctif. La version 1.22 de Xmail corrige cette\nvulnérabilité. Des mises à jours spécifiques sous forme de paquetages\nsont fournies par les différents vendeurs de distributions.\n",
+  "cves": [
+    {
+      "name": "CVE-2005-2943",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-2943"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité Debian :      \n;",
+      "url": "http://www.debian.org/security/2005/dsa-902"
+    },
+    {
+      "title": "CVE :      \n;",
+      "url": "http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-2943"
+    },
+    {
+      "title": "Avis Gentoo :",
+      "url": "http://www.gentoo.com/security/en/glsa/glsa-200512-05.xml"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-496",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-12-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de Xmail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Gentoo : GLSA 200512-05",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Debian : DSA-902-1",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "CVE : CAN-2005-2943",
+      "url": null
+    }
+  ]
+}

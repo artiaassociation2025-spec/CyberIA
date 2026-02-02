@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Le pilote Broadcom BCMWL5.SYS, pour la version 3.50.21.10    ;</LI>    <LI>Le pilote Linksys WPC300N <SPAN class=\"textit\">Wireless-N    Notebook Adapter</SPAN>, pour les versions antérieures à    4.80.28.7.</LI>  </UL>  <P>Cette liste n'est pas définitive. Plusieurs fabriquants  utilisent également cette puce dans leur matériel, et possèdent  des pilotes particuliers, dérivés du BCMWL5.SYS.</P>",
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans certains pilotes pour les\nproduits Wi-Fi contenant des puces Broadcom. Ils ne manipuleraient pas\ncorrectement certains paquets répondant à une requête de sondage (Probe\nRequest), avec un identifiant SSID de longueur trop importante.\n\nUne personne pourrait profiter de cette vulnérabilité, pour envoyer des\npaquets de réponse malformés, afin d'exécuter du code arbitraire à\ndistance sur la machine. Les solutions de sécurité associées à la\nconnexion Wi-Fi (WPA, VPN, etc.) ne protègent pas contre de telles\nattaques qui opèrent à une couche protocolaire plus basse.\n\nLe pilote Broadcom développé pour le système d'exploitation Microsoft\nWindows se nomme BCMWL5.SYS. Cependant, certains constructeurs modifient\nles pilotes qui sont fournis avec leurs machines. Chacun doit donc\nmettre à jour sa propre version, en tenant compte des corrections faites\npar Broadcom. Les mises à jour des constructeurs ne sont pas\nnécessairement automatiques.\n\n## Solution\n\nSe référer au bulletin de sécurité des différents éditeurs pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour Linksys pour WPC300N (Wireless-N Notebook Adapter) du 07 novembre    2006 :",
+      "url": "http://www-fr.linksys.com"
+    },
+    {
+      "title": "Avis du site Month of Kernel    Bugs MoKB-11-11-2006 :",
+      "url": "http://projects.info-pull.com/mokb/MOKB-11-11-2006.html"
+    },
+    {
+      "title": "Site officiel de Broadcom, et accès aux pilotes :",
+      "url": "http://www.broadcom.com/support/"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-490",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités des pilotes pour les puces Wi-Fi Broadcom",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce du \"Month of Kernel Bugs\" MoKB-11-11-2006",
+      "url": null
+    }
+  ]
+}

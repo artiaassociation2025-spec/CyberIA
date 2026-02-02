@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système possédant le service SMTP de Lotus Domino en  fonction.</P>  <P>Toute version de Domino inférieure ou égale à 5.0.4</P>",
+  "content": "## Description\n\n## 4.1 Déni de service de messagerie\n\nUn utilisateur mal intentionné peut bloquer à distance le service SMTP\nd'un serveur Domino par un débordement de pile, en envoyant un courrier\ninternet habilement conçu. Il faut savoir que la plupart des\ndébordements de pile permettent l'exécution de code arbitraire sur la\nmachine vulnérable, s'il sont habilement réalisés.\n\n## 4.2 Autres vulnérabilités\n\nD'autre part il existe d'autres vulnérabilités dans les serveurs Domino\nde version inférieure ou égale à 5.0.2 : l'utilisation des paramètres\npar défaut, sans vérification par l'administrateur, lors de\nl'installation du serveur Domino, en sont la principale cause. Les ACL\n(Access Control List : liste des privilèges d'accès) par défaut des\nbases de données d'origine (names.nsf, catalog.nsf, domcfg.nsf et\nlog.nsf) sont laxistes. Il est, entre autres choses, possible parcourir\nces bases avec un simple navigateur internet, ou de modifier la\nconfiguration du serveur si les paramétrages par défaut n'ont pas été\nrevus. Il est aussi possible de retrouver les mots de passe utilisateurs\nà partir du hachage obtenu par une authentification lors d'un accès par\nun navigateur.\n\n## Contournement provisoire\n\nIl n'y a pas de contournement provisoire pour le service SMTP.\n\nRevoir les paramètres d'installation de Domino, et renforcer les ACL et\nles ECL (extended control list complément des ACL).\n\n## Solution\n\nMettre à jour Lotus domino dans sa version 5.0.5 :\n\n-   Pour Windows 9x ou NT :\n    -   domino server première partie :\n\n            http://http2.notes.net/pub/504a_505/w32nsrvg.exe\n\n    -   domino server seconde partie :\n\n            http://http2.notes.net/pub/504a_505/dols_w32n.exe\n\n-   Pour Windows NT, processeur Alpha :\n\n        http://http2.notes.net/pub/504a_505/w32asrvg.exe\n\n-   Pour Sun Solaris :\n    -   processeur Sparc :\n\n            http://http2.notes.net/pub/504a_505/sunssrvg.tar\n\n    -   processeur Intel :\n\n            http://http2.notes.net/pub/504a_505/sunisrvg.tar\n\n-   OS2 :\n    -   Domino première partie :\n\n            http://http2.notes.net/pub/504a_505/os2srvg.exe\n\n    -   Domino server seconde partie :\n\n            http://http2.notes.net/pub/504a_505/dols_os2.exe\n\n-   Macintosh PPC :\n\n        http://http2.notes.net/pub/504a_505/504a505designer.hqx\n\n-   Linux :\n\n        http://http2.notes.net/pub/504a_505/lnxsrvg.tar\n\n-   IBM AIX :\n\n        http://http2.notes.net/pub/504a_505/aixsrvg.tar\n\n-   HP-UX :\n\n        http://http2.notes.net/pub/504a_505/hpuxsrvg.tar\n\nVérifier si la configuration par défaut est compatible avec votre\npolitique de sécurité après toute installation ou mise à jour.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Pour la deuxième partie de cet avis, consulter le site de  Lotus :",
+      "url": "http://www.lotus.com/developers/itcentral.nsf/wdocs/C52C07308269989B8525692D008322BD"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-084",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-12-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès à des données non autorisées"
+    },
+    {
+      "description": "Augmentation des privilèges"
+    },
+    {
+      "description": "Déni de service smtp et exécution potentielle de code arbitraire"
+    }
+  ],
+  "summary": "## <span id=\"SECTION00041000000000000000\"><span class=\"arabic\">3</span>.<span class=\"arabic\">1</span> Déni de service de messagerie</span>\n\nIl est possible de bloquer à distance le service SMTP d'un serveur\nDomino par un débordement de pile.\n\n## <span id=\"SECTION00042000000000000000\"><span class=\"arabic\">3</span>.<span class=\"arabic\">2</span> Autres vulnérabilités</span>\n\nPar ailleurs, de nombreuses autres vulnérabilités sont largement\ndiffusées et exploitées sur internet.\n",
+  "title": "Vulnérabilités des serveurs Lotus Domino",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Seconde partie Lotus",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Première partie vérifiée au CERTA",
+      "url": null
+    }
+  ]
+}

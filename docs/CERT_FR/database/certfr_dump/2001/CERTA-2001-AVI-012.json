@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2000 Advanced Server.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe protocole RDP (Remote Desktop Protocol), protocole utilisé par telnet\nterminal serveur sous Windows ne vérifie pas correctement certaines\nséries de paquets reçus. Un utilisateur mal intentionné peut, par le\nbiais de paquets volontairement choisis, entraîner l'arrêt du serveur.\nToutes les données des applications tournant sur le serveur à ce moment\nne seront pas sauvegardées.  \n  \n\nNota : Il n'est pas nécessaire d'établir une session avec le serveur\npour exploiter cette vulnérabilité.\n\n## Solution\n\nCorrectif disponible sur le site Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=27500\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-006.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-012",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-02-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Pertes de données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le protocole RDP sous Windows 2000 permet à un\nutilisateur mal intentionné de créer un déni de service sur le serveur\ncible et provoquer une perte des données traitées lors de cette attaque.\n",
+  "title": "Vulnérabilité dans le protocole RDP sous Windows 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft (MS01-006)",
+      "url": null
+    }
+  ]
+}

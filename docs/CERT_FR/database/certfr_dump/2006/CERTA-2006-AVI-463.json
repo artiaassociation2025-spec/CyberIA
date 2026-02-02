@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Symantec AntiVirus Corporate Edition pour la version 9.0.3 ainsi que celles antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec Client Security pour la version 2.0.3 ainsi que celles antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec Client Security version 1.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec AntiVirus Corporate Edition 8.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans certains produits de sécurité\nSymantec. Elle provient d'un pilote particulier, SAVRT.SYS, installé par\ndéfaut.\n\nUne application particulière dans les produits communique avec les\npilotes : DeviceIOControl. Le pilote ne verifierait pas correctement un\nespace d'adressage au cours de la communication avec cette dernière.\n\nLa vulnérabilité pourrait donc être exploitée par une personne locale au\nsystème, qui enverrait des données spécifiques via la fonction\nDeviceIOControl(). Cela lui permettrait d'élever ses droits à ceux de\nl'administrateur, voire exécuter des commandes arbitraires sur la\nmachine ayant une version vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité SYM06-022 de l'éditeur Symantec pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3455",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3455"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2006-AVI-463",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans certains produits de sécurité\nSymantec. Une personne malveillante locale au système pourrait exploiter\ncelle-ci pour élever ses droits à ceux de l'administrateur, voire\nexécuter des commandes arbitraires sur la machine ayant une version\nvulnérable.\n",
+  "title": "Vulnérabilité dans certains produits Symantec",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symantec SYM06-022 du 23 octobre 2006",
+      "url": "http://www.symantec.com/avcenter/security/Content/2006.10.23.html"
+    }
+  ]
+}

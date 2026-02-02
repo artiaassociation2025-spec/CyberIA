@@ -1,0 +1,143 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BEA Weblogic Server 8.x.",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA Weblogic Express 7.x ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA Weblogic Server 7.x ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA Weblogic Express 6.x ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA Weblogic Express 8.x ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA Weblogic Server 6.x ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA Weblogic Portal 8.x ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Une vulnérabilité a été découverte sur Weblogic Express/Server 8.1\n    SP2/SP3 permettant à un utilisateur mal intentionné de limiter ou de\n    réinitialiser les connexions JDBC (Java Database Connectivity)\n    (CAN-2005-1742).\n-   Une vulnérabilité dans le traitement des exceptions est présente sur\n    Weblogic Express/Server 8.1 SP3 et Weblogic Express/Server 7.0 SP5.\n    Cette vulnérabilité permet à un utilisateur mal intentionné de\n    réaliser un déni de service du service vulnérable (CAN-2005-1743).\n-   Une vulnérabilité sur Weblogic Express/Server 7.0 SP5 permet à un\n    utilisateur de se reconnecter à une application web ayant changé ses\n    contraintes de sécurité sans s'authentifier de nouveau\n    (CERTA-2005-1744).\n-   Une vulnerabilité sur Weblogic Portal 8.1 SP3 permet de visualiser\n    le mot de passe en clair lors d'un échec de connexion\n    (CAN-2005-1745).\n-   Une vulnérabilité dans le traitement de l'identifiant de session sur\n    Weblogic Express/Server 7.0 SP5 s'exécutant sur une grappe permet à\n    un utilisateur mal intentionné de créer un ralentissement du\n    cluster, via un identifiant malicieusement construit\n    (CAN-2005-1746).\n-   Une vulnérabilité de type « cross site scripting » est présente sur\n    Weblogic Express/Server 6.1 SP7, Weblogic Express/Server 7.0 SP6 et\n    Weblogic Express et Server 8.1 SP4 (CAN-2005-1747).\n-   Une vulnérabilité sur le serveur LDAP sur Weblogic Express/Server\n    8.1 SP4 et Weblogic Express/Server 7.0 SP5 permet à un utilisateur\n    mal intentionné d'obtenir des informations sur les utilisateurs de\n    la base ou de réaliser un déni de service sur le serveur vulnérable\n    (CAN-2005-1748).\n-   Une vulnérabilité de type debordement de mémoire est présente sur\n    Weblogic Express/Server 6.1 SP4. Cette vulnérabilité peut être\n    exploitée pour réaliser un deni de service sur le système vulnérable\n    (CAN-2005-1749).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité BEA 131",
+      "url": "http://dev2dev.bea.com/pub/advisory/131"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 128",
+      "url": "http://dev2dev.bea.com/pub/advisory/128"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 135",
+      "url": "http://dev2dev.bea.com/pub/advisory/135"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 132",
+      "url": "http://dev2dev.bea.com/pub/advisory/132"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 125",
+      "url": "http://dev2dev.bea.com/pub/advisory/125"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 129",
+      "url": "http://dev2dev.bea.com/pub/advisory/129"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 126",
+      "url": "http://dev2dev.bea.com/pub/advisory/126"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 127",
+      "url": "http://dev2dev.bea.com/pub/advisory/127"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-201",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2005-06-09T00:00:00.000000"
+    },
+    {
+      "description": "modification du correctif pour la vulnérabilité de type <SPAN class=\"textit\">Cross Site Scripting</SPAN>.",
+      "revision_date": "2005-08-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Multiples vulnérabilités présentes dans BEA Weblogic peuvent être\nexploitées par un utilisateur mal intentionné pour obtenir de\nl'information sensible ou encore réaliser un déni de service sur le\nsystème vulnérable.\n",
+  "title": "Multiples vulnérabilités sur BEA Weblogic",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité BEA",
+      "url": null
+    }
+  ]
+}

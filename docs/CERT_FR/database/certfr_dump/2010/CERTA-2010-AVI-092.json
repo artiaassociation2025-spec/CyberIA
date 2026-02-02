@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>PHP versions 5.2.12 et antérieures.</P>",
+  "content": "## Description\n\nLe Safe Mode de PHP est une option de configuration qui permet\nd'augmenter le nombre de contrôles faits lors de l'appel à certaines\ncommandes du langage jugées comme dangereuses. On trouve parmis ces\ncommandes, par exemple : exec(), system() ou encore fopen().\n\nDeux vulnérabilités ont été identifiées dans ce Safe Mode de PHP :\n\n-   la première concerne la directive open_basedir du Safe Mode qui peut\n    être contournée sous certaines conditions ;\n-   la seconde est relative à un manque de contrôle sur la fonction\n    tempnam().\n\nCes deux vulnérabilités permettent à un utilisateur distant de mettre en\ndéfaut certaines protections mises en œuvre dans le Safe Mode.\n\n## Remarque :\n\nSelon le projet PHP (<http://www.php.net>), le Safe Mode est considéré\ncomme osbsolète depuis la sortie de la version 5.3.0 et ne sera plus\nprésent dans les prochaines versions du langage.\n\n## Solution\n\nLa version 5.2.13 de PHP corrige le problème :\n\n    http://www.php.net/downloads.php\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site du projet PHP :",
+      "url": "http://www.php.net"
+    },
+    {
+      "title": "Liste des changements apportés à la version 5.2.13 de PHP    du 25 février 2010 :",
+      "url": "http://www.php.net/ChangeLog-5.php#5.2.13"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-092",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-03-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans PHP permettent à un utilisateur\ndistant de contourner la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés à la version 5.2.13 de PHP du 25 février 2010",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système - quel que soit le système d'exploitation -  utilisant un butineur Mozilla, Mozilla-Firefox ou Netscape.</P>  <P>La vulnérabilité existe mais ne peut être exploitée par défaut  sur le client de messagerie Mozilla Thunderbird.</P>",
+  "content": "## Description\n\nUne erreur dans la prise en compte des noms de domaines internationaux\n(« IDN », extension des noms de domaine à des caractères non ASCII) peut\nprovoquer un débordement de tampon en mémoire.\n\n## Contournement provisoire\n\nDésactiver le support d'IDN dans le butineur (voir le vendeur Mozilla\ndans la section Documentation) en exécutant le correctif proposé ou en\néditant la configuration à l'aide de la commande about:config dans la\nbarre de navigation et en positionnant la valeur network.enableIDN à\nfalse.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site internet des butineurs Mozilla, Firefox et Thunderbird    :",
+      "url": "http://www.mozilla.org"
+    },
+    {
+      "title": "RHSA-2005-768 du 09 septembre 2005 pour Firefox :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-768.html"
+    },
+    {
+      "title": "Bulletins de sécurité Red Hat Linux :       RHSA-2005-768 du 09 septembre 2005 pour Firefox :          \n  RHSA-2005-769 du 09 septembre 2005 pour Mozilla :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-768.html"
+    },
+    {
+      "title": "Bulletins de sécurité Red Hat Linux :       RHSA-2005-768 du 09 septembre 2005 pour Firefox :          \n  RHSA-2005-769 du 09 septembre 2005 pour Mozilla :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-769.html"
+    },
+    {
+      "title": "Bulletins de sécurité HP-UX :       SSRT051040 :          \n  SSRT051041 :",
+      "url": "http://www1.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBUX01231"
+    },
+    {
+      "title": "Note de vulnérabilité VU#573857 de l'US-CERT :",
+      "url": "http://www.kb.cert.org/vuls/id/573857"
+    },
+    {
+      "title": "SSRT051041 :",
+      "url": "http://www1.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBUX01231"
+    },
+    {
+      "title": "Bulletins de sécurité Linux Fedora :       Mise à jour de sécurité pour Fedora Core 3 du 10        septembre 2005 :          \n  Mise à jour de sécurité pour Fedora Core 4 du 10        septembre 2005 :",
+      "url": "http://www.securityfocus.com/advisories/9235"
+    },
+    {
+      "title": "Mise à jour de sécurité pour Fedora Core 3 du 10        septembre 2005 :",
+      "url": "http://www.securityfocus.com/advisories/9236"
+    },
+    {
+      "title": "Bulletins de sécurité Linux Fedora :       Mise à jour de sécurité pour Fedora Core 3 du 10        septembre 2005 :          \n  Mise à jour de sécurité pour Fedora Core 4 du 10        septembre 2005 :",
+      "url": "http://www.securityfocus.com/advisories/9236"
+    },
+    {
+      "title": "RHSA-2005-769 du 09 septembre 2005 pour Mozilla :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-769.html"
+    },
+    {
+      "title": "Correctif provisoire à exécuter :",
+      "url": "ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/1.0.6/patches/307259.xpi"
+    },
+    {
+      "title": "Contournement provisoire en désactivant le support d'IDN :       Procédure (en anglais) :          \n  Correctif provisoire à exécuter :",
+      "url": "ftp://ftp.mozilla.org/pub/mozilla.org/firefox/releases/1.0.6/patches/307259.xpi"
+    },
+    {
+      "title": "Bulletins de sécurité HP-UX :       SSRT051040 :          \n  SSRT051041 :",
+      "url": "http://www1.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBUX01230"
+    },
+    {
+      "title": "SSRT051040 :",
+      "url": "http://www1.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBUX01230"
+    },
+    {
+      "title": "Procédure (en anglais) :",
+      "url": "http://www.mozilla.org/security/idn.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-837 :",
+      "url": "http://www.debian.org/security/2005/dsa-837"
+    },
+    {
+      "title": "Contournement provisoire en désactivant le support d'IDN :       Procédure (en anglais) :          \n  Correctif provisoire à exécuter :",
+      "url": "http://www.mozilla.org/security/idn.html"
+    },
+    {
+      "title": "Mise à jour de sécurité pour Fedora Core 4 du 10        septembre 2005 :",
+      "url": "http://www.securityfocus.com/advisories/9235"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-346",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-09-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian.",
+      "revision_date": "2005-10-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout de Mozilla Thunderbird dans la section ``Systèmes affectés''.",
+      "revision_date": "2005-10-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin HP-UX.",
+      "revision_date": "2005-10-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Exécution potentielle de code arbitraire à distance"
+    }
+  ],
+  "summary": "Il est possible de créer une page web contenant un lien volontairement\nmal formé qui va bloquer le butineur. L'exécution de code avec les\nprivilèges de l'utilisateur courant n'est pas exclue.\n",
+  "title": "Vulnérabilité des clients web Mozilla, Firefox, Thunderbird et Netscape",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis Security-Protocols du 08 septembre 2005",
+      "url": "http://security-protocols.com/advisory/sp-x17-advisory.txt"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Server 2003 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 Service Pack 1.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'explorateur de Microsoft Windows ne manipule pas correctement les\nobjets de type COM (pour Component Object Model). L'architecture COM\npropre à Microsoft permet la manipulation d'objets par les applications\ninstallées sur le système. Dans le cas de l'explorateur, un utilisateur\nmalveillant peut inciter l'utilisateur à se connecter à un serveur de\nfichiers (au moyen d'un lien sur un site web par exemple), et profiter\nde cette vulnérabilité pour exécuter du code arbitraire à distance.\n\n## Solution\n\nAppliquer le correctif tel qu'indiqué dans le bulletin de sécurité\nMicrosoft MS06-015 (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0012",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0012"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2006-AVI-148",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-04-12T00:00:00.000000"
+    },
+    {
+      "description": "modification du risque.",
+      "revision_date": "2006-05-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans l'explorateur de Microsoft Windows permet à un\nutilisateur malveillant d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans l'explorateur de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-015 du 11 avril 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-015.mspx"
+    }
+  ]
+}

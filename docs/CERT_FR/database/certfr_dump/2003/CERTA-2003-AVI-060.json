@@ -1,0 +1,36 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>La bibliothèque zlib version 1.1.4.</P>",
+  "content": "## Description\n\nUn débordement de mémoire présent dans la fonction `gzprintf` de la\nbibliothèque `zlib` permet à un individu mal intentionné d'effectuer un\ndéni de service ou d'exécuter du code arbitraire à distance.\n\n## Solution\n\nAppliquer les correctifs fournis correspondant à la plate-forme :  \n\nBulletin de sécurité Mandrake :\n\n    http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:033\n\nBulletin de sécurité SCO :\n\n    ftp://ftp.sco.com/pub/security/OpenLinux/CSSA-2003-011.0.txt\n\nBulletin NetBSD :\n\n    ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2003-004.txt.asc\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-060",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout de l'avis NetBSD.",
+      "revision_date": "2003-03-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "La bibliothèque `zlib` est utilisée pour la compression et la\ndécompression de données par un grand nombre d'applications. Une\nvulnérabilité a été découverte dans l'une des fonctions de cette\nbibliothèque.\n",
+  "title": "Vulnérabilité dans la bibliothèque zlib",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Mandrake",
+      "url": null
+    }
+  ]
+}

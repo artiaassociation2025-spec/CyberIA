@@ -1,0 +1,79 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Cisco IOS 12.x.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans Cisco IOS :\n\n-   plusieurs vulnérabilités permettent, via une série de paquets TCP\n    spécialement construits, de provoquer un déni de service ou un\n    redémarrage du périphérique notamment lorsque le périphérique est\n    configuré comme un serveur Easy VPN avec une encapsulation Cisco\n    Tunneling Control Protocol (cTCP) ;\n-   une séquence de paquets TCP/IP spécialement construits permet de\n    provoquer les effets suivants :\n    -   plus de nouvelles connexions ou sessions acceptées ;\n    -   consommation de la mémoire du périphérique ;\n    -   consommation excessive et prolongée du CPU ;\n    -   redémarrage du périphérique.\n-   une erreur dans la gestion des fonctionnalités Mobile IP Network\n    Translation Traversal et Mobile IPv6 permet de provoquer un déni de\n    service ;\n-   une vulnérabilité dans le serveur Secure Copy (SCP) de Cisco IOS\n    permet à un utilisateur authentifié ayant accès à une invite de\n    commande de contourner la politique de sécurité et porter atteinte à\n    la confidentialité et l'intégrité des données ;\n-   une erreur dans le protocole SIP (Session Initiation Protocol)\n    permet de provoquer un redémarrage du périphérique à distance ;\n-   une erreur dans la gestion de certaines fonctionnalités permet, via\n    une série de paquets UDP spécialement construits, de provoquer un\n    déni de service.\n-   deux vulnérabilités dans Cisco IOS WebVPN et Cisco IOS SSLVPN\n    permettent à une personne malintentionnée de provoquer un déni de\n    service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0630",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0630"
+    },
+    {
+      "name": "CVE-2009-0633",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0633"
+    },
+    {
+      "name": "CVE-2009-0629",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0629"
+    },
+    {
+      "name": "CVE-2009-0634",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0634"
+    },
+    {
+      "name": "CVE-2009-0637",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0637"
+    },
+    {
+      "name": "CVE-2009-0631",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0631"
+    },
+    {
+      "name": "CVE-2009-0628",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0628"
+    },
+    {
+      "name": "CVE-2009-0626",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0626"
+    },
+    {
+      "name": "CVE-2009-0636",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0636"
+    },
+    {
+      "name": "CVE-2009-0635",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0635"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-118",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-03-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Cisco IOS et\npermettent notamment à une personne malintentionnée de provoquer un déni\nde service à distance ou de porter atteinte à la confidentialité et\nl'intégrité des données.\n",
+  "title": "Multiples vulnérabilités dans Cisco IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20090325-bundle du 25 mars 2009",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20090325-bundle.shtml"
+    }
+  ]
+}

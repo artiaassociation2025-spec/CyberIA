@@ -1,0 +1,96 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco IOS 12.x et dérivés.",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans le système d'exploitation\nIOS des équipements Cisco. Ces failles sont relatives à la mise en œuvre\npar l'IOS :\n\n-   de la couche SSL ( Bulletin Cisco \\#107631 ) ;\n-   du multicast ( Bulletin Cisco \\#107550 ) ;\n-   de la translation d'adresse : NAT ( Bulletin Cisco \\#99866 ) ;\n-   du protocole SIP: Session Initiation Protocol ( Bulletin Cisco\n    \\#107617 et 107971 ) ;\n-   des fonctionnalités d'IPS : Intrusion Prevention System ( Bulletin\n    Cisco \\#107583 ) ;\n-   du protocole SNMP : Simple Network Management Protocol ( Bulletin\n    Cisco \\#107696 ) ;\n-   du MPLS : Multiprotocol Label Switching ( Bulletin Cisco \\#107578 et\n    107646 ) ;\n-   du système d'IPC : Inter-Process Communication ( Bulletin Cisco\n    \\#107661 ) ;\n-   du firewall AIC : firewall Application Inspection Control ( Bulletin\n    Cisco \\#107716 ) ;\n-   et du protocole L2TP : Layer 2 Tunneling Protocol ( Bulletin Cisco\n    \\#107441 ) .\n\nLa vulnérabilité relative aux VPN MPLS (Bulletin Cisco \\#107578) permet\nà un utilisateur distant malintentionné de contourner la politique de\nsécurité du système vulnérable. Toutes les autres vulnérabilités\npermettent à un utilisateur distant malintentionné de provoquer un déni\nde service.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletins de sécurité Cisco du 24 septembre 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080924-sccp.shtml"
+    },
+    {
+      "title": "Bulletins de sécurité Cisco du 24 septembre 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080924-vpn.shtml"
+    },
+    {
+      "title": "Bulletins de sécurité Cisco du 24 septembre 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080924-mfi.shtml"
+    },
+    {
+      "title": "Bulletins de sécurité Cisco du 24 septembre 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080924-multicast.shtml"
+    },
+    {
+      "title": "Bulletins de sécurité Cisco du 24 septembre 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080924-bundle.shtml"
+    },
+    {
+      "title": "Bulletins de sécurité Cisco du 24 septembre 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080924-ubr.shtml"
+    },
+    {
+      "title": "Bulletins de sécurité Cisco du 24 septembre 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080924-ipc.shtml"
+    },
+    {
+      "title": "Bulletins de sécurité Cisco du 24 septembre 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080924-iosips.shtml"
+    },
+    {
+      "title": "Bulletins de sécurité Cisco du 24 septembre 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080924-iosfw.shtml"
+    },
+    {
+      "title": "Bulletins de sécurité Cisco du 24 septembre 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080924-sip.shtml"
+    },
+    {
+      "title": "Bulletins de sécurité Cisco du 24 septembre 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080924-cucm.shtml"
+    },
+    {
+      "title": "Bulletins de sécurité Cisco du 24 septembre 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080924-l2tp.shtml"
+    },
+    {
+      "title": "Bulletins de sécurité Cisco du 24 septembre 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080924-ssl.shtml"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-474",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-09-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans les IOS Cisco permettent à un\nutilisateur distant malintentionné de provoquer un déni de service ou de\ncontourner la politique de sécurité du système.\n",
+  "title": "Multiples vulnérabilités dans Cisco IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco #107631 du 24 septembre 2008",
+      "url": null
+    }
+  ]
+}

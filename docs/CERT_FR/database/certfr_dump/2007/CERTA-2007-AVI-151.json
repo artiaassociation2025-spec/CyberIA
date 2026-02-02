@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "mod_perl, pour les versions antérieures à 1.30.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans mod_perl, le module\nd'interprétation Perl d'Apache. Les fichiers PerlRun.pm et\nRegistryCooker.pm comporteraient une erreur lors de la manipulation\nd'une URI (pour Uniform Resource Identifier) par une expression\nrégulière.\n\nUne personne malveillante pourrait donc exploiter cette vulnérabilité à\ndistance, par le biais d'une URI spécialement construite, afin de\nperturber le système vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-1349",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1349"
+    }
+  ],
+  "links": [
+    {
+      "title": "Page du projet mod_perl pour Apache :",
+      "url": "http://perl.apache.org"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SR:2007:012 :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2007-May/0008.html"
+    },
+    {
+      "title": "RFC 3986, \"Uniform Resource Identifier (URI): Generic    Syntax :",
+      "url": "http://www.ietf.org/rfc/rfc3986.txt"
+    },
+    {
+      "title": "Notes de changement pour la version 1.30 de    mod_perl :",
+      "url": "http://svn.apache.org/repos/asf/perl/modperl/branches/1.x/Changes"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-151",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-04-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SuSE.",
+      "revision_date": "2007-05-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité mod_perl pour Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Alerte TA05-023A de l'US-CERT",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Note de changement de la version 1.30 du 29 mars 2007",
+      "url": null
+    }
+  ]
+}

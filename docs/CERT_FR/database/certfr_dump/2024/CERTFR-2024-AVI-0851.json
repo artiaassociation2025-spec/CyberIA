@@ -1,0 +1,135 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Connect Secure versions antérieures à 22.7R2.1 ou 22.7R2.2",
+      "product": {
+        "name": "Connect Secure (ICS)",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Policy Secure versions antérieures à 22.7R1.1",
+      "product": {
+        "name": "Policy Secure (IPS)",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Endpoint Manager Mobile (EPMM) versions antérieures à 12.0.0.5",
+      "product": {
+        "name": "Endpoint Manager pour Mobile",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Endpoint Manager Mobile (EPMM) versions 12.1.x antérieures à 12.1.0.4",
+      "product": {
+        "name": "Endpoint Manager pour Mobile",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cloud Services Appliance (CSA) versions antérieures à 5.0.2",
+      "product": {
+        "name": "Cloud Service Appliance (CSA)",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Connect Secure versions antérieures à 9.1R18.9 (prévue pour le 15 octobre 2024)",
+      "product": {
+        "name": "Connect Secure (ICS)",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "Ivanti rappelle que la version 4.6 de CSA est considérée obsolète et ne reçoit plus de correctifs de sécurité depuis le 10 septembre 2024.",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2024-7612",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-7612"
+    },
+    {
+      "name": "CVE-2024-37404",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-37404"
+    },
+    {
+      "name": "CVE-2024-9381",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-9381"
+    },
+    {
+      "name": "CVE-2024-9380",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-9380"
+    },
+    {
+      "name": "CVE-2024-9379",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-9379"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0851",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-10-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Ivanti. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une atteinte à la confidentialité des données et une atteinte à l'intégrité des données.\n\nIvanti indique que les vulnérabilités CVE-2024-9379 et CVE-2024-9380 sont activement exploitées dans le cadre d'attaques ciblées, en combinaison avec la vulnérabilité CVE-2024-8963.",
+  "title": "Multiples vulnérabilités dans les produits Ivanti",
+  "vendor_advisories": [
+    {
+      "published_at": "2024-10-07",
+      "title": "Bulletin de sécurité Ivanti CVE-2024-7612",
+      "url": "https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Endpoint-Manager-Mobile-EPMM-CVE-2024-7612"
+    },
+    {
+      "published_at": "2024-10-08",
+      "title": "Bulletin de sécurité Ivanti october-2024-security-update",
+      "url": "https://www.ivanti.com/blog/october-2024-security-update"
+    },
+    {
+      "published_at": "2024-10-08",
+      "title": "Bulletin de sécurité Ivanti CVE-2024-37404",
+      "url": "https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-and-Policy-Secure-CVE-2024-37404"
+    },
+    {
+      "published_at": "2024-10-08",
+      "title": "Bulletin de sécurité Ivanti CVE-2024-9379-CVE-2024-9380-CVE-2024-9381",
+      "url": "https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-CSA-Cloud-Services-Appliance-CVE-2024-9379-CVE-2024-9380-CVE-2024-9381"
+    }
+  ]
+}

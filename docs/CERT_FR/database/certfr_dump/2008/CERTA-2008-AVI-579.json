@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>SquirrelMail versions 1.4.16 et  antérieures.</p>",
+  "content": "## Description\n\nUne erreur est présente dans SquirrelMail. Elle est due à un manque de\ncontrôle du code HTML inclus dans certains courriels. Il est donc\npossible à un utilisateur distant malintentionné de conduire une attaque\nde type injection de code indirecte par le biais d'un courriel construit\nde façon particulière ouvert par un utilisateur du SquirrelMail\nvulnérable.\n\nNB: l'option Show HTML Version by Default devra être activée dans les\nparamètres d'affichage pour que l'exploitation de cette vulnérabilité\nréussisse.\n\n## Solution\n\nLa version 1.4.17 de SquirrelMail corrige le problème :\n\n    http://www.squirrelmail.org/download\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2379",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2379"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site de SquirrelMail :",
+      "url": "http://www.squirrelmail.org"
+    },
+    {
+      "title": "Liste des changements apportés à la version 1.4.17 de    SquirrelMail :",
+      "url": "http://sourceforge.net/project/shownotes.php?release_id=644750&group_id=311"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-579",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-12-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans SquirrelMail permet à un utilisateur\ndistant de conduire une attaque de type injection de code indirecte\n(<span class=\"textit\">Cross-site scripting</span>).\n",
+  "title": "Vulnérabilité dans SquirrelMail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés à la version 1.4.17 de SquirrelMail",
+      "url": null
+    }
+  ]
+}

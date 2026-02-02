@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Bind versions 9.4-ESV-R3 et suivantes ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bind versions 9.8.0 et suivantes.",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bind versions 9.7.1 et suivantes ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bind versions 9.6.3 et suivantes ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bind versions 9.6-ESV-R2 et suivantes ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité est présente dans le serveur DNS Bind. Elle est\nrelative à la mise en œuvre d'un système de cache négatif des\nenregistrements invalides dans un contexte de DNSSEC. Cette faille\npermet à un utilisateur distant malintentionné de provoquer un déni de\nservice au moyen d'un serveur DNSSEC autorité construit de façon\nparticulière.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1910",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1910"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-320",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-05-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Bind permet à un utilisateur distant\nmalintentionné de provoquer un déni de service.\n",
+  "title": "Vulnérabilité dans Bind",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Bind CVE-2011-1910 du 26 mai 2011",
+      "url": "http://www.isc.org/software/bind/advisories/cve-2011-1910"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Sophos Anti-Virus Small Business Edition ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sophos",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sophos MailMonitor for Notes/Domino, SMTP ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sophos",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sophos Anti-Virus 3.x, 4.x et 5.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sophos",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sophos PureMessage for UNIX 4.x, 5.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sophos",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sophos PureMessage for Windows/Exchange 2.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sophos",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sophos PureMessage Small Business Edition 2.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sophos",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur dans la gestion des tampons mémoire lors de la décompression\ndes archives cab peut être exploitée pour exécuter du code arbitraire,\nsi la configuration prévoit l'analyse de telles archives. L'insertion en\npièce jointe d'un message vers l'équipement de la victime, permet une\naction à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0994",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0994"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2006-AVI-191",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut soumettre à l'antivirus une archive\n<span class=\"textit\">cab</span> volontairement construite pour exécuter\ndu code arbitraire.\n",
+  "title": "Vulnérabilité des antivirus Sophos",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sophos",
+      "url": "http://www.sophos.com/support/knowledgebase/article/4934.html"
+    }
+  ]
+}

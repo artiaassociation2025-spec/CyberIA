@@ -1,0 +1,51 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Toutes les versions de SAP DB 7.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans SAP DB et ses outils\nd'administration web associés permettant à un individu mal intentionné\nd'exécuter du code arbitraire sur le serveur, d'accéder à des pages web\nd'administration sans authentification ou de récupérer des informations\nprésentes sur le serveur.\n\n## Solution\n\nMettre à jour SAP DB avec la version 7.4.03.30 :\n\n    http://www.sapdb.org/7.4/sap_db_software.htm\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin SAP DB :",
+      "url": "http://www.sapdb.org/7.4/new_relinfo.txt"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-197",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-11-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "SAP DB est une mise en oeuvre libre d'un serveur de base de données.\nCelui-ci peut intégrer une solution d'administration à distance via une\ninterface web.\n",
+  "title": "Multiples vulnérabilités dans SAP DB",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité @stake",
+      "url": "http://www.atstake.com/research/advisories/2003/a111703-2.txt"
+    }
+  ]
+}

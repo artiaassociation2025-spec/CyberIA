@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Wireshark versions 1.4.0 à 1.4.3 (incluse).",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Wireshark versions 1.2.0 à 1.2.14 (incluse) ;",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Wireshark :\n\n-   une désallocation de pointeur non-initialisé peut survenir lors de\n    la lecture d'un fichier au format pcap-ng (CVE-2011-0538) ;\n-   un paquet de très grande taille dans un fichier pcap-ng peut\n    provoquer un arrêt inopiné de Wireshark ;\n-   un débordement de mémoire peut se produire lors du traitement d'un\n    fichier au format Nokia DCT3 (CVE-2011-0713) ;\n-   Wireshark peut s'arrêter brutalement lors de la lecture de paquets\n    6LoWPAN sur des systèmes 32 bits ;\n-   des débordements de mémoire existent dans les préprocesseurs LDAP et\n    SMB ;\n-   des filtres LDAP peuvent provoquer une consommation excessive de la\n    mémoire.\n\nL'exploitation de ces vulnérabilités permet la réalisation d'un déni de\nservice ou l'exécution de code arbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0538",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0538"
+    },
+    {
+      "name": "CVE-2011-0713",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0713"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurité wpna-sec-2011-03 et wpna-sec-2011-04    du 01 mars 2011 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2011-03.html"
+    },
+    {
+      "title": "Bulletins de sécurité wpna-sec-2011-03 et wpna-sec-2011-04    du 01 mars 2011 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2011-04.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-125",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-03-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Wireshark</span>\npermettent d'exécuter du code arbitraire ou de réaliser un déni de\nservice à distance.\n",
+  "title": "Multiples vulnérabilités dans Wireshark",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité wpna-sec-2011-03 et wpna-sec-2011-04 du 01 mars 2011",
+      "url": null
+    }
+  ]
+}

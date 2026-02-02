@@ -1,0 +1,126 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MySQL 4.x ;",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MySQL 5.x.",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans le code traitant les paquets\nmalformés COM_TABLE_DUMP peuvent être utilisée par un utilisateur déjà\nauthentifié pour porter atteinte à l'intégrité des données ou pour\nexécuter du code arbitraire.  \n  \nUne vulnérabilité dans le traitement des identifications invalides peut\nêtre exploitée par un utilisateur mal intentionné pour porter atteinte à\nla confidentialité des données.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-1517",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1517"
+    },
+    {
+      "name": "CVE-2006-1518",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1518"
+    },
+    {
+      "name": "CVE-2006-1516",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1516"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SA:2006:036 du 23 juin 2006    :",
+      "url": "http://www.novell.com/linux/security/advisories/2006_36_mysql.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1079 du 29 mai 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1079"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200605-13 du 15 mai 2006 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200605-13.xml"
+    },
+    {
+      "title": "Bulletin de sécurité MySQL 4-1-19 :",
+      "url": "http://dev.mysql.com/doc/refman/4.1/en/news-4-1-19.html"
+    },
+    {
+      "title": "Bulletin de sécurité MySQL 5-0-21 :",
+      "url": "http://dev.mysql.com/doc/connector/j/en/news-5-0-21.html"
+    },
+    {
+      "title": "Bulletin de sécurité MySQL 5-1-10 :",
+      "url": "http://dev.mysql.com/doc/refman/5.1/en/news-5-1-10.html"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SR:2006:012 du 02 juin 2006    :",
+      "url": "http://www.novell.com/linux/security/advisories/2006-06-02.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1071 du 22 mai 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1071"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:084 du 16 mai 2006    :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:084"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1073 du 22 mai 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1073"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-182",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2006-05-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE et de la référence au bulletin de sécurité Mandriva ;",
+      "revision_date": "2006-05-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian.",
+      "revision_date": "2006-05-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo, Debian et SUSE.",
+      "revision_date": "2006-06-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SUSE.",
+      "revision_date": "2006-06-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités sont présentes dans MySQL. Ces vulnérabilités\npeuvent être exploitées par un utilisateur mal intentionné pour porter\natteinte à l'intégrité des données ou exécuter du code arbitraire à\ndistance.\n",
+  "title": "Mutliples vulnérabilités sur MySQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité MySQL",
+      "url": null
+    }
+  ]
+}

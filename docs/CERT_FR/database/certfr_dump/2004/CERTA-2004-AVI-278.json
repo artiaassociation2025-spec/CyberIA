@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tous les produits utilisant la  bibliothèque NSS.</p>",
+  "content": "## Description\n\nNSS (Network Security Services) est une bibliothèque utilisée pour\nmettre en oeuvre les communications SSL (Secure Socket Layer).  \n\nElle est principalement utilisée par les serveurs suivants :\n\n-   Netscape Enterprise Server ;\n-   Netscape Personalization Engine ;\n-   Netscape Directory Server ;\n-   Netscape Certificate Management Server ;\n-   Sun One/iPlanet ;\n-   Sun Java System Web Server.  \n\nUne vulnérabilité de type débordement de mémoire a été découverte dans\nla gestion de la négociation des communications SSlv2 par la\nbibliothèque NSS.  \n\nCette vulnérabilité permet à un utilisateur mal intentionné d'exécuter\ndu code arbitraire sur le serveur vulnérable. L'attaquant obtiendra les\nprivilèges de l'application utilisant la bibliothèque NSS.\n\n## Contournement provisoire\n\nDésactiver le support SSLv2.\n\n## Solution\n\nLa version 3.9.2 de NSS corrige cette vulnérabilité. Elle est disponible\nà l'adresse suivante :\n\n    ftp://ftp.mozilla.org/pub/mozilla.org/security/nss/releases/NSS_3_9_2_RTM/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de Sun du 16 septembre 2004 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-57643-1"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour nss du 27 août 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité HPSBUX01070 du 23 août 2004 pour HP-UX    :",
+      "url": "http://www4.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBUX01070"
+    },
+    {
+      "title": "Bulletin de sécurité de Sun du 30 août 2004 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-57632-1"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-278",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-08-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2004-08-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Sun.",
+      "revision_date": "2004-09-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité HP et ajout de la référence CVE.",
+      "revision_date": "2004-09-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de SUN du 16 septembre 2004.",
+      "revision_date": "2004-09-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité de la bibliothèque NSS permet à un utilisateur distant\nmal intentionné d'exécuter du code arbitraire sur un système vulnérable.\n",
+  "title": "Vulnérabilité de la bibliothèque NSS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité ISS du 23 août 2004",
+      "url": "http://xforce.iss.net/xforce/alerts/id/180"
+    }
+  ]
+}

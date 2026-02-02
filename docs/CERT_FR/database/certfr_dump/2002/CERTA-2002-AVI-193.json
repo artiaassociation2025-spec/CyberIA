@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Linuxconf 1.28r3 et versions  antérieures.</p>",
+  "content": "## Description\n\nLinuxconf est un outil d'administration pour les plate-formes Linux.\n\n  \nUne vulnérabilité de type débordement de mémoire est présente dans la\nroutine de traitement de la variable d'environnement LINUXCONF_LANG.\n\nSi le drapeau suid est positionné sur l'exécutable /bin/linuxconf, cette\nvulnérabilité peut être exploitée par un utilisateur local afin de\nréaliser une élévation de privilèges.\n\n## Contournement provisoire\n\nRetirer le drapeau suid :\n\nchmod u-s /bin/linuxconf\n\n## Solution\n\nLa version 1.28r4 corrige la vulnérabilité :\n\n    http://www.solucorp.qc.ca/linuxconf\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité \"Linuxconf locally exploitable buffer    overflow\" de iDEFENSE :",
+      "url": "http://online.securityfocus.com/archive/1/289585/2002-08-26/2002-09-01/0"
+    },
+    {
+      "title": "linuxconf 1.28r4 changes log :",
+      "url": "http://www.solucorp.qc.ca/changes.hc?projet=linuxconf&version=1.28r4"
+    },
+    {
+      "title": "Avis de sécurité MDKSA-2002-56 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-056.php"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-193",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-29T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de l'avis de sécurité de Mandrake.",
+      "revision_date": "2002-09-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de type débordement de mémoire présente dans la\ncommande linuxconf permet, sous certaines conditions, à un utilisateur\nmal intentionné de réaliser une élévation de privilèges.\n",
+  "title": "Vulnérabilité de linuxconf",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité \"Linuxconf locally exploitable buffer overflow\" de iDEFENSE",
+      "url": null
+    }
+  ]
+}

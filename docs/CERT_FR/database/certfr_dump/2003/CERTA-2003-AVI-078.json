@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Snort versions 1.8 à 2.0 beta.</p>",
+  "content": "## Description\n\nStream4 est un préprocesseur utilisé par Snort, un outil de détection\nd'intrusions. Stream4 permet de réassembler les segments TCP avant la\nrecherche de signatures d'attaques.\n\nAu moyen de paquets judicieusement composés, un utilisateur mal\nintentionné peut exploiter une vulnérabilité de type débordement de\nmémoire présente dans le préprocesseur stream4 afin d'exécuter du code\narbitraire sur la machine utilisant une version vulnérable de snort.\n\n## Contournement provisoire\n\nEn attendant d'installer une version non vulnérable, désactiver le\npréprocesseur stream4 dans le fichier snort.conf.\n\n## Solution\n\nLa version 2.0.0 disponible sur le site de snort corrige cette\nvulnérabilité.\n\nSite de snort :\n\n    http://www.snort.org\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité CORE-2003-0307 de Core Security    Technologies :",
+      "url": "http://www.coresecurity.com/common/showdoc.php?idx=313&idxseccion=10"
+    },
+    {
+      "title": "Avis de sécurité \"Integer overflow in Stream4\" de snort :",
+      "url": "http://www.snort.org/advisories/snort-2003-04-16-1.txt"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-078",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-04-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le préprocesseur stream4 de snort peut\nêtre exploitée afin d'exécuter du code arbitraire à distance sur la\nmachine utilisant une version vulnérable de snort.\n",
+  "title": "Vulnérabilité dans le préprocesseur stream4 de Snort",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2003-13 du CERT/CC",
+      "url": "http://www.cert.org/advisories/CA-2003-13.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CORE-2003-0307 de Core Security Technologies",
+      "url": null
+    }
+  ]
+}

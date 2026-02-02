@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SMA1000 versions 12.5.0-x antérieures à 12.5.0-02283",
+      "product": {
+        "name": "Secure Mobile Access",
+        "vendor": {
+          "name": "Sonicwall",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SMA1000 versions 12.4.3-x antérieures à 12.4.3-03245",
+      "product": {
+        "name": "Secure Mobile Access",
+        "vendor": {
+          "name": "Sonicwall",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-40602",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-40602"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis CERT-FR CERTFR-2025-AVI-0066 du 23 janvier 2025",
+      "url": "https://cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-0066"
+    }
+  ],
+  "reference": "CERTFR-2025-AVI-1121",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-12-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Sonicwall Secure Mobile Access. Elle permet à un attaquant de provoquer une élévation de privilèges.\n\nSonicwall indique que cette vulnérabilité est exploitée conjointement avec la vulnérabilité CVE-2025-23006 qui permet une exécution de code arbitraire à distance.",
+  "title": "Vulnérabilité dans Sonicwall Secure Mobile Access",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-12-17",
+      "title": "Bulletin de sécurité SonicWall SNWLID-2025-0019",
+      "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2025-0019"
+    }
+  ]
+}

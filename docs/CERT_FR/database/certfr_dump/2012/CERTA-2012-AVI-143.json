@@ -1,0 +1,56 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "McAfee Email Gateway 7.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "McAfee",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "McAfee Email and Web Security 5.5 et 5.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "McAfee",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été corrigées dans McAfee Email and Web\nSecurity et McAfee Email Gateway :\n\n-   une injection de code indirecte à distance, qui peut être exploitée\n    par un attaquant pour acquérir des jetons de connexion et exécuter\n    du code javascript dans le contexte de l'application client d'un\n    administrateur ;\n-   la fermeture de la session ne se fait pas correctement et un\n    attaquant peut exploiter cette vulnérabilité pour se connecter avec\n    l'identité de l'utilisateur ;\n-   un utilisateur peut réinitialiser les mots de passe des\n    administrateurs ;\n-   les jetons de sessions actives sont dévoilés dans le tableau de bord\n    ;\n-   il est possible de retrouver les mots de passe dans les sauvegardes\n    du système ;\n-   n'importe quel utilisateur distant peut lire des fichiers\n    arbitraires du serveur ;\n-   n'importe quel utilisateur distant accède aux fichiers comme s'il\n    était administrateur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2012-AVI-143",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-03-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans McAfee Email and Web\nSecurity et McAfee Email Gateway, qui permettent une injection de code\nindirecte à distance, de contourner la politique de sécurité, et de lire\ndes données non autorisées.\n",
+  "title": "Multiples vulnérabilités dans McAfee EWS et MEG",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité McAfee SB10020 du 13 mars 2012",
+      "url": "https://kc.mcafee.com/corporate/index?page=content&id=SB10020"
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Video Surveillance 2500 Series IP Camera firmware, versions antérieures à la version 2.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Video Surveillance Stream Manager for the Cisco Video Surveillance Services Platform, versions antérieures à la version 5.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Video Surveillance Stream Manager for the Cisco Video Surveillance Integrated Services Platform, versions antérieures à la version 5.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité est présente dans Cisco Video Surveillance Stream\nManager (CVE-2009-2045). Un utilisateur malveillant peut provoquer un\nredémarrage du système par le biais d'un paquet UDP particulier sur le\nport 37000.\n\nUne vulnérabilité affecte les caméras IP de la série 2500, avec ou sans\nfil (CVE-2009-2046). Un utilisateur authentifié peut lire tout fichier\nprésent sur la caméra au travers du serveur web embarqué, via le port 80\n(HTTP) ou le port 443 (HTTPS).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2046",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2046"
+    },
+    {
+      "name": "CVE-2009-2045",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2045"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20090624-video du 24 juin 2009 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20090624-video.shtml"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-255",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-06-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Des vulnérabilités affectent des produits de vidéosurveillance Cisco et\npermettent à un utilisateur malveillant de provoquer un déni de service\nà distance ou de lire indûment des informations.\n",
+  "title": "Vulnérabilités de produits Cisco Video Surveillance",
+  "vendor_advisories": []
+}

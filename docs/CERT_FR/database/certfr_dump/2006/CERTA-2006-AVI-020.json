@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><TT>mod_auth_pgsql</TT> version 2.0.2b1 pour Apache 2.x.  D'autres versions antérieures peuvent être affectées.</P>",
+  "content": "## Description\n\nmod_auth_pgsql permet la mise en œuvre dans Apache de l'authentification\nà partir d'une base de données PostgreSQL. Un manque de contrôle du nom\nd'utilisateur (username) fourni lors de l'authentification permet à un\nutilisateur distant mal intentionné d'exécuter du code arbitraire à\ndistance par le biais d'un nom d'utilisateur malicieusement constitué.\n\n## Solution\n\nLa version 2.0.3 de mod_auth_pgsql corrige ce problème (voir\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200601-05 du 10 janvier    2006 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200601-05.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:009 du 06 janvier    2006 :",
+      "url": "http://frontal2.mandriva.com/security/advisories?name=MDKSA-2006:009"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-935 du 10 janvier 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-935"
+    },
+    {
+      "title": "Version 2.0.3 de mod_auth_pgsql :",
+      "url": "http://www.giuseppetanzilli.it/mod_auth_pgsql2/dist/"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2006:0164 du 05 janvier    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0164.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-020",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-01-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Mandriva et Gentoo.",
+      "revision_date": "2006-01-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le module mod_auth_pgsql pour Apache 2.x permet à\nun utilisateur mal intentionné d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans mod_auth_pgsql pour Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDefense du 09 janvier 2006",
+      "url": "http://www.idefense.com/application/poi/display?id=367"
+    }
+  ]
+}

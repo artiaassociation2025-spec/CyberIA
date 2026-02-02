@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Novell GroupWise en versions 5.5EP (``Enhancement Pack'') et  6.</P>  <P>GroupWise est disponible sous Windows NT/2000, Win 95/98, Win  3.1 et Unix.</P>",
+  "content": "## Description\n\nIl existe une vulnérabilité dans certains exécutables Java du composant\n\\`\\`Web Access'' du serveur Novell GroupWise. Elle permet d'accéder à\nl'ensemble du volume par le biais de l'interface Web, en particulier aux\nfichiers de configuration.\n\nLa vulnérabilité est démontrée sous Windows 2000. Cependant, étant donné\nque seuls des programmes Java sont concernés, il est probable que toutes\nles plateformes soient concernées.\n\n## Solution\n\nAppliquer le correctif de Novell pour GroupWise.\n\n-   GroupWise 6\n\n        http://support.novell.com/servlet/tidfinder/noheader/2960443\n\n-   GroupWise 5.5EP\n\n        http://support.novell.com/servlet/tidfinder/noheader/2960440\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de Foundstone posté dans BugTraq",
+      "url": "http://www.foundstone.com/cgi-bin/display.cgi?Content_ID=327"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-119",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès en lecture à l'ensemble des fichiers du volume hébergeant le serveur"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, à l'aide d'un simple navigateur et\nd'une URL mal formée, accéder via le web à tout fichier sur le même\nvolume que le serveur GroupWise.\n",
+  "title": "Vulnérabilité de l'interface Web du serveur Novell GroupWise",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste de diffusion BugTraq",
+      "url": null
+    }
+  ]
+}

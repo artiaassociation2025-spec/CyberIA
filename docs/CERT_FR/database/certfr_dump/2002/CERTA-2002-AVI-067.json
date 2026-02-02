@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IRIX 6.5 à 6.5.15.  <P>Les versions antérieures, non maintenues, n'ont pas été  testées.</P></p>",
+  "content": "## Description\n\nDes requêtes RPC soigneusement constituées (longueur invalide) peuvent\nentrainer l'émission d'un message \"Bus error\" puis l'arrêt des services\nportmap et rpcbind. Cette vulnérabilité est exploitable à distance.\n\nUn utilisateur local mal intentionné peut également positionner la\nvariable d'environnement HOSTALIASES d'une certaine façon afin de\nprovoquer l'arrêt d'applications réseau utilisant le mécanisme de\nrésolution de noms.\n\n## Solution\n\nLa version de IRIX 6.5.16 corrige ces deux vulnérabilités.\n\nDes correctifs sont également disponibles sur le site du constructeur\n(se référer à la section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité 20020306-01-P de SGI disponible à l'adresse  suivante :",
+      "url": "http://ftp.patches.sgi.com/support/free/security/advisories/20020306-01-P"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-067",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-04-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes sous IRIX (SGI) permettent à un\nutilisateur mal intentionné de réaliser un déni de service en local ou à\ndistance.\n",
+  "title": "Dénis de service sous IRIX/SGI",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis 20020306-01-P de SGI",
+      "url": null
+    }
+  ]
+}

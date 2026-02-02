@@ -1,0 +1,102 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD versions 8.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD versions 6.4 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD versions 7.2 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois vulnérabilités ont été corrigées dans différentes versions du\nsystème d'exploitation FreeBSD :\n\n-   la première concerne une mauvaise gestion des sessions SSL et permet\n    de contourner la politique de sécurité ;\n-   la deuxième concerne une mauvaise gestion des variables au niveau de\n    l'éditeur de lien temps réel et permet de réaliser une élévation de\n    privilèges ;\n-   la dernière concerne une mauvaise gestion du répertoire utilisé par\n    le système de mise à jour et permet de porter atteinte à la\n    confidentialité des données.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-4146",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-4146"
+    },
+    {
+      "name": "CVE-2009-4147",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-4147"
+    },
+    {
+      "name": "CVE-2009-3555",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3555"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de mise à jour FreeBSD-SA-09:15.ssl du 03 décembre    2009",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-09:15.ssl"
+    },
+    {
+      "title": "Bulletin de mise à jour FreeBSD-SA-09:17.freebsd-update du    03 décembre 2009 :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-09:17.freebsd-update"
+    },
+    {
+      "title": "Bulletin de mise à jour FreeBSD-SA-09:16.rtld du 03    décembre 2009 :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-09:16.rtld"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-528",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-12-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans FreeBSD.\nL'exploitation de ces vulnérabilités permet d'effectuer des actions\ndiverses pouvant aller jusqu'à l'élévation de privilèges.\n",
+  "title": "Multiples vulnérabilités des systèmes FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour FreeBSD-SA-09:16.rtld du 03 décembre 2009",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour FreeBSD-SA-09:17.freebsd-update du 03 décembre 2009",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour FreeBSD-SA-09:15.ssl du 03 décembre 2009",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">OpenBSD</SPAN> 3.4 et 3.5 (versions  antérieures non maintenues).</P>",
+  "content": "## Description\n\nLe système d'authentification (\\`\\`login'') d'OpenBSD peut être\nconfiguré pour utiliser divers schémas de validation des données\nd'authentification. Bien que cela ne soit pas activé par défaut, cette\nvalidation peut être confiée à un serveur distant Radius.\n\nLe protocole Radius nécessite le partage d'un secret entre le système\németteur et le serveur Radius pour l'authentification mutuelle de ces\nderniers. Cependant OpenBSD ne vérifie pas que la réponse du serveur\nutilise le secret partagé. Un individu mal intentionné, ayant accès au\nréseau commun aux deux systèmes, peut donc fabriquer une fausse réponse\ndu serveur Radius qui sera validée et ainsi usurper l'identité d'un\nutilisateur légitime quelconque.\n\n## Solution\n\nSe référer aux correctifs de sécurité de l'éditeur (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctif de sécurité OpenBSD 3.4 du 20 septembre 2004 :",
+      "url": "http://www.opensbsd.org/errata34.html#radius"
+    },
+    {
+      "title": "Correctif de sécurité OpenBSD 3.5 du 20 septembre 2004 :",
+      "url": "http://www.opensbsd.org/errata.html#radius"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-346",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-10-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    },
+    {
+      "description": "Accès illégitime au système"
+    }
+  ],
+  "summary": "Lorsque l'authentification de l'accès à un système <span\nclass=\"textit\">OpenBSD</span> est déléguée à un serveur <span\nclass=\"textit\">Radius</span>, un individu mal intentionné peut fabriquer\nune fausse réponse de ce serveur qui sera cependant validée par le\nsystème <span class=\"textit\">OpenBSD</span> vulnérable, et ainsi accéder\nà l'hôte.\n",
+  "title": "Mauvaise gestion de l'authentification Radius sous OpenBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Correctif de sécurité OpenBSD du 20 septembre 2004",
+      "url": null
+    }
+  ]
+}

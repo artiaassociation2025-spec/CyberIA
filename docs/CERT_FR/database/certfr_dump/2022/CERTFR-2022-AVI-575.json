@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenSSL versions 1.0.2 antérieures à 1.0.2zf",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenSSL versions 1.1.1 antérieures à 1.1.1p",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenSSL versions 3.0.x antérieures à 3.0.4",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-2068",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-2068"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-575",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-06-22T00:00:00.000000"
+    },
+    {
+      "description": "Correction d'une erreur dans la section Systèmes affectés.",
+      "revision_date": "2022-06-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans OpenSSL c_rehash. Elle permet à\nun attaquant de provoquer une exécution de code arbitraire.\n",
+  "title": "Vulnérabilité dans OpenSSL c_rehash",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenSSL 20220621 du 21 juin 2022",
+      "url": "https://www.openssl.org/news/secadv/20220621.txt"
+    }
+  ]
+}

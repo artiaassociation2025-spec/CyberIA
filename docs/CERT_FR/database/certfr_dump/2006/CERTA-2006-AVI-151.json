@@ -1,0 +1,103 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Server 2003 exécutant Microsoft Data Access Components 2.8 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 2 exécutant Microsoft Data Access Components 2.8 Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 Service Pack 1 pour systèmes Itanium exécutant Microsoft Data Access Components 2.8 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 pour systèmes Itanium exécutant Microsoft Data Access Components 2.8 Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 1 exécutant Microsoft Data Access Components 2.7 Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 Edition 64 bits exécutant Microsoft Data Access Components 2.8 Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Professionnel Edition 64 bits exécutant Microsoft Data Access Components 2.8 Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nRDS (Remote Data Service) est une fonctionnalité d'ADO (ActiveX Data\nObject) distribué par MDAC Microsoft Data Access Components.  \nRDS est utilisé pour déplacer des données d'un serveur vers une\napplication client ou vers une page web.  \n\nUne vulnérabilité est présente dans l'ActiveX RDS.Dataspace. Cette\nvulnérabilité peut être exploitée par un utilisateur mal intentionné,\nvia un site web construit de façon malveillante, pour exécuter du code\narbitraire ou réaliser un déni de service sur le poste de l'utilisateur\nparcourant ce site web.\n\n## Contournement provisoire\n\n-   Configurer Internet Explorer de façon à ne pas autoriser\n    automatiquement le téléchargement et l'exécution des contrôles\n    ActiveX ;\n-   Désactiver le contrôle ActiveX RDS.Dataspace.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2006-AVI-151",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-04-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le contrôle ActiveX RDS.Dataspace\ndistribué par Microsoft Data Access Components, peut être exploitée par\nun utilisateur mal intentionné pour réaliser un déni de service ou\nexécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité sur la fonction Microsoft Data Access Components (MDAC)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-014",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-014.mspx"
+    }
+  ]
+}

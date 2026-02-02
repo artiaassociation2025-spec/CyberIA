@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Version de Exim antérieures ou égales à  la version 3.22</p>",
+  "content": "## Description\n\nExim est un routeur de mail (Message Transfert Agent) qui peut remplacer\nsendmail, postfix...\n\nUne erreur dans le code vérifiant les en-tête de méls, permet à un\nutilisateur mal intentionné d'exécuter un code arbitraire.\n\nCette vulnérabilité est exploitable seulement si Exim est configuré pour\ntester les en-têtes de méls.\n\n## Contournement provisoire\n\nNe pas positionner la directive headers_check_syntax dans le fichier de\nconfiguration d'Exim.\n\n## Solution\n\nTélécharger le correctif disponible sur le site de RedHat :\n\n-   ftp://updates.redhat.com/6.2/en/powertools/i386/exim-3.22-6x.i386.rpm\n\n-   ftp://updates.redhat.com/7.0/en/powertools/i386/exim-3.22-13.i386.rpm\n\n-   ftp://updates.redhat.com/7.1/en/powertools/i386/exim-3.22-6x.i386.rpm\n\nTélécharger le correctif disponible sur le site de Debian :\n\n-   http://security.debian.org/dists/stable/updates/main/binary-i386/exim_3.12-10.1_i386.db\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le site Exim:",
+      "url": "http://www.exim.org"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-070",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-06-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Obtention du privilèges root à distance"
+    }
+  ],
+  "summary": "Sous certaines conditions, un utilisateur mal intentionné peut exécuter\ndu code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans Exim",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité RedHat RHSA-2001:078-05",
+      "url": null
+    }
+  ]
+}

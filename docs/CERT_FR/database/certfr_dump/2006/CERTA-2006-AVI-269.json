@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>artswrapper</TT> du packetage  <TT>aRts</TT>, avec le drapeau <TT>setuid root</TT> positionné,  sous les noyaux Linux 2.6.0 ou versions supérieures.",
+  "content": "## Description\n\naRts est un système modulaire de gestion des sons sous Linux, utilisé\nnotamment par KDE.  \nartswrapper est un binaire du paquetage aRts permettant d'exécuter du\ncode avec des privilèges élevés.  \nUne vulnérabilité dans le binaire artswrapper permet à un utilisateur\nmal intentionné d'élever ses privilèges au niveau de celui de root.\n\n## Contournement provisoire\n\nDans l'attente de l'application des correctifs, enlever le drapeau\nsetuid root du binaire artswrapper.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). Il est également possible\nd'appliquer les correctifs pour aRts depuis les sources. Les correctifs\nse trouvent à cette adresse :\n\n    ftp://ftp.kde.org/pub/kde/security_patches\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2916",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2916"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200606-22 du 22 juin 2006    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200606-22.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:107 du 20 juin    2006 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDKSA-2006:107"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-269",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-06-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le packetage aRts permet à un utilisateur mal\nintentionné d'élever ses privilèges.\n",
+  "title": "Vulnérabilité de aRts",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité KDE du 14 juin 2006",
+      "url": "http://www.kde.org/info/security/advisory-20060614-2.txt"
+    }
+  ]
+}

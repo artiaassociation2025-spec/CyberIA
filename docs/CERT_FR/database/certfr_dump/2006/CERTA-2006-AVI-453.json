@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de OpenSSH  antérieures à la 4.4.</p>",
+  "content": "## Description\n\nUne erreur dans la mise en œuvre du serveur sshd de OpenSSH permet à un\nutilisateur distant de provoquer un déni de service sur le serveur\nvulnérable. En outre, si le support de l'autentification via GSSAPI\n(Kerberos) est activé dans sshd, il lui est alors possible d'exécuter du\ncode arbitraire à distance.\n\n## Solution\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0698 du 28 septembre    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0698.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:179 du 03 octobre    2006 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:179"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-355-1 du 03 octobre 2006 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-355-1"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1189 du 04 octobre 2006 :",
+      "url": "http://www.debian.org/security/dsa-1189"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0697 du 28 septembre    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0697.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-06:22.openssh du 30    septembre 2006 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-06:22.openssh.asc"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-453",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans OpenSSH permet à un utilisateur distant\nde provoquer un déni de service ou d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité de OpenSSH",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenBSD du 12 octobre 2006",
+      "url": null
+    }
+  ]
+}

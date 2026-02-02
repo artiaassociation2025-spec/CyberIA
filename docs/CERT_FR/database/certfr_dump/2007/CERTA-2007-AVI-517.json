@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Cairo versions 1.4.11 et antérieures.</p>",
+  "content": "## Description\n\nUne vulnérabilité est présente dans la bibliothèque de fonctions\nd'affichage Cairo. Elle est relative à la mise en œuvre de l'affichage\nd'images au format PNG (Portable Network Graphics). Cette faille permet\nà un utilisateur distant de provoquer un déni de service de\nl'application utilisant Cairo ou l'exécution de code arbitraire.\nL'attaque peut être conduite à distance par le biais d'une image PNG\nconstruite de façon particulière.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5503",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5503"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2007:1078 du 29 novembre    2007 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-1078.html"
+    },
+    {
+      "title": "Bulletin de sécurité Cairo du 27 novembre 2007 :",
+      "url": "http://cairographics.org/news/cairo-1.4.12"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-550-1 du 03 décembre 2007 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-550-1"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-517",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Cairo permet à un utilisateur distant de\nprovoquer un déni de service ou d'exécuter du code arbitraire à\ndistance.\n",
+  "title": "Vulnérabilité de Cairo",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport d'erreur RedHat #387431",
+      "url": "https://bugzilla.redhat.org/show_bug.cgi?id=387431"
+    }
+  ]
+}

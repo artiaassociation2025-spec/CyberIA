@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Ingres 2006 release 2 (9.1.0) ;</LI>    <LI>Ingres 2006 release 1 (9.0.4) ;</LI>    <LI>Ingres 2.6.</LI>  </UL>  <P>Certains produits <SPAN class=\"textit\">CA</SPAN> utilisent ce  système de gestion de base de données.</P>",
+  "content": "## Description\n\nTrois vulnérabilités ont été découvertes et permettent à une personne\nmalveillante d'élever ses privilèges et d'exécuter du code arbitraire :\n\n-   une personne non authentifiée peut attribuer à un utilisateur ou un\n    groupe propriétaire d'un journal d'événements verifydb des droits en\n    lecture et en écriture ;\n-   une personne non authentifiée exploitant une vulnérabilité de type\n    écrasement de pointeur peut exécuter du code arbitraire sur le\n    serveur de base de données ;\n-   une personne non authentifiée peut obtenir les privilèges d'un\n    utilisateur Ingres, cette vulnérabilité combinée avec la précédente\n    peut permettre d'obtenir les droits root.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3356",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3356"
+    },
+    {
+      "name": "CVE-2008-3357",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3357"
+    },
+    {
+      "name": "CVE-2008-3389",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3389"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ingres du 01 août 2008 :",
+      "url": "http://www.ingres.com/support/security-alert-080108.php"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-390",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-08-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités découvertes dans <span\nclass=\"textit\">Ingres</span> permettent à une personne malintentionnée\nd'exécuter du code arbitraire et d'élever ses privilèges.\n",
+  "title": "Multiples vulnérabilités dans Ingres",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ingres du 01 aout 2008",
+      "url": null
+    }
+  ]
+}

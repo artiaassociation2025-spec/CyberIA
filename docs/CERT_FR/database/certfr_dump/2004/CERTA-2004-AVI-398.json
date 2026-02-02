@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Adobe Acrobat Reader for Unix version 5.0.9 et  antérieures.</P>",
+  "content": "## Description\n\nL'application Adobe Acrobat Reader for Unix permet de lire et de\nmanipuler les fichiers de type PDF (Portable Document Format) sur les\nsystèmes d'exploitation descendant d'Unix.\n\nLa fonction mailListIsPdf() permet de vérifier si le fichier fourni en\nentrée est un message électronique contenant une pièce jointe de type\nPDF. Cette fonction présente une vulnérabilité de type dépassement de\nmémoire qui permet à un utilisateur mal intentionné d'exécuter du code\narbitraire sur le système vulnérable avec les privilèges de la victime.\nUne personne malveillante peut exécuter du code arbitraire à distance,\nau moyen d'un message électronique ayant comme pièce jointe un fichier\npdf malicieusement constitué.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. Documentation)\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité d'Adobe :",
+      "url": "http://www.adobe.com/support/techdocs/331153.html"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD du 22 décembre 2004 :",
+      "url": "http://www.vuxml.org/openbsd/"
+    },
+    {
+      "title": "Site Internet Adobe :",
+      "url": "http://www.adobe.com/products/acrobat/readermain.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200412-12 du 16 décembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200412-12.xml"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD du 21 décembre 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Red hat RHSA-2004:674 du 23 décembre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-674.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-398",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-12-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Gentoo.",
+      "revision_date": "2004-12-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de FreeBSD.",
+      "revision_date": "2004-12-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité d'OpenBSD.",
+      "revision_date": "2004-12-23T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Red Hat.",
+      "revision_date": "2005-01-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité découverte dans l'application Acrobat Reader d'Adobe\npermet à un utilisateur mal intentionné d'exécuter du code arbitraire\nsur le système vulnérable.\n",
+  "title": "Vulnérabilité de Adobe Acrobat Reader sous Unix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDEFENSE",
+      "url": "http://www.idefense.com/application/poi/display?id=161&type=vulnerabilities"
+    },
+    {
+      "published_at": null,
+      "title": "``Adobe Acrobat Reader 5.0.9 for Unix'' du 14 décembre 2004",
+      "url": null
+    }
+  ]
+}

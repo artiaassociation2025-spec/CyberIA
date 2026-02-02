@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Meraki MX Firmware versions 16.2 à 16.16 antérieures à 16.16.6",
+      "product": {
+        "name": "Meraki MX",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Meraki MX Firmware versions 17.x antérieures à 17.10.1",
+      "product": {
+        "name": "Meraki MX",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco ISE versions 3.2 antérieures à 3.2P1 (disponible à partir de novembre 2022)",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco ISE versions 3.1 antérieures à 3.1P5 (disponible à partir de novembre 2022)",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-20822",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-20822"
+    },
+    {
+      "name": "CVE-2022-20933",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-20933"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-938",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-10-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Cisco.\nElles permettent à un attaquant de provoquer un déni de service à\ndistance, une atteinte à l'intégrité des données et une atteinte à la\nconfidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans les produits Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-ise-path-trav-Dz5dpzyM du 19 octobre 2022",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-path-trav-Dz5dpzyM"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-meraki-mx-vpn-dos-vnESbgBf du 19 octobre 2022",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-meraki-mx-vpn-dos-vnESbgBf"
+    }
+  ]
+}

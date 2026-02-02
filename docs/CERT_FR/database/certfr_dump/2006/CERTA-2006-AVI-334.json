@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Informix Dynamic Server (IDS) version 10.00.xC3 ainsi que celles antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Informix Dynamic Server (IDS) version 9.40.xC5 ainsi que celles antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Informix Dynamic Server (IDS) version 7.31.xD8 ainsi que celles antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans le logiciel Informix\nDynamic Server (IDS) d'IBM. Parmi-celles-ci :\n\n-   débordement de tampon possible au moyen de certaines fonctions comme\n    DBINFO(), LOTOFILE(), FILETOCLOB(), getname() ou ifx_file_to_file()\n    ;\n-   stockage de mots de passe utilisateurs en clair dans la mémoire\n    partagée ;\n-   défaut de permission pour créer une base de donnéees ;\n-   gestion non correcte de certaines variables d'environnement comme\n    SQLIDEBUG.\n\nCes vulnérabilités permettraient à un attaquant malveillant d'exécuter\ndu code arbitraire ou de provoquer un déni de service (DoS) sur un\nsystème vulnérable, ou bien encore d'augmenter ses privilèges et\nd'accéder à des informations sensibles sur le système.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité 1242921 d'IBM du 31 juillet 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg2242921"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-334",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans le logiciel Informix\nDynamic Server (IDS) d'IBM. Elles permettraient sous certaines\nconditions à un attaquant distant ou un utilisateur local d'exécuter du\ncode arbitraire, de provoquer un déni de service ou d'accéder à des\ninformations sensibles sur un système vulnérable.\n",
+  "title": "Multiples vulnérabilités dans IBM Informix Dynamic Server (IDS)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM du 31 juillet 2006",
+      "url": null
+    }
+  ]
+}

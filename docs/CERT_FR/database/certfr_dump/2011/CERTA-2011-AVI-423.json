@@ -1,0 +1,110 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMware ESX 3.0.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESX 4.1.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESX 3.5.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESX 4.0.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs logiciels vulnérables inclus dans VMware ESX Console OS ont\nété mis à jour par l'éditeur :\n\n-   DHCP est mis à jour pour corriger une vulnérabilité permettant à un\n    utilisateur malveillant distant de provoquer un déni de service et\n    d'exécuter du code arbitraire (CVE-2011-0997) ;\n-   glibc est mise à jour pour corriger de multiples vulnérabilités\n    exploitables localement (CVE 2010-0296, CVE-2011-0536, CVE-2011-997\n    et CVE-2011-1071).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nVMware fourni pour l'instant des correctifs pour la version 4.1 d'ESX.\nLes correctifs pour les versions 4.0 et 3.5 ont été annoncés.\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0296",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0296"
+    },
+    {
+      "name": "CVE-2011-0536",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0536"
+    },
+    {
+      "name": "CVE-2011-0997",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0997"
+    },
+    {
+      "name": "CVE-2011-1071",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1071"
+    },
+    {
+      "name": "CVE-2011-1095",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1095"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis CERTA CERTA-2011-AVI-193 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2011-AVI-193/"
+    },
+    {
+      "title": "Avis CERTA CERTA-2011-AVI-190 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2011-AVI-190/"
+    },
+    {
+      "title": "Bulletin de sécurité VMware VMSA-2011-0010 du 28 juillet    2011 :",
+      "url": "http://www.vmware.com/security/advisories/VMSA-2011-0010.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-423",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-08-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités affectant différents logiciels inclus dans\nVMware ESX Console OS <span class=\"textit\">(COS)</span> ont été\ncorrigées.\n",
+  "title": "Multiples vulnérabilités dans VMware ESX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité VMware VMSA-2011-0010 du 28 juillet 2011",
+      "url": null
+    }
+  ]
+}

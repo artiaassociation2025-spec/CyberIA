@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Ghostscript 7.07.1-r7 et versions antérieures.</P>",
+  "content": "## Description\n\nL'application Ghostscript est un interpréteur de fichier PostScript (PS)\net PDF. Les scripts pj-gs.sh, ps2epsi.sh, pv.sh et sysvlp.sh, présents\ndans Ghostscript sont vulnérables à une attaque classique d'écrasement\nde fichiers via le suivi des liens symboliques. A l'aide de liens\nhabilement constitués, un utilisateur mal intentionné, ayant un accès\nlocal au système, peut forcer la modification de fichiers avec les\ndroits de la victime.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Référence CVE CAN-2004-0967 :",
+      "url": "http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0967"
+    },
+    {
+      "title": "Bulletins de sécurité FreeBSD pour ghostscript-gnu,    ghostscript-gnu-nox11, ghostscript-afpl et    ghostscript-afpl-nox11 du 27 novembre 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-ghostscript-gnu.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200410-18 du 20 octobre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200410-18.xml"
+    },
+    {
+      "title": "Bulletins de sécurité FreeBSD pour ghostscript-gnu,    ghostscript-gnu-nox11, ghostscript-afpl et    ghostscript-afpl-nox11 du 27 novembre 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-ghostscript-afpl-nox11.html"
+    },
+    {
+      "title": "Bulletins de sécurité FreeBSD pour ghostscript-gnu,    ghostscript-gnu-nox11, ghostscript-afpl et    ghostscript-afpl-nox11 du 27 novembre 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-ghostscript-afpl.html"
+    },
+    {
+      "title": "Bulletins de sécurité FreeBSD pour ghostscript-gnu,    ghostscript-gnu-nox11, ghostscript-afpl et    ghostscript-afpl-nox11 du 27 novembre 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-ghostscript-gnu-nox11.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-351",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-10-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité FreeBSD.",
+      "revision_date": "2005-11-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans Ghostscript permet à un utilisateur\nlocal, mal intentionné, de porter atteinte à l'intégrité des données\nprésentes sur le système.\n",
+  "title": "Vulnérabilité dans Ghostscript",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA-200410-18 du 20 octobre 2004",
+      "url": null
+    }
+  ]
+}

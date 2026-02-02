@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Firewall Services Module (FWSM) 3.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco PIX 6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Firewall Services Module (FWSM) 2.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco PIX 7.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Adaptive Security Appliance (ASA) 7.x ;",
+      "product": {
+        "name": "Adaptive Security Appliance",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur dans le traitement des requêtes HTTP fragmentées sur les\nproduits Cisco PIX, ASA et FWSM permet de contourner les règles de\nfiltrage de liens créées par l'intermédiaire du logiciel Websense. Ceci\nrend possible, pour un utilisateur distant mal intentionné, l'accès à\ncertaines parties normalement inaccessibles d'un site web protégé par\nl'équipement vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0515",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0515"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID du 10 mai 2006 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20060508-pix.shtml"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-186",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans les produits Cisco PIX, ASA et FWSM permet à un\nutilisateur distant de contourner la politique de sécurité du système.\n",
+  "title": "Vulnérabilité dans les produits Cisco PIX, ASA et FWSM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco #70090 du 8 mai 2006",
+      "url": null
+    }
+  ]
+}

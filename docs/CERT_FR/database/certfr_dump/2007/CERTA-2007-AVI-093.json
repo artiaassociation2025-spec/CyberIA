@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ClamAV version 0.90RC1.1 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ClamAV",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans ClamAV :\n\n-   un problème de libération de ressources lors de la validation de\n    l'entête des fichiers de type cabinet (fichier CAB) peut permettre à\n    une personne distante malintentionnée de réaliser un déni de service\n    en bloquant toutes les ressources disponibles ;\n-   un manque de validation d'un paramètre des entêtes MIME pourrait\n    permettre à un utilisateur malveillant de contourner la politique de\n    sécurité en modifiant des fichiers protégés de l'antivirus.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0898",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0898"
+    },
+    {
+      "name": "CVE-2007-0897",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0897"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité iDefense 475 du 15 février 2007 :",
+      "url": "http://www.idefense.com/application/poi/display?id=475"
+    },
+    {
+      "title": "Mise à jour de sécurité SuSE :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2007-Feb/0004.html"
+    },
+    {
+      "title": "Mise à jour de sécurité Gentoo :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200703-03.xml"
+    },
+    {
+      "title": "Mise à jour de sécurité Debian :",
+      "url": "http://lists.debian.org/debian-security-announce/debian-security-announce-2007/msg00018.html"
+    },
+    {
+      "title": "Bulletin Mandriva MDKSA-2007:043 du 19 février 2007 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:043"
+    },
+    {
+      "title": "Bulletin de sécurité iDefense 476 du 15 février 2007 :",
+      "url": "http://www.idefense.com/application/poi/display?id=476"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-093",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2007-02-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence Mandriva ;",
+      "revision_date": "2007-02-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références Debian, SuSE et Gentoo.",
+      "revision_date": "2007-03-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans ClamAV permettent à un\nutilisateur distant de contourner la politique de sécurité ou de\nréaliser un déni de service.\n",
+  "title": "Multiples vulnérabilités dans ClamAV",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité iDefense 475 et 476 du 15 février 2007",
+      "url": null
+    }
+  ]
+}

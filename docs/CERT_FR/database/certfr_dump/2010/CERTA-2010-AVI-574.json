@@ -1,0 +1,168 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMware ESXi 4.0 sans le correctif ESXi400-201009402-BG ou postérieurs ;",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESX 4.0 sans le correctif ESX400-201009401-BG ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Workstation version 6.5.4 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESXi 3.5 sans le correctif ESXi350-201008402-BG ou postérieurs ;",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Player version 2.5.4 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESXi 4.1 sans le correctif ESXi410-201010402-BG ou postérieurs ;",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Player version 3.1.1 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Workstation version 7.1.1 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Fusion version 3.1.1 et antérieures ;",
+      "product": {
+        "name": "Fusion",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESX 4.1 sans le correctif ESX410-201010405-BG ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESX 3.5 sans le correctif ESX350-201008409-BG ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités dans les produits VMware ont été découvertes :\n\n-   une vulnérabilité dans le codec VMnc permet à une personne\n    malintentionnée d'exécuter du code arbitraire à distance\n    (CVE-2010-4294) ;\n-   une vulnérabilité dans la gestion des fichiers temporaires par le\n    processus de montage permet à une personne malintentionnée d'élever\n    ses privilèges sur le système hôte (CVE-2010-4295) ;\n-   une vulnérabilité dans le fichier binaire vmware-mount permet à une\n    personne malintentionnée d'exécuter du code sur la machine hôte avec\n    les privilèges de l'utilisateur « root » (CVE-2010-4296) ;\n-   une vulnérabilité dans la validation des données d'entrée de la mise\n    à jour de VMware Tools permet à une personne malintentionnée\n    d'exécuter du code arbitraire avec les privilèges de l'utilisateur «\n    root » sur la machine invitée (CVE-2010-4297).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-4296",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4296"
+    },
+    {
+      "name": "CVE-2010-4295",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4295"
+    },
+    {
+      "name": "CVE-2010-4294",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4294"
+    },
+    {
+      "name": "CVE-2010-4297",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4297"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité VMware VMSA-2010-0018 du 02 décembre    2010 :",
+      "url": "http://www.vmware.com/security/advisories/VMSA-2010-0018.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-574",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans les produits VMware permettent à une\npersonne malintentionnée d'exécuter du code arbitraire en local ou à\ndistance ou d'élever ses privilèges sur le système vulnérable.\n",
+  "title": "Multiples vulnérabilités dans les produits VMware",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware VMSA-2010-0018 du 02 décembre 2010",
+      "url": null
+    }
+  ]
+}

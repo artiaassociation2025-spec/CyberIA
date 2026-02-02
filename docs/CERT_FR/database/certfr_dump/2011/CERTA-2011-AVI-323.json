@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Zope 2.x.</p>",
+  "content": "## Description\n\nUne vulnérabilité a été corrigée dans le framework PluggableAuthService\nde Zope. Ce framework ne vérifie pas l'unicité du nom lorsqu'un\nutilisateur change son nom. Une personne malveillante authentifiée peut\nainsi prendre le nom d'un autre utilisateur, ce qui aura pour\nconséquence de l'empêcher de s'authentifier.\n\n## Solution\n\nSe référer à la liste de diffusion Zope pour l'obtention des correctifs\n(cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2011-AVI-323",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-06-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Zope. Elle peut être exploitée\npar une personne distante malveillante authentifiée pour empêcher un\nautre utilisateur de s'authentifier.\n",
+  "title": "Vulnérabilité dans Zope",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Message de la liste de diffusion Zope du 30 mai 2011",
+      "url": "https://mail.zope.org/pipermail/zope-announce/2011-May/002257.html"
+    }
+  ]
+}

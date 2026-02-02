@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>ISC BIND versions 9.7.x</p>",
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans ISC BIND 9.7.x :\n\n-   une erreur peut permettre un accès au cache du DNS, et cela même si\n    ces données sont protégées par des régles de contrôle d'accès. Il\n    est nécessaire que le serveur DNS fonctionne à la fois en mode\n    récursif et fasse authorité authoritative pour que cette\n    vulnérabilité soit exploitable ;\n-   lors de la validation d'une requête DNSSEC, un déni de service à\n    distance est possible sous certaines conditions.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nLa version 9.7.2-P2, disponible sur le site de l'éditeur, corrige ces\nvulnérabilités.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité concernant BIND 9.7.2 :",
+      "url": "https://lists.isc.org/pipermail/bind-announce/2010-September/000655.html"
+    },
+    {
+      "title": "Note de mise à jour de la version ISC BIND 9.7.2-P2 :",
+      "url": "http://ftp.isc.org/isc/bind9/9.7.2-P2/RELEASE-NOTES-BIND-9.7.2-P2.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-459",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-09-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans ISC BIND 9.7.x permettent, entre autres, un\ndéni de service à distance, ainsi que l'accès à des données de cache du\nDNS.\n",
+  "title": "Multiples vulnérabilités dans BIND",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de mise à jour de BIND 9.7.2-P2",
+      "url": null
+    }
+  ]
+}

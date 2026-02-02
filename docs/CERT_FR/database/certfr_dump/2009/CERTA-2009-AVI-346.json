@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Client IBM AFS pour Linux, versions antérieures à la version  3.6 patch 19.</P>",
+  "content": "## Description\n\nDans certaines circonstances, le code retourné par un serveur AFS, puis\ntransmis par le client AFS Linux au noyau, est interprété par ce dernier\ncomme un pointeur. Cette erreur provoque un arrêt du système (kernel\npanic). Un utilisateur malveillant peut utiliser ce défaut pour\nprovoquer un déni de service à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2009-AVI-346",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité sur le client IBM AFS pour Linux permet à un\nutilisateur malveillant de provoquer un déni de service à distance.\n",
+  "title": "Vulnérabilité dans le client IBM AFS pour Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg21396389 du 17 août 2009",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21396389"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Roundcube Webmail LTS versions 1.4.x antérieures à 1.4.12",
+      "product": {
+        "name": "Roundcube Webmail",
+        "vendor": {
+          "name": "Roundcube",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Roundcube Webmail LTS versions 1.3.x antérieures à 1.3.17",
+      "product": {
+        "name": "Roundcube Webmail",
+        "vendor": {
+          "name": "Roundcube",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-44026",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-44026"
+    },
+    {
+      "name": "CVE-2021-44025",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-44025"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2021-AVI-898",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-11-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Roundcube Webmail.\nElles permettent à un attaquant de provoquer une atteinte à l'intégrité\ndes données, une atteinte à la confidentialité des données et une\ninjection de code indirecte à distance (XSS).\n",
+  "title": "Multiples vulnérabilités dans Roundcube Webmail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Roundcube du 12 novembre 2021",
+      "url": "https://roundcube.net/news/2021/11/12/security-updates-1.4.12-and-1.3.17-released"
+    }
+  ]
+}

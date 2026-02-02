@@ -1,0 +1,44 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tous les systèmes possédant la version  5.50 (ou antérieure) de UnZip.</p>",
+  "content": "## Description\n\nLors de l'extraction des fichiers contenus dans une archive au format\n.zip, le chemin des fichiers n'est pas correctement validé.\n\nIl est alors possible, pour un utilisateur mal intentionné, de\nconstituer une archive contenant des fichiers qui seront extraits dans\nun répertoire parent du répertoire d'extraction initial (présence de la\nséquence \"../\" dans le chemin d'accès).\n\n## Solution\n\nAppliquer le correctif de l'éditeur :\n\n-   Bulletin de sécurité DSA-344 de Debian :\n\n        http://www.debian.org/security/2003/dsa-344\n\n-   Bulletin de sécurité MDKSA-2003:073 de Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:073\n\n-   Bulletin de sécurité RHSA-2003:199 de Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2003-199.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Info-Zip :",
+      "url": "http://www.info-zip.org/pub/infozip/UnZip.html"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-138",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-08-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité du système"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de la commande UnZip",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MDKSA-2003:071 de Mandrake",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RHSA-2003:199 de RedHat",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DSA-344 de Debian",
+      "url": null
+    }
+  ]
+}

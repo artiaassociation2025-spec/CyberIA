@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Grafana 9.2.x et 9.3.x sans le dernier correctif de sécurité",
+      "product": {
+        "name": "Grafana",
+        "vendor": {
+          "name": "Grafana Labs",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-22462",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-22462"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0176",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-03-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Grafana. Elle permet à un\nattaquant de provoquer une injection de code indirecte à distance (XSS).\n",
+  "title": "Vulnérabilité dans Grafana",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Grafana CVE-2023-22462 du 01 mars 2023",
+      "url": "https://github.com/grafana/grafana/security/advisories/GHSA-7rqg-hjwc-6mjf"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "phpSysInfo 1.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "phpSysInfo 2.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nphpSysInfo est un programme en langage php qui retourne graphiquement\ndes informations sur système.\n\n  \n\nUne vulnérabilité dans l'émulation register_globals permet à un\nutilisateur mal intentionné de porter atteinte à l'intégrité des\ndonnéees présentes sur le serveur afin de s'en servir pour exécuter du\ncode arbitraire à distance sur les postes clients.\n\n## Solution\n\nAppliquer la mise à jour de sécurité phpSysInfo en passant à la version\n2.4.1 disponible à l'adresse suivante :\n\n    http://sourceforge.net/project/showfiles.php?group_id=15\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Hardened-php #22/2005 du 13 novembre    2005 :",
+      "url": "http://www.hardened-php.net/advisory_222005.81.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-468",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans phpSysInfo permet à un utilisateur mal\nintentionné de porter atteinte à l'intégrité des donnéees présentes sur\nle serveur vulnérable pour ensuite exécuter du code arbitraire à\ndistance sur les postes clients.\n",
+  "title": "Vulnérabilité dans phpSysInfo",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise à jour de sécurité pour phpSysInfo en version 2.4.1",
+      "url": "http://sourceforge.net/project/showfiles.php?group_id=15"
+    }
+  ]
+}

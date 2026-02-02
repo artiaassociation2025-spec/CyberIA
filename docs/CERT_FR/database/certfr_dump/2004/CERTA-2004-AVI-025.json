@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de GNU Radius  antérieures à la version 1.2.</p>",
+  "content": "## Description\n\nGNU Radius est un serveur Radius (RFC2866). Une vulnérabilité dans les\nservices de comptabilité du serveur radiusd permet à un utilisateur mal\nintentionné de provoquer un déni de service par l'envoi d'un paquet UDP\nmalicieusement construit. Aucune authentification n'est nécessaire pour\nexploiter cette vulnérabilité.\n\n## Contournement provisoire\n\nDans l'attente de la mise à jour de GNU Radius, filtrer les ports\nutilisés par le serveur GNU Radius (par défaut 1813/UDP ou 1646/UDP)\npour les opérations de comptabilité.\n\n## Solution\n\nMettre à jour GNU Radius en version 1.2 (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Protocole Radius RFC2866 :",
+      "url": "http://www.ietf.org/rfc/rfc2866.txt"
+    },
+    {
+      "title": "Site internet de GNU Radius :",
+      "url": "http://www.gnu.org/software/radius/radius.html"
+    },
+    {
+      "title": "Avis de sécurité du CERT/CC VU#277396 :",
+      "url": "http://www.kb.cert.org/vuls/id/277396"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-025",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-02-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans GNU Radius permet à un utilisateur mal\nintentionné de provoquer un déni de service sur le serveur Radius\n(service radiusd).\n",
+  "title": "Vulnérabilité de GNU Radius",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité iDEFENSE 02.04.04",
+      "url": "http://www.idefense.com/application/poi/display?id=71"
+    }
+  ]
+}

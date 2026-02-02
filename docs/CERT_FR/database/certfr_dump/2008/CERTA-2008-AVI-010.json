@@ -1,0 +1,131 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows XP Professional x64 Edition Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows XP Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 pour systèmes Itanium (SP1 et SP2).",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows XP Professional x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 x64 Edition Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe service LSASS de Microsoft Windows (Local Security Authority\nSubsystem Service) ne manipulerait pas correctement certaines requêtes\nd'appel LPC (Local Procedure Call). Un utilisateur local pourrait ainsi\nprofiter de cette vulnérabilité pour élever ses privilèges et exécuter\ndu code avec des droits plus élevés que ceux qui lui ont été attribués.\n\n## Solution\n\nSe référer au bulletin de sécurité MS08-002 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5352",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5352"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2008-AVI-010",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-01-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Le service LSASS de Microsoft Windows (<span class=\"textit\">Local\nSecurity Authority Subsystem Service</span>) ne manipulerait pas\ncorrectement certaines requêtes d'appel LPC (<span class=\"textit\">Local\nProcedure Call</span>). Un utilisateur local pourrait ainsi profiter de\ncette vulnérabilité pour élever ses privilèges et exécuter du code avec\ndes droits plus élevés que ceux qui lui ont été attribués.\n",
+  "title": "Vulnérabilité dans LSASS de Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS08-002 du 08 janvier 2008",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-002.mspx"
+    }
+  ]
+}

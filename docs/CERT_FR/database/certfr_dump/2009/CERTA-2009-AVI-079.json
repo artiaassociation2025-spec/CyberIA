@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco ANM versions antérieures à 2.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco ACE Device Manager versions antérieures à A3(2.1) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans Cisco ANM (Application\nNetworking Manager) :\n\n-   des traversées de répertoires sont possibles, ce qui permet à un\n    utilisateur authentifié d'avoir accès à des fichiers système\n    (CVE-2009-0615) ;\n-   le compte Default User possède un mot de passe par défaut dont le\n    remplacement n'est pas rendu obligatoire lors de l'installation. Il\n    est par conséquent possible d'obtenir un accès à distance sur ce\n    compte (CVE-2009-0616) ;\n-   le compte administrateur de la base MySQL possède un mot de passe\n    par défaut (CVE-2009-0617) ;\n-   l'agent Java contient une vulnérabilité qui permet un accès en\n    lecture à distance à des fichiers de configuration, ainsi que la\n    modification de certains processus en cours (avec notamment la\n    possibilité d'arrêter certains services) (CVE-2009-0618).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0616",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0616"
+    },
+    {
+      "name": "CVE-2009-0617",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0617"
+    },
+    {
+      "name": "CVE-2009-0615",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0615"
+    },
+    {
+      "name": "CVE-2009-0618",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0618"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20090225-anm du 25 février 2009    :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20090225-anm.shtml"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-079",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-02-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès à distance au système"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans <span class=\"textit\">Cisco ANM</span>\npermettent d'accéder au système à distance et de procéder à une\nélévation de privilèges.\n",
+  "title": "Vulnérabilités dans Cisco ANM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-sa-20090225-anm du 25 février 2009",
+      "url": null
+    }
+  ]
+}

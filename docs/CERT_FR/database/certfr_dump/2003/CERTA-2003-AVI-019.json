@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft Internet Explorer 5.01 ;</LI>    <LI>Microsoft Internet Explorer 5.5 ;</LI>    <LI>Microsoft Internet Explorer 6.0.</LI>  </UL>  <P>Les versions précédentes ne sont plus supportées.</P>",
+  "content": "## Description\n\nDeux nouvelles vulnérabilités ont été découvertes sur Internet Explorer\nconcernant le modèle de sécurité entre les différents domaines Internet\ndu navigateur.  \n\nLa première vulnérabilité permet, en utilisant certaines boîtes de\ndialogue, d'obtenir des informations d'un autre domaine. Ceci est dû à\nun mauvais cloisonnement entre deux fenêtres de deux domaines différents\nouvertes simultanément.  \n\nLa deuxième vulnérabilité concerne la fonction showHelp(), utilisée pour\nafficher de l'aide au format HTML.  \n\nCes deux vulnérabilités peuvent être exploitées par un utilisateur mal\nintentionné, par le biais d'un site web malicieux, pour exécuter du code\narbitraire sur la machine cible sur laquelle est installé un navigateur\nInternet Explorer vulnérable.\n\n## Solution\n\nAppliquer le correctif disponible sur le site de Microsoft (cf.\nDocumentation).\n\nIl s'agit d'un correctif cumulatif qui comprend toutes les mises à jour\nde sécurité pour les systèmes indiqués ci-dessus.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-019",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-02-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Deux vulnérabilités de Microsoft Internet Explorer permettent à un\nutilisateur mal intentionné d'exécuter à distance du code arbitraire.\n",
+  "title": "Vulnérabilités de Microsoft Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Microsoft MS03-004",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms03-004.asp"
+    }
+  ]
+}

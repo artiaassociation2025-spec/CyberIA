@@ -1,0 +1,162 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMWare Workstation versions 7.1.3 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMWare Player versions 3.1.3 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ESXi 3.5 sans les correctifs ESXe350-201105401-SG et ESXe350-201105402-T-SG ;",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ESXi 4.0 sans le correctif ESX400-201104401-BG ;",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMWare Fusion versions 3.1.2 et antérieures ;",
+      "product": {
+        "name": "Fusion",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ESXi 4.1 sans le correctif ESX410-201104401-BG ;",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ESXi 4.0 sans le correctif ESXi400-201104402-BG ;",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ESXi 4.1 sans le correctif ESXi410-201104402-BG ;",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ESXi 3.5 sans les correctifs ESX350-201105401-SG, ESXe350-201105404-SG et ESXe350-201105406-SG ;",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe nombreuses vulnérabilités ont été corrigées dans les produits VMWare\n:\n\n-   une vulnérabilité dans le pilote pour les cartes Intel PRO/1000 sous\n    Linux, qui peut être exploitée pour contourner les filtres réseaux ;\n-   plusieurs vulnérabilités dans des composants tiers du serveur ESX\n    permettent à un utilisateur local malveillant d'élever ses\n    privilèges, à un attaquant sous certaines conditions d'exécuter du\n    code arbitraire à distance, et à un attaquant de créer des dénis de\n    service localement ou à distance ;\n-   plusieurs vulnérabilités dans le système de fichiers Host Guest\n    (HGFS) pour les systèmes Unix peuvent être exploitées par un\n    attaquant dans la machine cliente pour obtenir des informations sur\n    l'existence de fichiers sur la machine hôte, et pour élever ses\n    privilèges (notamment par un accès concurrentiel type \"Race\n    Condition\" en montant un répertoire) ;\n-   une vulnérabilité dans les contrôles ActiveX du client VI permet à\n    un attaquant d'exécuter du code arbitraire à distance à l'aide d'un\n    site Web spécialement conçu.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2240",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2240"
+    },
+    {
+      "name": "CVE-2011-1787",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1787"
+    },
+    {
+      "name": "CVE-2011-2145",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2145"
+    },
+    {
+      "name": "CVE-2009-3080",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3080"
+    },
+    {
+      "name": "CVE-2011-2217",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2217"
+    },
+    {
+      "name": "CVE-2009-4536",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-4536"
+    },
+    {
+      "name": "CVE-2010-1188",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1188"
+    },
+    {
+      "name": "CVE-2011-2146",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2146"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-330",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-06-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De nombreuses vulnérabilités ont été corrigées dans les produits VMWare,\ndont certaines peuvent permettre l'exécution de code arbitraire à\ndistance.\n",
+  "title": "Multiples vulnérabilités dans les produits VMWare",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware VMSA-2011-0009 du 06 juin 2011",
+      "url": "http://www.vmware.com/security/advisories/VMSA-2011-0009.html"
+    }
+  ]
+}

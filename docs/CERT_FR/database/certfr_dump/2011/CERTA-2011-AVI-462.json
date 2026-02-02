@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "EMC RSA Adaptive Authentication On-Premise version 6.0.2.1 SP2 et SP2 Patch 1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "EMC RSA Adaptive Authentication On-Premise version 6.0.2.1 SP1 Patch 2 et SP1 Patch 3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "EMC RSA Adaptive Authentication On-Premise version 6.0.2.1 SP3.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne faille a été découverte dans EMC RSA Adaptive Authentication\nOn-Premise (AAOP). Cette vulnérabilité utilise le fait que AAOP autorise\nle rejeu de la procédure d'authentification durant une session. Un\nutilisateur authentifié est alors en mesure de rejouer cette procédure\nafin de contourner certaines restrictions de sécurité. Il est cependant\nnécessaire que cette personne dispose d'un moyen d'intercepter les\ndonnées échangées lors de la procédure initiale.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2733",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2733"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-462",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-08-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité permettant de contourner la politique de sécurité a\nété découverte dans EMC RSA Adaptive Authentication On-Premise (AAOP).\n",
+  "title": "Vulnérabilité dans EMC RSA Adaptive Authentication On-Premise",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ESA-2011-027 du 11 août 2011",
+      "url": "http://seclists.org/bugtraq/2011/Aug/att-126/ESA-2011-027.txt"
+    }
+  ]
+}

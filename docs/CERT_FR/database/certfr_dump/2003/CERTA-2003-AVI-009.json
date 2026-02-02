@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows NT 4.0 Terminal Server Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT 4.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nMicrosoft Locator Service est un service associant un nom logique à un\nidentifiant réseau. Par défaut, ce service est uniquement activé sur les\nmachines Controleur de domaine.\n\nUn utilisateur mal intentionné peut, par le biais de paquets\njudicieusement composés, entraîner un déni de service ou exécuter du\ncode arbitraire avec les droits system.\n\n## Contournement provisoire\n\nFiltrer le port 135/TCP au niveau du garde-barrière.\n\n## Solution\n\nConsulter le bulletin MS03-001 de Microsoft pour connaître la\ndisponibilité des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms03-001.asp"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-009",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-01-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans Microsoft Locator Service permet à un\nutilisateur distant mal intentionné d'exécuter du code arbitraire sur la\nmachine vulnérable ou d'entraîner un déni de service.\n",
+  "title": "Vulnérabilité dans \"Microsoft Locator Service\"",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS03-001",
+      "url": null
+    }
+  ]
+}

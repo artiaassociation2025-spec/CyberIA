@@ -1,0 +1,44 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Oracle9i Application Server pour :  <UL>    <LI>MS Windows NT/2000 Server;</LI>    <LI>Sun SPARC Solaris 2.6;</LI>    <LI>HP-UX 11.0.</LI>  </UL></p>",
+  "content": "## Description\n\nModPL/SQL est un module Apache livré avec Oracle9i Application Server\npermettant à des utilisateurs distants d'appeler des procédures PL/SQL.\n\nDeux vulnérabilités (se référer à l'avis de sécurité \\#25 d'Oracle) sont\nprésentes dans ce module:\n\n-   la première vulnérabilité permet de sortir de l'environnement du\n    serveur Apache et accéder ainsi à des documents non autorisés\n    résidant sur ce serveur;\n-   la seconde vulnérabilité, de type débordement de mémoire, permet à\n    un utilisateur mal intentionné d'exécuter du code arbitraire à\n    distance avec les privilèges du compte utilisé par le serveur\n    Apache.\n\nUne autre vulnérabilité présente dans Oracle9i Application Server\n(systèmes MS Windows NT/2000 Server uniquement) permet à un utilisateur\nmal intentionné de réaliser un déni de service au moyen d'un requête\nhttp soigneusement choisie.\n\n## Solution\n\nInstaller les correctifs de l'éditeur (se référer à la section\ndocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Alerte de sécurité #26 d'Oracle \"Potential DoS    Vulnerability in Oracle9i Application Server\" :",
+      "url": "http://otn.oracle.com/deploy/security/pdf/9iAS-GPF.pdf"
+    },
+    {
+      "title": "Alerte de sécurité #25 d'Oracle \"Vulnerabilities in    MODPLSQL\" :",
+      "url": "http://otn.oracle.com/deploy/security/pdf/modplsql.pdf"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-002",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-01-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Compromission de données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans Oracle9i Application Server\net dans la passerelle ModPL/SQL permettent à un utilisateur mal\nintentionné de réaliser une élévation de privilèges, d'accéder à des\ndonnées non autorisées ou de réaliser un déni de service.\n",
+  "title": "Multiples vulnérabilités dans Oracle9i Application Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité #25 et #26 d'Oracle",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Oracle 9i Database Release 2, Versions 9.0.x ;",
+      "product": {
+        "name": "Database Server",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Oracle 9i Database Release 2, Versions 9.2.x ;",
+      "product": {
+        "name": "Database Server",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nOracle 9i Database est le gestionnaire de base de données d'Oracle.\n\nUn débordement de mémoire présent dans les binaires oracle et oracleO\npermet à un utilisateur du système d'exécuter du code arbitraire avec\nles privilèges de l'utilisateur oracle.\n\n## Contournement provisoire\n\nSupprimer les droits d'exécution des deux binaires pour les utilisateurs\nn'appartenant pas au même groupe à l'aide des commandes suivantes :\n\n-   cd \\$ORACLE_HOME/bin  \n-   chmod o-x oracle oracleO\n\n## Solution\n\nAppliquer le correctif disponible (cf section documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctif disponible à l'adresse suivante avec le numéro de    correctif 3157063 :",
+      "url": "http://metalink.oracle.com"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-189",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-11-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire sur le système local"
+    }
+  ],
+  "summary": "Une vulnérabilité sur Oracle 9i Database permet à un utilisateur local\nmal intentionné d'exécuter du code arbitraire avec les privilèges de\nl'utilisateur oracle.\n",
+  "title": "Vulnérabilité sur Oracle Database Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité 59 d'Oracle",
+      "url": "http://otn.oracle.com/deploy/security/pdf/2003alert59.pdf"
+    }
+  ]
+}

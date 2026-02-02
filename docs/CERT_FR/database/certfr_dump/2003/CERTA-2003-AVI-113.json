@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Security and Acceleration (ISA) Server 2000.",
+      "product": {
+        "name": "Internet Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nMicrosoft ISA (Internet Security and Acceleration) Server 2000 est un\ngarde-barrière ainsi qu'un serveur mandataire. Il permet notamment de\nfiltrer le trafic au niveau applicatif.\n\nLa fonction `homepage()` dans plusieurs pages d'erreur de ISA Server ne\ncode pas correctement les URL en texte HTML.\n\nUn utilisateur mal intentionné peut exploiter cette vulnérabilité afin\nd'exécuter du code arbitraire sur un poste client accédant au server ISA\nvulnérable au travers de son navigateur (vulnérabilité de type\ncross-site scripting).\n\n## Solution\n\nAppliquer le correctif fourni par Microsoft (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-113",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Des vulnérabilités de type `cross-site scripting` sont présentes dans\nplusieurs pages retournées par le server ISA lors de certaines erreurs\nspécifiques.\n",
+  "title": "Vulnérabilité dans ISA Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #MS03-028 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms03-028.asp"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Lotus Domino 7.0.x sous Linux sur plateformes zSeries et x86.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Lotus Domino 6.x sous Linux sur plateformes zSeries ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe programme tunekrnl est utilisé par IBM Lotus Domino pour gérer les\nperformances du système en affinant certains paramètres du noyau Linux.\n\nDeux vulnérabilités, de type dépassement de mémoire, dans le fichier\ntunekrnl permettent à un utilisateur locale d'élever ses privilèges.\n\n## Solution\n\nLes versions de Lotus Domino 6.5.5 Fix Pack 2 et Lotus Domino 7.0.2\ncorrigent le problème. Pour les versions antérieurs, IBM propose de\nrenommer, supprimer ou inhiber le programme tunekrnl, ces actions\npouvant éventuellement affecter les performances du système.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2006-AVI-487",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités sous IBM Lotus Domino peuvent conduirent une\npersonne malintentionnée à élever ses privilèges.\n",
+  "title": "Multiples vulnérabilités dans Lotus Domino pour Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM",
+      "url": "http://www-1.ibm.com/support/docview.wss?rs=475&uid=swg21249173"
+    }
+  ]
+}

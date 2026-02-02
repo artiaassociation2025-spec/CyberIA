@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système utilisant Microsoft Internet Explorer.</P>",
+  "content": "## Description\n\nMicrosoft a proposé un format de fichiers d'aide pour Windows qui\npermet, en cliquant sur un lien, d'exécuter du code en local\n(programmes, ou scripts). Par exemple, en lisant l'aide de Windows pour\nconfigurer une imprimante, il est possible d'ouvrir le gestionnaire\nd'impression en cliquant sur un lien de cette aide.\n\nUn utilisateur mal intentionné peut générer ce genre de fichier en y\nmettant des liens vers des fichiers exécutables locaux de son choix\n(voire vers des documents bureautique contenant des macros). Si ce\nfichier d'aide se trouve sur un lecteur réseau connecté (UNC) ou s'il\nest placé localement sur le disque (par détachement d'un mail, par\nexemple), il permet de faire exécuter des fichiers arbitraires par celui\nqui le lirait et cliquerait sur les liens insérés dans le texte. Il\nporfite du fait qu'en cliquant sur un lien on ne pense pas forcément\nexécuter du code.\n\nCe type de fichiers peut aussi être exécuté, de façon non-interactive,\net donc à l'insu de l'utilisateur, via un contrôle ActiveX situé dans\nune page web ou dans un mail lu par Microsoft outlook.\n\n## Contournement provisoire\n\nIl faut :\n\n-   Rester vigilant vis à vis des des documents de tout type contenant\n    éventuellement des scripts (macro, VBS, ActiveX, etc.).\n\n-   Désactiver les contrôles ActiveX, comme indiqué dans les notes\n    CERTA-2000-INF-002, CERTA-2000-AVI-002 et CERTA-2000-REC-001, pour\n    les 4 types de Zones : Internet, Intranet Local, Sites de confiance\n    (Maintenir une liste précise des sites utilisant HTTPS comme\n    protocole), et Sites sensibles (Sites dont le contenu pourrait\n    endomager votre système).\n\n    Il existe une cinquième zone, qui n'est généralement pas visible\n    appelée « Poste de travail » (My Computer). Les paramètres de\n    sécurité pour cette zone sont observables ou modifiables par la base\n    des registres (regedit). Pour plus de détails voir le site de\n    microsoft :\n\n        http://support.microsoft.com/support/kb/articles/Q182/569.asp\n\n    En outre, les paramètres de sécurité de la zone poste de travail\n    peuvent être administrés grâce au logiciel « Internet Explorer\n    Administration Kit » (IEAK).\n\n    Pour la version francaise :\n\n        http://www.microsoft.com/windows/ieak/fr/download/default.asp\n\n## Solution\n\n## 6.1 À la main\n\nLe contrôle HHCtrl est le point central de l'exploitation de cette\nvulnérabilité. Si vous désirez agir plus finement (à vos risques et\npérils) que dans les recommandations générales des notes du CERTA, le\nCERT/CC propose de désactiver soit « Contrôles ActiveX reconnus sûrs\npour l'écriture de scripts » soit les « Contrôles d'initialisation et de\nscripts ActiveX non marqués » uniquement pour le contrôle HHCtrl, qui\nsont tous les deux activés par défaut lors de l'installation d'Internet\nExplorer.\n\nPour celà, supprimez l'une des deux clefs suivantes de la base de\nregistres :\n\n-   HKEY_CLASSES_ROOT`\\`CLSID`\\`\n    `{`ADB880A6-D8FF-11CF-9377-00AA003B7A11`}``\\` Implemented\n    Categories`\\` `{`7DD95801-9882-11CF-9FA9-00AA006C42C4`}`\n-   HKEY_CLASSES_ROOT`\\`CLSID`\\`\n    `{`ADB880A6-D8FF-11CF-9377-00AA003B7A11`}``\\` Implemented\n    Categories`\\` `{`7DD95802-9882-11CF-9FA9-00AA006C42C4`}`\n\n## 6.2 correctif partiel\n\nMicrosoft fournit un correctif qui n'autorise pas l'exécution de code,\npar un lien situé dans un fichier d'aide de ce type, se trouvant sur un\nlecteur réseau. Ce correctif ne traite pas l'exécution de code si le\nfichier d'aide se trouve sur un disque local (suite à un télechargement\npar exemple) :\n\n-   Pour Internet explorer 4.0, 4.01, 5.0 et 5.01 sous Windows 95, 98\n    première et seconde édition et Windows NT4.0 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=210705\n\n-   Pour Internet Explorer 5.01 sous Windows2000\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=210706\n\nEnfin, microsoft propose aussi un correctif pour outlook, protègeant un\npeu plus les utilisateurs de ce gestionnaire de courriers contre les\nscripts contenus dans les mails et les pièces jointes.\n\nPour le télecharger aller à l'adresse suivante :\n\n    http://www.officeupdate.com/2000/downloaddetails/out2ksec.htm\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Modification des paramètres de la zone « poste de travail »    par la base des registres",
+      "url": "http://support.microsoft.com/support/kb/articles/Q182/569.asp"
+    },
+    {
+      "title": "Avis du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2000-12.html"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-009",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-06-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution arbitraire de fichiers locaux"
+    }
+  ],
+  "summary": "Grâce à la lecture d'un fichier d'aide de Windows (extension .CHM)\nastucieusement construit, un utilisateur peut être conduit par une\npersonne mal intentionnée à exécuter localement du code à son insu.\n",
+  "title": "Exécution de fichiers locaux grâce aux fichiers d'aides de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-037.asp"
+    },
+    {
+      "published_at": null,
+      "title": "Avis CA-2000-12 du CERT/CC",
+      "url": null
+    }
+  ]
+}

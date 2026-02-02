@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Clam AntiVirus 0.88 et versions antérieures.</P>",
+  "content": "## Description\n\nClamAV est un logiciel antivirus libre (GPL).\n\nTrois types de vulnérabilités ont été découvertes dans ClamAV :\n\n-   une vulnérabilité de type débordement d'entier dans le traitement\n    des en-tête PE ;\n-   plusieurs vulnérabilités de type chaîne de format peuvent être\n    exploitées à distance afin d'exécuter du code arbitraire ;\n-   une vulnérabilité de type débordement de mémoire dans la fonction\n    cli_bitset_set() peut être exploitée afin de provoquer un déni de\n    service.\n\n## Solution\n\nAppliquer la mise à jour de sécurité de ClamAV en passant à la version\n0.88.1 disponible à l'adresse suivante :\n\n    http://sourceforge.net/project/showfiles.php?group_id=86638&release_id=407078\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité pour ClamAV en version 0.88.1 :",
+      "url": "http://sourceforge.net/project/showfiles.php?group_id=86638&release_id=407078"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD du 06 avril 2006 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-clamav.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200604-06.xml du 07 avril    2006 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200604-06.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1024 du 05 avril 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1024"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:067 du 07 avril    2006 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDKSA-2006:067"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-140",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-04-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Mandriva, Gentoo et FreeBSD.",
+      "revision_date": "2006-04-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans ClamAV permettent à un utilisateur distant\nmal intentionné de provoquer un déni de service ou d'exécuter du code\narbitraire.\n",
+  "title": "Multiples vulnérabilités dans ClamAV",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise à jour de sécurité pour ClamAV du 04 avril 2006",
+      "url": null
+    }
+  ]
+}

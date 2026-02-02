@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PHP 5.0.1",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PHP 5.0",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPHP est un langage de script permettant la réalisation de pages web\ndynamiques. Deux vulnérabilités viennent d'être découvertes :\n\n-   Une première vulnérabilité est dûe à un mauvais traitement dans\n    php_variables.c. Cette vulnérabilité permet à un utilisateur mal\n    intentionné de prendre connaissance des informations présentes sur\n    le système vulnérable.\n-   Une seconde vulnérabilité concerne la fonction\n    SAPI_POST_HANDLER_FUNC() présente dans rfc1867.c, elle permet à un\n    utilisateur mal intentionné de porter atteinte à l'intégrité des\n    données.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation)\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de PHP :",
+      "url": "http://www.php.net"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-344",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-10-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans PHP permettent à un utilisateur mal intentionné\nà distance de porter atteinte à la confidentialité et à l'intégrité des\ndonnées.\n",
+  "title": "Multiples vulnérabilités dans PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA 200410-04 / PHP",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200410-04.xml"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Gnu GCC versions 3.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Gnu GCC versions 4.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nGnu GCC est un compilateur libre pour différents langages comme C ou C++\nmais aussi Java. Une erreur est présente dans un composant de Gnu GCC\nnommé fastjar mettant en œuvre la gestion des fichiers archive de type\nJAR (Java Archive). Cette vulnérabilité permet à un utilisateur mal\nintentionné d'écraser des fichiers du système par ceux présents dans\nl'archive par une technique de type « traversée de repertoire » au moyen\nd'un fichier JAR construit de façon particulière.\n\n## Solution\n\nAppliquer le correctif approprié :\n\n    http://gcc.gnu.org/bugzilla/attachment.cgi?id=11904&action=view\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3619",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3619"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-1170 du 06 septembre 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1170"
+    },
+    {
+      "title": "Site de Gnu GCC :",
+      "url": "http://gcc.gnu.org"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-300",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-07-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian.",
+      "revision_date": "2006-09-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Gnu GCC permet à un utilisateur mal intentionné\nde porter atteinte à l'intégrité des données du système.\n",
+  "title": "Vulnérabilité dans Gnu GCC",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport d'erreur #28359 du projet gcc du 17 juillet 2006",
+      "url": "http://gcc.gnu.org/bugzilla/show_bug.cgi?id=28359"
+    }
+  ]
+}

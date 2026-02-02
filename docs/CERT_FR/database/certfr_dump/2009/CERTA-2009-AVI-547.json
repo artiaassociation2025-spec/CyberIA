@@ -1,0 +1,140 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Firefox versions 3.0.x antérieures à 3.0.16 ;",
+      "product": {
+        "name": "Firefox",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Seamonkey versions antérieures à 2.0.1.",
+      "product": {
+        "name": "Firefox",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Firefox versions 3.5.x antérieures à 3.5.6 ;",
+      "product": {
+        "name": "Firefox",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Firefox :\n\n-   plusieurs problèmes de stabilité affectent le moteur du navigateur.\n    Certains mènent à une corruption de la mémoire et permettent\n    l'exécution de code arbitraire à distance ;\n-   des failles dans liboggplay permettent l'exécution de code\n    arbitraire à distance ;\n-   une vulnérabilité de type débordement d'entier dans libtheora permet\n    l'exécution de code arbitraire à distance. Un autre problème dans\n    cette bibliothèque peut être exploité pour provoquer un déni de\n    service à distance ;\n-   l'implémentation Mozilla de NTLM permet de rejouer les identifiants\n    de connexion d'une application à une autre via le navigateur ;\n-   un problème dans la gestion des codes retour 204 peut leurrer un\n    utilisateur en lui donnant l'illusion qu'il est sur une page\n    sécurisée alors que ce n'est pas le cas. Une vulnérabilité similaire\n    permet d'injecter du code dans une page vide ;\n-   du code Javascript peut être exécuté par l'intermédiaire de la\n    fenêtre chrome ;\n-   les messages d'exception engendrés par GeckoActiveXObject varient en\n    fonction des identifiants ProgID d'objets COM présents dans le\n    registre du système. Un site malveillant peut obtenir la liste des\n    objets COM installés sur le système de l'internaute.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3984",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3984"
+    },
+    {
+      "name": "CVE-2009-3388",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3388"
+    },
+    {
+      "name": "CVE-2009-3985",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3985"
+    },
+    {
+      "name": "CVE-2009-3980",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3980"
+    },
+    {
+      "name": "CVE-2009-3982",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3982"
+    },
+    {
+      "name": "CVE-2009-3981",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3981"
+    },
+    {
+      "name": "CVE-2009-3987",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3987"
+    },
+    {
+      "name": "CVE-2009-3389",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3389"
+    },
+    {
+      "name": "CVE-2009-3983",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3983"
+    },
+    {
+      "name": "CVE-2009-3986",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3986"
+    },
+    {
+      "name": "CVE-2009-3979",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3979"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2009/mfsa2009-69 du 15 décembre 2009 :",
+      "url": "http://www.mozilla.org/security/announce/2009/mfsa2009-69.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2009/mfsa2009-66 du 15 décembre 2009 :",
+      "url": "http://www.mozilla.org/security/announce/2009/mfsa2009-66.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2009/mfsa2009-71 du 15 décembre 2009 :",
+      "url": "http://www.mozilla.org/security/announce/2009/mfsa2009-71.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2009/mfsa2009-68 du 15 décembre 2009 :",
+      "url": "http://www.mozilla.org/security/announce/2009/mfsa2009-68.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2009/mfsa2009-67 du 15 décembre 2009 :",
+      "url": "http://www.mozilla.org/security/announce/2009/mfsa2009-67.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2009/mfsa2009-65 du 15 décembre 2009 :",
+      "url": "http://www.mozilla.org/security/announce/2009/mfsa2009-65.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2009/mfsa2009-70 du 15 décembre 2009 :",
+      "url": "http://www.mozilla.org/security/announce/2009/mfsa2009-70.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-547",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-12-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Firefox</span>\npermettent l'exécution de code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans Mozilla Firefox",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité de la fondation Mozilla du 15 décembre 2009",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "phpMyAdmin versions 3.4.3.0 et antérieures.",
+      "product": {
+        "name": "phpMyAdmin",
+        "vendor": {
+          "name": "phpMyAdmin",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "phpMyAdmin versions 3.3.10.1 et antérieures ;",
+      "product": {
+        "name": "phpMyAdmin",
+        "vendor": {
+          "name": "phpMyAdmin",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans phpMyAdmin :\n\n-   la première permet de modifier le contenu de certaines variables de\n    session et ce faisant d'exécuter du code arbitraire ;\n-   la seconde concerne un manque de contrôle sur certaines URL passées\n    au serveur et permet d'exécuter du code arbitraire à distance ;\n-   la troisième vulnérabilité relative à un manque de contrôle des\n    expressions régulières permet de conduire des attaques de type\n    traversée de répertoire ;\n-   la dernière concerne également un problème de traversée de\n    répertoire lié à la gestion de certains types MIME.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2508",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2508"
+    },
+    {
+      "name": "CVE-2011-2505",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2505"
+    },
+    {
+      "name": "CVE-2011-2506",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2506"
+    },
+    {
+      "name": "CVE-2011-2507",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2507"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurité phpMyAdmin PMASA-2011-7 du 02 juillet    2011 :",
+      "url": "http://www.phpmyadmin.net/home_page/security/PMASA-2011-7.php"
+    },
+    {
+      "title": "Bulletins de sécurité phpMyAdmin PMASA-2011-6 du 02 juillet    2011 :",
+      "url": "http://www.phpmyadmin.net/home_page/security/PMASA-2011-6.php"
+    },
+    {
+      "title": "Bulletins de sécurité phpMyAdmin PMASA-2011-5 du 02 juillet    2011 :",
+      "url": "http://www.phpmyadmin.net/home_page/security/PMASA-2011-5.php"
+    },
+    {
+      "title": "Bulletins de sécurité phpMyAdmin PMASA-2011-8 du 02 juillet    2011 :",
+      "url": "http://www.phpmyadmin.net/home_page/security/PMASA-2011-8.php"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-380",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-07-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans phpMyAdmin permettent à un utilisateur\ndistant d'exécuter du code arbitraire, de porter atteinte à l'intégrité\nou à la confidentialité de certaines données.\n",
+  "title": "Multiples vulnérabilités dans phpMyAdmin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité phpMyAdmin du 03 juillet 2011",
+      "url": null
+    }
+  ]
+}

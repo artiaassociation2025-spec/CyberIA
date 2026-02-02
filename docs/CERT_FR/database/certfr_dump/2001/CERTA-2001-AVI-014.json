@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système Microsoft Windows connecté à Internet ou à un  intranet comprenant des systèmes sous Windows 2000.</P>",
+  "content": "## Description\n\nNDDE est un service de Windows permettant le partage d'informations et\nde données d'applications entre plusieurs machines distantes.\n\nDans toutes les versions de Windows qui précédent Windows 2000, l'agent\nNDDE fonctionne avec les privilèges de l'utilisateur, ce qui limite les\npossibilités d'exécutions de commandes de ce dernier uniquement à celle\nqui lui sont autorisées. De plus si un partage de données est installé\nsur une machine, l'agent NDDE aura pour règles de sécurités celles qui\ns'appliquent à l'utilisateur local de cette machine.\n\nSous Windows 2000, cet agent fonctionne avec les privilèges du système\n(Local System). Une mauvaise gestion des limites d'action de NDDE permet\nà un utilisateur d'exécuter des commandes avec les privilèges du\nsystème. Si la machine victime est un serveur de domaine, il peut\nprendre possession du domaine entier.\n\n## Contournement provisoire\n\nEn règle générale, il ne faut pas laisser des utilisateurs sans\nprivilège accéder localement à un serveur ou les autoriser à y exécuter\ndu code à distance (rcmd, NDDE, etc.). Si cette règle est appliquée,\nelle limitera nettement les dégâts possibles de ce type de\nvulnérabilités.\n\n## Solution\n\nAppliquer le correctif de Microsoft pour Windows 2000 présent à\nl'adresse suivante :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=27526\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "La base de connaissances de Microsoft concernant NDDE :",
+      "url": "http://support.microsoft.com/support/kb/articles/Q114/0/89.asp"
+    },
+    {
+      "title": "L'avis et la FAQ de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq01-007.asp"
+    },
+    {
+      "title": "L'avis et la FAQ de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms01-007.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-014",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-02-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de l'agent NDDE (<span class=\"textit\">Network Dynamic\nData Exchange</span>) permet à un utilisateur mal intentionné d'élever\nses privilèges et d'exécuter ainsi des commandes et des programmes\nauxquels il n'aurait normalement pas accès.\n",
+  "title": "Vulnérabilité de l'agent NDDE de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "bulletin de sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

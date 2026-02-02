@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>MIT Kerberos 5 versions krb5-1.3.3 et  antérieures.</p>",
+  "content": "## Description\n\nKerberos est un protocole d'authentification. La fonction\nkrb5_aname_to_localname() de Kerberos permet de traduire un nom\nprincipal Kerberos en un nom de compte local (par exemple un utilisateur\nUNIX).  \nPlusieurs vulnérabilités de type débordement de mémoire permettent à un\nutilisateur distant mal intentionné d'exécuter du code arbitraire sur la\nmachine vulnérable.  \nSeules les configurations qui utilisent des méthodes faisant appel à\ncette fonction sont vulnérables. Ce ne sont pas les configurations par\ndéfaut.\n\n## Solution\n\nLa version krb5-1.3.4 corrige ces vulnérabilités.  \nIl existe un correctif disponible sur le site de Kerberos (cf. section\nDocumentation).  \nConsulter votre éditeur pour obtenir un éventuel correctif.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Kerberos 2004-001 :",
+      "url": "http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2004-001-an_to_ln.txt"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD mit-krb5 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/security/mit-krb5/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité VU#686862 de l'US-CERT :",
+      "url": "http://www.kb.cert.org/vuls/id/686862"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200406-21 du 29 juin 2004    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200406-21.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-520 du 16 juin 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-520"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:236 du 09 juin 2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-236.html"
+    },
+    {
+      "title": "Bulletin de sécurité Apple du 07 septembre 2004 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=61798"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:056 du 03 juin    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:056"
+    },
+    {
+      "title": "Bulletin de sécurité #57580 de Sun :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-57580-1"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-180",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-06-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de Red Hat.",
+      "revision_date": "2004-06-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité #57580 de Sun.",
+      "revision_date": "2004-06-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian et de la référence CVE.",
+      "revision_date": "2004-06-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité NetBSD.",
+      "revision_date": "2004-06-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2004-06-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Apple et modification de la référence au bulletin de sécurité Sun.",
+      "revision_date": "2004-09-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de la fonction <span\nclass=\"textit\">krb5_aname_to_localname()</span> permettent à un\nutilisateur mal intentionné d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité de MIT Kerberos 5",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de MIT krb5 2004-001",
+      "url": null
+    }
+  ]
+}

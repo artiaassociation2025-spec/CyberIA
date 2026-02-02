@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>mailutils 0.6r1 et versions antérieures.</P>",
+  "content": "## Description\n\nMailutils est une suite de bibliothèques et d'utilitaires destinés à\ntraiter les messages électroniques.\n\n-   Une vulnérabilité de type débordement de mémoire dans le binaire\n    Mail permet à un individu distant malveillant d'exécuter du code\n    arbitraire avec les privilèges de la victime (CAN-2005-1520) ;\n-   une vulnérabilité de type débordement de mémoire présente dans la\n    fonction fetch_io() permet à une personne mal intentionnée\n    d'exécuter du code arbitraire à distance (CAN-2005-1521) ;\n-   une vulnérabilité dans le traitement des paramètres de la commande\n    FETCH permet à un utilisateur malveillant d'effectuer un déni de de\n    service à distance en consommant toutes les ressources CPU du\n    système (CAN-2005-1522) ;\n-   une vulnérabilité de type chaîne de format dans le server imap4d\n    permet à un utilisateur distant mal intentionné d'exécuter du code\n    arbitraire (CAN-2005-1523).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-732 du 03 juin 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-732"
+    },
+    {
+      "title": "Bulletin de sécurité iDEFENSE #249 du 25 mai 2005 :",
+      "url": "http://www.idefense.com/application/poi/display?id=249&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité iDEFENSE #246 du 25 mai 2005 :",
+      "url": "http://www.idefense.com/application/poi/display?id=246&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité iDEFENSE #248 du 25 mai 2005 :",
+      "url": "http://www.idefense.com/application/poi/display?id=248&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité iDEFENSE #247 du 25 mai 2005 :",
+      "url": "http://www.idefense.com/application/poi/display?id=247&type=vulnerabilities"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-186",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-05-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité Debian.",
+      "revision_date": "2005-06-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "De nombreuses vulnérabilités découvertes dans mailutils permettent à un\nutilisateur distant mal intentionné d'exécuter du code arbitraire ou\nd'effectuer un déni de service.\n",
+  "title": "Multiples vulnérabilités dans Mailutils",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA 200505-20 du 27 mai 2005",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200505-20.xml"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Wireshark :  <UL>    <LI>branche 1.2 : versions 1.20 à 1.2.8 ;</LI>    <LI>branches précédentes : version 1.0.13 et versions    antérieures.</LI>  </UL></p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités de Wireshark ont été publiées et corrigées :\n\n-   l'analyseur SMB peut déréférencer un pointeur nul ;\n-   l'analyseur SMB PIPE peut déréférencer un pointeur nul ;\n-   l'analyseur ASN.1 BER peut provoquer un débordement de pile ;\n-   la SigComp Universal Decompressor Virtual Machine peut partir dans\n    une boucle infinie ;\n-   la SigComp Universal Decompressor Virtual Machine peut provoquer un\n    débordement de tampon.\n\n## Solution\n\nLes versions 1.0.14 et 1.2.9 remédient à ces problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2285",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2285"
+    },
+    {
+      "name": "CVE-2010-2286",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2286"
+    },
+    {
+      "name": "CVE-2010-2284",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2284"
+    },
+    {
+      "name": "CVE-2010-2283",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2283"
+    },
+    {
+      "name": "CVE-2010-2287",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2287"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2010:113 du 10 juin    2010 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:113"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 2066 du 01 juillet 2010 :",
+      "url": "http://www.debian.org/security/2010/dsa-2066"
+    },
+    {
+      "title": "Bulletins de sécurité Wireshark wnpa-sec-2010-05 et    wnpa-sec-2010-06 du 09 juin 2010 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2010-05.html"
+    },
+    {
+      "title": "Bulletins de sécurité Wireshark wnpa-sec-2010-05 et    wnpa-sec-2010-06 du 09 juin 2010 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2010-06.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-260",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-06-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE.",
+      "revision_date": "2010-06-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Mandriva et Debian.",
+      "revision_date": "2010-07-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans Wireshark permettent à un\nutilisateur malveillant de réaliser un déni de service à distance, voire\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans Wireshark",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Wireshark wnpa-sec-2010-05 du 09 juin 2010",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Wireshark wnpa-sec-2010-06 du 09 juin 2010",
+      "url": null
+    }
+  ]
+}

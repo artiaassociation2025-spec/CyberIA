@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les versions de 2.2 à 2.2.2 incluse de  <TT>Python</TT> configurées sans la prise en compte du protocole  IPv6.</p>",
+  "content": "## Description\n\nPython est un langage de programmation interprété, interactif et orienté\nobjet. Dans l'environnement Unix, il est utilisé pour programmer de\nnombreuses applications.\n\nLes versions 2.2 à 2.2.2 de Python, lorsqu'elles sont configurées pour\nne pas prendre en compte le protocole IPv6, présentent une faille de\nsécurité dans la fonction getaddrinfo.\n\nUn utilisateur distant mal intentionné peut exploiter cette faille pour\nconfectionner une réponse de DNS malicieuse qui, lorsqu'elle est\ninterprétée par une des versions vulnérables de Python, peut mener à\nl'exécution de code arbitraire.\n\nLes versions de Python antérieures à 2.2 et à partir de 2.2.3 ne sont\npas vulnérables à cette faille de sécurité.\n\n## Solution\n\nAppliquer le correctif de sécurité. La distribution Debian a fourni un\ncorrectif de sécurité : Python 2.2 dans la version 2.2.1-4.3. La\ndistribution Mandrake a fourni un correctif de sécurité : Python 2.2\ndans la version 2.2.1-14.4.\n\nSi l'éditeur de votre système d'exploitation n'a pas encore fourni un\ncorrectif « clef en main » pour une version vulnérable de Python 2.2, il\nest possible de compiler une version de Python supérieure ou égale à\n2.2.3 à partir des sources.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:019 du 09 mars    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:019"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200409-03 du 02 septembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200409-03.xml"
+    },
+    {
+      "title": "Site Internet officiel du projet Python (téléchargement) :      http://www.python.org/download",
+      "url": "http://www.python.org/download/"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD python22 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/lang/python22/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-458 du 09 mars 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-458"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-076",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo et NetBSD.",
+      "revision_date": "2004-09-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": null,
+  "title": "Python 2.2 : Débordement de variable dans la gestion des réponses du DNS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CVE CAN-2004-150",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis Mandrake : MDKSA-2004:019",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Debian Security Advisory DSA 458-1",
+      "url": null
+    }
+  ]
+}

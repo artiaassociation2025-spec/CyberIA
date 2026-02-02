@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Helix Code Updater 0.1 à 0.5 pour les sytèmes TurboLinux  6.0.4, SuSE linux 6.3 et 6.4, Redhat Linux 6.2i386,Mandrake Linux  7.1 , Linux Caldera Desktop 2.4, et Sun Solaris.</P>",
+  "content": "## Description\n\nLe logiciel de mise à jour de GNOME (Helix Code Updater) utilise le\nformat de fichier RPM qui extrait ses fichiers dans le répertoire\n/tmp/helix-install. Le répertoire /tmp a la particularité d'être\naccessible en écriture pour tout les utilisateurs du système. Un\nutilisateur local mal intentionné peut y installer au préalable un\nrépertoire helix-install de sa conception contenant des fichiers RPM lui\npermettant d'élever ses privilèges.\n\n## Solution\n\nLa version 0.6 de Helix Code Updater corrige cette vulnérabilité en\nécrivant le répertoire helix-install dans le répertoire /var/cache dont\nles permissions permettent un accès en écriture par root uniquement.\n\nLa liste des plate-formes et versions supportant cette version se trouve\nà l'adresses suivante :\n\n    http://www.helixcode.com/desktop/download.php3\n\nSinon, mettez à jour la version de Helix Code Updater selon le système\nque vous possédez :\n\n-   TurboLinux :\n\n        http://spidermonkey.helixcode.com/distributions/TurboLinux-6/helix-update-0.6-0_helix_3.i386.rpm\n\n-   Caldera OpenLinux eDesktop systems:\n\n        http://spidermonkey.helixcode.com/distributions/Caldera-2.4/helix-update-0.6-0_helix_2.i386.rpm\n\n-   LinuxPPC :\n\n        http://spidermonkey.helixcode.com/distributions/LinuxPPC/helix-update-0.6.0_helix_2.ppc.rpm\n\n-   Linux Mandrake :\n\n        http://spidermonkey.helixcode.com/distributions/Mandrake/helix-update-0.6-0mdk_helix_2.i586.rpm\n\n-   Red Hat Linux :\n\n        http://spidermonkey.helixcode.com/distributions/RedHat-6/helix-update-0.6-0_helix_2.i386.rpm\n\n-   Solaris :\n\n        http://spidermonkey.helixcode.com/distributions/Solaris/helix-update-0.6-0_helix_1.sparc64.rpm\n\n-   SuSE 6.3 :\n\n        http://spidermonkey.helixcode.com/distributions/SuSE/hupdate-0.6-0_helix_2.i386.rpm\n\n-   SuSE 6.4 :\n\n        http://spidermonkey.helixcode.com/distributions/SuSE-6.4/hupdate-0.6-0_helix_2.i386.rpm\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de Helix Code :",
+      "url": "http://securityfocus.com/templates/advisory.html?id=2534"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-033",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation de privilèges root"
+    }
+  ],
+  "summary": "GNOME est un environnement graphique pour X11 développé par Helix Code,\net est fourni avec de nombreuses distributions de Linux bien connues.\n\nLe logiciel de mise à jour de GNOME présente une vulnérabilité\npermettant à un utilisateur local d'augmenter ses privilèges grâce à une\nintervention sur les fichiers intervenant dans le processus de mise à\njour de l'environnement.\n",
+  "title": "Vulnérabilité dans GNOME Updater",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Helix Code (Developpeurs de GNOME)",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "SecurityFocus",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Winamp versions 3.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Winamp versions 5.04 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe logiciel Winamp est un lecteur multimédia pour les plates-formes\nWindows.  \n\nUne vulnérabilité dans la gestion des interfaces (skin) par ce lecteur\npermet à un utilisateur distant d'exécuter du code arbitraire.  \n\nCette vulnérabilité peut être exploitée par le biais d'un site web\nmalicieusement construit qui installe une nouvelle interface sans en\ninformer l'utilisateur. Cette interface peut elle-même faire appel à des\npages au format HTML contenant d'éventuels scripts qui seront exécutés\ndans la zone de sécurité \"Intranet local\".  \n\n## Solution\n\nLa version 5.05 du logiciel Winamp corrige cette vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet du logiciel Winamp :",
+      "url": "http://www.winamp.com"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-287",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité du logiciel Winamp permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire sur le système vulnérable.\n",
+  "title": "Vulnérabilité du logiciel Winamp",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Winamp du 27 août 2004",
+      "url": "http://www.winamp.com/about/article.php?aid=10605"
+    }
+  ]
+}

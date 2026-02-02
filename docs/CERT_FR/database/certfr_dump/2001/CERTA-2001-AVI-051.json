@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Linux Debian 2.2",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Linux Mandrake 7.1, 7.2, 8.0, Corporate Server 1.0.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCron est un outil permettant à un utilisateur de planifier l'exécution\nde tâches périodiquement ou à des heures précises.\n\nLa version de cron publiée pour apporter une correction à une précédente\nvulnérabilité décrite dans l'avis CERTA-2000-AVI-076 paru en novembre\n2000, introduit une nouvelle vulnérabilité.\n\nSi une erreur est rencontré dans l'analyse du fichier crontab après sa\nmodification, crontab ne réduit pas immédiatement ses privilèges\nd'exécution (crontab est installé avec le bit setuid root). Ainsi, il\nest possible pour un utilisateur mal intentionné de lancer l'édition\nsous crontab (crontab -e) avec un éditeur qui va générer une erreur\nd'analyse puis exécuter des commandes arbitraires avec les privilèges de\nroot.\n\n## Contournement provisoire\n\nRestreindre l'accès à l'utilitaire cron aux utilisateurs de confiance\nvia les fichiers /etc/cron.allow et /etc/cron.deny (se référer à l'aide\nen ligne: man crontab).\n\n## Solution\n\nDes correctifs sont disponibles sur les sites des différents éditeurs:\n\n-   http://www.debian.org/security/2001/dsa-054\n\n-   http://www.linux-mandrake.com/en/security/2001/MDKSA-2001-050\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de Sécurité Debian:",
+      "url": "http://www.debian.org/security/2001/dsa-054"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-051",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-05-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Obtention du privilèges root en local. des programmes exploitant cette vulnérabilité ont été publiés"
+    }
+  ],
+  "summary": "Une correction apportée à une précédente vulnérabilité de Vixie Cron,\nintroduit une nouvelle vulnérabilité permettant à une personne mal\nintentionnée d'obtenir les privilèges root en local.\n",
+  "title": "Vulnérabilité de Vixie Cron",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis Debian DSA-054-1 cron",
+      "url": null
+    }
+  ]
+}

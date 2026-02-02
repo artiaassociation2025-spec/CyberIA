@@ -1,0 +1,110 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "DHCP versions 4.2.x antérieures à 4.2.1-P1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "DHCP versions 4.1.x antérieures à 4.1.ESV-R2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "DHCP versions 3.1.x antérieures à 3.1.ESV-R1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe logiciel libre DHCP développé par l'Internet System Consortium ne\nverifie pas la présence de certains caractères dans les réponses DHCP\navant de les transmettre à un script. Il est donc possible, selon le\nscript et le système d'exploitation cible, d'exécuter des commandes avec\nune réponse DHCP spécialement conçue.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0997",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0997"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité NetBSD NetBSD-SA2011-005 du 26 avril    2011 :",
+      "url": "http://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2011-005.txt.asc"
+    },
+    {
+      "title": "Bulletin de sécurité Fedora FEDORA-2011-4897 du 06 avril    2011 :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2011-April/057888.html"
+    },
+    {
+      "title": "Bulletins de sécurité Debian DSA-2216 et 2217 du 10 avril    2011 :",
+      "url": "http://www.debian.org/security/2011/dsa-2216"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat du 05 avril 2011 :",
+      "url": "https://www.redhat.com/security/data/cve/CVE-2011-0997.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2011:073 du 11 avril    2011 :",
+      "url": "http://www.mandriva.com/fr/support/security/advisories?name=MDVSA-2011:073"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-1108-1 du 11 avril 2011 :",
+      "url": "http://www.ubuntu.com/usn/USN-1108-1/"
+    },
+    {
+      "title": "Bulletin de sécurité Novell :",
+      "url": "http://support.novell.com/security/cve/CVE-2011-0997.html"
+    },
+    {
+      "title": "Bulletins de sécurité Debian DSA-2216 et 2217 du 10 avril    2011 :",
+      "url": "http://www.debian.org/security/2011/dsa-2217"
+    },
+    {
+      "title": "Bulletin de sécurité Fedora FEDORA-2011-4935 du 07 avril    2011 :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2011-April/058279.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-190",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-04-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins de sécurité Red Hat et Novell.",
+      "revision_date": "2011-04-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins de sécurité Debian, Fedora, Mandriva, NetBSD et Ubuntu.",
+      "revision_date": "2011-04-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le logiciel libre DHCP développé par l'Internet\nSystem Consortium permet à un attaquant d'exécuter du code arbitraire à\ndistance.\n",
+  "title": "Vulnérabilité dans le client DHCP ISC",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de l'ISC CVE-2011-0997 du 05 avril 2011",
+      "url": "https://www.isc.org/software/dhcp/advisories/cve-2011-0997"
+    }
+  ]
+}

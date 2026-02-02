@@ -1,0 +1,23 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Webalizer versions 2.01-06 et antérieures.</P>",
+  "content": "## Description\n\nWebalizer est un programme permettant de traiter les fichiers de logs\nd'un serveur HTTP. La nature de certains champs des fichiers de logs\nn'est pas vérifiée par le programme, et sont intégralement retranscrits\ndans le rapport généré en HTML.\n\nUn utilisateur mal intentionné peut y inclure des scripts, qui seront\nexécutés soit par un navigateur parcourant ce rapport, soit par d'autres\nprogrammes qui interprètent ces rapports.\n\nLes deux champs vulnérables sont :\n\n-   le nom de la machine accèdant au serveur HTTP ;\n-   le champ Referer.\n\n## Contournement provisoire\n\nSi la résolution DNS est activée dans webalizer (option -enable-dns),\ns'assurer que le système de résolution DNS inverse filtre les\nméta-caractères HTML.  \n\nModifier la configuration de webalizer pour qu'il ne traite plus le\nchamp Referer des fichiers de logs (ce champ est traité dans la\nconfiguration par défaut).\n\n## Solution\n\nTélécharger le correctif :\n\n    ftp://ftp.mrunix.net/pub/webalizer/sec-fix.patch\n\n  \n\nou mettre à jour webalizer à la version 2.01-09.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-132",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Deux vulnérabilités du programme webalizer permettent à un utilisateur\nmal intentionné d'inclure des scripts dans les rapports HTML générés par\nwebalizer.\n",
+  "title": "Vulnérabilités de webalizer",
+  "vendor_advisories": []
+}

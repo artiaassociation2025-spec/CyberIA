@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MPlayer versions 1.0rc2 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xine-lib versions 1.1.10 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités de type débordement de mémoire ont été\nidentifiées dans MPlayer, dans les fichiers demux_audio.c, demux_mov.c,\nurl.c, et stream_cddb.c. Une personne malintentionnée peut ainsi\nexécuter du code arbitraire à distance, en incitant par exemple un\nutilisateur à ouvrir un fichier spécifiquement construit.\n\nLa première vulnérabilité se situe en fait dans la bibliothèque\nxine-lib, et sa fonction open_flac_file() utilisée pour traiter des\nfichiers de type FLAC. D'autres produits utilisant cette bibliothèque\npeuvent être affectés.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0630",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0630"
+    },
+    {
+      "name": "CVE-2008-0486",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0486"
+    },
+    {
+      "name": "CVE-2008-0629",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0629"
+    },
+    {
+      "name": "CVE-2008-0485",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0485"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-1496 du 12 février 2008 :",
+      "url": "http://lists.debian.org/debian-security-announce/debian-security-announce-2008/msg00058.html"
+    },
+    {
+      "title": "Site de l'éditeur :",
+      "url": "http://www.mplayerhq.hu/design7/news.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-045",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2008-02-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout de références CVE et du bulletin de sécurité Debian.",
+      "revision_date": "2008-02-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités affectant MPlayer permettent à une personne\nmalintentionnée d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans MPlayer et xine-lib",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité pour MPlayer du 29 et 30 janvier 2008",
+      "url": null
+    }
+  ]
+}

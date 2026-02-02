@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>JSSE (Java Secure Socket Extension) est  une extension du langage Java implémentant une version Java des  protocoles SSL (Socket Secure Layer) et TLS (Transport Layer  Security) ainsi que des fonctionnalités de chiffrement, de  contrôle d'intégrité et d'authentification.  <P>Java Web Start permet de lancer des applications Java  directement depuis un navigateur. Si l'application n'est pas  présente en locale sur la machine, Java Web Start s'occupe du  téléchargement des fichiers nécessaires (archives JAR  signées).</P>  <P>Java Plug-In est une extension permettant à un navigateur  d'utiliser la machine virtuelle Java de Sun livrée avec le  Software Developpement Kit (SDK) ou le Java Runtime Environment  (JRE).</P>  <P>Se référer aux bulletins de sécurité des différents éditeurs  (cf. section Documentation) pour obtenir la liste des versions  affectées.</P></p>",
+  "content": "## Description\n\nSun a publié un bulletin de sécurité (cf. section Documentation)\nindiquant qu'une vulnérabilité existe dans le contrôle des certificats\nélectroniques :\n\n-   lors de connexions via SSL, une erreur dans la validation du\n    certificat peut entraîner l'authentification de sites non sûrs ;\n-   lors de la vérification de la signature d'un code (archive JAR), une\n    erreur dans la validation du certificat peut entrainer l'exécution\n    d'un code non sûr.\n\n## Solution\n\nSe référer aux bulletins de sécurité des différents éditeurs (cf.\nsection Documentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HPSBUX0301-239 de Hewlett-Packard :",
+      "url": "http://itrc.hp.com"
+    },
+    {
+      "title": "Bulletin de sécurité #50081 de Sun :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F50081"
+    },
+    {
+      "title": "Bulletin de sécurité 20030303-01-I de SGI :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20030303-01-I"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-020",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-02-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout bulletin de sécurité de SGI",
+      "revision_date": "2003-04-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité sous JSSE, Java Plug-In et Java Web Start",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité #50081 de Sun",
+      "url": null
+    }
+  ]
+}

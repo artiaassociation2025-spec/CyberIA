@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apple Safari 3.x pour Mac OS X 10.4 et Mac OS X 10.5.",
+      "product": {
+        "name": "Safari",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple Safari 3.x pour Windows ;",
+      "product": {
+        "name": "Safari",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été corrigées dans Apple Safari :\n\n-   une vulnérabilité de type débordement de mémoire dans libxml permet\n    l'exécution de code arbitraire à distance (CVE-2008-3529) ;\n-   des vulnérabilités liées à une mauvaise validation de certaines\n    entrées dans le traitement d'URLs de type feed: permettent\n    l'exécution de code arbitraire à distance (CVE-2009-0162) ;\n-   une vulnérabilité de type corruption de mémoire dans le traitement\n    d'objets SVGList par WebKit permet l'exécution de code arbitraire à\n    distance (CVE-2009-0945).\n\n## Solution\n\nSe référer au bulletin de sécurité HT3550 de l'éditeur pour l'obtention\ndes correctifs (cf. section Documentation). Les mises à jour sont\négalement disponibles dans le correctif cumulatif 2009-002 pour Mac OS X\n(bulletin HT3549) qui a fait l'objet de l'avis CERTA-2009-AVI-186.\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3529",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3529"
+    },
+    {
+      "name": "CVE-2009-0162",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0162"
+    },
+    {
+      "name": "CVE-2009-0945",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0945"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis CERTA-2009-AVI-186 du 13 mai 2009 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2009-AVI-186/index.html"
+    },
+    {
+      "title": "Bulletin de sécurité Apple HT3549 du 12 mai 2009 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=HT3549"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-187",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-05-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités permettant l'exécution de code arbitraire à\ndistance ont été corrigées dans <span class=\"textit\">Apple\nSafari</span>.\n",
+  "title": "Multiples vulnérabilités dans Apple Safari",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apple HT3550 du 12 mai 2009",
+      "url": "http://docs.info.apple.com/article.html?artnum=HT3550"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>ClamAV</TT> versions 0.80 et  antérieures.",
+  "content": "## Description\n\nClamAV est un logiciel libre permettant d'analyser des fichiers à la\nrecherche de virus. Il est souvent utilisé pour détecter les éventuels\nvirus contenus dans les messages arrivant sur un serveur de\nmessagerie.  \nUne vulnérabilité dans le traitement des entêtes de certains fichiers\n(archives au format ZIP) permet à un utilisateur mal intentionné, par le\nbiais d'une archive habilement constituée, de provoquer un arrêt brutal\ndu service.  \nUne seconde vulnérabilité dans le traitement des URL contenant une image\nencodée au format base64 permet à un utilisateur mal intentionné de\ncontourner la politique de sécurité en créant un fichier qui va échapper\nà l'analyse de ClamAV.\n\n## Solution\n\nMettre à jour ClamAV en version 0.81.  \nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2005:025 du 31 janvier    2005 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2005:025"
+    },
+    {
+      "title": "Site Internet de ClamAV :",
+      "url": "http://www.clamav.net"
+    },
+    {
+      "title": "Annonce de la sortie de la version 0.81 de ClamAV    :",
+      "url": "http://sourceforge.net/forum/forum.php?forum_id=440649"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD clamav :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/mail/clamav/README.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-044",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-02-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité NetBSD.",
+      "revision_date": "2005-02-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans ClamAV permettent à un utilisateur mal\nintentionné de contourner la politique de sécurité ou de réaliser un\ndéni de service sur la plate-forme vulnérable.\n",
+  "title": "Vulnérabilité de ClamAV",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA 200501-46",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200501-46.xml"
+    }
+  ]
+}

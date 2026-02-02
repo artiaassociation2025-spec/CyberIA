@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "TYPO3 versions 4.2.15 et antérieures ;",
+      "product": {
+        "name": "Typo3",
+        "vendor": {
+          "name": "Typo3",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "TYPO3 versions 4.3.8 et antérieures ;",
+      "product": {
+        "name": "Typo3",
+        "vendor": {
+          "name": "Typo3",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "TYPO3 versions 4.4.4 et antérieures.",
+      "product": {
+        "name": "Typo3",
+        "vendor": {
+          "name": "Typo3",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans TYPO3 :\n\n-   une injection de code indirecte est possible dans le frontend si la\n    fonctionnalité caching framework est activée (les versions 4.2.x ne\n    sont pas concernées) ;\n-   un utilisateur légitime du backend peut injecter du code HTML ou\n    javascript ;\n-   il est possible de contourner la vérification des données transmises\n    par les utilisateurs (mécanisme de protection contre les inclusions\n    de fichiers PHP), ce qui permet l'exécution de code arbitraire à\n    distance ;\n-   un utilisateur légitime pouvant utiliser les outils d'installation\n    peut réaliser plusieurs injections de code indirectes ;\n-   des remontées de répertoires sont possibles via la bibliothèque\n    unzip ;\n-   un utilisateur légitime du backend peut réaliser injection SQL via\n    le module list ;\n-   dans une configuration SQL particulière (mode NO_BACKSLASH_ESCAPES),\n    il est possible de faire des requêtes LIKE avec des jokers, ce qui\n    permet d'avoir accès à des enregistrements théoriquement\n    inaccessibles.\n\n## Solution\n\nLes versions 4.2.16, 4.3.9 et 4.4.5 de TYPO3 corrigent ces\nvulnérabilités.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2010-AVI-614",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">TYPO3</span>\npermettent, entre autres, d'exécuter du code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans TYPO3",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité TYPO3-SA-2010-022 du 16 décembre 2010",
+      "url": "http://typo3.org/teams/security/security-bulletins/typo3-sa-2010-022/"
+    }
+  ]
+}

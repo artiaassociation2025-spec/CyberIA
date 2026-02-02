@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>HP System Management Homepage.</p>",
+  "content": "## Description\n\nHP System Management Homepage (SMH) est un outil capable d'assurer\nl'administration d'un équipement HP au travers d'une interface web.  \nHP Systems Insight Manager(SIM) est un outil destiné à superviser un\nensemble de machines équipés de SMH.\n\nUn problème de sécurité dans le mode d'authentification Trust by name\nsur HP System Management Homepage (SMH) permet à un utilisateur mal\nintentionné de contourner le mécanisme d'authentification et d'effectuer\ndes tâches d'administration sur le système.  \nAfin de sécuriser l'authentification sur SMH, HP recommande aux\nutilisateurs d'utiliser le mode d'authentification par certificat.\n\n## Contournement provisoire\n\n-   Utilisez l'authentification \"Trust by certificate\" certificat pour\n    vous connecter au système avec HPSIM ;\n-   le CERTA vous recommande de filtrer le port destination 2381/tcp\n    provenant de l'exterieur de votre réseau.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2006-AVI-248",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-06-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Un problème de sécurité présent sur l'authentification \"Trust by name\"\nHP System Management Homepage (SMH) peut être exploité par un\nutilisateur mal intentionné pour contourner la politique de sécurité et\nréaliser un deni de service de l'équipement géré par cet outil.\n",
+  "title": "Vulnérabilité dans l'authentification sur HP System Management Homepage",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Grégoire DE BACKER de la société TELINDUS-SRC",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BIG-IP APM Clients versions 7.2.x antérieures à 7.2.4.1",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIG-IP (tous modules) versions 17.x antérieures à 17.1.0",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NGINX Security Monitoring versions 1.x antérieures à 1.3.0",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Nginx",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NGINX Instance Manager versions antérieures à 2.9.0",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Nginx",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NGINX API Connectivity Manager versions 1.x antérieures à 1.5.0",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Nginx",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIG-IP (tous modules) versions antérieures à 15.1.8.2",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIG-IP (tous modules) versions 16.1.x antérieures à 16.1.3.4",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIG-IQ Centralized Management versions 8.x antérieures à 8.3.0",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-29163",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-29163"
+    },
+    {
+      "name": "CVE-2023-24461",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-24461"
+    },
+    {
+      "name": "CVE-2023-28406",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-28406"
+    },
+    {
+      "name": "CVE-2023-27378",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-27378"
+    },
+    {
+      "name": "CVE-2023-22372",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-22372"
+    },
+    {
+      "name": "CVE-2023-24594",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-24594"
+    },
+    {
+      "name": "CVE-2023-28724",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-28724"
+    },
+    {
+      "name": "CVE-2023-28656",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-28656"
+    },
+    {
+      "name": "CVE-2023-29240",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-29240"
+    },
+    {
+      "name": "CVE-2023-28742",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-28742"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0354",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-05-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans F5 BIG-IP et NGINX.\nCertaines d'entre elles permettent à un attaquant de provoquer une\nexécution de code arbitraire à distance, un déni de service à distance\net un contournement de la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans F5 BIG-IP et NGINX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F5 K000133251 du 03 mai 2023",
+      "url": "https://my.f5.com/manage/s/article/K000133251"
+    }
+  ]
+}

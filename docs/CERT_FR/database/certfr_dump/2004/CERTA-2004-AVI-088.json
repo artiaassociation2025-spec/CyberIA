@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système <SPAN class=\"textit\">Unix</SPAN> utilisant  <SPAN class=\"textit\">Samba</SPAN> en mode client.</P>",
+  "content": "## Description\n\nSamba met en oeuvre les protocoles Microsoft de partage de fichiers et\nimprimantes SMB/CIFS (\\`\\`Server Message Block/Common Internet File\nSystem'').\n\nL'utilitaire smbmnt permet à une station client de monter localement un\nsystème de fichier distant depuis un serveur Samba. Pour permettre son\nemploi par un utilisateur quelconque, cette commande est souvent\ninstallée avec une délégation des privilèges de l'administrateur (suid\nroot). Il est alors possible d'exécuter localement les programmes situés\ndans l'arborescence montée, mais avec les délégations de privilèges\nconfigurées dans le système distant. Si le serveur Samba peut être\narbitrairement choisi, l'utilisateur local disposant d'un serveur sous\nson contrôle obtient alors tous les privilèges.\n\n## Contournement provisoire\n\nSupprimer la délégation de privilèges pour smbmnt.\n\n## Solution\n\nMettre à jour en fonction des recommandations du distributeur.\n\n-   Bulletin de sécurité Debian GNU/linux DSA-463 :\n\n        http://www.debian.org/security/2004/dsa-463.fr.html\n\n-   Bulletin de sécurité Mandrake MDKSA-2004:035 :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:035\n\n-   Bulletin de sécurité Gentoo GLSA 200404-21 :\n\n        http://www.gentoo.org/security/en/glsa/glsa-200404-21.xml\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Note de vulnérabilité SecurityFocus :",
+      "url": "http://www.securityfocus.com/bid/9619/info/"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-088",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandrake.",
+      "revision_date": "2004-04-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2004-04-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges d'un utilisateur local"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une mauvaise gestion des privilèges associés à l'utilitaire <span\nclass=\"textit\">smbmnt</span> permet à un utilisateur mal intentionné\nd'utiliser localement des programmes avec des droits arbitraires.\n",
+  "title": "Vulnérabilité du serveur SAMBA",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité ISS",
+      "url": "http://xforce.iss.net/xforce/xfdb/15131"
+    }
+  ]
+}

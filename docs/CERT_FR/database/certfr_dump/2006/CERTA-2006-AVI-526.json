@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toute version de SquirrelMail antérieures à 1.4.9a.</P>",
+  "content": "## Description\n\nCes vulnérabilités sont causées par un manque de contrôle sur les\narguments retournés à l'utilisateur et par une erreur dans le filtre\nHTML magicHTML. Les scripts PHP vulnérables, webmail.php et compose.php,\nsont exécutés depuis les menus draft, compose et mailto. Un utilisateur\ndistant peut exploiter ces vulnérabilités afin d'injecter du code\narbitraire depuis le serveur (sain) et l'exécuter dans le contexte du\nnavigateur Internet de l'utilisateur connecté.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-6142",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6142"
+    }
+  ],
+  "links": [
+    {
+      "title": "Note de changement de version SourceForge 468482 :",
+      "url": "http://sourceforge.net/project/shownotes.php?release_id=468482"
+    },
+    {
+      "title": "Bulletion de sécurité RedHat RHSA-2007:0022 du 31 janvier    2007 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-002.html"
+    },
+    {
+      "title": "Bulletion de sécurité SuSE SUSE-SR:2007:004 du 16 mars 2007    :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2007-Mar/0005.html"
+    },
+    {
+      "title": "Bulletion de sécurité Debian DSA-1241 du 25 décembre 2006 :",
+      "url": "http://www.debian..org/security/2006/dsa-1241"
+    },
+    {
+      "title": "Bulletion de sécurité SuSE SUSE-SR:2006:029 du 19 décembre    2006 :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2006-Dec/0008.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-526",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-12-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bullentins de sécurité RedHat, Debian et SuSE.",
+      "revision_date": "2007-02-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SuSE.",
+      "revision_date": "2007-03-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Attaque de type cross site scripting"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans SquirrelMail permettent à un utilisateur\ndistant de réaliser une attaque de type Cross Site Scripting.\n",
+  "title": "Vulnérabilités dans SquirrelMail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SquirrelMail du 02 décembre 2006",
+      "url": "http://squirrelmail.org/security/issue/2006-12-02"
+    }
+  ]
+}

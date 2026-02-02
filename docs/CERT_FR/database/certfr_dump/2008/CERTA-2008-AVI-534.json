@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Opera versions 9.61 et antérieures.</p>",
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans le navigateur Opera :\n\n-   la première est relative à la fonction de recherche dans\n    l'historique de navigation qui ne contrôle pas correctement certains\n    paramètres. Elle permet à un utilisateur distant d'injecter des\n    scripts ou du code HTML qui seront interprété dans le contexte du\n    navigateur vulnérable ;\n-   la seconde concerne une erreur dans l'interprétation par la barre de\n    liens d'URL pointant vers du javascript. Cette faille peut être\n    exploitée par un utilisateur distant malintentionné pour conduire\n    une attaque de type « injection de code indirecte » par le biais\n    d'une page construite de façon particulière.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2008-AVI-534",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-10-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte ( cross-site scripting )"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans Opera permettent à un\nutilisateur distant de conduire des attaques de type « injection de code\nindirecte » ou d'exécuter du code arbitraire.\n",
+  "title": "Multiples vulnérabilités dans Opera",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Opera",
+      "url": "http://www.opera.com/support/search/view/906"
+    }
+  ]
+}

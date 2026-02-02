@@ -1,0 +1,44 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Cahier de Texte</SPAN> versions 2.2  (avant le correctif du 08 décembre 2006) et antérieures.</P>",
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans Cahier de Texte.\n\nLa première concerne le fichier administration/telecharger.php qui ne\ncontrôle pas correctement les paramètres.\n\nLa seconde vulnérabilité concerne le fichier administration/dump.sql qui\npeut être téléchargé.\n\nL'exploitation de ces vulnérabilités permet la récupération des\nsauvegardes dans lesquelles se trouve, entre autres, le mot de passe de\nl'administrateur en clair.\n\n## Solution\n\nSuivre les indications sur la page des correctifs de l'éditeur pour la\nmise à jour de la version 2.2 (voir Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-6254",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6254"
+    },
+    {
+      "name": "CVE-2006-6253",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6253"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2006-AVI-543",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-12-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Vol d'identifiants"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités dans Cahier de Texte",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Page des correctifs de Cahier de Texte",
+      "url": "http://www.etab.ac-caen.fr/bsauveur/cahier_de_texte/correctifs.html"
+    }
+  ]
+}

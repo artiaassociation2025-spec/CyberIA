@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>libxml2 versions 2.6.14 et antérieures.</p>",
+  "content": "## Description\n\nLa bibliothèque libxml2 sert pour le traitement des données au format\nXML. Elle est notamment utilisée par l'environnement graphique Gnome.\n\n  \nDeux vulnérabilités de type débordement de mémoire sont présentes dans\ndes routines utilisées pour le traitement de liens (URI) dans le module\nnanoftp. Plusieurs vulnérabilités de type débordement de mémoire sont\négalement présentes dans des routines utilisées pour la résolution de\nnoms dans les modules nanoftp et nanohttp.\n\nAu moyen d'un fichier XML habilement constitué, les vulnérabilités\naffectant le traitement de liens (URI) peuvent être exploitées par un\nutilisateur mal intentionné afin d'exécuter du code arbitraire via une\napplication utilisant la bibliothèque vulnérable.\n\nLes vulnérabilités relatives à la résolution de noms peuvent être\nexploitées au travers d'un serveur DNS hostile contrôlé par un\nutilisateur mal intentionné.\n\n## Solution\n\nLa version 2.6.15 de la bibliothèque libxml2 corrige cette\nvulnérabilité.\n\nSe référer aux bulletins de sécurité de l'éditeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:127 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:127"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-582 du 02 novembre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-582"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2004:650 du 16 décembre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-650.html"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD libxml et    libxml2 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/textproc/libxml2/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200411-05 du 02 novembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200411-05.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2004:615 du 12 novembre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-615.html"
+    },
+    {
+      "title": "Sortie de la version 2.6.15 de libxml2 :",
+      "url": "http://www.xmlsoft.org/news.html"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD libxml et    libxml2 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/textproc/libxml/README.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-361",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-11-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Mandrake.",
+      "revision_date": "2004-11-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RHSA-2004:615 de Red Hat.",
+      "revision_date": "2004-11-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité NetBSD pour libxml et libxml2.",
+      "revision_date": "2004-11-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Red Hat (RHSA-2004:650) relatif à libxml.",
+      "revision_date": "2004-12-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités de libxml2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité GLSA 200411-05 de Gentoo",
+      "url": null
+    }
+  ]
+}

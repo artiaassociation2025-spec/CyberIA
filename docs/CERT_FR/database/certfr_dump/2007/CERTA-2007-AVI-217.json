@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "CA Anti-Spyware (eTrust PestPatrol) version r8 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA Threat Manager (eTrust Integrated Threat Management) version r8 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA Anti-Virus for the Enterprise (eTrust Antivirus) version r8 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans certains produits de la\nsociété CA :\n\n-   La première vulnérabilité résulte d'un débordement de tampon au\n    niveau du traitement des identifiants. L'exploitation de cette\n    vulnérabilité permet d'exécuter des commandes arbitraires à distance\n    via le port 12168/TCP.\n-   La seconde faille est due à un débordement de tampon présent au\n    niveau de la bibliothèque InoCore.dll. Cette vulnérabilité peut être\n    exploitée localement afin d'élever ses privilèges.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-2523",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2523"
+    },
+    {
+      "name": "CVE-2007-2522",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2522"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de vulnérabilité de CA du 10 mai 2007 :",
+      "url": "http://supportconnectw.ca.com/public/antivirus/infodocs/caav-secnotice050807.asp"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-217",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-05-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans certains produits\nde la société CA. Ces vulnérabilités permettent à une utilisateur\nmalintentionné de conduire des attaques par déni de service ou\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Multiples Vulnérabilités des produits CA",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CA du 10 mai 2007",
+      "url": null
+    }
+  ]
+}

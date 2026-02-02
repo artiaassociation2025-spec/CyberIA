@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>stunnel</TT> de la version 3.15 à  la version 3.21.c.",
+  "content": "## Description\n\nUn administrateur malveillant peut, en utilisant une vulnérabilité de\ntype \"chaîne de format\", forcer l'exécution d'un code arbitraire à\ndistance avec les privilèges de l'utilisateur du processus stunnel.\n\nCette vulnérabilité n'est exploitable qu'en mode client : utilisation de\nstunnel avec l' option -n *service* et l'option -c (mode client).\n\n## Solution\n\nInstaller la version 3.22 disponible sur le site\n\n    http://www.stunnel.org\n\n.\n\nDes correctifs sont également disponibles sous forme de paquetages pour\nles distributions Linux (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité MDKSA-2002:004 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-004.php"
+    },
+    {
+      "title": "Avis de sécurité RHSA-2002:002 de RedHat :",
+      "url": "http://www.redhat.com/support/errata/RHSA-2002-002.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-010",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-01-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution d'un code arbitraire à distance"
+    }
+  ],
+  "summary": "stunnel est un utilitaire qui permet de détourner les canaux de\ncommunication classiques en les redirigeant dans un tunnel sécurisé.\n\nUne vulnérabilité présente dans stunnel permet à un utilisateur mal\nintentionné d'éxecuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans stunnel",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Buletin de sécurité RHSA-2002:002",
+      "url": null
+    }
+  ]
+}

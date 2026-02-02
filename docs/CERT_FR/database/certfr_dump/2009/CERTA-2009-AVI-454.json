@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "TYPO3 versions 4.2.9 et antérieures ;",
+      "product": {
+        "name": "Typo3",
+        "vendor": {
+          "name": "Typo3",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "TYPO3 versions 4.0.13 et antérieures ;",
+      "product": {
+        "name": "Typo3",
+        "vendor": {
+          "name": "Typo3",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "TYPO3 versions 4.3.0beta1 et antérieures.",
+      "product": {
+        "name": "Typo3",
+        "vendor": {
+          "name": "Typo3",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "TYPO3 versions 4.1.12 et antérieures ;",
+      "product": {
+        "name": "Typo3",
+        "vendor": {
+          "name": "Typo3",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans TYPO3 :\n\n-   plusieurs problèmes affectent le backend. Elles permettent de\n    recalculer la clé de chiffrement, de réaliser diverses injections de\n    code indirectes, ou d'exécuter des commandes arbitraires sur le\n    système. Ces vulnérabilités nécessitent toutes de disposer d'un\n    compte valide ;\n-   une injection SQL est possible via la fonctionnalité d'édition du\n    frontend. Cette vulnérabilité requiert un compte valide ;\n-   du code HTML ou JavaScript peut être inséré via la fonction\n    t3lib_div::quoteJSvalue ;\n-   une injection de code indirecte est possible via l'interface de\n    connexion au frontend (felogin) ;\n-   il est possible de se connecter à l'outil d'installation en ne\n    connaissant que l'empreinte MD5 du mot de passe, ainsi que de\n    réaliser des injections de code indirectes au travers de ce même\n    outil.\n\n## Solution\n\nMettre à jour en version 4.1.13, 4.2.10 ou 4.3beta2, conformément au\nbulletin de sécurité de l'éditeur (cf. section Documentation). La\nbranche 4.0 n'est plus maintenue. Le support pour la branche 4.1 ne sera\nplus assuré quand la version 4.3 sortira (prévue pour fin novembre\n2009).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2009-AVI-454",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-10-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">TYPO3</span>\npermettent d'exécuter du code arbitraire à distance, de réaliser\ndiverses injections de code ou d'obtenir un accès à l'outil\nd'installation.\n",
+  "title": "Multiples vulnérabilités dans TYPO3",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité TYPO3-SA-2009-016 du 22 octobre 2009",
+      "url": "http://typo3.org/teams/security/security-bulletins/typo3-sa-2009-016/"
+    }
+  ]
+}

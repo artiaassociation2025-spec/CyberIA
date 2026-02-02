@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<ul> <li>Intel Manageability Engine Firmware (IME) 8.x/9.x/10.x/11.0/11.5/11.6/11.7/11.10/11.20</li> <li>Intel Server Platform Services (SPS) Firmware 4.0</li> <li>Intel Trusted Execution Engine (TXE) Firmware 3.0</li> </ul> <p>On retrouve ces microgiciels dans les produits d'Intel suivants :</p> <ul> <li>  Générations 6, 7 et 8 de la famille de processeur Intel Core</li> <li>  Processeur Intel Xeon E3-1200 v5 et v6</li> <li>  Processeur Intel Xeon Scalable</li> <li>  Processeur Intel Xeon W</li> <li>  Processeur Intel Atom C3000</li> <li>  Processeur Apollo Lake Intel Atom série E3900</li> <li>  Processeur Apollo Lake Intel Pentium</li> <li>  Processeur Celeron séries N and J</li> </ul> ",
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2017-5705",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2017-5705"
+    },
+    {
+      "name": "CVE-2017-5708",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2017-5708"
+    },
+    {
+      "name": "CVE-2017-5710",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2017-5710"
+    },
+    {
+      "name": "CVE-2017-5706",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2017-5706"
+    },
+    {
+      "name": "CVE-2017-5712",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2017-5712"
+    },
+    {
+      "name": "CVE-2017-5707",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2017-5707"
+    },
+    {
+      "name": "CVE-2017-5709",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2017-5709"
+    },
+    {
+      "name": "CVE-2017-5711",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2017-5711"
+    }
+  ],
+  "links": [
+    {
+      "title": "Outil de détection de la vulnérabilité relatif au bulletin Intel SA-00086",
+      "url": "https://downloadcenter.intel.com/download/27150"
+    },
+    {
+      "title": "Avis CERTFR-2017-AVI-136",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2017-AVI-136/"
+    },
+    {
+      "title": "Support Intel relatif au bulletin Intel SA-00086 pour la mise à jour du logiciel Intel Management Engine",
+      "url": "https://www.intel.com/content/www/us/en/support/articles/000025619/software.html"
+    }
+  ],
+  "reference": "CERTFR-2017-AVI-423",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2017-11-21T00:00:00.000000"
+    },
+    {
+      "description": "Version initiale",
+      "revision_date": "2017-11-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Le 1er mai 2017 \\[1\\], une vulnérabilité concernant Intel AMT permettait\nà un attaquant de provoquer une exécution de code arbitraire à distance\net une élévation de privilèges sur des machines comportant un modèle de\nprocesseur Intel habituellement utilisé par les entreprises.\n\nLe 20 novembre 2017 \\[2\\]\\[3\\], un article annonce l’identification de\nnouvelles vulnérabilités critiques dans IME et AMT pour les processeurs\nIntel. Les processeurs concernés correspondent autant à des modèles\nd’entreprise qu'à des modèles pour particuliers.\n\nIntel propose un outil permettant de détecter les processeurs affectés\npar cette vulnérabilité \\[4\\].\n\nL’exploitation de ces vulnérabilités permet à un attaquant ayant un\naccès local à la machine d’altérer l’intégrité de la chaîne de démarrage\net d’exécuter du code arbitraire à l’insu du système d’exploitation,\nmême lorsque la machine est éteinte.\n\nCes vulnérabilités concernent une vaste gamme de processeurs : des\nversions de processeurs récentes disponible pour les particuliers dont\nla vente commence début 2016, comme de plus anciens destinés aux\nentreprises datant de 2011.\n\nA ce jour, il n’existe pas de code disponible publiquement exploitant\nces vulnérabilités. Potentiellement, un tel code pourrait permettre :\n\n1.  Une exécution de code arbitraire dans le contexte d’IME et, par\n    conséquent, des modules basés dessus, tels que AMT ou PTT (Plateform\n    Trust Technology) ;\n2.  d’impacter les mécanismes d’attestation de validité de la machine,\n    tel que la désactivation du Secure Boot, grâce à la compromission\n    d’AMT ;\n3.  de charger et exécuter du code arbitraire dans le contexte d’AMT,\n    par exemple pour charger une session VNC à l’insu du système\n    d’exploitation ;\n4.  de récupérer des informations contenues dans la plateforme Intel\n    PTT, telles que des clés de Bitlocker.\n",
+  "title": "Multiples vulnérabilités dans les microgiciels Intel",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Intel INTEL-SA-00086 du 20 novembre 2017",
+      "url": "https://security-center.intel.com/advisory.aspx?intelid=INTEL-SA-00086&languageid=en-fr"
+    }
+  ]
+}

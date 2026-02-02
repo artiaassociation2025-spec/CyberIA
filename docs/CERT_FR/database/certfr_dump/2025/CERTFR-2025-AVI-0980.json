@@ -1,0 +1,129 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cognos Dashboards on Cloud Pak for Data versions 5.x antérieures à 5.2.2",
+      "product": {
+        "name": "Cognos Dashboards",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "WebSphere Application Server versions 9.x avec une version de IBM SDK, Java Technology Edition, antérieure à 8 Service Refresh 8 FP55",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "WebSphere Application Server versions 8.5.0.0 à 8.5.5.28 sans les correctifs de sécurité temporaires PH68418 et PH68762 ou antérieures à 8.5.5.28 (disponibilité prévue pour le premier trimestre 2026)",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "WebSphere Application Server Liberty versions 17.0.0.3 à 25.0.0.11 sans le correctif de sécurité temporaire PH68418 ou antérieures à 25.0.0.12 (disponibilité prévue pour le quatrième trimestre 2025)",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "WebSphere Application Server versions 9.0.0.0 à 9.0.5.25 sans le correctif de sécurité temporaire PH68418 ou antérieures à 9.0.5.27 (disponibilité prévue pour le premier trimestre 2026)",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2023-45857",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-45857"
+    },
+    {
+      "name": "CVE-2025-49146",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-49146"
+    },
+    {
+      "name": "CVE-2025-7962",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-7962"
+    },
+    {
+      "name": "CVE-2025-53057",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-53057"
+    },
+    {
+      "name": "CVE-2025-53066",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-53066"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0980",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-11-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Non spécifié par l'éditeur"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits IBM. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidentialité des données.",
+  "title": "Multiples vulnérabilités dans les produits IBM",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-10-31",
+      "title": "Bulletin de sécurité IBM 7248997",
+      "url": "https://www.ibm.com/support/pages/node/7248997"
+    },
+    {
+      "published_at": "2025-11-05",
+      "title": "Bulletin de sécurité IBM 7250200",
+      "url": "https://www.ibm.com/support/pages/node/7250200"
+    },
+    {
+      "published_at": "2025-11-03",
+      "title": "Bulletin de sécurité IBM 7250035",
+      "url": "https://www.ibm.com/support/pages/node/7250035"
+    }
+  ]
+}

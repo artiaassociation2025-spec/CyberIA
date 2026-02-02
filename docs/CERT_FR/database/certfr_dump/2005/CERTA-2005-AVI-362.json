@@ -1,0 +1,56 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenVMS 7.x.",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenVMS 6.x ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe navigateur Secure Web Browser d'OpenVMS est construit à partir du\nnavigateur Mozilla. Les récentes failles concernant ce dernier touchent\naussi Secure Web Browser.\n\nL'exploitation de ces failles peut conduire à des actions malveillantes\ndiverses telles que le contournement de la politique de sécurité, les\nattaques de type Cross Site Scritping, le détournement de consultation\nweb, l'exécution de code arbitraire, etc..\n\n## Solution\n\n-   Bulletin de sécurité de l'éditeur : HP SSRT5999\n\n        http://www2.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBOV01229\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2005-AVI-362",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-09-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Le navigateur Secure Web Browser d'OpenVMS peut être compromis par le\nbiais de nombreuses vulnérabilités pouvant déboucher sur des actions\nmalveillantes diverses.\n",
+  "title": "Multiples Vulnérabilités dans Secure Web Browser d'OpenVMS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de HP",
+      "url": null
+    }
+  ]
+}

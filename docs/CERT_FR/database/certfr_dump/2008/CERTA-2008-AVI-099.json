@@ -1,0 +1,155 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BEA Weblogic Workshop, versions 8 ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA Workshop for Weblogic , versions 9.x et 10.x.",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA Weblogic Express, versions 6.x à 10.x ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA Weblogic Server, versions 6.x à 10.x ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA Weblogic Portal, versions 8.x à 10.x ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe nombreuses vulnérabilités affectent les produits BEA Weblogic :\n\n-   une erreur de traitement des requêtes par HttpProxyServlet et\n    HttpClusterServlet permet à un utilisateur d'obtenir des droits\n    d'administration sur le serveur, dans certaines conditions ;\n-   des erreurs non précisées permettent de réaliser de l'injection de\n    code indirecte (cross site scripting) sur le poste de l'utilisateur\n    ;\n-   une erreur dans la console d'administration permet de réaliser de\n    l'injection de code indirecte (cross site scripting) sur le poste\n    d'un administrateur ;\n-   des erreurs non précisées permettent de contourner la politique de\n    sécurité, en particulier d'accéder à des servlettes non autorisées ;\n-   un problème de gestion des sessions permet de détourner la session\n    d'un utilisateur ;\n-   une erreur dans la gestion des sessions HTTPS peut conduire à une\n    redirection en HTTP ;\n-   un défaut de verrouillage des comptes permet à un utilisateur\n    malveillant de procéder à une recherche exhaustive de mots de passe\n    ;\n-   la protection des mots de passe de bases de données est\n    insuffisante. L'exploitation de cette faiblesse n'est possible que\n    si RDBMS Authentification est utilisé.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité BEA 256 à 275 :",
+      "url": "http://dev2dev.bea.com/pub/advisory/264"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 256 à 275 :",
+      "url": "http://dev2dev.bea.com/pub/advisory/257"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 256 à 275 :",
+      "url": "http://dev2dev.bea.com/pub/advisory/275"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 256 à 275 :",
+      "url": "http://dev2dev.bea.com/pub/advisory/268"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 256 à 275 :",
+      "url": "http://dev2dev.bea.com/pub/advisory/273"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 256 à 275 :",
+      "url": "http://dev2dev.bea.com/pub/advisory/265"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 256 à 275 :",
+      "url": "http://dev2dev.bea.com/pub/advisory/262"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 256 à 275 :",
+      "url": "http://dev2dev.bea.com/pub/advisory/266"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 256 à 275 :",
+      "url": "http://dev2dev.bea.com/pub/advisory/258"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 256 à 275 :",
+      "url": "http://dev2dev.bea.com/pub/advisory/270"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 256 à 275 :",
+      "url": "http://dev2dev.bea.com/pub/advisory/263"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 256 à 275 :",
+      "url": "http://dev2dev.bea.com/pub/advisory/274"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 256 à 275 :",
+      "url": "http://dev2dev.bea.com/pub/advisory/267"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 256 à 275 :",
+      "url": "http://dev2dev.bea.com/pub/advisory/271"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 256 à 275 :",
+      "url": "http://dev2dev.bea.com/pub/advisory/256"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 256 à 275 :",
+      "url": "http://dev2dev.bea.com/pub/advisory/269"
+    },
+    {
+      "title": "Bulletin de sécurité BEA 256 à 275 :",
+      "url": "http://dev2dev.bea.com/pub/advisory/261"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-099",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De nombreuses vulnérabilités affectent les produits <span\nclass=\"textit\">BEA Weblogic</span>. Leur exploitation permet à un\nutilisateur malveillant d'exécuter du code arbitraire à distance ou de\nporter atteinte à l'intégrité ou à la confidentialité des données.\n",
+  "title": "Vulnérabilités de BEA Weblogic",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité BEA 256 à 275",
+      "url": null
+    }
+  ]
+}

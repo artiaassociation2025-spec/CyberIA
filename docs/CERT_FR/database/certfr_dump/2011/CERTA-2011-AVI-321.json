@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Drupal versions 7.x antérieures à 7.1 ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Drupal versions 6.x antérieures à 6.21.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Drupal :\n\n-   une injection de code indirecte est possible du fait d'une faille\n    dans le gestionnaire d'erreurs (Drupal 6.x) ;\n-   un problème dans le module des couleurs permet une injection de code\n    indirecte (Drupal 6.x et 7.x) ;\n-   lorsque les fichiers privés sont utilisés avec un module d'accès aux\n    noeuds, ils peuvent être accédés sans restriction via le module File\n    (Drupal 7.x).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2011-AVI-321",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-05-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Drupal</span>\npermettent de réaliser des injections de code indirectes ou d'obtenir\ndes accès à des fichiers privés.\n",
+  "title": "Multiples vulnérabilités dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Drupal SA-CORE-2011-001 du 25 mai 2011",
+      "url": "http://drupal.org/node/1168756"
+    }
+  ]
+}

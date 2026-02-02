@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IRIX 6.5 à 6.5.15 (première  vulnérabilité).  <P>IRIX 6.5 à 6.5.16 (deuxième vulnérabilité).</P>  <P>Les versions antérieures, non maintenues, n'ont pas été  testées.</P></p>",
+  "content": "## Description\n\nLes tests effectués par l'université finlandaise d'Oulu ont mis en\névidence la présence de vulnérabilités dans les routines de décodage et\nde traitement des messages SNMP dans de nombreuses implémentations (se\nréférer au bulletin d'alerte CERTA-2002-ALE-004 du CERTA).\n\n## 4.1 Première vulnérabilité\n\nUne vulnérabilité de l'agent SNMP (exécutables /usr/etc/snmpd,\n/usr/etc/peer_snmpd et /usr/etc/peer_encaps livrés avec le paquetage\neoe.sw.netman) permet à un utilisateur mal intentionné d'exécuter du\ncode arbitraire avec les privilèges de l'administrateur root. Cette\nvulnérabilité, de type débordement de mémoire, est exploitable à\ndistance.\n\n## 4.2 Deuxième vulnérabilité\n\nGrâce à des paquets habilement constitués, un utilisateur mal\nintentionné peut forcer, à distance, l'arrêt du sous-agent SNMP HP-UX\nMIB (exécutable /usr/etc/hpsnmpd).\n\nLe sous-agent SNMP HP-UX MIB (paquetage snmpd.sw.hp) n'est pas installé\npar défaut.\n\n## Contournement provisoire\n\n-   Ne démarrer le service SNMP que si celui-ci est nécessaire. Dans le\n    cas contraire, les paquetages eoe.sw.netman et textttsnmpd.sw.hp\n    peuvent être désinstallés par la commande suivante : versions remove\n    eoe.sw.netman snmpd.sw.hp ;\n-   filtrer le port 161/udp utilisé par le protocole SNMP V1 au niveau\n    du garde-barrière afin d'empêcher l'exploitation de cette\n    vulnérabilité depuis l'Internet.\n\n## Solution\n\nLa version 6.5.16 d'IRIX corrige la première vulnérabilité.\n\nPour ces deux vulnérabilités, des correctifs sont disponibles sur le\nsite du constructeur (se référer à la section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité 20020404-01-P de SGI disponible à    l'adresse suivante :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20020404-01-P"
+    },
+    {
+      "title": "Avis de sécurité 20020201-01-P de SGI disponible à    l'adresse suivante :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20020201-01-P"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-069",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-04-04T00:00:00.000000"
+    },
+    {
+      "description": "Prise en compte de l'avis 20020404-01-P relatif à hpsnmpd.",
+      "revision_date": "2002-04-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut utiliser une vulnérabilité de\nl'agent SNMP sous IRIX pour exécuter du code arbitraire à distance avec\nles privilèges de l'administrateur root.\n\nLe sous-agent SNMP HP-UX MIB (hpsnmpd) est également vulnérable.\n",
+  "title": "Vulnérabilités des agents SNMP sous IRIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis 20020201-01-P de SGI",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis 20020404-01-P de SGI",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache versions 2.0.40 à 2.0.45 pour la vulnérabilité du module HTTP Basic Authentication ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache versions 2.0.37 à 2.0.45 pour la vulnérabilité dans la bibliothèque APR (Apache Portable Runtime).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n## 4.1 vulnérabilité du module HTTP Basic Authentication\n\nUne vulnérabilité présente dans le module HTTP Basic Authentication peut\nêtre exploitée par un utilisateur mal intentionné afin de réaliser un\ndéni de service en interdisant l'accès à tout document protégé par un\nmot de passe.\n\n## 4.2 Vulnérabilité dans la bibliothèque APR (Apache Portable Runtime)\n\nAPR (Apache Portable Runtime) est une bibliothèque utilisée par\nplusieurs modules notamment mod_dav.\n\nUne vulnérabilité de type fuite de mémoire présente dans la routine\napr_psprintf peut être exploitée par un utilisateur mal intentionné afin\nde réaliser un déni de service ou d'exécuter du code arbitraire à\ndistance.\n\n## Solution\n\nInstaller la version 2.0.46 d'Apache :\n\n    http://httpd.apache.org\n\nou appliquer le correctif de l'éditeur :\n\n-   Bulletin de sécurité MDKSA-2003:063 de Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:063\n\n-   Bulletin de sécurité RHSA-2003:186 de Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2003-186.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Annonce de la version 2.0.46 d'Apache :",
+      "url": "http://www.apache.org/dist/httpd/Announcement2.html"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-095",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-06-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans le serveur HTTP Apache peuvent être\nexploitées par un utilisateur mal intentionné afin de réaliser un déni\nde service.\n",
+  "title": "Multiples vulnérabilités du serveur HTTP Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "\"Apache portable runtime denial of service and arbitrary code execution vulnerability\"",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Annonce Apache 2.0.46",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité d'iDEFENSE",
+      "url": "http://www.idefense.com/advisory/05.30.03.txt"
+    }
+  ]
+}

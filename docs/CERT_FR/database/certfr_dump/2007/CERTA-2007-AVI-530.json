@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "CiscoWorks Common Services 3.0.x;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CiscoWorks Common Services 3.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCiscoWorks est une suite d'outils, réalisés en Java, utilisés pour\nparamétrer les réseaux possédant des équipements Cisco. Ils sont\naccessibles via une interface web qui accepte des arguments qui ne sont\npas correctement contrôlés. Un utilisateur malveillant peut utiliser ces\narguments pour réaliser une injection de code indirecte et exécuter du\ncode web arbitraire (HTTP et script) dans le navigateur d'un utilisateur\net cela dans le contexte du site CiscoWorks.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5582",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5582"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 100240 du 05 décembre 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sr-20071205-cws.shtml"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-530",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    }
+  ],
+  "summary": "L'interface CiscoWorks contient une vulnérabilité permettant de réaliser\nune injection de code indirecte.\n",
+  "title": "Vulnérabilité dans CiscoWorks",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Cisco 100240 du 5 décembre 2007",
+      "url": null
+    }
+  ]
+}

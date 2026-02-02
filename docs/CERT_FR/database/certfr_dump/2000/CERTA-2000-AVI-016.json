@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Internet Explorer 4.01 SP 2 et supérieur ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2000 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PowerPoint 97.",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Première vulnérabilité (Internet Explorer 4.01 SP 2) :\n\nUn site malvaillant peut proposer un script qui ouvre une base de\ndonnées Access (Type MDB) disponible sur ce site. Le fichier MDB\npourrait contenir des macros qui s'exécuteraient sans prévenir\nl'utilisateur.\n\nSous Outlook et Outlook Express, le fait d'afficher un mèl au format\nHTML peut conduire au même résultat.\n\n-   Deuxième vulnérabilité (Office 2000 et PowerPoint 97) :\n\nUn site malvaillant peut proposer un script qui permet de faire appel à\nun objet Excel ou PowerPoint situé sur la machine de l'utilisateur afin\nqu'un fichier, se trouvant sur le site, soit sauvegardé sur la machine\nlocale.\n\n## Contournement provisoire\n\nPremière vulnérabilité (Internet Explorer 4.01 SP 2) :\n\nAucun correctif n'est disponible actuellement auprès de Microsoft,\ncependant un contournement du problème peut être réalisé en définissant\nun mot de passe pour l'administrateur Access. Cette solution permet une\ninvite de saisie du mot de passe avant l'exécution d'un script VBA.\n\nMise en place du mot de passe :\n\n-   Démarrer Acces 2000 sans ouvrir de base de données\n-   Menu « outils », Choix « sécuri é », « Définition des utilisateurs\n    de groupes »\n-   Sélectionner « administrateur » en utilisateur courant\n-   Sélectionner l'onglet « Changer le mot de passe »\n-   Laisser l'ancien mot de passe vide puis saisir le nouveau\n\n## Solution\n\nDeuxième vulnérabilité (Office 2000 et PowerPoint 97) :\n\nCorrectif pour Office 2000 et PowerPoint 2000 :\n\n    http://officeupdate.microsoft.com/2000/downloaddetails/Addinsec.htm\n\nCorrectif pour PowerPoint 97 :\n\n    http://officeupdate.microsoft.com/downloaddetails/PPt97sec.htm\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-049.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-016",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-07-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Téléchargement de fichiers sur le système"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes, l'une permettant sous Internet\nExplorer 4.01 SP 2 d'exécuter une macro VBA, l'autre sous Office 2000 et\nPowerPoint 97 permettant de sauvegarder un fichier sur le disque à\nl'insu de son utilisateur.\n",
+  "title": "Vulnérabilités dans Internet Explorer 4.01, Office 2000 et PowerPoint 97",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Microsoft Security Bulletin",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis du CERT IST",
+      "url": null
+    }
+  ]
+}

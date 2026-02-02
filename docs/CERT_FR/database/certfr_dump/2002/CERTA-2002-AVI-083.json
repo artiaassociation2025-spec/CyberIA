@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD 4.4-STABLE ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 4.5-STABLE.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 4.5-RELEASE ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa première vulnérabilité concerne les mécanismes syncache et syncookie,\nqui servent à protéger le système d'une attaque de type SYN flood.\n\nUne mauvaise gestion des pointeurs et des sockets liés à ces mécanismes\npeut provoquer l'arrêt brutal du système.  \n\nLa deuxième vulnérabilité concerne la table de routage de la pile\nTCP/IP. A chaque nouvelle connexion TCP avec un hôte distant, une entrée\nest ajoutée dans cette table, avec un compteur indiquant le nombre de\nconnexions en cours. Lorsque ce compteur est à zéro, l'entrée est\neffacée de la table.\n\nUne erreur de la fonction ip_output() lors d'un message de type ICMP\necho reply provoque l'incrémentation d'une éventuelle entrée de la\ntable, ce qui peut amener à une saturation de la mémoire du système.\n\nCette vulnérabilité peut être exploitée par un utilisateur distant mal\nintentionné pour effectuer un déni de service sur le système.\n\n## Solution\n\nMettre à jour la version de FreeBSD.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-083",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-04-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités découvertes dans la pile TCP/IP des systèmes FreeBSD\npeuvent être utilisées pour effectuer un déni de service.\n",
+  "title": "Vulnérabilités de la pile TCP/IP de FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité FreeBSD-SA-02:21",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité FreeBSD-SA-02:20",
+      "url": "ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-02:20.syncache.asc"
+    }
+  ]
+}

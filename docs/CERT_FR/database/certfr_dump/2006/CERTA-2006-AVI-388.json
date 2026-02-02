@@ -1,0 +1,110 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows XP Professionnel Édition x64 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 1 et Microsoft Windows XP Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 Édition x64.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 pour les systèmes Itanium et Microsoft Windows Server 2003 avec SP1 pour les systèmes Itanium ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 et Microsoft Windows Server 2003 Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa plupart des versions de Microsoft Windows offrent un service\nd'indexage (Indexing Service) afin d'optimiser la recherche de fichiers\nà partir de certaines de leurs propriétés (noms, contenus, format, etc).\n\nCe service n'est pas lancé automatiquement par défaut, mais peut le\ndevenir quand une personne choisit l'option «rendre les recherches\nfutures plus rapides» au cours de l'une d'elles.\n\nLe service sert aussi pour indexer le contenu des serveurs Web IIS\n(Internet Information Services).\n\nUne vulnérabilité a été identifiée dans le service d'indexage. Associé à\nun serveur Web, il pourrait être utilisé par une personne malveillante\npour une attaque de type injection de code indirecte (ou cross-site\nscripting). La vulnérabilité lui permettrait de modifier le contenu de\ncertaines pages Web. Lorsqu'un utilisateur naviguerait sur le site\ncompromis, la personne malveillante pourrait alors surveiller sa session\nWeb, dérober des informations, ou exécuter d'autres codes sur le système\nde l'utilisateur.\n\n## Solution\n\nSe référer au bulletin de sécurité MS06-053 de Microsoft pour\nl'application des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0032",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0032"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-053 du 12 septembre    2006 :",
+      "url": "http://www.microsoft.com/france/technet/security/bulletin/2006/MS06-053.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-053 du 12 septembre    2006 :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-053.mspx"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-388",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-09-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans le service d'indexage de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-053 du 12 septembre 2006",
+      "url": null
+    }
+  ]
+}

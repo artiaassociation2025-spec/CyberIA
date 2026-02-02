@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft SQL Server 7.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft SQL Server 2000.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'interface OLE DB peut être connectée à une source de données distante\npar le biais d'une connexion « ad hoc » (utilisée pour les connexions\npeu fréquentes). Un débordement de mémoire peut arriver lors de\nl'utilisation des fonctions associées à ce type de connexion.\n\nL'exploitation de cette vulnérabilité des serveurs SQL Microsoft peut\npermettre à un utilisateur mal intentionné d'arrêter le service\nMSSQLSERVER, de prendre possession de la base ou bien d'exécuter du code\narbitraire à distance. Les effets de cette vulnérabilité dépendent du\ncontexte de sécurité dans lequel le service MSSQLSERVER a été lancé.\n\n## Solution\n\nAppliquer le correctif fournit par Microsoft suivant la version:\n\n-   SQL Server 7.0:\n\n        http://support.microsoft.com/support/misc/kblookup.asp?id=Q318268\n\n-   SQL Server 2000:\n\n        http://support.microsoft.com/support/misc/kblookup.asp?=id=Q316333\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité MS02-007 de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms02-007.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-040",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Coupure du service msSQLserver"
+    },
+    {
+      "description": "Prise de contrôle de la base SQL"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut arrêter le service MSSQLSERVER,\nprendre possession de la base, installer et exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité dans Microsoft SQL Server 7.0 et 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS02-007",
+      "url": null
+    }
+  ]
+}

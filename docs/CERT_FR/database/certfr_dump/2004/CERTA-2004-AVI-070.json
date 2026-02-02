@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>DB2 8.1 Entreprise Edition.</p>",
+  "content": "## Description\n\nUne vulnérabilité est présente dans l'exécution de la commande à\ndistance sur le serveur de commande à distance. Lors de la création d'un\nnouveau processus lancé avec les privilèges du super utilisateur root\nchargé de prendre en charge cette exécution, elle permet à un\nutilisateur mal intentionné d'exécuter du code arbitraire avec les\nprivilèges du super utilisateur.\n\n## Solution\n\nAppliquer la mise à jour FixPack 5 disponible sur le site d'IBM (cf.\nsection documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité IY53894 IBM :",
+      "url": "http://www-306.ibm.com/cgi-bin/db2www/data/db2/udb/winos2unix/support/aparlib.d2w/display_apar_details?aparno=IY53894"
+    },
+    {
+      "title": "Mise à jour disponible à cette adresse :",
+      "url": "http://www-306.ibm.com/cgi-bin/db2www/data/db2/udb/winos2unix/support/v8fphist.d2w/report"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-070",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente sur le serveur de commande à distance du\ngestionnaire de base de données DB2 (DB2RCMD.EXE) permet à un\nutilisateur mal intentionné d'exécuter des commandes arbitraires avec\nles privilèges du super utlilisateur root.\n",
+  "title": "Vulnérabilité dans le gestionnaire de base de données IBM DB2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité IY53894 d'IBM",
+      "url": null
+    }
+  ]
+}

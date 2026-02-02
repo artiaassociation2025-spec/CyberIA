@@ -1,0 +1,109 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "NetScaler Gateway versions antérieures à 13.1-59.22",
+      "product": {
+        "name": "NetScaler Gateway",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetScaler ADC versions antérieures à 14.1-47.48",
+      "product": {
+        "name": "NetScaler ADC",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetScaler ADC versions antérieures à 13.1-59.22",
+      "product": {
+        "name": "NetScaler ADC",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetScaler ADC 12.1-FIPS et 12.1-NDcPP versions antérieures à 12.1-55.330",
+      "product": {
+        "name": "NetScaler ADC",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetScaler Gateway versions antérieures à 14.1-47.48",
+      "product": {
+        "name": "NetScaler Gateway",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetScaler ADC 13.1-FIPS et 13.1-NDcPP versions antérieures à 13.1-37.241",
+      "product": {
+        "name": "NetScaler ADC",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "Citrix rappelle que les versions 12.1 and 13.0 de NetScaler ADC et NetScaler Gateway sont obsolètes et ne recevront plus de mises à jour de sécurité. L'éditeur recommande de migrer vers une version maintenue et à jour.",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-7776",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-7776"
+    },
+    {
+      "name": "CVE-2025-7775",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-7775"
+    },
+    {
+      "name": "CVE-2025-8424",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-8424"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0730",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-08-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Citrix NetScaler ADC et NetScaler Gateway.  Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et un contournement de la politique de sécurité.\n\nCitrix indique que la vulnérabilité CVE-2025-7775 est activement exploitée.",
+  "title": "Multiples vulnérabilités dans Citrix NetScaler ADC et NetScaler Gateway",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-08-26",
+      "title": "Bulletin de sécurité Citrix CTX694938",
+      "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX694938&articleURL=NetScaler_ADC_and_NetScaler_Gateway_Security_Bulletin_for_CVE_2025_7775_CVE_2025_7776_and_CVE_2025_8424"
+    }
+  ]
+}

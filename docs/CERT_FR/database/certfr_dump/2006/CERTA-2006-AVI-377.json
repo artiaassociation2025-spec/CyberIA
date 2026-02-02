@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions de X.Org X11 de 6.8.2 à 7.1.</P>",
+  "content": "## Description\n\nX.Org X11 est un service graphique qui gère l'interaction entre\nl'utilisateur (clavier, souris) et la machine. Il est largement utilisé\navec les systèmes d'exploitation Unix, Linux ou BSD, mais n'est pas\ninstallé par défaut avec Apple MAC OS et Microsoft Windows.\n\nUne vulnérabilité a été identifiée dans ce dernier. Une mauvaise\nvérification d'erreurs provoquées par la fonction setuid() peut être\nutilisée par une personne locale au système, afin de modifier des\nfichiers ou d'exécuter des commandes avec des droits plus élevés\n(administrateur, ou root).\n\nLe problème existe également au cours de l'utilisation de bibliothèques\ndérivées de X.Org X11.\n\n## Solution\n\nSe référer aux mises à jour de X.Org pour l'obtention des correctifs\n(cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour X.Org X11 pour la version 7.0 :",
+      "url": "http://xorg.freedesktop.org/releases/X11R7.0/patches/"
+    },
+    {
+      "title": "Mise à jour X.Org X11 pour la version 7.1 :",
+      "url": "http://xorg.freedesktop.org/releases/X11R7.1/patches/"
+    },
+    {
+      "title": "Mise à jour X.Org X11 pour la version 6.9.0 :",
+      "url": "http://xorg.freedesktop.org/releases/X11R6.9.0/patches/"
+    },
+    {
+      "title": "Mise à jour X.Org X11 pour la version 6.8.2 :",
+      "url": "http://xorg.freedesktop.org/releases/X11R6.8.2/patches/"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200608-25 du 28 août 2006    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200608-25.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-341-1 du 06 septembre 2006    :",
+      "url": "http://www.ubuntu.com/usn/usn-341-1"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-377",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la mise à jour Ubuntu.",
+      "revision_date": "2006-09-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans le service graphique X.Org X11.\nElle permettrait à un utilisateur malveillant d'exécuter sur le système\nvulnérable des commandes arbitraires avec les droits de\nl'administrateur.\n",
+  "title": "Vulnérabilité dans X.Org X11 et des bibliothèques associées",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de mises à jour Gentoo GLSA 200608-25",
+      "url": null
+    }
+  ]
+}

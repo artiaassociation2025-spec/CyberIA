@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Bluecoat BCAAA utilisé par les  produits&nbsp;:  <UL>    <LI>ProxySG 6.x, 5.x et 4.x ;</LI>    <LI>ProxyOne.</LI>  </UL></p>",
+  "content": "## Description\n\nL'utilisation des relais BlueCoat ProxyOne et ProxySG demande\nl'installation d'un module BCAAA sur un serveur Windows. Ce module\nutilise un port particulier pour des opérations de synchronisation.\nL'envoi de paquets spécialement conçus sur ce port permet à un\nutilisateur malveillant d'exécuter du code arbitraire à distance sur le\nserveur Windows.\n\n## Solution\n\nLes versions 6.2.1.1 et 5.5.5.1 de ProxySG corrigent le problème. Le\ncorrectif pour ProxyOne n'est pas encore disponible.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2011-AVI-272",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-05-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le module BCAAA des BlueCoat permet à un\nutilisateur malveillant d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans des produits BlueCoat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité BlueCoat SA55 du 02 mai 2011",
+      "url": "https://kb.bluecoat.com/index?page=content&id=SA55"
+    }
+  ]
+}

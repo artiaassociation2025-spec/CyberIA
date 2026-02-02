@@ -1,0 +1,134 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Firefox versions antérieures à 3.6.24 ;",
+      "product": {
+        "name": "Firefox",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Thunderbird versions antérieures à 8.0 ;",
+      "product": {
+        "name": "Thunderbird",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Thunderbird versions antérieures à 3.1.16.",
+      "product": {
+        "name": "Thunderbird",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Firefox versions antérieures à 8.0 ;",
+      "product": {
+        "name": "Firefox",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été corrigées dans les produits de la\nfondation Mozilla:\n\n-   mfsa2011-46 : vulnérabilité dans la fonction JSSubScript utilisée\n    par certains modules pouvant être exploitée par du contenu Web\n    malveillant pour élever ses privilèges (cette vulnérabilité a déjà\n    été corrigée dans les branches principales des produits, mais est\n    maintenant également corrigée dans Firefox 3.6.24 et Thunderbird\n    3.1.16) ;\n-   mfsa2011-47 : vulnérabilité dans le traitement de données codées en\n    Shift-JIS, pouvant être exploitée pour injecter du code\n    indirectement à distance (XSS) ;\n-   mfsa2011-48 : plusieurs vulnérabilités dans le moteur de navigation,\n    dont certaines pourraient conduire à une corruption de la mémoire et\n    permettre d'exécuter du code arbitraire à distance dans des\n    circonstances particulières ;\n-   mfsa2011-49 : arrêt inopiné de Firebug dans le traitement d'un\n    fichier Javascript spécialement conçu ;\n-   mfsa2011-50 : Problème de confidentialité des données dans\n    l'utilisation de l'accélération graphique Windows D2D ;\n-   mfsa2011-51 : problème dans les pilotes graphiques sur MacOS X qui\n    peut être exploité par un site Web spécialement conçu pour lire des\n    données antérieures du navigateur ;\n-   mfsa2011-52 : Vulnérabilité dans NoWaiverWrappers pouvant être\n    exploitée pour une élévation des privilèges.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-3650",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3650"
+    },
+    {
+      "name": "CVE-2011-3653",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3653"
+    },
+    {
+      "name": "CVE-2011-3655",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3655"
+    },
+    {
+      "name": "CVE-2011-3649",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3649"
+    },
+    {
+      "name": "CVE-2011-3651",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3651"
+    },
+    {
+      "name": "CVE-2011-3648",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3648"
+    },
+    {
+      "name": "CVE-2011-3647",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3647"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2011/mfsa2011-52 du 08 novembre 2011 :",
+      "url": "http://www.mozilla.org/security/announce/2011/mfsa2011-52.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2011/mfsa2011-50 du 08 novembre 2011 :",
+      "url": "http://www.mozilla.org/security/announce/2011/mfsa2011-50.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2011/mfsa2011-48 du 08 novembre 2011 :",
+      "url": "http://www.mozilla.org/security/announce/2011/mfsa2011-48.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2011/mfsa2011-49 du 08 novembre 2011 :",
+      "url": "http://www.mozilla.org/security/announce/2011/mfsa2011-49.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2011/mfsa2011-46 du 08 novembre 2011 :",
+      "url": "http://www.mozilla.org/security/announce/2011/mfsa2011-46.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2011/mfsa2011-51 du 08 novembre 2011 :",
+      "url": "http://www.mozilla.org/security/announce/2011/mfsa2011-51.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2011/mfsa2011-47 du 08 novembre 2011 :",
+      "url": "http://www.mozilla.org/security/announce/2011/mfsa2011-47.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-626",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-11-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans les produits de la\nfondation Mozilla, dont quatre sont considérées comme critiques.\n",
+  "title": "Multiples vulnérabilités dans les produits Mozilla",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité de la fondation Mozilla du 08 novembre 2011",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Asterisk Business Edition version C.2.3.",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Open Source, branche 1.4.x pour les versions 1.4.22, 1.4.23 et 1.4.23.1 (sans à la révision 174082) ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Open Source, branche 1.6.0.x pour les versions antérieures à 1.6.0.6 (sans la révision 174085) ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Open Source, branche 1.6.1.x pour les versions antérieures à 1.6.1.0-rc2 (sans la révision 174086) ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le serveur de téléphonie sur IP\nAsterisk. Elle concerne les fonctions sip_uri_headers_cmp() et\nsip_uri_params_cmp() qui ne manipulent pas correctement les informations\ncontenues par certaines trames. Cette vulnérabilité fonctionne avec\nl'option de configuration pedantic activée. La vulnérabilité peut être\nexploitée par une personne distante pour perturber le fonctionnement du\nservice de téléphonie.\n\n## Solution\n\nSe référer au bulletin de sécurité AST-2009-002 pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0871",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0871"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site du projet Asterisk :",
+      "url": "http://www.asterisk.org/security"
+    },
+    {
+      "title": "Bulletin de sécurité AST-2009-002 de digium Asterisk du 10    mars 2009 :",
+      "url": "http://downloads.digium.com/pub/security/AST-2009-002.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-102",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-03-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans le serveur de téléphonie sur IP\nAsterisk. Un message SIP construit de manière particulière peut\nperturber le fonctionnement du service.\n",
+  "title": "Vulnérabilité dans Asterisk",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Asterisk AST-2009-002 du 10 mars 2009",
+      "url": null
+    }
+  ]
+}

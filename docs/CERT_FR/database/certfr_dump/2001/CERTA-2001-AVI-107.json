@@ -1,0 +1,104 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "COMPAQ True 64 DIGITAL UNIX v4.0f, v4.0g, v5.0a, v5.1, v5.1a;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SGI IRIX 5.2, 5.3, 6.0, 6.1, 6.2, 6.3, 6.4;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SUN SOLARIS 8.0 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM AIX 4.3, 4.3.1, 4.3.2, 4.3.3, 5.1;",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP HP-UX 10.10, 10.20, 10.24, 11.00, 11.04, 11.11;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nToolTalk est livré avec CDE (Common Desktop Environment) sur la plupart\ndes Unix. Ce service, démarré par défaut, permet à des applications de\ncommuniquer à travers le réseau en échangeant des messages.\n\nUne vulnérabilité de type chaîne de format permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire à distance avec les privilèges\nde l'utilisateur ayant démarré le service (root).\n\nUne autre exploitation de cette vulnérabilité peut entrainer un déni de\nservice par arrêt du serveur rpc.ttdbserver.\n\n## Contournement provisoire\n\nStopper le service rpc.ttdbserver si aucune application ne l'utilise\n(dans certains cas, celà peut affecter le démarrage du bureau graphique\nCDE).\n\n## Solution\n\nConsultez l'éditeur pour l'obtention de correctifs correspondants à\nvotre système.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité ISS \"Multi-vendor format string    vulnerability in ToolTalk\" :",
+      "url": "http://xforce.iss.net/alerts/advise98.php"
+    },
+    {
+      "title": "Note #VU595507 du CERT/CC \"CDE ToolTalk RPC Server contains    format string vulnerability\" :",
+      "url": "http://www.kb.cert.org/vuls/id/595507"
+    },
+    {
+      "title": "Avis de sécurité #212 de SUN :",
+      "url": "http://sunsolve.Sun.COM/pub-cgi/retrieve.pl?doctype=coll&doc=secbull/212&type=0&nav=sec.sba"
+    },
+    {
+      "title": "Avis de sécurité d'IBM \"Format string vulnerability in CDE    ToolTalk\" :",
+      "url": "http://www-1.ibm.com/services/continuity/recover1.nsf/MSS/MSS-OAR-E01-2001.425.1"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-107",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-04T00:00:00.000000"
+    },
+    {
+      "description": "&nbsp; <UL> <LI>mise-à-jour de la section documentation;</LI> <LI>supression des correctifs temporaires HP et IBM;</LI> <LI>modification des versions vulnérables de HP-UX.</LI> </UL>",
+      "revision_date": "2001-12-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance avec les privilèges de l'administrateur"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le service rpc.ttdbserver (ToolTalk) permet à un\nutilisateur mal intentionné de provoquer un déni de service et dans\ncertains cas d'exécuter du code arbitraire à distance avec élévation de\nprivilèges.\n",
+  "title": "Vulnérabilité dans le service RPC ToolTalk",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité ISS \"Multi-vendor format string vulnerability in ToolTalk\"",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Versions antérieures à Wireshark 1.4.13 ;",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "versions antérieures à Wireshark 16.8.",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-2392",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-2392"
+    },
+    {
+      "name": "CVE-2012-2394",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-2394"
+    },
+    {
+      "name": "CVE-2012-2393",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-2393"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Wireshark wnpa-sec-2012-10 du 21 mai    2012 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2012-10.html"
+    },
+    {
+      "title": "Bulletin de sécurité Wireshark wnpa-sec-2012-08 du 21 mai    2012 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2012-08.html"
+    },
+    {
+      "title": "Bulletin de sécurité Wireshark wnpa-sec-2012-09 du 21 mai    2012 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2012-09.html"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-292",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-05-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Trois vulnérabilités ont été corrigées dans <span\nclass=\"textit\">Wireshark</span>. La première provoque une boucle dans\nl'exécution du code, celle-ci rend l'application temporairement\ninutilisable. La deuxième concerne les routines d'allocations mémoire\npour module d'analyse « DIAMETER » et provoque un déni de service. La\ndernière concerne une erreur dans la gestion mémoire pour les\nimplémentations sur processeurs « SPARC » et « Itanium ».\n",
+  "title": "Multiples vulnérabilités dans Wireshark",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Wireshark du 21 mai 2012",
+      "url": null
+    }
+  ]
+}

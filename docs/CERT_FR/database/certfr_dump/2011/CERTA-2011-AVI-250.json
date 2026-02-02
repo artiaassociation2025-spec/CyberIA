@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Adobe Reader et Acrobat versions 10.0.2 et antérieures pour les systèmes Macintosh.",
+      "product": {
+        "name": "Acrobat",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Adobe Reader et Acrobat versions 9.4.3 et antérieures pour les systèmes Windows et Macintosh ;",
+      "product": {
+        "name": "Acrobat",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDes produits Adobe sont vulnérables à une faille permettant à une\npersonne malintentionnée d'exécuter du code arbitraire à distance. La\nversion 10.0.2 pour Windows n'a pas de correctif à ce jour. Cependant\nl'éditeur affirme que le mode protégé d'Adobe Reader X évite\nl'exploitation de la faille CVE-2011-0611.\n\nCette vulnérabilité fait l'objet de l'alerte CERTA-2011-ALE-003 (cf.\nDocumentation).\n\n## Solution\n\nLes versions suivantes corrigent le problème :\n\n-   Adobe Reader 9.4.4 pour les systèmes Windows et Macintosh ;\n-   Adobe Reader X (10.0.3) pour les systèmes Macintosh.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0610",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0610"
+    },
+    {
+      "name": "CVE-2011-0611",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0611"
+    }
+  ],
+  "links": [
+    {
+      "title": "Document du CERTA CERTA-2011-ALE-003 du 19 avril 2011 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2011-ALE-003/index.html"
+    },
+    {
+      "title": "Bulletin de sécurité Adobe apsb11-08 du 21 avril 2011 :",
+      "url": "http://www.adobe.com/support/security/bulletins/apsb11-08.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-250",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-04-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été corrigée dans Reader et Acrobat permettant à une\npersonne malintentionnée d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans Adobe Reader et Acrobat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Adobe APSB11-08 du 21 avril 2011",
+      "url": null
+    }
+  ]
+}

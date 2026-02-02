@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Wireshark versions strictement  inférieures à 1.6.3.</p>",
+  "content": "## Description\n\nTrois vulnérabilités ont été corrigées dans Wireshark. Un attaquant\ndistant peut provoquer l'arrêt inopiné du logiciel en envoyant des\ntrames spécialement conçues, ou en incitant un utilisateur à ouvrir un\nfichier de traces réseau malveillant. L'une de ces vulnérabilités est de\ntype dépassement de tampon (CVE-2011-4102), une autre est due à une\nvariable non initialisée (CVE-2011-4100), la troisième est due à un\ndéréférencement de pointeur (CVE-2011-4101). L'exécution de code à\ndistance n'est pas exclue.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-4102",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4102"
+    },
+    {
+      "name": "CVE-2011-4101",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4101"
+    },
+    {
+      "name": "CVE-2011-4100",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4100"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Wireshark wnpa-sec-2011-18 du 01    novembre 2011 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2011-18.html"
+    },
+    {
+      "title": "Bulletin de sécurité Wireshark wnpa-sec-2011-17 du 01    novembre 2011 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2011-17.html"
+    },
+    {
+      "title": "Bulletin de sécurité Wireshark wnpa-sec-2011-19 du 01    novembre 2011 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2011-19.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-612",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-11-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été corrigées dans Wireshark, qui peuvent\nêtre exploitées à distance pour causer un déni de service ou exécuter du\ncode arbitraire.\n",
+  "title": "Multiples vulnérabilités dans Wireshark",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Wireshark du 01 novembre 2011",
+      "url": null
+    }
+  ]
+}

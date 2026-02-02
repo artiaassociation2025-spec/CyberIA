@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "TN-5900 micrologiciels versions 3.1 et antérieures",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "MGate 5109 micrologiciels versions antérieures à 2.3",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "MGate 5101-PBM-MN micrologiciels versions antérieures à 2.2",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTFR-2021-AVI-983",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-12-28T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de la balise [SCADA] dans le titre.",
+      "revision_date": "2021-12-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Moxa.\nElles permettent à un attaquant de provoquer une exécution de code\narbitraire à distance, un déni de service à distance et une atteinte à\nl'intégrité des données.\n",
+  "title": "Multiples vulnérabilités dans les produits Moxa",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Moxa tn-5900-secure-routers-vulnerability du 28 décembre 2021",
+      "url": "https://www.moxa.com/en/support/product-support/security-advisory/tn-5900-secure-routers-vulnerability"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Moxa tn-5900-secure-routers-vulnerabilities du 28 décembre 2021",
+      "url": "https://www.moxa.com/en/support/product-support/security-advisory/tn-5900-secure-routers-vulnerabilities"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Moxa mgate-5109-5101-protocol-gateways-vulnerability du 28 décembre 2021",
+      "url": "https://www.moxa.com/en/support/product-support/security-advisory/mgate-5109-5101-protocol-gateways-vulnerability"
+    }
+  ]
+}

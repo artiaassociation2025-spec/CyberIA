@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows NT.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 9x ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTroj/Qaz est un cheval de Troie permettant à un utilisateur mal\nintentionné de pouvoir avoir accès, à distance, à une machine infectée.\n\nLors de son exécution ce cheval de Troie recherche le fichier «\nnotepad.exe » et le renomme en « note.exe ». Il duplique son propre code\ndans un nouveau fichier nommé « notepad.exe ».\n\nLorsque l'utilisateur exécute « notepad.exe », le cheval de Troie\ns'exécute et lance également l'application « bloc note ». Il modifie\négalement la base de registre afin de se charger au démarrage de la\nmachine.\n\n## Détection et solution provisoire\n\nRechercher sur le disque la présence des fichiers suivants :\n\nW32.HLLW.Qaz.A ou Qaz.Trojan  \n  \n\nRechercher la présence de « note.exe » et le renommer en « notepad.exe\n»  \n  \n\nSupprimer dans la base de registre à l'emplacement\n`HKEY_LOCAL_MACHINE\\Software\\Microsoft\\``Current\\Version\\Run` la clé :\nStartIE=notepad.exe\n\n## Solution\n\nMettre à jour votre anti-virus\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-036",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès aux données"
+    },
+    {
+      "description": "Propagation de virus"
+    },
+    {
+      "description": "Cheval de troie"
+    }
+  ],
+  "summary": null,
+  "title": "Cheval de Troie : Troj/qaz",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Sophos",
+      "url": "http://www.sophos.com/virusinfo/analyses/trojqaz.html"
+    },
+    {
+      "published_at": null,
+      "title": "Symantec",
+      "url": null
+    }
+  ]
+}

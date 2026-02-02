@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<SPAN class=\"textit\">Kerio  MailServer</SPAN>, versions 6.x.",
+  "content": "## Description\n\nL'exploitation de plusieurs vulnérabilités dans le serveur et dans la\nconsole d'administration conduit à un arrêt inopiné (crash) ou un\nblocage (deadlock).\n\nUne vulnérabilité affecte le greffon (plug-in) antivirus de Visnetic.\nElle permet de provoquer un débordement de mémoire.\n\nUne autre vulnérabilité, liée à la gestion des listes de contrôle\nd'accès, concerne le greffon antivirus AVG.\n\nUne vulnérabilité affecte le décodage du format uuencodé et provoque une\ncorruption de la mémoire.\n\nL'exploitation de ces vulnérabilités permet à un utilisateur malveillant\nde contourner la politique de sécurité ou de provoquer un déni de\nservice à distance.\n\n## Solution\n\nLa version 6.5.0 remédie à ces problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de version Kerio    Mailserver du 19 février 2008 :",
+      "url": "http://www.kerio.com/kms_history.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-096",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent le serveur de courrier électronique\n<span class=\"textit\">Kerio MailServer</span> et permettent à un\nutilisateur malveillant de contourner la politique de sécurité ou de\nprovoquer un déni de service à distance.\n",
+  "title": "Vulnérabilités dans Kerio MailServer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de version de Kerio du 19 février 2008",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>GNU glibc 2.x</p>",
+  "content": "## Description\n\nUne vulnérabilité a été corrigée dans l'éditeur de liens de glibc. Ce\ndernier ne contrôle pas correctement le champ \\$ORIGIN dans la variable\nd'environnement LD_AUDIT. Un attaquant local, avec les droits d'accès en\nécriture sur un système contenant des exécutable avec les attributs\nsetuid ou setgid activés, peut utiliser cette vulnérabilité pour élever\nses priviléges.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3847",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3847"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2010:0787 du 20 octobre    2010 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2010-0787.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-520",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-10-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la bibliothèque glibc permet à un utilisateur\nmalintentionné d'élever ses priviléges.\n",
+  "title": "Vulnérabilité dans glibc",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Red Hat RHSA-2010:0787-1",
+      "url": null
+    }
+  ]
+}

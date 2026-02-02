@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Red Hat Linux version 7.3 et versions antérieures.</P>",
+  "content": "## Description\n\nLa commande chfn ainsi que chsh permettent de modifier le fichier\n/etc/passwd. Ces binaires sont fournis dans le paquetage util-linux.\n\nSous certaines conditions, un utilisateur mal intentionné peut exploiter\nune vulnérabilité de type gestion des accès concurrents pour modifier le\nfichier /etc/passwd et créer une nouvelle entrée correspondant à un\ncompte privilégié.\n\nCette vulnérabilité n'est exploitable que par un utilisateur ayant un\ncompte local à la machine.\n\n## Contournement provisoire\n\nIl est possible d'empêcher l'exploitation de cette vulnérabilité en\nretirant le drapeau setuid root des binaires /usr/bin/chfn et\n/usr/bin/chsh au moyen de la commande chmod u-s.\n\n## Solution\n\nConsulter le bulletin de sécurité correspondant à la distribution Linux\nutilisée (Cf. section documentation ci-dessous).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité RHSA-2002:132 de RedHat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-132.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-159",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-07-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de type problème d'accès concurrent (\"race condition\")\npermet à un utilisateur mal intentionné d'obtenir les privilèges de\nl'administrateur système.\n",
+  "title": "Vulnérabilité du paquetage util-linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité \"Linux util-linux chfn local root vulnerability\" de Razor",
+      "url": null
+    }
+  ]
+}

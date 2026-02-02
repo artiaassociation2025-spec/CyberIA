@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apple Mac OS X 10.4.1 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple Mac OS X 10.3.9 et versions antérieures (pour les vulnérabilité relatives à PHP et Bluetooth uniquement).",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSelon Apple, plusieurs composants du système d'exploitation Mac OS X\nprésentent des vulnérabilités :\n\n-   Bluetooth : une vulnérabilité présente dans le service de transfert\n    de fichiers (OBEX) permet d'accéder aux données du système situées\n    hors du répertoire d'échange par défaut (CVE CAN-2005-1333) ;\n-   AFP : une faille de type débordement de mémoire est présente dans le\n    service de fichiers AFP. Cette vulnérabilité peut être exploitée par\n    un utilisateur mal intentionné afin d'exécuter du code arbitraire à\n    distance sur le serveur vulnérable (CVE CAN-2005-1721) ;\n-   CoreGraphics : une vulnérabilité est présente dans une routine\n    gérant l'affichage des fichiers PDF. En incitant un utilisateur à\n    visualiser un document habilement PDF constituée, il est possible de\n    provoquer l'arrêt brutal de l'application utilisant la routine\n    vulnérable (CVE CAN-2005-1722). De plus, une vulnérabilité\n    permettant de réaliser une élévation de privilèges (CVE\n    CAN-2005-1726) est également présente dans le serveur graphique ;\n-   des vulnérabilités liées à la mauvaise gestion des accès concurents\n    aux fichiers (CVE CAN-2005-1727, CVE CAN-2005-1725) peuvent être\n    exploitées par un utilisateur local mal intentionné afin de réaliser\n    une élévation de privilèges ;\n-   sous certaines conditions, la restriction d'accès aux volumes NFS\n    exportés n'est pas cohérente avec celle spécifiée par l'utilisateur\n    (CVE CAN-2005-1724) ;\n-   plusieurs vulnérabilités sont présentes dans le support PHP (CVE\n    CAN-2005-0524, CVE CAN-2005-0525, CVE CAN-2005-1042, CVE\n    CAN-2005-1043) ;\n-   une vulnérabilité de type débordement de mémoire présente dans\n    l'exécutable vpnd peut être exploitée par un utilisateur local mal\n    intentionné afin de réaliser une élévation de privilèges (CVE\n    CAN-2005-1343).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Apple :",
+      "url": "http://docs.info.apple.com/article.html?artnum=301742"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-200",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-05-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités sous Mac OS X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité 2005-006 d'Apple",
+      "url": null
+    }
+  ]
+}

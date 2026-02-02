@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "AVG Anti-Virus Professional ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "AVG Anti-Virus Free Edition 7.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "AVG Antivirus Server.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux erreurs ont été identifiées dans AVG Antivirus :\n\n-   la première concerne la mise en œuvre de l'analyse des fichiers au\n    format RAR et permettrait de provoquer un déni de service de\n    l'application vulnérable ;\n-   la seconde est relative à un manque de contrôle sur un appel système\n    mis à disposition par le pilote AVG7CORE.SYS. Elle permettrait à un\n    utilisateur local d'écraser des zones arbitraires de mémoire en\n    espace noyau.\n\n## Solution\n\nLa version 7.5 build 476 de AVG Antivirus corrige le problème :\n\n    http://free.grisoft.com/doc/downloads-products/us/frt/0?prd=aff\n\n    http://www.grisoft.com/doc/31/us/crp/0?prd=avw\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de AVG Antivirus :",
+      "url": "http://www.grisoft.com"
+    },
+    {
+      "title": "Note de sortie de la version 7.5 build 476 de AVG    Antivirus :",
+      "url": "http://free.grisoft.com/doc/29919/us/frt/0"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-307",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans AVG Antivirus permettent à un\nutilisateur local d'élever ses privilèges, de provoquer un déni de\nservice ou d'exécuter du code arbitraire.\n",
+  "title": "Multiples vulnérabilités de AVG Antivirus",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de sortie de la version 7.5 build 476 de AVG Antivirus",
+      "url": null
+    }
+  ]
+}

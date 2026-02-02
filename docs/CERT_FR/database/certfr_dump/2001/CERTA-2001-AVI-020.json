@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2000 Advanced Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Datacenter Server.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn des services du contrôleur de domaine sous Windows 2000 ne gère pas\nconvenablement les demandes de traitements. Au lieu de rejeter\ndirectement une requête invalide, ce service essaie d'en effectuer le\ntraitement pour finalement envoyer une réponse d'erreur. Un utilisateur\nenvoyant un flot continu de requêtes judicieusement malformées peut\nentraîner une augmentation de la consommation des ressources de la\nmachines cible, forçant celle-ci à ne traiter que des demandes invalides\nau détriment des demandes valables. Ceci empêche ainsi le contrôleur de\ndomaine d'enregistrer de nouveaux utilisateurs sur le domaine et empêche\nl'accès à la liste d'adresses actives.\n\n## Solution\n\nCorrectif fourni pour Windows 2000 Server et Windows 2000 Advanced\nServer :\n\n    http://www.microsoft.com/Downsloads/Release.asp?ReleaseID=28064\n\n  \n  \n\nConcernant Windows 2000 Datacenter Server, Microsoft préconise de\nprendre contact avec le revendeur de ce matériel.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin et Faq Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-011.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-020",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-02-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur malveillant peut, par le biais de requêtes malformées\nenvoyées à une machine contrôleur de domaine Windows 2000, entraîner un\ndéni de service sur cette machine.\n",
+  "title": "Vulnérabilité dans le contrôleur de domaine de Windows 2000 Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis Microsoft MS01-011",
+      "url": null
+    }
+  ]
+}

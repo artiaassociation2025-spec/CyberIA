@@ -1,0 +1,110 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Citrix MetaFrame Presentation Server 3.0 pour Microsoft Windows 2003 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix MetaFrame Presentation Server 3.0 pour Microsoft Windows 2000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix MetaFrame XP 1.0 pour Microsoft Windows 2000.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix Presentation Server 4.0 x64 Edition ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix Presentation Server 4.0 pour Microsoft Windows 2003 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix Presentation Server 4.0 pour Microsoft Windows 2000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans les produits Citrix\nMetaFrame Presentation Server. Elles concernent le service IMA (pour\nIndependant Management Architecture) , en charge de la communication de\nserveur à serveur dans le cadre d'une gestion centralisée.\n\nCertains paquets échangés ne seraient pas traités de manière correcte.\nEn particulier, l'une des vulnérabilités impliquerait la fonction\nIMA_SECURE_DecryptData1() dans la bibliothèque ImaSystem.dll. Une\npersonne malveillante pourrait donc emettre vers les ports en écoute du\nservice IMA (ports TCP 2512 et 2513 par défaut), afin d'exploiter l'une\nde ces vulnérabilités. Cela lui permettrait d'interrompre inopinément le\nservice, voire d'exécuter, à distance et sous certaines conditions, des\ncommandes arbitraires.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur Citrix pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-5821",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5821"
+    }
+  ],
+  "links": [
+    {
+      "title": "Annonce Zero Day Initiative de    TippingPoint (3Com) ZDI-06-038 :",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-2006-038.html"
+    },
+    {
+      "title": "Bulletin de sécurité Citrix CTX111186 du 08 novembre 2006 :",
+      "url": "http://support.citrix.com/article/CTX111186"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-491",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Plusieurs vulnérabilités de Citrix MetaFrame",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Citrix CTX111186 du 08 novembre 2006",
+      "url": null
+    }
+  ]
+}

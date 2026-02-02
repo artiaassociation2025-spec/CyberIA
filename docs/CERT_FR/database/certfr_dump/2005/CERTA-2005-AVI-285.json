@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>FreeBSD 5.3 et FreeBSD 5.4.</P>",
+  "content": "## Description\n\nUne erreur dans la mise en œuvre d'IPsec dans FreeBSD, et plus\nparticulièrement dans l'algorithme d'authentification AES-XCBXC-MAC, a\npour conséquence qu'une même clé prédéfinie est toujours utilisée à un\nmoment de l'algorithme, au lieu de la clé définie par l'administrateur.\nCette erreur pourrait être utilisée par un individu distant\nmalintentionné pour contourner la politique d'authentification.\n\n## Solution\n\nAppliquer les directives de l'éditeur (cf. Section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de FreeBSD du 27 juillet 2005 :",
+      "url": "ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-05:19.ipsec.asc"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-285",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-07-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans la mise en œuvre IPsec de FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité FreeBSD du 27 juillet 2005",
+      "url": null
+    }
+  ]
+}

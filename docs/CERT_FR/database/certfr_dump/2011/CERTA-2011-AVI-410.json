@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>SquirrelMail 1.x.x versions antérieures  à 1.4.21.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent SquirrelMail. Trois d'entre elles\nautorisent une personne malintentionnée à injecter indirectement du code\nà distance :\n\n-   CVE-2010-4554 et CVE-2011-2753 : de multiples erreurs autorisent\n    l'injection de script ou de code HTML à distance via différents\n    vecteurs : les boîtes de dialogue déroulantes, le plugin de\n    correction orthographique SquirellSpell, la page Index Order et la\n    fonction empty trash.\n-   CVE-2011-2023 : le script functions/mime.php ne gère pas\n    correctement certaines balises de style autorisant ainsi une\n    injection de script ou de code HTML ;\n\nLa dernière vulnérabilité (CVE-2010-4554) permet à une personne\nmalveillante d'accéder à des données sensibles de l'utilisateur (telles\nque son mot de passe) via un vol de clic (clickjacking).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-4555",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4555"
+    },
+    {
+      "name": "CVE-2011-2753",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2753"
+    },
+    {
+      "name": "CVE-2010-4554",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4554"
+    },
+    {
+      "name": "CVE-2011-2023",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2023"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Fedora Fedora-2011-9309 du 13 juillet    2011 :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2011-July/062983.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-410",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-07-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités autorisant une personne malintentionnée à\ninjecter indirectement du code arbitraire à distance et à obtenir des\ninformations sensibles ont été découvertes dans <span\nclass=\"textit\">SquirrelMail</span>.\n",
+  "title": "Vulnérabilités dans SquirrelMail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fedora Fedora-2011-9309 du 13 juillet 2011",
+      "url": null
+    }
+  ]
+}

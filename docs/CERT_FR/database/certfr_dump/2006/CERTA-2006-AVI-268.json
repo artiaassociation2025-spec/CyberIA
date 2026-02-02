@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Mutt 1.4.x.</P>",
+  "content": "## Description\n\nMutt est un client de messagerie.  \n\nUne vulnérabilité de type débordement de mémoire a été découverte dans\nla fonction browse_get_namespace(). Cette vulnérabilité peut être\nexploitée par un utilisateur distant malveillant afin de provoquer un\ndéni de service ou d'exécuter du code arbitraire également à distance.\n\n## Solution\n\nLa dernière version cvs disponible corrige le problème.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-1108 du 11 juillet 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1108"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-268",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2006-06-29T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Debian.",
+      "revision_date": "2006-07-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Mutt permet à un utilisateur distant mal\nintentionné de provoquer un déni de service ou d'exécuter du code\narbitraire.\n",
+  "title": "Vulnérabilité dans Mutt",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Mutt du 19 juin 2006",
+      "url": "http://dev.mutt.org/cgi-bin/gitweb.cgi?p=mutt/.git;a=commit;h=dc0272b749f0e2b102973b7ac43dbd3908507540"
+    }
+  ]
+}

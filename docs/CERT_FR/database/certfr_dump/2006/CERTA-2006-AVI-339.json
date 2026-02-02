@@ -1,0 +1,89 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows XP Professional x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 x64 Edition et Itanium Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 (Service Pack 1 inclus) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 1 et Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités, de type débordement de mémoire tampon, ont été\nidentifiées dans le système d'exploitation Microsoft Windows, impliquant\nla fonction Winsock Hostname et le client DNS (pour Domain Name System).\nCelles-ci sont chargées de la résolution de noms, c'est-à-dire la\ngestion des noms de machines associées aux adresses IP. Winsock Hostname\nest une interface API procurant la fonction d'accès au protocole réseau\nDNS. Cette interface est utilisée par la majorité des applications\nnécessitant un accès réseau. Le client DNS est, quant à lui, nativement\ninstallé sur la plupart des machines pour effectuer la résolution de\nnoms. Les deux partagent plusieurs fonctions en commun, comme\ngethostbyname().\n\nUne personne maveillante peut exploiter à distance l'une de ces\nvulnérabilités pour exécuter du code arbitraire et prendre le contrôle\nde la machine vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3441",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3441"
+    },
+    {
+      "name": "CVE-2006-3440",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3440"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2006-AVI-339",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été identifiées dans le système d'exploitation\nMicrosoft Windows, impliquant la fonction Winsock Hostname et le client\nDNS. Une personne malveillante pourrait exploiter l'une d'elles afin\nd'exécuter du code arbitraire à distance, et prendre le contrôle\nintégral de la machine vulnérable.\n",
+  "title": "Vulnérabilités dans Winsock Hostname et le Client DNS de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-041 du 08 août 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-041.mspx"
+    }
+  ]
+}

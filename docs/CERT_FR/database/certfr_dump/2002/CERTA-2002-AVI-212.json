@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Client VPN 5000 sur Linux et Solaris ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "client VPN sur MacOS.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe client VPN Cisco est une application chargée d'établir des connexions\nsur un réseau privé virtuel pour des communications chiffrées et\nauthentifiées.\n\nUne vulnérabilité de type débordement de mémoire présente dans les\ncommandes close_tunnel et open_tunnel permet à un utilisateur mal\nintentionné d'obtenir les privilèges de l'administrateur root.\n\nD'autre part, il est possible sur les clients MacOs de lire le dernier\nmot de passe entré stocké en clair sur la machine.\n\n## Solution\n\nConsulter le bulletin de sécurité de Cisco (voir paragraphe\nDocumentation) pour connaître la disponibilité des mises à jour.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de Cisco « Cisco VPN 5000 client  buffer overflow vulnerabilities » :",
+      "url": "http://cisco.com/warp/public/707/vpn5k-client-multiple-vuln-pub.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-212",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-09-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Il existe un débordement de mémoire dans les clients VPN 5000 de Cisco\npermettant d'obtenir les privilèges de l'administrateur root sous Linux\net Solaris.\n\nIl est également possible d'obtenir le dernier mot de passe tapé sur un\nclient VPN 5000 sous MacOS.\n",
+  "title": "Multiples vulnérabilités du client VPN 5000 de Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco",
+      "url": null
+    }
+  ]
+}

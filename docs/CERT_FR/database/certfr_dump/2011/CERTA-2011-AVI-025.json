@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Cisco ASA 8.2(x) et 8.3(x).</p>",
+  "content": "## Description\n\nDes traitements défaillants du protocole Telnet, des paquets reçus lors\nde la mise en route, des requêtes CIFS par WebVPN et des requêtes HTTP\npar le service Mobile User Security permettent à un utilisateur\nmalveillant de contourner des restrictions d'accès.\n\nDes défauts dans les traitements des échecs de connexion OCSP et des\nprotocoles EIGRP et LDAP permettent à un utilisateur malveillant\nd'épuiser les ressources.\n\nLe traitement des trafics IPSec, SIP et de flux multicast non précisés\nainsi que l'analyse de certains champs par emWEB permettent à un\nutilisateur malveillant de provoquer un arrêt inopiné du système.\n\nUne erreur dans le traitement SMTP permet de contourner l'inspection des\npaquets.\n\n## Solution\n\nLes versions 8.2(4) et 8.3(2) remédient à ces problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-4678",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4678"
+    },
+    {
+      "name": "CVE-2010-4690",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4690"
+    },
+    {
+      "name": "CVE-2010-4682",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4682"
+    },
+    {
+      "name": "CVE-2010-4681",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4681"
+    },
+    {
+      "name": "CVE-2010-4676",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4676"
+    },
+    {
+      "name": "CVE-2010-4692",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4692"
+    },
+    {
+      "name": "CVE-2010-4680",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4680"
+    },
+    {
+      "name": "CVE-2010-4677",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4677"
+    },
+    {
+      "name": "CVE-2010-4688",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4688"
+    },
+    {
+      "name": "CVE-2010-4691",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4691"
+    },
+    {
+      "name": "CVE-2010-4679",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4679"
+    },
+    {
+      "name": "CVE-2010-4675",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4675"
+    },
+    {
+      "name": "CVE-2010-4672",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4672"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-025",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-01-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De nombreuses vulnérabilités affectent Cisco ASA et permettent à un\nutilisateur malveillant de contourner la politique de sécurité ou de\nprovoquer un déni de service à distance.\n",
+  "title": "Vulnérabilités dans Cisco ASA",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de version Cisco 8.3 du 02 août 2010",
+      "url": "http://www.cisco.com/en/US/docs/security/asa/asa83/release/notes/asarn83.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de version Cisco 8.2 du 15 décembre 2010",
+      "url": "http://www.cisco.com/en/US/docs/security/asa/asa82/release/notes/asarn82.html"
+    }
+  ]
+}

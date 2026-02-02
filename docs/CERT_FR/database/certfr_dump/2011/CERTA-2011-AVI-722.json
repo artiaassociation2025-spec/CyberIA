@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Toutes les versions de FreeBSD supportées.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSi le module pam_ssh est activé, une personne malintentionnée peut être\nen mesure d'accéder aux comptes des utilisateurs qui n'ont pas chiffré\nleur clef privée SSH.\n\nEn effet l'appel à la bibliothèque OpenSSL pour déchiffrer les clefs\nprivées ignore la « passphrase » passée en argument si la clef n'est pas\nchiffrée.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-11:09.pam_ssh du 23    décembre 2011 :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-11:09.pam_ssh.asc"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-722",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-12-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans <span class=\"textit\">pam_ssh</span> permettant un\ncontournement de la politique de sécurité a été corrigée.\n",
+  "title": "Vulnérabilité dans pam_ssh sur FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD du 23 décembre 2011",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Catalyst 3750 Series Integrated Wireless LAN Controllers ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Calalyst 6500 Series Wireless Service Module (WiSM).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco 4400 Series Wireless LAN Controllers ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois vulnérabilités sont présentes dans les produits sans-fil de Cisco\n:\n\n-   une première faille est relative à la manière dont ces équipements\n    gèrent les requêtes ARP (Address Resolution Protocol) de type\n    unicast ;\n-   une deuxième concerne la façon dont est mise en œuvre la gestion des\n    paquets de diffusion (Broadcast) à destination d'un client déjà\n    connu ;\n-   une dernière vulnérabilité concerne la façon dont est géré le\n    nomadisme (roaming) de clients entre différents LAN Controllers\n    Cisco.\n\nPour chacune de ces vulnérabilités, un utilisateur distant mais connecté\nsur le réseau sans-fil peut provoquer un déni de service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-4012",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4012"
+    },
+    {
+      "name": "CVE-2007-4011",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4011"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 97823 du 24 juillet 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070724-arp.shtml"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-335",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités sont présentes dans des équipements sans-fil\nde Cisco et permettent de provoquer un déni de service à distance.\n",
+  "title": "Multiples vulnérabilités dans certains produits sans-fil Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco #97823 du 24 juillet 2007",
+      "url": null
+    }
+  ]
+}

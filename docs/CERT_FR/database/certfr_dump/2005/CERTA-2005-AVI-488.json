@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2000 avec la Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "toutes les autres versions de Microsoft Windows ne sont pas impactées.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité du noyau Microsoft Windows dans la gestion des appels\nAPC (Asynchronous Procedure Call) peut être utilisée par un utilisateur\nlocal mal intentionné (qui s'est authentifié avec succès) afin d'élever\nses privilèges pour obtenir les privilèges SYSTEM.\n\n## Contournement provisoire\n\nAucun contournement provisoire n'a été identifié.\n\n## Solution\n\nSe référer au bulletin de l'éditeur pour l'obtention de correctifs (cf.\nDocumentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2005-AVI-488",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-12-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges par un utilisateur authentifié"
+    }
+  ],
+  "summary": "Un vulnérabilité dans le noyau Microsoft Windows permet à un utilisateur\nlocal authentifié d'élever ses privilèges pour obtenir les privilèges\nSYSTEM.\n",
+  "title": "Vulnérabilité du noyau Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS05-055 du 13 décembre 2005",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms05-055.mspx"
+    }
+  ]
+}

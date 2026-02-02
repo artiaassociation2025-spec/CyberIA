@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Samba 4.x configuré en tant que contrôleur de domaine (mode 'NT4' ou Active Directory) versions antérieures à 4.8, ou versions 4.8 et ultérieures si sa configuration a été modifiée.</p> ",
+  "content": "## Solution\n\nLa configuration de Samba doit être paramétrée pour imposer\nl'utilisation des Secure Channel afin de prévenir l'exploitation. Cette\nmodification se fait en spécifiant le paramètre\n\n>     server schannel = yes\n\ndans le fichier smb.conf.\n\nL'éditeur n'a pas encore publié d'avis de sécurité, mais a effectué une\nannonce \\[1\\].\n",
+  "cves": [
+    {
+      "name": "CVE-2020-1472",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-1472"
+    }
+  ],
+  "links": [
+    {
+      "title": "Référence CVE CVE-2020-1472",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-1472"
+    },
+    {
+      "title": "[1] Annonce de sécurité Samba du 17//09/2020",
+      "url": "https://www.openwall.com/lists/oss-security/2020/09/17/2"
+    }
+  ],
+  "reference": "CERTFR-2020-AVI-579",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2020-09-17T00:00:00.000000"
+    },
+    {
+      "description": "correction versions affectées",
+      "revision_date": "2020-09-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans le logiciel Samba. Elle permet à\nun attaquant de provoquer une élévation de privilèges si le serveur\nSamba est configuré pour être contrôleur de domaine (de type 'NT4' ou\nActive Directory).\n\nLa configuration par défaut de Samba v4.8 (et ultérieures) permet de se\nprémunir contre cette vulnérabilité.\n",
+  "title": "Vulnérabilité dans Samba",
+  "vendor_advisories": []
+}

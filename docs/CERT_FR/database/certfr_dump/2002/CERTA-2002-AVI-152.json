@@ -1,0 +1,95 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "HP Compaq Tru64 Unix version 5.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP Compaq Tru64 Unix version 4.0f.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP Compaq Tru64 Unix version 4.0g ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP Compaq Tru64 Unix version 5.1a ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP Compaq Tru64 Unix version 5.0a ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn utilisateur mal intentionné peut, par l'envoi massif de paquets\nspécifiques, réaliser un déni de service des processus créés par le\ndaemon inetd sur les systèmes HP Compaq Tru64 Unix versions 5 énumérés\nci-dessus.\n\nLa seconde vulnérabilité concerne la commande ipcs (Inter-Process\nCommunication Status) utilisée pour visualiser les ressources partagées\nsur les sytèmes Unix. Un utilisateur local mal intentionné peut, en\nutilisant un débordement de mémoire présent sur cette commande, élever\nses privilèges et exécuter du code arbitraire.\n\n## Solution\n\nAppliquer les correctifs disponibles correpondant à la version de votre\nsystème (cf avis de sécurité HP Compaq, section documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité SSRT0794U de HP Compaq :",
+      "url": "http://ftp.support.compaq.com/patches/public/unix/v5.1a/t64v51ab2-c0015807-14563-es-20020611.README"
+    },
+    {
+      "title": "Avis de sécurité SSRT0795U de HP Compaq :",
+      "url": "http://ftp.support.compaq.com/patches/public/unix/v5.1a/t64v51ab2-c0035101-14695-es-20020624.README"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-152",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-07-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes sur HP Compaq Tru64 Unix permettent à un\nutilisateur mal intentionné de réaliser un déni de service des processus\ncréés par le daemon inetd ou d'exécuter du code arbitraire sur la\nmachine avec une élévation des privilèges.\n",
+  "title": "Vulnérabilités sur HP Compaq Tru64 Unix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité SSRT0794U et SSRT0795U de HP",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>VERITAS NetBackup Enterprise Server  5.x.</p>",
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire dans une bibliothèque\npartagée utilisée par le service vmd (Volume Manager Daemon), et\npotentiellement d'autres services, permet à un utilisateur mal\nintentionné de réaliser un déni de service ou d'exécuter du code\narbitraire à distance sur la machine vulnérable.\n\n## Contournement provisoire\n\nFiltrer le port 13701/TCP au niveau du pare-feu.\n\n## Solution\n\nSe reporter au bulletin de l'éditeur pour l'obtention des correctifs\n(cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité iDEFENSE du 10 novembre 2005 :",
+      "url": "http://www.idefense.com/intelligence/vulnerabilities/display.php?id=336"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-447",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-09T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité iDEFENSE et d'une section contournement provisoire.",
+      "revision_date": "2006-01-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de VERITAS NetBackup",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symantec SYM05-024 du 08 novembre 2005",
+      "url": "http://seer.support.veritas.com/docs/279553.htm"
+    }
+  ]
+}

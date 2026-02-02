@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "versions mod_python 3.x. antérieures à la version 3.0.4.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Versions mod_python 2.7.x antérieures à la version 2.7.10 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe module mod_python est chargé d'interpréter les programmes en langage\npython pour le serveur HTTP Apache.\n\nUne vulnérabilité sur ce module peut permettre à un utilisateur mal\nintentionné, via l'envoi d'une requête malicieusement construite, de\nréaliser un déni de service du serveur HTTP vulnérable.\n\n## Solution\n\nAppliquer le correctif (cf. section documentation).  \nLes versions 3.0.4 et 2.7.10 corrigent cette vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité FreeBSD du 3 mars 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Avis de sécurité Debian :",
+      "url": "http://www.debian.org/security/2004/dsa-452"
+    },
+    {
+      "title": "Avis de sécurité Secunia :",
+      "url": "http://secunia.com/advisories/10325"
+    },
+    {
+      "title": "Message sur la liste de diffusion mod_python :",
+      "url": "http://www.modpython.org/pipermail/mod_python/2003-November/014532.html"
+    },
+    {
+      "title": "Correctif disponible à l'adresse suivante :",
+      "url": "http://httpd.apache.org/modules/python-download.cgi"
+    },
+    {
+      "title": "Avis de sécurité Redhat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-063.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-050",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-02-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Debian.",
+      "revision_date": "2004-03-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2004-05-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité est présente dans le module mod_python qui permet à un\nutilisateur mal intentionné de réaliser un déni de service du serveur\nHTTP vulnérable.\n",
+  "title": "Vulnérabilité sur le module mod_python du serveur HTTP Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste de diffusion mod_python",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows Server 2008 R2 et Service Pack 1.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2008 Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité existe dans la façon dont le panneau de configuration\ndes couleurs gère le chargement de bibliothèques additionnelles (DLL).\nL'exploitation réussie de cette vulnérabilité peut alors entrainer\nl'exécution de code arbitraire à distance. Cette vulnérabilité sera\ndéclenchée lors de l'ouverture d'un fichier légitime .icm ou .icc depuis\nun emplacement contenant une DLL malveillante.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-5082",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-5082"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2012-AVI-078",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-02-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité existe dans la façon dont le panneau de configuration\ndes couleurs gère le chargement de bibliothèques additionnelles (DLL).\nL'exploitation réussie de cette vulnérabilité peut alors entrainer\nl'exécution de code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans le panneau de configuration des couleurs de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS12-012",
+      "url": "http://technet.microsoft.com/en-us/security/bulletin/MS12-012"
+    }
+  ]
+}

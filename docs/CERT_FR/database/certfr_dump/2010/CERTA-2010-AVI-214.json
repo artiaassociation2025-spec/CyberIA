@@ -1,0 +1,79 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les versions 7.4, 8.0, 8.1, 8.2, 8.3 et  8.4 de <TT>PostgreSQL</TT> sont affectées.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans PostgreSQL :\n\n-   Le module PL/Perl, s'il est installé et activé, peut permettre\n    l'exécution de code PERL arbitraire sur le serveur ;\n-   Le module PL/Tcl, s'il est installé et activé, peut permettre\n    l'exécution de code Tcl arbitraire sur le serveur.\n\nD'autres vulnérabilités non spécifiées affectent aussi les versions\nvulnérables de PostgreSQL.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). Les versions 8.4.4, 8.3.11,\n8.2.17, 8.1.21, 8.0.25 et 7.4.29 corrigent ces problèmes.\n",
+  "cves": [
+    {
+      "name": "CVE-2010-1447",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1447"
+    },
+    {
+      "name": "CVE-2010-1169",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1169"
+    },
+    {
+      "name": "CVE-2010-1170",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1170"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurité Sun Solaris du 15 juillet 2010 :      \n 1",
+      "url": "http://blogs.sun.com/security/entry/cve_2010_1169_cve_20101"
+    },
+    {
+      "title": "Bulletin de sécurité de l'éditeur PostgreSQL :",
+      "url": "http://www.postgresql.org/about/news.1203"
+    },
+    {
+      "title": "Bulletins de sécurité Sun Solaris du 15 juillet 2010 :      \n 1",
+      "url": "http://blogs.sun.com/security/entry/cve_2010_1169_cve_2010"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-22051-1 du 24 mai 2010 :",
+      "url": "http://www.debian.org/security/2010/dsa-2051"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-214",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2010-05-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Debian ;",
+      "revision_date": "2010-05-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins de sécurité Sun Solaris.",
+      "revision_date": "2010-07-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Des vulnérabilités multiples affectent PostgreSQL et permettent à un\nutilisateur malveillant d'exécuter du code arbitraire, de contourner la\npolitique de sécurité ou d'élever ses privilèges.\n",
+  "title": "Multiples vulnérabilités dans PostgreSQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de PostgreSQL du 14 mai 2010",
+      "url": null
+    }
+  ]
+}

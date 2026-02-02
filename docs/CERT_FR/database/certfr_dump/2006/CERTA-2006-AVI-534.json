@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SAP Internet Graphics Service (IGS) 7.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SAP Internet Graphics Service (IGS) 6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans le traitement de certaines requêtes HTTP permet à\nun utilisateur distant malintentionné de porter atteinte à l'intégrité\ndes données en supprimant arbitrairement des fichiers présents sur le\nserveur.\n\nUne seconde vulnérabilité permet à un individu distant malveillant de\nporter atteinte à la confidentialité des données, de contourner la\npolitique de sécurité ou de réaliser un déni de service en forçant le\nsystème à s'arrêter.\n\n## Solution\n\nAppliquer les correctifs de sécurité SAP cités dans les notes \\#959358\net \\#965201 (cf. section Documentation).\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Note de mise à jour de sécurité SAP #959358 :",
+      "url": "http://service.sap.com/sap/support/notes/959358"
+    },
+    {
+      "title": "Note de mise à jour de sécurité SAP #965201 :",
+      "url": "http://service.sap.com/sap/support/notes/965201"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-534",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-12-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités découvertes dans SAP Internet Graphics Service\npermettent à un utilisateur distant malintentionné de réaliser de\nnombreuses actions malveillantes sur le système vulnérable.\n",
+  "title": "Vulnérabilités dans SAP Internet Graphics Service",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Cybsec du 12 décembre 2006",
+      "url": "http://www.cybsec.com/vuln/CYBSEC-Security_Pre-Advisory_SAP_IGS_Undocumented_Features.pdf"
+    }
+  ]
+}

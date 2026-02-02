@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>KDE versions 2.x et 3.x jusqu'aux versions 3.0.4 et 3.1rc3  incluses.</P>",
+  "content": "## Description\n\nK Desktop Environnement (KDE) fournit une interface pour différents\nprotocoles réseau (HTTP, FTP, POP, SMB,...) via le système KDE Input\nOutput (KIO).\n\nCe système définit les caractéristiques des protocoles dans des fichiers\ntexte dont l'extension est .protocol.  \n\nDeux protocoles présentent une vulnérabilité :\n\n-   rlogin pour toutes les versions de KDE de 2.1 à 3.0.4 ;\n-   telnet pour les versions de KDE 2.x.  \n\nCes vulnérabilités permettent à un utilisateur mal intentionné\nd'exécuter des commandes arbitraires. Ces commandes peuvent être\ntransmises par une URL habilement construite, un mél au format HTML, ou\npar toute application utilisant KIO.\n\nLes commandes seront exécutées avec les privilèges de la victime.\n\n## Contournement provisoire\n\nPour désactiver ces deux protocoles, il suffit de détruire les fichiers\n.protocol correspondants : telnet.protocol et rlogin.protocol.\n\nCes fichiers sont normalement installés dans le répertoire\n/\\[kdeprefix\\]/shared/services/, où \\[kdeprefix\\] désigne le répertoire\nd'installation de KDE.\n\nDes copies de ces fichiers peuvent exister ailleurs, notamment dans le\nrépertoire .kde/shared/services des utilisateurs. Il faut également\ndétruire ces copies.\n\n## Solution\n\nLa version 3.0.5 corrige la vulnérabilité.  \n\nVous pouvez appliquer un correctif pour la version 3.0.4 (cf. section\nDocumentation). Pour les autres versions, il est recommandé de mettre à\njour à la version 3.0.5.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-255",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-02T00:00:00.000000"
+    },
+    {
+      "description": "première révision : ajout de l'avis Debian.",
+      "revision_date": "2002-12-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de commandes arbitraires à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité de la librairie KIO permet à un utilisateur mal\nintentionné d'exécuter des commandes arbitraires.\n",
+  "title": "Vulnérabilité de kdelibs",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité KDE",
+      "url": "http://www.kde.org/info/security/advisory-20021111-1.txt"
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Mandrake MDKSA-2002:079",
+      "url": null
+    }
+  ]
+}

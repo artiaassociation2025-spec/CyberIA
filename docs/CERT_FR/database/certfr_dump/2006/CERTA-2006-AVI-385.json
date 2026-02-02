@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions de BIND antérieures à 9.3.2-P1, 9.2.6-P1 et 8.4.7  (ainsi que les versions Béta antérieures à 9.4.0b2, 9.3.3rc2,  9.2.7rc1 et 9.2.6-P1).</P>",
+  "content": "## Description\n\nISC BIND (Berkeley Internet Name Domain) est un service pour la mise en\nœuvre du protocole DNS servant à la résolution de noms de domaine.\nPlusieurs vulnérabilités ont été identifiées dans ce dernier :\n\n-   il ne manipulerait pas de manière correcte certaines requêtes de\n    type récursif (utilisées quand le serveur DNS se charge d'effectuer\n    des requêtes itératives pour le client, aussi appelé resolver. Un\n    utilisateur malveillant pourrait, à distance, profiter de cette\n    vulnérabilité pour déclencher une erreur INSIST, en envoyant\n    suffisamment de requêtes récursives : cette erreur arriverait\n    tardivement, empêchant les autres clients d'obtenir une réponse du\n    serveur à leurs requêtes.\n-   il ne manipulerait pas correctement des enregistrements (Resource\n    Record Sets) liés aux extensions de sécurité DNS DNSsec. Un\n    utilisateur malveillant pourrait construire des réponses DNS\n    contenant plusieurs SIG RRsets, afin de perturber le fonctionnement\n    du serveur auquel la réponse est adressée.\n\n## Solution\n\nSe référer au bulletin de sécurité sur le site de l'ISC (Internet\nSecurity Consortium) pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4096",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4096"
+    },
+    {
+      "name": "CVE-2006-4095",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4095"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian du 09 septembre 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1172"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu du 08 septembre 2006 :",
+      "url": "http://www.ubuntu.com/usn/usn-343-1"
+    },
+    {
+      "title": "Site de téléchargement des différentes versions de Bind    mises à jour :",
+      "url": "http://www.isc.org/index.pl?/sw/bind/"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD du 08 septembre 2006 :",
+      "url": "http://www.openbsd.org/errata.html"
+    },
+    {
+      "title": "Mise à jour Mandriva MDKSA-2006:163 du 08 septembre 2006 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:163"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD du 08 septembre 2006 :",
+      "url": "http://security.freebsd.org/avisories/FreeBSD-SA-06:20.bind.asc"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-385",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2006-09-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins de sécurité FreeBSD et Ubuntu ;",
+      "revision_date": "2006-09-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins de sécurité Debian, OpenBSD et Mandriva.",
+      "revision_date": "2006-09-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités de BIND",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour du Internet Systems Consortium (ISC)",
+      "url": null
+    }
+  ]
+}

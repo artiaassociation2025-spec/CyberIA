@@ -1,0 +1,110 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BIG-IP (tous modules) versions 17.x antérieures à 17.1.0.2",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIG-IP (tous modules) versions 15.1.x antérieures à 15.1.9.1",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIG-IP (tous modules) versions 13.x à 14.1.x antérieures à 14.1.5.5",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIG-IP (tous modules) versions 16.1.x antérieures à 16.1.3.5",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-38138",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-38138"
+    },
+    {
+      "name": "CVE-2023-38423",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-38423"
+    },
+    {
+      "name": "CVE-2023-38419",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-38419"
+    },
+    {
+      "name": "CVE-2023-38418",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-38418"
+    },
+    {
+      "name": "CVE-2023-36858",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-36858"
+    },
+    {
+      "name": "CVE-2023-3470",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-3470"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0616",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-08-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans F5 Big-IP.\nCertaines d'entre elles permettent à un attaquant de provoquer une\nexécution de code arbitraire à distance, un contournement de la\npolitique de sécurité et une atteinte à l'intégrité des données.\n",
+  "title": "Multiples vulnérabilités dans F5 Big-IP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F5 K000135479 du 02 août 2023",
+      "url": "https://my.f5.com/manage/s/article/K000135479"
+    }
+  ]
+}

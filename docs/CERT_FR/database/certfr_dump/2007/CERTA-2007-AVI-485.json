@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mono versions antérieures à 1.2.5.1 (CVE-2007-5197).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mono versions 1.2.5.1 et antérieures pour Windows (CVE-2007-5473);",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux failles ont été découvertes dans Mono :\n\n-   la première vulnérabilité affecte toutes les versions 1.x\n    (antérieures à 1.2.5.1) de Mono. Elle permet l'exécution de code\n    arbitraire (CVE-2007-5197) ;\n-   la seconde vulnérabilité n'affecte que les versions 1.x (antérieures\n    à 1.2.5.2) pour Windows de Mono. Elle permet d'accéder au code\n    source de certains fichiers (CVE-2007-5473).\n\n## Solution\n\nInstaller la version 1.2.5.1 ou la version 1.2.5.2 selon la plate-forme\nutilisée (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5473",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5473"
+    },
+    {
+      "name": "CVE-2007-5197",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5197"
+    }
+  ],
+  "links": [
+    {
+      "title": "Téléchargement de Mono :",
+      "url": "http://www.mono-project.com/Downloads"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200711-10 du 07 novembre    2007 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200711-10.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1397 du 03 novembre 2007 :",
+      "url": "http://www.debian.org/security/2007/dsa-1397"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-485",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-11-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes dans <span\nclass=\"textit\">Mono</span> permettant d'exécuter du code arbitraire et\nd'atteindre à la confidentialité des données.\n",
+  "title": "Vulnérabilités dans Mono",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Mono",
+      "url": "http://www.mono-project.com/Vulnerabilities#BigInteger_unsafe_code_overflow"
+    }
+  ]
+}

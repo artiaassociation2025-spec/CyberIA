@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco IOS et IOS XE versions antérieures à 16.1.1 avec le serveur HTTP activé",
+      "product": {
+        "name": "IOS XE",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Webex Video Mesh versions antérieures à 2019.09.19.1956m",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2019-16005",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-16005"
+    },
+    {
+      "name": "CVE-2019-16009",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-16009"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2020-AVI-014",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2020-01-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Cisco.\nElles permettent à un attaquant de provoquer une exécution de code\narbitraire à distance et une injection de requêtes illégitimes par\nrebond (CSRF).\n",
+  "title": "Multiples vulnérabilités dans les produits Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-20200108-ios-csrf du 08 janvier 2020",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20200108-ios-csrf"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-20200108-webex-video du 08 janvier 2020",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20200108-webex-video"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>MIT Kerberos 5.1-7, 5.1-8 et 5.1-9.  <P>Des extensions développées par des tiers peuvent être  vulnérables.</P></p>",
+  "content": "## Description\n\nLe service de MIT Kerberos KDC (Key Distribution Center) configuré pour\nrépondre aux requêtes PKINIT (Public Key Criptography for Initial\nAuthentication) est vulnérable à une double libération de mémoire.\nL'exploitation de cette erreur permet à un utilisateur malveillant de\nprovoquer un arrêt inopiné du serveur.\n\nL'exécution de code arbitraire à distance est considérée par l'éditeur\ncomme difficile, mais possible.\n\n  \n  \n\nDes extensiosns développées par des tiers peuvent être vulnérables\nlorsqu'elles écrivent des données TYPED-DATA dans le champ e-data des\nmessages KRB-ERROR.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0284",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0284"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Kerberos MITKRB5-SA-2011-003 du 15    mars 2011 :",
+      "url": "http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2011-003.txt"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-155",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-03-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité sur certaines configurations de MIT Kerberos permet à\nun utilisateur malveillant de provoquer un déni de service à distance.\nL'exécution de code arbitraire à distance est possible.\n",
+  "title": "Vulnérabilité dans MIT Kerberos",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Kerberos MITKRB5-SA-2011-003 du 15 mars 2011",
+      "url": null
+    }
+  ]
+}

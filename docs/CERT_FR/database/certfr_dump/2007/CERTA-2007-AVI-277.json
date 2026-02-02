@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MacOS X Server v10.3.9 ;",
+      "product": {
+        "name": "macOS",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MacOS X Server v10.4.9 ou une version plus ancienne.",
+      "product": {
+        "name": "macOS",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MacOS X v10.3.9 ;",
+      "product": {
+        "name": "macOS",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MacOS X v10.4.9 ou une version plus ancienne ;",
+      "product": {
+        "name": "macOS",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans le système d'exploitation\nMacOS X.\n\n-   WebCore, et en particulier XMLHttpRequest ne manipulerait pas\n    correctement certaines requêtes HTTP. Cette vulnérabilité pourrait\n    amener un utilisateur naviguant sur une page malveillante à conduire\n    une attaque par injection de code indirecte (cross-site scripting) ;\n-   WebKit ne convertirait pas correctement certains types au cours du\n    rendu des cadres dans une page, pouvant provoquer une corruption de\n    la mémoire. Cette vulnérabilité peut être exploitée par le biais\n    d'une page Web spécialement construite : celle-ci provoquerait un\n    dysfonctionnement de l'application voire l'exécution de code\n    arbitraire sur le système vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité 2007-006 de l'éditeur Apple pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-2401",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2401"
+    },
+    {
+      "name": "CVE-2007-2399",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2399"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Apple du 21 juin 2007 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=305759"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-277",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-06-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été identifiées dans le système d'exploitation\nMacOS X. Leur exploitation, par le biais d'une navigation sur une page\nmalveillante, peut entraîner une injection de code indirecte (<span\nclass=\"textit\">cross-site scripting</span>), un dysfonctionnement de\nl'application voire l'exécution de code arbitraire sur le système\nvulnérable.\n",
+  "title": "Plusieurs vulnérabilités dans Apple MacOS X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise à jour de sécurité Apple 2007-006 du 21 juin 2007",
+      "url": null
+    }
+  ]
+}

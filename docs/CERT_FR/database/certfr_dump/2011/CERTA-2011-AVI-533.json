@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SPIP versions 2.0 antérieures à 2.0.16 ;",
+      "product": {
+        "name": "SPIP",
+        "vendor": {
+          "name": "SPIP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SPIP versions 2.1 antérieures à 2.1.11.",
+      "product": {
+        "name": "SPIP",
+        "vendor": {
+          "name": "SPIP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SPIP versions 1.9.2 antérieures à 1.9.2k ;",
+      "product": {
+        "name": "SPIP",
+        "vendor": {
+          "name": "SPIP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités, non détaillées par l'éditeur, ont été\ndécouvertes dans SPIP. Elles permettent de réaliser des injections SQL\n(versions 1.9.2 uniquement), et d'obtenir le chemin complet\nd'installation du logiciel (versions 2.0 et 2.1). À noter que dès la\nsortie de la version 3.0 de SPIP, la branche 1.9.2 ne sera plus\nmaintenue.\n\n## Solution\n\nMettre SPIP à jour en version 1.9.2k, 2.0.16 ou 2.1.11.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Page de téléchargement de SPIP :",
+      "url": "http://www.spip.net/fr_download"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-533",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-09-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection SQL"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans <span class=\"textit\">SPIP</span>\npermettent de réaliser des injections SQL et d'obtenir des informations\nsur le chemin d'installation.\n",
+  "title": "Multiples vulnérabilités dans SPIP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Message des développeurs de SPIP du 23 septembre 2011 dans leur liste de diffusion",
+      "url": null
+    }
+  ]
+}

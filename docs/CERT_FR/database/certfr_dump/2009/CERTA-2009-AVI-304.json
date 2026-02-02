@@ -1,0 +1,84 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco IOS XE 2.3.x ;",
+      "product": {
+        "name": "IOS XE",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS R12.x ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS 12.x ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS XE 2.4.x.",
+      "product": {
+        "name": "IOS XE",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités relatives au routage BGP sont présentes dans\ncertains équipements Cisco :\n\n-   la première concerne le traitement de certaines requêtes de mise à\n    jour (update) incluant un chemin d'accès d'AS (Autonomous System)\n    particulier ;\n-   la seconde, de nature non-précisée par le constructeur, est\n    également relative à la gestion des messages de type update.\n\nToutes deux permettent à un utilisateur distant malintentionné de\nprovoquer un déni de service par le biais de requêtes BGP particulières.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2049",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2049"
+    },
+    {
+      "name": "CVE-2009-1168",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1168"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20090729-bgp du 29 juillet 2009    :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20090729-bgp.shtml"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-304",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-07-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités relatives au routage BGP présentes dans les\néquipements Cisco permettent à un utilisateur distant de provoquer un\ndéni de service.\n",
+  "title": "Multiples vulnérabilités dans le routage BGP des équipements Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco #110457 du 29 juillet 2009",
+      "url": null
+    }
+  ]
+}

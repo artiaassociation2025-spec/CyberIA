@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>CISCO CallManager 3.1.</P>",
+  "content": "## Description\n\nCICSO CallManager est un composant logiciel permettant d'effectuer des\nappels téléphoniques en voix sur IP.\n\nLe logiciel CISCO Call Manager 3.1 possède une fuite de mémoire dans le\nprocessus d'authentification d'un utilisateur du CTIFW (Call Telephony\nIntegration FrameWork). Cette faille permet à un utilisateur distant mal\nintentionné de consommer les ressources du système jusqu'à provoquer un\nredémarrage de l'appareil.\n\n## Contournement provisoire\n\n-   Si le logiciel CallManager a été installé mais n'est pas utilisé sur\n    vos appareils CISCO, le supprimer.\n\n-   S'il est en cours d'utilisation suivre les instructions données sur\n    le site de CISCO :\n\n        http://www.cisco.com/univercd/cc/td/doc/product/voice/c/callmg/3_0/install/ad_3011.htm#xtocid30717\n\n## Solution\n\nPasser à la version 1.3(2) de CISCO CallManager présente sur le site :\n\n    http://www.cisco.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité CISCO :",
+      "url": "http://www.cisco.com/warp/public/707/callmanager-ctifw-leak-pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-064",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-03-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut redémarrer à distance un appareil\nCISCO au moyen d'une fuite de mémoire du logiciel CallManager.\n",
+  "title": "Vulnérabilité de CISCO CallManager 3.1",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de CISCO",
+      "url": null
+    }
+  ]
+}

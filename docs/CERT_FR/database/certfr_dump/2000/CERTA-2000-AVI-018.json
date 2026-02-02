@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mozilla M15.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Netscape 4.73 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nJPEG est un format d'image compressée très populaire sur internet. Dans\nle format JPEG les en-têtes sont constituées de plusieurs champs\nd'information. Un utilisateur malveillant peut construire une image ne\nrespectant pas la structure de ces champs. Lorsque Nestcape charge une\ntelle image, celle-ci exploite alors le débordement d'une variable pour\nle faire « planter » ou bien lui faire exécuter du code.\n\nComme tous les sites webs contiennent des images, le simple fait de\nnaviguer s'avère dès lors très dangereux. On trouve actuellement des\nimages faisant « planter » Netscape.\n\n## Solution\n\nMettre à jour Netscape avec la version 4.74\n\n    http://www.netscape.com/computing/download/index.html\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-018",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-07-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Certaines versions de Netscape sont vulnérables lors de l'affichage\nd'images jpg mal formées, durant la consultation d'un site, la lecture\nd'un mèl ou d'un groupe de discution. Au mieux Netscape « plante », au\npire il exécute du code malvaillant.\n",
+  "title": "Vulnérabilité sous Netscape 4.73 et antérieures",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Security Focus",
+      "url": null
+    }
+  ]
+}

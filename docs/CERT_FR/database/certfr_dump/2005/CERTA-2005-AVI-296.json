@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Debian GNU/Linux unstable alias Sid ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "version de apt-cacher antérieure à 0.9.10.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Debian GNU/Linux 3.1 alias Sarge ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa mise à jour d'un système d'exploitation Debian par le réseau,\nconsiste notamment à télécharger sur les sites dédiés à la maintenance\nles mises à jours disponibles sous la forme de fichiers paquetages\n(fichiers dont le nom porte l'extenion .deb) ou de fichiers sources.\n\napt-cacher est un logiciel qui met en œuvre un cache pour les paquets\ntéléchargés. Sur un site regroupant plusieurs machines Debian,\nl'utilisation d'un tel cache a pour objectif d'optimiser la connexion à\nl'Internet.\n\nLa version de apt-cacher a une vulnérabilité qui permet à un utilisateur\nmal intentionné distant de faire exécuter n'importe quelle commande à un\nsystème vulnérable.\n\n## Solution\n\nLa version 0.9.10 de apt-cacher corrige la vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Debian :",
+      "url": "http://www.debian.org/security/2005/dsa-772"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-296",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-08-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de apt-cacher",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis Debian 2005/DSA-772",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Référence CVE : CAN-2005-1854",
+      "url": "https://www.cve.org/CVERecord?id=CAN-2005-1854"
+    }
+  ]
+}

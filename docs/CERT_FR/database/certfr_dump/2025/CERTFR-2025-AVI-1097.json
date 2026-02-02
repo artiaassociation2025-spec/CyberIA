@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MiContact Center Business versions antérieures à 10.0.2 FP 11 (10.2.0.11)",
+      "product": {
+        "name": "MiContact Center Enterprise",
+        "vendor": {
+          "name": "Mitel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mitel CX versions antérieures à MCX 2.0",
+      "product": {
+        "name": "Mitel CX",
+        "vendor": {
+          "name": "Mitel",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "L'éditeur précise que les versions correctives ne sont pas encore disponibles.\nDans l'attente de leur disponibilité, il est nécessaire d'appliquer les correctifs de sécurité KB20257760, KB573971, KB573970 et KB573969 pour MiContact Center Business et KB20254739 pour Mitel CX.",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-67823",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-67823"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-1097",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-12-11T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de l'identifiant CVE-2025-67823. L'avis éditeur concerne une seule vulnérabilité.",
+      "revision_date": "2026-01-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans les produits Mitel. Elle permet à un attaquant de provoquer une injection de code indirecte à distance (XSS).",
+  "title": "Vulnérabilité dans les produits Mitel",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-12-09",
+      "title": "Bulletin de sécurité Mitel MISA-2025-0010",
+      "url": "https://www.mitel.com/support/security-advisories/mitel-product-security-advisory-misa-2025-0010"
+    }
+  ]
+}

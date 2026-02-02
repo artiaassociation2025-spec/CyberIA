@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Excel dans la suite Microsoft Office XP Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Excel dans la suite Microsoft Office 2007.",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Excel dans la suite Microsoft Office 2000 Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Excel dans la suite Microsoft Office 2003 Service Pack 2 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans l'application Excel de\nla suite bureautique Microsoft Office :\n\n-   l'application ne vérifierait pas correctement la version Excel\n    mentionnée dans un fichier. Cette vulnérabilité peut être exploitée\n    pour provoquer une corruption de la mémoire, et éventuellement\n    l'exécution de code arbitraire sur le système vulnérable ;\n-   l'application ne contrôlerait pas correctement le nombre de feuilles\n    de travail (ou worksheets) actives, pouvant également provoquer une\n    corruption de la mémoire ;\n-   l'application ne validerait pas suffisamment les informations au\n    démarrage d'un espace de travail.\n\n## Solution\n\nSe référer au bulletin de sécurité MS07-036 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3029",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3029"
+    },
+    {
+      "name": "CVE-2007-3030",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3030"
+    },
+    {
+      "name": "CVE-2007-1756",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1756"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-291",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités dans Microsoft Excel",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-036 du 10 juillet 2007",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-036.mspx"
+    }
+  ]
+}

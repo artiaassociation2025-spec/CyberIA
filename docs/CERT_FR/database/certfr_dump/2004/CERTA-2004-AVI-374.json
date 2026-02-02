@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de FreeBSD.</p>",
+  "content": "## Description\n\nfetch est un utilitaire permettant le téléchargement de fichiers en\nutilisant les protocoles FTP, HTTP et HTTPS.  \nUne vulnérabilité de type débordement d'entier dans l'analyse des\nen-têtes HTTP permet à un utilisateur mal intentionné, en créant une\nréponse aux en-têtes habilement constitués, d'exécuter du code\narbitraire à distance sur la plate-forme vulnérable.\n\n## Contournement provisoire\n\nEn attendant l'application du correctif, ne pas utiliser l'utilitaire\nfetch mais l'utilitaire ftp (présent dans la base du système FreeBSD)\nqui n'est pas affecté par cette vulnérabilité.\n\n## Solution\n\nSe référer au bulletin de sécurité de FreeBSD pour l'obtention du\ncorrectif (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD  FreeBSD-SA-04:16.fetch du 18 novembre 2004 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-04:16.fetch.asc"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-374",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-11-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans l'utilitaire fetch permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité de FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD FreeBSD-SA-04:16.fetch du 18 novembre 2004",
+      "url": null
+    }
+  ]
+}

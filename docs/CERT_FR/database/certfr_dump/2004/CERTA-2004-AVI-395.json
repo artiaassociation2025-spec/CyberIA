@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft Windows NT Server 4.0 Service Pack 6a ;</LI>    <LI>Microsoft Windows NT Server 4.0 Terminal Server Edition    Service Pack 6 ;</LI>    <LI>Microsoft Windows 2000 Service Pack 3 et Service Pack 4    ;</LI>    <LI>Microsoft Windows XP 64-Bit Edition Service Pack 1 ;</LI>    <LI>Microsoft Windows XP 64-Bit Edition Version 2003 ;</LI>    <LI>Microsoft Windows Server 2003 ;</LI>    <LI>Microsoft Windows Server 2003 64-Bit Edition.</LI>  </UL>  <P>Les systèmes d'exploitation Microsoft Windows 98, Windows 98  SE et Windows Millenium Edition ne sont pas concernés par ces  vulnérabilités.</P>",
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS04-044 du 14 décembre 2004    :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS04-044.mspx"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-395",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-12-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités sont présentes dans certaines versions de Microsoft\nWindows :\n\n-   Les LPC (Local Procedure Call) sont des systèmes de communication\n    locaux inter-processus utilisés par les systèmes Windows. Une\n    vulnérabilité de type débordement de mémoire a été découverte dans\n    la mise en œuvre des LPC permettant à un individu local\n    préalablement authentifié d'élever ses privilèges (vulnérabilité CVE\n    CAN-2004-0893) ;\n-   une seconde vulnérabilité dans la validation des jetons d'identité\n    utilisés par le service LSASS (Local Security Authority Subsystem\n    Service) permet à un utilisateur local d'élever ses privilèges et de\n    prendre possession du système (vulnérabilité CVE CAN-2004-0894).\n",
+  "title": "Vulnérabilité dans le noyau Windows et LSASS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS04-044 de Microsoft",
+      "url": null
+    }
+  ]
+}

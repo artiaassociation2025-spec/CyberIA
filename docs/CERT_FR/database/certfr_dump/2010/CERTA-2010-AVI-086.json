@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Cisco Security Agent 5.1 ;</LI>    <LI>Cisco Security Agent 5.2 ;</LI>    <LI>Cisco Security Agent 6.0.</LI>  </UL>  <P>Remarque: seule la version 5.2 est affectée par la  vulnérabilité de type déni de service.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans les produits Cisco Security\nAgent :\n\n-   la première (CVE-2010-0146) concerne un problème de type traversée\n    de répertoire et permet à un utilisateur authentifié malintentionné\n    de porter atteinte à la confidentialité des données ;\n-   la seconde (CVE-2010-0147) permet à un utilisateur authentifié de\n    conduire des attaques de type injection de requêtes SQL permettant\n    la modification de la configuration de l'agent ;\n-   la dernière (CVE-2010-0148) permet à un utilisateur distant\n    malintentionné de provoquer un déni de service de l'agent vulnérable\n    par le biais de paquets TCP construits de façon particulière. Cette\n    faille n'affecte pas les versions pour Windows et Sun Solaris.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0146",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0146"
+    },
+    {
+      "name": "CVE-2010-0147",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0147"
+    },
+    {
+      "name": "CVE-2010-0148",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0148"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20100217-csa du 17 février 2010    :      .shtml",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20100217-csa.shtml"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-086",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-02-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de requêtes SQL"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités sont présentes dans Cisco Security Agent.\nCelles-ci permettent de provoquer un déni de service à distance, de\nporter atteinte à la confidentialité des données ou de réaliser des\ninjections SQL.\n",
+  "title": "Multiples vulnérabilités dans Cisco Security Agent",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco #111512 du 17 février 2010",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<SPAN class=\"textit\">UltraVNC</SPAN>,  versions 1.0.2 et 1.0.4RC.",
+  "content": "## Description\n\nUltraVNC est un logiciel qui permet d'utiliser un ordinateur distant.\n\nUne fonction dans vncviewer/ClientConnection.cpp présente un défaut de\nvérification de longueur de données. Ce défaut est exploitable par un\nutilisateur malveillant pour exécuter sur le système vulnérable un code\narbitraire à distance. Pour que cette exploitation de vulnérabilité\nréussisse, le système vulnérable doit exécuter vncviewer en écoute\n(listening mode).\n\nL'exploitation au travers du greffon DSM est également possible si\nl'utilisateur malveillant connaît la clé de chiffrement utilisé par\nvncviewer.\n\nLe module UltraVNC Server ne serait pas vulnérable.\n\n## Solution\n\nSe référer site de l'éditeur pour l'obtention des correctifs (cf.\nsection Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0610",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0610"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site de téléchargement UltraVNC :",
+      "url": "http://www.uvnc.com/"
+    },
+    {
+      "title": "Discussions dans le forum UltraVNC :",
+      "url": "http://forum.ultravnc.info/viewtopic.php?t=11850"
+    },
+    {
+      "title": "Bulletin UltraVNC du 25 janvier 2008 :",
+      "url": "http://forum.ultravnc.info/viewtopic.php?t=11850"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-042",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au CVE associé.",
+      "revision_date": "2008-02-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le module <span class=\"textit\">vncviewer</span>\ndu logiciel <span class=\"textit\">UltraVNC</span> permet à un utilisateur\nmalveillant d'exécuter du code arbitraire à distance sur le système\nvulnérable.\n",
+  "title": "Vulnérabilité d'UltraVNC",
+  "vendor_advisories": []
+}

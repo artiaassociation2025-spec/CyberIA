@@ -1,0 +1,97 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenBSD 2.8 et inférieures",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 4.2 et inférieures",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetBSD 1.5 et inférieures",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP-UX 11.00 et 11.11",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Versions d'Ipfilter 3.4.16 et inférieures",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe cache de gestion des fragments a pour objet de laisser passer les\nfragments d'un paquet IP correspondant à une session/connexion\nprécédement acceptée par le module de filtrage. Hors, ce cache ne se\nbase que sur l'entête IP, il est alors possible, après avoir initié une\nconnexion autorisée, d'envoyer des fragments vers des ports arbitraires.\n\n## Solution\n\nMettre à jour les sources ou le paquetage, selon les vendeurs :\n\n-   Sources d'Ipfilter :\n\n        ftp://coombs.anu.edu.au/pub/net/ip-filter/\n\n-   HP-UX :\n\n        http://www.software.hp.com/cgi-bin/swdepot_parser.cgi/cgi/displayProductInfo.pl?productNumber=B9901AA\n\n-   FreeBSD :\n\n        ftp://ftp.freebsd.org/pub/FreeBSD/CERT/patches/SA-01:32/ipfilter.patch\n\n-   NetBSD : se conformer à l'avis cité dans la documentation.\n\n-   OpenBSD 2.8 voir :\n\n        http://www.openbsd.org/errata28.html#ipf_frag\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité NetBSD",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2001-007.txt.asc"
+    },
+    {
+      "title": "Avis de sécurité FreeBSD",
+      "url": "ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-01:32.ipfilter.v1.1.asc"
+    },
+    {
+      "title": "Base de vulnérabilités Bugtraq",
+      "url": "http://www.securityfocus.com/bid/2545"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-021",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-01T00:00:00.000000"
+    },
+    {
+      "description": "correction d'un lien défectueux.",
+      "revision_date": "2002-03-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement des règles de filtrage de paquets implémentées par ipfilter"
+    }
+  ],
+  "summary": "<span class=\"textit\">Ipfilter</span> est une collection d'outils de\nfiltrage de paquets répandue dans le monde <span\nclass=\"textit\">Unix</span>. Une vulnérabilité permet d'accéder aux ports\nnormalement bloqués des hôtes protégés par le pare-feu.\n",
+  "title": "Mise à jour de la gestion des fragments dans Ipfilter",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Base de vulnérabilités BugTraq",
+      "url": null
+    }
+  ]
+}

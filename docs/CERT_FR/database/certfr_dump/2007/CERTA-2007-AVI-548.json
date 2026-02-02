@@ -1,0 +1,35 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>JBoss Seam, versions 1.x.</p>",
+  "content": "## Description\n\nLe contenu de la variable order, paramètre d'entrée pour la méthode\ngetRenderedEjbql(), n'est pas suffisamment filtré. Cette insuffisance\npermet à un utilisateur malveillant d'injecter des requêtes SQL. Ce\ndernier peut alors porter atteinte à la confidentialité ou à l'intégrité\ndes données de la base.\n\n## Solution\n\nLa version 2.0.0.GA résoud le problème. Se référer au bulletin de\nsécurité de l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin JBSEAM-2084 du 14 octobre 2007 :",
+      "url": "http://jira.jboss.com/jira/browse/JBSEAM-2084"
+    },
+    {
+      "title": "Bulletin de changement de JBoss Seam :",
+      "url": "http://sourceforge.net/project/shownotes.php?release_id=549490&group_id=22866"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-548",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans JBoss Seam permet à un utilisateur malveillant de\nmanipuler indûment des données à distance.\n",
+  "title": "Vulnérabilité de JBoss",
+  "vendor_advisories": []
+}

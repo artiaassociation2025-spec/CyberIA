@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tout système utilisant Konqueror en  version 3.0, 3.0.1 ou 3.0.2 de KDE est vulnérable.<BR>  Les versions 2.2.2 et 3.0.3 de KDE ne sont pas vulnérables.</p>",
+  "content": "## Description\n\nLes sites internet qui se basent uniquement sur un cookie pour\nl'identification de la session HTTP peuvent permettre à un utilisateur\nmal intentionné de récupérer cette session, car le cookie n'est pas\nchiffré avant son transfert.  \nCette vulnérabilité peut aussi être utilisée pour se connecter sur un\nsite se basant uniquement sur un cookie pour l'identification de\nl'utilisateur.\n\n## Solution\n\nMettre KDE à jour.  \nLes mises à jour sont disponibles en téléchargement sur le site de KDE\n(Consultez la section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-208",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-09-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Vol de session"
+    },
+    {
+      "description": "Divulgation de données"
+    }
+  ],
+  "summary": "Konqueror ne détecte pas le drapeau \\`\\`secure'' dans un cookie HTTP. Il\ntransmet donc ces cookies en clair sur le réseau.\n",
+  "title": "Vulnérabilité des cookies sécurisés dans KDE",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis #20020908-1 de KDE",
+      "url": "http://www.kde.org/info/security/advisory-20020908-1.txt"
+    }
+  ]
+}

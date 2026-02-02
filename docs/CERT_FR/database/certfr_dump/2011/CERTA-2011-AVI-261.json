@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>MediaWiki versions antérieures à 1.16.4.</P>",
+  "content": "## Description\n\nTrois vulnérabilités ont été corrigées :\n\n-   certains paramètres passés dans l'ajout de commentaires ne sont pas\n    correctement validés, permettant à un attaquant de réaliser de\n    l'injection de code indirecte (CVE-2011-1579) ;\n-   une fonction d'import ne vérifie pas correctement les permissions,\n    autorisant une personne malveillante d'importer indument des\n    ressources (CVE-2011-1580) ;\n-   il est possible de tromper certains navigateurs, comme Internet\n    Explorer 6, et de leur faire interpréter certains fichiers comme du\n    HTML, permettant à une personne malveillante de réaliser de\n    l'injection de code indirecte (CVE-2011-1578).\n\nCette dernière vulnérabilité n'ayant pas été totalement corrigée avec la\nversion 1.16.3 de MediaWiki, un nouveau correctif est disponible avec la\nversion 1.16.4.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1579",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1579"
+    },
+    {
+      "name": "CVE-2011-1580",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1580"
+    },
+    {
+      "name": "CVE-2011-1578",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1578"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de mise à jour MediaWiki versions 1.16.3 du 12    avril 2011 :",
+      "url": "http://lists.wikimedia.org/pipermail/mediawiki-announce/2011-April/000096.html"
+    },
+    {
+      "title": "Bulletin de mise à jour MediaWiki versions 1.16.4 du 14    avril 2011 :",
+      "url": "http://lists.wikimedia.org/pipermail/mediawiki-announce/2011-April/000097.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-261",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-04-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été corrigés avec la version 1.16.3 de\nMediaWiki. Deux d'entre-elles permettent de réaliser de l'injection de\ncode indirecte à distance.\n",
+  "title": "Multiples vulnérabilités dans MediaWiki",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour MediaWiki 1.16.4 du 14 avril 2011",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour MediaWiki versions 1.16.3 du 12 avril 2011",
+      "url": null
+    }
+  ]
+}

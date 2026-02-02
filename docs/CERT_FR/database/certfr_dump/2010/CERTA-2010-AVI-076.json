@@ -1,0 +1,84 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco IronPort Encryption Appliance 6.2 versions inférieures à 6.2.9.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IronPort PostX versions inférieures à 6.2.9.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IronPort Encryption Appliance 6.5 versions inférieures à 6.5.2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités dans les produits Cisco IronPort ont été\nidentifiées :\n\n-   une erreur dans l'interface d'administration Web des boîtiers\n    IronPort permet un accès au système de fichier ;\n-   une erreur dans la servlet Websafe permet un accès au système de\n    fichiers ;\n-   une erreur dans le serveur web https de l'Encryption Appliance\n    permet l'exécution de code arbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0143",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0143"
+    },
+    {
+      "name": "CVE-2010-0144",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0144"
+    },
+    {
+      "name": "CVE-2010-0145",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0145"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20100210-ironport du 10 février    2010 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20100210-ironport.shtml"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-076",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-02-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans les produits Cisco IronPort permettent\nl'accès au système de fichiers, et l'exécution de code arbitraire à\ndistance.\n",
+  "title": "Multiples vulnérabilités dans Cisco IronPort",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20100210-ironport du 10 février 2010",
+      "url": null
+    }
+  ]
+}

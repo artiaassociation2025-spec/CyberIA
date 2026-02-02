@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions HP-UX 11.x, incluant B.11.00, B.11.04, B.11.11 et  B.11.23.</P>",
+  "content": "## Description\n\nTrois vulnérabilités ont été identifiées dans le système d'exploitation\nHP-UX :\n\n-   la première serait liée à une erreur lorsque le système fonctionne\n    en mode de confiance ou Trusted Mode. Elle permettrait à un\n    utilisateur malveillant ayant un accès local de perturber le\n    fonctionnement du système vulnérable ;\n-   la seconde est liée à une erreur dans l'utilitaire Support Tools\n    Manager (STM). Ce dernier fait partie du disque HP-UX Support,\n    intégré à HP-UX. Support Tools Manager peut être lancé en mode\n    caractère (cstm), sous forme de menu de commandes (mstm) ou\n    d'application X-Windows (xstm). Cette vulnérabilité permettrait à un\n    utilisateur malveillant ayant un accès local de perturber le\n    fonctionnement du système ;\n-   la troisième vulnérabilité se trouve dans le système LP Subsystem\n    qui gère les travaux d'impression (file d'attente, noms et\n    catégories des imprimantes, etc). Une personne malveillante pourrait\n    profiter de celle-ci pour perturber le système vulnérable et\n    provoquer un déni-de-service à distance.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur HP pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HPSBUX02115 SSRT061077 du 14 août 2006    :",
+      "url": "http://itrc.hp.com/service/cki/docDisplay.do?docId=c00657001"
+    },
+    {
+      "title": "Bulletin de sécurité HPSBUX02139 SSRT5981 du 14 août 2006 :",
+      "url": "http://itrc.hp.com/service/cki/docDisplay.do?docId=c00746980"
+    },
+    {
+      "title": "Bulletin de sécurité HPSBUX02141 SSRT51153 du 14 août 2006    :",
+      "url": "http://itrc.hp.com/service/cki/docDisplay.do?docId=c00749123"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-363",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités dans HP-UX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité HP-UX du 14 août 2006",
+      "url": null
+    }
+  ]
+}

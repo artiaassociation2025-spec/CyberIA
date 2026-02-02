@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache Tomcat versions 8.5.50 à 8.5.81 antérieures à 8.5.82",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat versions 9.0.30 à 9.0.64 antérieures à 9.0.65",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-34305",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-34305"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-579",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-06-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Apache Tomcat. Elle permet à un\nattaquant de provoquer une injection de code indirecte à distance (XSS).\n",
+  "title": "Vulnérabilité dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache 8.5.82 du 22 juin 2022",
+      "url": "https://tomcat.apache.org/security-8.html#Fixed_in_Apache_Tomcat_8.5.82"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache 9.0.65 du 22 juin 2022",
+      "url": "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.65"
+    }
+  ]
+}

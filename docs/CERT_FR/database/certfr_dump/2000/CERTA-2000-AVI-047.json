@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Windows 2000 toutes versions.</P>",
+  "content": "## Description\n\nUn utilisateur mal intentionné peut, en envoyant des paquets RPC mal\nformés, bloquer à distance les services RPC d'une machine sous Windows\n2000. Une fois le service bloqué, la seul façon de le relancer est de\nredémarrer la machine.\n\n## Contournement provisoire\n\nPour se prémunir contre les attaques provenant d'Internet, vous devez\navoir un garde-barrière (firewall) qui bloque les ports 135 à 139 et le\nport 445.\n\n## Solution\n\nAppliquer le correctif de Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=24229\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "L'avis et la FAQ de l'avis Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-066.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-047",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-09-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut arrêter à distance le service RPC en\nlui envoyant par le réseau des paquets malformés.\n",
+  "title": "Vulnérabilité de RPC sous Windows2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "AIX version 5.2.0 ;",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "AIX version 5.3.0.",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "AIX version 5.1.0 ;",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n## 4.1 Vulnérabilité dans chcod\n\nUne vulnérabilité est présente sur la commande chcod. Cette\nvulnérabilité permet à un utilisateur local mal intentionné qui fait\npartie du groupe system d'exécuter un code arbitraire sur le système\navec les privilèges du super utilisateur.\n\n## 4.2 Vulnérabilité dans lsvpd\n\nUne vulnérabilité présente sur la commande lsvpd permet à un utilisateur\nmal inetntionné, via un binaire malicieusement construit placé dans une\narborescence judicieusement choisie, d'élever ses privilèges sur le\nsystème.\n\n## 4.3 Vulnérabilité dans le script diag\n\nUne vulnérabilité est présente sur le script diag. Cette vulnérabilité\npermet à un utilisateur local non privilègié d'exécuter un code\narbitraire avec les privilèges du super utilisateur sur le système\nvulnérable via l'utilisation des commandes appelées par ce script\n(lscode, invscout, invscoutd, diag_exec).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité idefense du 20 décembre 2004 :",
+      "url": "http://www.idefense.com/application/poi/display?id=171&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité IBM MSS-0AR-E01-2004:2063.1 :",
+      "url": "http://www-1.ibm.com/services/continuity/recover1.nsf/mss/MSS-OAR-E01-2004.2063.1"
+    },
+    {
+      "title": "Bulletin de sécurité idefense du 20 décembre 2004 :",
+      "url": "http://www.idefense.com/application/poi/display?id=170&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité IBM MSS-0AR-E01-2004:2061.1 :",
+      "url": "http://www-1.ibm.com/services/continuity/recover1.nsf/mss/MSS-OAR-E01-2004.2061.1"
+    },
+    {
+      "title": "Bulletin de sécurité IBM MSS-0AR-E01-2004:2062.1 :",
+      "url": "http://www-1.ibm.com/services/continuity/recover1.nsf/mss/MSS-OAR-E01-2004.2062.1"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-410",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-12-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités sont présentes dans les commandes lsvpd, chcod\net le script diag sur le système AIX. Un utilisateur local mal\nintentionné peut exploiter ces vulnérabilités pour élever ses privilèges\nou exécuter du code arbitraire sur le système.\n",
+  "title": "Plusieurs vulnérabilités sur AIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité IBM",
+      "url": null
+    }
+  ]
+}

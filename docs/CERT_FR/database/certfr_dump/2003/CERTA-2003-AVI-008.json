@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les versions de CVS égales ou  antérieures à la version 1.11.4 sont affectées.</p>",
+  "content": "## Description\n\nCVS est un outil dédié à la gestion des codes sources.\n\nPar le biais d'un nom de répertoire habilement constitué, un utilisateur\nmal intentionné peut exploiter une vulnérabilité présente dans le\nserveur CVS afin de réaliser une élévation de privilèges.\n\nVia les commandes Update-prog et Checkin-prog du serveur CVS, il est\nalors possible d'exécuter des commandes avec les privilèges du serveur\nCVS.\n\nCette vulnérabilité est exploitable sans authentification préalable sur\ndes serveurs CVS offrant des connexions anonymes, même si l'accès n'est\nautorisé qu'en lecture seule.\n\n## Solution\n\nLa version 1.11.5 de CVS corrige cette vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité CA-2003-02 du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2003-02.html"
+    },
+    {
+      "title": "Avis de sécurité #50439 de Sun :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F50439"
+    },
+    {
+      "title": "Bulletin de sécurité MDKSA-2003:009 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:009"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2003:012 de Red Hat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-012.html"
+    },
+    {
+      "title": "Bulletin de sécurité DSA-233 de Debian :",
+      "url": "http://www.debian.org/security/2003/dsa-233"
+    },
+    {
+      "title": "Bulletin de sécurité d'OpenBSD du 20 janvier 2003 :",
+      "url": "http://www.openbsd.org/security.html"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE-SA:2003:0007 de SuSE :",
+      "url": "http://www.suse.com/de/security/2003_007_cvs.html"
+    },
+    {
+      "title": "Site de CVS :",
+      "url": "http://ccvs.cvshome.org/servlets/NewsItemView?newsID=51"
+    },
+    {
+      "title": "Avis de sécurité FreeBSD-SA-03:01.cvs de FreeBSD :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-03:01.cvs.asc"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-008",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-01-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux avis de SuSE et du CERT/CC.",
+      "revision_date": "2003-01-23T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux avis de FreeBSD et de SUN.",
+      "revision_date": "2003-02-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de type débordement de mémoire présente dans CVS\n(Concurrent Versions System) peut être exploitée par un utilisateur mal\nintentionné afin d'exécuter du code arbitraire à distance sur une\nmachine hébergeant un serveur CVS vulnérable.\n",
+  "title": "Vulnérabilité de CVS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité \"CVS remote vulnerability\" d'e-matters",
+      "url": "http://security.e-matters.de/advisories/012003.html"
+    }
+  ]
+}

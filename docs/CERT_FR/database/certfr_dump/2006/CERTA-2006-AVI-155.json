@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Sun Solaris 9.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Solaris 8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilté a été découverte dans Sun Solaris.\n\nCette vulnérabilité permet à un utilisateur malveillant (disposant de\ncertains privilèges) de découvrir les mots de passe du Directory Server\nrootDN par le biais de la fonction <span class=\"textbf\">idsconfig</span>\nou des fonctions LDAP <span class=\"textbf\">ldapadd</span>, <span\nclass=\"textbf\">ldapdelete</span>, <span\nclass=\"textbf\">ldapmodify</span>, <span class=\"textbf\">ldapmodrdn</span>\net <span class=\"textbf\">ldapsearch</span>.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2006-AVI-155",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-04-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans le client LDAP de suns solaris\npermettant un contournement de la politique de sécurité locale.\n",
+  "title": "Vulnérabilité de LDAP2 sous Sun Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sun",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-102113-1"
+    }
+  ]
+}

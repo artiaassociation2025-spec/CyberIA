@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>La vulnérabilité concerne les versions Skype fonctionnant sous  Microsoft Windows. Les versions impactées sont :</P>  <UL>    <LI>la version 2.0.*.104 et celles antérieures ;</LI>    <LI>la verson 2.5.*.78 et celles antérieures.</LI>  </UL>",
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans Skype, pour certaines versions\nfonctionnant sous Microsoft Windows. Elle concerne le traitement des\nparamètres liés à l'analyse des adresses réticulaires (ou URI pour\nUniform Resource Identifier). Une personne utilisant Skype peut se faire\ndérober des informations par un utilisateur distant : celui-ci doit\ncontruire une adresse réticulaire malveillante exploitant la\nvulnérabilité précédente. Si l'utilisateur clique dessus, cela démarre\nl'envoi de fichiers depuis sa machine et à son insu. Cette attaque\nimplique néanmoins que les deux parties soient préalablement d'accord\npour communiquer (donc une fois la phase d'autorisation établie).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2312",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2312"
+    }
+  ],
+  "links": [
+    {
+      "title": "Mise à jour fournie par l'éditeur Skype :",
+      "url": "http://www.skype.com/download/skype/windows/"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-209",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans Skype, pour certaines versions\nfonctionnant sous Microsoft Windows. Elle permet à un utilisateur\ndistant malveillant de transférer des fichiers sans le consentement\npréalable de la personne qui aurait décidé d'utiliser Skype sur la\nmachine ciblée.\n",
+  "title": "Vulnérabilité de Skype pour Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour de Skype",
+      "url": null
+    }
+  ]
+}

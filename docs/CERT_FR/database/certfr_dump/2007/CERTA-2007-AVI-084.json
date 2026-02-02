@@ -1,0 +1,92 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Explorer 5.01 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 7 sous Windows Vista n'est pas affecté.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 7 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois vulnérabilités ont été découvertes dans la majorité des versions\nd'Internet Explorer :\n\n-   les deux premières vulnérabilités résultent d'un mauvais traitement\n    des objets COM et permettent, via une page web spécialement conçue,\n    d'exécuter du code arbitraire à distance ;\n-   la dernière résulte d'une mauvaise interprétation par la\n    bibliothèque wininet.dll de certaines réponses FTP. L'exploitation\n    de cette vulnérabilité permet d'obtenir un accès au système avec les\n    droits de l'utilisateur local.\n\nCes vulnérabilités ne semblent pas toucher la version d'Internet\nExplorer 7 disponible sous Windows Vista.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0217",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0217"
+    },
+    {
+      "name": "CVE-2007-0219",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0219"
+    },
+    {
+      "name": "CVE-2006-4697",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4697"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-016 du 13 février 2007    :",
+      "url": "http://www.microsoft.com/france/technet/security/bulletin/MS07-016.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-016 du 13 février 2007    :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-016.mspx"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-084",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-02-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités permettant l'exécution de code arbitraire à\ndistance ont été découvertes dans la majorité des versions d'Internet\nExplorer.\n",
+  "title": "Multiples vulnérabilités du navigateur Internet Explorer de Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS07-016 de Microsoft du 13 février 2007",
+      "url": null
+    }
+  ]
+}

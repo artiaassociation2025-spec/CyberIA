@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Red Hat Linux 7.x, 8.0 et 9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Red Hat",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mandrake 9.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Red Hat",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Une vulnérabilité dans `/proc/tty/driver/serial` permet à un\n    utilisateur mal intentionné d'obtenir des informations sur les mots\n    de passe des utilisateurs locaux ;\n-   l'appel système `execve` permet d'exécuter des programmes. Celui-ci\n    présente une vulnérabilité permettant d'effectuer un déni de service\n    sur la machine ;\n-   RPC (Remote Procedure Call) est un protocole de type client/serveur\n    utilisé pour l'implémentation d'applications réparties. Une\n    vulnérabilité dans sa mise en oeuvre permet à un individu mal\n    intentionné de perturber les services RPC ;\n-   une vulnérabilité dans l'appel système `execve` permet d'obtenir un\n    accès en lecture à des descripteurs de fichier ayant un accès\n    restreint ;\n-   une vulnérabilité dans le système de fichier `/proc` permet à un\n    utilisateur local d'obtenir des informations sensibles ;\n-   le protocole STP (Spanning Tree Protocol) est utilisé afin d'éviter\n    les problèmes de boucles sur un réseau. Celui-ci est installé par\n    défaut dans le noyau 2.4 et peut être utilisé par un individu mal\n    intentionné afin de modifier la topologie des ponts ;\n-   une mauvaise gestion des données reçues par le protocole STP permet\n    d'effectuer un déni de service ;\n-   une vulnérabilité permet à un individu mal intentionné d'altérer le\n    fonctionnement de la table de relayage (Forwarding Table).\n\n## Solution\n\nAppliquer les correctifs fournis par l'éditeur (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité #RHSA-2003-238 de RedHat :",
+      "url": "http://www.redhat.com/support/errata/RHSA-2003-238.html"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-118",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans le noyau linux 2.4.\n",
+  "title": "Multiples vulnérabilités dans le noyau linux 2.4",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #RHSA-2003:238 de RedHat",
+      "url": null
+    }
+  ]
+}

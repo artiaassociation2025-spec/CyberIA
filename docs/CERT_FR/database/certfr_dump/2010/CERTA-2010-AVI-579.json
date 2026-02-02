@@ -1,0 +1,51 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>AWStats 6.95 et versions antérieures.</p>",
+  "content": "## Description\n\nDes vulnérabilités affectent AWStats :\n\n-   l'acceptation par awstat.cgi d'un chemin vers un fichier de\n    configuration dans l'adresse réticulaire (URL) permet à un\n    utilisateur malveillant d'exécuter du code à distance au moyen d'un\n    fichier de configuration malveillant dans un répertoire NFS ou\n    WebDAV ;\n-   le même problème est également présent sous Windows avec les\n    fichiers partagés ;\n-   l'utilisation de LoadPlugin permet à un utilisateur malveillant de\n    parcourir une partie non autorisée de l'arborescence des fichiers.\n\n## Solution\n\nLa version 7.0 d'AWStats corrige ces problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-4369",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4369"
+    },
+    {
+      "name": "CVE-2010-4368",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4368"
+    },
+    {
+      "name": "CVE-2010-4367",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4367"
+    }
+  ],
+  "links": [
+    {
+      "title": "Note de vulnérabilité de l'US-CERT VU#870532 du 30 novembre    2010 :",
+      "url": "http://www.kb.cert.org/vuls/id/870532"
+    },
+    {
+      "title": "Site de téléchargement du projet AWStats :",
+      "url": "http://awstats.sourceforge.net"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-579",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Des vulnérabilités affectent AWStats dont certaines permettent à un\nutilisateur malveillant d'exécuter du code à distance.\n",
+  "title": "Vulnérabilités dans AWStats",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de vulnérabilité de l'US-CERT VU#870532 du 30 novembre 2010",
+      "url": null
+    }
+  ]
+}

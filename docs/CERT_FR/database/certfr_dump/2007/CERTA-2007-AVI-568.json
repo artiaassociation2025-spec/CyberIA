@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>VLC Media Player version 0.8.6d et les versions  antérieures.</P>",
+  "content": "## Description\n\nDe multiples vulnérabilités dans VLC Media Player permettent d'exécuter\ndu code arbitraire à distance :\n\n-   des erreurs dans certaines fonctions entrant dans la gestion des\n    sous-titres peuvent provoquer un dépassement de la mémoire tampon ;\n-   une erreur dans l'interface web en écoute sur le port 8080\n    (désactivée par défaut) peut être exploitée via une requête HTTP\n    spécialement conçue.\n\n## Solution\n\nSe référer au site de VLC pour l'obtention des correctifs (cf. section\nDocumentation).\n\nCe dernier est, à la date de rédaction de cet avis, uniquement\ndisponible dans la branche de développement de VLC.\n\nLe CERTA tient à rappeler que les versions en cours de développement\npeuvent comporter d'autres vulnérabilités et conseille l'utilisation\nd'un lecteur alternatif en attendant que le correctif soit intégré dans\nla version stable du logiciel.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le site de la branche développement de VLC :",
+      "url": "http://nightlies.videolan.org"
+    },
+    {
+      "title": "L'actualité du projet VLC :",
+      "url": "http://www.videolan.org/news.html#news-1"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-568",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Des vulnérabilités affectant VLC Media Player ont été découvertes et\npermettent d'exécuter du code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans VLC Media Player",
+  "vendor_advisories": []
+}

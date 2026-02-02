@@ -1,0 +1,107 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Ruby versions 1.8.7-p21 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Ruby versions 1.8.6-p229 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Ruby versions 1.8.4 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Ruby versions 1.9.0-1 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Ruby versions 1.8.5-p230 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans l'interpréteur Ruby ou des\nclasses de base Ruby associées :\n\n-   la première est relative à certains composants WEBrick qui, sous\n    certaines conditions, permettent à un utilisateur distant de porter\n    atteinte à la confidentialité des données utilisées par\n    l'application web s'appuyant sur ces composants ;\n-   la deuxième concerne plusieurs failles de type débordement d'entiers\n    dans certaines fonctions de Ruby. Elle permet à un utilisateur\n    distant de provoquer un déni de service via des paramètres de\n    longueur excessive ;\n-   la dernière est dûe à une erreur dans certaines fonctions\n    d'allocations de mémoire et permet à un utilisateur distant de\n    provoquer un déni de service ou d'exécuter du code arbitraire.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2663",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2663"
+    },
+    {
+      "name": "CVE-2008-2725",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2725"
+    },
+    {
+      "name": "CVE-2008-2664",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2664"
+    },
+    {
+      "name": "CVE-2008-2726",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2726"
+    },
+    {
+      "name": "CVE-2008-2662",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2662"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2008-AVI-342",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-06-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des donnéss"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Ruby permettent à un utilisateur distant\nde porter atteinte à la confidentialité des données, de provoquer un\ndéni de service ou d'exécuter du code arbitraire.\n",
+  "title": "Multiples vulnérabilités dans Ruby",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ruby du 20 juin 2008",
+      "url": "http://www.ruby-lang.org/en/news/2008/06/20/arbitrary-code-execution-vulnerabilities"
+    }
+  ]
+}

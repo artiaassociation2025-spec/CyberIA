@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft SQL Server 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Exchange Server 5.5 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft SQL Server 7.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT4.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Exchange Server 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe système RPC permet, lors d'utilisation d'applications réparties,\nd'appeler des fonctions situées sur une machine distante. Lors du\ndialogue entre une machine serveur et une machine client selon le\nprotocole RPC, les connexions réseaux sont gérées par des « stubs »\n(souches). La souche du système client assure donc la liaison de façon\ntransparente pour l'application utilisée, avec la souche du système\nserveur.\n\nLors de la mise en place de plusieurs serveurs RPC, les données\nprovenant des souches ne sont pas systématiquement marquées comme reçues\ncorrectement par ces serveurs.\n\nUn utilisateur distant mal intentionné peut, en envoyant des requêtes\nRPC judicieusement composées, entraîner un encombrement des serveurs RPC\npouvant obliger à un redémarrage des machines cibles.\n\n## Contournement provisoire\n\nPour se prémunir contre les attaques provenant d'Internet, il convient\nde bloquer le port 135/TCP au niveau du garde barrière.\n\n## Solution\n\nSe référer au bulletin de sécurité de Microsoft (voir paragraphe\nDocumentation) pour connaitre la disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-041.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-084",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-07-27T00:00:00.000000"
+    },
+    {
+      "description": "seconde version : modification dans la liste des correctifs du bulletin Microsoft.",
+      "revision_date": "2002-04-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une mauvaise interprétation dans la gestion des entrées des serveurs RPC\n(Remote Procedure Call) peut entraîner un déni de service sur la machine\naffectée.\n",
+  "title": "Vulnérabilité dans les serveurs RPC sous Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-041",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les distributions suivantes sont  vulnérables:  <UL>    <LI>OpenBSD 2.9 et antérieures;</LI>    <LI>FreeBSD 4.3 et antérieures;</LI>    <LI>NetBSD 1.5.1 et antérieures;</LI>    <LI>BSD/OS 4.1 et antérieures;</LI>    <LI>IBM AIX 4.3 et 5.1;</LI>    <LI>SUN SOLARIS 8.0 et antérieures;</LI>    <LI>HEWLETT-PACKARD HPUX 11.11 et antérieures;</LI>    <LI>SGI IRIX 6.5 à 6.5-13;</LI>    <LI>SuSE 7.2 et antérieures;</LI>    <LI>Debian 2.1 et 2.1r4;</LI>    <LI>RedHat 6.0 à 6.2;</LI>    <LI>Mandrake 7.1 et antérieures.</LI>  </UL></p>",
+  "content": "## Description\n\nLe service d'impression BSD permet le partage des imprimantes sur un\nréseau.\n\nDe multiples vulnérabilités présentes dans le service d'impression BSD\nin.lpd ou lpd (rlpdaemon sous HPUX) permettent à un utilisateur mal\nintentionné d'exécuter du code arbitraire avec les privilèges de root.\n\nPour que ces vulnérabilités soit exploitables, le service d'impression\ndoit être démarré.\n\nL'exploitation à distance de ces vulnérabilités ne peut être réalisée\nque si la machine lançant l'attaque apparaît dans le fichier\n/etc/hosts.equiv ou /etc/hosts.lpd sauf sur les distributions Debian,\nRedHat et IBM où il est possible de leurrer le mécanisme\nd'authentification.\n\n## Solution\n\nConsultez l'éditeur pour la mise-à-jour correspondant à votre système:\n\n-   FreeBSD:\n\n        ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-01:58.lpd.asc\n\n-   OpenBSD:\n\n        http://www.openbsd.org/errata29.html#lpd\n\n-   BSD/OS:\n\n        http://www.BSDI.COM/services/support/patches/patches-4.1/M410-044\n\n-   SGI:\n\n        ftp://patches.sgi.com/support/free/security/advisories/20011003-01-P\n\n-   IBM:\n\n        http://www-1.ibm.com/services/continuity/recover1.nsf/4699c03b46f2d4f68525678c006d45ae/85256a3400529a8685256ac7005cf00a/$FILE/oar391.txt\n\n-   HP: se référer au bulletin HPSBUX0108-163\n\n-   SUN: se référer à l'avis CERTA-2001-AVI-090\n\n-   Debian:\n\n        http://www.debian.org/security/2000/20000109\n\n-   RedHat:\n\n        http://www.redhat.com/support/errata/RHSA-2001-147.html\n\n-   SuSE:\n\n        http://www.suse.com/de/support/security/2001_033_lprold_txt.txt\n\n-   Mandrake:\n\n        http://www.linux-mandrake.com/en/security/2000/MDKSA-2000-054.php3\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité \"Remote Buffer Overflow in BSD Line    Printer Daemon\":",
+      "url": "http://xforce.iss.net/alerts/advise94.php"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-089",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-08-31T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence à l'avis de sécurité d'IBM.",
+      "revision_date": "2001-09-12T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence à l'avis de sécurité de SuSE.",
+      "revision_date": "2001-10-29T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence à l'avis de sécurité de SGI.",
+      "revision_date": "2001-11-02T00:00:00.000000"
+    },
+    {
+      "description": "Modifications suite à l'avis CA-2001-30.",
+      "revision_date": "2001-11-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans le service d'impression BSD\nin.lpd ou lpd (rlpdaemon sous HPUX) permettent à un utilisateur mal\nintentionné d'exécuter du code arbitraire avec les privilèges de root.\n\nL'exploitation de cette vulnérabilité peut se faire en local ou à\ndistance.\n",
+  "title": "Vulnérabilités dans le service d'impression BSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis ISS \"Remote Buffer Overflow Vulnerability in BSD Line Printer Daemon\"",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis CA-2001-30 \"Multiple Vulnerabilities in lpd\"",
+      "url": "http://www.cert.org/advisories/CA-2001-30.html"
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mac OS X Server v10.3.7.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mac OS X Server v10.2.8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mac OS X v10.3.7 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mac OS X v10.2.8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Une vulnérabilité affecte les commandes de la famille at, permettant\n    d'élever les privilèges (référence CVE CAN-2005-0125). La mise à\n    jour concerne les commandes at, atrm, batch, atq, et atrun ;\n-   une vulnérabilité affecte le composant ColorSync. Un utilisateur mal\n    intentionné peut, par le biais de profils de couleur ICC mal formés,\n    exécuter du code arbitraire (référence CVE CAN-2005-0126) ;\n-   une vulnérabilité décrite dans l'avis CERTA-2004-AVI-361 affecte la\n    bibliothèque libxml2 (référence CVE CAN-2004-0989) ;\n-   une vulnérabilité affecte le composant Mail. Des informations\n    relatives à la carte réseau sont ajoutées dans l'en-tête des\n    messages (référence CVE CAN-2005-0127) ;\n-   de multiples vulnérabilités décrites dans l'avis CERTA-2004-AVI-405\n    affectent le composant PHP. L'exploitation de ces vulnérabilités\n    permet de réaliser un déni de service ou l'exécution de code\n    arbitraire à distance (référence CVE CAN-2003-0860, CAN-2003-0863,\n    CAN-2004-0594, CAN-2004-0595, CAN-2004-1018, CAN-2004-1019,\n    CAN-2004-1020, CAN-2004-1063, CAN-2004-1064, CAN-2004-1065).\n    L'application du correctif d'Apple met à jour PHP en version 4.3.10\n    ;\n-   une vulnérabilité affecte le navigateur Safari. Si la fontionnalité\n    de blocage des fenêtres pop-up n'est pas activée, un utilisateur\n    peut être trompé sur le contenu d'une telle fenêtre (référence CVE\n    CAN-2004-1314) ;\n-   une vulnérabilité de type cross-site scripting affecte SquirrelMail\n    (référence CVE CAN-2004-1036).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SGI #20050602-01-U du 09 juin 2005    (CVE CAN-2004-0989) :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20050602-01-U.asc"
+    },
+    {
+      "title": "Bulletin de sécurité CERTA-2004-AVI-361 du CERTA :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2004-AVI-361"
+    },
+    {
+      "title": "Bulletin de sécurité CERTA-2004-AVI-405 du CERTA :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2004-AVI-405"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-034",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-01-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SGI",
+      "revision_date": "2005-06-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités découvertes dans le système d'exploitation\nMac OS X d'Apple peuvent être exploitées par un utilisateur mal\nintentionné afin de réaliser un déni de service, d'exécuter du code\narbitraire à distance, ou d'élever ses privilèges.\n",
+  "title": "Multiples vulnérabilités dans Mac OS X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité d'Apple du 21 janvier 2005",
+      "url": "http://docs.info.apple.com/article.html?artnum=300770"
+    }
+  ]
+}

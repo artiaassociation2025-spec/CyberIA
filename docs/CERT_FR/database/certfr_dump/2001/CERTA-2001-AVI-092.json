@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Exchange 5.5.</P>",
+  "content": "## Description\n\nExchange 5.5 offre une particularité (Outlook Web Access -OWA- )\npermettant à des utilisateurs connus d'accèder à leur mél par\nl'intermédiaire d'un navigateur classique. OWA se comporte comme un\nserveur Web et autorise les utilisateurs à lire ou expédier du courrier\nsans passer par un logiciel de messagerie.\n\nPour la fonction de recherche, OWA fonctionne sur deux niveaux. Le\npremier effectuant l'authentification entre l'utilisateur et l'interface\nWeb, le second permettant d'effectuer les recherches réelles sur les\nadresses méls des autres utilisateurs.\n\nUne vulnérabilité située dans le second niveau permet à un utilisateur\ndistant mal intentionné d'accéder directement au second niveau d'OWA\nsans s'authentifier, et de récupérer ainsi l'ensemble des adresses méls\ndes utilisateurs connus par le serveur.\n\nMicrosoft Exchange 2000 n'est pas affecté par cette vulnérabilité.\n\n## Contournement provisoire\n\nSi cette fonction n'est pas utilisée par vos utilisateurs, il est\nrecommandé de la désactiver.\n\n## Solution\n\nTélécharger le correctif sur le site Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=32483\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-047.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-092",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-09-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès à la liste des adresses méls d'un serveur exchange 5.5"
+    },
+    {
+      "description": "Contournement des mécanismes de sécurité"
+    }
+  ],
+  "summary": "Un utilisateur distant mal intentionné peut contourner\nl'authentification demandée par Microsoft Exchange 5.5 afin de récupérer\nla liste complète des adresses méls des utilisateurs de ce serveur.\n",
+  "title": "Vulnérabilité dans Microsoft Exchange 5.5",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-04",
+      "url": null
+    }
+  ]
+}

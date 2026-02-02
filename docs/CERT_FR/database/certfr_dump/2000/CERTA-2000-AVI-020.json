@@ -1,0 +1,93 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Acrobat Fill In ;",
+      "product": {
+        "name": "Acrobat",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Adobe Acrobat Reader 4.05 pour Windows ;",
+      "product": {
+        "name": "Acrobat",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Adobe Acrobat Business Tools 4.05 ;",
+      "product": {
+        "name": "Acrobat",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Plugin Acrobat pour navigateur Web (Netscape, Internet Explorer).",
+      "product": {
+        "name": "Acrobat",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Adobe Acrobat 4.05 pour Windows ;",
+      "product": {
+        "name": "Acrobat",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe format PDF est un format de lecture de document très répandu. Les\nlogiciels de la famille Acrobat permettent de manipuler les documents\nPDF. Acrobat est vulnérable à un débordement de pile. Dès lors un\nutilisateur malveillant peut construire un document PDF qui, lors de sa\nvisualisation, stoppe l'application ou exécute du code.\n\n## Solution\n\nCorrectif pour Acrobat 4.05, Acrobat Reader 4.05, Acrobat Businnes Tools\n4.05 et Acrobat Fill In :\n\n    ftp://ftp.adobe.com/pub/adobe/win/4.x/ac405up2.exe\n\n  \n  \n\nEn cas de consultation d'un site internet proposant un fichier PDF,\nenregistrer le fichier concerné afin de l'ouvrir avec la version\ncorrigée d'Acrobat.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-020",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-07-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Tous les produits Acrobat sous Windows sont vulnérables lors de la\nlecture d'un fichier PDF malformé. Au mieux l'application s'arrête, au\npire du code arbitraire est exécuté sur la machine.\n",
+  "title": "Vulnérabilité sous Adobe Acrobat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Adobe",
+      "url": "http://www.adobe.com/misc/pdfsecurity.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bugtraq",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Security Focus",
+      "url": null
+    }
+  ]
+}

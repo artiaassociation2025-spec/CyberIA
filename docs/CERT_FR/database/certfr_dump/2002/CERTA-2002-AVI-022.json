@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Serveur FTP ProFTPD.</P>",
+  "content": "## Description\n\n-   Première vulnérabilité :\n\n    Une erreur dans la vérification de la concordance entre l'adresse IP\n    et le nom de la machine du serveur ProFTPD au niveau DNS permet à un\n    utilisateur distant mal intentionné de contourner la liste de\n    contrôle d'accès.\n\n-   Seconde vulnérabilité :\n\n    Un utilisteur distant, par le biais de certaines commandes envoyées\n    au serveur ProFTPD, peut augmenter la consommation des ressources\n    CPU et mémoire entraînant ainsi l'arrêt du serveur.\n\n## Contournement provisoire\n\n-   Première vulnérabilité :\n\n    Désactiver l'option UserReverseDNS du serveur.\n\n-   Seconde vulnérabilité :\n\n    Utiliser l'option DenyFilter \\_\\*.\\*/ du serveur.\n\n## Solution\n\n-   Mettre à jour ProFTPD avec la version 1.2.2rc1 :\n\n        ftp://ftp.proftpd.org/distrib.source\n\n-   Correctif pour Linux Mandrake :\n\n        http://www.linux-mandrake.com/en/security\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de securité Mandrake :",
+      "url": "http://www.linux-mandrake.com/en/security/2002/MDKSA-2002-005.php"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-022",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement des règles de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans le serveur ProFTPD permettent à un\nutilisateur mal intentionné soit de contourner les Listes de Contrôle\nd'Accès (ACL), soit de provoquer un déni de service sur le serveur.\n",
+  "title": "Vulnérabilités du serveur ProFTPD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de securité Linux Mandrake MDKSA-2002-005",
+      "url": null
+    }
+  ]
+}

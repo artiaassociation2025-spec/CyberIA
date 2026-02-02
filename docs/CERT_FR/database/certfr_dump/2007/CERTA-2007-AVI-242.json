@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>libpng 1.x.</P>",
+  "content": "## Description\n\nLa bibliothèque libpng permet de manipuler les images au format PNG\n(Portable Network Graphics).\n\nUne vulnérabilité présente dans la fonction png_handle_tRNS() dans le\nfichier pngrutil.c permet à un utilisateur distant malintentionné de\nprovoquer un déni de service. Cette vulnérabilité peut être exploitée au\nmoyen d'un fichier image au format png spécialement construit afin de\ncauser l'arrêt brutal de l'application ayant appelé la bibliothèque\nvulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-2445",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2445"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2007:0356 du 17 mai 2007 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0356.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-242",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-06-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité découverte dans la bibliothèque libpng permet à un\nutilisateur distant malintentionné de provoquer un déni de service à\ndistance.\n",
+  "title": "Vulnérabilité dans libpng",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA-200705-24 du 31 mai 2007",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200705-24.xml"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD 6.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 5.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 5.4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\npf (packet filter) est un système de filtrage utilisé initialement sous\nle système d'exploitation OpenBSD puis porté sur différents systèmes\nd'exploitation.  \nUne vulnérabilité dans la gestion du cache des paquets IP fragmentés\npermet à un utilisateur distant mal intentionné, via une séquence de\npaquets IP malicieuse, de créer un déni de service sur la plate-forme\nvulnérable en provoquant l'arrêt brutal de la machine.\n\n## Contournement provisoire\n\nNe pas utiliser les directives scrub fragment crop ou scrub fragment\ndrop-ovl mais plutôt scrub fragment reassemble.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-06:07.pf du 25 janvier 2006    :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-06:07.pf.asc"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-045",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-01-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le système de filtrage pf (packet filter) permet\nà un utilisateur mal intentionné de créer un déni de service sur la\nplate-forme vulnérable.\n",
+  "title": "Vulnérabilité du système de filtrage pf",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD FreeBSD-SA-06:07.pf du 25 janvier 2006",
+      "url": null
+    }
+  ]
+}

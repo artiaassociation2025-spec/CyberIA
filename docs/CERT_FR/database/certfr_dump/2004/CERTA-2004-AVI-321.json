@@ -1,0 +1,104 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BEA WebLogic Server 7.x ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA WebLogic Server 8.x.",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA WebLogic Express versions 6.x ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA WebLogic Express versions 7.x ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA WebLogic Server 6.x ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA WebLogic Express versions 8.x ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Un utilisateur mal intentionné peut récupérer des informations\n    confidentielles ou réaliser un déni de service sur l'arborescence\n    JNDI (Java Naming and Directory Interface) par le biais d'un objet\n    malicieux en utilisant une vulnérabilité liée à une mauvaise\n    protection sur cette arborescence.\n-   Certaines commandes reservées pour les administrateurs\n    weblogic.Admin peuvent être exécutées par un utilisateur mal\n    intentionné sans que celui-ci soit authentifié comme administrateur\n    sur le système. Cette vulnérabilité n'affecte pas les logiciels BEA\n    WebLogic Express 6.x et BEA WebLogic Server 6.x.\n-   Une vulnérabilité présente dans l'installation du logiciel peut être\n    utilisée par un utilisateur mal intentionné pour accèder aux\n    ressources du système. Les logiciels installés sur les plates-formes\n    Windows ne sont pas affectés par cette vulnérabilité.\n-   Des mots de passe écrits en clair dans des utilitaires en ligne de\n    commande peuvent être relus par un utilisateur local mal intentionné\n    pour élever ses privilèges.\n-   Une vulnérabilité sur les plates-formes linux permet à un\n    utilisateur local mal intentionné de relire le mot de passe de\n    l'administrateur au moment du redémarrage de la machine.\n-   Un utilisateur mal intentionné, via une requête HTTP malicieusement\n    construite, peut récupérer le numéro de version du serveur BEA\n    WebLogic.\n-   Une vulnérabilité dans BEA WebLogic peut entraîner l'arrêt de\n    l'application dans un mode dégradé et permettre à un utilisateur mal\n    intentionné de compromettre le système. Cette vulnérabilité\n    n'affecte pas les logiciels BEA WebLogic Express 6.x et BEA WebLogic\n    Server 6.x.\n-   Des restrictions insuffisantes sur les comptes utilisateur qui sont\n    désactivés peuvent être exploitées par un utilisateur mal\n    intentionné. Cette vulnérabilité n'est exploitable que si le serveur\n    d'authentification Active Directory LDAP est utilisé. Cette\n    vulnérabilité n'affecte pas les logiciels BEA WebLogic Express 6.x\n    et BEA WebLogic Server 6.x.\n-   Des informations de configuration et des données confidentielles\n    peuvent être envoyées en clair et être récupérées par un utilisateur\n    mal intentionné pour compromettre le système. Cette vulnérabilité\n    n'affecte pas les logiciels BEA WebLogic Express 6.x et BEA WebLogic\n    Server 6.x.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site internet de BEA :",
+      "url": "http://www.bea.com"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-321",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    },
+    {
+      "description": "Diffusion d'informations confidentielles"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans BEA WebLogic. Ces\nvulnérabilités permettent à un utilisateur mal intentionné de réaliser\nun déni de service, de contourner la politique de sécurité ou encore de\nrécupérer des informations confidentielles sur le système vulnérable.\n",
+  "title": "Multiples vulnérabilités dans BEA WebLogic",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité BEA",
+      "url": "http://dev2dev.bea.com/resourcelibrary/advisoriesnotifications/BE04-73.00.jsp"
+    }
+  ]
+}

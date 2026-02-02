@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions OpenVPN 2.0 à 2.0.5.</P>",
+  "content": "## Description\n\nOpenVPN est un système client-serveur. Un utilisateur malveillant ayant\ncompromis le serveur peut modifier la configuration d'un client au moyen\nde la commande setenv. Il peut aussi profiter de cette propriété pour\nlancer un code malveillant à l'insu du client et donc exécuter du code\narbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-1629",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1629"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SR:2006:009 du 28 avril 2006    :",
+      "url": "http://www.novell.com/linux/security/advisories/2006_04_28.html"
+    },
+    {
+      "title": "Référence au bulletin de sécurité Mandriva MDKSA-2006:069    du 10 avril 2006 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MKDSA-2006:069"
+    },
+    {
+      "title": "Site officiel du projet OpenVPN, mises à jour :",
+      "url": "http://openvpn.net"
+    },
+    {
+      "title": "Référence au bulletin de sécurité Debian DSA-1045 du 27    avril 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1045"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-139",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-04-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva.",
+      "revision_date": "2006-04-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian et SUSE.",
+      "revision_date": "2006-05-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité permet à un utilisateur malveillant de forcer la\nconfiguration d'un client OpenVPN et de lancer des commandes arbitraires\nà distance.\n",
+  "title": "Vulnérabilité d'OpenVPN",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité du site OpenVPN",
+      "url": null
+    }
+  ]
+}

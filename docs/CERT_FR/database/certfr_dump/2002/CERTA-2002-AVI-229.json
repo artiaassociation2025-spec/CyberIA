@@ -1,0 +1,47 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de  <TT>fetchmail</TT> antérieures à la version 6.1.0.</p>",
+  "content": "## Description\n\nfetchmail est un outil permettant la récupération de messages\nélectroniques sur un serveur distant et la transmission du message à un\nrouteur de méls.\n\nPlusieurs vulnérabilités dans le code de fetchmail gérant la gestion des\nen-têtes méls permettent à un utilisateur mal intentionné de réaliser un\ndeni de service ou d'exécuter du code arbitraire sur la machine cible,\navec les droits de l'utilisateur lançant fetchmail (éventuellement\nl'utilisateur root selon les configurations).\n\n## Solution\n\nInstaller le paquetage fetchmail version 6.1.0 ou supérieure.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité RedHat Linux RHSA-2002:215-09",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-215.html"
+    },
+    {
+      "title": "Avis de sécurité de Debian GNU/Linux DSA 171-1",
+      "url": "http://www.debian.org/security/2002/dsa-171"
+    },
+    {
+      "title": "Avis de sécurité de Sun 47784",
+      "url": "http://sunsolve.sun.com"
+    },
+    {
+      "title": "Avis de sécurité de Mandrake Linux MDKS-2002-063",
+      "url": "http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-063.php"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-229",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout des vulérabilités Mandrake et Sun.",
+      "revision_date": "2002-10-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de type débordement de mémoire dans le\npaquetage fetchmail permettent à un utilisateur mal intentionné de\nréaliser un déni de service ou d'exécuter du code arbitraire sur la\nmachine cible.\n",
+  "title": "Vulnérabilité de fetchmail",
+  "vendor_advisories": []
+}

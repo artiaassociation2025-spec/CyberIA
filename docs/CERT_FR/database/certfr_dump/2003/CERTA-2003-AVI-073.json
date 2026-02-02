@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Serveur HTTP Apache versions 2.x antérieures à la version  2.0.45.</P>",
+  "content": "## Description\n\nLe serveur HTTP Apache est vulnérable à une fuite de mémoire, qui peut\nêtre exploitée pour provoquer un déni de service.\n\nCette fuite provient de l'allocation de mémoire pour les caractères de\nretour de ligne. Le serveur alloue 80 octets de mémoire pour chacun de\nces caractères, sans limite supérieure.\n\nIl est alors possible d'envoyer de nombreuses requêtes contenant\nplusieurs caractères de retour de ligne, et provoquer ainsi la\nsaturation du serveur.\n\n## Solution\n\nLa version 2.0.45 corrige cette vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site du serveur HTTP Apache :",
+      "url": "http://httpd.apache.org"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-073",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-04-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le serveur HTTP Apache permet à un utilisateur\nmal intentionné de provoquer un déni de service.\n",
+  "title": "Vulnérabilité du serveur HTTP Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de iDEFENSE du 08 avril 2003",
+      "url": "http://www.idefense.com/advisory/04.08.03.txt"
+    }
+  ]
+}

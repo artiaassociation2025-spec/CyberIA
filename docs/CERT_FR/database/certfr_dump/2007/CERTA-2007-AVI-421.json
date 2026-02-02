@@ -1,0 +1,94 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM HTTP Server 6.1.x.",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM WebSphere Application Server 6.1.x ;",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent les produits IBM WebSphere :\n\n-   une erreur dans la gestion du jeu de caratères utilisé est présente\n    dans le module mod_status . Elle permet à un utilisateur malveillant\n    de réaliser, dans des circonstances particulières, de l'injection de\n    code indirecte ;\n-   une erreur de traitement par le module mod_cache des requêtes\n    malformées permet à un utilisateur malveillant de réaliser un déni\n    de service à distance, dans certaines circonstances ;\n-   un manque de vérification de la nature des processus fils du serveur\n    web permet à un utilisateur malveillant local de réaliser un déni de\n    service ;\n-   une erreur du module mod_proxy permet à un utilisateur\n    malintentionné de provoquer un arrêt inopiné (crash) du serveur, à\n    distance.\n\n## Solution\n\nLe correctif APAR PK52702 corrige ces problèmes. Se référer au bulletin\nde sécurité de l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3847",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3847"
+    },
+    {
+      "name": "CVE-2007-3304",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3304"
+    },
+    {
+      "name": "CVE-2007-1863",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1863"
+    },
+    {
+      "name": "CVE-2006-5752",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5752"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg1PK50467 du 04 septembre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1PK50467"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg1PK49295 du 16 août 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1PK49295"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg1PK52702 du 26 septembre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1PK52702"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg1PK50469 du 04 septembre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1PK50469"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg1PK49355 du 16 août 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1PK49355"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-421",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-09-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités des serveurs IBM HTTP et WebSphere permettent à\nun utilisateur malveillant de réaliser un déni de service, local ou à\ndistance, ou de réaliser de l'injection de code indirecte.\n",
+  "title": "Multiples vulnérabilités de WebSphere",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité d'IBM",
+      "url": null
+    }
+  ]
+}

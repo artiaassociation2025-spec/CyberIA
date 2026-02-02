@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Sudo versions 1.8.x et 1.9.x antérieures à 1.9.12p2",
+      "product": {
+        "name": "Sudo",
+        "vendor": {
+          "name": "Sudo",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solution\n\nLa vulnérabilité est corrigée dans la version sudo 1.9.12p2. Le\ndéploiement de ce correctif sera réalisé selon le rythme de cycle de\nmise à jour de sécurité de chaque distribution. Il est conseillé de se\nréférer aux bulletins de sécurité des éditeurs de distribution Unix,\nLinux et Mac.\n\nLa mise à jour d'un produit ou d'un logiciel est une opération délicate\nqui doit être menée avec prudence. Il est notamment recommander\nd'effectuer des tests autant que possible. Des dispositions doivent\négalement être prises pour garantir la continuité de service en cas de\ndifficultés lors de l'application des mises à jour comme des correctifs\nou des changements de version.\n\n## Contournement provisoire\n\nIl est possible d'empêcher l'utilisation d'un éditeur de texte spécifié\npar l'utilisateur lors de l'exécution de commande *sudoedit* en ajoutant\nles lignes suivantes dans le fichier *sudoers* :\n\n`Defaults!sudoedit env_delete+=\"SUDO_EDITOR VISUAL EDITOR\"`\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ndétails sur la correction (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-22809",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-22809"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0043",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-01-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans sudo. Elle permet à un attaquant\nde provoquer un contournement de la politique de sécurité et une\nélévation de privilèges.\n\nLa vulnérabilité est induite par un manquement dans la vérification de\nl'argument paramétrant l'éditeur texte de l'utilisateur.\n",
+  "title": "Vulnérabilité dans Sudo",
+  "vendor_advisories": [
+    {
+      "published_at": "2023-01-18",
+      "title": "Bulletin de sécurité Sudo",
+      "url": "https://www.sudo.ws/security/advisories/sudoedit_any/"
+    }
+  ]
+}

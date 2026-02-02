@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Solaris versions 6, 7 et 8 (plate-forme  sparc et x86) utilisant Sun Solstice Enterprise Agent.</p>",
+  "content": "## Description\n\nsnmpdx est un agent SNMP maître transférant les requêtes SNMP reçues sur\nle port 161/UDP vers des sous-agents SNMP (dont mibiisa).\n\nDeux vulnérabilités ont été découvertes dans ces agents :\n\n-   snmpdx présente une vulnérabilité de type chaîne de format ;\n-   mibiisa présente une vulnérabilité de type débordement de mémoire.\n\nCes vulnérabilités permettent à un utilisateur mal intentionné\nd'exécuter du code arbitraire à distance avec les privilèges de\nl'administrateur root.\n\n## Contournement provisoire\n\nNe démarrer le service SNMP que si celui-ci est nécessaire.\n\nPar défaut, ce dernier est démarré via le script /etc/rc3.d/S76snmpdx.\n\n## Solution\n\nSe référer au bulletin de sécurité de SUN (cf. section Documentation)\npour la disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Documentation \"Solstice Enterprise Agents\" :",
+      "url": "http://www.sun.com/software/entagents/docs.html"
+    },
+    {
+      "title": "Bulletin de Sécurité #00219 \"SEA SNMP\" disponible à    l'adresse suivante :",
+      "url": "http://sunsolve.sun.com/pub-cgi/secBulletin.pl/"
+    },
+    {
+      "title": "Bulletin de sécurité \"SEA SNMP -Buffer overflow and Format    String Vulnerabilities in Solaris\" d'Entercept :",
+      "url": "http://www.entercept.com/news/uspr/06-03-02.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-117",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut utiliser une vulnérabilité de\nl'agent maître SNMP (snmpdx) et du sous-agent SNMP (mibiisa) sous\nSolaris pour exécuter du code arbitraire à distance avec les privilèges\nde l'administrateur root.\n",
+  "title": "Vulnérabilité des agents SNMP sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #219 de Sun",
+      "url": null
+    }
+  ]
+}

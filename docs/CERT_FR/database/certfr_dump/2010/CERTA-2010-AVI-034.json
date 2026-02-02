@@ -1,0 +1,91 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Unified MeetingPlace versions 5.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified MeetingPlace versions 7.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified MeetingPlace versions 6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nQuatre vulnérabilités ont été découvertes dans Cisco Unified\nMeetingPlace :\n\n-   la première est due à une erreur dans la gestion des requêtes SQL et\n    peut être exploitée afin d'injecter du code SQL arbitraire ;\n-   la deuxième est due à une erreur dans la gestion des requêtes à\n    destination de l'interface interne du serveur web. L'exploitation de\n    cette vulnérabilité permet de contourner les mécanismes de sécurité\n    ;\n-   la troisième et la quatrième vulnérabilité sont dues à des erreurs\n    dans le mécanisme d'authentification MeetingTime et peuvent être\n    exploitées afin de récupérer des couples d'authentification et/ou\n    d'élever ses privilèges au niveau administrateur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0141",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0141"
+    },
+    {
+      "name": "CVE-2010-0142",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0142"
+    },
+    {
+      "name": "CVE-2010-0140",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0140"
+    },
+    {
+      "name": "CVE-2010-0139",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0139"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20100127-mp du 27 janvier 2010 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20100127-mp.shtml"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-034",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-01-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Cisco Unified\nMeetingPlace. L'exploitation de ces vulnérabilités permet de réaliser\ndifférentes actions malveillantes, allant jusqu'à l'élévation de\nprivilèges.\n",
+  "title": "Multiples vulnérabilités dans Cisco Unified MeetingPlace",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-20100127-mp du 27 janvier 2010",
+      "url": null
+    }
+  ]
+}

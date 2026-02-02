@@ -1,0 +1,168 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions de Mozilla Firefox antérieures à 2.0.0.5.",
+      "product": {
+        "name": "Firefox",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans Mozilla Firefox. Elles\nont fait l'objet de l'alerte CERTA-2007-ALE-012. Parmi celles-ci :\n\n-   le navigateur pourrait sous certaines conditions se fermer, ou\n    dysfonctionner, suite à des corruptions de mémoire possibles ;\n-   une situation de compétition existerait entre les deux fonctions\n    addEventListener et setTimeout. L'exploitation de celle-ci\n    permettrait d'injecter du code, de manière indirecte, dans le\n    contexte d'un autre site (attaque XSS) ;\n-   une situation de compétition permettrait de modifier le contenu des\n    cadres about:blank de la page. L'exploitation de cette vulnérabilité\n    modifie l'apparence d'un site, dans le cadre d'attaques par\n    filoutage par exemple ;\n-   il est possible d'appeler les fonctions de manipulation d'événements\n    pour des éléments qui sont indépendants du document, ce qui laisse\n    l'opportunité à des personnes malveillantes d'exécuter des commandes\n    arbitraires avec les droits chrome ;\n-   l'interprétation de certaines adresses réticulaires comprenant le\n    caractère %00 ne serait pas cohérente avec celle effectuée par\n    Microsoft. Cette vulnérabilité permet ainsi à une personne locale au\n    système d'exécuter des programmes avec des privilèges plus élevés,\n    comme ceux de l'administrateur ;\n-   il est possible d'appeler Firefox par le biais d'Internet Explorer.\n    Ce problème a été décrit en particulier dans le bulletin d'actualité\n    CERTA-2007-ACT-028 ;\n-   il est possible de contourner la politique du navigateur qui vérifie\n    la cohérence entre les sources des éléments (Same-Origin Policy), en\n    accédant à certaines données en cache par le biais de la commande\n    wyciwyg://. Une personne malveillante peut ainsi avoir accès à des\n    informations confidentielles ou corrompre les fichiers en cache ;\n-   il serait possible, par le biais du navigateur, de modifier\n    XPCNativeWrapper afin d'exécuter à la place un code arbitraire.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur Mozilla pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3734",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3734"
+    },
+    {
+      "name": "CVE-2007-3737",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3737"
+    },
+    {
+      "name": "CVE-2007-3656",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3656"
+    },
+    {
+      "name": "CVE-2007-3089",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3089"
+    },
+    {
+      "name": "CVE-2007-3285",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3285"
+    },
+    {
+      "name": "CVE-2007-3738",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3738"
+    },
+    {
+      "name": "CVE-2007-3670",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3670"
+    },
+    {
+      "name": "CVE-2007-3736",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3736"
+    },
+    {
+      "name": "CVE-2007-3735",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3735"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité Mozilla MFSA2007-22 du 17 juillet 2007 :",
+      "url": "http://www.mozilla.org/security/announce/2007/mfsa2007-22.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1338 du 23 juillet 2007 :",
+      "url": "http://www.debian.org/security/2007/dsa-1338"
+    },
+    {
+      "title": "Avis de sécurité Mozilla MFSA2007-19 du 17 juillet 2007 :",
+      "url": "http://www.mozilla.org/security/announce/2007/mfsa2007-19.html"
+    },
+    {
+      "title": "Avis de sécurité Mozilla MFSA2007-21 du 17 juillet 2007 :",
+      "url": "http://www.mozilla.org/security/announce/2007/mfsa2007-21.html"
+    },
+    {
+      "title": "Avis de sécurité Mozilla MFSA2007-24 du 17 juillet 2007 :",
+      "url": "http://www.mozilla.org/security/announce/2007/mfsa2007-24.html"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2007:0723 du 18 juillet    2007 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0723.html"
+    },
+    {
+      "title": "Avis de sécurité Mozilla MFSA2007-25 du 17 juillet 2007 :",
+      "url": "http://www.mozilla.org/security/announce/2007/mfsa2007-25.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-490-1 du 19 juillet 2007 :",
+      "url": "http://www.ubuntu.com/usn/usn-490-1"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2007:0724 du 18 juillet    2007 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0724.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:152 du 01 août    2007 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:152"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200708-09 du 14 août 2007    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200708-09.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1337 du 22 juillet 2007 :",
+      "url": "http://www.debian.org/security/2007/dsa-1337"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-503-1 du 24 août 2007 :",
+      "url": "http://www.ubuntu.com/usn/usn-503-1"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1339 du 23 juillet 2007 :",
+      "url": "http://www.debian.org/security/2007/dsa-1339"
+    },
+    {
+      "title": "Avis de sécurité Mozilla MFSA2007-18 du 17 juillet 2007 :",
+      "url": "http://www.mozilla.org/security/announce/2007/mfsa2007-18.html"
+    },
+    {
+      "title": "Avis de sécurité Mozilla MFSA2007-20 du 17 juillet 2007 :",
+      "url": "http://www.mozilla.org/security/announce/2007/mfsa2007-20.html"
+    },
+    {
+      "title": "Avis de sécurité Mozilla MFSA2007-23 du 17 juillet 2007 :",
+      "url": "http://www.mozilla.org/security/announce/2007/mfsa2007-23.html"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SR:2007:049 du 02 août 2007    :",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2007-08/msg00002.html"
+    },
+    {
+      "title": "Les avis de sécurité Mozilla :",
+      "url": "http://www.mozilla.org/projects/security/known-vulnerabilities.html#firefox2.0.0.5"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2007:0722 du 18 juillet    2007 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0722.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-318",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo, Debian, Mandriva, Red Hat, SuSE et Ubuntu.",
+      "revision_date": "2007-08-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans Mozilla Firefox. Elles\nont fait l'objet de l'alerte CERTA-2007-ALE-012. L'exploitation de\ncelles-ci peuvent conduire une personne malveillante à exécuter du code\narbitraire, à interrompre le service, ou à récupérer des informations\nconfidentielles sur le système vulnérable.\n",
+  "title": "Multiples vulnérabilités dans Mozilla Firefox",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mises à jour Mozilla du 18 juillet 2007",
+      "url": null
+    }
+  ]
+}

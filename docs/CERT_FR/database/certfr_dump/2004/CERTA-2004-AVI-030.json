@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Oracle9i Database Standard Edition v9.2.0.3.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Oracle9i Database Enterprise Edition v9.2.0.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne faille de type débordement de mémoire présente sur la variable\nchar_expr dans les deux fonctions de conversion NUMTOYMINTERVAL et\nNUMTODSINTERVAL permet à un utilisateur mal intentionné d'exécuter du\ncode arbitraire sur système.\n\nDeux autres débordements de mémoire sont présents sur les paramètres TZD\n(Time Zone Difference) de la fonction FROM_TZ et TIME_ZONE.\n\n## Solution\n\nMettre à jour Oracle9i Database avec la version Oracle9i Database\nRelease 2, version 9.2.0.3 ou la version 9.2.0.4 en appliquant le patch\n3 (cf site Metlalink Oracle, section documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "NGSSoftware : Oracle NUMTOYMINTERVAL Remote System Overflow    :",
+      "url": "http://www.nextgenss.com/advisories/ora_numtoyminterval.txt"
+    },
+    {
+      "title": "NGSSoftware : Oracle FROM_TZ Remote System Overrun :",
+      "url": "http://www.nextgenss.com/advisories/ora_from_tz.txt"
+    },
+    {
+      "title": "NGSSoftware : Oracle TIME_ZONE Remote System Overrun :",
+      "url": "http://www.nextgenss.com/advisories/ora_time_zone.txt"
+    },
+    {
+      "title": "NGSSoftware : Oracle NUMTODSINTERVAL Remote System Overflow    :",
+      "url": "http://www.nextgenss.com/advisories/ora_numtodsinterval.txt"
+    },
+    {
+      "title": "Site Metalink d'Oracle :",
+      "url": "http://metalink.oracle.com"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-030",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-02-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités découvertes dans Oracle9i Database permettent à\nun utilisateur local de réaliser une élévation de privilèges (les\nprivilèges System pour Windows ou Oracle pour Unix).\n",
+  "title": "Vulnérabilités sur Oracle9i Database",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité NGSSoftware",
+      "url": null
+    }
+  ]
+}

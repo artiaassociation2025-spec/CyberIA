@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Server 2003 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 3 et Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 pour les systèmes Itanium.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 1 et Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP 64-Bit Edition Service Pack 1 (Itanium) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe traitement des hyperliens est assuré par la bibliothèque hlink.dll ou\nwhlink.dll (en fonction de la version du système d'exploitation). Une\nvulnérabilité dans cette bibliothèque permet, par l'intermédiaire d'un\nlien habilement constitué (par exemple sur un site web ou dans un\nmessage électronique), l'exécution de code arbitraire à distance.\n\n## Contournement provisoire\n\nConfigurer les clients de messagerie pour lire les messages en texte\nbrut (plain text), et ne naviguer que sur des sites de confiance.\n\n## Solution\n\nAppliquer le correctif tel qu'indiqué dans le bulletin de sécurité\nMicrosoft MS05-015 du 08 février 2005 (voir section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2005-AVI-056",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-02-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le traitement des hyperliens permet l'exécution\nde code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans le traitement des hyperliens sous Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS05-015 du 08 février 2005",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms05-015.mspx"
+    }
+  ]
+}

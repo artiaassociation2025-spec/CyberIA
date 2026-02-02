@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Explorer version 6.0 pour Windows Server 2003.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer versions 5.01, 5.5, 6.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Première vulnérabilité (CVE CAN-2003-0344) : une vulnérabilité de\n    type débordement de mémoire est présente dans le code traitant la\n    propriété type de la balise object d'un document HTML ;\n-   seconde vulnérabilité (CVE CAN-2003-0309) : Internet Explorer ne\n    gère pas correctement des documents HTML contenant de nombreuses\n    requêtes de téléchargement de fichier.\n\n## Solution\n\nSe référer au bulletin de sécurité de Microsoft pour l'application des\ncorrectifs :\n\n    http://www.microsoft.com/technet/security/bulletin/MS03-020.asp\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-097",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-06-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans Microsoft Internet Explorer peuvent\nêtre exploitées au moyen d'un site web ou d'un message électronique au\nformat HTML habilement constitué et permettre à un utilisateur mal\nintentionné d'exécuter du code arbitraire sur la plate-forme vulnérable.\n",
+  "title": "Multiples vulnérabilités dans Microsoft Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS03-020 de Microsoft",
+      "url": null
+    }
+  ]
+}

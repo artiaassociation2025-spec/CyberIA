@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2000 Server, Advanced Server & Datacenter Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 Web Edition, Standard Edition, Enterprise Edition & Datacenter Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT 4.0 Server & Terminal Server Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe service WINS (Windows Internet Name Server) de Microsoft permet de\ntraduire le nom NetBIOS d'une machine Windows en adresse IP, et\ninversement. La fonction appelée WINS Replication qui permet le partage\nd'informations entre serveurs WINS présente une vulnérabilité dans le\ntraitement des paquets reçus. Cette vulnérabilité permet à un\nutilisateur d'exécuter du code arbitraire à distance au moyen d'un\npaquet malicieusement constitué.\n\n## Contournement provisoire\n\n-   Filtrer le port 42 (TCP & UDP) au niveau du pare-feu ;\n-   sécuriser les communications entre les serveurs WINS au moyen\n    d'IPSec ;\n-   dans la mesure du possible, ne pas utiliser le service WINS.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité d'IMMUNITY publié le 26 novembre 2004    :",
+      "url": "http://www.immunitysec.com/downloads/instantanea.pdf"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-384",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-12-02T00:00:00.000000"
+    },
+    {
+      "description": "Ajout du bulletin de sécurité Microsoft et de la section <SPAN class=\"textit\">Solution</SPAN>.",
+      "revision_date": "2004-12-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le service WINS de Microsoft permet à un\nutilisateur mal intentionné d'exécuter du code arbitraire sur le système\nvulnérable.\n",
+  "title": "Vulnérabilité du service <TT>WINS</TT> de Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité US-CERT VU#145134",
+      "url": "http://www.kb.cert.org/vuls/id/145134"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS04-045",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS04-045.mspx"
+    }
+  ]
+}

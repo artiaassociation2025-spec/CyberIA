@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Apache Tomcat 4.0.3 sous Windows NT4.0,  Windows 2000 et Linux.</p>",
+  "content": "## Description\n\nTomcat est un module d'Apache permettant l'utilisation des\n`servlet java` ou des pages `javaserver`.  \nTomcat ne filtre pas correctement les requêtes qu'il reçoit, un lien\npointant vers ce serveur peut donc contenir un script.  \nLe serveur recevant ce type de requête va engendrer une page d'erreur\nincluant le script contenu dans la requête. Ce script s'exécutera sur le\nposte client muni des droits de l'utilisateur ayant démarré le\nnavigateur.  \nUn autre type de requête permet de découvrir le répertoire\nd'installation du serveur.\n\n## Contournement provisoire\n\nLe servlet `invoker`, présent dans le répertoire `/servlet/`, permettant\nd'exécuter des servlets anonymes non définis dans le fichier `web.xml`,\ndoit être désactivé.  \n`web.xml` se trouve généralement dans :\n`/tomcat_install_dir/conf/web.xml`  \nUne mise à jour vers la version 4.1.3 beta corrige la vulnérabilité qui\npermet à un utilisateur mal intentionné de découvrir le répertoire\nd'installation du module Tomcat.  \nCette mise à jour est disponible sur le site :\n\n    http://jakarta.apache.org/tomcat/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de Westpoint :",
+      "url": "http://www.westpoint.ltd.uk/advisories/wp-02-0008.txt"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-148",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-07-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Divulgation du répertoire d'installation"
+    }
+  ],
+  "summary": "Des vulnérabilités du module `tomcat` d'Apache permettent la divulgation\nd'informations ou l'exécution de scripts sur un poste client.\n",
+  "title": "Multiples vulnérabilités dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de Westpoint",
+      "url": null
+    }
+  ]
+}

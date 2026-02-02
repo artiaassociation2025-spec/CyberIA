@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Drupal versions 5.x antérieures à 5.20 ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Drupal versions 6.x antérieures à 6.14.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Drupal :\n\n-   une injection de requêtes illégitimes par rebond permet d'ajouter\n    des identités OpenID à des comptes actifs (versions 6.x) ;\n-   une erreur dans l'implémentation du module OpenID permet à un\n    utilisateur d'accéder à un autre compte que le sien lorqu'ils ont le\n    même fournisseur OpenID 2.0 (versions 6.x) ;\n-   le dépôt de fichiers avec certaines extensions n'est pas\n    correctement traité, ce qui permet une exécution de code arbitraire\n    à distance. Toutefois, les fichiers sont stockés dans un répertoire\n    protégé par un fichier .htaccess qui empêche leur exécution (sauf si\n    le serveur Apache est configuré pour ignorer ces directives)\n    (versions 6.x) ;\n-   l'identifiant de session n'est pas réinitialisé lorsqu'un\n    utilisateur anonyme suit un lien lors d'une procédure de mot de\n    passe oublié. Cet identifiant de session peut, sous certaines\n    conditions, être rejoué (versions 5.x).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Drupal SA-CORE-2009-008 du 16    septembre 2009 :",
+      "url": "http://drupal.org/node/579482"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-393",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-09-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Accès non autorisé à un compte"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Drupal</span>\npermettent d'accéder de façon illégitime à des comptes et, dans certains\ncas, d'exécuter du code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Drupal SA-CORE-2009-008 du 16 septembre 2009",
+      "url": null
+    }
+  ]
+}

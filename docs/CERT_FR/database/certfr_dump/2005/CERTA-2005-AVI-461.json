@@ -1,0 +1,102 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système utilisant la boîte à outils graphique  <TT>GTK+2</TT> ou la bibliothèque <TT>Gdk-Pixbuf</TT> pour  afficher certaines images.</P>",
+  "content": "## Description\n\nGTK+2 est disponible pour tout système Unix utilisant X Window mais\négalement pour les systèmes Microsoft Windows ou le moteur de rendu\ngraphique DirectFB pour Linux.\n\nXPM est un format d'image utilisé en particulier pour les icônes. Une\nmauvaise gestion d'une allocation mémoire peut permettre l'exécution de\ncode arbitraire avec les privilèges de l'utilisateur courant. Des\nnavigateurs, clients de messagerie,...utilisant GTK+2 avec certains\nsystèmes d'exploitation (Firefox sous Linux, Sylpheed sous Unix comme\nWindows,...), l'exécution de code à distance est alors possible au moyen\nde messages, sites web,...malicieux.\n\n## Solution\n\nSe référer au bulletin de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2005-3186",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-3186"
+    },
+    {
+      "name": "CVE-2005-2976",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-2976"
+    },
+    {
+      "name": "CVE-2005-2975",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-2975"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:214 du 18 novembre    2005 :",
+      "url": "http://frontal2.mandriva.com/security/advisories?name=MDKSA-2005:214"
+    },
+    {
+      "title": "Mise à jour de sécurité Fedora Core 3 (gdk-pixbuf et gtk2)    du 15 novembre 2005 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/3/"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:810 du 15 novembre    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-810.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200511-14 du 16 novembre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200511-14.xml"
+    },
+    {
+      "title": "Mise à jour de sécurité Fedora Core 4 du (gdk-pixbuf et    gtk2) 15 novembre 2005 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/4/"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200511-14 du 16 novembre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200511-14.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-216-1 du 16 novembre 2005 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-216-1"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2005:065 du 16 novembre    2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_65_gtk2.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-913 du 01 décembre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-913"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-911 du 29 novembre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-911"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:811 du 15 novembre    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-811.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-461",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Mandriva et Gentoo.",
+      "revision_date": "2005-11-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-911.",
+      "revision_date": "2005-11-29T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-913.",
+      "revision_date": "2005-12-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Exécution de code arbitraire, éventuellement à distance"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut concevoir un fichier graphique au\nformat XPM volontairement mal formé qui provoquera, lors de sa\nvisualisation par une victime, l'exécution de code arbitraire ou un déni\nde service.\n",
+  "title": "Vulnérabilité des blibliothèques graphiques GTK+2 et Gdk-Pixbuf",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDefense du 15 novembre 2005",
+      "url": "http://www.idefense.com/application/poi/display?id=339"
+    }
+  ]
+}

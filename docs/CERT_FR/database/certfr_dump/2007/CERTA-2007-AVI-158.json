@@ -1,0 +1,93 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Kerberos 5.x</SPAN>.</P>  <P><BR>  <BR></P>  <P>Il n'est pas exclu que des produits tiers, utilisant  <SPAN class=\"textit\">Kerberos</SPAN>, soient affectés.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans Kerberos :\n\n-   une vulnérabilité du démon Telnet (telnetd) permet de se connecter\n    avec un compte utilisateur quelconque. Si la configuration du démon\n    exige l'authentification préalable, alors l'exploitation de cette\n    vulnérabilité n'est possible que pour les utilisateurs authentifiés.\n-   une vulnérabilité dans l'utilisation de la fonction\n    krb5_klog_syslog() permettrait à utilisateur malveillant authentifié\n    d'exécuter du code arbitraire ou de provoquer un déni de service à\n    distance. Les applications tierces utilisant cette fonction peuvent\n    être vulnérables.\n-   une vulnérabilité du démon d'administration (kadmind) permettrait à\n    un utilisateur authentifié d'exécuter du code arbitraire ou de\n    provoquer un déni de service à distance. La source de la\n    vulnérabilité est dans la bibliothèque de programmes GSS-API livrée\n    avec MIT krb5. Par conséquent, les applications tierces utilisant\n    cette bibliothèque peuvent être vulnérables.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0957",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0957"
+    },
+    {
+      "name": "CVE-2007-1216",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1216"
+    },
+    {
+      "name": "CVE-2007-0956",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0956"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Kerberos 2007-002 du 04 avril 2007 :",
+      "url": "http://web.mit.edu/kerberos/www/advisories/MITKRB5-SA-2007-002-syslogd.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:077 du 04 avril    2007 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:077"
+    },
+    {
+      "title": "Bulletin de sécurité HP #c01056923 du 15 mai 2007 :",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?lang=en&objectID=c01056923"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1276 du 03 avril 2007 :",
+      "url": "http://www.debian.org/security/2007/dsa-1276"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2007:0095 du 03 avril    2007 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0095.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-449-1 du 04 avril 2007 :",
+      "url": "http://www.ubuntu.com/usn/usn-449-1"
+    },
+    {
+      "title": "Bulletin de sécurité Kerberos 2007-003 du 04 avril 2007 :",
+      "url": "http://web.mit.edu/kerberos/www/advisories/MITKRB5-SA-2007-003.txt"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SA:2007:025 du 05 avril 2007    :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2007-Apr/0001.html"
+    },
+    {
+      "title": "Bulletin de sécurité Kerberos 2007-001 du 04 avril 2007 :",
+      "url": "http://web.mit.edu/kerberos/www/advisories/MITKRB5-SA-2007-001-telnetd.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200704-02 du 03 avril 2007    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200704-02.xml"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-158",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-04-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité HP, Gentoo, Debian, Mandriva, Red Hat, Ubuntu, SuSE.",
+      "revision_date": "2007-05-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de <span class=\"textit\">Kerberos</span>\npermettraient à des utilisateurs malveillants de provoquer un déni de\nservice à distance, de contourner la politique de sécurité ou d'exécuter\ndu code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités de Kerberos",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Kerberos du 03 avril 2007",
+      "url": null
+    }
+  ]
+}

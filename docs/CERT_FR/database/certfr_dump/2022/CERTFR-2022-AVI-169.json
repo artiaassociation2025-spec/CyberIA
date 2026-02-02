@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "STSAFE-J version 1.1.4 en configuration fermée",
+      "product": {
+        "name": "STSAFE-J",
+        "vendor": {
+          "name": "STMicroelectronics",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "J-SAFE3 version 1.2.5",
+      "product": {
+        "name": "J-SAFE3",
+        "vendor": {
+          "name": "STMicroelectronics",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solution\n\nL’éditeur indique avoir informé ses clients.\n\n🇬🇧 The vendor indicates that customers were informed.\n",
+  "cves": [
+    {
+      "name": "CVE-2021-43393",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-43393"
+    },
+    {
+      "name": "CVE-2021-43392",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-43392"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-169",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-02-22T00:00:00.000000"
+    },
+    {
+      "description": "correction vecteur AC:H",
+      "revision_date": "2022-03-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Les vulnérabilités CVE-2021-43392 et CVE-2021-43393 ont été découvertes\npar l’ANSSI dans la Java Card J-SAFE3 et la plateforme STSAFE-J exposant\nune API Java Card 3.0.4, produits édités par STMicroelectronics.\n\nCes vulnérabilités sont présentes dans l’implémentation de l’algorithme\nde signature ECDSA dans les produits STSAFE-J version 1.1.4 en\nconfiguration fermée et J-SAFE3 version 1.2.5. Elles permettent à un\nattaquant d’obtenir des informations sur des secrets cryptographiques et\nd’exploiter la vérification de signature dans des conditions\nparticulières.\n\nCes vulnérabilités sont exploitables pour STSAFE-J version 1.1.4 en\nconfiguration fermée et J-SIGN lorsque la vérification de signature est\nactivée, mais pas pour JSAFE-3 EPASS BAS ni les produits EAC. Elles\npourraient potentiellement être exploitées dans d’autres produits basés\nsur la plateforme Java Card J-SAFE-3.\n\n### <span lang=\"en-GB\"><strong>🇬🇧 ENGLISH VERSION</strong></span> [english-version]\n\n<span lang=\"en-US\">Two vulnerabilities have been discovered in\nSTMicroelectronics products concerning the ECDSA signature algorithm on\nthe Java Card J-SAFE3 and STSAFE-J platforms exposing a 3.0.4 Java Card\nAPI. These vulnerabilities allow attackers to obtain information on\ncryptographic secrets and abuse the signature verification under certain\ncircumstances. These vulnerabilities are exploitable for STSAFE-J\nversion 1.1.4 in closed configuration and J-SIGN (when signature\nverification is activated) but not for J-SAFE3 EPASS BAC and EAC\nproducts. They might as well impact other products based on the J-SAFE-3\nJava Card platform.</span>\n",
+  "title": "Multiples vulnérabilités dans les produits STMicroelectronics",
+  "vendor_advisories": []
+}

@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apple Mac OS X versions antérieures à la version 10.4.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "<p>Apple Mac OS X versions antérieures à  la version 10.4.1.</p>",
+  "content": "## Description\n\nCinq vulnérabilités sont présentes sur le système d'exploitation Mac OS\nX :\n\n-   La première vulnérabilité est exploitable sur un système où\n    l'utilisation du Bluetooth est activée. Cette vulnérabilité permet à\n    un utilisateur mal intentionné de réaliser une traversée\n    d'arborecence sur le système vulnérable ;\n-   une vulnérabilité liée au navigateur Safari peut être exploitée via\n    un site Internet malicieusement construit pour télécharger et\n    installer un programme malicieux sur le système ;\n-   une vulnérabilité dans deux appels système peut être exploitée par\n    un utilisateur mal intentionné pour obtenir le nom d'un fichier dans\n    un répertoire caché ;\n-   une vulnérabilité dans la fonction nfs_mount peut être utilisée pour\n    réaliser un déni de service ;\n-   une dernière vulnérabilité peut être exploitée par un utilisateur\n    ayant un accès physique à la machine pour démarrer des applications\n    sur une machine ayant l'économiseur d'écran verrouillé.\n\n## Solution\n\nSe référer au bulletin de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2005-1474",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-1474"
+    },
+    {
+      "name": "CVE-2005-1472",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-1472"
+    },
+    {
+      "name": "CVE-2005-1333",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-1333"
+    },
+    {
+      "name": "CVE-2005-0974",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0974"
+    },
+    {
+      "name": "CVE-2005-1473",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-1473"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site internet d'apple",
+      "url": "http://www.apple.com"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-177",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-05-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "De multiples vulnérabilités sont présentes sur le système d'exploitation\nMac OS X. Ces vulnérabilités peuvent être exploitées par un utilisateur\nmal intentionné pour réaliser un déni de service ou contourner la\nsécurité sur le système vulnérable.\n",
+  "title": "Multiples vulnérabilités dans Mac OS X",
+  "vendor_advisories": [
+    {
+      "published_at": "2005-05-26",
+      "title": "Bulletin de sécurité Apple",
+      "url": "http://docs.info.apple.com/article.html?artnum=301630"
+    }
+  ]
+}

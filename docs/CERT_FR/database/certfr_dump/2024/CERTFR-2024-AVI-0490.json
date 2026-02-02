@@ -1,0 +1,87 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GitLab Community Edition (CE) and Enterprise Edition (EE) versions antérieures à 16.10.7",
+      "product": {
+        "name": "GitLab Community Edition (CE) et Gitlab Enterprise Edition (EE)",
+        "vendor": {
+          "name": "GitLab",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GitLab Community Edition (CE) and Enterprise Edition (EE) versions 17.x antérieures à 17.0.2",
+      "product": {
+        "name": "GitLab Community Edition (CE) et Gitlab Enterprise Edition (EE)",
+        "vendor": {
+          "name": "GitLab",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "iGtLab Community Edition (CE) and Enterprise Edition (EE) versions 16.11.x antérieures à 16.11.4",
+      "product": {
+        "name": "GitLab Community Edition (CE) et Gitlab Enterprise Edition (EE)",
+        "vendor": {
+          "name": "GitLab",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2024-4201",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-4201"
+    },
+    {
+      "name": "CVE-2024-1963",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-1963"
+    },
+    {
+      "name": "CVE-2024-1736",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-1736"
+    },
+    {
+      "name": "CVE-2024-5469",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-5469"
+    },
+    {
+      "name": "CVE-2024-1495",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-1495"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0490",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-06-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans GitLab. Elles permettent à un attaquant de provoquer un déni de service à distance, une atteinte à la confidentialité des données et une injection de code indirecte à distance (XSS).",
+  "title": "Multiples vulnérabilités dans GitLab",
+  "vendor_advisories": [
+    {
+      "published_at": "2024-06-12",
+      "title": "Bulletin de sécurité GitLab",
+      "url": "https://about.gitlab.com/releases/2024/06/12/patch-release-gitlab-17-0-2-released/"
+    }
+  ]
+}

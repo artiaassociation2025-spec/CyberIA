@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les systèmes affectés sont les routeurs CISCO possédant  <SPAN class=\"textit\">IOS Firewall Feature Set</SPAN>, aussi  appelé <SPAN class=\"textit\">CISCO Secure Integrated  Software</SPAN>, ou encore <SPAN class=\"textit\">Context Based  Access Control</SPAN> (<TT>CBAC</TT>) inclus dans IOS depuis sa  version 11.2p.</P>  <P>Pour être affectés, le fichier de configuration du routeur  doit contenir les lignes servant à appliquer les règles <TT>ip  inspect</TT>.</P>  <P>(Pour déterminer si un routeur supporte CBAC, le nom de son  fichier image contient un « o », comme dans <TT>c2600-io3-m</TT>  par exemple).</P>",
+  "content": "## Description\n\nCBAC est un complément d'IOS permettant d'établir des ACL (Access\nControl Lists ou règles de filtrage) dynamiques sur un routeur.\n\nLorsque une connexion est établie vers l'extérieur d'un réseau filtré\npar le routeur, une ACL dynamique est mise en place, et autorise le\ntrafic entrant correspondant à cette session.\n\nUne vulnérabilité dans la gestion de ces ACL dynamiques permet de\ncontourner le filtrage. Lors du filtrage du trafic, seuls les adresses\nsources et destination et le numéros de ports sont vérifiés, et pas le\nprotocole utilisé. Il est donc possible d'envoyer un paquet de type\ndifférent dans le réseau filtré par le routeur.\n\n## Solution\n\nAppliquer les correctifs comme indiqué dans le bulletin de sécurité\nCISCO (voir la section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de CISCO :",
+      "url": "http://www.cisco.com/warp/public/707/IOS-cbac-dynacl/pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-154",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-11-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement des règles de filtrage des routeurs"
+    }
+  ],
+  "summary": "Il est possible d'envoyer depuis l'extérieur d'un réseau filtré par CBAC\ndes données non autorisées.\n",
+  "title": "Vulnérabilité de CBAC sous CISCO IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO : « A vulnerability in IOS Firewall Feature Set »",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apple iOS versions 3.1 à 4.3.3 pour iPod touch de 3ème génération et postérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple iOS versions 3.0 à 4.3.3 pour iPhone 3GS et iPhone 4 modèle GSM ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple iOS versions 3.2 à 4.3.3 pour iPad.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple iOS versions 4.2.5 à 4.2.8 pour iPhone 4 modèle CDMA ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans Apple iOS :\n\n-   deux vulnérabilités dans la gestion de certaines polices de\n    caractères FreeType permettent à une personne distante\n    malintentionnée d'exécuter du code arbitraire via un fichier PDF\n    spécialement conçu (CVE-2010-3855 et CVE-2011-0226) ;\n-   une erreur de conversion dans l'utilisation de primitives de gestion\n    de queue d'IOMobileFrameBuffer permet à une personne malintentionnée\n    d'élever ses privilèges sur le système vulnérable (CVE-2011-0227).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0227",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0227"
+    },
+    {
+      "name": "CVE-2011-0226",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0226"
+    },
+    {
+      "name": "CVE-2010-3855",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3855"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Apple HT4802 du 15 juillet 2011 :",
+      "url": "http://support.apple.com/kb/HT4802"
+    },
+    {
+      "title": "Bulletin de sécurité Apple HT4803 du 15 juillet 2011 :",
+      "url": "http://support.apple.com/kb/HT4803"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-395",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-07-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Apple iOS permettent à une personne\ndistante malintentionnée d'exécuter du code arbitraire et d'élever ses\nprivilèges sur le système.\n",
+  "title": "Vulnérabilités dans Apple iOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Apple HT4802 et HT4803 du 15 juillet 2011",
+      "url": null
+    }
+  ]
+}

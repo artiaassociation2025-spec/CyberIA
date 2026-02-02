@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les versions de Sudo fournies par les éditeurs de distribution Linux sans le dernier correctif de sécurité",
+      "product": {
+        "name": "Sudo",
+        "vendor": {
+          "name": "Sudo",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sudo versions antérieures à 1.9.5p2",
+      "product": {
+        "name": "Sudo",
+        "vendor": {
+          "name": "Sudo",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solution\n\n**Il est recommandé d'utiliser la mise à jour de sécurité fournie par\nles éditeurs des distributions Linux.**\n",
+  "cves": [
+    {
+      "name": "CVE-2021-3156",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-3156"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2021-AVI-063",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-01-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Sudo. Elle permet à un attaquant\nde provoquer une élévation de privilèges. Les différents éditeurs de\ndistributions Linux ont déjà publié des correctifs.\n",
+  "title": "Vulnérabilité dans Sudo",
+  "vendor_advisories": [
+    {
+      "published_at": "2021-01-26",
+      "title": "Bulletin de sécurité Sudo",
+      "url": "https://www.sudo.ws/alerts/unescape_overflow.html"
+    }
+  ]
+}

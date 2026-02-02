@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft .NET Framework version 2.0 pour les systèmes  d'exploitation suivants :</P>  <UL>    <LI>Microsoft Windows 2000 Service Pack 4 ;</LI>    <LI>Microsoft Windows XP (toutes les versions) ;</LI>    <LI>Microsoft Windows Server 2003 (toutes les versions).</LI>  </UL>",
+  "content": "## Description\n\nUne vulnérabilité de type injection de code indirecte (cross-site\nscripting) a été identifiée dans le composant .NET version 2.0 de\nMicrosoft Windows. Ce composant a pour objectif d'aider à concevoir des\napplications Windows, en gérant certains aspects au cours de son\nexécution (allocation de la mémoire, gestion des droits, etc).\n\nCette vulnérabilité permettrait à une personne malveillante de\ncontourner la politique de sécurité et d'accéder à des informations sans\nautorisation préalable. Il lui faut pour cela inciter l'utilisateur à\nvisiter une page Web spécialement construite : quand le script sera\nexécuté par le navigateur de ce dernier, de l'information pourrait lui\nêtre dérobée.\n\nCette vulnérabilité de fonctionne que si le paramètre de contrôle\nAutoPostBack de .NET Framework 2.0 a pour valeur True. Ce n'est pas le\ncas par défaut.\n\n## Solution\n\nSe référer au bulletin de sécurité MS06-056 de l'éditeur Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3436",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3436"
+    }
+  ],
+  "links": [
+    {
+      "title": "Article 328923 de la Base de connaissances Microsoft    concernant les paramètres de contrôle de .NET Framework 2.0 :",
+      "url": "http://support.microsoft.com/?id=328923"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-436",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans Microsoft ASP.NET Framework",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-056 du 10 octobre 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-056.mspx"
+    }
+  ]
+}

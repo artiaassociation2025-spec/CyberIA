@@ -1,0 +1,102 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows NT Server 4.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT 4.0 Terminal Server Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT Workstation 4.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités dans le service Microsoft RPCSS permettent à un\nutilisateur distant mal intentionné d'exécuter du code arbitraire à\ndistance avec les privilèges du compte Local System. Ces vulnérabilités\naffectent l'interface DCOM (Distributed Component Object Model) qui\ns'appuie sur l'infrastructure RPC.\n\nUne troisième vulnérabilité affectant Microsoft Windows 2000 permet, via\nl'envoi de paquets judicieusement composés en direction du service\nRPCSS, de réaliser un déni de service sur la machine cible.\n\nDes programmes permettant d'exploiter cette vulnérabilité sont largement\ndiffusés sur l'Internet.\n\n## Contournement provisoire\n\n-   Filtrer les ports RPC (135 TCP/UDP, 137 UDP, 138 UDP, 139 TCP, 445\n    TCP/UDP, 593 TCP) avec un élément de filtrage en amont ;\n-   COM Internet Services est un élément permettant de faire passer des\n    messages RPC par le protocole HTTP. Il est recommandé de désactiver\n    cet élément ou de filter les ports 80 et 443 TCP ;\n-   désactiver l'interface DCOM.\n\n## Solution\n\nAppliquer le correctif fourni par Microsoft suivant la version du\nsystème d'exploitation (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité MS03-039 de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms03-039.asp"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-149",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2003-09-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout d'informations.",
+      "revision_date": "2003-09-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Trois vulnérabilités ont été découvertes dans le service RPCSS sous\nWindows.\n",
+  "title": "Vulnérabilités dans le service RPCSS sous Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS03-039",
+      "url": null
+    }
+  ]
+}

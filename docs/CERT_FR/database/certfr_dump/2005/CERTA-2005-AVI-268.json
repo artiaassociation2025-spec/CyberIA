@@ -1,0 +1,89 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Shorewall version 2.4.1 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Shorewall version 2.2.5 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Shorewall version 2.0.17 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nShorewall est un outil de configuration haut niveau du firewall\nGNU/Linux Netfilter. Une vulnérabilité dans la façon dont Shorewall gère\nl'authentifation par adresse MAC (Medium Access Controle) permet à un\nutilisateur mal intentionné du réseau local de contourner la politique\nde sécurité du système.\n\n## Solution\n\nMettre à jour avec les scripts corrigés de Shorewall disponibles aux\nadresses suivantes :\n\n-   Shorewall version 2.4.1 et antérieures :\n\n        http://shorewall.net/pub/shorewall/2.4/shorewall-2.4.1/errata/firewall\n\n-   Shorewall version 2.2.5 et antérieures :\n\n        http://shorewall.net/pub/shorewall/2.2/shorewall-2.2.5/errata/firewall\n\n-   Shorewall version 2.0.17 et antérieures :\n\n        http://shorewall.net/pub/shorewall/errata/2.0.17/firewall\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de Shorewall :",
+      "url": "http://shorewall.net"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:123 du 20 juillet    2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:123"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200507-20 du 22 juillet    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200507-20.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-849 du 08 octobre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-849"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-268",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-07-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva MDKSA-2005:123 et ajout de la référence CVE CAN-2005-2317.",
+      "revision_date": "2005-07-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo GLSA 200507-20.",
+      "revision_date": "2005-07-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-849.",
+      "revision_date": "2005-10-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Shorewall permet à un utilisateur distant de\ncontourner la politique de sécurité du système.\n",
+  "title": "Vulnérabilité de Shorewall",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Shorewall du 17 juillet 2005",
+      "url": "http://shorewall.net/News.htm#20050717"
+    }
+  ]
+}

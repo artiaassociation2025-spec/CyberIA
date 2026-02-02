@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows 2000.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT 4.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n## 4.1 Accès aux privilèges l'administrateur en local\n\nChaque processus possédant différents privilèges, un utilisateur mal\nintentionné peut leurrer, en modifiant ou en créant un processus, un\nprocessus privilégié afin de récupérer des droits d'accès supérieurs.\n\n## 4.2 Déni de service\n\nUn utilisateur mal intentionné peut, par le biais de nombreuses requêtes\nLPC malformées, entraîner un déni de service de la machine locale par\népuisement de la mémoire disponible.\n\n## 4.3 Remarque\n\nLes LPC sont uniquement utilisées en local. De ce fait aucune\nexploitation de ces vulnérabilités ne peut être effectuée à distance.\n\n## Solution\n\nCorrectif pour Windows NT 4.0 Workstation, Server et Server Entreprise\nEdition (VERSION US) :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=24650\n\nNota : Les correctifs pour Windows NT4 Server et Terminal Server Edition\nne sont pas disponibles.  \n  \n\nCorrectif pour Windows 2000 (VERSION US) :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=24649\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-070.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-055",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-10-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès aux privilèges de l'administrateur en local"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Dans les systèmes d'exploitation Microsoft, les moyens de communication\nentre les processus élémentaires et les programmes d'une même machine\nsont fournis par les LPC (Local Procedure Call).\n\nPlusieurs vulnérabilités ont été découvertes dans ces mécanismes :\n\n-   Deux vulnérabilités ouvrent un accès aux privilèges administrateur ;\n-   Deux vulnérabilités ouvrent un déni de service.\n",
+  "title": "Vulnérabilités des LPC sous Windows 2000 et NT",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

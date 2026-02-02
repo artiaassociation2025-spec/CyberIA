@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Linux-PAM 1.x.</p>",
+  "content": "## Description\n\nLa gestion par le module PAM (pluggable authentication module) des\nvariables et des fichiers d'environnement présente des vulnérabilités.\nElles permettent à un utilisateur malveillant de provoquer un déni de\nservice par épuisement de ressources ou d'élever ses privilèges à la\nsuite d'un débordement mémoire et d'exécuter du code avec les droits\nd'administration.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-3148",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3148"
+    },
+    {
+      "name": "CVE-2011-3149",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3149"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-1237-1 du 24 octobre 2011 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-1237-1"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-592",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-10-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Des vulnérabilités dans Linux-PAM permettent à un utilisateur\nmalveillant de provoquer un déni de service ou d'élever ses privilèges\net d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilités dans Linux-PAM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA 2326 du 24 octobre 2011",
+      "url": "http://www.debian.org/security/2011/dsa-2326"
+    }
+  ]
+}

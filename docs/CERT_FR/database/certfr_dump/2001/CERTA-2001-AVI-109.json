@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>HP-UX 11.00 et 11.11.</P>",
+  "content": "## Description\n\nLe service rpcbind (portmap) est utilisé pour faire la correspondance\nentre les numéros de port (tcp et udp) et les numéros rpc. Une requête\nhabilement construite peut provoquer l'arrêt brutal du service rpcbind.\n\n## Contournement provisoire\n\nFiltrer les port 111/tcp et 111/udp sur les routeurs ou pare-feux\npériphériques afin d'empêcher la réalisation du déni de service depuis\nun réseau externe.\n\n## Solution\n\nAppliquer le correctif mis à disposition par HP sur la page :\n\n    http://itrc.hp.com\n\nPour la version 11.00, le correctif est PHNE_24034. Pour la version\n11.11, le correctif est PHNE_24035.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-109",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une requête habilement construite peut provoquer l'arrêt du service\nrpcbind.\n",
+  "title": "Vulnérabilité dans <TT>rpcbind</TT> sous HP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis HPSBUX0110-169",
+      "url": null
+    }
+  ]
+}

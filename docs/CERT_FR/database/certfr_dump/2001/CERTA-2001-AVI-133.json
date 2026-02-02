@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>SunOS 5.8, 5.7, 5.6, 5.5.1, 5.5 sur plate-forme Sparc et  x86.</P>",
+  "content": "## Description\n\nUfsrestore est un utilitaire de restitution de sauvegarde à partir d'un\nfichier créé par la commande ufsdump.\n\nUn utilisateur mal intentionné peut, par le biais d'un débordement de\nmémoire de la commande ufsrestore, obtenir les privilèges de\nl'administrateur système root.\n\nCette vulnérabilité n'est exploitable qu'en local avec un utilisateur\nauthentifié sur la machine.\n\n## Solution\n\nTélecharger le correctif Sun selon la version du système :\n\n-   SunOS 5.8 : 109091-04\n-   SunOS 5.8x86 : 109092-04\n-   SunOS 5.7 : 106793-07\n-   SunOS 5.7x86 : 106794-07\n-   SunOS 5.6 : 105722-06\n-   SunOS 5.6x86 : 105723-06\n-   SunOS 5.5.1 : 103640-35\n-   SunOS 5.5.1x86 : 103641-35\n-   SunOS 5.5 : 10261-08\n-   SunOS 5.5x86 : 103262-08\n\nCes correctifs sont disponibles à l'adresse :\n\n    http://sunsolve.sun.com/pub/securitypatches\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-133",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Augmentation des privilèges en local"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut obtenir les privilèges de\nl'administrateur root en local grâce à l'utilisation de la commande\nufsrestore.\n",
+  "title": "Vulnérabilité de ufsrestore sous Solaris.",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sun",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doctype=coll&doc=secbull/210&type=0&nav=sec.sba"
+    }
+  ]
+}

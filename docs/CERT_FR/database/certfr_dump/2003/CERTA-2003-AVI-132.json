@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Serveurs wu-ftpd versions 2.6.2 et antérieures.</P>",
+  "content": "## Description\n\nLe serveur wu-ftpd est un serveur ftp développé par l'université de\nWashington pour les plates-formes Unix.  \n\nUne vulnérabilité dans la gestion de la variable MAXPATHLEN permet\nd'exploiter un débordement de mémoire sur un seul octet\n(\"off-by-one\").  \n\nPour exploiter cette vulnérabilité, l'utilisateur doit avoir un accès au\nserveur ftp, soit par un compte anonymous, soit par un compte\nutilisateur.  \n\nCertains noyaux Linux (versions 2.2.x et certaines anciennes versions\n2.4.x) ne permettent pas d'exploiter cette vulnérabilité. En revanche,\nun serveur wu-ftpd compilé avec un noyau 2.0.x ou 2.4.x récent (2.4.19\npar exemple) est vulnérable.\n\n## Solution\n\nAppliquer le correctif de votre éditeur.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité SA:2003:032 du SuSE :",
+      "url": "http://www.suse.de/de/security/2003_032_wuftpd.html"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-132",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-08-01T00:00:00.000000"
+    },
+    {
+      "description": "première révision : correction de l'URL de l'avis ISEC.",
+      "revision_date": "2003-08-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de sécurité de RedHat et Debian.",
+      "revision_date": "2003-08-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Hewlett-Packard.",
+      "revision_date": "2003-08-29T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité HPSBUX0309-277 de Hewlett-Packard pour HP-UX.",
+      "revision_date": "2003-09-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de type débordement de mémoire permet à un utilisateur\nmal intentionné d'exécuter du code avec les droits du super-utilisateur\n<span class=\"textit\">root</span>.\n",
+  "title": "Vulnérabilité du serveur wu-ftpd",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis SA:2003:032 de SuSE",
+      "url": null
+    }
+  ]
+}
