@@ -1,0 +1,177 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-02-09T00:00:00Z",
+
+  "sources": [
+    { "id": "mitre", "name": "MITRE ATT&CK", "type": "attack_framework", "trust": 0.9 },
+    { "id": "cve", "name": "CVE Program", "type": "identifier", "trust": 0.9 },
+    { "id": "nvd", "name": "NVD (NIST)", "type": "vulnerability_db", "trust": 0.95 },
+    { "id": "cisa_kev", "name": "CISA KEV", "type": "exploitation_catalog", "trust": 0.95 },
+    { "id": "cert_eu", "name": "CERT-EU", "type": "advisory", "trust": 0.85 },
+    { "id": "enisa", "name": "ENISA", "type": "eu_agency", "trust": 0.9 },
+    { "id": "nis2", "name": "NIS2 Directive", "type": "regulation", "trust": 0.95 },
+    { "id": "anssi", "name": "ANSSI / CERT-FR", "type": "national_cert", "trust": 0.9 },
+    { "id": "bsi", "name": "BSI (DE)", "type": "national_cert", "trust": 0.9 },
+    { "id": "uk_ncsc", "name": "UK NCSC", "type": "national_cert", "trust": 0.9 },
+    { "id": "vendor", "name": "Vendor PSIRT", "type": "vendor", "trust": 0.85 },
+    { "id": "exploitdb", "name": "Exploit-DB", "type": "exploit", "trust": 0.7 },
+    { "id": "misp", "name": "MISP", "type": "threat_intel", "trust": 0.75 }
+  ],
+
+  "entities": {
+
+    "tactics": [
+      {
+        "id": "tactic--TA0002",
+        "name": "Execution",
+        "description": "",
+        "source": "mitre"
+      }
+    ],
+
+    "techniques": [
+      {
+        "id": "technique--T1059",
+        "name": "Command and Scripting Interpreter",
+        "tactic_refs": ["tactic--TA0002"],
+        "platforms": ["Windows", "Linux", "macOS"],
+        "detection": "",
+        "source": "mitre"
+      }
+    ],
+
+    "groups": [
+      {
+        "id": "group--G0000",
+        "name": "APT-Example",
+        "aliases": [],
+        "description": "",
+        "source": "mitre"
+      }
+    ],
+
+    "software": [
+      {
+        "id": "software--S0000",
+        "name": "ExampleTool",
+        "type": "malware",
+        "platforms": ["Windows"],
+        "source": "mitre"
+      }
+    ],
+
+    "products": [
+      {
+        "id": "product--vendor-product",
+        "vendor": "VendorName",
+        "name": "ProductName",
+        "cpe": "cpe:2.3:a:vendor:product:*:*:*:*:*:*:*:*"
+      }
+    ],
+
+    "cves": [
+      {
+        "id": "vuln--CVE-2024-12345",
+        "cve": "CVE-2024-12345",
+
+        "description": "SQL injection vulnerability allowing remote code execution.",
+
+        "cwe": ["CWE-89"],
+
+        "cvss": {
+          "version": "3.1",
+          "score": 9.8,
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "severity": "critical"
+        },
+
+        "affected_products": [
+          {
+            "product_ref": "product--vendor-product",
+            "versions": ["< 2.4.1"]
+          }
+        ],
+
+        "exploitation": {
+          "known_exploited": true,
+          "in_cisa_kev": true,
+          "ransomware": false,
+          "public_exploit": true
+        },
+
+        "dates": {
+          "published": "2024-03-10",
+          "last_modified": "2024-03-20",
+          "kev_added": "2024-03-25",
+          "patch_due": "2024-04-15"
+        },
+
+        "references": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2024-12345",
+          "https://www.cisa.gov/known-exploited-vulnerabilities"
+        ],
+
+        "sources": ["cve", "nvd", "cisa_kev"]
+      }
+    ],
+
+    "advisories": [
+      {
+        "id": "advisory--CERT-EU-2024-001",
+        "publisher": "CERT-EU",
+        "title": "Active exploitation of CVE-2024-12345",
+        "related_cves": ["CVE-2024-12345"],
+        "related_techniques": ["technique--T1059"],
+        "date": "2024-03-28",
+        "source": "cert_eu"
+      }
+    ],
+
+    "enisa_threats": [
+      {
+        "id": "enisa-threat--ETL-2024-01",
+        "name": "Web-based attacks",
+        "trend": "increasing",
+        "related_cves": ["CVE-2024-12345"],
+        "related_techniques": ["technique--T1059"],
+        "source": "enisa"
+      }
+    ],
+
+    "nis2_sectors": [
+      {
+        "id": "sector--digital-infra",
+        "name": "Digital Infrastructure",
+        "category": "essential",
+        "source": "nis2"
+      }
+    ],
+
+    "controls": [
+      {
+        "id": "control--NIS2-ART21",
+        "framework": "NIS2",
+        "name": "Risk Management Measures"
+      }
+    ],
+
+    "indicators": [
+      {
+        "id": "ioc--example-ip",
+        "type": "ip",
+        "value": "203.0.113.10",
+        "confidence": 0.7,
+        "source": "misp"
+      }
+    ]
+  },
+
+  "relationships": [
+    { "type": "uses", "from": "group--G0000", "to": "technique--T1059" },
+    { "type": "exploits", "from": "technique--T1059", "to": "vuln--CVE-2024-12345" },
+    { "type": "affects", "from": "vuln--CVE-2024-12345", "to": "product--vendor-product" },
+    { "type": "described-in", "from": "vuln--CVE-2024-12345", "to": "advisory--CERT-EU-2024-001" },
+    { "type": "impacts-sector", "from": "vuln--CVE-2024-12345", "to": "sector--digital-infra" },
+    { "type": "mitigated-by", "from": "vuln--CVE-2024-12345" }
+  ]
+}
