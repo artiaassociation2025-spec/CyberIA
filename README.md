@@ -45,10 +45,80 @@ Elle facilite également l’autocomplétion et la détection d’erreurs dans l
 
 ---
 
-##  Issue 3 — Parser et point d’entrée de validation
+## Issue 3 — Parser et point d’entrée de validation
 
 ### Fichier concerné
-- `src/normalization_api/parsers/threat_graph_json.py`
+src/normalization_api/parsers/threat_graph_json.py
 
 ### Description
-Cette étape met en place la fonction principale :
+Cette étape met en place la fonction principale qui permet de transformer un JSON en objet Python.
+
+La fonction `parse_threat_graph(payload: dict)` :
+- Prend un JSON en entrée
+- Vérifie que les champs obligatoires existent (ex : schema_version)
+- Convertit les données en objet ThreatGraph
+- Lève des erreurs claires si le JSON est invalide
+
+### Rôle principal
+Servir de point d’entrée pour charger et valider un threat graph.
+
+### Spécificité
+C’est la première validation côté Python.  
+Elle garantit que les données sont exploitables dans le code.
+
+### Acceptance Criteria
+- Un test appelle parse_threat_graph avec sample.json
+- Si schema_version manque → erreur explicite
+
+---
+
+## Issue 4 — Nettoyage et Stabilisation des données (Cleaning)
+
+### Fichier concerné
+src/normalization_api/cleaning/threat_graph_cleaner.py
+
+### Description
+Cette étape consiste à nettoyer les données pour les rendre propres et cohérentes.
+
+Le module permet de :
+- Supprimer les espaces inutiles dans les chaînes
+- Transformer les chaînes vides ("") en None
+- Supprimer les doublons dans les listes
+- Uniformiser les données
+
+### Rôle principal
+Garantir que les données sont propres avant validation.
+
+### Spécificité
+C’est la phase de nettoyage.  
+Elle évite les doublons et les valeurs vides.
+
+### Acceptance Criteria
+- Un test prouve que "" devient None
+- Un test prouve que ["Windows","Windows"] devient ["Windows"]
+
+---
+
+## Issue 5 — Validation de l’intégrité référentielle (Refs)
+
+### Fichier concerné
+src/normalization_api/validators/threat_graph_refs.py
+
+### Description
+Cette étape vérifie que toutes les références du graphe existent.
+
+Le validateur vérifie que :
+- Les from_id existent
+- Les to_id existent
+- Les références internes existent
+
+### Rôle principal
+Éviter les liens invalides dans le graphe.
+
+### Spécificité
+Si un ID est manquant, une erreur est levée avec la liste des IDs manquants.
+
+### Acceptance Criteria
+- Si une ref est invalide → erreur
+- Test avec sample.json
+- Test avec ID inconnu → échec
