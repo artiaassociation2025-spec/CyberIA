@@ -1,0 +1,274 @@
+{
+  "entities": {
+    "advisories": [
+      {
+        "date": "2024-03-28",
+        "id": "advisory--CERT-EU-2024-001",
+        "publisher": "CERT-EU",
+        "related_cves": [
+          "CVE-2024-12345"
+        ],
+        "related_techniques": [
+          "technique--T1059"
+        ],
+        "source": "cert_eu",
+        "title": "Active exploitation of CVE-2024-12345"
+      }
+    ],
+    "controls": [
+      {
+        "framework": "NIS2",
+        "id": "control--NIS2-ART21",
+        "name": "Risk Management Measures"
+      }
+    ],
+    "cves": [
+      {
+        "affected_products": [
+          {
+            "product_ref": "product--vendor-product",
+            "versions": [
+              "< 2.4.1"
+            ]
+          }
+        ],
+        "cve": "CVE-2024-12345",
+        "cvss": {
+          "score": 9.8,
+          "severity": "critical",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "version": "3.1"
+        },
+        "cwe": [
+          "CWE-89"
+        ],
+        "dates": {
+          "kev_added": "2024-03-25",
+          "last_modified": "2024-03-20",
+          "patch_due": "2024-04-15",
+          "published": "2024-03-10"
+        },
+        "description": "SQL injection vulnerability allowing remote code execution.",
+        "exploitation": {
+          "in_cisa_kev": true,
+          "known_exploited": true,
+          "public_exploit": true,
+          "ransomware": false
+        },
+        "id": "vuln--CVE-2024-12345",
+        "references": [
+          "https://nvd.nist.gov/vuln/detail/CVE-2024-12345",
+          "https://www.cisa.gov/known-exploited-vulnerabilities"
+        ],
+        "sources": [
+          "cve",
+          "nvd",
+          "cisa_kev"
+        ]
+      }
+    ],
+    "enisa_threats": [
+      {
+        "id": "enisa-threat--ETL-2024-01",
+        "name": "Web-based attacks",
+        "related_cves": [
+          "CVE-2024-12345"
+        ],
+        "related_techniques": [
+          "technique--T1059"
+        ],
+        "source": "enisa",
+        "trend": "increasing"
+      }
+    ],
+    "groups": [
+      {
+        "aliases": [],
+        "description": "",
+        "id": "group--G0000",
+        "name": "APT-Example",
+        "source": "mitre"
+      }
+    ],
+    "indicators": [
+      {
+        "confidence": 0.7,
+        "id": "ioc--example-ip",
+        "source": "misp",
+        "type": "ip",
+        "value": "203.0.113.10"
+      }
+    ],
+    "nis2_sectors": [
+      {
+        "category": "essential",
+        "id": "sector--digital-infra",
+        "name": "Digital Infrastructure",
+        "source": "nis2"
+      }
+    ],
+    "products": [
+      {
+        "cpe": "cpe:2.3:a:vendor:product:*:*:*:*:*:*:*:*",
+        "id": "product--vendor-product",
+        "name": "ProductName",
+        "vendor": "VendorName"
+      }
+    ],
+    "software": [
+      {
+        "id": "software--S0000",
+        "name": "ExampleTool",
+        "platforms": [
+          "Windows"
+        ],
+        "source": "mitre",
+        "type": "malware"
+      }
+    ],
+    "tactics": [
+      {
+        "description": "",
+        "id": "tactic--TA0002",
+        "name": "Execution",
+        "source": "mitre"
+      }
+    ],
+    "techniques": [
+      {
+        "detection": "",
+        "id": "technique--T1059",
+        "name": "Command and Scripting Interpreter",
+        "platforms": [
+          "Windows",
+          "Linux",
+          "macOS"
+        ],
+        "source": "mitre",
+        "tactic_refs": [
+          "tactic--TA0002"
+        ]
+      }
+    ]
+  },
+  "generated_at": "2026-02-09T00:00:00Z",
+  "relationships": [
+    {
+      "from_id": "group--G0000",
+      "id": null,
+      "to": "technique--T1059",
+      "type": "uses"
+    },
+    {
+      "from_id": "technique--T1059",
+      "id": null,
+      "to": "vuln--CVE-2024-12345",
+      "type": "exploits"
+    },
+    {
+      "from_id": "vuln--CVE-2024-12345",
+      "id": null,
+      "to": "product--vendor-product",
+      "type": "affects"
+    },
+    {
+      "from_id": "vuln--CVE-2024-12345",
+      "id": null,
+      "to": "advisory--CERT-EU-2024-001",
+      "type": "described-in"
+    },
+    {
+      "from_id": "vuln--CVE-2024-12345",
+      "id": null,
+      "to": "sector--digital-infra",
+      "type": "impacts-sector"
+    },
+    {
+      "from_id": "vuln--CVE-2024-12345",
+      "id": null,
+      "to": "control--NIS2-ART21",
+      "type": "mitigated-by"
+    }
+  ],
+  "schema_version": "1.0.0",
+  "sources": [
+    {
+      "id": "mitre",
+      "name": "MITRE ATT&CK",
+      "trust": 0.9,
+      "type": "attack_framework"
+    },
+    {
+      "id": "cve",
+      "name": "CVE Program",
+      "trust": 0.9,
+      "type": "identifier"
+    },
+    {
+      "id": "nvd",
+      "name": "NVD (NIST)",
+      "trust": 0.95,
+      "type": "vulnerability_db"
+    },
+    {
+      "id": "cisa_kev",
+      "name": "CISA KEV",
+      "trust": 0.95,
+      "type": "exploitation_catalog"
+    },
+    {
+      "id": "cert_eu",
+      "name": "CERT-EU",
+      "trust": 0.85,
+      "type": "advisory"
+    },
+    {
+      "id": "enisa",
+      "name": "ENISA",
+      "trust": 0.9,
+      "type": "eu_agency"
+    },
+    {
+      "id": "nis2",
+      "name": "NIS2 Directive",
+      "trust": 0.95,
+      "type": "regulation"
+    },
+    {
+      "id": "anssi",
+      "name": "ANSSI / CERT-FR",
+      "trust": 0.9,
+      "type": "national_cert"
+    },
+    {
+      "id": "bsi",
+      "name": "BSI (DE)",
+      "trust": 0.9,
+      "type": "national_cert"
+    },
+    {
+      "id": "uk_ncsc",
+      "name": "UK NCSC",
+      "trust": 0.9,
+      "type": "national_cert"
+    },
+    {
+      "id": "vendor",
+      "name": "Vendor PSIRT",
+      "trust": 0.85,
+      "type": "vendor"
+    },
+    {
+      "id": "exploitdb",
+      "name": "Exploit-DB",
+      "trust": 0.7,
+      "type": "exploit"
+    },
+    {
+      "id": "misp",
+      "name": "MISP",
+      "trust": 0.75,
+      "type": "threat_intel"
+    }
+  ]
+}

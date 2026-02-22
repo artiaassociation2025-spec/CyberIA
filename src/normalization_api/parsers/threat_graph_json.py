@@ -29,9 +29,8 @@ if __name__ == "__main__":
     import json
     # On utilise un chemin relatif par rapport à la racine du projet
     import os
-
-    print("Lancement des tests...")
-
+    
+    
     file_path = "tests/fixtures/sample.json"
     
     if not os.path.exists(file_path):
@@ -43,9 +42,9 @@ if __name__ == "__main__":
         # Test 1 : JSON valide
         try:
             result = parse_threat_graph(data)
-            print("✅ Test valide : OK")
+            print(" Test valide : OK")
         except Exception as e:
-            print("❌ Test valide : ERREUR ->", e)
+            print("Test valide : ERREUR ->", e)
 
         # Test 2 : schema_version manquant
         try:
