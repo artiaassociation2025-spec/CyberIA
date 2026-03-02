@@ -1,4 +1,4 @@
-name: Sync CERT Raw Data
+name: Sync CERT Raw Data (Debug Safe)
 
 on:
   schedule:
@@ -10,13 +10,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1️⃣ Checkout CyberIA
+
+      # 1️⃣ Checkout with full history
       - name: Checkout CyberIA
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # 2️⃣ Clone mirror repositories (shallow)
+      # 2️⃣ Show current branch and status
+      - name: Debug - Repo State
+        run: |
+          echo "Current branch:"
+          git branch
+          echo "Last commit:"
+          git log -1 --oneline
+          echo "Repo status:"
+          git status
+
+      # 3️⃣ Clone mirror repos (shallow)
       - name: Clone CERT-BUND
         run: git clone --depth 1 https://github.com/9adidaa/certbund-intel-mirror.git temp_certbund
 
@@ -26,40 +37,53 @@ jobs:
       - name: Clone CERT-EU
         run: git clone --depth 1 https://github.com/9adidaa/certeu-intel-mirror.git temp_certeu
 
-      # 3️⃣ Ensure raw folders exist
+      # 4️⃣ Prepare raw directories
       - name: Prepare raw directories
         run: |
           mkdir -p data/raw/certbund
           mkdir -p data/raw/certfr
           mkdir -p data/raw/certeu
 
-      # 4️⃣ Incremental sync using rsync
+      # 5️⃣ Sync using rsync (incremental)
       - name: Sync CERT-BUND raw
-        run: |
-          rsync -a --delete temp_certbund/database/raw/ data/raw/certbund/
+        run: rsync -a --delete temp_certbund/database/raw/ data/raw/certbund/
 
       - name: Sync CERT-FR raw
-        run: |
-          rsync -a --delete temp_certfr/database/raw/ data/raw/certfr/
+        run: rsync -a --delete temp_certfr/database/raw/ data/raw/certfr/
 
       - name: Sync CERT-EU raw
-        run: |
-          rsync -a --delete temp_certeu/database/raw/ data/raw/certeu/
+        run: rsync -a --delete temp_certeu/database/raw/ data/raw/certeu/
 
-      # 5️⃣ Cleanup temp folders
+      # 6️⃣ Cleanup temp repos
       - name: Cleanup temp folders
         run: rm -rf temp_certbund temp_certfr temp_certeu
 
-      # 6️⃣ Commit only if changes exist
-      - name: Commit changes
+      # 7️⃣ Show what changed BEFORE commit
+      - name: Debug - Changes before commit
+        run: |
+          echo "Changed files:"
+          git status
+          echo "Changed count:"
+          git status --porcelain | wc -l
+
+      # 8️⃣ Safe Commit
+      - name: Commit changes safely
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
-          if [ -n "$(git status --porcelain)" ]; then
-            git add data/raw
-            git commit -m "Daily CERT raw sync"
-            git push
-          else
-            echo "No changes detected"
+          CHANGED=$(git status --porcelain | wc -l)
+
+          if [ "$CHANGED" -eq "0" ]; then
+            echo "No changes detected. Skipping commit."
+            exit 0
           fi
+
+          echo "Changes detected: $CHANGED files"
+          git add data/raw
+
+          echo "Committing..."
+          git commit -m "Daily CERT raw sync"
+
+          echo "Pushing..."
+          git push
