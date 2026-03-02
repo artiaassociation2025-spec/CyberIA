@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Samba versions 3.4.x à 3.6.4 incluse.</p>",
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-2111",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-2111"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2012-AVI-240",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-05-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité permettant de contourner la politique de sécurité a\nété découverte dans <span class=\"textit\">Samba</span>. Le problème\nréside dans certaines méthodes pouvant être appelées à distance (RPC)\nqui n'appliquent pas correctement la politique de sécurité. Cette\nvulnérabilité conduit à l'obtention du privilège <span\nclass=\"textit\">take ownership</span> par l'attaquant, l'autorisant ainsi\nà modifier les droits des fichiers servis par le démon <span\nclass=\"textit\">smbd</span>.\n",
+  "title": "Vulnérabilité dans Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Samba",
+      "url": "http://www.samba.org/samba/security/CVE-2012-2111"
+    }
+  ]
+}

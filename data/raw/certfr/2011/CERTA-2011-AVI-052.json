@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BlueCoat ProxySG versions antérieures à 6.1.2.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Bluecoat",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BlueCoat CacheFlow versions antérieures à 2.1.4.7 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Bluecoat",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'implémentation de SSL dans les produits BlueCoat inclut une version\nvulnérable de OpenSSL. Un attaquant peut tenter de baisser le niveau de\nchiffrement et d'intercepter des données sensibles comme les\nidentifiants de session.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-4180",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4180"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Blue Coat SA53 du 31 janvier 2011 :      https://kb.bluecoat.com/index?page=content&id=SA53",
+      "url": "http://kb.bluecoat.com/index?page=content&id=SA53"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-052",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-02-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans les produits BlueCoat permet à un attaquant de\ncontourner la politique de sécurité et d'intercepter des données.\n",
+  "title": "Vulnérabilité dans les produits BlueCoat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité BlueCoat SA53 du 31 janvier 2011",
+      "url": null
+    }
+  ]
+}

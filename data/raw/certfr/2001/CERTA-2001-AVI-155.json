@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Solaris 2.5, 2.5.2, 2.6, 7 et 8.</P>",
+  "content": "## Description\n\nUn utilisateur connecté localement à la machine peut, par le biais d'un\ndébordement de mémoire de l'exécutable mailx, obtenir les privilèges du\ngroupe de gestion du courrier : mail.\n\nL'utilisateur peut alors manipuler à volonté les boîtes aux lettres des\nutilisateurs du serveur.\n\nUne vulnérabilité similaire ne touchant que Solaris 2.5, 2.5.1 et 2.6\navait déjà été décrite auparavant dans le bulletin de sécurité 41017 de\nSun.\n\nCes deux vulnérabilités ne sont exploitables qu'en local.\n\n## Solution\n\nTélécharger le correctif selon la version du système sur le site\nl'éditeur :\n\n    http://sunsolve.sun.com\n\n-   Pour Sparc :\n    -   Pour Solaris 2.5, correctif numéro : 112061-02.\n    -   Pour Solaris 2.5.1, correctif numéro : 112086-02.\n    -   Pour Solaris 2.6, correctif numéro : 112073-02.\n    -   pour Solaris 7, correctif numéro : 107441-03.\n    -   pour Soalris 8, correctif numéro : 110957-02.\n-   Pour Intel :\n    -   Pour Solaris 2.5, correctif numéro : 112062-02.\n    -   Pour Solaris 2.5.1, correctif numéro : 112087-02.\n    -   Pour Solaris 2.6, correctif numéro : 112074-02.\n    -   pour Solaris 7, correctif numéro : 107442-03.\n    -   pour Soalris 8, correctif numéro : 110958-02.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le bulletin de vulnérabilité #446864 du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/446864"
+    },
+    {
+      "title": "Bulletin de sécurité 41017 de Sun :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=salert%2F41017&zone_110=41017&wohlewords=on"
+    },
+    {
+      "title": "Bulletin de sécurité 41400 de Sun :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=salert%2F41400&zone_110=41400&wohlewords=on"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-155",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-11-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès complet à des données non autorisées"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Il est possible d'obtenir les privilèges du groupe (GID) mail.\n",
+  "title": "Vulnérabilités de Mailx sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Vulnérabilité étudiée par le CERT/CC : Vuln 446864",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Sun 41017et 41400",
+      "url": null
+    }
+  ]
+}

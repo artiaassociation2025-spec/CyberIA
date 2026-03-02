@@ -1,0 +1,89 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows XP SP3 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Vista, toutes éditions ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2008, toutes éditions.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 7, toutes éditions ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent le noyau du système d'exploitation\nWindows :\n\n-   (CVE-2010-1888) un défaut du noyau de Windows XP SP3 concerne la\n    tentative de création de certains fils d'exécution (threads). Son\n    exploitation permet à un utilisateur local d'élever ses privilèges\n    et d'exécuter du code arbitraire ;\n-   (CVE-2010-1889) une erreur dans la libération de mémoire par le\n    noyau lors du traitement de certaines erreurs permet à un\n    utilisateur local d'élever ses privilèges et d'exécuter du code\n    arbitraire ;\n-   (CVE-2010-1890) un problème dans la validation des listes de\n    contrôle d'accès aux objets du noyau par le noyau permet à un\n    utilisateur local d'empécher le système de répondre ou de le forcer\n    à redémarrer.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-1889",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1889"
+    },
+    {
+      "name": "CVE-2010-1888",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1888"
+    },
+    {
+      "name": "CVE-2010-1890",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1890"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-363",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-08-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent le noyau du système d'exploitation\nWindows. Leur exploitation permet à un utilisateur local de réaliser un\ndéni de service, d'élever ses privilèges ou d'exécuter du code\narbitraire.\n",
+  "title": "Vulnérabilités dans le noyau Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS10-047 du 10 août 2010",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-047.mspx"
+    }
+  ]
+}

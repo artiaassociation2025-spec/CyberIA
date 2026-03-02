@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions de PowerDNS Authoritative Server antérieures à 2.9.21.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le comportement du serveur de\nnoms PowerDNS Authoritative Server. Il rejette toute trame qu'il estime\nmalformée, facilitant ainsi la possibilité d'usurper furtivement son\nidentité pour construire une réponse malveillante.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3337",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3337"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité PowerDNS 2008-02 du 06 août 2008 :",
+      "url": "http://doc.powerdns.com/powerdns-advisory-2008-02.html"
+    },
+    {
+      "title": "Page mentionnant les correctifs apportés :",
+      "url": "http://wiki.powerdns.com/cgi-bin/trac.fcgi/changeset/1239"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-396",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-08-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans le comportement du serveur de\nnoms PowerDNS Authoritative Server. Celle-ci rendrait plus facile le\nfait d'usurper des trames de réponses et de détourner ainsi du trafic.\n",
+  "title": "Vulnérabilité de PowerDNS Authoritative Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PowerDNS 2008-02 du 06 août 2008",
+      "url": null
+    }
+  ]
+}

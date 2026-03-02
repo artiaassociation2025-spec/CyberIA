@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OCS Inventory NG Server versions antérieures à 1.02.1 sur GNU Linux/UNIX;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OCS Inventory NG Server versions antérieures à 1.02.1 sur Microsoft Windows.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux failles ont été corrigées dans OCS Inventory NG Server. La première\npermet à une personne malintentionnée d'effectuer des injections SQL. La\nseconde vulnérabilité (CVE-2009-2261), dans le fichier cvs.php, permet à\nune personne d'accéder à des fichiers arbitraires du système.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2261",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2261"
+    },
+    {
+      "name": "CVE-2009-2166",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2166"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-250",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-06-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection SQL"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans OCS Inventory NG\nServer.\n",
+  "title": "Vulnérabilités dans OCS Inventory NG Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OCS Inventory du 30 mai 2009",
+      "url": "http://www.ocsinventory-ng.org/index.php?mact=News,cntnt01,detail,0&cntnt01articleid=140&cntnt01returnid=111"
+    }
+  ]
+}

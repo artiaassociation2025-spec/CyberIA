@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système fonctionnant sous CISCO IOS, sauf les versions  12.3 et 12.3T.</P>",
+  "content": "## Description\n\nUne requête standard GET du protocole HTTP volontairement mal formée\npermet d'exploiter la vulnérabilité.\n\n## Contournement provisoire\n\nLimiter les hôtes ou réseaux autorisés à se connecter au serveur HTTP en\ncréant des \\`\\`access lists'' adéquates.\n\n## Solution\n\nSe référer au bulletin de sécurité Cisco (cf. section Documentation)\npour l'obtention d'un correctif.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-129",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Le serveur HTTP des systèmes CISCO IOS peut être activé si spécifié dans\nla configuration. Une vulnérabilité de type débordement de mémoire dans\nle code permet à un utilisateur distant mal intentionné d'exécuter du\ncode arbitraire sur le système.\n",
+  "title": "Vulnérabilité du serveur HTTP dans CISCO IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sn-20030730-ios-2gb-get.shtml"
+    }
+  ]
+}

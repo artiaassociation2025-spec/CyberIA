@@ -1,0 +1,47 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>FUSE version 2.4.1 et versions  antérieures.</p>",
+  "content": "## Description\n\nFUSE est un outil permettant d'implémenter un système de fichier dans\nl'espace de travail d'un programme.\n\nFUSE présente une vulnérabilité permettant à un utilisateur local mal\nintentionné de corrompre le fichier /etc/mtab.\n\nL'exploitation de cette vulnérabilité n'est possible que si le programme\nest installé avec le drapeau suid root.\n\n## Contournement provisoire\n\nRetirer de l'application le drapeau suid root.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2005-3531",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-3531"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200511-17 du 22 novembre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200511-17.xml"
+    },
+    {
+      "title": "Bulletin de sécurité FUSE du 17 novembre 2005:",
+      "url": "http://sourceforge.net/project/shownotes.php?release_id=373087"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:216 du 24 novembre    2005 :",
+      "url": "http://frontal2.mandriva.com/security/advisories?name=MDKSA-2005:216"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-472",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans FUSE permettant d'élever ses\nprivilèges en local sur un système vulnérable.\n",
+  "title": "Vulnérabilité dans le logiciel FUSE",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de FUSE",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "RV340 Dual WAN Gigabit VPN Router dont le microprogramme est en version 1.0.03.19 ou antérieures",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RV345 Dual WAN Gigabit VPN Router dont le microprogramme est en version 1.0.03.19 ou antérieures",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RV340W Dual WAN Gigabit Wireless-AC VPN Router dont le microprogramme est en version 1.0.03.19 ou antérieures",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RV345P Dual WAN Gigabit POE VPN Router dont le microprogramme est en version 1.0.03.19 ou antérieures",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nIl est vivement recommandé de désactiver l'accès à l'interface Web de\nmanagement depuis un réseau externe et de respecter les bonnes pratiques\nen matière d'administration sécurisée \\[1\\].\n\nLes correctifs n'étant pas encore disponibles à la date de rédaction de\ncet avis, se référer au bulletin de sécurité de l'éditeur pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2020-3451",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3451"
+    },
+    {
+      "name": "CVE-2020-3453",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3453"
+    }
+  ],
+  "links": [
+    {
+      "title": "[1] Recommandations pour l'administration sécurisée des SI",
+      "url": "https://www.ssi.gouv.fr/administration/guide/securiser-ladministration-des-systemes-dinformation/"
+    }
+  ],
+  "reference": "CERTFR-2020-AVI-580",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2020-09-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Cet avis fait suite à la mise à jour du bulletin de l'éditeur le 17\nseptembre.\n\nDe multiples vulnérabilités ont été découvertes dans les routeurs de\nsérie RV340 de Cisco. Elles permettent à un attaquant non-authentifié de\nprovoquer une exécution de code arbitraire à distance via l'interface\nWeb de management de l'équipement avec les droits restreints de\nl'utilisateur www-data. Par défaut, l'interface de management n'est\naccessible que depuis le réseau local. Une option permet d'activer cette\ninterface de management sur l'interface WAN pour une prise en main à\ndistance. Pour savoir si l'interface Web de management est activée,\ndepuis le réseau local, il faut se connecter sur cette interface et\nnaviguer dans le menu \"Basic Settings \\> Remote Management\" et vérifier\nsi la case \"Enable\" est cochée.\n",
+  "title": "Multiples vulnérabilités dans les routeurs de série RV340 de Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-rv-osinj-rce-pwTkPCJv du 16 septembre 2020",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-rv-osinj-rce-pwTkPCJv"
+    }
+  ]
+}

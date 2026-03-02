@@ -1,0 +1,35 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Cette vulnérabilité n'affecte que la version 8 de Solaris.</P>",
+  "content": "## Description\n\naspppls (ASynchronous PPP Login Service est un service\nd'authentification d'aspppd. Il est démarré lorsqu'un utilisateur ayant\nun compte ppp se connecte au serveur aspppd.\n\nUne mauvaise gestion des fichiers temporaires dans aspppls permet à un\nutilisateur connecté localement de corrompre des fichiers du système et\nd'obtenir les privilèges de l'administrateur root.\n\n## Contournement provisoire\n\n-   Supprimer aspppls s'il n'est pas utilisé.\n\n-   En attendant de pouvoir appliquer le correctif de Sun, supprimer le\n    bit SUID de l'exécutable aspppls au moyen de la commande suivante :\n\n    `chmod u-s /usr/sbin/aspppls`\n\n## Solution\n\nConsulter le bulletin de sécurité \\#46903 de Sun (voir le paragraphe\nDocumentation) pour connaître la disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-210",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-09-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Corruption de fichiers"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de aspppls sous solaris 8 permet à un utilisateur\nlocal d'accéder aux privilèges de l'administrateur root.\n",
+  "title": "Vulnérabilité de <TT>aspppls</TT> sous solaris 8",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #46903 de Sun",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F46903"
+    }
+  ]
+}

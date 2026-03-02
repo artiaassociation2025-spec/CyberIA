@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>Winpcap</TT> version 4.0 et  antérieures.",
+  "content": "## Description\n\nUn manque de contrôle dans la mise en œuvre d'un appel système fourni\npar le pilote NPF.SYS permet à un utilisateur local d'écraser des zones\narbitraires de mémoire du noyau et potentiellement d'exécuter du code\narbitraire en espace noyau via l'utilisation particulière de cet appel\nsystème.\n\n## Solution\n\nLa version 4.0.1 de Winpcap corrige le problème :\n\n    http://www.winpcap.org/install/default.htm\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de Winpcap :",
+      "url": "http://www.winpcap.org"
+    },
+    {
+      "title": "Liste des changements apportés à la version 4.0.1 :",
+      "url": "http://www.winpcap.org/misc/changelog.htm"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-289",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Winpcap permet à un utilisateur local\nmalintentionné d'exécuter du code arbitraire et d'élever ses privilèges.\n",
+  "title": "Vulnérabilité dans Winpcap",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés à la version 4.0.1 de winpcap",
+      "url": null
+    }
+  ]
+}

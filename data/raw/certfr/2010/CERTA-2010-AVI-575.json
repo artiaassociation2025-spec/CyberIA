@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BIND versions 9.6.2 à 9.6.2-P2, 9.6-ESV à 9.6-ESV-R2, 9.7.0 à 9.7.2-P2 pour CVE-2010-3613 ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND versions 9.0.x à 9.7.2-P2, 9.4-ESV à 9.4-ESV-R3, 9.6-ESV à 9.6-ESV-R2 pour CVE-2010-3614.",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa première vulnérabilité permet à un attaquant d'effectuer un déni de\nservice en envoyant des requêtes spécialement construites\n(CVE-2010-3613). La seconde vulnérabilité concerne une erreur dans la\ngestion des algorithmes de gestion des clés de chiffrement pour DNSSEC,\net permet à un attaquant de forcer le serveur BIND à indiquer que les\ndonnées d'une zone ne sont pas sécurisées (CVE-2010-3614).\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3614",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3614"
+    },
+    {
+      "name": "CVE-2010-3613",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3613"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2010-1000 du 20 décembre    2010 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2010-1000.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-575",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Red Hat.",
+      "revision_date": "2010-12-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Une mise à jour corrige deux vulnérabilités dans <span\nclass=\"textit\">BIND</span> dont l'une permet un déni de service à\ndistance.\n",
+  "title": "Vulnérabilités dans BIND",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité ISC du 1 décembre 2010",
+      "url": "https://www.isc.org/software/bind/advisories/cve-2010-3614"
+    }
+  ]
+}

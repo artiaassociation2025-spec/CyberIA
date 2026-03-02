@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>ClamAV versions 0.90 et antérieures.</p>",
+  "content": "## Description\n\nUne erreur de type pointeur nul dans le composant de ClamAV mettant en\nœuvre l'analyse des fichiers au format RAR permet à un utilisateur\ndistant malintentionné de provoquer un déni de service de l'antivirus\nvulnérable par le biais d'un fichier RAR construit de façon\nparticulière.\n\n## Solution\n\nLa version 0.91 de ClamAV corrige le problème :\n\n    http://sourceforge.net/project/showfiles.php?group_id=86638\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3725",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3725"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:150 du 25 juillet    2007 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:150"
+    },
+    {
+      "title": "Rapport de correction d'erreur de ClamAV du 10    juillet 2007 :",
+      "url": "https://www.clamav.net/bugzilla/show_bug.cgi?id=555"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1340 du 24 juillet 2007 :",
+      "url": "http://www.debian.org/security/2007/dsa-1340"
+    },
+    {
+      "title": "Site officiel de ClamAV :",
+      "url": "http://www.clamav.net"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-306",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence CVE et des références aux bulletins de sécurité Mandriva et Debian.",
+      "revision_date": "2007-07-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans ClamAV permet à un utilisateur distant de\nprovoquer un déni de service de l'application vulnérable.\n",
+  "title": "Vulnérabilité de ClamAV",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport de correction d'erreur de ClamAV du 10 juillet 2007",
+      "url": null
+    }
+  ]
+}

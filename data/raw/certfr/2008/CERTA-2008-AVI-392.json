@@ -1,0 +1,110 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache Tomcat version 4.1.37 et versions antérieures ;",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat version 6.0.16 et versions antérieures.",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat version 5.5.26 et versions antérieures ;",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans les versions , et d'Apache\nTomcat :\n\n-   la première vulnérabilité est due à une mauvaise gestion des\n    arguments passés à la fonction  \n    HttpServletResponse.sendError(). Cette vulnérabilité peut être\n    exploitée afin de réaliser une attaque par injection de code\n    indirecte (Cross Site Scripting) ;\n-   la seconde vulnérabilité permet d'atteindre des ressources en accès\n    restreint.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1232",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1232"
+    },
+    {
+      "name": "CVE-2008-2370",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2370"
+    },
+    {
+      "name": "CVE-2008-1947",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1947"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurité Fedora FEDORA-2008-8130 du 16    septembre 2008 :",
+      "url": "https://www.redhat.com/archives/fedora-package-announce/2008-September/msg00889.html"
+    },
+    {
+      "title": "Bulletin de sécurité Suse SUSE-SR:2008:018 du 19 septembre    2008 :",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2008-09/msg00004.html"
+    },
+    {
+      "title": "Bulletin de sécurité Suse SUSE-SR:2008:014 du 04 juillet    2008 :",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2008-07/msg00001.html"
+    },
+    {
+      "title": "Bulletins de sécurité Fedora FEDORA-2008-7977 du 11    septembre 2008 :",
+      "url": "https://www.redhat.com/archives/fedora-package-announce/2008-September/msg00712.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2008:0648 du 27 août 2008    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2008-0648.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1593 du 09 juin 2008 :",
+      "url": "http://www.debian.org/security/2008/dsa-1593"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2008:188 du 05    septembre 2008 :",
+      "url": "http://www.mandriva.com/archives/security/advisories"
+    },
+    {
+      "title": "Bulletins de sécurité Fedora FEDORA-2008-8113 du 16    septembre 2008 :",
+      "url": "https://www.redhat.com/archives/fedora-package-announce/2008-September/msg00859.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-392",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-08-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux distributions Linux.",
+      "revision_date": "2008-10-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes dans le serveur web <span\nclass=\"textit\">Apache Tomcat</span>. Ces vulnérabilités peuvent être\nexploitées afin de contourner la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de mise à jour Apache Tomcat",
+      "url": "http://tomcat.apache.org/security-6.html"
+    }
+  ]
+}

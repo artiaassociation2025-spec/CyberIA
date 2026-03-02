@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows XP ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP 64-Bit Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 2, Service Pack 3, Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire est présente dans une\nfonction de gestion de journaux mise en oeuvre dans le service\nWorkstation Service (WKSSVC.DLL). En exploitant cette vulnérabilité, un\nutilisateur mal intentionné peut réaliser un déni de service ou exécuter\ndu code arbitraire à distance avec les privilèges SYSTEM.\n\n## Contournement provisoire\n\n-   Désactiver Windows Workstation Service (tout service dépendant de\n    Windows Workstation Service ne fonctionnera plus, tel le partage de\n    fichiers par exemple).\n-   Filtrer les ports TCP et UDP 138,139 et 445.\n\n## Solution\n\nAppliquer le correctif fourni par Microsoft :\n\n    http://www.microsoft.com/technet/security/bulletin/MS03-049.asp\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité du CERT/CC CA-2003-28 :",
+      "url": "http://www.cert.org/advisories/CA-2003-28.html"
+    },
+    {
+      "title": "Avis de sécurité de Eeye AD20031111 :",
+      "url": "http://www.eeye.com/html/Research/Advisories/AD20031111.html"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-185",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-11-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le service Windows Workstation Service permet à\nun utilisateur mal intentionné de réaliser un déni de service ou\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans Windows Workstation Service",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS03-049",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS03-049.asp"
+    }
+  ]
+}

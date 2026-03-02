@@ -1,0 +1,156 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Server 2003 Enterprise Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Home Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 Web Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Professional ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2000 Datacenter Server.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 Datacenter Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2000 Advanced Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2000 Professional ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2000 Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 Standard Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Une mauvaise gestion de la pile dans MSDTC (Microsoft Distributed\n    Transaction Coordinator) peut être exploitée par un utilisateur mal\n    intentionné afin d'exécuter du code arbitraire en local et/ou élever\n    ses privilèges. Cette vulnérabilité touche les versions suivantes de\n    Microsoft :\n    -   Windows 2000 ;\n    -   Windows XP Service Pack 1 ;\n    -   Windows Server 2003.\n\n-   Une erreur dans le composant COM+ peut être exploitée par un\n    utilisateur mal intentionné afin d'exécuter du code arbitraire à\n    distance par le biais d'un paquet réseau spécialement conçu, ou en\n    local par le biais d'une application spécialement construite. Cette\n    vulnérabilité touche les versions suivantes de Microsoft :\n    -   Windows 2000 (exécution de code à distance) ;\n    -   Windows XP Service Pack 1 (exécution de code à distance);\n    -   Windows XP Service Pack 2 (exécution de code en local);\n    -   Windows Server 2003 (exécution de code en local);\n    -   Windows Server 2003 Service Pack 1 (exécution de code en local).\n\n-   Une erreur dans la validation des requêtes TIP (Transaction Internet\n    Protocol) par MSDTC peut être exploitée à distance, via un paquet\n    malicieusement contruit, afin de bloquer les réponses du service. Le\n    paquet malicieux peut être transféré aux autres machines du réseau à\n    travers la première machine affectée, ce qui aura pour cause l'arrêt\n    de MSDTC sur l'ensemble de ces machines.\n\n    Les machines n'interprétant pas le protocole TIP ne sont pas\n    vulnérables.\n\n## Solution\n\nAppliquer les correctifs comme indiqué par l'éditeur (cf.\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Détails sur le bulletin de sécurité Microsoft #909444 :",
+      "url": "http://support.microsoft.com/kb/909444"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft numéro MS05-051 :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS05-051.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft KB #909444 :",
+      "url": "http://www.microsoft.com/technet/security/advisory/909444.mspx"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-403",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-10-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité #909444 Microsoft.",
+      "revision_date": "2005-10-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de commandes arbitraire locale ou distante"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Accès illégal au système"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Les services MSDTC et COM+ sont vulnérables à de multiples\nvulnérabilités, pouvant être exploitées en local ou à distance par un\nutilisateur malveillant.\n",
+  "title": "Multiples vulnérabilités dans Microsoft Windows MSDTC et COM+",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS05-051",
+      "url": null
+    }
+  ]
+}

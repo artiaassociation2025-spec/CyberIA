@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>ClamAV versions antérieures à la  version 0.92.1.</p>",
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans le logiciel antivirus\nClamAV :\n\n-   la première vulnérabilité est due à une erreur dans une fonction de\n    pe.c. Cette fonction peut être exploitée par un fichier PE (Portable\n    Executable) spécialement construit;\n-   la seconde vulnérabilité est due à une erreur dans une fontion de\n    mew.c.\n\nL'exploitation de l'une ou l'autre de ces vulnérabilités permet de\nprovoquer un déni de service ou d'exécuter des commandes arbitraires à\ndistance.\n\n## Solution\n\nSe référer au bulletin de mise à jour de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0318",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0318"
+    },
+    {
+      "name": "CVE-2008-0728",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0728"
+    }
+  ],
+  "links": [
+    {
+      "title": "Mise à jour de ClamAV du 11 février 2008:",
+      "url": "http://sourceforge/project/shownotes.php?release_id=575703"
+    },
+    {
+      "title": "Bulletin de sécurité iDefense 658 du 13 février 2008 :",
+      "url": "http://www.idefense.com/ntelligence/vulnerabilities/display.php?id=658"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-083",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans le logiciel antivirus\nClamAV. L'exploitation de ces vulnérabilités conduit à l'exécution de\ncommandes arbitraires ou à un déni de service à distance.\n",
+  "title": "Multiples vulnérabilités dans ClamAV",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise à jour ClamAV du 11 février 2008",
+      "url": null
+    }
+  ]
+}

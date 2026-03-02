@@ -1,0 +1,113 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Internet Explorer 6 Service Pack 1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Internet Explorer 5.0 Service Pack 4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Internet Explorer 6.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été identifiées dans le navigateur\nMicrosoft Internet Explorer. Parmi celles-ci, nous notons :\n\n-   une mauvaise gestion de certaines erreurs : un utilisateur\n    malveillant peut créer un site contenant une page particulière qui\n    engendre volontairement une erreur. Le navigateur vulnérable des\n    personnes visitant cette page provoque ainsi un débordement de\n    mémoire, et l'exécution de code arbitraire sur la machine ;\n-   une lecture non correcte de code HTML au format UTF-8 : de la même\n    manière, un utilisateur malveillant peut créer un site contenant une\n    page particulière utilisant cette vulnérabilité ;\n-   un contrôle défectueux de certains ActiveX concernant\n    DXImageTransform : il est conseillé dans la mesure du possible de\n    refuser les ActiveX au niveau du navigateur ;\n-   une usurpation possible de la barre d'adressage : un utilisateur\n    malveillant peut construire une page particulière qui affiche une\n    barre d'adressage issue d'un site authentique, mais dont le contenu\n    est illégitime ;\n-   un enregistrement de fichiers au format multipart HTML (.mht) non\n    correct : un utilisateur malveillant qui arrive à persuader une\n    personne d'enregistrer une page spécialement construite sous ce\n    format pourrait ainsi exécuter du code arbitraire sur la machine de\n    cette personne ;\n-   une mauvaise manipulation des images au format ART (.art) : ce\n    format est normalement utilisé par les logiciels d'AOL (America\n    Online), mais Internet Explorer intègre une librairie particulière\n    pour les afficher. Un utilisateur malveillant peut créer une page\n    Web contenant une image ART spécialement construite, qui, une fois\n    affichée dans le navigateur d'une personne visitant la page,\n    entraînera l'exécution de commandes arbitraires. Un résultat\n    identique est obtenu si l'utilisateur envoie une telle image\n    malveillante dans un courrier électronique lu au format HTML.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2383",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2383"
+    },
+    {
+      "name": "CVE-2006-1303",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1303"
+    },
+    {
+      "name": "CVE-2006-2384",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2384"
+    },
+    {
+      "name": "CVE-2006-1626",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1626"
+    },
+    {
+      "name": "CVE-2005-4089",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-4089"
+    },
+    {
+      "name": "CVE-2006-2218",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2218"
+    },
+    {
+      "name": "CVE-2006-2385",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2385"
+    },
+    {
+      "name": "CVE-2006-2382",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2382"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-021 du 13 juin 2006 :",
+      "url": "http://www.microsoft.com/france/technet/securite/MS06-021.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-022 du 13 juin 2006 :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-022.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-022 du 13 juin 2006 :",
+      "url": "http://www.microsoft.com/france/technet/securite/MS06-022.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-021 du 13 juin 2006 :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-021.mspx"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-237",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-06-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été identifiées dans Microsoft Internet\nExplorer. Celles-ci permettraient à un utilisateur malveillant\nd'exécuter des commandes arbitraires à distance, ou collecter des\ninformations auxquelles il ne devrait pas accéder.\n",
+  "title": "Multiples vulnérabilités dans Microsoft Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft du 13 juin 2006",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Indépendemant du système d'exploitation :</P>  <UL>    <LI>WORD 2000</LI>    <LI>EXCEL 2000</LI>    <LI>POWERPOINT 2000</LI>  </UL>",
+  "content": "## Description\n\nUn utilisateur malintentionné peut créer une page HTML contenant une\nbalise « Object » malformée. Ce document enregistré, au préalable comme\nun « Document Office » , bloquera le logiciel (précédement listé) qui\nl'ouvrira.\n\nPour faire ouvrir le document par sa victime, l'utilisateur malicieux\npourra présenter le document comme un fichier attaché à un courrier\nélectronique, ou un fichier à télecharger sur un site web, ou le\ntransmettre par tout autre média : disquette, CD-ROM, etc...\n\n## Contournement provisoire\n\nSous WORD 2000 uniquement, il est possible d'empêcher ce débordement de\nmémoire par le moyen suivant :\n\nDans le menu Outils, rubrique Options, onglet Général : désactiver\nl'option « Confirmation des conversions lors de l'ouverture »\n\nSuivre les recommandations faites précédement concernant les documents\nattachés ou télechargés.\n\n## Solution\n\nMicrosoft a mis au point un correctif disponible à l'adresse suivante :\n\n    http://officeupdate.microsoft.com/2000/downloadDetails/Of9data.htm\n\nNota : Ce correctif doit être appliqué après Office 2000 SR-1 (Service\nRelease 1).\n\nCorrectif testé sur la version française d'Office 2000.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "L'article de la base de connaissances de Microsoft :",
+      "url": "http://www.microsoft.com/technet/support/kb.asp?ID=269880"
+    },
+    {
+      "title": "La FAQ de ce bulletin :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-056.asp"
+    },
+    {
+      "title": "Le bulletin de Sécurité de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-056.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-027",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Débordement de mémoire permettant l'execution de code arbitraire, l'usurpation des droits de l'utilisateur courant, ou causant un bloquage de la machine"
+    }
+  ],
+  "summary": "Une erreur dans la gestion de la conversion des documents HTML a été\ndécouverte dans la conception des outils de la suite Office. Une page\nHTML habilement conçue permet de bloquer la machine voire de lui faire\nexécuter du code arbitraire.\n\nNota : Les logiciels cités, même installés séparéments, sont\nvulnérables.\n",
+  "title": "Débordement de mémoire dans les documents HTML d'Office 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Microsoft",
+      "url": null
+    }
+  ]
+}

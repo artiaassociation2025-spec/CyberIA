@@ -1,0 +1,35 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Commerce Server 2000 et 2002.</P>",
+  "content": "## Description\n\nMicrosoft Commerce Server 2000 et 2002 sont des serveurs web permettant\nle commerce en ligne.\n\nQuatre vulnérabilités présentes dans Microsoft Commerce Server ont été\nrécement révélées. Les 3 premières vulnérabilités concernent Profile\nService et OWC qui sont des composants de Commerce Server 2000\nuniquement.\n\n-   Profile Service est un service permettant à un utilisateur\n    authentifié d'administrer à distance sont propre profil sur Commerce\n    Server 2000.\n\n    Sous Commerce Server 2000, un débordement de mémoire dans une\n    fonction de Profile Service manipulant des appels d'API (Application\n    Programming Interface) permet à un utilisateur mal intentionné\n    authentifié d'exécuter du code arbitraire dans le contexte de\n    sécurité de l'utilisateur LocalSystem ou bien de stopper le\n    programme Commerce Server 2000 à distance.\n\n    Profile Service est installé mais n'est pas activé par défaut. Pour\n    que cette vulnérabilité soit exploitable, il faut que\n    l'administrateur de Commerce Server 2000 ait activé Profile Service.\n\n-   Office Web Components (OWC) est un ensemble d'outils\n    d'administration à distance pour Commerce Server. Il est installé\n    par défaut avec Commerce Server 2000 et n'affecte que ce dernier.\n\n    Sous Commerce Server 2000, un utilisateur mal intentionné connecté\n    localement peut, en fournissant des données malformées au\n    gestionnaire d'installation de OWC, exécuter du code arbitraire dans\n    le contexte de sécurité de l'utilisateur LocalSystem ou bien arrêter\n    le programme Commerce Server.\n\n-   Un autre débordement de mémoire de l'outil de gestion d'installation\n    de OWC permet à un utilisateur mal intentionné connecté localement\n    d'exécuter du code arbitraire avec ses propres permissions.\n\n    Nota : Dans le cadre des deux vulnérabilités OWC, il est à noter\n    qu'un utilisateur sans privilèges ne devrait pas avoir un accès\n    local au serveur.\n\n-   Les filtres ISAPI sont des programmes qui répondent à des requêtes\n    HTTP reçues par le serveur web. Microsoft Commerce Server installe\n    une bibliothèque dynamique (DLL) Windows avec le filtre ISAPI\n    AuthFilter qui permet l'utilisation de différentes méthodes\n    d'authentification.\n\n    Une variante de la vulnérabilité des filtres ISAPI décrite dans le\n    bulletin de sécurité CERTA-2002-AVI-044 permet à un utilisateur mal\n    intentionné de prendre le contrôle total sur le serveur au moyen\n    d'un débordement de mémoire du filtre AuthFilter de Commerce Server\n    2000 et 2002.\n\n    Les filtres ISAPI sont installés sur Internet Information Server,\n    mais le filtre AuthFilter n'est présent que sur Commerce Server, les\n    serveurs web IIS ne sont donc pas affectés par cette vulnérabilité.\n\n## Contournement povisoire\n\nLe gestionnaire d'installation de OWC n'est plus nécessaire après\nl'installation de celui ci. Et le correctif ne fait que diminuer les\nrisques d'exploitation de ces vulnérabilités.\n\nPour plus de sécurité, Microsoft recommande de supprimer l'exécutable\nboowc.exe situé dans le répertoire\n\n`Program files\\Microsoft Commerce  Server\\widgets\\owc` de votre système.\n\n## Solution\n\nSe référer au bulletin de sécurité Microsoft MS02-033 (Voir paragraphe\nDocumentation) pour connaître la disponibilité des correctifs pour\nCommerce Server 2000 et 2002.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-135",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Il existe de multiples vulnérabilités dans Microsoft Commerce Server\n2000 et 2002.\n",
+  "title": "Débordement de mémoire dans Microsoft Commerce Server 2000 et 2002",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS02-033 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-033.asp"
+    }
+  ]
+}

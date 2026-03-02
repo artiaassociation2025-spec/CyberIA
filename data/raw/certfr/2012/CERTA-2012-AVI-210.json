@@ -1,0 +1,94 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Samba 3.4.x jusqu'à la version 3.4.15.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Samba 3.6.x jusqu'à la version 3.6.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Samba 3.5.x jusqu'à la version 3.5.13 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nLes versions 3.6.4, 3.5.14 et 3.4.16 de Samba corrigent ce problème.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-1182",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-1182"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-1423-1 du 12 avril 2012 :",
+      "url": "http://www.ubuntu.com/usn/usn-1423-1/"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2012:055 du 11 avril    2012 :",
+      "url": "http://www.mandriva.com/fr/support/security/advisories/?name=MDVSA-2012:055"
+    },
+    {
+      "title": "Bulletins de sécurité RedHat RHSA-2012:0465-1 et    RHSA-2012:0466-1 du 10 avril 2012 :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2012-0465.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-2450 du 12 avril 2012 :",
+      "url": "http://www.debian.org/security/2012/dsa-2450"
+    },
+    {
+      "title": "Bulletins de sécurité RedHat RHSA-2012:0465-1 et    RHSA-2012:0466-1 du 10 avril 2012 :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2012-0466.html"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-210",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-04-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins Mandriva et RedHat.",
+      "revision_date": "2012-04-12T00:00:00.000000"
+    },
+    {
+      "description": "précision sur les versions concernées et ajout des références aux bulletins Debian et Ubuntu.",
+      "revision_date": "2012-04-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été corrigée dans Samba. Cette vulnérabilité est un\ndébordement de tampon de type <span class=\"textit\">heap overflow</span>.\nElle peut être exploitée au moyen d'un message RPC, sans être\nauthentifié et permet d'exécuter un code arbitraire à distance avec les\ndroits <span class=\"textit\">root</span>.\n",
+  "title": "Vulnérabilité dans Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Samba du 10 avril 2012",
+      "url": "https://www.samba.org/samba/security/CVE-2012-1182"
+    }
+  ]
+}

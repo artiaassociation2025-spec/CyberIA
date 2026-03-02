@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Serveur de mail Microsoft Windows utilisant Exchange 2000  Revision A et précédentes (indiqué par le fait qu'il n'y a aucun  nom de révision marqué sur le CD d'installation).</P>",
+  "content": "## Description\n\nLors de l'installation de Microsoft Exchange 2000 sur un système, le\nlogiciel crée le compte local EUSR_EXSTOREEVENT qui a les privilèges\nd'un simple compte utilisateur. Ce compte a déjà accès localement à\ntoutes les données du système qui lui sont autorisées.\n\nSi le logiciel Exchange est installé sur un contrôleur de domaine\nWindows, ce compte a accès sur tout le domaine aux données accessibles\npar les utilisateurs du domaine.\n\nCe compte, auquel personne n'a accès normalement, peut être utilisé\nmaladroitement, voire à mauvais escient, par un utilisateur qui en\nprendrait possession par n'importe quel moyen.\n\n## Contournement provisoire\n\nIl est évident qu'il ne faut pas accumuler les services sur la même\nmachine. En l'occurrence : ne pas installer Exchange sur un serveur qui\nest aussi contrôleur de domaine.\n\n## Solution\n\nAppliquer le correctif Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=25866\n\nOu suivre les indications données dans l'article de la base de\nconnaissances Microsoft :\n\n    http://www.microsoft.com/technet/support//kb.asp?ID=278523\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le bulletin de sécurité Microsoft, sa FAQ et l'article de la  base de connaissance :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS00-088.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-072",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-11-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès à des données non autorisées"
+    }
+  ],
+  "summary": "Lors de son installation, MS Exchange 2000 crée un compte local. Si le\nserveur sur lequel est installé Exchange est un contrôleur de domaine\nWindows, ce compte utilisateur peut avoir accès à des données de tout le\ndomaine en question.\n",
+  "title": "Vulnérabilité de Microsoft Exchange 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de Sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

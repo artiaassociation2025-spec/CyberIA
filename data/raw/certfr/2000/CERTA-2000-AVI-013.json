@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Toute machine utilisant Microsoft SQL Server 7.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nDans une base de donnée SQL, tout membre du groupe Sysadmin de la base\nde données, est un utilisateur particulier appelé Opérateur de Base de\nDonnées (DBO : Database Operator).\n\nLorsqu'une procédure cataloguée temporaire appelle une procédure\ncataloguée dont le propriétaire est DBO, la vérification des permissions\nqui devrait avoir lieu est omise. Un utilisateur authentifié du serveur\nSQL peut créer de telle procédures temporaires. Ceci permet à un\nutilisateur authentifié mal intentionné d'exécuter n'importe quelle\nprocédure appartenant au DBO\n\nSi une base de donnée du serveur SQL appartient au compte «\nadministrateur système » , cela permet à un utilisateur mal intentionné\nd'utiliser les fonctions d'administration du serveur.\n\nIl faut donc, pour cela, que les conditions suivantes soient réunies :\n\n-   Le propriétaire de la base de données doit être le compte\n    administrateur système de la machine ;\n-   Le propriétaire de la procédure cataloguée doit être DBO ;\n-   L'utilisateur mal intentionné doit avoir un accès à la base de\n    données, et doit pouvoir s'authentifier sur le serveur SQL.\n\n## Contournement provisoire\n\nVérifiez que le propriétaire de vos bases de données n'est jamais\nl'administrateur du système. Si l'une des bases de données appartient à\nl'administrateur système, changez le propriétaire immédiatement. Elle\ndoit appartenir au compte d'un utilisateur sans privilège\nd'administration de Windows. On doit alors donner les droits du DBO à\ncet utilisateur.\n\n## Solution\n\nMicrosoft recommande d'appliquer le correctifs suivant dans tous les cas\n:\n\n-   Pour les système Intel :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=22470\n\n-   Pour les systèmes alpha :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=22469\n\nNota : Ces correctifs ne peuvent être installés que si vous avez\nappliqué le Service Pack 2 à votre serveur SQL.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "La Faq à ce sujet :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-048.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-013",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-07-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une « procédure cataloguée » (ou procédure mémorisée) est un ensemble\nd'instructions SQL précompilées enregistré dans le dictionnaire d'une\nbase de données SQL sur un serveur. Elles sont exécutées par une\napplication via un appel de procédure (<span class=\"textit\">Remote\nProcedure Call</span>).\n\nUne vulnérabilité de Microsoft SQL server 7.0 permet à un utilisateur\nmal intentionné d'exécuter des « procédures cataloguées » auxquelles il\nn'a normalement pas accès.\n",
+  "title": "Vulnérabilité dans Microsoft SQL Serveur",
+  "vendor_advisories": [
+    {
+      "published_at": "2000-07-11",
+      "title": "Bulletin de sécurité Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS00-048.asp"
+    },
+    {
+      "published_at": "2000-07-11",
+      "title": "Sites web Security Bugware et SecurityFocus",
+      "url": "None"
+    }
+  ]
+}

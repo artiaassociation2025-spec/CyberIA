@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2000 Professional ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Advanced Server.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa politique de sécurité locale sous Windows 2000 est un ensemble\nd'informations qui encapsule tous les aspects de sécurité sur la machine\nlocale. Elle définit les utilisateurs, les groupes, les droits et les\npermissions. Par conception les utilisateurs non privilégiés ne peuvent\npas effectuer des changements dans cette configuration.\n\nCependant une vulnérabilité existe dans la politique de sécurité locale.\nUn poste de travail ou un serveur de domaine peut être corrompu par un\nutilisateur ( même non authentifié au domaine ) par le biais d'une\ncommande RPC ( Remote Procedure Call ).\n\n## Solution\n\nAppliquer le service Pack 1 pour windows 2000 (version US):\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=24019\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-037",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité permet à un utilisateur mal intentionné, en corrompant\nune machine locale, de l'empêcher de participer à un réseau. Si cette\nvulnérabilité est exploitée sur un contrôleur de domaine, toute\nl'architecture du réseau peut être perturbée.\n",
+  "title": "Vulnérabilité sous Windows 2000 dans la politique de sécurité locale",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS00-062.asp"
+    }
+  ]
+}

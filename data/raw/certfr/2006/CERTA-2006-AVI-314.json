@@ -1,0 +1,152 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ISS Proventia Desktop ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISS RealSecure Network Sensor 7.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISS RealSecure Desktop;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISS Proventia G Series ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISS Proventia A Series ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISS Proventia Server ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISS RealSecure Server Sensor 7.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISS Proventia M Series ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISS BlackICE Server Protection 3.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISS BlackICE PC Protection 3.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans les outils de sécurité d'ISS\nRealSecure/BlackICE. Ils analysent le protocole SMB/TCP afin de détecter\ndes codes malveillants visant la vulnérabilité SMB Mailhost décrite dans\nl'avis Microsoft MS06-035. Cependant, la phase d'analyse n'est pas\ncorrectement effectuée, et du trafic pouvant être légitime cause une\nerreur dans le système affecté, ou provoque une perte de connexion\nnécessitant un redémarrage. Une personne malveillante peut également\nenvoyer des paquets similaires afin de créer un déni de service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs, prénommés XPU (XPU 24.40) par ISS (cf. section\nDocumentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3840",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3840"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-035 du 11 juillet 2006    :",
+      "url": "http://www.microsoft.com/france/technet/security/Bulletin/MS06-035.mspx"
+    },
+    {
+      "title": "Site de mise à jour d'ISS :",
+      "url": "http://www.iss.net/download"
+    },
+    {
+      "title": "Avis du CERTA CERTA-2006-AVI-283 correspondant au bulletin    Microsoft MS06-035 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2006-AVI-283/"
+    },
+    {
+      "title": "Alerte de sécurité de ISS (Internet Security Systems) du 26    juillet 2006 :",
+      "url": "http://xforce.iss.net/xforce/alerts/id/230"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-314",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-07-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans les produits ISS\nRealSecure/BlackICE. Une personne malveillante peut envoyer un paquet\nspécialement conçu utilisant cette dernière afin de créer un déni de\nservice sur le système vulnérable.\n",
+  "title": "Vulnérabilité dans les produits ISS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Alerte de sécurité de ISS (Internet Security Systems) du 26 juillet 2006",
+      "url": null
+    }
+  ]
+}

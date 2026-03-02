@@ -1,0 +1,51 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft .NET Framework 1.0 ;</LI>    <LI>Microsoft .NET Framework 1.1 ;</LI>    <LI>Microsoft .NET Framework 2.0.</LI>  </UL>  <P>Microsoft .NET Framework 3.0 ne serait pas affecté par ces  vulnérabilités.</P>",
+  "content": "## Description\n\nTrois vulnérabilités ont été identifiées dans le composant logiciel\nMicrosoft .NET Framework. Ce dernier est souvent installé pour permettre\nle développement ou l'exécution d'applications tiers.\n\nLe service PE Loader ne vérifierait pas correctement un tampon. Cette\nvulnérabilité peut être exploitée par un utilisateur local ou distant,\nafin d'élever ses privilèges et exécuter du code arbitraire sur le\nsystème vulnérable.\n\nLes outils d'ASP.NET ne valideraient pas proprement les adresses\nréticulaires (URL) fournies en entrée. Une personne malveillante\npourrait dans certaines conditions exploiter cette vulnérabilité pour\nobtenir un accès illégitime sur un site Web utilisant ces outils.\n\nLe service Just In Time (JIT) Compiler ne vérifierait pas correctement\nun tampon. Une personne malveillante pourrait exploiter cette\nvulnérabilité en construisant une page Web particulière et en incitant\nl'utilisateur à la visiter (par un lien dans un courrier électronique\npar exemple).\n\n## Solution\n\nSe référer au bulletin de sécurité MS07-040 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0041",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0041"
+    },
+    {
+      "name": "CVE-2007-0043",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0043"
+    },
+    {
+      "name": "CVE-2007-0042",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0042"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-040 du 11 juillet 2007    :",
+      "url": "http://www.microsoft.com/france/technet/security/Bulletin/MS07-040.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-040 du 11 juillet 2007    :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-040.mspx"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-295",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités dans Microsoft .NET Framework",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-040 du 10 juillet 2007",
+      "url": null
+    }
+  ]
+}

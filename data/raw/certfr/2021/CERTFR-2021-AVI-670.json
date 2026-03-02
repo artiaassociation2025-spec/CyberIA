@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Kibana versions antérieures à 7.14.1",
+      "product": {
+        "name": "Kibana",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Elasticsearch versions antérieures à 7.14.1",
+      "product": {
+        "name": "Elasticsearch",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-37936",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-37936"
+    },
+    {
+      "name": "CVE-2021-22930",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-22930"
+    },
+    {
+      "name": "CVE-2021-22939",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-22939"
+    },
+    {
+      "name": "CVE-2021-37937",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-37937"
+    },
+    {
+      "name": "CVE-2021-22150",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-22150"
+    },
+    {
+      "name": "CVE-2021-22931",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-22931"
+    },
+    {
+      "name": "CVE-2021-22151",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-22151"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2021-AVI-670",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-09-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits\nElastic. Elles permettent à un attaquant de provoquer une exécution de\ncode arbitraire à distance, une élévation de privilèges et une injection\nde code indirecte à distance (XSS).\n",
+  "title": "Multiples vulnérabilités dans les produits Elastic",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Elastic du 01 septembre 2021",
+      "url": "https://www.elastic.co/fr/community/security/"
+    }
+  ]
+}

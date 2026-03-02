@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>webmin</TT> version 0.92-1.",
+  "content": "## Description\n\nwebmin est une interface web qui permet l'administration d'un système en\nlocal ou à distance depuis n'importe quel navigateur supportant les\nformulaires et les tableaux.\n\nDes permissions accordées par défaut sur le répertoire /var/webmin/ lors\nde l'installation de webmin permettent à un utilisateur mal intentionné\nde récupérer l'identifiant (sid) du super utilisateur (root) dans le\nfichier journal webmin.log. Cette information peut ensuite être\nréutilisée pour se connecter en tant que super utilisateur.\n\nCette vulnérabilité est exploitable en local.\n\n## Contournement provisoire\n\nSupprimer les permissions de lecture et d'écriture du répertoire\n/var/webmin/ pour les utilisateurs autres que le super utilisateur.\n\n## Solution\n\nMettre à jour la dernière version de webmin.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site officiel de webmin  /",
+      "url": "http://www.webmin.com"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-061",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-03-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, en utilisant des informations\nprésentes dans un fichier journal, se connecter à la machine avec les\nprivilèges du super utilisateur (root).\n",
+  "title": "Vulnérabilité sur webmin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste de diffusion Bugtraq",
+      "url": null
+    }
+  ]
+}

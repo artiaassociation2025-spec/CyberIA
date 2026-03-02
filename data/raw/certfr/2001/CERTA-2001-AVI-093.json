@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Windows NT 4.0.</P>",
+  "content": "## Description\n\nLe système RPC permet, lors d'utilisation d'applications réparties,\nd'appeler des fonctions situées sur une machine distante.\n\nRPC emploie le protocole IP (TCP ou UDP) pour communiquer avec ses\nclients. Un service RPC, disponible sur deux machines différentes, peut\nemployer un port différent pour chacune des machines. Avant le départ\nd'une session RPC, la machine cliente consulte RPC endpoint mapper sur\nle serveur pour connaître le port utilisé par RPC sur une machine\ndéterminée.\n\nUn paquet malformé envoyé vers le port 135 du module RPC endpoint mapper\npeut faire échouer ce service, rendant tous les services RPC\nindisponibles.\n\n## Contournement provisoire\n\nPour se prémunir contre les attaques provenant de l'internet, il\nconvient de bloquer le port 135/TCP au niveau du garde barrière.\n\n## Solution\n\nTélécharger le correctif sur le site Microsoft :\n\n-   Windows NT 4.0 Workstation, Server, Server Enterprise Edition :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=32503\n\n-   Le correctif pour NT 4.0 Terminal Server Edition n'est actuellement\n    pas disponible sur le site.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-048.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-093",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-09-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le module RPC endpoint mapper permet à\nun utilisateur mal intentionné, par le biais d'un paquet astucieusement\nconstruit vers le port 135 de la machine cible, d'engendrer un déni de\nservice sur le service RPC.\n",
+  "title": "Vulnérabilité dans le serveur RPC sous Windows NT 4.0",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-048",
+      "url": null
+    }
+  ]
+}

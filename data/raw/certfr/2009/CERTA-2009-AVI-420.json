@@ -1,0 +1,103 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Samba versions 3.0.36 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Samba versions 3.3.7 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Samba versions 3.4.2 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Samba versions 3.2.14 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois vulnérabilités ont été identifiées dans Samba :\n\n-   la première est relative à la fonction mount.cifs et permet à un\n    utilisateur distant malintentionné d'obtenir, sous certaines\n    conditions, le contenu de certains fichiers ;\n-   la seconde est relative à une erreur dans le traitement de certaines\n    requêtes SMB et permet à un utilisateur distant authentifié de\n    provoquer un déni de service ;\n-   la dernière concerne un problème dans la gestion de certaines\n    entrées dans le fichier /etc/passwd et permet à un utilisateur\n    distant de porter atteinte à la confidentialité des fichiers du\n    serveur vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2813",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2813"
+    },
+    {
+      "name": "CVE-2009-2948",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2948"
+    },
+    {
+      "name": "CVE-2009-2906",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2906"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sun Solaris du 17 novembre 2009 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-271069-1"
+    },
+    {
+      "title": "Bulletin de sécurité HP c01940841 du 27 janvier 2010 :",
+      "url": "http://itrc.hp.com/service/cki/docDisplay.do?docId=emr_na-c01940841"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-420",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2009-10-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin Sun Solaris.",
+      "revision_date": "2009-11-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin HP.",
+      "revision_date": "2010-02-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans Samba permettent à un\nutilisateur distant malintentionné de porter atteinte à la\nconfidentialité des données ou de provoquer un déni de service.\n",
+  "title": "Multiples vulnérabilités dans Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Samba du 01 octobre 2009",
+      "url": "http://www.samba.org/samba/security/CVE-2009-2813.html"
+    }
+  ]
+}

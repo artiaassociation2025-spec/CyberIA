@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les versions de <TT>file</TT>  antérieures à 3.41 sont vulnérables.  <P>La version 3.41 de <TT>file</TT> corrige cette  vulnérabilité.</P></p>",
+  "content": "## Description\n\nLa commande file présente sur de nombreux systèmes Unix/Linux est\nutilisée pour déterminer le type d'un fichier.\n\n  \n\nUne vulnérabilité de type débordement de mémoire est présente dans la\nroutine de traitement des en-têtes de fichiers ELF (Executable and\nLinking Format).\n\nEn utilisant la commande file pour déterminer le type d'un fichier\nhabilement constitué, un utilisateur peut déclencher l'exécution d'un\ncode arbitraire contenu dans ce fichier.\n\n## Solution\n\nAppliquer le correctif fourni par l'éditeur (Cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité NetBSD-SA2003-003 de NetBSD :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2003-003.txt.asc"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE-SA:2003:017 de SuSE :",
+      "url": "http://www.suse.com/de/security/2003_017_file.html"
+    },
+    {
+      "title": "Bulletin de sécurité 03.04.03 \"Locally exploitable buffer    overflow in file\" d'iDEFENSE :",
+      "url": "http://www.idefense.com/advisory/03.04.03.txt"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2003:086 de Red Hat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-086.html"
+    },
+    {
+      "title": "Bulletin de sécurité MDKSA-2003:030 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:030"
+    },
+    {
+      "title": "Bulletin de sécurité DSA-260-1 de Debian :",
+      "url": "http://www.debian.org/security/"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-038",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Debian.",
+      "revision_date": "2003-03-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de NetBSD.",
+      "revision_date": "2003-03-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de SuSE. Ajout référence CVE.",
+      "revision_date": "2003-03-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité de type débordement de mémoire est présente dans la\ncommande file.\n",
+  "title": "Vulnérabilité de la commande file",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité 03.04.03 de iDEFENSE",
+      "url": null
+    }
+  ]
+}

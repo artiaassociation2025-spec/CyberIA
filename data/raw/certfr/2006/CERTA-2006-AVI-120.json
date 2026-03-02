@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions X.Org server 1.0.0, X11R6.9 et X11R7.0.</P>",
+  "content": "## Description\n\nUne erreur dans la vérification des privilèges de l'utilisateur\neffectuée par la fonction getuid des serveurs graphiques X.Org 1.0.0,\nX11R6.9 et X11R7.0 permet à un utilisateur malveillant ayant accès à la\nmachine d'introduire des arguments arbitraires avec les options -logfile\nou -modulepath. En d'autres termes, cette vulnérabilité peut être\nutilisée pour écraser des fichiers existants ou exécuter du code\narbitraire avec les privilèges de l'administrateur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0745",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0745"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sun Solaris #102252 du 21 mars 2006 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-102252-1"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:056 du 21 mars    2006 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDKSA-2006:056"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SA:2006:016 du 21 mars 2006    :",
+      "url": "http://www.novell.com/linux/security/advisories/2006_16_xorgx11server.html"
+    },
+    {
+      "title": "Site officiel du projet X.Org :",
+      "url": "http://xorg.freedesktop.org/releases/"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour xorg-server du 21 mars    2006 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-xorg-server.html"
+    },
+    {
+      "title": "Mise à jour de sécurité Fedora Core 5 du 21 mars 2006 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/5/"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-120",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-03-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité SUSE et FreeBSD.",
+      "revision_date": "2006-03-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la vérification des privilèges des serveurs\ngraphiques X.Org 1.0.0, X11R6.9 et X11R7.0 permet à un utilisateur\nmalveillant d'exécuter du code arbitraire et d'obtenir les privilèges de\nl'administrateur.\n",
+  "title": "Vulnérabilité du serveur X.Org-X11",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de l'éditeur",
+      "url": null
+    }
+  ]
+}

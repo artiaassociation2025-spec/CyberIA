@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Commerce Server 2000.</P>",
+  "content": "## Description\n\nLes filtres ISAPI sont des programmes qui répondent à des requêtes HTTP\nreçues par le serveur WEB. Microsoft Commerce Server installe une\nbibliothèque dynamique (DLL) Windows avec le filtre ISAPI AuthFilter qui\npermet l'utilisation de différentes méthodes d'authentification.\n\nLe filtre AuthFilter contient un débordement de mémoire dans la partie\ntraitant la manipulation de ces authentifications. Un utilisateur mal\nintentionné peut effectuer un débordement de mémoire afin de stopper le\nservice commerce server ou d'exécuter du code arbitraire avec les\nprivilèges LocalSystem.\n\n## Solution\n\nAppliquer le correctif de sécurité fournit par Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=36683\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de Microsoft MS02-010 :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-010.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-044",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut exécuter du code arbitraire en\nexploitant une vulnérabilité du filtre AuthFilter.\n",
+  "title": "Vulnérabilité dans Microsoft Commerce Server 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS02-010",
+      "url": null
+    }
+  ]
+}

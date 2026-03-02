@@ -1,0 +1,105 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2000 Server Service Pack 3 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 64-Bit Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT Server 4.0 Terminal Server Edition Service Pack 6 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT Server 4.0 Service Pack 6a ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe service Windows Internet Naming Service (WINS) permet une résolution\ndes adresses IP en nom de machines NetBIOS. Selon Microsoft, une\nvulnérabilité dans le service Windows Internet Naming Service (WINS)\npermet à un utilisateur mal intentionné, via l'envoi de paquets\njudicieusement construits, de réaliser un déni de service.\n\n## Contournement provisoire\n\n-   Filtrer les ports 42/TCP et UDP/137 ;\n-   Désinstaller le service WINS s'il n'est pas utilisé.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité MS04-006 de Microsoft  :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS04-006.asp"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-031",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-02-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Selon Microsoft, une vulnérabilité dans le service Windows Internet\nNaming Service (WINS) permet à un utilisateur mal intentionné de\nréaliser un déni de service.\n",
+  "title": "Vulnérabilité de Windows Internet Naming Service (WINS)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Microsoft MS04-006",
+      "url": null
+    }
+  ]
+}

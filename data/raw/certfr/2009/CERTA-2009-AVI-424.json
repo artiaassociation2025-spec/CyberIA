@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les versions antérieures à Apache  2.2.14.</p>",
+  "content": "## Description\n\nTrois vulnérabilités ont été corrigées dans Apache :\n\n-   Deux vulnérabilités concernent le module mod_proxy_ftp. La première\n    est de type pointeur nul et peut provoquer un déni de service par le\n    biais d'un serveur FTP construit de manière particulière. La seconde\n    permet à un attaquant d'envoyer des commandes FTP arbitraires en\n    utilisant le serveur Apache en tant que serveur mandataire ;\n-   une troisième vulnérabilité concernant un bogue dans l'APR (Apache\n    Portable Runtime) permet à un attaquant de provoquer un déni de\n    service distant sur les serveurs Sun Solaris.\n\n## Solution\n\nLa version Apache 2.2.14 corrige ces vulnérabilités :\n\n    http://httpd.apache.org/download.cgi\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3094",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3094"
+    },
+    {
+      "name": "CVE-2009-3095",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3095"
+    },
+    {
+      "name": "CVE-2009-2699",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2699"
+    }
+  ],
+  "links": [
+    {
+      "title": "Liste des changements apportés à la version 2.2.14 de    Apache :",
+      "url": "http://httpd.apache.org/security/vulnerabilities_22.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-424",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-10-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentent dans Apache ont été corrigées. Ces\nvulnérabilités permettent de provoquer un déni de service à distance ou\nde contourner la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés à la version 2.2.14 de Apache",
+      "url": null
+    }
+  ]
+}

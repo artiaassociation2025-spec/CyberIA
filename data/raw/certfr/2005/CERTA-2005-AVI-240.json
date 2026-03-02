@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>FreeBSD</TT> dans sa version 5.4  sur les architectures multi-processeurs (Symetric Multi-Processor  : SMP) ou bien sur les architectures mono-processeur (Uni  Processor : UP) avec l'option noyau préemptif (PREEMPTION  kernel).",
+  "content": "## Description\n\nLa vulnérabilité permet à un utilisateur malveillant de modifier une\nadresse IP mise en cache. Ainsi, un paquet pourrait être traité\ncontrairement aux règles de filtrage définies dans la politique de\nsécurité.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).  \nEn attendant l'application des directives de l'éditeur, il est possible\nde se protéger en interdisant l'usage de la commande lookup tables.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de FreeBSD du 29 juin 2005 :",
+      "url": "ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-05:13.ipfw.asc"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-240",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-07-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Mauvaise application des règles de filtrage"
+    }
+  ],
+  "summary": "ipfw(8) est un des systèmes de filtrage installé nativement dans\nFreeBSD. Il permet le filtrage de paquets IP, leur redirection ainsi que\nla gestion du traffic. La commande ipfw lookup tables permet de\nspécifier efficacement de nombreuses adresses IP qui pourront être\nexploitées lors du contrôle de paquets.\n",
+  "title": "Vulnérabilités FreeBSD (ipfw)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise à jour de sécurité de l'éditeur du 29 juin 2006",
+      "url": null
+    }
+  ]
+}

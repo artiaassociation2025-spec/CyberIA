@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "WS_FTP Server 4.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "WS_FTP Server 3.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "WS_FTP Server 5.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nWS_FTP Server est un serveur FTP.\n\nPlusieurs vulnérabilités de type débordement de mémoire ont été\ndécouvertes dans les commandes suivantes : SITE, XMKD, MKD et RNFR.\n\nCes vulnérabilités peuvent être exploitées pour permettre à une personne\nmalveillante d'exécuter du code arbitraire à distance, en appellant les\ncommandes vulnérables avec un argument variable d'environ 768 octets.\n\n## Contournement provisoire\n\n-   Autoriser l'accés aux serveurs vulnérables uniquement aux\n    utilisateurs de confiance ;\n-   filtrer les requêtes anormalement longues au moyen d'un serveur\n    mandataire proxy FTP.\n\n## Solution\n\nA ce jour, aucun correctif n'est proposé par l'éditeur. (cf.\nDocumentation)\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de l'éditeur :",
+      "url": "http://www.ipswitch.com"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-381",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-12-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans WS_FTP Server permettent à un\nutilisateur mal intentionné d'exécuter du code arbitraire à distance sur\nle système vulnérable.\n",
+  "title": "Vulnérabilité dans WS_FTP Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "du 29 novembre 2004",
+      "url": "http://www.securityfocus.com/archive/1/382624/2004-11-27/2004-12-03/0"
+    },
+    {
+      "published_at": null,
+      "title": "Liste de diffusion Bugtraq ``Multiple buffer overflows in WS_FTP Server''",
+      "url": null
+    }
+  ]
+}

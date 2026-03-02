@@ -1,0 +1,126 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SquirrelMail versions 1.4.3 RC1 à 1.4.4 RC1(vulnérabilité CAN-2005-0075).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SquirrelMail versions 1.4.0 RC1 à 1.4.4 RC1 (vulnérabilités CAN-2005-0103 et CAN-2005-104) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSquirrelMail est une application de type Webmail écrite en PHP4.\nPlusieurs vulnérabilités ont été découvertes dans SquirrelMail :\n\n-   une vulnérabilité présente dans la page `prefs.php` permet à un\n    individu mal intentionné d'exécuter du code arbitraire sur le\n    serveur SquirrelMail. Cette vulnérabilité affecte uniquement les\n    personnes ayant activé la variable `register_globals` à On\n    (vulnérabilité CAN-2005-0075) ;\n-   une vulnérabilité dans le traitement des variables des adresses\n    réticulaires (URL) permet à un individu mal intentionné, via une URL\n    judicieusement construite, d'inclure une page web malicieuse dans\n    SquirrelMail (vulnérabilité CAN-2005-0103) ;\n-   une vulnérabilité de type `Cross Site Scripting` est présente dans\n    la page `webmail.php` qui permet à un individu mal intentionné\n    d'exécuter du code arbitraire sur les clients accédant à\n    SquirrelMail (vulnérabilité CAN-2005-104).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD pour squirrelmail et    ja-squirrelmail du 01 juin 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-squirrelmail.html"
+    },
+    {
+      "title": "Bulletin de sécurité SquirrelMail \"Frame content changing    in webmail.php\" du 19 janvier 2005 :",
+      "url": "http://www.squirrelmail.org/security/issue/2005-01-19"
+    },
+    {
+      "title": "Bulletin de sécurité SquirrelMail \"Local file inclusions un    prefs.php\" du 14 janvier 2005 :",
+      "url": "http://www.squirrelmail.org/security/issue/2005-01-14"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200501-39 du 28 janvier    2005 :",
+      "url": "http://security.gentoo.org/glsa/glsa-200501-39.xml"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SR:2005:014 du 07 juin 2005    :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_14_sr.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-662 du 01 février 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-662"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD squirrelmail    et ja-squirrelmail :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/mail/squirrelmail/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat (v.4) RHSA-2005:099 du 15    février 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-099.html"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD squirrelmail    et ja-squirrelmail :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/mail/ja-squirrelmail/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat (v.3) RHSA-2005:135 du 10    février 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-135.html"
+    },
+    {
+      "title": "Bulletin de sécurité SquirrelMail \"XSS vulnerability in    webmail.php\" du 20 janvier 2005 :",
+      "url": "http://www.squirrelmail.org/security/issue/2005-01-20"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-038",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-01-31T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-662 et de la référence CVE CAN-2005-0152.",
+      "revision_date": "2005-02-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo GLSA 200501-39.",
+      "revision_date": "2005-02-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat RHSA-2005:135.",
+      "revision_date": "2005-02-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence à un second bulletin de sécurité RedHat, RHSA-2005:099.",
+      "revision_date": "2005-02-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité NetBSD.",
+      "revision_date": "2005-03-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SUSE.",
+      "revision_date": "2005-06-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2005-06-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Trois vulnérabilités présentes dans SquirrelMail permettent d'exécuter\ndu code arbitraire sur le serveur ou sur le client\n(`Cross Site Scripting`).\n",
+  "title": "Multiples vulnérabilités dans SquirrelMail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité SquirrelMail",
+      "url": null
+    }
+  ]
+}

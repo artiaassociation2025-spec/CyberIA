@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "xloadimage 4.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "xli 1.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nxloadimage et xli sont des applications qui permettent de visualiser des\nimages sous le serveur graphique X11.\n\nUne vulnérabilité de type débordement de la pile mémoire, dans les\napplications xloadimage et xli, est causée par une erreur dans la\ngestion des titres d'un fichier image .NIFF. Cette vulnérabilité peut\nêtre exploitée par un utilisateur distant mal intentionné, via une image\nau format .NIFF habilement constituée, afin d'exécuter du code\narbitraire.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité Fedora Core 3 pour    xloadimage :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/3/"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-858 du 10 octobre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-858"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-392",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-10-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-858.",
+      "revision_date": "2005-10-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans l'application xloadimage, également inclu dans\nxli, permet à un utilisateur mal intentionné d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilité de xli",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-859 du 10 octobre 2005",
+      "url": "http://www.debian.org/security/2005/dsa-859"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "xine versions antérieures à 1.1.15.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nxine est un lecteur multimédia pour GNU/Linux et Unix.\n\nPlusieurs vulnérabilités sont présentes dans xine-lib :\n\n-   la première (CVE-2008-3231) concerne la gestion des fichiers au\n    format OGG, une personne malveillante peut réaliser un déni de\n    service à distance par le biais d'un fichier au format OGG\n    spécifiquement conçu ;\n-   la seconde est une vulnérabilité de type débordement de pile dans la\n    gestion des informations ID3 de certains fichiers ;\n-   la troisième, de type débordement de mémoire, concerne la gestion de\n    fichier au format Real Media.\n\nToutes ces vulnérabilités peuvent être exploitées à distance par une\npersonne malveillante pour réaliser un déni de service par le biais de\nfichiers spécifiquement construits.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3231",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3231"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site de téléchargement du projet xine :",
+      "url": "http://xine.sourceforge.net"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-422",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-08-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de xine permettent de réaliser un déni de\nservice à distance.\n",
+  "title": "Multiples vulnérabilités dans xine",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Journal des changements de xine",
+      "url": "http://sourceforge.net/project/shownotes.php?release_id=619869"
+    }
+  ]
+}

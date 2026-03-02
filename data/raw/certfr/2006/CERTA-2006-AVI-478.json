@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les noyaux Linux 2.6.X de version antérieure à 2.6.18.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans certains noyaux Linux. Elle\nconcerne le marquage des flux associés à la qualité de service fournie\navec IPv6. La séquence utilisée au cours du marquage (sous forme de\nflowlabels) ne serait pas manipulée correctement, et pourrait provoquer\nun déni de service local sur le système vulnérable.\n\n## Solution\n\nSe référer au noyau Linux 2.6.18.2 pour l'obtention des correctifs (cf.\nsection Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-5619",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5619"
+    }
+  ],
+  "links": [
+    {
+      "title": "Note des changements du noyau 2.6.18.2 du 30 octobre 2006 :",
+      "url": "http://kernel.org/pub/linux/kernel/v2.6/ChangeLog-2.6.18.2"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-478",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité du noyau Linux avec IPv6",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de modification du noyau 2.6 du 30 octobre 2006",
+      "url": null
+    }
+  ]
+}

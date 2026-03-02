@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Avira Antivir ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Panda Antivirus Platinum 6.x et 7.x, Titanium, Entreprise Suite et Small Business Edition.",
+      "product": {
+        "name": "Small Business",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Avast! home/professionnal 4.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Barracuda Spam Firewall ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans la gestion des archives au format zoo peut\nconduire à une boucle infinie et la consommation de toute la ressource\nprocesseur. Elle permet à un utilisateur malveillant de réaliser un déni\nde service à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nPour Avast!, migrer en version 4.7.981 ou ultérieure.\n\nPour Avira, migrer la bibliothèque avpack32.dll en version 7.3.0.6. La\nsociété annonce avoir corrigé la vulnérabilité de 22 mars 2007.\n\nPour Barracuda, migrer en firmware 3.4 ou ultérieur et en version de\ndéfinition de virus 2.0.6399 ou ultérieure.\n\nPour Panda, la société annonce que la mise à jour corrigeant la\nvulnérabilité est automatique. Le correctif date du 02 avril 2007.\n",
+  "cves": [
+    {
+      "name": "CVE-2007-1671",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1671"
+    },
+    {
+      "name": "CVE-2007-1672",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1672"
+    },
+    {
+      "name": "CVE-2007-1669",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1669"
+    },
+    {
+      "name": "CVE-2007-1670",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1670"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de version Avast du 30    avril 2007 :",
+      "url": "http://www.avast.com/eng/avast-4-home_pro-revision-history.html"
+    },
+    {
+      "title": "Bulletin de sécurité Barracuda    du 04 mai 2007 :",
+      "url": "http://www.barracudanetworks.com/ns/resources/tech_alert.php"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-212",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-05-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la gestion des archives au format zoo permet à un\nutilisateur malveillant de réaliser un déni de service à distance.\n",
+  "title": "Vulnérabilité de plusieurs produits de sécurité",
+  "vendor_advisories": []
+}

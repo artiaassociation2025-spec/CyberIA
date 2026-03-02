@@ -1,0 +1,47 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Apache Tomcat, versions 5.5.x, 6.0.x et  7.0.x.</p>",
+  "content": "## Description\n\nUne vulnérabilité dans Apache Tomcat affecte le traitement du protocole\nAJP (Apache JServ Protocol).\n\nElle permet à un utilisateur malveillant d'insérer une adresse IP de\nclient ou le nom d'un utilisateur authentifié, et de provoquer le\nmélange des réponses de requêtes d'utilisateurs différents.\n\n## Solution\n\nLes correctifs sont les suivants selon les branches :\n\n-   révision 1162960, puis version 5.5.34 dès publication ;\n-   révision 1162959, puis version 6.0.34 dès publication ;\n-   révision 1162958, puis version 7.0.21 dès publication.\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-3190",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3190"
+    }
+  ],
+  "links": [
+    {
+      "title": "Annonces de versions Apache Tomcat du 29 août 2011 :",
+      "url": "http://tomcat.apache.org/security-6.html"
+    },
+    {
+      "title": "Annonces de versions Apache Tomcat du 29 août 2011 :",
+      "url": "http://tomcat.apache.org/security-7.html"
+    },
+    {
+      "title": "Annonces de versions Apache Tomcat du 29 août 2011 :",
+      "url": "http://tomcat.apache.org/security-5.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-485",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-08-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Apache Tomcat permet à un utilisateur malveillant\nde contourner la politique de sécurité et de porter atteinte à\nl'intégrité et à la confidentialité de données.\n",
+  "title": "Vulnérabilité dans Apache Tomcat",
+  "vendor_advisories": []
+}

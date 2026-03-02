@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toute distribution <SPAN class=\n  \"textit\">Gentoo</SPAN> (quelle que soit l'architecture) utilisant  <SPAN class=\"textit\">Portage</SPAN> dans une version antérieure à  la 2.0.50-r3.</p>",
+  "content": "## Description\n\nPortage est l'outil de gestion des paquetages logiciels de la\ndistribution Gentoo Linux. Une faille dans la gestion d'un fichier\ntemporaire peut être exploitée pour écraser des fichiers système\nsensibles en créant un lien (non symbolique). Les systèmes avec une\npartition dédiée à /tmp ne sont donc pas affectés.\n\n## Solution\n\nMettre à jour en se référant à l'avis de sécurité Gentoo.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-124",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-04-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service en local"
+    },
+    {
+      "description": "Altération de la configuration par un utilisateur local"
+    }
+  ],
+  "summary": "Une faille dans <span class=\"textit\">Portage</span> peut être utilisée\nlocalement pour écraser tout fichier, en particulier de configuration.\n",
+  "title": "Faille de l'outil Portage sous Gentoo Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Gentoo",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200404-01.xml"
+    }
+  ]
+}

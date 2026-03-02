@@ -1,0 +1,56 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Nagios, pour les versions antérieures à 3.1.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Nagios",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans l'outil d'administration Nagios.\nLe script statuswml.cgi ne manipule pas correctement les données\nfournies pour le paramètre ping.\n\nL'exploitation de cette vulnérabilité permet de contourner la politique\nde sécurité mise en place et d'exécuter des commandes arbitraires sur le\nsystème vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Note de suivi de bogue Nagios 15 du 29 mai 2009 :",
+      "url": "http://tracker.nagios.org/view.php?id=15"
+    },
+    {
+      "title": "Note de changement de version Nagios mise à jour le 23 juin    2009 :",
+      "url": "http://www.nagios.org/development/history/core-3x/"
+    },
+    {
+      "title": "Site de téléchargement Nagios :",
+      "url": "http://www.nagios.org/download"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-249",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-06-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans l'outil d'administration Nagios.\nL'exploitation de cette dernière permet de contourner la politique de\nsécurité mise en place et d'exécuter des commandes arbitraires sur le\nsystème vulnérable.\n",
+  "title": "Vulnérabilité dans Nagios",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de mise à jour Nagios du 23 juin 2009",
+      "url": null
+    }
+  ]
+}

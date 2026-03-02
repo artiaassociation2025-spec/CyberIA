@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "LANDesk Management Suite 8.7.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le produit d'administration\nLANDesk Management Suite. Ce dernier permet de prendre en charge des\ntâches automatiques de gestion d'un parc de systèmes d'informations.\n\nIl ouvre par défaut un service d'alerte (aolnsrvr.exe) en écoute sur le\nport UDP 65535. Celui-ci ne manipulerait pas correctement les\ninformations reçues, pouvant ainsi conduire à un débordement de tampon.\n\nUne personne malveillante pourrait exploiter cette vulnérabilité pour\nexécuter du code arbitraire à distance, avec les droits de l'utilisateur\nSYSTEM.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-1674",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1674"
+    }
+  ],
+  "links": [
+    {
+      "title": "Base de connaissances LanDesk numéro 4142 publiée le 13    avril 2007 :",
+      "url": "http://kb.landesk.com/al/12/4/article.asp?aid=4142&n=1&tab=search&bt=4n&s=1"
+    },
+    {
+      "title": "Avis de sécurité du groupe de recherche 3Com TippingPoint    TSRT-07-04 du 13 avril 2007 :",
+      "url": "http://www.tippingpoint.com/security/advisories/TSRT-07-04.html"
+    },
+    {
+      "title": "Page d'accueil de l'application LANDesk Management Suite :",
+      "url": "http://www.landesk.fr/Products/LDMS/"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-176",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-04-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans LANDesk Management Suite",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Base de connaissances LANDesk 4142 du 13 avril 2007",
+      "url": null
+    }
+  ]
+}

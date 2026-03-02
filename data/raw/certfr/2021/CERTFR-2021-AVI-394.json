@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Prime Infrastructure versions antérieures à 3.9",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Modeling Lab versions 2.x antérieures à 2.2.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco EPN Manager versions antérieures à 5.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-1531",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-1531"
+    },
+    {
+      "name": "CVE-2021-1487",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-1487"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2021-AVI-394",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-05-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Cisco.\nCertaines d'entre elles permettent à un attaquant de provoquer une\nexécution de code arbitraire à distance, un déni de service et une\natteinte à l'intégrité des données.\n",
+  "title": "Multiples vulnérabilités dans les produits Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-cml-cmd-inject-N4VYeQXB du 19 mai 2021",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cml-cmd-inject-N4VYeQXB"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-pi-epnm-cmd-inj-YU5e6tB3 du 19 mai 2021",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-pi-epnm-cmd-inj-YU5e6tB3"
+    }
+  ]
+}

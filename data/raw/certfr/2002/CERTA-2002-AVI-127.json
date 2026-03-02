@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Oracle9i Database Release 9.0.x sur VM.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Oracle9i Database Release 9.0.x sur Windows ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe démon réseau Oracle Net Listener (port 1521 par défaut) est le\ncomposant principal d' Oracle Net, l'application qui permet d'accèder à\ndistance à une base de donnée Oracle.\n\nUn utilisateur mal intentionné peut, par le biais de requêtes\nmalicieusement construites, effectuer un débordement de mémoire sur le\ndémon et récupérer les privilèges du super utilisateur du système.\n\n## Solution\n\nAppliquer le correctif 2367681 disponible sur le site d'oracle (se\nréférer à la section documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-127",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente sur le composant principal d'Oracle Net\n(Oracle Net Listener) permet à un utilisateur mal intentionné\nd'effectuer un déni de service sur la machine où est installé ce\nservice.\n",
+  "title": "Vulnérabilité sur Oracle Net",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Oracle #34",
+      "url": "http://technet.oracle.com/deploy/security/pdf/net9_dos_alert.pdf"
+    }
+  ]
+}

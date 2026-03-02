@@ -1,0 +1,172 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenBSD version 2.0 à la version 3.1 incluse ;",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD jusqu'à la version 4.6.1-RELEASE-p3 incluse ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Microsystems Solaris 2.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Microsystems Solaris 7 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Microsystems Solaris 2.5.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Microsystems Solaris 8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetBSD version 1.4.* à la version 1.6 beta ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Microsystems Solaris 9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Toutes les versions de MIT Kerberos version 5 jusqu'à la version krb5-1.2.5 incluse ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenAFS version 1.0 à 1.2.5 et version 1.3.0 à 1.3.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mac OS X ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSun RPC (Remote Procedure Call) est un protocole de type client/serveur\nutilisé pour l'implémentation d'applications réparties.\n\nCelui-ci utilise de manière transparente le protocole XDR (eXternal Data\nRepresentation) afin de résoudre les problèmes de non unicité de\nreprésentation interne des objets entre différentes machines.\n\nUne vulnérabilité de type débordement de mémoire à été découverte dans\nla primitive de filtrage `xdr_array` utilisée par de nombreux services\nRPC. Un utilisateur mal intentionné peut exploiter cette vulnérabilité\nafin d'exécuter du code arbitraire à distance avec les privilèges de\nl'utilisateur `root`.\n\nCette vulnérabilité est également présente dans de nombreuses\napplications utilisant des librairies dérivées de la librairie Sun RPC\n(libc, glibc ou dietlibc), notamment dans certains serveurs du système\nde fichiers distribué AFS (volserver, vlserver, ptserver, buserver) , ou\nbien le système d'administration de Kerberos 5 (kadmind).\n\n## Contournement provisoire\n\nLe correctif pour `Sun solaris systems` est maintenant disponible. Il\nest toutefois conseillé de :\n\n-   filtrer l'accès au RPC Portmapper (111/TCP et UDP) ;\n-   filtrer l'accès à la plage des ports hauts utilisés par les services\n    RPC ;\n-   d'arrêter les services RPC non utilisés.\n\n## Solution\n\nAppliquer le correctif selon l'éditeur (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2002-25.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-163",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins de sécurité SUN, NetBSD, SGI, MIT Kerberos et Apple.",
+      "revision_date": "2002-08-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins du CERT/CC, OpenAFS et Debian.",
+      "revision_date": "2002-08-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins Debian, Red Hat et SGI.",
+      "revision_date": "2002-08-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de SuSE.",
+      "revision_date": "2002-09-03T00:00:00.000000"
+    },
+    {
+      "description": "correction d'un lien.",
+      "revision_date": "2002-10-17T00:00:00.000000"
+    },
+    {
+      "description": "correction d'un lien.",
+      "revision_date": "2002-11-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans une primitive de filtrage XDR\nutilisée dans les Sun RPC.\n",
+  "title": "Vulnérabilité dans les Sun RPC",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ISS",
+      "url": null
+    }
+  ]
+}

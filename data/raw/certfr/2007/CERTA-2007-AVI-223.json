@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>MadWiFi, pour les versions antérieures à 0.9.3.1.</P>",
+  "content": "## Description\n\nTrois vulnérabilités ont été identifiées dans les pilotes Linux MadWifi,\nutilisés pour certaines interfaces d'accès aux résea ux sans-fil\nutilisant une puce atheros :\n\n1.  la fonction ath_beacon_config() pourrait effectuer une division par\n    zéro pour le calcul de la macro howmany, sans vérifier la valeur du\n    dénominateur intval. Cette vulnérabilité pourrait être exploitée à\n    distance, par une trame Wi-Fi spécialement construite, afin de\n    perturber le système.\n2.  la fonction ieee_80211_ioctl_getwmmparams ne contrôlerait pas\n    correctement un index de tableau. Cette vulnérabilité peut être\n    exploitée par un utilisateur local et ayant des droits limités, afin\n    d'élever ses privilèges ou d'accéder à certaines données de la\n    mémoire.\n3.  les paquets de type Fast Frame (méthode de compression de données,\n    pouvant s'utiliser avec le standard 802.11e associé à la qualité de\n    service) ne sont pas correctement contrôlés. Leur longueur n'est pas\n    vérifiée, et l'interprétation d'un paquet spécialement construit\n    pourrait ainsi rendre le système indisponible.\n\n## Solution\n\nSe référer aux tickets de sécurité du projet MadWifi pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-1335",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1335"
+    },
+    {
+      "name": "CVE-2007-1334",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1334"
+    },
+    {
+      "name": "CVE-2007-1270",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1270"
+    }
+  ],
+  "links": [
+    {
+      "title": "Ticket de sécurité 1335 du projet MadWifi :",
+      "url": "http://madwifi.org/ticket/1335"
+    },
+    {
+      "title": "Ticket de sécurité 1270 du projet MadWifi :",
+      "url": "http://madwifi.org/ticket/1270"
+    },
+    {
+      "title": "Site du projet MadWifi :",
+      "url": "http://madwifi.org"
+    },
+    {
+      "title": "Ticket de sécurité 1334 du projet MadWifi :",
+      "url": "http://madwifi.org/ticket/1334"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-223",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-05-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Trois vulnérabilités ont été identifiées dans les pilotes Linux MadWifi\nutilisés pour certaines interfaces d'accès aux réseaux sans-fil. Deux\nd'entre elles sont exploitables à distance, par l'émission de trames\nsans-fil spécialement construites. Les conséquences peuvent être un\ndysfonctionnement de la fonctionnalité sans-fil ou l'exécution de code\narbitraire sur le système vulnérable.\n",
+  "title": "Vulnérabilités dans les pilotes sans-fil MadWifi",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Tickets de sécurité du site MadWiFi 1270, 1334 et 1335",
+      "url": null
+    }
+  ]
+}

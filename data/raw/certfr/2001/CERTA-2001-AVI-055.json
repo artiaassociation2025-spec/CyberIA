@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Explorer 5.5.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 5.01 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Première vulnérabilité :\n\n    Une fonctionnalité d'Internet Explorer permet de vérifier la\n    validité des certificats utilisés notamment pour les sessions\n    HTTPS/SSL (certificats X.509) par le biais de CRL (Gestion de la\n    liste des révocations).\n\n    Une vulnérabilité présente dans cette fonctionnalité permet à un\n    concepteur de site Web mal intentionné de contourner certaines\n    vérifications effectuées au travers des CRL dans le but de tromper\n    les utilisateurs sur l'identité du site.\n\n-   Deuxième vulnérabilité :\n\n    Une vulnérabilité dans l'interprétation par Internet Explorer des\n    URL permet de faire afficher dans la barre de navigation une adresse\n    différente de celle visualisée. Un concepteur de pages Web mal\n    intentionné peut ainsi tromper un utilisateur distant sur l'identité\n    de son site.\n\n## Solution\n\nTélécharger le correctif sur le site Microsoft :\n\n    http://www.microsoft.com/windows/ie/download/critical/q295106/default\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-027.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-055",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-05-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation de l'identité d'un serveur web"
+    },
+    {
+      "description": "Contournement des mécanismes de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes dans Microsoft Internet\nExplorer.\n\nLa première vulnérabilité concerne la vérification des certificats\nX.509, la seconde concerne une mauvaise interprétation des URL.\n",
+  "title": "Vulnérabilités dans Internet Explorer 5.01 et 5.5",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-027",
+      "url": null
+    }
+  ]
+}

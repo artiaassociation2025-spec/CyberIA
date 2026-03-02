@@ -1,0 +1,158 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BEA WebLogic Express 9.X.",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA WebLogic Server 8.X ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA WebLogic Express 6.X ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA WebLogic Express 8.X ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA WebLogic Express 7.X ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA WebLogic Server 9.X ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA WebLogic Server 6.X ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA WebLogic Server 7.X ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nBEA WebLogic Server et WebLogic Express sont des serveurs d'application\naidant à la création et au développement des services Web. Plusieurs\nvulnérabilités impliquant la majorité des versions actuelles ont été\nidentifiées. Elles permettent à un utilisateur malveillant de contourner\ndes politiques de sécurité. Parmi celles-ci :\n\n-   Des données sensibles peuvent être interceptées au cours d'échanges\n    JTA (pour Java Transaction API) dans des canaux non-sécurisés.\n-   Un client exigeant un canal d'échange sécurisé peut ne pas l'obtenir\n    du fait d'une mauvaise configuration de la Qualité de Service.\n-   Sous certaines conditions, le mot de passe administrateur est écrit\n    en clair dans des fichiers système du serveur.\n-   Une mauvaise compilation de code JSP (JavaServer Pages) permet dans\n    certains cas d'accéder au code source à distance.\n-   L'adresse IP propre du serveur est visible dans la console\n    d'administration de certaines versions.\n-   Si l'accès à distance par HTTP à une application web ou un JWS\n    protégé (pour Java Web Start) échoue, le nom d'accès et le mot de\n    passe sont écrits dans les journaux du serveur.\n-   L'accès à des clefs privées du serveur n'est pas restreint. Les\n    clefs sont donc accessibles par des applications tierces installées\n    sur la même machine que le serveur.\n-   La commande stopWebLogic.sh du serveur peut entraîner l'affichage du\n    mot de passe administrateur en clair dans la sortie standard stdout.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité BEA06-128-00 de BEA Systems :",
+      "url": "http://dev2dev.bea.com/pub/advisory/190"
+    },
+    {
+      "title": "Bulletin de sécurité BEA06-132-00 de BEA Systems :",
+      "url": "http://dev2dev.bea.com/pub/advisory/194"
+    },
+    {
+      "title": "Bulletin de sécurité BEA06-124-00 de BEA Systems :",
+      "url": "http://dev2dev.bea.com/pub/advisory/186"
+    },
+    {
+      "title": "Bulletin de sécurité BEA06-133-00 de BEA Systems :",
+      "url": "http://dev2dev.bea.com/pub/advisory/195"
+    },
+    {
+      "title": "Bulletin de sécurité BEA06-126-00 de BEA Systems :",
+      "url": "http://dev2dev.bea.com/pub/advisory/188"
+    },
+    {
+      "title": "Bulletin de sécurité BEA06-127-00 de BEA Systems :",
+      "url": "http://dev2dev.bea.com/pub/advisory/189"
+    },
+    {
+      "title": "Bulletin de sécurité BEA06-125-00 de BEA Systems :",
+      "url": "http://dev2dev.bea.com/pub/advisory/187"
+    },
+    {
+      "title": "Bulletin de sécurité BEA06-129-00 de BEA Systems :",
+      "url": "http://dev2dev.bea.com/pub/advisory/191"
+    },
+    {
+      "title": "Bulletin de sécurité BEA06-131-00 de BEA Systems :",
+      "url": "http://dev2dev.bea.com/pub/advisory/193"
+    },
+    {
+      "title": "Bulletin de sécurité BEA06-130-00 de BEA Systems :",
+      "url": "http://dev2dev.bea.com/pub/advisory/192"
+    },
+    {
+      "title": "Bulletin de sécurité BEA06-121-00 de BEA Systems :",
+      "url": "http://dev2dev.bea.com/pub/advisory/181"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-203",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans certaines versions de\nWebLogic Server et WebLogic Express fournies par BEA Systems Inc. Elles\npermettent à un utilisateur malveillant de contourner la politique de\nsécurité par différentes manières.\n",
+  "title": "Multiples vulnérabilités de BEA WebLogic",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité du vendeur BEA Systems Inc.",
+      "url": null
+    }
+  ]
+}

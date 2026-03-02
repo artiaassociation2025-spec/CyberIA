@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>ISC BIND, version 9.8.0.</p>",
+  "content": "## Description\n\nQuand la fonctionnalité de substitution de réponse DNS, RPZ, est\nutilisée, une requête spécialement conçue peut déclencher la terminaison\ndu serveur de noms de domaine.\n\nCe problème est également provoqué par des serveurs non malveillants\nutilisant DNSSEC.\n\n## Solution\n\nLa version 9.8.0-P1 d'ISC BIND corrige ce problème.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1907",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1907"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-279",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-05-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans ISC BIND est exploitable par une utilisateur\nmalveillant pour provoquer un déni de service à distance.\n",
+  "title": "Vulnérabilité dans ISC BIND",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ISC du 05 mai 2011",
+      "url": "https://www.isc.org/CVE-2011-1907"
+    }
+  ]
+}

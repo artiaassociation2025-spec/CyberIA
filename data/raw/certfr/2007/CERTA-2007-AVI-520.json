@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Squid, versions antérieures à la  2.6.STABLE18.</p>",
+  "content": "## Description\n\nSquid est un serveur mandataire (proxy). Il est vulnérable à un défaut\nde contrôle des bornes lors de la mise à jour de son cache. Cette\nvulnérabilité permet à un utilisateur mal intentionné de provoquer un\ndéni de service du serveur mandataire (CVE-2007-6239).\n\nLe correctif initial était lui-même vulnérable à une attaque en déni de\nservice (CVE-2008-1612).\n\n## Solution\n\nLa version 2.6.STABLE18 corrige le problème.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-6239",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6239"
+    },
+    {
+      "name": "CVE-2008-1612",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1612"
+    }
+  ],
+  "links": [
+    {
+      "title": "Alerte de Secunia numéro 27910 du 04 décembre 2007 :",
+      "url": "http://secunia.com/advisories/27910/"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-601-1 du 14 avril 2008 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-601-1"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2008:0214 du 08 avril 2008    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2008-0214.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1646 du 07 octobre 2008 :",
+      "url": "http://www.debian.org/security/2008/dsa-1646"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2008:134 du 04 juillet    2008 :",
+      "url": "http://www.mandriva.com/archives/security/advisories"
+    },
+    {
+      "title": "Bulletin de sécurité Fedora FEDORA-2008-2740 du 29 avril    2008 :",
+      "url": "https://www.redhat.com/archives/fedora-package-announce/2008-April/msg00560.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-520",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-05T00:00:00.000000"
+    },
+    {
+      "description": "Modification des versions affectées, ajout des CVE et des correctifs des distributions Linux.",
+      "revision_date": "2008-10-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Squid est affecté par une vulnérabilité permettant de réaliser un déni\nde service à distance.\n",
+  "title": "Vulnérabilité de Squid",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Squid SQUID-2007:2 du 27 novembre 2007",
+      "url": "http://www.squid-cache.org/Advisories/SQUID-2007_2.txt"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache Tomcat 6.0.12 à 6.0.29.",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat 7.0.0 à 7.0.4 ;",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nApache Tomcat n'assainit pas correctement les entrées passées via les\nparamètres short et order by dans sessionsList.jsp. Cette vulnérabilité\npeut être exploitée par un utilisateur pour faire de l'injection de code\nindirecte à distance.\n\n## Solution\n\nLes versions corrigées sont disponibles sur le serveur subversion de\nApache, en attendant la sortie des versions 7.0.5 et 6.0.30. Se référer\nau bulletin de sécurité de l'éditeur pour l'obtention des correctifs\n(cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-4172",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4172"
+    }
+  ],
+  "links": [
+    {
+      "title": "Liste des vulnérabilités affectant Apache Tomcat 6 :",
+      "url": "http://tomcat.apache.org/security-6.html"
+    },
+    {
+      "title": "Liste des vulnérabilités affectant Apache Tomcat 7 :",
+      "url": "http://tomcat.apache.org/security-7.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-567",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-11-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    }
+  ],
+  "summary": "Des vulnérabilités ont été découvertes dans Apache Tomcat. Elles\npermettent à un utilisateur de faire de l'injection de code indirecte à\ndistance.\n",
+  "title": "Vulnérabilités dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des Vulnérabilités affectant Apache Tomcat 6.x",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Liste des vulnérabilités affectant Apache Tomcat 7.x",
+      "url": null
+    }
+  ]
+}

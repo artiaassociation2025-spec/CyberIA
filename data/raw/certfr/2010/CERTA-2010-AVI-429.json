@@ -1,0 +1,51 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Samba 3.5.4 et versions précédentes.</p>",
+  "content": "## Description\n\nLe serveur Samba ne vérifie pas correctement les identifiants Windows\n(SID). Ce défaut peut être utilisé pour provoquer un débordement de\nmémoire par un utilisateur malveillant et exécuter du code arbitraire à\ndistance.\n\n## Solution\n\nLa version 3.5.5 de Samba corrige ce problème.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2069",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2069"
+    },
+    {
+      "name": "CVE-2010-3069",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3069"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-2109 du 16 septembre 2010 :",
+      "url": "http://www.debian.org/security/2010/dsa-2109"
+    },
+    {
+      "title": "Bulletin de sécurité Samba CVE-2010-2069 du 14 septembre    2010 :",
+      "url": "http://us1.samba.org/samba/security/CVE-2010-2069.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-429",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-09-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin Debian.",
+      "revision_date": "2010-09-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Un débordement de mémoire est présent dans le serveur Samba et peut être\nexploité par un utilisateur malveillant pour exécuter du code arbitraire\nà distance.\n",
+  "title": "Vulnérabilité dans Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de la version Samba 3.5.5",
+      "url": "http://us1.samba.org/samba/history/samba-3.5.5.html"
+    }
+  ]
+}

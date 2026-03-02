@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Java Web Server de Sun Microsystems sous Solaris et Windows  NT.</P>",
+  "content": "## Description\n\nLe module d'administration de Sun Java Web Server est accessible par\ndéfaut sur le port 9090. Un utilisateur mal intentionné peut, par le\nbiais d'une URL spécifique, avoir accès aux « servlets » de\nl'application et écrire du code Java permettant d'exécuter du code\narbitraire sur la machine cible.\n\n## Contournement provisoire\n\nIl est possible de contourner cette vulnérabilité en désactivant le\nmodule administration.\n\nDans le fichier :\njws_directory/properties/server/adminserver/adminservice/rules.properties\n\ncommenter la ligne : /servlet=invoker\n\nrelancer le serveur Java.\n\nNota : cette modification bloque la fonctionalité du module\nadministration.\n\n## Solution\n\nCorrectif pour la version 1.1.3 : Patch 3\n\n    http://java.sun.com/products/java-server/jws113patch3.html\n\n  \n  \n\nCorrectif pour la version 2.0 : Patch 3\n\n    http://java.sun.com/products/java-server/jws20patch3.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de foundstone",
+      "url": "http://www.foundstone.com/FS-082200-11-JWS.txt"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-034",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Par le biais du module d'administration et du tableau de bord de Sun\nJava Web Server, un utilisateur mal intentionné peut exécuter du code\narbitraire sur une machine distante.\n",
+  "title": "Faille dans le serveur Internet Java de SUN",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Foundstone",
+      "url": null
+    }
+  ]
+}

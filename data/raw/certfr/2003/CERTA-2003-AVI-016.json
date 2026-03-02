@@ -1,0 +1,135 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "JSSE version 1.0.3 et versions antérieures ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Java Web Start version 1.0.1_02 et versions antérieures de la série 1.0.1 ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "plug-in Java faisant partie de Java SDK et JRE version 1.3.0_05 et versions antérieures de la série 1.3.0 ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Java Web Start version 1.0 ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "JSSE faisant partie de Java SDK et JRE version 1.4.0_01 et versions antérieures de la série 1.4.0 ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "plug-in Java faisant partie de Java SDK et JRE version 1.4.0_02 et versions antérieures de la série 1.4.0 ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "plug-in Java faisant partie de Java SDK et JRE version 1.3.1_05 et versions antérieures de la série 1.3.1 ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Java Web Start version 1.2 ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "plug-in Java faisant partie de Java SDK et JRE version 1.4.1 ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nJSSE (Java Secure Socket Extension) est une extension du langage Java\nimplémentant une version Java des protocoles SSL (Socket Secure Layer)\net TLS (Transport Socket Layer) ainsi que des fonctionnalités de\nchiffrement, de contrôle d'intégrité et d'authentification.\n\nJava Web Start permet de lancer des applications Java directement depuis\nun navigateur. Si l'application n'est pas présente en locale sur la\nmachine, Java Web Start s'occupe du téléchargement des fichiers\nnécessaires (archives JAR signées).\n\nUne vulnérabilité dans la vérification des certificats par JSSE (Java\nSecure Socket Extension), par le plug-in Java et par Java Web Start\npermet à un utilisateur mal intentionné d'exécuter du code malicieux à\ndistance.\n\n## Solution\n\nEffectuer les mises à jour de Java SDK et Java JRE comme indiqué dans le\nbulletin de sécurité de Sun (Cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité 50081 de Sun :",
+      "url": "http://sunsolve.sun.com/pub-cgi/secBulletin.pl"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-016",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-01-28T00:00:00.000000"
+    },
+    {
+      "description": "les modifications au présent avis figurent dans l'avis CERTA-2003-AVI-020.",
+      "revision_date": "2003-04-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la validation des certificats par JSSE (Java\nSecure Socket Extension), le plug-in Java et Java Web Start permet à un\nutilisateur mal intentionné d'exécuter du code malicieux à distance.\n",
+  "title": "Vulnérabilité de JSSE, du plug-in Java et de Java Web Start",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Sun 50081",
+      "url": null
+    }
+  ]
+}

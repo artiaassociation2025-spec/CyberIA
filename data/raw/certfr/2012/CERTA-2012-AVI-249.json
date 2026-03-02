@@ -1,0 +1,154 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "versions antérieures à Fusion 4.1.2.",
+      "product": {
+        "name": "Fusion",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ESXi 3.5 ;",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ESXi 5.0 ;",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ESXi 4.1 ;",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ESX 3.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "versions antérieures à Workstation 8.0.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ESXi 4.0 ;",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ESX 4.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "versions antérieures à Player 4.0.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ESX 4.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-1517",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-1517"
+    },
+    {
+      "name": "CVE-2012-2449",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-2449"
+    },
+    {
+      "name": "CVE-2012-1516",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-1516"
+    },
+    {
+      "name": "CVE-2012-2450",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-2450"
+    },
+    {
+      "name": "CVE-2012-2448",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-2448"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2012-AVI-249",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-05-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Cinq vulnérabilités ont été corrigées dans les produits <span\nclass=\"textit\">VMware</span>. Deux concernent les commandes RPC, il est\npossible de manipuler un pointeur dans le processus VMX, grâce ce\npointeur un utilisateur peut exécuter du code arbitraire depuis\nl'environnement virtuel sur l'hôte. La troisième concerne les échanges\nNFS sur le réseau et peut elle aussi mener à une exécution de code\narbitraire sur l'hôte ESX/ESXi sans authentification. La quatrième\npermet d'écrire en dehors de l'espace mémoire virtuelle au moyen du\nlecteur de disquette virtualisé. Enfin, il est possible d'écrire de\nfaçon arbitraire en mémoire au moyen d'un lecteur virtuel SCSI, il est\nainsi possible d'exécuter du code depuis une machine virtuelle vers\nl'hôte.\n",
+  "title": "Multiples vulnérabilités dans VMware",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware VMSA-2012-0009 du 03 mai 2012",
+      "url": "http://www.vmware.com/security/advisories/VMSA-2012-0009.html"
+    }
+  ]
+}

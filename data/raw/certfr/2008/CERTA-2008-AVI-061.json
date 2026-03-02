@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Symantec Ghost Solution Suite, pour la version 1.1 ne disposant pas du patch 2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec Ghost Solution Suite, pour les versions 2.0.0 et 2.0.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans la suite d'administration de\nparcs informatiques Symantec Ghost Solution Suite. Elle concerne la\nméthode d'authentification établie entre la console de gestion Ghost et\nles clients Ghost Management Agents au niveau réseau (IP).\nL'exploitation de cette dernière permettrait à une personne connectée au\nréseau interne, sous certaines conditions, d'exécuter des commandes\narbitraires avec les droits administrateur (SYSTEM) sur les postes\nclients.\n\n## Solution\n\nSe référer au bulletin de sécurité SYM08-003 de Symantec pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0640",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0640"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2008-AVI-061",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans la suite d'administration de\nparcs informatiques Symantec Ghost Solution Suite. L'exploitation de\ncette dernière permettrait à une personne connectée au réseau interne,\nsous certaines conditions, d'exécuter des commandes arbitraires avec les\ndroits administrateur (SYSTEM) sur les postes clients.\n",
+  "title": "Symantec Ghost Solution Suite",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symantec SYM08-003 du 07 février 2008",
+      "url": "http://securityresponse.symantec.com/avcenter/security/Content/"
+    }
+  ]
+}

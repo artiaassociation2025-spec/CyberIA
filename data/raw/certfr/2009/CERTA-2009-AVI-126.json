@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IBM WebSphere 7.x.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans IBM WebSphere :\n\n-   la première, dans la console d'administration, permet de réaliser de\n    l'injection de code indirecte (XSS) ;\n-   un correctif intermédiaire positionne des droits d'accès à des\n    fichiers de manière incorrecte, donnant accès en exécution à tout\n    utilisateur ;\n-   une erreur non précisée permet de voler la session d'un utilisateur\n    ;\n-   une erreur non précisée est présente dans la définition des\n    signature numériques XML.\n\n## Solution\n\nLe correctif 7.0.0.3 remédie à ces vulnérabilités.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1174",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1174"
+    },
+    {
+      "name": "CVE-2009-0892",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0892"
+    },
+    {
+      "name": "CVE-2009-1173",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1173"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-126",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-04-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans IBM WebSphere permettent à un\nutilisateur malveillant de contourner la politique de sécurité ou\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités de IBM WebSphere",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg24022549 du 26 mars 2009",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg24022549"
+    }
+  ]
+}

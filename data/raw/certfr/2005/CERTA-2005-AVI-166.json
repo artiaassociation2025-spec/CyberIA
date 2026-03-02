@@ -1,0 +1,103 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PostgreSQL 7.x et versions antérieures ;",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PostgreSQL 8.x et versions antérieures.",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nPostgreSQL est un outil de base de données Open Source.\n\nDeux vulnérabilités découvertes dans PostgreSQL permettent à un\nutilisateur mal intentionné ayant accès au réseau local d'élever ses\nprivilèges ou d'effectuer un déni de service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nLa mise à jour pour PostgreSQL est accessible à l'adresse suivante :\n\n    http://www.postgresql.org/download/\n",
+  "cves": [
+    {
+      "name": "CVE-2005-1410",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-1410"
+    },
+    {
+      "name": "CVE-2005-1409",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-1409"
+    }
+  ],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité Fedora Core 3 pour PostgreSQL :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/3/"
+    },
+    {
+      "title": "Site Internet de PostgreSQL :",
+      "url": "http://www.postgresql.org"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200505-12 du 15 mai 2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200505-12.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:093 du 26 mai 2005    :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005-:093"
+    },
+    {
+      "title": "Mise à jour de sécurité Fedora Core 2 pour PostgreSQL :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/2/"
+    },
+    {
+      "title": "Annonces des vulnérabilités :",
+      "url": "http://www.postgresql.org/about/news.322"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:433-17 du 01 juin    2005 :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2005-433.html"
+    },
+    {
+      "title": "Annonces des vulnérabilités :",
+      "url": "http://www.postgresql.org/about/news.315"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-166",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-05-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Mandriva et RedHat.",
+      "revision_date": "2005-06-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2006-02-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "",
+  "title": "Multiples vulnérabilités dans PostgreSQL",
+  "vendor_advisories": [
+    {
+      "published_at": "2005-05-15",
+      "title": "Bulletin de sécurité Gentoo GLSA-200505-12",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200505-12.xml"
+    }
+  ]
+}

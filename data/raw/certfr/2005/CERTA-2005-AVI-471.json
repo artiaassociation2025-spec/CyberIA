@@ -1,0 +1,47 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Joomla! version 1.03 et versions  antérieures.</p>",
+  "content": "## Description\n\nJoomla! est un logiciel libre de gestion de contenu (CMS, Content\nManagement System).\n\nPlusieurs vulnérabilités ont été découvertes dans ce logiciel :\n\n-   La première vulnérabilité se situe au niveau du module Polls et\n    permet d'injecter des requêtes SQL malicieuses à distance;\n-   La seconde se situe au niveau de la classe mosDBTable et permet\n    aussi d'injecter des requêtes SQL malicieuses à distance;\n-   Enfin, la dernière se situe au niveau de plusieurs scripts, et\n    permet d'effectuer des attaques de type Cross Site Scripting.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2005-3772",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-3772"
+    },
+    {
+      "name": "CVE-2005-3771",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-3771"
+    },
+    {
+      "name": "CVE-2005-3773",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-3773"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de Joomla! :",
+      "url": "http://www.joomla.org/content/view/499/66/"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-471",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Joomla! permettent à un utilisateur mal\nintentionné d'effectuer des attaques par injection de requêtes SQL ou de\ntype <span class=\"textit\">Cross Site Scripting</span>.\n",
+  "title": "Multiples vulnérabilités du logiciel Joomla!",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Joomla! du 21 novembre 2005",
+      "url": null
+    }
+  ]
+}

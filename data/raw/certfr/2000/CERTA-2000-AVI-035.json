@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Information Server 4.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Information Server 5.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn utilisateur malveillant peut, par l'intermédiaire d'une requête\n(moteur de recherche, formulaire...) dirigée vers un serveur IIS, y\ninsérer un script qui sera exécuté lors de la réponse à la requête. De\nce fait, en invitant un utilisateur à cliquer sur un lien contenant ce\ntype de requête, l'utilisateur malveillant peut faire exécuter du code\nsur la machine distante. Ce lien peut se trouver sur un site ou dans un\ncourrier.  \n  \n\nNota : Selon Microsoft, de nombreux serveurs Web sont susceptibles\nd'être vulnérables à cette faille. Il est recommandé de prendre contact\navec son fournisseur afin de savoir si un correctif existe.\n\n## Solution\n\nInternet Information Server 4.0 :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseId=24000\n\n  \n  \n\nInternet Information Server 5.0 :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseId=23999\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-035",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Le 20 février 2000, le Cert CC a émis un avis concernant une\nvulnérabilité (Cross-Site Scripting) permettant à un utilisateur\nmalveillant d'injecter du code dans la session d'un utilisateur d'un\nsite internet. Microsoft vient de paraître un correctif pour cette\nvulnérabilité.\n",
+  "title": "Vulnérabilité dans Microsoft Information Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS00-060.asp"
+    }
+  ]
+}

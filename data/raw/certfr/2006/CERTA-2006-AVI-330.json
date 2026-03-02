@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Phorum</SPAN> versions 5.1.14 et  antérieures.</P>",
+  "content": "## Description\n\nDeux vulnérabilités de type php include permettent l'exécution de code\narbitraire à distance sur le serveur. L'exploitation de ces failles\nnécessitent l'activation de la variable register_globals.\n\nUne vulnérabilité permettant de réaliser des attaques de type cross site\nscripting a également été découverte.\n\n## Solution\n\nMettre à jour Phorum en version 5.1.15 (voir Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3615",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3615"
+    }
+  ],
+  "links": [
+    {
+      "title": "Notes de changement de version 5.1.15 de Phorum du 13    juillet 2006 :",
+      "url": "http://www.phorum.org/phorum5/read.php?12,114358"
+    },
+    {
+      "title": "Version 5.1.15 de Phorum :",
+      "url": "http://www.phorum.org/downloads.php"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-330",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités dans Phorum",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes de changement de version 5.1.15 de Phorum du 13 juillet 2006",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système Windows, Solaris ou Linux utilisant :</P>  <UL>    <LI>Java 2 Standard Edition (J2SE) version 5.0 (1.5.0) dans une    version précédent l'« Update 2 » ;</LI>    <LI>J2SE 1.4.2 dans une version antérieure à la 1.4.2_08.</LI>  </UL>",
+  "content": "## Description\n\nLes failles concernent, d'une part, le « Java Runtime Environment »\n(JRE) et peuvent donc être exploitées par des sites malicieux à travers\ntout navigateur utilisant l'environnement de Sun, et d'autre part,\nl'outil « Java Web Start » qui peut être invoqué par un navigateur ou\nl'interface graphique du bureau.\n\n## Contournement provisoire\n\nDésactiver l'invocation automatique de « Java Web Start » dans les\nnavigateurs et dans l'explorateur pour Microsoft Windows.\n\nSupprimer l'exécution des appliquettes Java dans les navigateurs ou la\nrestreindre à des appliquettes de confiance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Blackdown Java-Linux    Blackdown-SA-2005-02 du 14 juin 2005 :",
+      "url": "http://www.blackdown.org/java-linux/java2-status/security/Blackdown-SA-2005-02.txt"
+    },
+    {
+      "title": "Site officiel Java de Sun :",
+      "url": "http://java.sun.com"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SA:2005:032 du 22 juin 2005    :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_32_java2.html"
+    },
+    {
+      "title": "Bulletin de sécurité Sun ID 101748 du 13 juin 2005 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-101748-1"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200506-14 du 19 juin 2005    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200506-14.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Sun ID 101749 du 13 juin 2005 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-101749-1"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-209",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-06-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité de Blackdown Java-Linux et Gentoo.",
+      "revision_date": "2005-06-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de SUSE et ajout de la référence CVE CAN-2005-1974.",
+      "revision_date": "2005-06-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Des vulnérabilités peuvent être exploitées par des appliquettes\nquelconques pour élever leurs privilèges ce qui permet, par exemple,\nd'exécuter du code ou d'accéder à des fichiers arbitraires.\n",
+  "title": "Vulnérabilités des versions Sun de Java 2 Standard Edition",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité 101748 et 101749 de Sun",
+      "url": null
+    }
+  ]
+}

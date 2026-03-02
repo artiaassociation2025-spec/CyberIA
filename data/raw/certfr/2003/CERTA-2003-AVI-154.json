@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Pour la branche de développement, lsh versions 1.5, 1.5.1, 1.5.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Pour la branche stable, lsh versions 1.4.2 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nlsh est une implémentation GNU du protocole SSH (Secure SHell). Une\nvulnérabilité de type débordement de mémoire, permet à un utilisateur\nmal intentionné d'exécuter du code avec les droits de root.\n\n## Solution\n\nMettre à jour lsh en version 1.4.3 (branche stable) ou 1.5.3 (branche de\ndéveloppement). Téléchargement de lsh :\n\n    http://www.lysator.liu.se/˜nisse/archive/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité SuSE Linux SuSE-SA:2003:041 :",
+      "url": "http://www.suse.de/de/security/2003_041_lsh.html"
+    },
+    {
+      "title": "Site de lsh :      http://www.lysator.liu.se/˜nisse/lsh/",
+      "url": "http://www.lysator.liu.se/%CB%9Cnisse/lsh/"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-154",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-09-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité SuSE Linux.",
+      "revision_date": "2003-10-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans lsh permet à un utilisateur mal intentionné\nd'exécuter du code arbitraire à distance avec les droits de root.\n",
+  "title": "Vulnérabilité dans lsh",
+  "vendor_advisories": []
+}

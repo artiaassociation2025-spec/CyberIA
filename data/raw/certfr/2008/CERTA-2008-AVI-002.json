@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>PHP versions 4.4.7 et antérieures.</p>",
+  "content": "## Description\n\nDe multiples vulnérabilités ont été identifiées dans la branche 4 de PHP\n:\n\n-   plusieurs d'entre elles de type débordement de mémoire permettent à\n    un utilisateur distant de provoquer un déni de service ;\n-   d'autres encore permettent à un utilisateur distant de contourner\n    les restrictions mises en place lors de l'installation et la\n    configuration de PHP.\n\n## Solution\n\nLa version 4.4.8 de PHP corrige le problème. Cependant, dans la mesure\noù la branche 4 de PHP est en fin de vie, il est recommandé de migrer\nvers la dernière version de la branche 5 : la 5.2.5 au moment de la\nrédaction du présent document.\n\n    http://www.php.net/downloads.php\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3378",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3378"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site de PHP :",
+      "url": "http://www.php.net"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-002",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-01-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans PHP 4 permettent à un\nutilisateur distant de contourner la politique de sécurité ou de\nprovoquer un déni de service.\n",
+  "title": "Vulnérabilité dans PHP 4",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés à la version 4.4.8 de PHP",
+      "url": "http://www.php.net/releases/4_4_8.php"
+    }
+  ]
+}

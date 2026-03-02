@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Tcpdump</SPAN> versions 3.6.2 et  antérieures.</P>",
+  "content": "## Description\n\nTcpdump est un analyseur de trafic réseau.\n\nPlusieurs vulnérabilités de type débordement de mémoire ont été\ndécouvertes dans les versions de tcpdump antérieures à la version 3.5.\nD'autres vulnérabilités similaires ont été decouvertes dans des versions\nplus récentes, incluant la version 3.6.2.\n\nToutes ces vulnérabilités peuvent être exploitées à distance par un\nutilisateur mal intentionné pour provoquer l'arrêt du processus tcpdump,\nvoire exécuter du code arbitraire. Ce code sera exécuté avec les droits\nde l'utilisateur qui a lancé tcpdump. Par défaut, seul l'administrateur\nroot y est autorisé.\n\n## Solution\n\nConsulter les bulletins de sécurité de votre éditeur pour connaitre la\ndisponibilté des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité RedHat RHSA-2002:094-08 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-094.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-104",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-05-17T00:00:00.000000"
+    },
+    {
+      "description": "première révision : ajout de l'avis Red Hat.",
+      "revision_date": "2002-05-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "L'outil <span class=\"textit\">tcpdump</span> présente des vulnérabilités\nde type débordement de mémoire permettant un déni de service ou\nl'exécution de code arbitraire.\n",
+  "title": "Vulnérabilités de tcpdump",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Mandrake MDKSA-2002:032",
+      "url": "http://www.linux-mandrake.com/en/security/2002/MDKSA-2002-032.php?dis=8.0"
+    }
+  ]
+}

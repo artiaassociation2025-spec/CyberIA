@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions de <TT>snort</TT> de 1.8 à 1.9  incluse.</P>  <P>La version 1.9.1 corrige cette vulnérabilité.</P>",
+  "content": "## Description\n\nsnort est un outil de détection d'intrusion. Dans la version 1.8 a été\ndéveloppée une fonction de détection des attaques par fragmentation sur\nles services RPC.\n\nUn vulnérabilité de type débordement de mémoire présente dans cette\npartie du programme permet à un utilisateur mal intentionné d'exécuter\ndu code arbitraire avec les privilèges du processus snort sur la machine\nhébergeant le logiciel de détection d'intrusion.\n\nIl n'est pas nécessaire d'établir une connexion RPC avec une machine\nsituée dans le sous réseau surveillé par la sonde snort pour exploiter\ncette vulnérabilité. L'attaque peut se faire en émettant des paquets RPC\nhabilement construit en direction de ce réseau même si la machine cible\nne possède pas de service RPC en écoute.\n\n## Contournement provisoire\n\nS'il n'est pas possible de mettre à jour le logiciel snort vulnérable,\nla détection d'intrusion par RPC peut-être désactivée dans le fichier\nsnort.conf en remplaçant la ligne suivante :\n\n`preprocessor rpc_decode`\n\npar :\n\n`#preprocessor rpc_decode`\n\n## Solution\n\nInstaller la version 1.9.1 de snort.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité ISS :",
+      "url": "http://www.iss.net/issEn/delivery/xforce/alertdetail.jsp?oid=21951"
+    },
+    {
+      "title": "Site web de snort :",
+      "url": "http://www.snort.org"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-035",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire avec les privilèges du processus snort"
+    }
+  ],
+  "summary": "Il est possible d'effectuer un débordement de mémoire du préprocesseur\nRPC du logiciel snort.\n",
+  "title": "Vulnérabilité dans le préprocesseur RPC de snort",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité ISS",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Site web snort.org",
+      "url": null
+    }
+  ]
+}

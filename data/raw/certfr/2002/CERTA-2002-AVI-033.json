@@ -1,0 +1,47 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Windows 9x, ME, XP, NT et 2000.</P>",
+  "content": "## Description\n\nLes tests effectués par l'université finlandaise d'Oulu ont mis en\névidence la présence de vulnérabilités dans les routines de décodage et\nde traitement des messages SNMP dans de nombreuses implémentations (se\nréférer au bulletin d'alerte CERTA-2002-ALE-004 du CERTA).\n\nUne vulnérabilité de l'agent SNMP, permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire avec les privilèges de\nl'administrateur du système. Cette vulnérabilité, de type débordement de\nmémoire, est exploitable à distance.\n\nDes correctifs pour les systèmes Microsoft qui n'étaient pas encore\ndisponibles lors de la première version de cet avis ont été ajoutés le 5\nmars 2002 pour Windows NT 4.0 server et le 11 mars pour Windows NT 4.0\nTerminal Server Edition.\n\nPour des raisons de disponibilité et de moindres effets de bords des\ncorrectifs, il est souvent plus judicieux d'installer les systèmes des\nserveurs dans leur langue de développement (ici l'anglais). Cependant\nsuite à la détection d'erreurs dans les correctifs pour les versions\nanglaise et allemande de Windows NT 4.0 Terminal Server Edition,\nMicrosoft a modifié ces dernières.\n\nLes administrateurs de systèmes Microsoft Windows Terminal Server\nEdition installés en langue anglaise sont donc invités à aller\ntélécharger la nouvelle version du correctif.\n\n## Contournement provisoire\n\n-   S'il n'est pas utilisé, ou en attendant d'obtenir le correctif,\n    désactiver SNMP.\n\n    Pour vérifier si le service SNMP est installé et démarré et\n    l'arrêter s'il existe, procéder de la façon suivante :\n\n    -   Pour Windows 9x :\n        1.  Dans le panneau contrôle ouvrir les paramètres du réseau.\n        2.  Cliquer sur l'onglet configuration et sélectionner Agent\n            SNMP dans la liste des composants installés.\n        3.  cliquer sur le bouton supprimer.\n    -   Pour Windows NT 4.0 (Terminal server compris) :\n        1.  Dans le panneau contrôle ouvrir les paramètres du services.\n        2.  Sélectionner le service SNMP, cliquer sur le bouton arrêter.\n        3.  Dans la liste des modes de démarrage (en dessous), cliquer\n            sur le bouton Désactivé.\n        4.  Puis cliquer sur OK pour fermer cette fenêtre.\n    -   Sous Windows 2000 and XP :\n        1.  Ouvrir la Gestion de l'ordinateur dans les Outils\n            d'administration ;\n        2.  Choisir Services et Applications, puis Services ;\n        3.  Sélectionner le service SNMP, cliquer sur le bouton arrêter.\n        4.  Dans la liste des modes de démarrage, sélectionner\n            Désactivé.\n        5.  Puis cliquer sur OK pour fermer, puis fermer la fenêtre\n            d'administration.\n\n-   filtrer le port 161/UDP utilisé par l'agent SNMP au niveau du\n    garde-barrière afin d'empêcher l'exploitation de ces vulnérabilités\n    depuis l'Internet.\n\n## Solution\n\nSe référer au bulletin de Microsoft MS02-006 pour le disponibilité des\ncorrectifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le bulletin de sécurité Microsoft MS02-006 :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-006.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-033",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-13T00:00:00.000000"
+    },
+    {
+      "description": "première révision : erreur dans la numérotation (tableau <SPAN class=\"textit\">Gestion du Document</SPAN> et balise <SPAN class=\"textit\">reference</SPAN>).",
+      "revision_date": "2002-02-25T00:00:00.000000"
+    },
+    {
+      "description": "seconde révision : ajout de correctifs Microsoft et erreur dans le correctif en version anglaise et allemande concernant Windows NT Server Terminal Edition",
+      "revision_date": "2002-03-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut utiliser une vulnérabilité de\nl'agent SNMP sous Microsoft Windows pour exécuter du code arbitraire à\ndistance avec les privilèges de l'administrateur du système.\n\nLe bulletin de sécurité de Microsoft à été mis à jour suite à l'ajout de\ncorrectifs et à une erreur dans l'implémentation de plusieurs\ncorrectifs.\n",
+  "title": "Vulnérabilité du service <TT>SNMP</TT> sous Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS02-006",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin d'alerte du CERTA-2002-ALE-004",
+      "url": null
+    }
+  ]
+}

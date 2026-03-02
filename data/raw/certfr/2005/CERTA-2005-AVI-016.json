@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Le logiciel <TT>iTunes</TT> dans la version 4.7. Les versions  inférieures peuvent l'être aussi.</P>",
+  "content": "## Description\n\nLe logiciel iTunes est un logiciel destiné à l'écoute de morceaux de\nmusique. En particulier, il permet de manipuler des listes de lecture\nqui regroupent un certain nombre de morceaux.\n\nLes listes de lecture sont des fichiers dont le nom porte l'extension\n.pls ou .m3u. Ces fichiers contiennent notamment des URLs permettant de\ndésigner les morceaux de musique regroupés dans la liste.\n\nUne mauvaise gestion de la longueur de ces URLs permet à un utilisateur\nmal intentionné de concevoir une liste de lecture contenant des URLs\nhabilement constituées qui feront s'exécuter du code arbitraire avec les\ndroits de l'utilisateur qui lance le logiciel iTunes.\n\nLes listes de lecture peuvent être téléchargées par le logiciel iTunes.\nCela permet à l'individu mal intentionné de proposer sur un site WEB par\nexemple ou dans n'importe quel système d'échange des listes de lectures\nmalicieuses.\n\n## Contournement provisoire\n\nVérifier les listes de lecture venant d'endroits peu sûrs avant de les\nouvrir avec iTunes. Se méfier en particulier des listes de lecture\ncomprenant des URLs très longs.\n\n## Solution\n\nLa version 4.7.1 de iTunes publiée par Apple corrige la faille de\nsécurité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "correctif de sécurité :",
+      "url": "http://www.apple.com/fr/itunes/download"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-016",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-01-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution à distance de code arbitraire"
+    }
+  ],
+  "summary": "Un débordement de variable affectant la gestion des URLs placés dans les\nlistes de lecture du logiciel iTunes autorise l'exécution de code\nartitraire.\n",
+  "title": "iTunes : débordement de variable dans la gestion des listes de lecture",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin 01.43 de iDefense",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "CVE : CAN-2005-0043",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système Unix avec un serveur CVS.</P>",
+  "content": "## Description\n\nCVS (« Concurrent Versions System ») est un système client/serveur pour\nla gestion des versions de fichiers.\n\ncvsbug est un script écrit en shell Unix permettant à un utilisateur\nquelconque de remonter aux développeurs de CVS un bogue quelconque.\n\nUne mauvaise gestion des fichiers temporaires peut être détournée pour\nécraser des fichiers accessibles en écriture à l'utilisateur exécutant\ncvsbug.\n\n## Solution\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site internet de CVS :",
+      "url": "http://www.nongnu.org/cvs/"
+    },
+    {
+      "title": "Mise à jour de sécurité pour Fedora Core 3 du 23 août        2005 :",
+      "url": "http://www.securityfocus.com/advisories/9114"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:756 du 06 septembre    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-756.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-802 du 07 septembre        2005 (cvs) :",
+      "url": "http://www.debian.org/security/2005/dsa-802"
+    },
+    {
+      "title": "Mise à jour de sécurité pour Fedora Core 4 du 23 août        2005 :",
+      "url": "http://www.securityfocus.com/advisories/9113"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-806 du 09 septembre        2005 (gcvs) :",
+      "url": "http://www.debian.org/security/2005/dsa-806"
+    },
+    {
+      "title": "Debian Linux :       Bulletin de sécurité Debian DSA-802 du 07 septembre        2005 (cvs) :          \n  Bulletin de sécurité Debian DSA-806 du 09 septembre        2005 (gcvs) :",
+      "url": "http://www.debian.org/security/2005/dsa-806"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-05-20 pour CVS du 07    septembre 2005 :",
+      "url": "ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-05:20.cvsbug.asc"
+    },
+    {
+      "title": "Linux Fedora :       Mise à jour de sécurité pour Fedora Core 3 du 23 août        2005 :          \n  Mise à jour de sécurité pour Fedora Core 4 du 23 août        2005 :",
+      "url": "http://www.securityfocus.com/advisories/9113"
+    },
+    {
+      "title": "Debian Linux :       Bulletin de sécurité Debian DSA-802 du 07 septembre        2005 (cvs) :          \n  Bulletin de sécurité Debian DSA-806 du 09 septembre        2005 (gcvs) :",
+      "url": "http://www.debian.org/security/2005/dsa-802"
+    },
+    {
+      "title": "Linux Fedora :       Mise à jour de sécurité pour Fedora Core 3 du 23 août        2005 :          \n  Mise à jour de sécurité pour Fedora Core 4 du 23 août        2005 :",
+      "url": "http://www.securityfocus.com/advisories/9114"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-341",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-09-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation locale de privilèges"
+    }
+  ],
+  "summary": "Un utilisateur local mal intentionné peut faire exécuter des commandes\narbitraires avec les privilèges d'une victime lançant la commande\ncvsbug.\n",
+  "title": "Vulnérabilité de l'outil de développement CVS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Linux Red Hat",
+      "url": null
+    }
+  ]
+}

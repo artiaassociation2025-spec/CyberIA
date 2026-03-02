@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>SGI Irix 6.5.</P>",
+  "content": "## Description\n\nDe multiples vulnérabilités de X Window permettent à un utilisateur mal\nintentionné d'obtenir les privilièges de l'administrateur root ou\nd'arrêter le serveur X.\n\n-   Il est possible d'utiliser une vulnérabilité des librairies zlib\n    décrite dans l'avis CERTA-2002-AVI-052 sous X Window pour exécuter\n    du code arbitraire avec les privilèges de l'administrateur root.\n\n-   Une vulnérabilité de la gestion des feuilles de style par le\n    logiciel Mozilla (navigateur, messagerie) versions 1.0 et\n    antérieures peut entraîner un dysfonctionnement des utilitaires sous\n    X Window ou de bloquer le serveur X.\n\n    Un utilisateur mal intentionné peut ainsi effectuer un déni de\n    service en propageant un document (sur un site web, par mél, ou de\n    toute autre façon) utilisant une feuille de style astucieusement\n    construite.\n\n-   MIT-SHM (MIT SHared Memory) est un outil permettant d'accélérer les\n    capacités graphiques ou d'améliorer le traitement de certaines\n    images.\n\n    Une vulnérabilité de MIT-SHM sous X window permet à un utilisateur\n    local mal intentionné d'avoir accès en lecture et écriture à des\n    segments de mémoire partagée.\n\n## Contournement provisoire\n\n-   Si cela est possible, désactiver X Window au moyen de la commande\n    `/usr/gfx/stopgfx`.\n-   Utiliser la version la plus récente possible de Mozilla.\n\n## Solution\n\nConsulter le bulletin de sécurité de SGI (voir le paragraphe\ndocumentation) pour connaître la disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de s'écurité #20021001-01-P de SGI :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20021001-01-P"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-236",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de différents outils de X Window permettent de\nbloquer le serveur X ou d'obtenir les privilèges de l'administrateur\nroot sous SGI Irix 6.5.\n",
+  "title": "Multiples vulnérabilités de X Window sous SGI Irix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #20021001-01-P de SGI",
+      "url": null
+    }
+  ]
+}

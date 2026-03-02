@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Acer Aspire 5600 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "potentiellement d'autres versions.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Acer TravelMate 4150 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'ActiveX LunchApp.APlunch est installé par défaut sur les ordinateurs\nportables Acer. L'une des ses méthodes, Run(), permet l'exécution des\ncommandes en ligne. Cet ActiveX est marqué comme sûr et peut être\ninvoqué par une page web, sans confirmation par l'utilisateur, avec\nInternet Explorer 6, si l'active scripting est autorisé. Cette\ninvocation permet à un utilisateur malveillant d'exécuter du code à\ndistance.\n\nAvec Internet Explorer 7, l'utilisateur doit confirmer l'exécution.\n\n## Contournement provisoire\n\nDésactiver LunchApp.APlunch sous Internet Explorer par les menus Outils,\nOptions Internet, Programmes, Gérer les modules complémentaires.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-6121",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6121"
+    }
+  ],
+  "links": [
+    {
+      "title": "Support Acer :",
+      "url": "http://support.acer-euro.com/drivers/utilities.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-030",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Un <span class=\"textit\">ActiveX</span> installé par défaut sur les\nordinateurs portables <span class=\"textit\">Acer</span> permet\nl'exécution de commande à distance.\n",
+  "title": "Vulnérabilité d'ordinateurs portables Acer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Heise du 09 janvier 2007",
+      "url": null
+    }
+  ]
+}

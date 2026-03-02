@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions 6.5 de SGI IRIX jusqu'à la version 6.5.17  incluse.</P>  <P>Les versions antérieures à la 6.5 n'étant plus maintenues, la  vulnérabilité de ces systèmes n'est pas connue.</P>",
+  "content": "## Description\n\nCertaines commandes sont sujettes à des vulnérabilités permettant une\nélévation de privilèges :\n\n-   rpcbind suit les liens symboliques lorsque cette commande est\n    invoquée avec l'option -w ;\n-   quelques fichiers du bureau sont modifiables par tous ;\n-   uux, qui a des droits sgid, est vulnérable à une attaque de type\n    débordement de mémoire ;\n-   fsr_efs suit les liens symboliques ;\n-   la commande mv, lorsqu'elle est invoquée pour déplacer un\n    répertoire, crée le répertoire avec des droits en écriture pour\n    tous.\n\n## Solution\n\nAppliquer les correctifs 4819 et 4820, ou passer en version 6.5.18\nlorsque celle-ci sera disponible.\n\nLes correctifs peuvent être téléchargés à l'adresse suivante :\n\n    ftp://patches.sgi.com/support/free/security/patches\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis 200209-03-02-P de SGI :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20020903-02-P"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-230",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans certaines commandes sous IRIX\npermettent une élévation de privilèges.\n",
+  "title": "Multiples vulnérabilités sous IRIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis 20020903-02-P de SGI",
+      "url": null
+    }
+  ]
+}

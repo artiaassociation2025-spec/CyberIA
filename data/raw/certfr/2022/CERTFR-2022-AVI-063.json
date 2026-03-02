@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "NGINX App Protect versions 3.x antérieures à 3.7.0",
+      "product": {
+        "name": "NGINX",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NGINX Controller API Management versions 3.x antérieures à 3.19.1",
+      "product": {
+        "name": "NGINX",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-23008",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-23008"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-063",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-01-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans F5 NGINX. Certaines\nd'entre elles permettent à un attaquant de provoquer une exécution de\ncode arbitraire, un déni de service et un contournement de la politique\nde sécurité.\n",
+  "title": "Multiples vulnérabilités dans F5 NGINX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F5 K57735782 du 19 janvier 2022",
+      "url": "https://support.f5.com/csp/article/K57735782"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F5 K30911244 du 19 janvier 2022",
+      "url": "https://support.f5.com/csp/article/K30911244"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F5 K41503304 du 19 janvier 2022",
+      "url": "https://support.f5.com/csp/article/K41503304"
+    }
+  ]
+}

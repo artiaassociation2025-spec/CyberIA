@@ -1,0 +1,94 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "AIX 7.1.",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "AIX 6.1 ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "AIX 5.3 ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC BIND 9.x ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-1667",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-1667"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM du 13 juillet 2012 :",
+      "url": "ftp://aix.software.ibm.com/aix/efixes/security/bind9_advisory4.asc"
+    },
+    {
+      "title": "Bulletin de sécurité IBM ISS X-Force 76034 du 04 juin    2012 :",
+      "url": "http://xforce.iss.net/xforce/xfdb/76034"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-305",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-06-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout de AIX Bind.",
+      "revision_date": "2012-07-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été corrigée dans <span class=\"textit\">BIND</span>.\nCertains enregistrements de longueur nulle ne sont pas correctement\ntraités par le serveur DNS. Cette vulnérabilité permet de provoquer un\ndéni de service, ou de porter atteinte à l'intégrité ou à la\nconfidentialité des données.\n",
+  "title": "Vulnérabilité dans BIND",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de l'ISC du 04 juin 2012",
+      "url": "http://www.isc.org/software/bind/advisories/CVE-2012-1667"
+    }
+  ]
+}

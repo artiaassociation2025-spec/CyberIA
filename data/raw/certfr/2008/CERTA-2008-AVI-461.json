@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD 6.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 7.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur est présente dans la pile IPv6 des systèmes FreeBSD. Celle-ci\nest relative à la gestion des paquets de type ICMPv6 et permet à un\nutilisateur distant de provoquer un déni de service par le biais d'un\npaquet ICMPv6 construit de façon particulière.\n\nLe fait que la pile IPv6 soit active sur le système n'est pas suffisant\npour exploiter la vulnérabilité. Il est nécessaire qu'une socket TCP\nIPv6 soit en écoute sur l'interface par laquelle seront reçus les\npaquets de l'attaquant.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3530",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3530"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-08:09.icmp6 du 03 septembre    2008 :      http://security.freebsd.org/advisories/FreeBSD-SA-08:09.icmp6.asc",
+      "url": "http://security.freebsd.org/FreeBSD-SA-08:09.icmp6.asc"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-461",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-09-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence CVE.",
+      "revision_date": "2008-10-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le noyau de FreeBSD permet à un\nutilisateur distant de provoquer un déni de service du système\nvulnérable.\n",
+  "title": "Vulnérabilité de FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD-SA-08:09.icmp6",
+      "url": null
+    }
+  ]
+}

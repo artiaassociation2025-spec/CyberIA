@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Check Point VPN-1 R65 sans mise à jour HFA_30.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Check Point",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le pare-feu Check Point VPN-1\nconfiguré pour faire de la traduction de port (PAT). Une personne\nmalveillante distante peut émettre certaines trames à destination du\nport public traduit et récupérer en retour des messages d'erreurs ICMP\nfournissant des informations IP incorrectement nettoyées. Cela permet\nd'obtenir des informations sur l'adressage IP interne.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-5849",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-5849"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité Portcullis 08-009 du 14 novembre    2009 :",
+      "url": "http://www.portcullis-security.com/293.php"
+    },
+    {
+      "title": "Réponse de sécurité CheckPoint sk36321 du 28 décembre 2008    :",
+      "url": "https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk36321"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-004",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-01-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans Check Point VPN-1. Elle permet à\nune personne distante malveillante de récupérer des informations sur\nl'adressage réseau interne.\n",
+  "title": "Vulnérabilité dans Check Point VPN-1",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Réponse Check Point sk36321 du 28 décembre 2008",
+      "url": null
+    }
+  ]
+}

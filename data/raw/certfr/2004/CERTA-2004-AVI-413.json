@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions de KDE 3.3.2 et antérieures sont vulnérables.</P>",
+  "content": "## Description\n\nKDE est un environnement graphique pour système Unix et Linux, incluant\nen particulier Konqueror, gestionnaire de fichiers permettant la\nnavigation sur le web.\n\nDeux failles ont été découvertes dans Konqueror.\n\nLa première faille (CAN-2004-1158) permet à un site web de charger une\npage dans une fenêtre qui était déjà utilisée par un autre site web. La\nconfusion résultant de cette manipulation peut entraîner un utilisateur\nà envoyer des données confidentielles sur un serveur malicieusement\nconstruit, alors qu'il croit les envoyer sur un serveur de confiance.\n\nLa deuxième faille (CAN-2004-1145) concerne la gestion de\nl'environnement d'exécution Java par Konqueror et permet à un\nutilisateur mal intentionné, via un site web malicieusement construit,\nd'avoir accès en lecture et en écriture aux fichiers de la victime, avec\nles droits de l'utilisateur.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité KDE du 20 décembre 2004",
+      "url": "http://www.kde.org/info/security/advisory-20041220-1.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:154 du 22 décembre    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:154"
+    },
+    {
+      "title": "Bulletin de sécurité KDE du 13 décembre 2004",
+      "url": "http://www.kde.org/info/security/advisory-20041213-1.txt"
+    },
+    {
+      "title": "Avis du CERTA : CERTA-2004-AVI-406",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2004-AVI-406/index.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-413",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-12-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité Mandrake MDKSA-2004:154.",
+      "revision_date": "2004-12-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité de données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilité dans Konqueror",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité KDE du 13 et du 20 décembre 2004",
+      "url": null
+    }
+  ]
+}

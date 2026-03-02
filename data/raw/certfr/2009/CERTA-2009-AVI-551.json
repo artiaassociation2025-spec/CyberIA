@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM WebSphere Application Server 6.1.x.",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM WebSphere Application Server 6.0.x ;",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans la console d'administration d'IBM WebSphere,\ncausée par un manque de contrôle des requêtes HTTP, peut être exploitée\nafin de réaliser des injections de code indirectes.\n\nUne vulnérabilité dans Java Naming and Directory Interface permet à une\npersonne malveillante de réaliser des requêtes sur les objets de type\nUserRegistry et ainsi porter atteinte à la confidentialité des données.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2746",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2746"
+    },
+    {
+      "name": "CVE-2009-2747",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2747"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-551",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-12-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités découvertes dans IBM WebSphere permettent à un\nutilisateur distant malintentionné de réaliser des injections de code\nindirectes ou de porter atteinte à la confidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans IBM WebSphere",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg27006876 du 14 décembre 2009",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg27006876"
+    }
+  ]
+}

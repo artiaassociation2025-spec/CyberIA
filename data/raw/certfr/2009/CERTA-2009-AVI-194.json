@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Cyrus SASL versions 2.1.22 et  antérieures.</p>",
+  "content": "## Description\n\nCyrus SASL (Simple Authentication and Security Layer) est une\nbibliothèque de fonctions pouvant être utilisée par des applications\nafin de mettre en œuvre un mécanisme d'authentification pour divers\nprotocoles. Une vulnérabilité de type débordement de mémoire dans une\nfonction de cette bibliothèque permet à un utilisateur distant de\nprovoquer un déni de service des applications s'appuyant sur Cyrus SASL\nou d'exécuter du code arbitraire dans le contexte de ces mêmes\napplications.\n\n## Solution\n\nLa version 2.1.23 corrige le problème :\n\n    ftp://ftp.andrew.cmu.edu/pub/cyrus-mail/cyrus-sasl-2.1.23.tar.gz\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0688",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0688"
+    }
+  ],
+  "links": [
+    {
+      "title": "Note de vulnérabilité de l'US-CERT VU#238019 du 15 mai 2009    :",
+      "url": "http://www.kb.cert.org/vuls/id/238019"
+    },
+    {
+      "title": "Bulletin du NIST CVE-2009-0688 du 22 février 2009 :",
+      "url": "http://nvd.nist.gov/nvd.cfm?cvename=CVE-2009-0688"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-194",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-05-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans Cyrus SASL permet à un utilisateur\nmalintentionné distant de provoquer un déni de service ou d'exécuter du\ncode arbitraire.\n",
+  "title": "Vulnérabilité dans Cyrus SASL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de l'US-CERT VU#238019 du 14 mai 2009",
+      "url": null
+    }
+  ]
+}

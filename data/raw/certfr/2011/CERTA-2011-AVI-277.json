@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>HP SNMP Agents versions inférieures à la version 8.7.0 sur    plate-forme Linux&nbsp;;</LI>    <LI>HP Insight Management Agents versions inférieures à la    version 8.70.0 sur plate-forme Windows.</LI>  </UL>  <P>Les versions de HP Proliant Support Pack inférieures à la  version 8.7 sont également vulnérables puisque HP Proliant  Support Pack inclut HP SNMP Agents et HP Insight Management  Agents.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été corrigées dans HP SNMP Agents et HP\nInsight Management Agents sur plateforme Linux et Windows. Ces\nvulnérabilités peuvent être utilisées par une personne malveillante\ndistante pour porter atteinte à l'intégrité des données, effectuer de\nl'injection de code indirecte à distance (XSS) ou encore rediriger les\nautres utilisateurs vers une page Web arbitraire.\n\n## Solution\n\nLes versions à jour de HP SNMP Agents v8.7.0 et HP Insight Management\nAgents v8.70.0 sont inclues dans HP Proliant Support Pack v8.7.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1539",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1539"
+    },
+    {
+      "name": "CVE-2011-1538",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1538"
+    },
+    {
+      "name": "CVE-2011-1537",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1537"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-277",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-05-06T00:00:00.000000"
+    },
+    {
+      "description": "modification des produits affectés suite à la mise à jour du bulletin HP c02735590.",
+      "revision_date": "2011-05-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans HP SNMP Agents et HP Insight Management\nAgents peuvent être exploitées par une personne malveillante distante\npour porter atteinte à la confidentialité des données ou réaliser de\nl'injection de code indirecte à distance (XSS).\n",
+  "title": "Multiples vulnérabilités dans HP SNMP Agents et HP Insight Management Agents",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité HP c02735590 du 19 avril 2011",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c02735590"
+    }
+  ]
+}

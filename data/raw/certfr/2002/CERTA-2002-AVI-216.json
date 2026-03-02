@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "InterScan VirusWall Trend Micro versions antérieures à la 3.52 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Trend Micro",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MailSweeper Clearswift ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Trend Micro",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mimedefang Roaring Penguin versions antérieures à la 2.21.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Trend Micro",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDifférents logiciels de messagerie sont compatibles avec la RFC 2046 qui\npermet d'envoyer des messages volumineux en les fragmentant.\n\nCette fragmentation est transparente pour l'utilisateur, le message\nétant automatiquement reconstitué par le client de messagerie.\n\nPlusieurs scanners de messagerie analysent les messages fragmentés sans\nles reconstituer et sont donc susceptibles de ne pas intercepter les\nmessages ayant une charge virale.\n\n## Solution\n\n-   Télécharger InterScan VirusWall Trend Micro 3.52 pour Microsoft\n    Windows :\n\n        ftp://ftp-download.trendmicro.com.ph/Gateway/ISNT/3.52/Hotfix_build1494_v352_Smtp_case6593.zip\n\n-   MailSweeper Clearswif :\n\n    Mettre en place une analyse lexicale du champ Content-Type (pour\n    plus de détails se référer au bulletin du constructeur, Cf Section\n    Documentation)\n\n-   Mimedefang Roaring Penguin :\n\n    Appliquer la version 2.21 (Cf Section Documentation)\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "MailSweeper Clearswif :",
+      "url": "http://www.mimesweeper.com/support/threatlab/message.asp"
+    },
+    {
+      "title": "InterScan VirusWall Trend Micro :",
+      "url": "http://securityresponse.symantec.com/avcenter/security/Content/2002.09.10.html"
+    },
+    {
+      "title": "Mimedefang Roaring Penguin :",
+      "url": "http://www.roarinpenguin.com/mimedefang"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-216",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-09-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement des mécanismes de protection des anti-virus pour passerelles de messagerie"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut contourner la protection offerte par\nles anti-virus pour passerelles de messagerie en fragmentant, lors de\nl'envoi, des fichiers à risque.\n",
+  "title": "Vulnérabilité des anti-virus pour passerelles de messagerie",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "SecurityFocus",
+      "url": null
+    }
+  ]
+}

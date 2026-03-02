@@ -1,0 +1,79 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Adobe ColdFusion 8 ;",
+      "product": {
+        "name": "ColdFusion",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Adobe ColdFusion MX 7.",
+      "product": {
+        "name": "ColdFusion",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités dans certaines applications de ColdFusion, notamment\ncelles mettant en œuvre la fonction setEncoding dans les fichiers\nApplication.chm et Application.cfc, permettent à une personne\nmalveillante de réaliser une attaque de type cross site scripting.\n\nUne vulnérabilité dans Adobe ColdFusion permet de contourner la\npolitique de sécurité appliquée à la journalisation des connexions à\nl'interface d'administration.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1203",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1203"
+    },
+    {
+      "name": "CVE-2008-0644",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0644"
+    },
+    {
+      "name": "CVE-2008-0643",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0643"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Adobe apsb08-08 du 11 mars 2008 :",
+      "url": "http://www.adobe.com/support/security/bulletins/apsb08-08.html"
+    },
+    {
+      "title": "Bulletin de sécurité Adobe apsb08-07 du 11 mars 2008 :",
+      "url": "http://www.adobe.com/support/security/bulletins/apsb08-07.html"
+    },
+    {
+      "title": "Bulletin de sécurité Adobe apsb08-06 du 11 mars 2008 :",
+      "url": "http://www.adobe.com/support/security/bulletins/apsb08-06.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-134",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-03-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Adobe ColdFusion permettent à un\nutilisateur distant malintentionné de contourner la politique de\nsécurité ou de réaliser une attaque de type <span class=\"textit\">cross\nsite scripting</span>.\n",
+  "title": "Vulnérabilités dans Adobe ColdFusion",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Adobe du 11 mars 2008",
+      "url": null
+    }
+  ]
+}

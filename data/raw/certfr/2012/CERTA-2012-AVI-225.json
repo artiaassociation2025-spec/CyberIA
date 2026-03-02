@@ -1,0 +1,92 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "HP-UX B.11.31 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP-UX B.11.23 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP-UX B.11.11.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-0053",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0053"
+    },
+    {
+      "name": "CVE-2012-0021",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0021"
+    },
+    {
+      "name": "CVE-2012-0031",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0031"
+    },
+    {
+      "name": "CVE-2011-3607",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3607"
+    }
+  ],
+  "links": [
+    {
+      "title": "Document du CERTA CERTA-2012-AVI-050 du 02 février 2012 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2012-AVI-050/index.html"
+    },
+    {
+      "title": "Bulletin de sécurité HP c03278391 du 18 avril 2012 :",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c03278391"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-225",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-04-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans le module <span\nclass=\"textit\">Apache</span> de <span class=\"textit\">HP-UX</span>. Elles\npermettent à un utilisateur malintentionné de porter atteinte à la\nconfidentialité des données, causer un déni de service et d'élever ses\nprivilèges. La liste ci-dessous fournit le détail de ces vulnérabilités\n:\n\n-   CVE-2011-3607 : la fonction <span class=\"textit\">api_pregsub</span>,\n    lorsque le module <span class=\"textit\">mod_setenvif</span> est\n    activé, est vulnérable à un dépassement d'entier permettant à un\n    utilisateur malintentionné d'élever ses privilèges ;\n-   CVE-2012-0021 : <span class=\"textit\">mod_log_config</span> ne gère\n    pas correctement certains cookies, ce qui peut conduire à un arrêt\n    inopiné du service Apache ;\n-   CVE-2012-0031 : un problème dans la gestion des segments de mémoire\n    partagée peut conduire à un déni de service local ;\n-   CVE-2012-0053 : lorsqu'aucune page personnalisée n'est définie pour\n    le code d'erreur 400, il est possible d'obtenir les cookies\n    httpOnly.\n",
+  "title": "Multiples vulnérabilités dans HP-UX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité HP-UX c03278391 du 18 avril 2012",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "libFLAC version 1.2.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "logiciels et distributions incluant cette bibliothèque, dont Winamp version 5.35.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nFLAC est le sigle du format audio Free Lossless Audio Codec.\n\nLa bibliothèque libFLAC présente des défauts de gestion des fichiers\nFLAC malformés. Ces défauts provoquent des débordements d'entiers\n(integer overflow). L'exploitation de ces débordements permet à un\nutilisateur malveillant d'exécuter du code arbitraire à distance.\n\n## Solution\n\nLa version 1.2.1 de la bibliothèque corrige le problème.\n\nLa version 5.5 de Winamp corrige le problème.\n\nSe référer au bulletin de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-4619",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4619"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site de téléchargement de Winamp :",
+      "url": "http://www.winamp.com/player"
+    },
+    {
+      "title": "Bulletin de version de FLAC du 17 septembre 2007 :",
+      "url": "http://flac.sourceforge.net/changelog.html"
+    },
+    {
+      "title": "Bulletin de sécurité iDefense du 11 octobre 2007 :",
+      "url": "http://www.idefense.com/application/poi/display?id=608"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-439",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-10-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de la bibliothèque <span\nclass=\"textit\">libFLAC</span> permettent à un utilisateur malveillant\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités de FLAC et Winamp",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin iDefense 608 du 11 octobre 2007",
+      "url": null
+    }
+  ]
+}

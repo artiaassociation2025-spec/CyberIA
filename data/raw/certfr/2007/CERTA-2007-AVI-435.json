@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "HP System Management Homepage (SMH) sur HP-UX versions B.11.11, B.11.23 et B.11.31.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP System Management Homepage (SMH) versions antérieures à 2.1.10 (pour GNU/Linux et Microsoft Windows) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe manque de contrôle du contenu d'un argument envoyé à HP System\nManagement Homepage (SMH) permet à un individu malveillant de réaliser\nde l'injection de code indirecte à distance (Cross Site Scripting ou\nXSS).\n\n## Solution\n\nLa version 2.1.10-186 pour GNU/Linux et Microsoft Windows corrige le\nproblème. Les correctifs PHSS_36869, PHSS_36870 et PHSS_36871 pour HP-UX\ncorrigent le problème. Se référer au bulletin de sécurité de l'éditeur\npour l'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5302",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5302"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HP c01183265 du 03 octobre 2007 :",
+      "url": "http://itrc.hp.com/service/cki/docDisplay.do?docId=c01183265"
+    },
+    {
+      "title": "Bulletin de sécurité HP c01183597 du 03 octobre 2007 :",
+      "url": "http://itrc.hp.com/service/cki/docDisplay.do?docId=c01183597"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-435",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-10-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence CVE.",
+      "revision_date": "2008-02-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    }
+  ],
+  "summary": "Une vulnérabilité de HP System Management Homepage (SMH) permet\nl'exécution de code indirecte à distance.\n",
+  "title": "Vulnérabilité dans HP System Management Homepage",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité HP c01183265 et c01183597 du 03 octobre 2007",
+      "url": null
+    }
+  ]
+}

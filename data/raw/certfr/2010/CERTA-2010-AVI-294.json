@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>MySQL 5.1.47 et versions précédentes.</p>",
+  "content": "## Description\n\nLe traitement incorrect de certaines commandes alter database par MySQL\npermet à un utilisateur malveillant de déplacer le serveur dans\nl'arborescence. Cet utilisateur doit disposer du droit d'exécuter cette\ncommande. Cette vulnérabilité lui permet de provoquer un déni de service\nà distance.\n\n## Solution\n\nLa version 5.1.48 de MySQL ce problème.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2008",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2008"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin des modifications apportées par la version MySQL    5.1.48 du 02 juin 2010 :",
+      "url": "http://dev.mysql.com/doc/refman/5.1/en/news-5-1-48.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-294",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-06-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité de MySQL permet à un utilisateur malveillant de\nmodifier l'arborescence et provoquer un déni de service à distance.\n",
+  "title": "Vulnérabilité de MySQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin des modifications apportées par la version MySQL 5.1.48",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SPIP versions 2.1.x antérieures à 2.1.12.",
+      "product": {
+        "name": "SPIP",
+        "vendor": {
+          "name": "SPIP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SPIP versions 1.9.x antérieures à 1.9.2n ;",
+      "product": {
+        "name": "SPIP",
+        "vendor": {
+          "name": "SPIP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SPIP versions 2.0.x antérieures à 2.0.17 ;",
+      "product": {
+        "name": "SPIP",
+        "vendor": {
+          "name": "SPIP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans SPIP :\n\n-   un utilisateur authentifié peut élever ses privilèges au sein de\n    SPIP et en devenir administrateur ;\n-   il est possible d'afficher le chemin d'installation ;\n-   une injection de code indirecte à distance est réalisable.\n\n## Solution\n\nLes versions 1.9.2n, 2.0.17 et 2.1.12 corrigent ces vulnérabilités. La\nmise à jour de l'écran de sécurité (dernière version en date du 5\nnovembre 2011) est recommandée mais ne suffit pas pour les branches 2.0\net 2.1.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2011-AVI-654",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-11-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Des vulnérabilités dans <span class=\"textit\">SPIP</span> permettent une\nélévation de privilèges dans l'application et une injection de code\nindirecte à distance.\n",
+  "title": "Vulnérabilités dans SPIP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de SPIP du 17 novembre 2011",
+      "url": "http://archives.rezo.net/archives/spip-ann.mbox/2011/11/"
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Bugzilla versions 4.x antérieures à la version 4.0rc2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bugzilla versions 3.2.x antérieures à la version 3.2.10.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bugzilla versions 3.6.x antérieures à la version 3.6.4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bugzilla versions 3.4.x antérieures à la version 3.4.10 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été corrigées dans Bugzilla.\n\nUne vulnérabilité non spécifiée permet à un utilisateur de récupérer les\nprivilèges d'un autre compte.\n\nUne erreur dans la validation de certaines entrées non spécifiées par\nl'éditeur permet d'insérer du contenu et des en-têtes arbitraires dans\nla réponse retournée par le serveur à l'utilisateur.\n\nD'autres vulnérabilités permettant l'injection de code indirecte à\ndistance et l'injection de requêtes illégitime par rebond ont également\nété corrigées.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-4568",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4568"
+    },
+    {
+      "name": "CVE-2010-4411",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4411"
+    },
+    {
+      "name": "CVE-2010-4570",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4570"
+    },
+    {
+      "name": "CVE-2011-0048",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0048"
+    },
+    {
+      "name": "CVE-2011-0046",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0046"
+    },
+    {
+      "name": "CVE-2010-4572",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4572"
+    },
+    {
+      "name": "CVE-2010-2761",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2761"
+    },
+    {
+      "name": "CVE-2010-4567",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4567"
+    },
+    {
+      "name": "CVE-2010-4569",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4569"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-031",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-01-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été corrigées dans Bugzilla. L'une d'entre\nelles permet à un utilisateur de récupérer les privilèges d'un autre\ncompte.\n",
+  "title": "Multiples vulnérabilités dans Bugzilla",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Bugzilla du 24 janvier 2011",
+      "url": "http://www.bugzilla.org/security/3.2.9/"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM DB2 Universal Database version 8 ;",
+      "product": {
+        "name": "Db2",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM DB2 Universal Database version 9.1.",
+      "product": {
+        "name": "Db2",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans le système de base de\ndonnées IBM DB2. La plupart n'ont pas été spécifiées, mais elles\nconcerneraient les procédures d'autorisation, la manipulation de\ncertaines variables d'environnement, et l'ouverture incorrecte de\nfichiers particuliers. Enfin, un utilisateur pourrait encore utiliser\ndes méthodes, même si les privilèges associés de celles-ci ont été\nrévoqués.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur IBM pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg21255607 du 14 août 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21255607"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg21255332 du 14 août 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21255332"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg1JR25940 du 14 août 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1JR25940"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg1IY88226 du 14 août 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IY88226"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-365",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-08-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans le système de base de\ndonnées IBM DB2. L'exploitation de ces dernières permettrait à une\npersonne malveillante connectée d'élever ses privilèges, et à contourner\nla politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans IBM DB2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité IBM du 14 août 2007",
+      "url": null
+    }
+  ]
+}

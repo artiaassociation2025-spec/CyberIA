@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Time Capsule, versions du microgiciel inférieures à 7.5.2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "AirPort Extreme Base Station, versions du microgiciel inférieures à 7.5.2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCinq vulnérabilités spécifiées par les références CVE suivantes ont été\ncorrigées:\n\n-   un débordement d'entier dans la gestion du protocole SNMP permet à\n    un attaquant de provoquer l'arrêt inopiné du service SNMP\n    (CVE-2008-4390) ;\n-   un utilisateur malveillant du réseau peut effectuer un déni de\n    service (redémarrage de la borne) en envoyant un grand nombre de\n    paquets IPv6, ce qui consomme les ressources de l'appareil.\n    (CVE-2009-2189) ;\n-   un attaquant peut contourner les règles de pare-feu et contacter un\n    serveur FTP situé derrière le NAT (CVE-2010-0039) ;\n-   une erreur dans la gestion des paquets ISAKMP fragmentés par le\n    démon racoon permet à un attaquant d'arrêter ce démon de manière\n    inopinée (CVE-2010-1574) ;\n-   les appareils configurés pour fonctionner en mode pont (bridge), ou\n    configurés en mode NAT avec un hôte par défaut subissent un déni de\n    service lorsque des réponses DHCP spécialement conçues leur sont\n    envoyés.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2189",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2189"
+    },
+    {
+      "name": "CVE-2008-4390",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4390"
+    },
+    {
+      "name": "CVE-2008-4309",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4309"
+    },
+    {
+      "name": "CVE-2009-1574",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1574"
+    },
+    {
+      "name": "CVE-2010-1804",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1804"
+    },
+    {
+      "name": "CVE-2010-1574",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1574"
+    },
+    {
+      "name": "CVE-2010-0039",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0039"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Apple APPLE-SA-2010-12-16-1 du 16    décembre 2010 :",
+      "url": "http://lists.apple.com/archives/security-announce/2010/Dec/msg00001.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-620",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités affectant le microgiciel des appareils <span\nclass=\"textit\">Time Capsule</span> et <span class=\"textit\">AirPort\nExtreme Base Station</span> permettent à un attaquant de contourner la\npolitique de sécurité ou d'effectuer un déni de service à distance.\n",
+  "title": "Vulnérabilités dans AirPort Extreme Base Station et Time Capsule",
+  "vendor_advisories": []
+}

@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenBSD version 3.9 ;",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenBSD version 4.0.",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été découverte dans le driver vga d'OpenBSD. Un\nutilisateur malintentionné peut exploiter cette vulnérabilité, présente\nsi le noyau a été compilé avec l'option PCIAGP, afin d'obtenir les\nprivilèges de l'administrateur (root).\n\nCette vulnérabilité n'est présente que pour les architectures i386, et\nseulement si la carte graphique n'est pas une carte AGP.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctif de sécurité OpenBSD du 03 janvier 2007 :",
+      "url": "http://openbsd.org/errata.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-006",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans OpenBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour OpenBSD du 3 Janvier 2007",
+      "url": null
+    }
+  ]
+}

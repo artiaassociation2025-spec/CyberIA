@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>OpenBSD, FreeBSD, toute distribution Linux et tout système  utilisant OpenSSHv2 dans une version inférieure à la 2.9.9.</P>",
+  "content": "## Description\n\nLe fichier ˜/.ssh/authorized_keys2, de chaque utilisateur autorisé à se\nconnecter via SSH, permet de restreindre les actions permises et/ou\nl'adresse du client par l'ajout d'options à chaque clé publique listée.\n\nCes limitations sont souvent utilisées lorsque le client distant est\ninvoqué automatiquement (tâche programmée,...) et que par conséquent sa\nclé privée n'est pas protégée par un mot de passe.  \n\nDans certains cas particuliers, ces restrictions peuvent être\ncontournées :\n\n-   si le serveur sftp (ftp sécurisé introduit avec la version 2) est\n    lancé, il peut être invoqué malgré la restriction sur les commandes\n    autorisées, et, selon les droits du client, être utilisé pour\n    modifier le fichier ˜/.ssh/authorized_keys2 dans le but d'obtenir un\n    shell, par exemple.\n-   si 2 clés de nature différente (i.e. RSA et DSA) se suivent au sein\n    de ce fichier, alors les options sur la seconde clé s'appliquent\n    également à la première, ce qui peut conduire au non respect de\n    restrictions sur l'adresse source du client pour la première clé.\n\n## Contournement provisoire\n\n-   Désactiver le lancement du sous-système sftp sur le serveur\n    (usuellement dans le fichier sshd_config) dans le premier cas.\n-   Commenter l'une des clés ou créer de nouvelles clés de manière à\n    unifier le type, dans le second cas.\n\n## Solution\n\n-   Télécharger et compiler la dernière version d'OpenSSH depuis le site\n    officiel :\n\n        http://www.openssh.org\n\n-   Télécharger et installer le port/paquetage correspondant à la\n    distribution lorsqu'il sera disponible.\n    -   Linux Mandrake :\n\n            http://www.linux-mandrake/en/security/2001/MDKSA-2001-081.php3\n\n    -   Linux Red Hat :\n\n            http://www.redhat.com/support/errata/RHSA-2001-114.html\n\n    -   Linux Trustix :\n\n            http://www.trustix.net/errata/misc/2001/TSL-2001-0026-openssh.as.txt\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "OpenSSH Security Advisory",
+      "url": "http://www.securityfocus.com/cgi-bin/archive.pl?id=1&mid=216702"
+    },
+    {
+      "title": "OpenSSH: sftp & bypassing keypair auth restrictions",
+      "url": "http://www.securityfocus.com/cgi-bin/archive.pl?id=1&mid=214921"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-104",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-09-28T00:00:00.000000"
+    },
+    {
+      "description": "ajout de liens sur les distributions Linux de Mandrake, Red Hat et Trustix.",
+      "revision_date": "2001-10-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut contourner une configuration\nrestreignant les adresses IP de connexion au serveur ou les commandes\nautorisées sur ce dernier.\n",
+  "title": "Vulnérabilités multiples dans l'implémentation OpenSSH du protocole SSH v2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Listes de diffusion BugTraq et openssh-unix-dev",
+      "url": null
+    }
+  ]
+}

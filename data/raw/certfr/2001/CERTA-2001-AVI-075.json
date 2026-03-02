@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>CheckPoint Firewall-1 et VPN-1 version 4.1.</P>",
+  "content": "## Description\n\nRDP de CheckPoint est un protocole propriétaire différent du protocole\nRDP (Reliable Data Protocol décrit par la RFC 908). Le port 259/UDP de\nFirewall-1, permet d'envoyer des commandes simples RDP chiffrées au\ngarde barrière.\n\nMalheureusement, une mauvaise implémentation des règles de sécurité du\nlogiciel, permet à des paquets UDP de traverser le port 259 du garde\nbarrière dans n'importe quel sens sans être bloqué par ce dernier.\n\n## Contournement provisoire\n\nFiltrer le port 259/UDP sur les routeurs de périphérie.\n\n## Solution\n\nAppliquer le correctif de CheckPoint après avoir installé le Service\nPack 4 :\n\n    http://www.checkpoint.com/techsupport/downloads.html\n\nEt installer à nouveau les règles de sécurité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "L'avis de sécurité de Checkpoint :",
+      "url": "http://www.checkpoint.com/techsupport/alerts/rdp.html"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-075",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-07-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement des règles de sécurité"
+    }
+  ],
+  "summary": "Le port 259/UDP n'est pas correctement bloqué par Firewall-1.\n",
+  "title": "Vulnérabilité de Firewall-1",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de Checkpoint 2001-07-09",
+      "url": null
+    }
+  ]
+}

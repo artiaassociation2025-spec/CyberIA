@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Trend Micro OfficeScan version 8.x.</P>",
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Trend Micro\nOfficeScan :\n\n-   des erreurs dans la validation des entrées dans le service\n    OfficeScan NT Firewall permettent d'exécuter du code arbitraire avec\n    les droits SYSTEM ou de provoquer un déni de service ;\n-   une manipulation de la configuration est possible pour un\n    utilisateur local via des paquets spécialement conçus malgré la\n    restriction par mot de passe activée pour manipuler l'interface de\n    configuration.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3864",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3864"
+    },
+    {
+      "name": "CVE-2008-3866",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3866"
+    },
+    {
+      "name": "CVE-2008-3865",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3865"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-026",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-01-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectant Trend Micro OfficeScan permettent à\nune personne malintentionnée d'effectuer un déni de service, d'exécuter\ndu code arbitraire ou de contourner la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans Trend Micro OfficeScan",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Trend Micro du 16 janvier 2009",
+      "url": "http://www.trendmicro.com/ftp/documentation/readme/OSCE8.0_SP1_Patch1_CriticalPatch_3191_Readme.txt"
+    }
+  ]
+}

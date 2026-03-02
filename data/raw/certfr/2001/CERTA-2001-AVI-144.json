@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Routeurs CISCO de la série 12000 uniquement.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités concernant les ACL sur les routeurs CISCO de la\nsérie 12000 sont à corriger.\n\n-   Les ACL ne permettent de bloquer que le premier élément d'un paquet\n    fragmenté. Il est donc possible de contourner les règles de sécurité\n    du routeur en dissimulant du trafic malveillant dans certains des\n    fragments.\n\n-   Le mot clé fragment dans les ACL est ignoré si le paquet est destiné\n    au routeur lui même. Le routeur n'est donc pas protégé par ses ACL.\n\n-   Ce mot clé est ignoré dans les ACL s'appliquant aux paquets\n    sortants, une règle contenant ce mot clé ne s'applique que sur les\n    paquets entrants.\n\n    Il peut même arriver que ce mot clé soit ignoré dans tous les cas.\n\n-   Une règle implicite deny ip any any placée en fin d'une ACL\n    d'exactement 448 entrées appliquée à une interface (contrôle d'accès\n    du trafic sortant) sera ignorée.\n\n-   Une ACL risque de ne pas bloquer certains paquets du trafic sortant,\n    si une autre liste concernant le trafic entrant existe mais n'est\n    pas appliquée à toutes les interfaces d'un système de type Engine 2\n    uniquement.\n\n## Solution\n\nAppliquer les correctifs comme indiqué dans l'avis de CISCO. (cf.\nSection Documentation)\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité de CISCO :",
+      "url": "http://www.cico.com/warp/public/707/GSR-ACL-pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-144",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-11-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement des règles de filtrage des routeurs"
+    }
+  ],
+  "summary": "Sur les CISCO de la série 12000, dans certaines conditions, les ACL\n(Liste de Contrôles d'Accès) mises en place ne sont pas correctement\nprises en compte.\n",
+  "title": "Vulnérabilités liées aux ACL dans les routeurs CISCO 12000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO",
+      "url": null
+    }
+  ]
+}

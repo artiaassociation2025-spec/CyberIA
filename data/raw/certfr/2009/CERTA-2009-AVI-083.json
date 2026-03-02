@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>PHP 5.x.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans PHP :\n\n-   un défaut dans la décompression des archives zip permet à un\n    utilisateur malveillant de provoquer un arrêt inopiné du serveur ;\n-   une erreur de traitement des chaînes malformées transmises à la\n    fonction json_decode() permet à un utilisateur malveillant de\n    provoquer une erreur de segmentation ;\n-   un problème dans la fonction explode() permet à un utilisateur\n    malveillant de provoquer un déni de service ;\n-   une erreur d'index de tableau dans la fonction imageRotate() est\n    exploitable par un utilisateur malveillant pour lire toute la\n    mémoire.\n\n## Solution\n\nLa version PHP 5.2.9 remédie à ces vulnérabilités.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3659",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3659"
+    },
+    {
+      "name": "CVE-2008-5498",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-5498"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin Mandriva MDVSA-2009:023 du 21 janvier 2009 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:023"
+    },
+    {
+      "title": "Bulletin Mandriva MDVSA-2009:021 du 21 janvier 2009 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:021"
+    },
+    {
+      "title": "Bulletin Mandriva MDVSA-2009:022 du 21 janvier 2009 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:022"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-083",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-03-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités sont présentes dans PHP, permettant à un\nutilisateur malveillant de réaliser un déni de service et de porter\natteinte à la confidentialité des données.\n",
+  "title": "Vulnérabilités dans PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de la version PHP 5.2.9 du 26 février 2008",
+      "url": "http://www.php.net/ChangeLog-5.php#5.2.9"
+    }
+  ]
+}

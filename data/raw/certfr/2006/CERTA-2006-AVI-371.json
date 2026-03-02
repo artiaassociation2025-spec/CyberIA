@@ -1,0 +1,88 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco PIX 500 Series Security Appliances, ayant une version logicielle 7.1(x) antérieure ou égale à 7.1(2.4) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco ASA 5500 Series Adaptive Security Appliances, ayant une version logicielle 7.1(x) antérieure ou égale à 7.1(2.4) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco PIX 500 Series Security Appliances, ayant une version logicielle de la forme 7.0(x) antérieure ou égale à 7.0(5) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco ASA 5500 Series Adaptive Security Appliances, ayant une version logicielle de la forme 7.0(x) antérieure ou égale à 7.0(5) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "le module FWSM (pour Firewall Services Module) des Cisco Catalyst 6500 Switches et Cisco 7600 Series Routers, ayant une version de la forme 3.1(x) antérieure ou égale à 3.1(1.6).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes produits de sécurité Cisco mettent en œuvre plusieurs procédés\nd'authentification, notamment pour les différents modes de configuration\n(EXEC mode ou enable mode par exemple). Les méthodes dites AAA (pour\nAuthentification, Authorization,and Accounting) sont régulièrement\ndéployées, sous la forme de RADIUS, TACACS+ ou LOCAL. Quand ce n'est pas\nle cas, l'authentification se fait par le biais de commandes spécifiques\n:\n\n-   la commande passwd pour le mode EXEC ;\n-   la commande enable password pour le mode enable ;\n-   la commande username pour configurer les utilisateurs locaux ainsi\n    que leurs mots de passe.\n\nUne vulnérabilité a été identifiée dans l'étape de vérification de la\nconfiguration, et pourrait conduire au changement de mot de passe sans\naucune intervention d'un utilisateur légitime. Une personne\nmalveillante, peut, sous certaines conditions, tirer profit de cette\nvulnérabilité pour empêcher l'accès au système vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur Cisco pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 70811    cisco-sa-20060823-firewall du 23 août 2006 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20060823-firewall.shtml"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-371",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans certaines versions du logiciel\ncommun à plusieurs produits de sécurité Cisco. Une personne malveillante\npourrait, à distance, exploiter celle-ci, afin de modifier les mots de\npasse des utilisateurs du système Cisco, ou activer des mots de passe\nafin d'en bloquer l'accès aux administrateurs légitimes.\n",
+  "title": "Vulnérabilité dans les produits pare-feux de Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco ID-70811 du 23 août 2006",
+      "url": null
+    }
+  ]
+}

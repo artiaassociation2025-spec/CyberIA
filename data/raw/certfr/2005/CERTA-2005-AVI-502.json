@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Citrix Program Neighborhood versions  9.1 et antérieures pour Windows.</p>",
+  "content": "## Description\n\nLe client Citrix Program Neighborhood permet d'accéder directement à des\napplications publiées par un serveur Citrix sans passer nécessairement\npar un bureau Citrix complet. Ce client dispose d'un mecanisme de\ndécouverte des applications disponibles basé sur UDP. Une erreur dans la\nmise en œuvre de cette fonctionnalité permet à un utilisateur distant\nmal intentionné de provoquer un débordement de tampon en présentant une\napplication avec un nom exagérément long. Ce faisant, il lui est\npossible d'exécuter du code arbitraire sur la machine vulnérable dans le\ncontexte du client Citrix.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention de\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2005-AVI-502",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-12-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le client Citrix Program Neighborhood permet à un\nutilisateur distant mal intentionné d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité dans le client Progam Neighborhood de Citrix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Citrix #CTX108354",
+      "url": "http://support.citrix.com/article/CTX108354"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toute distribution Linux utilisant un noyau de la série 2.2  jusqu'au 2.2.24 inclus ou de la série 2.4 jusqu'au 2.4.20  inclus.</P>",
+  "content": "## Description\n\nL'appel système ptrace du noyau Linux fournit le moyen pour un processus\nparent d'observer et contrôler l'éxécution d'un autre processus, et\nd'éditer son image mémoire. Cette fonction est principalement utilisée\npour gérer les points d'arrêts dans les opérations de débogage.\n\nUne faille dans cet appel peut être exploitée pour disposer des\nprivilèges de l'utilisateur root.\n\n## Solution\n\n-   Mettre à jour le noyau Linux à partir des sources :\n    -   Série 2.2, mettre à jour en version 2.2.25 au moins :\n\n            ftp://www.kernel.org/pub/linux/kernel/v2.2/\n\n    -   Série 2.4, mettre à jour en version 2.4.21-pre6 au moins :\n\n            ftp://www.kernel.org/pub/linux/kernel/v2.4/testing\n\n-   Distributions Red Hat Linux 7.1, 7.2, 7.3 et 8.0 :\n\n        https://rhn.redhat.com/errata/RHSA-2003-098.html\n\n-   Gentoo Linux :\n\n        http://forums.gentoo.org/viewtopic.php?t=42814\n\n-   Openwall :\n\n        http://www.openwall.com/linux/\n\n-   Trustix Secure Linux 1.01, 1.1, 1.2 et 1.5 :\n\n        http://www.trustix.net/errata/misc/2003/TSL-2003-0007-kernel.asc.txt\n\n-   EnGarde :\n\n        http://www.linuxsecurity.com/advisories/engarde_advisory-2976.html\n\n-   Turbolinux :\n\n        http://www.turbolinux.com/security/TLSA-2003-17.txt\n\n-   SuSE :\n\n        http://www.suse.com/de/security/2003_21_kernel.html\n\n-   Mandrake :\n    -   série 2.4 :\n\n            http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:038\n\n    -   série 2.2 :\n\n            http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:039\n\n-   Debian :\n    -   architecture Mips :\n\n            http://www.debian.org/security/2003/dsa-270\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Annonce de la sortie du noyau linux 2.4.21-pre6 :",
+      "url": "http://marc.theaimsgroup.com/?l=linux-kernel&m=104872392328305&w=2"
+    },
+    {
+      "title": "Message d'Alan Cox dans la liste de diffusion des    développeurs du noyau Linux :",
+      "url": "http://www.uwsg.indiana.edu/hypermail/linux/kernel/0303.2/0226.html"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-051",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence CVE et des distributions Gentoo,",
+      "revision_date": "2003-03-25T00:00:00.000000"
+    },
+    {
+      "description": "correction liste systèmes affectés. Ajout avis Debian (DSA-270), Mandrake, SuSE. Ajout lien sur kernel 2.4.21-pre6.",
+      "revision_date": "2003-03-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation des privilèges du super-utilisateur (root) en local"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné, connecté localement, peut obtenir tous\nles privilèges du système.\n",
+  "title": "Vulnérabilité des noyaux Linux 2.2 et 2.4",
+  "vendor_advisories": []
+}

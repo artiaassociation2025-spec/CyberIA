@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les agents de supervision Compaq sont  utilisés sur de nombreuses plate-formes du constructeur.  <P>La liste des systèmes affectés est disponible sur le site de  Compaq :</P>  <PRE><A name=\"tex2html2\" href=\"http://www.compaq.com/products/servers/management/mgtsw-advisory2.html\"\nid=\"tex2html2\">http://www.compaq.com/products/servers/management/mgtsw-advisory2.html</A>\n</PRE></p>",
+  "content": "## Description\n\nLes agents de supervision Compaq sont utilisés sur les équipements de ce\nconstructeur.\n\nUne vulnérabilité de type débordement de mémoire dans les agents\nd'administration accessibles via HTTP permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire à distance avec les privilèges\nde l'administrateur.\n\n## Contournement provisoire\n\nCompaq rappelle que ce type de service ne devrait pas être accessible en\ndehors du réseau interne.\n\nIl convient donc de bloquer l'accès au port 2301 au niveau des routeurs\npériphériques ou des pare-feux, rendant ainsi la vulnérabilité\nexploitable uniquement depuis le réseau interne.\n\n## Solution\n\nUne mise-à-jour est disponible sur le site Compaq :\n\n    ftp://ftp.compaq.com/pub/softpaq/sp17501-1800/\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-105",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut utiliser une vulnérabilité dans les\nagents de supervision Compaq interrogeables via HTTP pour exécuter du\ncode arbitraire à distance avec les privilèges de l'administrateur.\n",
+  "title": "Vulnérabilité dans les agents de supervision Compaq",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité SSRT0758 de Compaq",
+      "url": "http://www.compaq.com/products/servers/management/mgtsw-advisory.html"
+    }
+  ]
+}

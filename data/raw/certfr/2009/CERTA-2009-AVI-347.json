@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">neon</SPAN> versions 0.28.5 et  antérieures.</P>",
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans neon :\n\n-   un déni service est possible, via des fichiers au format XML ou un\n    serveur DAV malveillant, si la bibliothèque expat est utilisée\n    (CVE-2009-2473) ;\n-   le mécanisme de vérification des certificats utilisés lors de\n    sessions SSL peut être contourné, ce qui permet des attaques de type\n    homme-au-milieu (CVE-2009-2474).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2474",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2474"
+    },
+    {
+      "name": "CVE-2009-2473",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2473"
+    }
+  ],
+  "links": [
+    {
+      "title": "Descriptif des vulnérabilités corrigées :",
+      "url": "http://lists.manyfish.co.uk/pipermail/neon/2009-August/001045.html"
+    },
+    {
+      "title": "Descriptif des vulnérabilités corrigées :",
+      "url": "http://lists.manyfish.co.uk/pipermail/neon/2009-August/001046.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-347",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Attaque de type homme-au-milieu"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans <span class=\"textit\">neon</span> permettent de\nréaliser des attaques de type homme-au-milieu ou un déni de service à\ndistance.\n",
+  "title": "Vulnérabilités dans la bibliothèque neon",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de la version 0.28.6 de neon du 18 août 2009",
+      "url": "http://lists.manyfish.co.uk/pipermail/neon/2009-August/001044.html"
+    }
+  ]
+}

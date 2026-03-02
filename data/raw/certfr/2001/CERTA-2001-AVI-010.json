@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Majorité des systèmes Unix, systèmes Windows NT utilisant  BIND.</P>",
+  "content": "## Description\n\n-   Il existe un débordement de pile dans la fonction TSIG\n    (authentification de transaction par clef secrète partagée -\n    RFC 2845) qui permet à un utilisateur distant mal intentionné\n    d'exécuter du code sur la machine serveur et par conséquent\n    d'obtenir les privilèges du super-utilisateur ou un déni de service\n    (versions 8.x.x).\n-   De plus il y a deux débordements de pile supplémentaires dans\n    l'interface avec la journalisation système ayant les mêmes\n    conséquences que précédemment (versions 4.x.x).\n-   La dernière vulnérabilité permet à un utilisateur distant de lire la\n    pile du programme permettant éventuellement de lire des variables\n    d'environnement ou du programme. Ces informations peuvent aider au\n    développement d'exploits concernant les trois débordements de pile\n    précédents (versions 4.x.x et 8.x.x).\n\n## Contournement provisoire\n\nIl n'existe pas de contournement provisoire, le DNS étant indispensable\nau fonctionnement d'internet, il est nécessaire de procéder aux mises à\njour.\n\n## Solution\n\nMettre à jour le serveur BIND :\n\n-   Branche 4.x.x (n'est plus activement maintenue) : évoluer vers la\n    version 4.9.8\n\n        ftp://ftp.isc.org/isc/bind/src/DEPRECATED/4.9.8/bind-498-REL.tar.gz\n\n-   Branche 8.x.x : évoluer vers la version 8.2.3\n\n        ftp://ftp.isc.org/isc/bind/src/8.2.3/bind-src.tar.gz\n\nNota : il existe une nouvelle branche de développement visant à\nimplémenter le DNSSEC, dont la dernière version est la 9.1, mais elle\nest loin d'avoir toutes fonctionnalités de la branche 8.x.x. Son\ninstallation n'est pas recommandée.\n\n## Correctifs de certains vendeurs (liste non exhaustive)\n\n### Caldera Linux\n\n-   OpenLinux 2.3, archive RPM sous :\n\n        ftp://calderasystems.com/pub/updates/OpenLinux/2.3/current/RPMS/\n\n-   eServer 2.3.1, archive RPM sous :\n\n        ftp://calderasystems.com/pub/updates/eServer/2.3/current/RPMS/\n\n-   eDesktop 2.4, archive RPM sous :\n\n        ftp://calderasystems.com/pub/updates/eDesktop/2.4/current/RPMS/\n\n### Mandrake Linux\n\nSuivre les directives depuis la page suivante pour les versions 6.0,\n6.1, 7.0, 7.1, 7.2 et Corporate Server 1.0.1 :\n\n    http://www.linux-mandrake.com/en/security/2001/MDKSA-2001-017.php3\n\n### Trustix\n\n    http://www.trustix.net/pub/Trustix/updates\n\n### Debian\n\nLes paquetages pour la version 2.2 sont disponibles selon l'architecture\nsous :\n\n    http://security.debian.org/dists/stable/updates/main/\n\n### TurboLinux\n\n    http://www.turbolinux.com/pipermail/tl-security-announce/2001-February/000034.html\n\n### SuSE Linux\n\n    http://www.suse.com/de/support/security/2001_03_bind8_txt.txt\n\n### Conectiva Linux\n\n    http://distro.conectiva.com/atualizacoes/?id=a&anuncio=000377\n\n### RedHat Linux\n\n    http://www.redhat.com/support/errata/RHSA-2001-007.html\n\n### Slackware Linux\n\n    http://archives.neohapsis.com/archives/bugtraq/2001-01/0477.html\n\n### Immunix\n\n    http://archives.neohapsis.com/archives/linux/immunix/2001-q1/0046.html\n\n### Compaq Tru64\n\n    http://archives.neohapsis.com/archives/compaq/2001-q1/0074.html\n\n### HP-UX\n\n    http://archives.neohapsis.com/archives/hp/2001-q1/0069.html\n\n### IBM AIX\n\n    http://archives.neohapsis.com/archives/aix/2001-q1/0008.html\n\n### Sun Solaris\n\n    http://sunsolve.Sun.COM/pub-cgi/retrieve.pl?doc=salert%2F26965\n\n### NetBSD\n\n    ftp://ftp.NetBSD.ORG/pub/NetBSD/security/advisories/NetBSD-SA2001-001.txt.asc\n\n### FreeBSD\n\n    ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-01:18.bind.asc\n\n### OpenBSD\n\n    http://archives.neohapsis.com/archives/openbsd/2001-02/0191.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis CA-2001-02 du CERT/CC",
+      "url": "http://www.cert.org/advisories/CA-2001-02.html"
+    },
+    {
+      "title": "Avis des laboratoires COVERT de PGP security",
+      "url": "http://www.pgp.com/research/covert/advisories/047.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-010",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-01-30T00:00:00.000000"
+    },
+    {
+      "description": "mise à jour des correctifs des vendeurs.",
+      "revision_date": "2001-11-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations système (variables d'environnement)"
+    },
+    {
+      "description": "Accès distant avec les privilèges du super-utilisateur"
+    },
+    {
+      "description": "Déni de service induisant un déni de service pour les autres protocoles internet (messagerie, serveur et navigation web, ...)"
+    }
+  ],
+  "summary": "Quatre vulnérabilités majeures ont été découvertes dans le code du\nserveur DNS BIND, développé par l'Internet Software Consortium (ISC),\npermettant à un utilisateur distant de prendre le contrôle de la machine\nhôte.\n\nIl existe une interrogation DNS permettant de connaître la version de\nBIND tournant à une adresse IP donnée, et donc, pour un utilisateur\nhostile, de conclure sur la vulnérabilité à exploiter.\n",
+  "title": "Multiples vulnérabilités dans le serveur DNS BIND",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis du CERT/CC CA-2001-02 du 29/01/2001",
+      "url": null
+    }
+  ]
+}

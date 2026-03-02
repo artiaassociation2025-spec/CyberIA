@@ -1,0 +1,98 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les pilotes Intel Pro/Wireless 2200BG Network Connection de version antérieure à 10.5.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Les pilotes Intel Pro/Wireless 2100 Network Connection de version antérieure à 7.1.4.6.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Les pilotes Intel Pro/Wireless 3945ABG Network Connection de version antérieure à 10.5.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Les pilotes Intel Pro/Wireless 2915ABG Network Connection de version antérieure à 10.5.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans les pilotes Microsoft\nde certains matériels Intel pour les connexions sans-fil. Ceux-ci font\npartie de la technologie mobile Intel Centrino et peuvent être intégrés\ndans des ordinateurs portables ou tout autre appareil communiquant en\nWi-Fi 802.11b/g et éventuellement 802.11a (pour le matériel Intel\nPro/Wireless 3945ABG). Ils se présentent sous la forme de cartes au\nformat MiniPCI.\n\nParmi ces vulnérabilités :\n\n-   Certaines permettent à un utilisateur malveillant distant, via un\n    réseau sans-fil, d'envoyer des paquets mal interprétés par le\n    pilote. Sous certaines conditions, la corruption de mémoire\n    engendrée peut alors entraîner l'exécution de code arbitraire avec\n    les droits de l'administrateur.\n-   L'une d'elles est dûe à un usage non maîtrisé de la mémoire\n    partagée. Elle peut être exploitée par un utilisateur (ou une\n    application) local du système vulnérable, afin d'obtenir des\n    informations confidentielles sur la sécurité du réseau Wi-Fi : cela\n    peut être la clé partagée WEP, ou les diverses informations\n    d'authentification.\n-   L'une d'elles serait dûe à une vérification non correcte des\n    requêtes d'accès par certains pilotes de plus haut niveau ou\n    applicatifs. L'injection de paquets malformés destinés à une\n    application particulièrement conçue permettrait à un utilisateur\n    d'élever ces privilèges à ceux d'administrateur.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur Intel pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2316",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2316"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Intel CS-023065 du 28 juillet 2006 :",
+      "url": "http://support.intel.com/support/wireless/wlan/sb/CS-023065.htm"
+    },
+    {
+      "title": "Bulletin de sécurité Intel CS-023066 du 28 juillet 2006 :",
+      "url": "http://support.intel.com/support/wireless/wlan/sb/CS-023066.htm"
+    },
+    {
+      "title": "Bulletin de sécurité Intel CS-023067 du 28 juillet 2006 :",
+      "url": "http://support.intel.com/support/wireless/wlan/sb/CS-023067.htm"
+    },
+    {
+      "title": "Bulletin de sécurité Intel CS-023068 du 28 juillet 2006 :",
+      "url": "http://support.intel.com/support/wireless/wlan/sb/CS-023068.htm"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-316",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans les pilotes Microsoft\nde certains matériels Intel pour les connexions sans-fil. Elles\npermettraient à une personne malveillante d'élever ses privilèges à ceux\nd'administrateur, d'obtenir des informations sur la sécurité du réseau\nsans-fil ou d'exécuter du code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités des pilotes Microsoft pour Intel Centrino PRO/Wireless",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Intel du 28 juillet 2006",
+      "url": null
+    }
+  ]
+}

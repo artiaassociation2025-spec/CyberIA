@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Symantec pcAnywhere versions 12.5.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IT Management Suite 7.0 pcAnywhere Solution versions 12.5.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IT Management Suite 7.1 pcAnywhere Solution versions 12.6.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDes vulnérabilités ont été découvertes dans Symantec pcAnywhere :\n\n-   un mauvais filtrage des données transmises pendant la phase\n    d'authentification auprès du service en écoute sur le port 5631/tcp\n    permet une exécution de code arbitraire à distance (CVE-2011-3478) ;\n-   un utilisateur légitime du système peut écraser des fichiers déposés\n    pendant l'installation pour élever ses privilèges (CVE-2011-3479) ;\n-   durant un session client-serveur valide, certaines entrées peuvent\n    provoquer une violation d'accès mettant fin à la session distante\n    mais laissant la session cliente ouverte. Ceci peut avoir pour\n    conséquence de permettre des connections non autorisées à la session\n    cliente (CVE-2012-0290).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-0290",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0290"
+    },
+    {
+      "name": "CVE-2011-3479",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3479"
+    },
+    {
+      "name": "CVE-2011-3478",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3478"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2012-AVI-032",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2012-01-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout du CVE CVE-2012-0290.",
+      "revision_date": "2012-02-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Des vulnérabilités dans <span class=\"textit\">Symantec pcAnywhere</span>\npermettent d'exécuter du code arbitraire à distance et d'élever les\nprivilèges.\n",
+  "title": "Vulnérabilités dans pcAnywhere",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SYM12-002 du 24 janvier 2012",
+      "url": "http://www.symantec.com/security_response/securityupdates/detail.jsp?fid=security_advisory&pvid=security_advisory&suid=20120124_00"
+    }
+  ]
+}

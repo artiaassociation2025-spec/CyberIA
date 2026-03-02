@@ -1,0 +1,156 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Mozilla Firefox pour les versions antérieures à 2.0.0.12    ;</LI>    <LI>Mozilla SeaMonkey pour les versions antérieures 1.1.8    ;</LI>    <LI>Mozilla Thunderbird pour les versions antérieures à    2.0.0.12.</LI>  </UL>  <P>A la date de rédaction de cet avis, la version 2.0.0.12 de  Thunderbird n'est cependant pas téléchargeable sur le site  officiel Mozilla.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans le navigateur Mozilla\nFirefox. Parmi celles-ci :\n\n-   des vulnérabilités concernent le moteur JavaScript et provoquent\n    sous certaines conditions une corruption de mémoire.\n-   le navigateur ne manipulerait pas correctement les contrôles\n    d'entrée de fichiers associés à des balises de type label, pouvant\n    provoquer le vol de fichiers arbitraires sur le poste de la victime\n    ;\n-   des vulnérabilités permettent de contourner la politique de source\n    commune (same-origin policy) et permettre d'injecter du code dans un\n    autre site. L'une d'elle est rendue possible par la fonction\n    XMLDocument.load() ;\n-   la gestion du stockage des mots de passe ne serait pas correcte : à\n    l'ajout d'une entrée, le site distant pourrait altérer les mots de\n    passe déjà présents et concernant d'autres sites ;\n-   l'URI chrome: permettrait de transgresser les droits d'accès et donc\n    d'accéder à des fichiers (scripts ou images par exemple), lorsque\n    certains modules complémentaires sont installés (CERTA-2008-ACT-004)\n    ;\n-   les images ne sont pas correctement manipulées à la fermeture d'une\n    page qui utilise des cadres designMode. Cette vulnérabilité\n    permettrait ainsi de dérober des historiques de navigation ou\n    perturber le navigateur.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0415",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0415"
+    },
+    {
+      "name": "CVE-2008-0417",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0417"
+    },
+    {
+      "name": "CVE-2008-0418",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0418"
+    },
+    {
+      "name": "CVE-2008-0419",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0419"
+    },
+    {
+      "name": "CVE-2008-0413",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0413"
+    },
+    {
+      "name": "CVE-2008-0592",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0592"
+    },
+    {
+      "name": "CVE-2008-0593",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0593"
+    },
+    {
+      "name": "CVE-2008-0414",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0414"
+    },
+    {
+      "name": "CVE-2008-0591",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0591"
+    },
+    {
+      "name": "CVE-2008-0594",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0594"
+    },
+    {
+      "name": "CVE-2008-0412",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0412"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2008-0104 du 08 février    2008 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2008-0104.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2008/MFSA2008-04 du 07 février 2008 :",
+      "url": "http://www.mozilla.org/security/announce/2008/MFSA2008-04.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2008/MFSA2008-08 du 07 février 2008 :",
+      "url": "http://www.mozilla.org/security/announce/2008/MFSA2008-08.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2008/MFSA2008-05 du 07 février 2008 :",
+      "url": "http://www.mozilla.org/security/announce/2008/MFSA2008-05.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2008/MFSA2008-09 du 07 février 2008 :",
+      "url": "http://www.mozilla.org/security/announce/2008/MFSA2008-09.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2008/MFSA2008-11 du 07 février 2008 :",
+      "url": "http://www.mozilla.org/security/announce/2008/MFSA2008-11.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2008/MFSA2008-03 du 07 février 2008 :",
+      "url": "http://www.mozilla.org/security/announce/2008/MFSA2008-03.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2008/MFSA2008-06 du 07 février 2008 :",
+      "url": "http://www.mozilla.org/security/announce/2008/MFSA2008-06.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2008-0103 du 08 février    2008 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2008-0103.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1484 du 10 février 2008 :",
+      "url": "http://www.debian.org/security/2008/dsa-1484"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2008/MFSA2008-10 du 07 février 2008 :",
+      "url": "http://www.mozilla.org/security/announce/2008/MFSA2008-10.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-576-1 du 08 février 2008 :",
+      "url": "http://www.ubuntu.com/usn/usn-576-1"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1485 du 10 février 2008 :",
+      "url": "http://www.debian.org/security/2008/dsa-1485"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2008/MFSA2008-02 du 07 février 2008 :",
+      "url": "http://www.mozilla.org/security/announce/2008/MFSA2008-02.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2008/MFSA2008-01 du 07 février 2008 :",
+      "url": "http://www.mozilla.org/security/announce/2008/MFSA2008-01.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2008-0105 du 08 février    2008 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2008-0105.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1489 du 10 février 2008 :",
+      "url": "http://www.debian.org/security/2008/dsa-1489"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-062",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian.",
+      "revision_date": "2008-02-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans le navigateur Mozilla\nFirefox. L'exploitation de ces dernières peut conduire notamment à\nl'exécution de code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans les produits Mozilla",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de la mise à jour Mozilla Firefox 2.0.0.12 du 07 février 2008",
+      "url": null
+    }
+  ]
+}

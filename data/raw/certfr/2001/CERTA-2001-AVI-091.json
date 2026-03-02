@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>HP-UX 10.01, 10.10, 10.20, 11.11, 11.20.</P>",
+  "content": "## Description\n\nrlpdaemon est un service d'impression sous HP-UX adapté des sources BSD.\n\nUne vulnérabilité de ce daemon permet à un utilisateur local ou distant\nd'effectuer un débordement de mémoire pouvant conduire à un arrêt du\nservice ou bien à l'exécution de code arbitraire sur le serveur victime\navec les privilèges de ce daemon.\n\nPar défaut rlpdaemon est installé et actif lors de l'installation du\nsystème.\n\n## Contournement provisoire\n\nDésactiver ou supprimer rlpdaemon s'il n'est pas utilisé sur cette\nmachine.\n\n## Solution\n\nAppliquer le correctif selon la version sur le site suivant :\n\n    http://itrc.hp.com\n\n.\n\n-   Pour HP-UX 10.01 : PHCO_24697\n-   Pour HP-UX 10.10 : PHCO_24698\n-   Pour HP-UX 10.20 : PHCO_24699\n-   Pour HP-UX 11.00 : PHCO_24700\n-   Pour HP-UX 11.11 : PHCO_24701\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité HPSBUX0108-163 :",
+      "url": "http://itrc.hp.com"
+    },
+    {
+      "title": "Bulletin de sécurité du CIAC :",
+      "url": "http://www.ciac.org/ciac/l-134.shtml"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-091",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-09-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité du daemon rlpdaemon sous HP-UX permet à un utilisateur\nmal intentionné d'exécuter du code arbitraire avec les privilèges du\ncompte associé à ce daemon.\n",
+  "title": "Vulnérabilité de rlpdaemon sous HP-UX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité HP HPSBUX0108-163",
+      "url": null
+    }
+  ]
+}

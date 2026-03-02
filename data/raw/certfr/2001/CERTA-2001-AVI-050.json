@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Index Server 2.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Indexing Service dans Microsoft Windows 2000.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Première vulnérabilité (Microsoft Index Server 2.0):\n\n    Le serveur d'indexation a pour but de retrouver rapidement certains\n    fichiers sur une machine. Il est également utilisé dans certains\n    sites Web.\n\n    Un utilisateur mal intentionné peut, par le biais de requêtes\n    spécifiques sur ce serveur, entraîner une exécution de code\n    arbitraire avec les privilèges du serveur ou créer un déni de\n    service.\n\n-   Deuxième vulnérabilité (Indexing Service dans Microsoft Windows 2000\n    et Microsoft Index Server 2.0) :\n\n    Un utilisateur distant effectuant une requête sur des fichiers,\n    relatifs au service d'index mais inexistants, peut découvrir\n    l'architecture du répertoire relatif à IIS. Seul un accès en lecture\n    est possible.\n\n## Contournement provisoire\n\nConcernant la première vulnérabilité, une authentification NETBIOS\npréalable est nécessaire. Le fait de bloquer les ports NETBIOS au niveau\ndu garde barrière permet d'empêcher la réalisation de cet exploit depuis\ninternet, le risque se limitant à une attaque interne.\n\n## Solution\n\n-   Microsoft Index Server 2.0\n    -   Première vulnérabilité :\n\n            http://www.microsoft.com/Downloads/Release.asp?ReleaseID=29660\n\n    -   Seconde vulnérabilité :\n\n            http://www.microsoft.com/Downloads/Release.asp?ReleaseID=29631\n\n-   Indexing Service dans Microsoft Windows 200\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=29561\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-025.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-050",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-05-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une première vulnérabilité permet à un utilisateur mal intentionné\nd'exécuter du code arbitraire ou de créer un déni de service sur un\nserveur d'indexation 2.0.\n\nUne seconde permet par le biais d'une vulnérabilité dans le service\nd'indexation de Windows 2000 de lire les fichiers résidant dans un\nserveur Web.\n",
+  "title": "Vulnérabilités dans le serveur d'indexation Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-025",
+      "url": null
+    }
+  ]
+}

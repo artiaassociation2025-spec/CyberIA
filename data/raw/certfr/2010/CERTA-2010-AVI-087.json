@@ -1,0 +1,100 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Symantec Endpoint Protection versions 11.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec Client Security versions 3.0.x, 3.1.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec AntiVirus versions 10.0.x, 10.1.x, et 10.2.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Norton Antivirus, SystemWorks, Confidential et Internet Security versions 2006, 2007 et 2008 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans plusieurs produits\nSymantec :\n\n-   une vulnérabilité de type débordement de mémoire a été découverte\n    dans le composant Symantec Client Proxy. Un utilisateur peut\n    exécuter du code arbitraire à distance par le biais d'un contrôle\n    ActiveX spécialement conçu ;\n-   une vulnérabilité de type débordement de mémoire a été découverte\n    dans la bibliothèque SYMLTCOM.dll. Un utilisateur peut l'exploiter\n    pour exécuter du code arbitraire dans le contexte du navigateur de\n    l'utilisateur ;\n-   une autre vulnérabilité concerne la fonctionnalité d'analyse\n    antivirale à la demande. Cette analyse peut être contournée\n    localement en effectuant un certain nombre d'actions spécifiques.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0108",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0108"
+    },
+    {
+      "name": "CVE-2010-0106",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0106"
+    },
+    {
+      "name": "CVE-2010-0107",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0107"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-087",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-02-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout d'une troisième vulnérabilité.",
+      "revision_date": "2010-02-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans plusieurs produits <span\nclass=\"textit\">Symantec</span> permettent l'exécution de code arbitraire\nà distance ou le contournement de la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans plusieurs produits Symantec",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symantec SYM10-003 du 17 février 2010",
+      "url": "http://www.symantec.com/business/security_response/securityupdates/detail.jsp?fid=security_advisory&pvid=security_advisory&year=2010&suid=20100217_01"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symantec SYM10-004 du 17 février 2010",
+      "url": "http://www.symantec.com/business/security_response/securityupdates/detail.jsp?fid=security_advisory&pvid=security_advisory&year=2010&suid=20100217_02"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symantec SYM10-002 du 17 février 2010",
+      "url": "http://www.symantec.com/business/security_response/securityupdates/detail.jsp?fid=security_advisory&pvid=security_advisory&year=2010&suid=20100217_00"
+    }
+  ]
+}

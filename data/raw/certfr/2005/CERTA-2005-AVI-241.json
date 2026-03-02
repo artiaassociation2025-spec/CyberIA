@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de FreeBSD.</p>",
+  "content": "## Description\n\nIl a été découvert deux vulnérabilités dans la pile TCP de FreeBSD.  \nLorsque la pile TCP reçoit un paquet contenant un marqueur de temps\n(timestamp), le contrôle du numéro de séquence n'est pas fait\nconvenablement, ce qui permet à un attaquant d'augmenter de façon\nartificielle le marqueur horaire \\`\\`recent'' d'une connexion.  \nLa seconde vulnérabilité permet à un attaquant de modifier certaines\noptions TCP, via un paquet possédant le drapeau SYN positionné.\n\n## Solution\n\nAppliquer les directives de l'éditeur (Cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de FreeBSD du 29 juin 2005 :",
+      "url": "ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-05:15.tcp.asc"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-241",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-07-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités dans la pile <TT>TCP</TT> de FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de l'éditeur du",
+      "url": null
+    }
+  ]
+}

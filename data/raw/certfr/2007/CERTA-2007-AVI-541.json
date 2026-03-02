@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions de MySQL antérieures à la 5.0.51.",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans MySQL permet à un utilisateur malveillant de\nmanipuler localement certaines données de la base. Elle survient lors du\nrenommage de tables ayant certaines caractéristiques, et permet de\nremplacer ces tables par des liens symboliques pointant sur des\nstructures controlées par l'attaquant.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5969",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5969"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de mise à jour Mysql 5.0.51 du 15 novembre 2007 :",
+      "url": "http://dev.mysql.com/doc/refman/5.0/en/releasenotes-cs-5-0-51.html"
+    },
+    {
+      "title": "Alerte de Secunia numéro 27981 du 10 décembre 2007 :",
+      "url": "http://secunia.com/advisories/27981/"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:243 du 10 décembre    2007 :",
+      "url": "http://www.mandriva.com/archives/security/advisories"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-541",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité permettant la manipulation de données, dont les tables\nsystème, affecte MySQL.\n",
+  "title": "Vulnérabilité dans MySQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour MySQL 5.0.51 du 15 novembre 2007",
+      "url": null
+    }
+  ]
+}

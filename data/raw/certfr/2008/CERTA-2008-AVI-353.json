@@ -1,0 +1,164 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Server 2003 x64 Edition Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft XP Professional x64 Edition Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft XP Professional x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2008 (systèmes 32-bit et x64).",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 SP1 et SP2 pour systèmes Itanium ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 3 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées sur les mises en œuvre DNS sous\nWindows. La première concerne la mise en œuvre des requêtes DNS émises\npar un client ou un serveur. Le port source étant prévisible, il suffit\nsous certaines conditions, pour forger une réponse malveillante, de\ndeviner l'identifiant de transaction (dont la génération a fait l'objet\nd'un correctif décrit dans MS08-020). Cette mesure n'est pas suffisante.\nUne seconde vulnérabilité concerne l'opération de mise en cache pour le\nserveur DNS. Ce dernier accepte sous certaines conditions de mettre en\ncache des réponses malveillantes. Les détails précis de cette\nvulnérabilité ne sont cependant pas connus à la date de rédaction de cet\navis.\n\n## Solution\n\nSe référer au bulletin de sécurité MS08-037 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1454",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1454"
+    },
+    {
+      "name": "CVE-2008-1447",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1447"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bloc-notes de Microsoft SVRD, \"MS08-037 : More entropy for    the DNS resolver\" :",
+      "url": "http://blogs.technet.com/swi/archive/2008/07/08/ms08-037-more-entropy-in-the-dns-resolver.aspx"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-353",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-07-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été identifiées sur les mises en œuvre DNS sous\nWindows. Elles impliquent le client ainsi que le serveur. L'exploitation\nde ces dernières permet sous certaines conditions de corrompre le cache\net de rediriger le trafic d'utilisateurs vers des systèmes illégitimes.\n",
+  "title": "Vulnérabilité DNS dans Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS08-037 du 08 juillet 2008",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-037.mspx"
+    }
+  ]
+}

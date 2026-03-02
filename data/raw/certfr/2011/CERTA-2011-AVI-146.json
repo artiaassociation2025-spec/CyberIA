@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Postfix versions 2.5.x strictement inférieures à 2.5.12 ;",
+      "product": {
+        "name": "Postfix",
+        "vendor": {
+          "name": "Postfix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Postfix versions 2.6.x strictement inférieures à 2.6.9 ;",
+      "product": {
+        "name": "Postfix",
+        "vendor": {
+          "name": "Postfix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Postfix versions 2.7.x strictement inférieures à 2.7.3 ;",
+      "product": {
+        "name": "Postfix",
+        "vendor": {
+          "name": "Postfix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Postfix versions 2.4.x strictement inférieures à 2.4.16.",
+      "product": {
+        "name": "Postfix",
+        "vendor": {
+          "name": "Postfix",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nIl est possible à un attaquant en position d'interception (man in the\nmiddle) d'insérer des commandes SMTP lorsqu'un client souhaite utiliser\nune connexion sécurisée au moyen de la commande STARTTLS, qui est un\nmessage transmis en clair. Ces commandes sont alors interprétées par le\nserveur dans le contexte d'une connexion sécurisée.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0411",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0411"
+    }
+  ],
+  "links": [
+    {
+      "title": "Description détaillée de la vulnérabilité CVE-2011-0411 :",
+      "url": "http://www.postfix.org/CVE-2011-0411.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-146",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-03-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la gestion du protocole TLS permet à un attaquant\nd'insérer des commandes dans les communications SMTP d'une victime.\n",
+  "title": "Vulnérabilité dans Postfix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour Postfix du 7 mars 2011",
+      "url": "http://www.postfix.org/announcements/postfix-2.7.3.html"
+    }
+  ]
+}

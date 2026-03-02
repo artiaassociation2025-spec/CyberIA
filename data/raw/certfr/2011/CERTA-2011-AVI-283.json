@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Postfix SMTP Server avec  authentification SASL activée.</p>",
+  "content": "## Description\n\nLorsqu'un serveur SMTP Postfix utilise SASL, un défaut de gestion de\nl'authentification en fonction des connexions SMTP permet à un\nutilisateur malveillant de provoquer une corruption de la mémoire.\nCelle-ci provoque un arrêt inopiné du serveur. Il n'est pas exclu que\nl'attaquant puisse exécuter du code à distance avec les droits du compte\nsystème sous lequel le serveur SMTP s'exécute.\n\n## Solution\n\nLes versions 2.5.13, 2.6.10, 2.7.4 et 2.8.3 du serveur SMTP Postfix\ncorrigent ce problème.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1720",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1720"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Fedora FEDORA-2011-6777 du 17 mai 2011    (postfix-2.7.4-1.fc13) :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2011-May/060215.html"
+    },
+    {
+      "title": "Bulletin de sécurité Fedora FEDORA-2011-6771 du 17 mai 2011    (posftix-2.7.4-1.fc14) :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2011-May/060216.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-283",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-05-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout des correctifs Fedora.",
+      "revision_date": "2011-05-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Postfix permet à un utilisateur malveillant de\nprovoquer un déni de service à distance.\n\nLa possibilité d'exécuter du code à distance n'est pas exclue.\n",
+  "title": "Vulnérabilité dans Postfix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Postfix CVE-2011-1720 du 08 mai 2011",
+      "url": "http://www.postfix.org/CVE-2011-1720.html"
+    }
+  ]
+}

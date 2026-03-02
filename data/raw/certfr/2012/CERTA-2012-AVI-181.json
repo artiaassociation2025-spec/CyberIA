@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Versions antérieures à TYPO3 4.4.14, 4.5.14 et 4.6.7.</P>",
+  "content": "## Description\n\nUne exploitation de ces vulnérabilités peut conduire à des fuites\nd'informations et à des injections de codes à distance (XSS). Parmi ces\nfailles une affecte la fonction t3lib_div::RemoveXSS() lors du filtrage\nde certains caractères HTML spécifiques. La deuxième est, elle aussi, de\ntype XSS mais requiert d'avoir un accès utilisateur sur l'application.\nLa troisième donne directement accès au CLI (Command Line Interface) et\npermet de découvrir le nom de la base de données TYPO3. Enfin la\ndernière permet de \"dé-sérialiser\" arbitrairement des objets de TYPO3.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-1607",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-1607"
+    },
+    {
+      "name": "CVE-2012-1608",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-1608"
+    },
+    {
+      "name": "CVE-2012-1606",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-1606"
+    },
+    {
+      "name": "CVE-2012-1605",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-1605"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2012-AVI-181",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-03-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Quatre vulnérabilités ont été corrigées dans TYPO3.\n",
+  "title": "Multiples vulnérabilités dans TYPO3",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité TYPO3 sa-2012-001 du 28 mars 2012",
+      "url": "http://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2012-001/"
+    }
+  ]
+}

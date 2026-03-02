@@ -1,0 +1,91 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Serv-U versions 15.x antérieures à 15.5",
+      "product": {
+        "name": "Serv-U",
+        "vendor": {
+          "name": "SolarWinds",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SolarWinds Platform versions 2024.x antérieures à 2024.4",
+      "product": {
+        "name": "Platform",
+        "vendor": {
+          "name": "SolarWinds",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2024-45715",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-45715"
+    },
+    {
+      "name": "CVE-2024-45710",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-45710"
+    },
+    {
+      "name": "CVE-2024-45714",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-45714"
+    },
+    {
+      "name": "CVE-2024-45711",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-45711"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0892",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-10-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits SolarWinds. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une injection de code indirecte à distance (XSS).",
+  "title": "Multiples vulnérabilités dans les produits SolarWinds",
+  "vendor_advisories": [
+    {
+      "published_at": "2024-10-16",
+      "title": "Bulletin de sécurité SolarWinds cve-2024-45714",
+      "url": "https://www.solarwinds.com/trust-center/security-advisories/cve-2024-45714"
+    },
+    {
+      "published_at": "2024-10-17",
+      "title": "Bulletin de sécurité SolarWinds cve-2024-45710",
+      "url": "https://www.solarwinds.com/trust-center/security-advisories/cve-2024-45710"
+    },
+    {
+      "published_at": "2024-10-17",
+      "title": "Bulletin de sécurité SolarWinds cve-2024-45715",
+      "url": "https://www.solarwinds.com/trust-center/security-advisories/cve-2024-45715"
+    },
+    {
+      "published_at": "2024-10-16",
+      "title": "Bulletin de sécurité SolarWinds cve-2024-45711",
+      "url": "https://www.solarwinds.com/trust-center/security-advisories/cve-2024-45711"
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mozilla Thunderbird versions 0.x antérieures à la version 0.8 ;",
+      "product": {
+        "name": "Thunderbird",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mozilla version 1.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mozilla versions 1.7.x antérieures à la version 1.7.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Netscape versions 7.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mozilla version 1.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mozilla version 1.2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mozilla version 1.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mozilla version 1.4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mozilla Firefox versions 0.x antérieures à la version 1.0PR ;",
+      "product": {
+        "name": "Firefox",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mozilla version 1.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mozilla versions 0.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mozilla version 1.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Plusieurs débordements de mémoire sont présents dans le fichier\n    nsMsgCompUtils.cpp. Ces vulnérabilités peuvent être exploitées par\n    un utilisateur mal intentionné, via un courrier éléctronique\n    malicieusement construit, pour réaliser un déni de service ou\n    exécuter du code arbitraire à distance.\n-   Un utilisateur mal intentionné peut exploiter une insuffisance dans\n    les restrictions des actions effectuées par les scripts pour lire et\n    écrire dans le presse-papier.\n-   Plusieurs débordements de mémoire sont présents dans les fichiers\n    writeGroup et nsVCardObj.cpp. Ces vulnérabilités peuvent être\n    exploitées par un utilisateur mal intentionné, via un courrier\n    électronique contenant une carte de visite malicieusement\n    construite, pour réaliser un déni de service ou exécuter du code\n    arbitraire à distance.\n-   Plusieurs débordements de mémoire sont présents dans le fichier\n    nsPop3Protocol.cpp chargé du traitement des communications POP. Ces\n    vulnérabilités peuvent être exploitées par un utilisateur mal\n    intentionné, via une réponse du serveur POP malicieusement\n    construite, pour réaliser un déni de service ou exécuter du code\n    arbitraire à distance. Netscape n'est pas affecté par ces\n    vulnérabilités.\n-   Un utilisateur mal intentionné, par le biais d'un lien\n    malicieusement construit dans un courrier éléctronique ou sur une\n    page web, peut exécuter du code arbitraire ou réaliser un déni de\n    service.\n-   Un utilisateur mal intentionné, par le biais d'une image au format\n    BMP malicieusement construite dans un courrier électronique ou sur\n    une page web, peut exécuter du code arbitraire ou réaliser un déni\n    de service.\n-   Une vulnérabilité est présente dans la gestion des liens entre\n    plusieurs fenêtres ou plusieurs cadres (frames). Cette vulnérabilité\n    permet à un utilisateur mal intentionné en combinant d'autres\n    vulnérabilités d'exécuter du code arbitraire.\n-   Un utilisateur mal intentionné, par l'envoi d'un paramètre\n    malicieux, peut dissimuler le fait qu'un script signé ait été\n    envoyé. Cette vulnérabilité permet à un utilisateur mal intentionné\n    d'exécuter un script signé en contournant le message d'avertissement\n    envoyé à l'utilisateur. Netscape n'est pas affecté par cette\n    vulnérabilité.\n-   Des fichiers installés par l'installeur linux sont en écriture pour\n    tous. Cela peut être exploité par un utilisateur mal intentionné\n    pour exécuter du code arbitraire en remplaçant certains fichiers.\n    Netscape n'est pas affecté par cette vulnérabilité.\n-   Certains fichiers et répertoires dans l'archive .tar.gz ont des\n    propriétaires et des privilèges inapropriés. Cette vulnérabilité\n    peut être exploitée par un utilisateur local mal intentionné pour\n    remplacer ces fichiers et exécuter du code arbitraire.\n\n## Solution\n\nInstaller les versions qui ne sont pas affectées par ces vulnérabilités\n:\n\n-   Mozilla version 1.7.3 ;\n-   Mozilla Firefox version 1.0PR ;\n-   Mozilla Thunderbird 0.8.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mozilla n˚257314 :",
+      "url": "http://bugzilla.mozilla.org/show_bug.cgi?id=257314"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla n˚231083 :",
+      "url": "http://bugzilla.mozilla.org/show_bug.cgi?id=231083"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla n˚257523 :",
+      "url": "http://bugzilla.mozilla.org/show_bug.cgi?id=257523"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla n˚253942 :",
+      "url": "http://bugzilla.mozilla.org/show_bug.cgi?id=253942"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla n˚258005 :",
+      "url": "http://bugzilla.mozilla.org/show_bug.cgi?id=258005"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla n˚255067 :",
+      "url": "http://bugzilla.mozilla.org/show_bug.cgi?id=255067"
+    },
+    {
+      "title": "Site internet de Mozilla :",
+      "url": "http://www.mozilla.org"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla n˚250862 :",
+      "url": "http://bugzilla.mozilla.org/show_bug.cgi?id=250862"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla n˚254303 :",
+      "url": "http://bugzilla.mozilla.org/show_bug.cgi?id=254303"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla n˚226669 :",
+      "url": "http://bugzilla.mozilla.org/show_bug.cgi?id=226669"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla n˚245066 :",
+      "url": "http://bugzilla.mozilla.org/show_bug.cgi?id=245066"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla n˚235781 :",
+      "url": "http://bugzilla.mozilla.org/show_bug.cgi?id=235781"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla n˚256316 :",
+      "url": "http://bugzilla.mozilla.org/show_bug.cgi?id=256316"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-320",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Les risques sont liés à chaque vulnérabilité et sont indiqués dans la description de la vulnérabilité dans la section description"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans les logiciels Mozilla,\nMozilla FireFox, Mozilla Thunderbird et Netscape permettent à un\nutilisateur mal intentionné d'accéder et de modifier des informations\nsensibles, de réaliser des attaques de type « Cross Site Scripting », de\nréaliser un déni de service ou d'exécuter du code arbitraire à distance\nsur les systèmes où sont installés les logiciels vulnérables.\n",
+  "title": "Multiples vulnérabilités sur les logiciels Mozilla",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Mozilla",
+      "url": null
+    }
+  ]
+}

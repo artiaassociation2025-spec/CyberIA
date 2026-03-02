@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>VLC versions 0.9.5 et antérieures.</p>",
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans le lecteur multimedia VLC :\n\n-   la première concerne le démultiplexeur de fichiers CUE ;\n-   la seconde est relative à la gestion des fichiers de sous-titres au\n    format RealText.\n\nElles permettent à un utilisateur distant malintentionné de provoquer un\ndéni de service ou d'exécuter du code arbitraire par le biais de\nfichiers .cue ou RealText conçus de façon particulière.\n\n## Solution\n\nLa version 0.9.6 de VLC corrige le problème :\n\n    http://www.videolan.org/vlc\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site du projet VideoLAN (VLC) :",
+      "url": "http://www.videolan.org"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-543",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-11-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans VLC permettent à un utilisateur\ndistant de provoquer un déni de service ou d'exécuter du code\narbitraire.\n",
+  "title": "Multiples vulnérabilités dans VLC",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VideoLAN-SA-0810 du 05 novembre 2008",
+      "url": "http://www.videolan.org/security/sa0810.html"
+    }
+  ]
+}

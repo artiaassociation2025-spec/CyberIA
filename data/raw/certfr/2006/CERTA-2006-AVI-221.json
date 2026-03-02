@@ -1,0 +1,95 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "la version 10.1 de Symantec AntiVirus Corporate Edition pour Microsoft Windows ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "la version 3.1 de Symantec Security Client pour Microsoft Windows.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "La version 10.0 de Symantec AntiVirus Corporate Edition pour Microsoft Windows ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "la version 3.0 de Symantec Security Client pour Microsoft Windows ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité de type débordement de pile (ou stack overflow) a été\nidentifiée dans certaines versions des produits Symantec AntiVirus\nCorporate Edition et Symantec Client Security. Une pile est une\nstructure logique destinée à contenir des données. Cette vulnérabilité\nse situe au niveau de la console de gestion distante, qui est\ngénéralement activée en écoute par défaut sur le port TCP 2967. Elle ne\nvérifie pas correctement les données de certaines requêtes envoyées à\nRtvscan.exe. Un utilisateur malveillant distant peut profiter de cette\nvulnérabilité pour perturber le système hébergeant le service Symantec\nou y exécuter des commandes arbitraires.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2630",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2630"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité eEye AD20060612 du 12 juin 2006 :",
+      "url": "http://www.eeye.com/html/research/advisories/AD20060612.html"
+    },
+    {
+      "title": "Correctifs Symantec disponibles à l'adresse suivante :",
+      "url": "http://www.symantec.com/techsupp/enterprise/"
+    },
+    {
+      "title": "Bulletin de sécurité Symantec SYM06-010, mis à jour le 27    mai 2006 :",
+      "url": "http://www.symantec.com/avcenter/security/Content/2006.05.25.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-221",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-28T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence CVE et bulletin eEye.",
+      "revision_date": "2006-06-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans certaines versions des produits\nSymantec AntiVirus Corporate Edition et Symantec Client Security. Un\nutilisateur malveillant distant peut profiter de celle-ci pour perturber\nle système hébergeant le service Symantec ou y exécuter des commandes\narbitraires.\n",
+  "title": "Vulnérabilité dans Symantec AntiVirus et Client Security",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symantec du 27 mai 2006",
+      "url": null
+    }
+  ]
+}

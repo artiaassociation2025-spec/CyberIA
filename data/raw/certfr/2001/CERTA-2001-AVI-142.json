@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Utilitaires liés à <SPAN class=\"textit\">pppattach</SPAN>.</P>",
+  "content": "## Description\n\nPPP (Point to Point Protocol) est un protocole utilisé pour échanger des\npaquets IP sur une liaison série.\n\nIl existe une vulnérabilité des exécutables liés à ppattach, permettant\nà un utilisateur d'obtenir, en local, les droits du propriétaire du\nfichier /usr/bin/pppattach (drapeau setuid positionné).\n\nLe propriétaire par défaut de ce fichier est l'utilisateur root.\n\n## Contournement provisoire\n\nSi vous n'utilisez pas le protocole PPP, désinstallez les utilitaires\nPPP, ou désactivez le drapeau setuid root du fichier /usr/bin/pppattach.\n\n## Solution\n\nContactez votre distributeur pour obtenir une mise à jour.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Caldera :",
+      "url": "http://stage.caldera.com/support/security"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-142",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-11-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Obtention des droits de l'utilisateur root"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, en local, obtenir les droits de\nl'utilisateur <span class=\"textit\">root</span> en exploitant une\nvulnérabilité des utilitaires liés à <span\nclass=\"textit\">pppattach</span>.\n",
+  "title": "Vulnérabilité des utilitaires 'ppp'",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Caldera",
+      "url": null
+    }
+  ]
+}

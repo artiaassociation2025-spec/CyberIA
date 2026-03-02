@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>PostgreSQL versions 7.3, 7.4, 8.0, 8.1 et 8.2.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans PostgreSQL :\n\n-   une des fonctionnalités de PostgreSQL permet de créer une indexation\n    des résultats de fonctions définies par l'utilisateur. Des\n    vulnérabilités dans les fonctions d'indexation permettent d'élever\n    les privilèges de l'utilisateur (CVE-2007-6600) ;\n-   des problèmes ont été découverts dans les bibliothèques permettant\n    le traitement des expressions régulières par PostgreSQL. Un\n    utilisateur malintentionné peut, par le biais d'expressions\n    régulières spécifiques, réaliser un déni de service (CVE-2007-4769,\n    CVE-2007-4772 et CVE-2007-6067) ;\n-   une vulnérabilité dans les fonctions DBLink permet l'élévation des\n    privilèges (CVE-2007-6601).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-6601",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6601"
+    },
+    {
+      "name": "CVE-2007-6067",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6067"
+    },
+    {
+      "name": "CVE-2007-6600",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6600"
+    },
+    {
+      "name": "CVE-2007-4769",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4769"
+    },
+    {
+      "name": "CVE-2007-4772",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4772"
+    }
+  ],
+  "links": [
+    {
+      "title": "Mises à jour de sécurité Mandriva MDVSA-2008:004 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2008:004"
+    },
+    {
+      "title": "Mises à jour de sécurité Debian DSA-1460 :",
+      "url": "http://www.debian.org/security/2008/dsa-1460"
+    },
+    {
+      "title": "Mises à jour de sécurité Red Hat RHSA-2008-0038 et    RHSA-2008-0039 :",
+      "url": "http://www.redhat.com/support/errata/RHSA-2008-0039.html"
+    },
+    {
+      "title": "Mises à jour de sécurité Red Hat RHSA-2008-0038 et    RHSA-2008-0039 :",
+      "url": "http://www.redhat.com/support/errata/RHSA-2008-0038.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-005",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-01-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Des vulnérabilités dans <span class=\"textit\">PostgreSQL</span>\npermettent de réaliser un déni de service ou une élévation de\nprivilèges.\n",
+  "title": "Vulnérabilités dans PostgreSQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PostgreSQL du 06 janvier 2008",
+      "url": "http://www.postgresql.org/about/news.905"
+    }
+  ]
+}

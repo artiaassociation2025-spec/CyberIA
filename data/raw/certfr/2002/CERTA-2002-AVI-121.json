@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous les garde-barrières de type NetScreen-25 qui possédent  une version de ScreenOS fournie avant le 23 avril 2002.</P>  <UL>    <LI>ScreenOS versions antérieures à 2.6.1r8 ;</LI>    <LI>ScreenOS versions antérieures à 2.8.0r2 ;</LI>    <LI>ScreenOS versions antérieures à 2.8.1r1 ;</LI>    <LI>ScreenOS versions antérieures à 3.0.1r1 ;</LI>    <LI>ScreenOS versions antérieures à 3.0.2r3 ;</LI>    <LI>ScreenOS versions antérieures à 3.0.3r1 ;</LI>    <LI>ScreenOS versions antérieures à 3.1.0r1.</LI>  </UL>",
+  "content": "## Description\n\nNetScreen-25 est un garde-barrière de type matériel. Il possède une\ninterface graphique pour son administration. Une vulnérabilité présente\nlors de l'authentification sur celle-ci permet un redémarrage non\nsollicité du garde-barrière lors de la saisie d'un nom d'utilisateur\nd'une taille trop importante. Cette vulnérabilité est minimisée suivant\nla configuration appliquée à l'accès de l'interface graphique.\n\n## Solution\n\nContacter le constructeur afin de mettre à jour la version de ScreenOS.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-121",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité à été découverte sur l'interface d'administration Web\n(WebUI) du garde-barrière lors de l'authentification. Celle-ci peut\npermettre à un utilisateur mal intentionné de réaliser un déni de\nservice.\n",
+  "title": "Vulnérabilité du module d'administration web du garde-barrière NetScreen-25",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité NetScreen",
+      "url": "http://www.netscreen.com/support/ns25_reboot.html"
+    }
+  ]
+}

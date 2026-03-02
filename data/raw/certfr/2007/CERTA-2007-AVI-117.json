@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">PMB</SPAN> version 3.0.14 et  antérieures.</P>",
+  "content": "## Description\n\nPMB ou PhpMyBibli est un logiciel libre de gestion de bibliothèque\ndéveloppé en langage PHP et prenant en compte le format UNIMARC.\n\nPour trois variables PHP, la vérification de la valeur affectée n'est\npas assez restrictive. Cela peut être exploité par un utilisateur\nmalveillant pour exécuter du code arbitraire à distance.\n\nLa vulnérabilité est massivement exploitée par un code malveillant\ndisponible sur l'Internet..\n\nLorsque la variable register_globals du fichier de paramétrage php.ini\nest positionnée à la valeur off, la vulnérabilité n'est pas exploitable.\n\n## Solution\n\nLa version 3.0.15 corrige la vulnérabilité. Se référer au bulletin de\nsécurité de l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Page de téléchargement de l'éditeur :",
+      "url": "http://www.sigb.net/download.php"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-117",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-03-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité sur trois variables PHP permet à un utilisateur\nmalveillant d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité de PMB",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Interne",
+      "url": null
+    }
+  ]
+}

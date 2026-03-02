@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Outlook Express 6.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Outlook Express 5.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLors de la réception d'un mél signé de type S/MIME, Outlook Express\nanalyse la signature et fourni un message d'erreur en cas de problème\nsur celle-ci. Un utilisateur mal intentionné peut, par le biais d'une\nsignature judicieusement composée, réaliser un débordement de mémoire\nlors de l'ouverture de ce message d'avertissement entraînant ainsi\nl'exécution de code arbitraire avec les privilèges de l'utilisateur\nayant reçu ce courrier.\n\n## Solution\n\nAppliquer le correctif distribué par Microsoft (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms02-058.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-223",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la gestion des signatures numériques de courrier\npar Microsoft Outlook Express permet à un utilisateur distant d'exécuter\ndu code arbitraire sur la machine cible.\n",
+  "title": "Vulnérabilité dans Microsoft Outlook Express",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS02-058",
+      "url": null
+    }
+  ]
+}

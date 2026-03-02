@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "HP-UX 10.20 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP-UX 10.10 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP-UX 11.04 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP-UX 10.24 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP-UX 11.00.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDans l'environnement graphique CDE, La commande dtterm permet d'émuler\nun terminal sous unix.\n\nUne vulnérabilité dans cet émulateur permet à un utilisateur d'accroître\nses privilèges.\n\n## Solution\n\nAppliquer les correctifs proposés sur le site HP :\n\n    http://europe-support.external.hp.com\n\n-   Correctif pour HP-UX 10.10 : Non disponible ;\n-   Correctif pour HP-UX 10.24 : PHSS_22546 ;\n-   Correctif pour HP-UX 10.20 : PHSS_22319 ;\n-   Correctif pour HP-UX 11.04 : PHSS_22548 ;\n-   Correctif pour HP-UX 11.00 : PHSS_22320.\n\nSous 10.20 après avoir installé le correctif PHSS_22319, modifier les\npermissions :\n\nchmod 555 /usr/vue/bin/dtterm\n\n## Contournement provisoire\n\nSous 10.10, modifier les permissions pour supprimer la vulnérabilité :\n\nchmod 555 /usr/dt/bin/dtterm\n\nchmod 555 /usr/vue/bin/dtterm\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de HP :",
+      "url": "http://itrc.hp.com"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-069",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-11-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Augmentation des privilèges utilisateur"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, par le biais de dtterm, augmenter\nses privilèges utilisateur.\n",
+  "title": "Vulnérabilité sous HP UX (dtterm)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "HP Security bulletin",
+      "url": null
+    }
+  ]
+}

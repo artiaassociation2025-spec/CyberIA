@@ -1,0 +1,149 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mac OS X 10.4.11 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mac OS X Server 10.4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mac OS X 10.5.4.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mac OS X Server 10.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités concernant Mac OS X ont été corrigées :\n\n-   Open Scripting Architecture : une mauvaise gestion des droits des\n    plugins permet à un utilisateur malveillant local d'élever ses\n    privilèges.\n-   BIND : une mauvaise gestion de l'aléa et un vulnérabilité\n    protocolaire permettent de corrompre le cache du DNS.\n-   CarbonCore : une vulnérabilité dans les gestion des noms longs de\n    fichier permet l'exécution de code arbitraire.\n-   CoreGraphics : une corruption de mémoire permet l'exécution de code\n    arbitraire, par exemple à l'aide d'un site Web spécifiquement\n    réalisé.\n-   CoreGraphics : un dépassement d'entier lors de la gestion de\n    fichiers au format PDF permet l'exécution de code arbitraire.\n-   Data Detectors Engine : la visualisation d'un message spécifiquement\n    créé permet de provoquer un déni de service de l'application.\n-   Disk Utility : après l'utilisation de l'outil Repair Permissions il\n    est possible d'exécuter des commandes avec les droits sytème à\n    l'aide d'emacs.\n-   OpenLDAP : un message spécifiquement réalisé permet de provoquer un\n    déni de service de l'application.\n-   OpenSSL : une vulnérabilité dans la fonction\n    SSL_get_shared_ciphers() permet de provoquer un déni de service de\n    l'application.\n-   PHP : plusieurs vulnérabilités, dont certaines permettant\n    l'exécution de code arbitraire, ont été corrigées.\n-   QuickLook : un document au format Microsoft Office spécifiquement\n    réalisé permet l'exécution de code arbitraire.\n-   rsync : l'utilisation de liens symboliques permet de modifier des\n    fichiers hors du module.\n\n## Solution\n\nSe référer au bulletin de sécurité d'Apple HT2647 du 1 août 2008 pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2324",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2324"
+    },
+    {
+      "name": "CVE-2007-5135",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5135"
+    },
+    {
+      "name": "CVE-2007-6200",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6200"
+    },
+    {
+      "name": "CVE-2008-2051",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2051"
+    },
+    {
+      "name": "CVE-2008-2322",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2322"
+    },
+    {
+      "name": "CVE-2008-0674",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0674"
+    },
+    {
+      "name": "CVE-2008-2325",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2325"
+    },
+    {
+      "name": "CVE-2007-6199",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6199"
+    },
+    {
+      "name": "CVE-2008-2320",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2320"
+    },
+    {
+      "name": "CVE-2008-0599",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0599"
+    },
+    {
+      "name": "CVE-2008-1447",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1447"
+    },
+    {
+      "name": "CVE-2007-4850",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4850"
+    },
+    {
+      "name": "CVE-2008-2323",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2323"
+    },
+    {
+      "name": "CVE-2008-2050",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2050"
+    },
+    {
+      "name": "CVE-2008-2321",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2321"
+    },
+    {
+      "name": "CVE-2008-2952",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2952"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Apple HT2647 du 01 août 2008 :",
+      "url": "http://support.apple.com/kb/HT2647"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-388",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-08-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités permettant entre autres l'exécution de code\narbitraire à distance, et concernant le système d'exploitaiton Mac OS X,\nont été corrigées.\n",
+  "title": "Multiples vulnérabilités dans Mac OS X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apple HT2647 du 1 août 2008",
+      "url": null
+    }
+  ]
+}

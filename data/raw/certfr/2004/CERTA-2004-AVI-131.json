@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Linux 2.4.25 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Linux 2.6.5 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire est présente dans deux\nfonctions du noyau Linux relatives à la gestion des liens symboliques du\nsystème de fichiers ISO9660.\n\nUn utilisateur mal intentionné peut exploiter cette vulnérabilité afin\nde réaliser une élévation de privilèges.\n\n## Contournement provisoire\n\nPour les noyaux Linux modulaires, désactiver le chargement du module\nisofs.\n\n## Solution\n\nLes versions 2.4.26 et 2.6.6-rc1 du noyau Linux corrigent cette\nvulnérabilité :\n\n    http://www.kernel.org\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SuSE-SA:2004:09 de SuSE :",
+      "url": "http://www.suse.com/de/security/2004_09_kernel.html"
+    },
+    {
+      "title": "Bulletin de sécurité MDKSA-2004:029 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:029"
+    },
+    {
+      "title": "Bulletins de sécurité de Debian :      \n \n \n \n http://www.debian.org/security/2004/dsa-489\n http://www.debian.org/security/2004/dsa-491\n http://www.debian.org/security/2004/dsa-495",
+      "url": "http://www.debian.org/security/2004/dsa-479"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2004:183 pour Red Hat Enterprise    Linux :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2004-183.html"
+    },
+    {
+      "title": "Bulletins de sécurité de Debian :      \n \n \n \n http://www.debian.org/security/2004/dsa-489\n http://www.debian.org/security/2004/dsa-491\n http://www.debian.org/security/2004/dsa-495",
+      "url": "http://www.debian.org/security/2004/dsa-480"
+    },
+    {
+      "title": "Bulletins de sécurité de Debian :      \n \n \n \n http://www.debian.org/security/2004/dsa-489\n http://www.debian.org/security/2004/dsa-491\n http://www.debian.org/security/2004/dsa-495",
+      "url": "http://www.debian.org/security/2004/dsa-481"
+    },
+    {
+      "title": "Bulletin de sécurité 04.14.04 d'iDEFENSE :",
+      "url": "http://www.idefense.com/application/poi/display?id=101&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletins de sécurité de Debian :      \n \n \n \n http://www.debian.org/security/2004/dsa-489\n http://www.debian.org/security/2004/dsa-491\n http://www.debian.org/security/2004/dsa-495",
+      "url": "http://www.debian.org/security/2004/dsa-482"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200407-02 du 03 juillet    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200407-02.xml"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2004:166 pour Red Hat Linux :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2004-166.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-131",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-04-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins DSA-489, DSA-491, DSA-495 de Debian et RHSA-166, RHSA-183 de Red Hat.",
+      "revision_date": "2004-04-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité Gentoo GLSA-200407-02.",
+      "revision_date": "2004-07-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le noyau Linux peut être exploitée par\nun utilisateur mal intentionné afin de réaliser une élévation de\nprivilèges.\n",
+  "title": "Vulnérabilité du noyau linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité 0.14.04 d'iDEFENSE",
+      "url": null
+    }
+  ]
+}

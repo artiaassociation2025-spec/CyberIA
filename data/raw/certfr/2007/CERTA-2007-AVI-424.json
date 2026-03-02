@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "X.org XFS versions 1.0.4 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités, existant dans X.Org XFS, permettent l'exécution de\ncode arbitraire à distance par un individu malveillant :\n\n-   la première des vulnérabilités permet un débordement d'entier via la\n    fonction build_range() ;\n-   pour la seconde, un nombre arbitraire de bits permet un dépassement\n    de mémoire dans la fonction swap_char2b().\n\n## Solution\n\nSe référer au bulletin de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-4568",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4568"
+    },
+    {
+      "name": "CVE-2007-4990",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4990"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sun du 06 novembre 2007:",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-103114-1"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE du 12 octobre 2007:",
+      "url": "http://www.novell.com/linux/security/advisories/2007_54_xorg.html"
+    },
+    {
+      "title": "Bulletin de sécurité HP-UX du 14 janvier 2008:",
+      "url": "http://h20000.ww2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c01323725"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva du 06 novembre 2007:",
+      "url": "http://www.mandriva.com/en/security/advisories?name=MDKSA-2007:210"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo du 12 octobre 2007:",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200710-11.xml"
+    },
+    {
+      "title": "Bulletin de sécurité de iDefense du 02 octobre 2007 :",
+      "url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=602"
+    },
+    {
+      "title": "Bulletin de sécurité Debian du 09 octobre 2007:",
+      "url": "http://www.debian.org/security/2007/dsa-1385"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-424",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-10-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence CVE et des références aux bulletins de sécurité Mandriva, Gentoo, SUSE et Sun.",
+      "revision_date": "2007-11-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité HP-UX.",
+      "revision_date": "2008-01-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans X.Org XFS\npermettant l'exécution de code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans X.Org",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de X.Org du 02 octobre 2007",
+      "url": "http://lists.freedesktop.org/archives/xorg-announce/2007-October/000416.html"
+    }
+  ]
+}

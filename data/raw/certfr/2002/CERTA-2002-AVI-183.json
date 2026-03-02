@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Oracle Entreprise Manager Web Site dans Oracle 9i Application  Server 9.0.2 sous Linux et Unix.</P>",
+  "content": "## Description\n\nOracle Entreprise Manager Web Site est une interface Web\nd'administration à distance fourni dans Oracle 9iAS. Le module Web Cache\nd'Oracle permet de mettre en cache les rêquetes les plus fréquentes sur\nla base de données.\n\nUn utilisateur mal intentionné peut avoir accès en local au mot de passe\nd'administration du module Web Cache.\n\n## Contournement provisoire\n\nIl est conseillé de forcer le chiffrement du mot de passe dans le\nfichier de configuration `targets.xml` :\n\n-   Editer le fichier `$ORACLE_HOME/sysman/emd/targets.xml`.\n\n-   Remplacer toutes les lignes de type :\n\n    `<Property NAME=\"authpwd\"      VALUE=\"administrator\"/>` par\n    `<Property      NAME=\"authpwd\" VALUE=\"administrator\" ENCRYPTED=\"FALSE\"      />`\n\n    Note : `FALSE` est en lettres majuscules.\n\n-   Redémarrer Oracle Enterprise Manager Web site ou exécuter\n    `emctl reload` sur la ligne de commande.\n\n    Note : Le redémarrage change la ligne précédemment saisie dans\n    `targets.xml` par\n    `<Property      NAME=\"authpwd\" VALUE=\"xxx\" ENCRYPTED=\"TRUE\" />`.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-183",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Compromission de mots de passe"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans le gestion des mots de passe\nsous Oracle Entreprise Manager Web Site d'Oracle 9iAS.\n",
+  "title": "Vulnérabilité dans la gestion des mots de passe sous Oracle Entreprise Manager Web site",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Oracle #39",
+      "url": "http://otn.oracle.com/deploy/security/pdf/2002alert39rev1.pdf"
+    }
+  ]
+}

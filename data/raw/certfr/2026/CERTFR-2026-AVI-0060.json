@@ -1,0 +1,51 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Struts versions antérieures à 6.1.1",
+      "product": {
+        "name": "Struts",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "L’éditeur indique les versions 2.0.x et 2.5.x sont en fin de vie et ne bénéficient plus de mises à jour de sécurité.",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-68493",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-68493"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0060",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-01-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Falsification de requêtes côté serveur (SSRF)"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Apache Struts. Elle permet à un attaquant de provoquer un déni de service à distance, une atteinte à la confidentialité des données et une falsification de requêtes côté serveur (SSRF).",
+  "title": "Vulnérabilité dans Apache Struts",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-12-19",
+      "title": "Bulletin de sécurité Apache Struts s2-069",
+      "url": "https://cwiki.apache.org/confluence/display/WW/s2-069"
+    }
+  ]
+}

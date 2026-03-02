@@ -1,0 +1,165 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Potentiellement tout système utilisant un noyau Linux en versions 2.2, 2.4 ou 2.6.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nOn peut recenser de nombreux correctifs, variables avec les éditeurs,\nles plus critiques correspondant à des configurations courantes sont\ndécrits ci-dessous :\n\n-   CAN-2005-0209 : l'architecture de filtrage netfilter gère mal\n    certaines cartes réseau et un déni de service peut être obtenu à\n    l'aide de paquets IP fragmentés volontairement mal formés.\n-   CAN-2005-0400 : une mauvaise initialisation lors de la création d'un\n    répertoire sous le système de fichiers ext2 divulgue des données de\n    l'espace noyau qui peuvent s'avérer sensibles.\n-   CAN-2005-0449 : une mauvaise gestion de la file d'attente des\n    paquets fragmentés permet à un utilisateur mal intentionné\n    d'effectuer un déni de service moyennant une connaissance des règles\n    de filtrage configurées dans netfilter.\n-   CAN-2005-0529 : il est possible de réaliser un débordement de tampon\n    dans la pile en accédant au pseudo système de fichiers proc.\n-   CAN-2005-0530 : il est possible de lire la mémoire du noyau suite à\n    une erreur dans le gestionnaire de terminal.\n-   CAN-2005-0749 : un utilisateur local mal intentionné peut tenter\n    d'exécuter un programme, au format standard ELF, volontairement mal\n    formé pour provoquer un accès mémoire illégal et bloquer le noyau.\n-   CAN-2005-0750 : une faille dans la pile du gestionnaire de protocole\n    sans fil Bluetooth peut être utilisée pour exécuter du code\n    arbitraire avec les privilèges (tous) du noyau.\n-   CAN-2005-0815 : un cédérom avec un système de fichiers standard\n    ISO-9660 volontairement mal formé peut provoquer un déni de service,\n    voire provoquer l'exécution de code arbitraire, lors de son montage.\n-   CAN-2005-1041 : un utilisateur local mal intentionné peut provoquer\n    un déni de service moyennant l'accès au pseudo-fichier\n    `/proc/net/route`.\n-   CAN-2005-1263 : un fichier binaire ELF volontairement mal formé\n    permet d'exécuter du code arbitraire avec les privilèges du noyau\n    lors d'un vidage mémoire (« coredump » souvent autorisé pour les\n    utilisateurs courants).\n-   CAN-2005-1264 : l'accès pour un utilisateur local à un périphérique\n    de type caractère en mode brut (« raw ») peut être utilisé pour\n    modifier l'espace du noyau avec le risque d'exécution de code\n    arbitraire.\n-   CAN-2005-1589 : un problème identique existe dans le gestionnaire de\n    type bloc des graveurs de cédéroms et dévédéroms.\n\n## Solution\n\nConsulter le bulletin de l'éditeur pour l'obtention d'un correctif (cf.\nsection Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2005-0209",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0209"
+    },
+    {
+      "name": "CVE-2005-0530",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0530"
+    },
+    {
+      "name": "CVE-2005-1589",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-1589"
+    },
+    {
+      "name": "CVE-2005-1041",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-1041"
+    },
+    {
+      "name": "CVE-2005-0815",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0815"
+    },
+    {
+      "name": "CVE-2005-1264",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-1264"
+    },
+    {
+      "name": "CVE-2005-0529",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0529"
+    },
+    {
+      "name": "CVE-2005-0400",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0400"
+    },
+    {
+      "name": "CVE-2005-0449",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0449"
+    },
+    {
+      "name": "CVE-2005-0750",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0750"
+    },
+    {
+      "name": "CVE-2005-1263",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-1263"
+    },
+    {
+      "name": "CVE-2005-0749",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0749"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurité SuSE SUSE-SA:2005:018 du 24 mars    2005, SUSE-SA:2005:021 du 04 avril 2005 et SUSE-SA:2005:029 du    09 juin 2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_029_kernel.html"
+    },
+    {
+      "title": "Bulletins de sécurité SuSE SUSE-SA:2005:018 du 24 mars    2005, SUSE-SA:2005:021 du 04 avril 2005 et SUSE-SA:2005:029 du    09 juin 2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_018_kernel.html"
+    },
+    {
+      "title": "versions 3, RHSA-2005:293 du 22 avril 2005 et        RHSA-2005:472 du 25 mai 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-472.html"
+    },
+    {
+      "title": "versions 3, RHSA-2005:293 du 22 avril 2005 et        RHSA-2005:472 du 25 mai 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-293.html"
+    },
+    {
+      "title": "Bulletins de sécurité Red Hat Linux :       versions 2.1, RHSA-2005:283 et RHSA-2005:284 du 28        avril 2005 :             versions 3, RHSA-2005:293 du 22 avril 2005 et        RHSA-2005:472 du 25 mai 2005 :             versions 4, RHSA-2005:366 du 19 avril 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-293.html"
+    },
+    {
+      "title": "Bulletins de sécurité Red Hat Linux :       versions 2.1, RHSA-2005:283 et RHSA-2005:284 du 28        avril 2005 :             versions 3, RHSA-2005:293 du 22 avril 2005 et        RHSA-2005:472 du 25 mai 2005 :             versions 4, RHSA-2005:366 du 19 avril 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-283.html"
+    },
+    {
+      "title": "versions 2.1, RHSA-2005:283 et RHSA-2005:284 du 28        avril 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-284.html"
+    },
+    {
+      "title": "versions 4, RHSA-2005:366 du 19 avril 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-366.html"
+    },
+    {
+      "title": "Bulletins de sécurité SuSE SUSE-SA:2005:018 du 24 mars    2005, SUSE-SA:2005:021 du 04 avril 2005 et SUSE-SA:2005:029 du    09 juin 2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_021_kernel.html"
+    },
+    {
+      "title": "Bulletins de sécurité Red Hat Linux :       versions 2.1, RHSA-2005:283 et RHSA-2005:284 du 28        avril 2005 :             versions 3, RHSA-2005:293 du 22 avril 2005 et        RHSA-2005:472 du 25 mai 2005 :             versions 4, RHSA-2005:366 du 19 avril 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-284.html"
+    },
+    {
+      "title": "Bulletins de sécurité Red Hat Linux :       versions 2.1, RHSA-2005:283 et RHSA-2005:284 du 28        avril 2005 :             versions 3, RHSA-2005:293 du 22 avril 2005 et        RHSA-2005:472 du 25 mai 2005 :             versions 4, RHSA-2005:366 du 19 avril 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-472.html"
+    },
+    {
+      "title": "Bulletin de sécurité Avaya ASA-2005-120 du 2 juin 2005 :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2005-120_RHSA-2005-283_RHSA-2005-284_RHSA-2005-293_RHSA-2005-472.pdf"
+    },
+    {
+      "title": "versions 2.1, RHSA-2005:283 et RHSA-2005:284 du 28        avril 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-283.html"
+    },
+    {
+      "title": "Les sources du noyau Linux 2.6.11.10 et postérieures    corrigent ces vulnérabilités :",
+      "url": "http://www.kernel.org"
+    },
+    {
+      "title": "Bulletins de sécurité Red Hat Linux :       versions 2.1, RHSA-2005:283 et RHSA-2005:284 du 28        avril 2005 :             versions 3, RHSA-2005:293 du 22 avril 2005 et        RHSA-2005:472 du 25 mai 2005 :             versions 4, RHSA-2005:366 du 19 avril 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-366.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-174",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2005-05-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Red Hat RHSA-2005:472 ;",
+      "revision_date": "2005-05-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Novell SUSE-SA:2005:029 ;",
+      "revision_date": "2005-06-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Avaya ASA-2005-120.",
+      "revision_date": "2005-06-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs failles ont été identifiées dans le code du noyau Linux et\nfont l'objet de correctifs de la part des éditeurs.\n",
+  "title": "Multiples failles des noyaux Linux",
+  "vendor_advisories": []
+}

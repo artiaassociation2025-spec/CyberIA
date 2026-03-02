@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI><TT>kadmind</TT> versions krb5-1.4 à krb5-1.4.4 ;</LI>    <LI><TT>kadmind</TT> versions krb5-1.5 à krb5-1.5.1 ;</LI>    <LI>toute application tiers utilisant les bibliothèques    <TT>GSS-API</TT> et <TT>RPC</TT> incluses dans les versions    krb5-1.4 à krb5-1.4.4 et krb5-1.5 à krb5-1.5.1.</LI>  </UL>  <P>Les versions de <TT>kadmind</TT> antérieures à krb5-1.4 ne  sont pas affectées.</P>",
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans kadmind.\n\nLa première est présente dans la partie serveur de la bibliothèque RPC.\nLa seconde résulte de problèmes de gestion de la mémoire dans\nl'interface mechglue de la bibliothèque GSS-API. Un utilisateur\nmalintentionné peut exploiter l'une de ces vulnérabilités, sans\nauthentification préalable, pour exécuter du code arbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-6144",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6144"
+    },
+    {
+      "name": "CVE-2006-6143",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6143"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité MIT MITKRB5-SA-2006-002 du 09 janvier    2007 :",
+      "url": "http://web.mit.edu/kerberos/advisories/MITKRB-SA-2006-002-rpc.txt"
+    },
+    {
+      "title": "Bulletin de sécurité MIT MITKRB5-SA-2006-003 du 09 janvier    2007 :",
+      "url": "http://web.mit.edu/kerberos/advisories/MITKRB-SA-2006-003-mechglue.txt"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-019",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités découvertes dans kadmind permettent l'exécution de\ncode arbitraire à distance.\n",
+  "title": "Vulnérabilités dans Kerberos",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MIT MITKRB5-SA-2006-002 du 09 janvier 2007",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MIT MITKRB5-SA-2006-003 du 09 janvier 2007",
+      "url": null
+    }
+  ]
+}

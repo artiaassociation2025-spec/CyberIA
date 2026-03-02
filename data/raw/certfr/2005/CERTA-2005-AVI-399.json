@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2003 toutes architecture,",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP toutes architectures,",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Exchange 2000 Server SP3 avec le correctif global (« Post-SP3 Update Rollup ») d'août 2004.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000,",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe composant en question est CDO (« Collaboration Data Objects ») et\noffre une bibliothèque pour la création et la modification de messages\ninternet. Une mauvaise gestion d'un tampon mémoire permet à un\nutilisateur mal intentionné d'exécuter du code et d'obtenir alors un\ncontrôle total du système.\n\n## Contournement provisoire\n\nDésactiver les récepteurs des événements de transport (« event sinks »)\nen se référant à la procédure décrite dans le bulletin de sécurité de\nl'éditeur (cf. section Documentation).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS05-048 du 11 octobre 2005    :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS05-048.mspx"
+    },
+    {
+      "title": "Article en français de la base de connaissance sur    l'énumération des récepteurs d'événements de transport    enregistrés :",
+      "url": "http://support.microsoft.com/default.aspx?scid=kb;fr;f258224"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-399",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-10-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité d'un composant COM (« Component Object Model ») permet\nl'exécution de code arbitraire à l'aide d'un message SMTP (protocole de\nmessagerie internet le plus courant) malicieusement construit.\n",
+  "title": "Vulnérabilité d'un composant Microsoft Windows et Exchange Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis MS05-048 de Microsoft",
+      "url": null
+    }
+  ]
+}

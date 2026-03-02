@@ -1,0 +1,200 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BIG-IP (LTM, AAM, AFM, Analytics, APM, ASM, DNS, Edge Gateway, FPS, GTM, Link Controller, PEM, WebAccelerator, WebSafe) versions 14.1.x antérieures à 4.1.0.6",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIG-IP (LTM, AAM, AFM, Analytics, APM, ASM, DNS, Edge Gateway, FPS, GTM, Link Controller, PEM, WebAccelerator) versions 12.x antérieures à 12.1.4.1",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIG-IP (LTM, AAM, AFM, Analytics, APM, ASM, DNS, Edge Gateway, FPS, GTM, Link Controller, PEM, WebAccelerator, WebSafe) versions 14.0.x antérieures à 14.0.0.5",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIG-IP (LTM, AAM, AFM, Analytics, APM, ASM, DNS, Edge Gateway, FPS, GTM, Link Controller, PEM, WebAccelerator) versions 11.5.x antérieures à 11.5.9",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIG-IP (LTM, AAM, AFM, Analytics, APM, ASM, DNS, Edge Gateway, FPS, GTM, Link Controller, PEM, WebAccelerator) versions 11.6.x antérieures à 11.6.4",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIG-IP (LTM, AAM, AFM, Analytics, APM, ASM, DNS, Edge Gateway, FPS, GTM, Link Controller, PEM, WebAccelerator, WebSafe) versions 13.x antérieures à 13.1.1.5",
+      "product": {
+        "name": "BIG-IP",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2019-6623",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-6623"
+    },
+    {
+      "name": "CVE-2019-6633",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-6633"
+    },
+    {
+      "name": "CVE-2019-6635",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-6635"
+    },
+    {
+      "name": "CVE-2019-6622",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-6622"
+    },
+    {
+      "name": "CVE-2019-6632",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-6632"
+    },
+    {
+      "name": "CVE-2019-6639",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-6639"
+    },
+    {
+      "name": "CVE-2019-6627",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-6627"
+    },
+    {
+      "name": "CVE-2019-6636",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-6636"
+    },
+    {
+      "name": "CVE-2019-6624",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-6624"
+    },
+    {
+      "name": "CVE-2019-6640",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-6640"
+    },
+    {
+      "name": "CVE-2019-6626",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-6626"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2019-AVI-302",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2019-07-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans F5 BIG-IP.\nCertaines d'entre elles permettent à un attaquant de provoquer une\nexécution de code arbitraire à distance, un déni de service à distance\net un contournement de la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans F5 BIG-IP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F5 K72335002 du 01 juillet 2019",
+      "url": "https://support.f5.com/csp/article/K72335002"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F5 K00432398 du 01 juillet 2019",
+      "url": "https://support.f5.com/csp/article/K00432398"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F5 K73522927 du 01 juillet 2019",
+      "url": "https://support.f5.com/csp/article/K73522927"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F5 K07127032 du 01 juillet 2019",
+      "url": "https://support.f5.com/csp/article/K07127032"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F5 K68151373 du 02 juillet 2019",
+      "url": "https://support.f5.com/csp/article/K68151373"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F5 K36320691 du 01 juillet 2019",
+      "url": "https://support.f5.com/csp/article/K36320691"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F5 K11330536 du 01 juillet 2019",
+      "url": "https://support.f5.com/csp/article/K11330536"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F5 K40443301 du 01 juillet 2019",
+      "url": "https://support.f5.com/csp/article/K40443301"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F5 K44885536 du 01 juillet 2019",
+      "url": "https://support.f5.com/csp/article/K44885536"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F5 K61002104 du 01 juillet 2019",
+      "url": "https://support.f5.com/csp/article/K61002104"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F5 K01413496 du 01 juillet 2019",
+      "url": "https://support.f5.com/csp/article/K01413496"
+    }
+  ]
+}

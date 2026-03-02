@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de <TT>Usermin</TT>  antérieures à la version 1.090.</p>",
+  "content": "## Description\n\nUsermin est un outil d'administration pour les plates-formes Unix basé\nsur une interface web.  \nUne première vulnérabilité concerne le script de création temporaire de\nrépertoire maketemp.pl qui permet à un utilisateur mal intentionné de\nporter atteinte à l'intégrité du système (CAN-2004-0559).  \nUne seconde vulnérabilité concerne une mauvaise gestion des messages\nélectroniques au format HTML permettant à un utilisateur mal intentionné\nd'exécuter de code malicieux, via un message électronique habilement\nconstitué.\n\n## Solution\n\nMettre à jour Usermin en version 1.090.  \nUsermin est téléchargeable à l'adresse suivante :\n\n    http://www.webmin.com/udownload.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200409-15 du 12 septembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200409-15.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-544 du 14 septembre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-544"
+    },
+    {
+      "title": "Site Internet de Usermin :",
+      "url": "http://www.webmin.com/index6.html"
+    },
+    {
+      "title": "Liste des changements dans Usermin version 1.090 :",
+      "url": "http://www.webmin.com/uchanges-1.090.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:101 du 22    septembre 2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:101"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour webmin du 14 septembre    2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Liste des changements dans Usermin :",
+      "url": "http://www.webmin.com/uchanges.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-306",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-09T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de Gentoo.",
+      "revision_date": "2004-09-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de FreeBSD.",
+      "revision_date": "2004-09-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de Debian.",
+      "revision_date": "2004-09-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de Mandrake.",
+      "revision_date": "2004-09-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans Usermin permettent à un utilisateur mal\nintentionné de porter atteinte à l'intégrité du système ou d'exécuter du\ncode arbitraire sur la plate-forme vulnérable.\n",
+  "title": "Vulnérabilité de Usermin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SNS No.77 du 07 septembre 2004",
+      "url": "http://www.lac.co.jp/security/csl/intelligence/SNSadvisory_e/77_e.html"
+    }
+  ]
+}

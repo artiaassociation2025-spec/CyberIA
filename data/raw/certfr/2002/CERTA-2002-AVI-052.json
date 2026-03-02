@@ -1,0 +1,101 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les versions de la bibliothèque  <TT>zlib / libz</TT> antérieures à la 1.1.4.</p>",
+  "content": "## Description\n\nLa librairie zlib / libz est utilisée pour la compression et la\ndécompression de données par un grand nombre d'applications.\n\nUn débordement de mémoire présent dans la routine de décompression\npermet à un utilisateur mal intentionné d'exécuter du code arbitraire ou\nde réaliser un déni de service. Cette vulnérabilité est due à un double\nappel de la fonction de libération de la mémoire : la fonction free.\n\nBeaucoup d'applications utilisent cette bibliothèque « dynamiquement »\nmais certaines applications ont leur propre version de cette\nbibliothèque. Il est alors nécessaire de mettre à jour ces applications.\nLes applications concernées sont (se référer à la section documentation)\n:\n\n-   amaya\n-   dictd\n-   erlang\n-   freeamp\n-   mirrordir\n-   ppp\n-   rsync\n-   vrweb\n-   gpg\n-   cvs\n-   rrdtool\n-   netscape\n-   vnc\n-   kernel\n-   rpm\n\n## Solution\n\nInstaller la version 1.1.4 de la bibliotèque zlib / libz. Installer les\nversions corrigées des logiciels citées ci-dessus (se référer à la\nsection documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site officiel de ppp",
+      "url": "http://www.samba.org/ppp"
+    },
+    {
+      "title": "Site officiel de netscape",
+      "url": "http://www.netscape.com"
+    },
+    {
+      "title": "Site officiel de gpg",
+      "url": "http://www.gnupg.org"
+    },
+    {
+      "title": "Site officiel de vnc",
+      "url": "http://www.uk.research.att.com/vnc/"
+    },
+    {
+      "title": "Site officiel de mirrordir",
+      "url": "http://mirrordir.sourceforge.net"
+    },
+    {
+      "title": "Site officiel du kernel",
+      "url": "http://www.kernel.org"
+    },
+    {
+      "title": "Site officiel de vrweb",
+      "url": "http://www.iicm.edu/vrweb"
+    },
+    {
+      "title": "Site officiel d'amaya",
+      "url": "http://www.w3c.org/Amaya"
+    },
+    {
+      "title": "Site officiel de cvs",
+      "url": "http://www.cvshome.org"
+    },
+    {
+      "title": "Site officiel de rrdtool",
+      "url": "http://people.ee.ethz.ch/~oetiker/webtools/rrdttool"
+    },
+    {
+      "title": "Site officiel de freeamp",
+      "url": "http://www.freeamp.org"
+    },
+    {
+      "title": "Site officiel de erlang",
+      "url": "http://www.erlang.org"
+    },
+    {
+      "title": "Site officiel de rsync",
+      "url": "http://www.rsync.org"
+    },
+    {
+      "title": "Avis de sécurité RHSA-2002:027 de Redhat :",
+      "url": "http://www.redhat.com/support/errata/RHSA-2002-027.html"
+    },
+    {
+      "title": "Avis de sécurité SuSE-SA:2002:010 :      /",
+      "url": "http://www.suse.com/us/support/security"
+    },
+    {
+      "title": "Site officiel de rpm",
+      "url": "http://www.rpm.org"
+    },
+    {
+      "title": "Site officiel de dictd",
+      "url": "http://www.dict.org"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-052",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-03-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité de type « débordement de mémoire » présente dans la\nlibrairie zlib / libz permet à un utilisateur mal intentionné de\nréaliser un déni de service ou d'exécuter du code arbitraire en local ou\nà distance.\n",
+  "title": "Vulnérabilité dans la librairie <TT>zlib / libz</TT>",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SA:2002:010 de SuSE",
+      "url": null
+    }
+  ]
+}

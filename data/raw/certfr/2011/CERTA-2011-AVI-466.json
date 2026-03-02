@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Pidgin</SPAN> versions antérieures à  2.10.0.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans Pidgin :\n\n-   certains caractères spécifiques utilisés dans les pseudonymes IRC\n    peuvent provoquer un arrêt inopiné du client Pidgin lors des\n    requêtes WHO ;\n-   une mauvaise gestion des réponses HTTP 100 via le protocole MSN peut\n    provoquer une tentative d'accès à une zone non autorisée de la\n    mémoire ;\n-   sous Windows, en cliquant sur un lien de type file:// reçu par\n    message instantané, le client Pidgin tente d'exécuter le fichier.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2943",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2943"
+    },
+    {
+      "name": "CVE-2011-3184",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3184"
+    },
+    {
+      "name": "CVE-2011-3185",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3185"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-466",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-08-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Des vulnérabilités dans <span class=\"textit\">Pidgin</span> permettent\nnotamment de réaliser un déni de service à distance.\n",
+  "title": "Vulnérabilités dans Pidgin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Pidgin du 20 août 2011",
+      "url": "http://pidgin.im/news/security/?id=55"
+    }
+  ]
+}

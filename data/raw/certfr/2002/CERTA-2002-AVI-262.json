@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Solaris 2.5.1 à 9.</p>",
+  "content": "## Description\n\nLa primitive système priocntl est utilisée pour contrôler les paramètres\nd'ordonnancement d'un processus léger.\n\nUne vulnérabilité présente dans la gestion de certains arguments fournis\nlors de l'appel à cette primitive permet à un utilisateur non privilégié\nde charger un module au niveau du noyau permettant ainsi de réaliser une\nélévation de privilèges.\n\n## Contournement provisoire\n\nSe réferer au bulletin de l'éditeur (section Documentation).\n\n## Solution\n\nSe réferer au bulletin de l'éditeur (section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Note VU#683673 du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/683673"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-262",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges. cette vulnérabilité n'est pas exploitable à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans la primitive système priocntl permet à\nun utilisateur mal intentionné d'obtenir les privilèges de\nl'administrateur système (root) sur une machine vulnérable.\n",
+  "title": "Vulnérabilité de priocntl sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #49131 de Sun",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F49131"
+    }
+  ]
+}

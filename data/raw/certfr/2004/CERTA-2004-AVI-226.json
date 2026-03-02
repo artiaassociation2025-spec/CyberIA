@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "pour WinGate série 6 : WinGate 6.0 beta 2 build 942 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Pour WinGate série 5 : WinGate 5.2.3 build 901 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nWinGate est un serveur mandataire pour plate-forme Microsoft Windows.  \nDeux vulnérabilités dans WinGate permettent à un utilisateur mal\nintentionné, via une URL habilement construite, de lire n'importe quel\nfichier sur la plate-forme où réside WinGate.\n\n## Contournement provisoire\n\nDésactiver le serveur mandataire ou restreindre l'accès à des hôtes de\nconfiance.\n\n## Solution\n\n-   Pour WinGate série 6, installer la version 6.0 RC1 (build 963) ;\n-   pour WinGate série 5, aucun correctif de disponible à ce jour.\n\nWinGate est téléchargeable à l'adresse Internet suivante :\n\n    http://www.wingate.com/download.php\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de WinGate :",
+      "url": "http://www.wingate.com/product-wingate.php"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-226",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Lecture de fichiers arbitraires"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans WinGate permettent à un utilisateur mal\nintentionné de lire n'importe quel fichier.\n",
+  "title": "Vulnérabilité de WinGate",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDEFENSE du 01 juillet 2004",
+      "url": "http://www.idefense.com/application/poi/display?id=113"
+    }
+  ]
+}

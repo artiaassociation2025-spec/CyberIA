@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les versions de wget antérieures ou  égales à la version 1.8.2 sont vulnérables.</p>",
+  "content": "## Description\n\nWget est un logiciel très utilisé pour automatiser le téléchargement de\nfichiers distants via les protocoles http et ftp.\n\nLors du téléchargement de fichiers, wget ne s'assure pas que les noms\ndes fichiers ne contiennent pas les caractères \"..\" ou ne commencent pas\npar \"/\".\n\nIl est ainsi possible, pour un administrateur mal intentionné, de créer\ndes sites FTP avec des noms de fichiers choisis de telle façon que, lors\ndu téléchargement, ces fichiers viennent à écraser des fichiers\nappartenant à l'utilisateur.\n\n## Solution\n\nIl est conseillé d'appliquer les correctifs des différents éditeurs (cf.\nsection Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité DSA-209 de Debian :",
+      "url": "http://www.debian.org/decurity/2002/dsa-209"
+    },
+    {
+      "title": "Site de le Free Software Foundation :",
+      "url": "http://www.gnu.org/software/wget/wget.html"
+    },
+    {
+      "title": "Message \"Directory Traversal Vulnerabilities in FTP    Clients\" de Steven M. Christey :",
+      "url": "http://lists.insecure.org/lists/vulnwatch/2002/Oct-Dec/0080.html"
+    },
+    {
+      "title": "Note VU#210148 du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/210148"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2002:229 de Red Hat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-229.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-263",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence à l'avis DSA-209 de Debian.",
+      "revision_date": "2002-12-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Corruption de données"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans wget permet à un utilisateur mal\nintentionné d'écraser des fichiers présents sur le poste de\nl'utilisateur.\n",
+  "title": "Vulnérabilité de wget",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RHSA-2002:229 de Redhat",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MDKSA-2002:086 de Mandrake",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2002:086"
+    }
+  ]
+}

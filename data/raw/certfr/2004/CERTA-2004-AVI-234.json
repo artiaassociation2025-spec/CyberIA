@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Systèmes FreeBSD avec <SPAN class=\n  \"textit\">SSLtelnet</SPAN>, versions jusqu'à la version 0.13_1.</p>",
+  "content": "## Description\n\nSSLtelnet est un serveur telnet activant l'encapsulation de la\ncommunication dans un tunnel SSL/TLS. Il est lancé sur la machine hôte\npar l'intermédiaire du serveur inetd. Une faille liée à une mauvaise\nutilisation d'une chaîne de format peut être exploitée pour exécuter du\ncode avec les privilèges du service - root dans la configuration\ninstallée -.\n\n## Contournement provisoire\n\n-   Arrêter le service en commentant la ou les ligne(s) concernée(s)\n    dans le fichier de configuration du serveur inetd et en relançant ce\n    dernier ;\n-   ou restreindre l'accès à ce service à des machines de confiance avec\n    des règles de filtrage.\n\n## Solution\n\nCe serveur n'étant manifestement plus maintenu activement (disparition\ndu site d'hébergement en 2000), il est fortement recommandé d'utiliser\nune autre solution.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD pour SSLtelnet du 05 juillet    2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité iDefense :",
+      "url": "http://www.idefense.com/application/poi/display?id=114&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-529 du 17 juillet 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-529"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-234",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-09T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian et FreeBSD.",
+      "revision_date": "2004-07-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une faille a été identifiée dans le code source du serveur <span\nclass=\"textit\">SSLtelnet</span>. Elle permet à un utilisateur distant\nmal intentionné d'exécuter du code arbitraire sur la machine hôte.\n",
+  "title": "Faille dans le serveur SSLtelnet",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité iDefense",
+      "url": null
+    }
+  ]
+}

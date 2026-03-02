@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tous les systèmes avec  <TT>Ethereal</TT> versions 0.9.15 et antérieures.</p>",
+  "content": "## Description\n\nEthereal est un renifleur réseau. Il permet l'analyse de données depuis\nle réseau ou à partir d'un fichier.\n\n  \nDe multiples vulnérabilités de type débordement de mémoire sont\nprésentes dans Ethereal.\n\nUn utilisateur mal intentionné, composant judicieusement un fichier\ndestiné à être lu par Ethereal ou injectant un paquet malicieusement\nconstruit sur le réseau, peut exploiter une de ces vulnérabilités afin\nd'exécuter du code arbitraire ou réaliser un déni de service sur la\nplate-forme utilisant une version vulnérable d'Ethereal.\n\n## Contournement provisoire\n\nDans l'attente de l'application du correctif, désactiver les protocoles\nsuivants : GTP, ISAKMP, MEGACO, SOCKS.\n\n## Solution\n\nInstaller la version 0.9.16 d'Ethereal :\n\n    http://www.ethereal.com/download.html\n\n  \nou appliquer le correctif de l'éditeur :\n\n-   Bulletin de sécurité RHSA-2003:323 de Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2003-323.html\n\n-   Bulletin de sécurité 200311-04 de Gentoo :\n\n        http://www.securityfocus.com/advisories/6091\n\n-   Bulletin de sécurité MDKSA-2003:114 de Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:114\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité enpa-sa-00011 d'Ethereal :",
+      "url": "http://www.ethereal.com/appnotes/enpa-sa-00011.html"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-182",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-11-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Gentoo.",
+      "revision_date": "2003-11-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Mandrake.",
+      "revision_date": "2003-12-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités d'Ethereal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité enpa-sa-00011.html d'Ethereal",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RHSA-2003:323 de Red Hat",
+      "url": null
+    }
+  ]
+}

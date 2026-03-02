@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Tivoli Identity Manager version 5.0.",
+      "product": {
+        "name": "Tivoli",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans IBM Tivoli Identity Manager :\n\n-   la première (swg1IZ54310) affecte l'interface utilisateur\n    Self-service UI, un individu distant peut réaliser une injection de\n    code indirecte (XSS) par le biais d'une adresse réticulaire (URL)\n    spécifiquement construite soumise grâce à la fonctionnalité\n    copier/coller ;\n-   la seconde (swg1IZ54311) affecte la console d'administration, un\n    individu distant peut réaliser une injection de code indirecte (XSS)\n    par le biais d'une adresse réticulaire (URL) spécifiquement\n    construite.\n\nCes deux vulnérabilités sont incluses dans le bulletin de sécurité IBM\nswg24023640 du 02 juillet 2009.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg1IZ54310 du 30 juin 2009 :",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ54310"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg1IZ54311 du 30 juin 2009 :",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IZ54311"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-267",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-07-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    }
+  ],
+  "summary": "Deux vulnérabilités de <span class=\"textit\">IBM Tivoli Identity\nManager</span> (ou <span class=\"textit\">ITIM</span>) permettent à un\nindividu distant de réaliser des injections de code indirectes (<span\nclass=\"textit\">XSS</span>).\n",
+  "title": "Vulnérabilités de IBM Tivoli Identity Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg24023640 du 02 juillet 2009",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg24023640"
+    }
+  ]
+}

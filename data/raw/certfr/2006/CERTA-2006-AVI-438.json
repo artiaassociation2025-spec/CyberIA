@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft Powerpoint 2000 dans la suite bureautique    Microsoft Office 2000 Service Pack 3;</LI>    <LI>Microsoft Powerpoint 2002 dans la suite bureautique    Microsoft Office XP Service Pack 3 ;</LI>    <LI>Microsoft Powerpoint 2003 dans la suite bureautique    Microsoft Office 2003 Service Pack 1 ou 2 ;</LI>    <LI>Microsoft Powerpoint 2004 dans la suite bureautique    Microsoft Office 2004 pour Mac ;</LI>    <LI>Microsoft Powerpoint v.X dans la suite bureautique    Microsoft Office v.X pour Mac.</LI>  </UL>  <P>La visionneuse Microsoft Powerpoint 2003 (<SPAN class=\n  \"textit\">Viewer</SPAN>) ne serait pas affectée par ces  vulnérabilités.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans l'application\nMicrosoft Powerpoint, fournie dans la suite bureautique Microsoft Office\npour manipuler des documents de présentations. Parmi celles-ci :\n\n-   Powerpoint ne manipulerait pas correctement les documents Powerpoint\n    contenant un pointeur d'objet incorrect.\n-   Powerpoint ne gérerait pas de manière convenable les enregistrements\n    de données de certains documents Powerpoint.\n-   un script Visual Basic (VB) utilisant la fonction\n    SlideShowWindows.View.GotoNamedShow() et inséré dans un document de\n    présentation perturberait Powerpoint.\n\nUne personne malveillante pourrait exploiter l'une de ces vulnérabilités\nen construisant un document Powerpoint particulier. Lorsque celui-ci est\nouvert sur une machine ayant une version de Powerpoint vulnérable, il\nexécuterait du code arbitraire, et permettrait donc de prendre le\ncontrôle de la machine.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3877",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3877"
+    },
+    {
+      "name": "CVE-2006-3435",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3435"
+    },
+    {
+      "name": "CVE-2006-4694",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4694"
+    },
+    {
+      "name": "CVE-2006-3876",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3876"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2006-AVI-438",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans l'application\nMicrosoft Powerpoint, fournie dans la suite bureautique Microsoft Office\npour manipuler des documents de présentations.\n\nUne personne malveillante pourrait exploiter l'une d'elles en\nconstruisant un document Powerpoint particulier. Lorsque celui-ci est\nouvert sur une machine ayant une version de Powerpoint vulnérable, il\nexécuterait du code arbitraire, et permettrait donc de prendre le\ncontrôle de la machine.\n",
+  "title": "Multiples vulnérabilités dans Microsoft PowerPoint",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-058 du 10 octobre 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-058.mspx"
+    }
+  ]
+}

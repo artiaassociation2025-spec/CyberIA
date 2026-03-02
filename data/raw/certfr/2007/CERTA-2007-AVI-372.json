@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>les versions des pilotes Atheros antérieures à 5.3.0.35 et    6.0.3.67.</LI>  </UL>  <P>Plusieurs vendeurs matériels utilisent des versions de ces  pilotes adaptées pour leurs produits. Leur numérotation de  versions peut donc être différente de celle d'origine.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans les pilotes WiFi\nAtheros pour Windows. Ces derniers ne manipuleraient pas correctement\ndes trames ayant un champ IE (pour Information Element) malformé,\nincluant les balises et les réponses à un sondage (probe).\n\nCes vulnérabilités peuvent être exploitées par une personne malveillante\ndistante, par la simple émission de trames WiFi spécialement\nconstruites. Les conséquences seraient alors la perturbation ou\nl'exécution de code arbitraire avec des privilèges élevés sur le système\nvulnérable.\n\nLes mesures de protection telles que le WEP, le WPA ou le WPA2 (802.11i)\nne protègent pas contre de telles vulnérabilités.\n\n## Solution\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-2927",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2927"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité US-CERT VU#730169 du 14 août 2007 :",
+      "url": "http://www.kb.cert.org/vuls/id/730169"
+    },
+    {
+      "title": "Avis de sécurité WVE-2007-0012 du 21 août 2007 :",
+      "url": "http://www.wirelessve.org/entries/show/WVE-2007-0012"
+    },
+    {
+      "title": "Site officiel d'Atheros :",
+      "url": "http://www.atheros.com"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-372",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-08-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans les pilotes WiFi\nAtheros pour Windows. Elles permettraient à une personne distante de\nperturber le système, ou d'exécuter des commandes arbitraires, par le\nsimple envoi de trames WiFi spécialement construites.\n",
+  "title": "Vulnérabilités des pilotes WiFi Atheros pour Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité WVE-2007-0012 de WVE publiée le 21 août 2007",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Office XP Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2003 Service Pack 2 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2003 Service Pack 1 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2000 Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office version X pour Mac.",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2004 pour Mac ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nHuit vulnérabilités sont présentes dans le logiciel Microsoft Excel :\n\n-   Deux vulnérabilités existent dans les enregistrements SELECTION\n    (CVE-2006-1301 et CVE-2006-1302). Ces vulnérabilités peuvent être\n    exploitées par un utilisateur mal intentionné à partir d'un\n    enregistrement SELECTION dans un fichier Excel pour exécuter du code\n    arbitraire sur le poste d'un utilisateur ouvrant le fichier\n    spécialement construit.\n-   Une vulnérabilité existe dans les enregistrements COLINFO\n    (CVE-2006-1304). Cette vulnérabilité peut être exploitée par un\n    utilisateur mal intentionné à partir d'un enregistrement COLINFO\n    dans un fichier Excel pour exécuter du code arbitraire sur le poste\n    d'un utilisateur ouvrant le fichier spécialement construit.\n-   Une vulnérabilité existe dans les enregistrements OBJECT\n    (CVE-2006-1306). Cette vulnérabilité peut être exploitée par un\n    utilisateur mal intentionné à partir d'un enregistrement OBJECT dans\n    un fichier Excel pour exécuter du code arbitraire sur le poste d'un\n    utilisateur ouvrant le fichier spécialement construit.\n-   Une vulnérabilité existe dans les enregistrements FNGROUPCOUNT\n    (CVE-2006-1308). Cette vulnérabilité peut être exploitée par un\n    utilisateur mal intentionné à partir d'un enregistrement\n    FNGROUPCOUNT dans un fichier Excel pour exécuter du code arbitraire\n    sur le poste d'un utilisateur ouvrant le fichier spécialement\n    construit.\n-   Une vulnérabilité existe dans les enregistrements LABEL\n    (CVE-2006-1309). Cette vulnérabilité peut être exploitée par un\n    utilisateur mal intentionné à partir d'un enregistrement LABEL dans\n    un fichier Excel malveillant pour exécuter du code arbitraire sur le\n    poste d'un utilisateur ouvrant le fichier malcieusement construit.\n-   Les deux dernières vulnérabilités présentes sur Excel peuvent être\n    exploitées par un utilisateur mal intentionné à partir d'un fichier\n    Excel malveillant (CVE-2006-2388 CVE-2006-3059). La dernière de ces\n    vulnérabilité à fait l'objet d'une alerte au CERTA le 16 juin 2006.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-1301",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1301"
+    },
+    {
+      "name": "CVE-2006-1304",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1304"
+    },
+    {
+      "name": "CVE-2006-1309",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1309"
+    },
+    {
+      "name": "CVE-2006-1302",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1302"
+    },
+    {
+      "name": "CVE-2006-3059",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3059"
+    },
+    {
+      "name": "CVE-2006-1308",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1308"
+    },
+    {
+      "name": "CVE-2006-2388",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2388"
+    },
+    {
+      "name": "CVE-2006-1306",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1306"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin d'alerte du CERTA CERTA-2006-ALE-007 du 16 juin    2006 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2006-ALE-007/index.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-285",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-07-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités sont présentes dans Microsoft Excel. Certaines\nde ces vulnérabilités peuvent être exploitées par un utilisateur distant\npour exécuter du code arbitraire sur le système ayant la version\nvulnérable de ce logiciel.\n",
+  "title": "Multiples vulnérabilités dans Microsoft Excel",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-037",
+      "url": "http://www.microsoft.com/france/technet/security/Bulletin/MS06-037.mspx"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Debian 5.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Debian 4.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa version d'OpenSSL mise en œuvre sous Debian autorise l'utilisation de\ncertificats signés au moyen de condensats MD2. Or, l'algorithme MD2 est\nconsidéré comme non-sûr d'un point de vue cryptographique. De, ce fait,\nil est possible à un utilisateur malintentionné d'usurper un certificat\narbitraire qu'il aura signé en utilisant un condensat de ce type.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2409",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2409"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 1888 du 15 septembre 2009 :",
+      "url": "http://www.debian.org/security/2009/dsa-1888"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-392",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-09-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans OpenSSL sous Debian permet à un utilisateur\ndistant d'usurper un certificat arbitraire.\n",
+  "title": "Vulnérabilité de OpenSSL sous Debian",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-1888 du 15 septembre 2009",
+      "url": null
+    }
+  ]
+}

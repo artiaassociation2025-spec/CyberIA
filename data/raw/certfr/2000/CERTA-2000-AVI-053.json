@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "HP Openview Node Manager v6.1 sous HP-UX 11.00 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP Openview Node Manager v6.1 sous SOLARIS 2.X ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP Openview Node Manager v6.1 sous HP-UX 10.X ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP Openview Node Manager v6.1 sous Windows NT4/2000.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nHP Openview Node Manger v6.1 posséde un service d'alarme ( OVALARMSRV )\nqui ne vérifie pas correctement certaines variables d'environnement. Un\nutilisateur distant, mal intentionné, peut provoquer un débordement de\npile créant ainsi un déni de service sur ce service.\n\n## Solution\n\nCorrectifs à appliquer suivant les versions d'OS :\n\n-   Sous HP-UX 11.00 : PHSS_22407\n-   Sous HP-UX 10.X : PHSS_22406\n-   Sous SOLARIS 2.X : PSOV_02830\n-   Sous Windows NT4/2000 : NNM_00621\n\nCes correctifs sont téléchargeables à l'adresse :\n\n    http://ovweb.external.hp.com/cpe/patches/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site HP :",
+      "url": "http://itrc.hp.com"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-053",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-09-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité à été découverte dans le service d'alarme de HP\nOpenview Node Manager v6.1.\n",
+  "title": "Vulnérabilité dans HP OpenView",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "NTBugTraq",
+      "url": null
+    }
+  ]
+}

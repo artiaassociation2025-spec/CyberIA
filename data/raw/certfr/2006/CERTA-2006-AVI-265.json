@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MySQL 4.1.x versions antérieures à la version 4.1.18 ;",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MySQL 5.1.x versions antérieures à la version 5.1.6 ;",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MySQL 5.0.x versions antérieures à la version 5.0.19 ;",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilié sur la fonction str_to_date peut être exploitée par un\nutilisateur local mal intentionné pour réaliser un déni de service sur\nMySQL.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-1112 du 18 juillet 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1112"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-265",
+  "revisions": [
+    {
+      "description": "ajout du bulletin de sécurité Debian.",
+      "revision_date": "2006-06-19T00:00:00.000000"
+    },
+    {
+      "description": "version initiale ;",
+      "revision_date": "2006-06-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans Mysql",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Mandriva",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDKSA-2006:111"
+    }
+  ]
+}

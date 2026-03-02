@@ -1,0 +1,56 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>PHP versions 5.2.11 et antérieures.</p>",
+  "content": "## Description\n\nCinq vulnérabilités ont été découvertes dans PHP :\n\n-   la première est due à une erreur dans la fonction tempnam(),\n    permettant de contourner le mécanisme de safe_mode ;\n-   la deuxième est due à une erreur dans la fonction posix_mkfifo(),\n    permettant de contourner la fonctionalité open_basedir ;\n-   la troisième est due à une erreur dans la gestion du chargement de\n    certaines données et peut être utilisée afin de provoquer un déni de\n    service ;\n-   la quatrième est due à une mauvaise gestion des sessions (l'impact\n    n'est pas connu) ;\n-   la dernière est due à une erreur au niveau de la fonction\n    htmlspecialchars() et permet à un utilisateur mal intentionné de\n    réaliser une injection de code indirecte.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-4142",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-4142"
+    },
+    {
+      "name": "CVE-2009-3558",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3558"
+    },
+    {
+      "name": "CVE-2009-3557",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3557"
+    },
+    {
+      "name": "CVE-2009-4143",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-4143"
+    },
+    {
+      "name": "CVE-2009-4017",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-4017"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-553",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-12-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans PHP. L'exploitation\nde ces vulnérabilités permet de réaliser des actions diverses dont le\ndéni de service à distance ou la contournement de certains mécanismes de\nsécurité.\n",
+  "title": "Multiples vulnérabilités de PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes de mise à jour PHP 5.2.12",
+      "url": "http://www.php.net/releases/5_2_12.php"
+    }
+  ]
+}

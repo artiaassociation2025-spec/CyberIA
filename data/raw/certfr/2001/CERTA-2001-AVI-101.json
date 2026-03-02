@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Paquetage setserial-2.17-4 et les  versions antérieures.  <P>Ce paquetage est présent dans les distributions RedHat et  Mandrake.</P></p>",
+  "content": "## Description\n\nLe paquetage setserial est utilisé pour visualiser ou modifier le\nparamétrage des ports série.\n\n#### 4.0.0.1\n\nLe script serial fournit avec le paquetage setserial utilise des\nfichiers temporaires dont le nom peut être connu à l'avance. Un\nutilisateur mal intentionné peut utiliser cette faille du script pour\ncorrompre n'importe quel fichier du système.\n\nLa vulnérabilité n'est toutefois exploitable que si le noyau est\nconfiguré pour supporter les ports série sous forme de modules.\n\n## Solution\n\nNe pas utiliser le script serial fournit avec le paquetage setserial.\n\nUne autre solution consiste à utiliser un noyau ne supportant pas les\nports série sous forme de modules.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-101",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-09-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Corruption de fichiers"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le script serial du paquetage setserial peut\npermettre à un utilisateur mal intentionné de corrompre n'importe quel\nfichier du système.\n",
+  "title": "Vulnérabilité dans le paquetage setserial",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité RedHat RHSA-2001:11-05",
+      "url": null
+    }
+  ]
+}

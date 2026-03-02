@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>Wireshark</TT> (ou  <TT>Ethereal</TT>) versions 0.99.3 et antérieures.",
+  "content": "## Description\n\nDifférents composants de Wireshark (anciennement Ethereal) comportent\ndes vulnérabilités de type débordement de mémoire :\n\n-   l'analyseur de protocole HTTP (CVE-2006-5468) ;\n-   l'analyseur de protocole LDAP (CVE-2006-5740) ;\n-   l'analyseur de protocole XOT (CVE-2006-4805) ;\n-   l'analyseur de protocole WBXML (CVE-2006-5469) ;\n-   l'analyseur de format MIME Multipart (CVE-2006-i4574) ;\n-   l'analyseur de clefs WEP si le support de AirPcap est activé.\n\nToutes ces vulnérabilités permettent à un utilisateur distant\nmalintentionné de provoquer un déni de service ou d'exécuter du code\narbitraire par le biais de paquets ou de trames construits de façon\nparticulière.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4574",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4574"
+    },
+    {
+      "name": "CVE-2006-5740",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5740"
+    },
+    {
+      "name": "CVE-2006-4805",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4805"
+    },
+    {
+      "name": "CVE-2006-5468",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5468"
+    },
+    {
+      "name": "CVE-2006-5469",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5469"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Wireshark wnpa-sec-2006-03 du    27 octobre 2006 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2006-03.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-469",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités sont présentes dans Wireshark et permettent\nà un utilisateur distant malintentionné de provoquer un déni de service\nou l'exécution de code arbitraire.\n",
+  "title": "Multiples vulnérabilités dans Wireshark",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Wireshark du 27 octobre 2006",
+      "url": null
+    }
+  ]
+}

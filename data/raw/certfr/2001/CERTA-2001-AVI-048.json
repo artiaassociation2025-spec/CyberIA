@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2000 Advanced Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Datacenter Server.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne extension ISAPI (IPP : Internet Printing Protocol) permet de\ncontrôler via des requêtes HTTP les travaux d'impression. Cette\nextension est installée par défaut sur les serveurs Microsoft Server\n2000.\n\nUn utilisateur mal intentionné, par le biais d'une requête HTTP\njudicieusement composée, peut provoquer un débordement de la mémoire\ntampon de ce module dans le but de prendre le contrôle complet du\nserveur cible. N'importe quelle action peut alors être effectuée sur le\nserveur y compris l'installation de nouveaux programmes, la modification\ndes pages HTTP ou la suppression de fichiers de données.\n\nLe protocole IPP fonctionnant sur le principe d'une interface HTTP, cet\nexploit peut être effectué malgré la présence d'un garde barrière car\nseul le port 80 (HTTP) ou 443 (HTTPS) est sollicité.\n\nMicrosoft reconnait la gravité de cette vulnérabilité et préconise de\nmettre son système à jour très rapidement.\n\n## Contournement provisoire\n\nDésactiver la fonction IPP dans l'extension ISAPI.\n\n## Solution\n\nTélécharger le correctif sur le site Microsoft :\n\n-   Microsoft Windows 2000 Server et Microsoft Windows 2000 Advanced\n    Server :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=29321\n\n-   Concernant Microsoft Windows 2000 Datacenter Server, Microsoft\n    préconise de prendre contact avec le fournisseur du serveur afin de\n    connaître les solutions à apporter.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-023.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-048",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-05-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Compromissions des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Prise de contrôle d'un serveur"
+    }
+  ],
+  "summary": "Un débordement de mémoire tampon dans une extension ISAPI permet à un\nutilisateur mal intentionné de prendre le contrôle à distance d'un\nserveur IIS 5.0.\n",
+  "title": "Vulnérabilité dans Microsoft IIS 5.0",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-023",
+      "url": null
+    }
+  ]
+}

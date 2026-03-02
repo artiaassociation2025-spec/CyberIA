@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft Powerpoint 2000 dans Office 2000 Service Pack 3    ;</LI>    <LI>Microsoft Powerpoint 2002 dans Office XP Service Pack 3    ;</LI>    <LI>Microsoft Powerpoint 2003 dans Office 2003 (Service Pack 1    ou 2) ;</LI>    <LI>Microsoft Powerpoint 2004 dans Office 2004 pour Mac ;</LI>    <LI>Microsoft Powerpoint v.X dans Office v.X pour Mac.</LI>  </UL>  <P>La visionneuse Microsoft Powerpoint 2003 n'est pas affectée  par ces vulnérabilités, ainsi que les produits de Microsoft Works  Suite.</P>",
+  "content": "## Description\n\nCet avis fait suite à la mise à jour de l'alerte CERTA-2006-ALE-009-002.\n\nPlusieurs vulnérabilités ont été identifiées dans le logiciel de\nprésentations Microsoft Office Powerpoint. L'une d'elles concerne la\nbibliothèque mso.dll utilisée par la suite Office.\n\nPour exploiter celles-ci, un utilisateur malveillant doit construire un\ndocument Powerpoint particulier, puis le distribuer (par courrier\nélectronique, par lien dans une page Web, etc). Si un utilisateur\nl'ouvre sur un système vulnérable, il est alors possible d'exécuter des\ncommandes arbitraires avec les droits de ce dernier.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3449",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3449"
+    },
+    {
+      "name": "CVE-2006-3590",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3590"
+    }
+  ],
+  "links": [
+    {
+      "title": "Référence à l'alerte CERTA CERTA-ALE-2006-009 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2006-ALE-009/"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-346",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans Microsoft Office\nPowerpoint. Une personne malveillante peut construire des documents\nPowerpoint exploitant l'une d'elles afin d'exécuter des commandes\narbitraires lorsqu'ils seront ouverts sur le système ayant une version\nvulnérable.\n",
+  "title": "Multiples vulnérabilités dans Microsoft Office, dont Powerpoint",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-048 du 08 août 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-048.mspx"
+    }
+  ]
+}

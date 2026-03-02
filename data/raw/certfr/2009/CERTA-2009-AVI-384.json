@@ -1,0 +1,47 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>FreeRADIUS versions 1.1.3 à 1.1.7.</p>",
+  "content": "## Description\n\nUne vulnérabilité est présente dans FreeRADIUS. Elle est relative à la\nfonction rad_decode() et permet à un utilisateur distant de provoquer un\ndéni de service par le biais d'un paquet de demande d'accès\n(Access-Request) construit de façon particulière.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nLa version 1.1.8 corrige le problème :\n\n    http://www.freeradius.org\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3111",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3111"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-832-1 du 16 septembre 2009    :      http://www.ubuntu.com/usn/USN-832-1",
+      "url": "https://www.ubuntu.com/usn/USN-832-1"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2009:1451-1 du 17    septembre 2009 :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2009-1451.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-384",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-09-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins RedHat et Ubuntu.",
+      "revision_date": "2009-09-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans <span class=\"textit\">FreeRADIUS</span>\npermet à un utilisateur distant de provoquer un déni de service.\n",
+  "title": "Vulnérabilité de FreeRADIUS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeRADIUS du 09 septembre 2009",
+      "url": "https://lists.freeradius.org/pipermail/freeradius-users/2009-September/msg00242.html"
+    }
+  ]
+}

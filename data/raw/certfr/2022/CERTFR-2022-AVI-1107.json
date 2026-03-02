@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Bluetooth Core Specification versions 1.0B à 5.3 (pour la CVE-2022-25837)",
+      "product": {
+        "name": "Core",
+        "vendor": {
+          "name": "Owncloud",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bluetooth Core Specification versions 4.0 à 5.3 (pour la CVE-2022-25836)",
+      "product": {
+        "name": "Core",
+        "vendor": {
+          "name": "Owncloud",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\n<span class=\"mx_EventTile_body\" dir=\"auto\"> Ces deux vulnérabilités\npermettent à un attaquant de contourner la phase d’authentification\nentre deux équipements communiquant soit via le protocole Bluetooth Low\nEnergy (BLE) soit Bluetooth Basic Rate/Enhanced Data Rate (BR/EDR). En\nexploitant ces vulnérabilités, l’attaquant est en mesure de s’insérer\ndans la communication (attaque de l’homme du milieu ou\nman-in-the-middle, MITM), lui permettant d’espionner les échanges et\npotentiellement altérer leur intégrité.  \n</span>\n\n<span class=\"mx_EventTile_body\" dir=\"auto\">Ces vulnérabilités doivent\nêtre prises en compte dans l’analyse de risques s’il n’est pas possible\nde désactiver le mode ‘Legacy Pairing’ sur tous les équipements devant\nse connecter entre eux et forcer l’usage exclusif du mode ‘Secure\nConnections Only Mode’. </span>\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-25837",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-25837"
+    },
+    {
+      "name": "CVE-2022-25836",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-25836"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-1107",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-12-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Bluetooth. Elles\npermettent à un attaquant de provoquer un contournement de la politique\nde sécurité, une atteinte à l'intégrité des données et une atteinte à la\nconfidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans Bluetooth Core Specification",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Bluetooth du 11 décembre 2022",
+      "url": "https://www.bluetooth.com/learn-about-bluetooth/key-attributes/bluetooth-security/confusion-in-ble-passkey/"
+    }
+  ]
+}

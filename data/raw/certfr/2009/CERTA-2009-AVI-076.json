@@ -1,0 +1,101 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Adobe Flash Player, version 10.0.12.36 et versions précédentes ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Adobe Flash Player, version 10.0.15.3 pour Linux et versions précédentes.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent le lecteur multimédia Adobe Flash\nPlayer :\n\n-   la première concerne le module Settings Manager. L'exploitation de\n    cette vulnérabilité sous forme de détournement de clic\n    (clickjacking) permet à un utilisateur malveillant d'exécuter du\n    code arbitraire sur le système vulnérable ;\n-   un défaut de validation des données entrées permet à un utilisateur\n    malveillant de provoquer un arrêt inopiné du lecteur ;\n-   un problème permet de provoquer un débordement de tampon. Son\n    exploitation pour exécuter du code arbitraire à distance serait\n    possible ;\n-   sur les plateformes Linux, un défaut permet à un utilisateur\n    malveillant de lire des données et d'élever ses privilèges ;\n-   sur les plateformes Windows, la gestion défectueuse du pointeur de\n    souris permet à un utilisateur malveillant de réaliser du\n    clickjacking. Cette exploitation permet à un utilisateur malveillant\n    d'exécuter du code arbitraire sur le système vulnérable.\n\n## Solution\n\nLa version 10.0.22.87 remédie à ces vulnérabilités.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0521",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0521"
+    },
+    {
+      "name": "CVE-2009-0114",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0114"
+    },
+    {
+      "name": "CVE-2009-0522",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0522"
+    },
+    {
+      "name": "CVE-2009-0519",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0519"
+    },
+    {
+      "name": "CVE-2009-0520",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0520"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2009:0334 du 25 février    2009 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2008-0334.html"
+    },
+    {
+      "title": "Bulletin d'actualité du CERTA du 10 octobre 2008, section 3    :",
+      "url": "http://www.certa.ssi.gouv.fr//site/CERTA-2008-ACT-041/index.html"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2009:0332 du 25 février    2009 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2008-0332.html"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SuSE-SA:2009:011 du 26 février    2009 :",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2009-02/msg00004.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-076",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-02-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Red Hat et SuSE.",
+      "revision_date": "2009-03-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent le lecteur multimédia Adobe Flash\nPlayer. Certaines d'entre elles permettent à un utilisateur malveillant\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités d'Adobe Flash Player",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Adobe APSB09-01 du 24 février 2009",
+      "url": "http://www.adobe.com/support/security/bulletins/apsb09-01.html"
+    }
+  ]
+}

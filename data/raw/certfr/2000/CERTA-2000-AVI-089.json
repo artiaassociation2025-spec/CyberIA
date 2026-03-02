@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Media Services 4.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Media Services 4.1.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLorsque une connexion est lancée entre un utilisateur distant et le\nserveur média Microsoft, ce dernier réserve une partie de ses ressources\npour ce service. Les ressources sont libérées lors de la déconnexion de\nl'utilisateur. Un utilisateur mal intentionné peut, par le biais de\nrequêtes de connexion malformées, ouvrir de nombreuses sessions\n«fantômes», entraînant une surchage dans la gestion des ressources et\nrendant nécessaire un redémarrage du serveur média.\n\n## Solution\n\nCorrectif fourni par Microsoft (version US)\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=26470\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS00-097.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-089",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-12-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, par l'envoi de paquets TCP/IP\nmalformés, provoquer un déni de service sur un serveur média Microsoft.\n",
+  "title": "Vulnérabilité dans le serveur Média Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft (MS00-097)",
+      "url": null
+    }
+  ]
+}

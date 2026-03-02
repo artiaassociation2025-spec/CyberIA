@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Index Server 2.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Indexing Service dans Microsoft Windows 2000.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe serveur d'indexation a pour but de retrouver rapidement certains\nfichiers sur une machine ainsi que sur certains sites Web.\n\nLors de l'installation d'Internet Information Server plusieurs modules\nISAPI sont installés. Un de ces modules (idq.dll) est notamment un\ncomposant du serveur d'index.\n\nUne mauvaise gestion de la mémoire de cette application permet à un\nutilisateur mal intentionné, par le biais d'une URL judicieusement\ncomposée, d'exécuter du code arbitraire sur la machine cible.\n\n## Contournement provisoire\n\nDésactiver les configurations de scénario concernant la gestion des\nmodules .idq et .ida dans le gestionnaire de service d'IIS.\n\n## Solution\n\nTélécharger le correctif sur le site Microsoft :\n\n-   Windows NT 4.0 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=30833\n\n-   Windows 2000 Professional, Server et Advanced Server :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=30800\n\n-   Concernant Microsoft Windows 2000 Datacenter Server, Microsoft\n    préconise de prendre contact avec le fournisseur du serveur afin de\n    connaître les solutions à apporter.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-033.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-064",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-06-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une mauvaise gestion des URL par le module ISAPI idq.dll permet à un\nutilisateur distant mal intentionné d'exécuter du code arbitraire sur la\nmachine cible.\n",
+  "title": "Vulnérabilité dans le serveur d'indéxation Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-33",
+      "url": null
+    }
+  ]
+}

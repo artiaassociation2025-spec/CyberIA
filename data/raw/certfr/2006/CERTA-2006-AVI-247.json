@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft XP Service Pack 1 et Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 et Microsoft Windows Server 2003 Service Pack 1 (incluant les versions x64 Edition et Itanium).",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans SMB (pour Server Message\nBlock), le protocole utilisé par Windows pour rendre accessible des\néléments locaux (documents partagés, imprimantes,etc) à d'autres\nordinateurs.\n\n-   La première concerne le traitement de certaines requêtes SMB, qui\n    n'est pas effectué correctement. Une personne distante peut, après\n    s'être identifiée, envoyer un paquet malveillant exploitant cette\n    vulnérabilité, afin d'élever ses privilèges à ceux de\n    l'administrateur.\n-   La deuxième concerne des fonctions inclues dans le fichier\n    mrxsmb.exe. Il serait possible pour une personne malveillante ayant\n    un code appelant cette librairie de bloquer le processus et par\n    conséquent de créer un déni de service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2374",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2374"
+    },
+    {
+      "name": "CVE-2006-2373",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2373"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-030 du 13 juin 2006 :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-030.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-030 du 13 juin 2006 :",
+      "url": "http://www.microsoft.com/france/technet/securite/MS06-030.mspx"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-247",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-06-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités SMB dans Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft du 13 juin 2006",
+      "url": null
+    }
+  ]
+}

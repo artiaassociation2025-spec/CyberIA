@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Samba Web Administration Tool (SWAT)  dans les versions 3.x.</p>",
+  "content": "## Description\n\nDeux vulnérabilités ont été corrigées dans la console d'administration\nweb de Samba (SWAT) :\n\n-   (CVE-2011-2522) une injection de requêtes illégitimes par rebond\n    (CRSF) est possible au moyen d'une URL spécialement construite ;\n-   (CVE-2011-2694) une injection de code indirecte est possible dans le\n    module de changement de mots de passe.\n\n  \n  \n\nLa console SWAT n'est pas activée dans la configuration par défaut.\n\n## Solution\n\nLa version 3.5.10 de Samba remédie à ces problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2694",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2694"
+    },
+    {
+      "name": "CVE-2011-2522",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2522"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 2290 du 07 août 2011 :",
+      "url": "http://www.debian.org/security/2011/dsa-2290"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2011:121 du 27 juillet    2011 :",
+      "url": "http://www.mandriva.com/fr/support/security/advisories?name=MDVSA-2011:121"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-1182-1 du 02 août 2011 :",
+      "url": "http://www.ubuntu.com/usn/usn-1182-1"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-416",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-07-28T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins Debian, Mandriva et Ubuntu.",
+      "revision_date": "2011-08-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    }
+  ],
+  "summary": "La console d'administration web de Samba est vulnérable à des injections\nde code indirectes et à des injections de requêtes illégitimes par\nrebond.\n",
+  "title": "Vulnérabilités dans Samba (SWAT)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de la version 3.5.10 de Samba du 26 juillet 2011",
+      "url": "http://www.samba.org/samba/history/samba-3.5.10.html"
+    }
+  ]
+}

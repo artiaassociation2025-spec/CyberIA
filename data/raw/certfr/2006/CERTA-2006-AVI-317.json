@@ -1,0 +1,187 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "la version Mac 0S X 10.4.7 (PPC et Intel) ainsi que celles antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "La version Mac 0S X 10.3.9 ainsi que celles antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "la version Mac 0S X 10.4.7 Server (PPC et Intel) ainsi que celles antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "la version Mac 0S X 10.3.9 Server ainsi que celles antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe nombreuses vulnérabilités ont été identifiées dans le systèmes\nd'exploitation Mac OS X. Elles concernent plusieurs applications et\nservices. Parmi celles-ci :\n\n-   DHCP : le service bootpd ne gère pas correctement certaines\n    requêtes, pouvant provoquer un débordement de tampon. Une personne\n    malveillante peut profiter de cette vulnérabilité pour exécuter du\n    code arbitraire à distance, par le biais d'une requête spécialement\n    conçue. Le service bootpd n'est cependant pas activé par défaut sur\n    Mac OS X.\n-   bluetooth : la clé secrète générée automatiquement pour la phase\n    d'association avec d'autres appareils bluetooth n'est pas\n    suffisamment longue. Elle facilite les attaques par recherche\n    exhaustive.\n-   gunzip : il serait possible, localement, de modifier les permissions\n    de fichiers appartenant à d'autres utilisateurs exécutant gunzip.\n-   ImageIO : cette application ne gère pas correctement certaines\n    images de type Radiance ou GIF. L'ouverture d'images malveillantes\n    exploitant ces vulnérabilités peut provoquer un déni de service, ou\n    l'exécution de code arbitraire.\n-   OpenSSH : un utilisateur malveillant peut chercher à se connecter à\n    distance (remote login) sur une machine vulnérable en testant\n    plusieurs identifiants. La répétition de cette opération peut\n    conduire à la découverte de comptes valides sur le serveur et à son\n    mauvais fonctionnement (déni de service).\n-   telnet : au cours de la connexion à un serveur Telnet distant, un\n    utilisateur malveillant peut accéder à plusieurs variables\n    d'environnement confidentielles à l'insu de l'utilisateur qui s'y\n    connecte.\n\nD'autres vulnérabilités touchent dyld (gestion des liens dynamiques pour\nles bibliothèques), AFP Server (non activé par défaut), Bom (système de\nfichiers pour l'installation), Image RAW, WebKit et AppKit. Les risques\nsont variés, certains pouvant conduire à l'exécution de code arbitraire\nà distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2005-4348",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-4348"
+    },
+    {
+      "name": "CVE-2005-3088",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-3088"
+    },
+    {
+      "name": "CVE-2006-3465",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3465"
+    },
+    {
+      "name": "CVE-2006-1473",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1473"
+    },
+    {
+      "name": "CVE-2006-3497",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3497"
+    },
+    {
+      "name": "CVE-2006-3501",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3501"
+    },
+    {
+      "name": "CVE-2006-3504",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3504"
+    },
+    {
+      "name": "CVE-2005-0488",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0488"
+    },
+    {
+      "name": "CVE-2006-0321",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0321"
+    },
+    {
+      "name": "CVE-2005-1228",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-1228"
+    },
+    {
+      "name": "CVE-2006-0392",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0392"
+    },
+    {
+      "name": "CVE-2005-0393",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0393"
+    },
+    {
+      "name": "CVE-2006-3496",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3496"
+    },
+    {
+      "name": "CVE-2006-3503",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3503"
+    },
+    {
+      "name": "CVE-2006-0393",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0393"
+    },
+    {
+      "name": "CVE-2006-3459",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3459"
+    },
+    {
+      "name": "CVE-2005-0988",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0988"
+    },
+    {
+      "name": "CVE-2005-2335",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-2335"
+    },
+    {
+      "name": "CVE-2006-3505",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3505"
+    },
+    {
+      "name": "CVE-2006-3502",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3502"
+    },
+    {
+      "name": "CVE-2006-3498",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3498"
+    },
+    {
+      "name": "CVE-2006-3462",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3462"
+    },
+    {
+      "name": "CVE-2006-3499",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3499"
+    },
+    {
+      "name": "CVE-2006-3495",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3495"
+    },
+    {
+      "name": "CVE-2006-3461",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3461"
+    },
+    {
+      "name": "CVE-2006-3500",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3500"
+    },
+    {
+      "name": "CVE-2006-1472",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1472"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité 2006-004 Apple du 01 août 2006 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=304063"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-317",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De nombreuses vulnérabilités ont été identifiées dans le systèmes\nd'exploitation Mac OS X. Elles concernent plusieurs applications et\nservices, notamment DHCP, bluetooth, fetchmail, gunzip, ImageIO, telnet,\nOpenSSH ou LaunchServices. Les risques sont variés, certains peuvant\nconduire à l'exécution de code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans Mac OS X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apple du 01/08/2006",
+      "url": null
+    }
+  ]
+}

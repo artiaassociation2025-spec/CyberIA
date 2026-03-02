@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de ClamAV  antérieures à la version 0.86.1.</p>",
+  "content": "## Description\n\nClamAV est un logiciel libre permettant d'analyser des fichiers à la\nrecherche de signatures de virus. Il est souvent utilisé pour détecter\nles éventuels virus contenus dans les messages arrivant sur un serveur\nde messagerie.  \n\n-   Une vulnérabilité dans la fonction cli_msexpand permettant la\n    décompression de certains fichiers permet à un utilisateur mal\n    intentionné, par le biais d'un fichier habilement constitué, de\n    provoquer un arrêt brutal du service (CVE CAN-2005-1922) ;\n-   Une vulnérabilité dans le traitement de certains fichiers (archives\n    au format CAB) permet à un utilisateur mal intentionné, par le biais\n    d'une archive habilement constituée, de provoquer un arrêt brutal du\n    service (CVE CAN-2005-1923) ;\n-   Une vulnérabilité dans le traitement de certains fichiers (archives\n    au format Quantum) permet à un utilisateur mal intentionné, par le\n    biais d'une archive habilement constituée, de provoquer un arrêt\n    brutal du service (CVE CAN-2005-2056) ;\n-   Une vulnérabilité dans la partie filtre de messages électroniques de\n    ClamAV (clamav-milter) permet à un utilisateur mal intentionné de\n    provoquer un arrêt brutal du service (CVE CAN-2005-2070).\n\n## Solution\n\nMettre à jour ClamAV en version 0.86.1. Se référer au bulletin de\nsécurité de l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité OpenBSD du 28 juin 2005 :",
+      "url": "http://www.vuxml.org/openbsd/pkg-clamav.html"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SA:2005:038 du 29 juin 2005    :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_38_clamav.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-737 du 05 juillet 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-737"
+    },
+    {
+      "title": "Site Internet de ClamAV :",
+      "url": "http://www.clamav.net"
+    },
+    {
+      "title": "Bulletins de sécurité FreeBSD pour clamav et clamav-devel    du 06 juillet 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-clamav.html"
+    },
+    {
+      "title": "Annonce de la sortie de la version 0.86.1 de ClamAV :",
+      "url": "http://sourceforge.net/project/shownotes.php?release_id=337279"
+    },
+    {
+      "title": "Annonce de la sortie de la version 0.86 de ClamAV :",
+      "url": "http://sourceforge.net/project/shownotes.php?release_id=336462"
+    },
+    {
+      "title": "Bulletin de sécurité iDEFENSE id=276 06.29.05 :",
+      "url": "http://www.idefense.com/application/poi/display?id=276&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:113 du 11 juillet    2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:113"
+    },
+    {
+      "title": "Bulletin de sécurité iDEFENSE id=275 06.29.05 :",
+      "url": "http://www.idefense.com/application/poi/display?id=275&type=vulnerabilities"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-234",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-06-28T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité OpenBSD.",
+      "revision_date": "2005-06-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout de trois vulnérabilités, des quatre références CVE (CAN-2005-1922, CAN-2005-1923, CAN-2005-2056 et CAN-2005-2070), de la référence au bulletin de sécurité Debian DSA-737, de la référence au bulletin de sécurité SUSE-SA:2005:038, de la référence à l'annonce de la sortie de ClamAV 0.86, des deux bulletins de sécurité iDEFENSE.",
+      "revision_date": "2005-07-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité FreeBSD.",
+      "revision_date": "2005-07-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva MDKSA-2005:113.",
+      "revision_date": "2005-07-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans ClamAV permet à un utilisateur mal intentionné de\nréaliser un déni de service sur la plate-forme vulnérable.\n",
+  "title": "Vulnérabilité de ClamAV",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA 200506-23",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200506-23.xml"
+    }
+  ]
+}

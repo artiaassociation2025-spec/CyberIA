@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>libxslt versions 1.1.24 et antérieures.</p>",
+  "content": "## Description\n\nUne erreur est présente dans la bibliothèque de fonctions libxslt. La\nvulnérabilité est relative aux fonctions utilisées pour mettre en œuvre\ndu chiffrement de type RC4 au sein d'un fichier XSLT. Un utilisateur\ndistant malintentionné pourra ainsi provoquer un déni de service ou\nexécuter du code arbitraire au moyen d'une feuille de style XSLT\nconstruite de façon particulière.\n\n## Solution\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2935",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2935"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2008:0649 du 31 juillet    2008 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2008-0649.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1624 du 31 juillet 2008 :",
+      "url": "http://www.debian.org/security/dsa-1624"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-387",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-08-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans libxslt permet à un utilisateur distant\nde provoquer un déni de service ou potentiellement d'exécuter du code\narbitraire.\n",
+  "title": "Vulnérabilité de libxslt",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-1624",
+      "url": null
+    }
+  ]
+}

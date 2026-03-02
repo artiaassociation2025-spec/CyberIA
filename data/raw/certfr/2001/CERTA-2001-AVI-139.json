@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Systèmes sur lesquels est lancé le service <CODE>CDE  Subprocess Control Service</CODE>.</P>",
+  "content": "## Description\n\nCDE (Common Desktop Environment) est une interface graphique des\nsystèmes UNIX et Linux. Le démon `CDE Subprocess Control  Service`\n(`dtspcd`) est un démon réseau qui accepte des requêtes de clients pour\nexécuter ou lancer des applications à distance. Le démon dtspcd tourne\npar défaut sur le port 6112/tcp avec les droits de l'utilisateur root.\n\nUne vulnérabilité de type débordement de mémoire permet à un utilisateur\nmal intentionné d'exécuter du code arbitraire sur la machine avec les\ndroits de l'utilisateur root.\n\n## Contournement provisoire\n\nPour éviter une attaque venant de l'extérieur, limitez l'accès au demon\n`dtspcd` au niveau des gardes-barrières (port 6112/tcp par défaut).\n\n## Solution\n\nConsultez votre éditeur pour obtenir une mise à jour suivant votre\ndistribution.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "L'environnement CDE :",
+      "url": "http://www.opengroup.org/cde"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-139",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-11-13T00:00:00.000000"
+    },
+    {
+      "description": "première révision : ajout de l'avis SGI.",
+      "revision_date": "2002-03-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilté dans le démon `CDE Subprocess Control  Service` permet\nà un utilisateur mal intentionné d'exécuter du code arbitraire sur la\nmachine avec les droits de l'utilisateur <span\nclass=\"textit\">root</span>.\n\nL'exploitation de cette vulnérabilité peut se faire en local ou à\ndistance.\n",
+  "title": "Vulnérabilité de CDE",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2001-31 du CERT-CC",
+      "url": null
+    }
+  ]
+}

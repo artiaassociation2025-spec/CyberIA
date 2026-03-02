@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "sudo 1.7.0 à 1.7.4p4.",
+      "product": {
+        "name": "Sudo",
+        "vendor": {
+          "name": "Sudo",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nLa commande sudo a été enrichie d'une fonction de changement de groupe\nlors du passage à la version 1.7.0. Dans certaines configurations, un\nutilisateur malveillant peut acquérir sans vérification les droits\nassignés à un groupe dont il n'est pas membre.\n\n## Solution\n\nLa version 1.7.4p5 remédie à ce problème.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0010",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0010"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 201203-06 du 06 mars 2012    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-201203-06.xml"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-013",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-01-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletinde sécurité Gentoo.",
+      "revision_date": "2012-03-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la commande <span class=\"textit\">sudo</span>\npermet à un utilisateur malveillant d'élever ses privilèges.\n",
+  "title": "Vulnérabilité dans sudo",
+  "vendor_advisories": [
+    {
+      "published_at": "2011-01-12",
+      "title": "Bulletin de sécurité sudo",
+      "url": "http://www.sudo.ws/sudo/alerts/runas_group_pw.html"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco ASA 7.x et 8.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco PIX 7.x et 8.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent les produits Cisco :\n\n-   lorsque la fonctionnalité override account est activée, une\n    vulnérabilité permet de contourner l'authentification ;\n-   lorsqu'un boîtier Cisco ASA est serveur de VPN SSL ou lorsque\n    l'interface de gestion ASDM est active, une vulnérabilité dans le\n    traitement des paquets SSL et HTTP permet à un utilisateur\n    malveillant de provoquer un rechargement de l'équipement ;\n-   un défaut de la gestion de la mémoire est présent dans le traitement\n    des paquets TCP. Il est exploitable pour provoquer un déni de\n    service dès lors qu'un service basé sur TCP est actif sur\n    l'équipement (VPN SSL, ASDM, SSH...) ;\n-   le traitement défectueux des paquets H.323 permet à un utilisateur\n    malveillant de provoquer le rechargement de l'équipement ;\n-   le traitement défectueux des paquets SQL\\*Net permet à un\n    utilisateur malveillant de provoquer le rechargement de l'équipement\n    ;\n-   une erreur non précisée permet de ne pas tenir compte de\n    l'interdiction d'accès implicite lors du traitement des listes de\n    contrôle d'accès.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1160",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1160"
+    },
+    {
+      "name": "CVE-2009-1155",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1155"
+    },
+    {
+      "name": "CVE-2009-1156",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1156"
+    },
+    {
+      "name": "CVE-2009-1157",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1157"
+    },
+    {
+      "name": "CVE-2009-1159",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1159"
+    },
+    {
+      "name": "CVE-2009-1158",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1158"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20090408-asa du 08 avril 2009 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20090408-asa.shtml"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-134",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-04-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent les produits Cisco. Leurs\nexploitation permet de contourner la politique de sécurité ou de\nréaliser un déni de service à distance.\n",
+  "title": "Vulnérabilités des produits Cisco",
+  "vendor_advisories": []
+}

@@ -1,0 +1,126 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "bibliothèque libpng versions 1.0.15 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bibliothèque libpng versions 1.2.5 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa bibliothèque libpng est utilisée par de nombreuses applications (dont\nles navigateurs, les environnements graphiques KDE et Gnome, certaines\ndistributions <span class=\"logo,LaTeX\">L^<span\nclass=\"small\">A</span>^T<span class=\"small\">E</span>X</span>,...) pour\nla manipulation de fichiers image au format png (\\`\\`Portable Network\nGraphics'').\n\nPlusieurs vulnérabilités ont été découvertes dans cette bibliothèque :\n\n-   CVE CAN-2004-0597 : plusieurs failles de type débordement de mémoire\n    permettent d'exécuter du code arbitraire via un fichier au format\n    png habilement construit ;  \n-   CVE CAN-2004-0598 : une vulnérabilité de la fonction png_handle_iCCP\n    permet à un utilisateur distant de provoquer un déni de service ;  \n-   CVE CAN-2004-0599 : plusieurs vulnérabilités de type débordement\n    d'entier (interger overflow) ont été découvertes dans les fonctions\n    png_read_png et png_handle_sPLT et dans la gestion de l'affichage de\n    certaines images png.\n\n## Solution\n\nLes versions 1.2.6rc1 et 1.0.16rc1 de la bibliothèque libpng corrigent\nces vulnérabilités.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de la bibliothèque libpng :",
+      "url": "http://www.libpng.org/pub/png/libpng.html"
+    },
+    {
+      "title": "Bulletin de sécurité de Sun #57683 du 30 novembre 2004 :",
+      "url": "http://sunsolve.sun.com/search/document.dp?assetkey=1-26-57683-1"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2004:023 du 04 août 2004    :",
+      "url": "http://www.suse.com/de/security/2004_23_libpng.html"
+    },
+    {
+      "title": "Bulletin de sécurité de Sun #57617 du 06 août 2004 :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert/57617"
+    },
+    {
+      "title": "Bulletin de sécurité de Mozilla - Bug #251381 :",
+      "url": "http://bugzilla.mozilla.org/show_bug.cgi?id=251381"
+    },
+    {
+      "title": "Alerte de sécurité de l'US-CERT TA04-217A du 04 août 2004 :",
+      "url": "http://www.us-cert.gov/cas/techalerts/TA04-217A.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:402 du 04 août 2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-402.html"
+    },
+    {
+      "title": "Bulletin de sécurité Apple du 09 août 2004 :",
+      "url": "http://www.info.apple.com/kbnum/n61798"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:079 du 04 août    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:079"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200408-03 du 05 août 2004    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200408-03.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-536 du 04 août 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-536"
+    },
+    {
+      "title": "Bulletin de sécurité HP pour Mozilla HPSBTU01063 du 04 août    2004 :",
+      "url": "http://www5.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBTU01063"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour libPNG du 04 août 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD pour libPNG du 04 août 2004 :",
+      "url": "http://www.vuxml.org/openbsd"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-266",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-08-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité FreeBSD et OpenBSD.",
+      "revision_date": "2004-08-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité HP.",
+      "revision_date": "2004-08-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Sun et Apple.",
+      "revision_date": "2004-08-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Sun #57683 relatif à Netscape.",
+      "revision_date": "2004-12-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de la bibliothèque <span\nclass=\"textit\">libpng</span> permettent à un utilisateur distant mal\nintentionné d'exécuter du code arbitraire sur le système vulnérable ou\nde provoquer un déni de service.\n",
+  "title": "Multiples vulnérabilités de la bibliothèque libpng",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de Chris Evans",
+      "url": "http://scary.beasts.org/security/CESA-2004-001.txt"
+    }
+  ]
+}

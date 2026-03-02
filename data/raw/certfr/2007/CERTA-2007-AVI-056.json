@@ -1,0 +1,174 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ISC BIND 9.4.0, pour les versions de 9.4.0b1 à 9.4.0b4 comprise, et 9.4.0rc1 ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC BIND 9.1.x, toutes les versions ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC BIND 9.0.x, toutes les versions ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC BIND 9.2.x, pour les versions de 9.2.0 à 9.2.7 comprise ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC BIND 9.5.0a1.",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC BIND 9.3.x, pour les versions de 9.3.0 à 9.3.3 comprise ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC BIND 9.4.0, pour les versions de 9.4.0a1 à 9.4.0a6 comprise ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans BIND. ISC BIND (pour Berkeley\nInternet Name Domain) est un service pour la mise en œuvre du protocole\nDNS servant à la résolution de noms de domaine.\n\nL'application ne manipulerait pas correctement certaines requêtes de\nvalidation DNSSEC. Il s'agit d'un protocole (défini par le RFC 4033),\nconsidérant certains aspects de sécurité pour l'échange de données\nnécessaire à DNS.\n\nUne personne malveillante pourrait donc exploiter cette vulnérabilité,\nafin de provoquer un dysfonctionnement du service fourni par BIND.\n\n## Solution\n\nSe référer aux mises à jour de l'éditeur pour l'obtention des correctifs\n(cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0494",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0494"
+    },
+    {
+      "name": "CVE-2007-0493",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0493"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Fedora FEDORA-2007-147 du 29 janvier    2007 :",
+      "url": "http://fedoranews.org/cms/node/2507"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1254 du 27 janvier 2007 :",
+      "url": "http://www.debian.org/security/2007/dsa-1254"
+    },
+    {
+      "title": "Page du projet ISC BIND :",
+      "url": "http://www.isc.org/products/BIND/"
+    },
+    {
+      "title": "Bulletin de sécurité Avaya ASA-2007-125 du 27 mars 2007 :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2007-125.htm"
+    },
+    {
+      "title": "Bulletin de sécurité Fedora FEDORA-2007-164 du 31 janvier    2007 :",
+      "url": "http://fedoranews.org/cms/node/2537"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:030 du 30 janvier    2007 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:030"
+    },
+    {
+      "title": "Annonce de la vulnérabilité par ISC BIND :",
+      "url": "http://marc.theaimsgroup.com/?l=bind-announce&m=116968519300764&w=2"
+    },
+    {
+      "title": "Annonces de sécurité ISC BIND :",
+      "url": "http://www.isc.org/index.pl?sw/bind/bind-security.php"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200702-06/bind du 17    février 2007 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200702-06.xml"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SA:2007:014 du 30 janvier    2007 :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2007-Jan/0016.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-056",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence CVE 2007-0493 et du bulletin de sécurité Debian.",
+      "revision_date": "2007-01-29T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence du bulletin de sécurité Fedora.",
+      "revision_date": "2007-01-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Mandriva et SuSE.",
+      "revision_date": "2007-01-31T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Fedora.",
+      "revision_date": "2007-02-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2007-02-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Avaya.",
+      "revision_date": "2007-03-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans le serveur de résolution de noms\nde domaines DNS BIND. Une personne malveillante pourrait exploiter\ncelle-ci, afin de provoquer un dysfonctionnement du service.\n",
+  "title": "Vulnérabilité du serveur DNS BIND",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de l'Internet Systems Consortium (ISC) Security du 25 janvier 2007",
+      "url": null
+    }
+  ]
+}

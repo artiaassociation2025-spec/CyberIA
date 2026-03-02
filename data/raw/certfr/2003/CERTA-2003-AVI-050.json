@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Microsoft IIS version 5.0 sous Windows  2000 avec Service Pack 3 et antérieurs.</p>",
+  "content": "## Description\n\nLe serveur Microsoft IIS 5.0 est fourni avec Windows 2000 par défaut. Il\ninclut le support du protocole WebDAV (Web Distributed Authoring and\nVersioning) qui permet la manipulation des fichiers du serveur IIS à\ndistance. Un débordement de tampon dans la bibliothèque ntdll.dll permet\nà un utilisteur mal intentionné, via une requête malicieusement\nconstruite, d'exécuter du code arbitraire à distance.\n\n## Contournement provisoire\n\nVoir article Microsoft 816930 :\n\n    http://support.microsoft.com/default.aspx?scid=kb;EN-US;816930\n\n## Solution\n\nAppliquer le correctif disponible sur le site de Microsoft :\n\n    http://microsoft.com/downloads/details.aspx?FamilyId=C9A38D45-5145-4844-B62E-C69D32AC929B&displaylang=fr\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS03-007 :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms03-007.asp"
+    },
+    {
+      "title": "Alerte de sécurité ISS X-Force :",
+      "url": "http://www.iss.net/issEn/delivery/xforce/alertdetail.jsp?oid=22029"
+    },
+    {
+      "title": "Article Microsoft 816930 :",
+      "url": "http://support.microsoft.com/default.aspx?scid=kb;en-us;816930"
+    },
+    {
+      "title": "Avis de sécurité du CERT/CC CA-2003-09 :",
+      "url": "http://www.cert.org/advisories/CA-2003-09.html"
+    },
+    {
+      "title": "Article Microsoft 815021 :",
+      "url": "http://support.microsoft.com/default.aspx?scid=kb;en-us;815021"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-050",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans un des composants du serveur Internet Microsoft\nIIS 5.0 permet à un utilisateur mal intentionné d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilité de Microsoft IIS 5.0",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2003-09 du CERT/CC",
+      "url": null
+    }
+  ]
+}

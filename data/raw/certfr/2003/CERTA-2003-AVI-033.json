@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Irix 6.5.5 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "UnixWare 7.1.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "UnixWare 7.1.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Open Unix 8.0.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité de type débordement de pile à été découverte sur la\ncommande ps.\n\nElle permet à un utilisateur mal intentionné d'exécuter du code\narbitraire avec les privilèges du système.\n\nCette vulnérabilité n'est exploitable qu'en local.\n\n## Solution\n\nAppliquer le correctif correspondant à votre système (cf section\ndocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctif pour Irix 6.5.x",
+      "url": "http://support.sgi.com/irix/"
+    },
+    {
+      "title": "Correctif pour UnixWare 7.1.1, OpenUNIX 8.0.0 et UnixWare    7.1.3",
+      "url": "ftp://ftp.sco.com/pub/updates/OpenUNIX/CSSA-2003-SCO.1.1"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-033",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-02-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire en local"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Un débordement de pile présent sur la commande ps permet à un\nutilisateur local d'exécuter un code arbitraire avec les privilèges du\nsystème.\n",
+  "title": "Débordement de pile sur la commande ps",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité CSSA-2003-SCO.1.1 de SCO Security",
+      "url": "ftp://ftp.sco.com/pub/updates/OpenUNIX/CSSA-2003-SCO.1.1/CSSA-2003-SCO.1.1.txt"
+    }
+  ]
+}

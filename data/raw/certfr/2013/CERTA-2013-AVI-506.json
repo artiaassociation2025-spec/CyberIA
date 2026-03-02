@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Knot versions inférieures à 1.3.0",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bind versions 9.8 et 9.9",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NSD version 3.2.15",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Contournement provisoire\n\nDans les solutions DNS affectées qui implémentent la technologie RRL, la\nvaleur du paramètre \"slip\" configurée par défaut est égale à \"2\". Cette\nvaleur introduit un risque d'attaques par pollution de cache DNS. Le\nCERTA recommande donc de positionner la valeur de ce paramètre à \"1\" qui\nannule ce risque.  \nLes modifications de configuration ci-dessous doivent être réalisées :\n\n-   Pour le logiciel \"Bind\", la version du patch RRL pour Bind\n    antérieure au 4 avril 2013 est défaillante lorsque \"slip\" est\n    positionné à la valeur \"1\". Une version ultérieure à cette date doit\n    être utilisée pour corriger la vulnérabilité.\n-   Pour la version 3.2.15 de NSD, la valeur par défaut de slipping est\n    \"2\", et cette dernière ne peut être reconfigurée. Il est recommandée\n    d'utiliser les versions ultérieures.\n",
+  "cves": [
+    {
+      "name": "CVE-2013-5661",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2013-5661"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2013-AVI-506",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2013-09-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans <span class=\"textit\">DNS\nResponse Rate Limiting</span>. Elle permet à un attaquant de provoquer\nune atteinte à l'intégrité des données. RRL est une technologie de\nprotection contre les attaques de type Déni de Services Distribués\n(DDoS) réalisées au travers de serveurs DNS faisant autorité sur leurs\ndomaines. Lorsqu'elle est activée, le serveur DNS filtre certaines des\nréponses qu'il aurait du légitimement émettre. L'objectif de ce filtrage\nest d'atténuer les effets d'une attaque en cours. Le mécanisme appelé\n\"slipping\" en contrôle la fréquence et est un paramètre fondamental dont\nle choix de la valeur est l'objet de cet avis.  \n",
+  "title": "Vulnérabilité dans DNS Response Rate Limiting",
+  "vendor_advisories": []
+}

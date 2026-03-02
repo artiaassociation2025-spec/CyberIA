@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Serveur HTTP Apache 2.0.x versions 2.0.47 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Serveur HTTP Apache 1.3.x versions 1.3.28 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDes vulnérabilités ont été découvertes sur le module mod_cgid d'une\npart, et sur les modules mod_alias et mod_rewrite d'autre part.  \n\nLe module mod_cgid ne traite pas correctement les sockets de type\nAF_UNIX qui sont utilisées pour la communication entre le démon cgid et\nle script CGI. La sortie du script CGI risque alors d'être envoyée au\nmauvais client.\n\nCette vulnérabilité n'affecte que les versions 2.0.x du serveur HTTP\nApache.  \n\nLes modules mod_alias et mod_rewrite présentent des vulnérabilités de\ntype débordement de mémoire dans certains cas de configuration\nd'expressions régulières.\n\n## Solution\n\nMettre à jour le serveur HTTP Apache en version 2.0.48 ou 1.3.29.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site du serveur HTTP Apache :",
+      "url": "http://httpd.apache.org"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-177",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-10-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence à l'avis de sécurité Gentoo.",
+      "revision_date": "2003-11-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux avis de sécurité de Mandrake, RedHat et HP.",
+      "revision_date": "2003-12-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence à la mise-à-jour 2004-01-26 d'Apple.",
+      "revision_date": "2004-01-29T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de Sun.",
+      "revision_date": "2004-02-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence à un avis HP (HPSBUX0401-305).",
+      "revision_date": "2004-02-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes dans certains modules du serveur\nHTTP Apache.\n",
+  "title": "Vulnérabilités du serveur HTTP Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Apache",
+      "url": null
+    }
+  ]
+}

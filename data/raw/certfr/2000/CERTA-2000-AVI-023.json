@@ -1,0 +1,47 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Windows 2000.</P>",
+  "content": "## Description\n\nLors de la préparation de l'environnement de démarrage d'un service,\nsous Windows 2000, le SMC utilise une mémoire « pipe » à laquelle elle\ndonne un nom pour permettre le dialogue entre deux processus parents. Le\nnom de cette mémoire « pipe » est prévisible.\n\nUn utilisateur local mal intentionné peut alors créer cette zone mémoire\navant l'initialisation du SMC, voire même, de l'allouer à un processus\nmalicieux, ce qui lui permettrait d'interagir avec le service dans son\ncontexte, et d'obtenir ainsi des privilèges auxquels il n'a pas le\ndroit, même ceux de l'administrateur de la machine.\n\n## Solution\n\nAppliquer le correctif ci dessous :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=23432\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "La FAQ de Microsoft au sujet de ce bulletin :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-053.asp"
+    },
+    {
+      "title": "L'article de la base de connaissance concernant ce bulletin    :",
+      "url": "http://www.microsoft.com/technet/support/kb.asp?269523"
+    },
+    {
+      "title": "Le bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-053.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-023",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire, modification et usurpation de privilèges en local"
+    }
+  ],
+  "summary": "Service control Manager (SMC) est un outil de Windows 2000 permettant\nd'administrer les services de la machine : création, modification, etc.\n\nUne vulnérabilité liée à la façon dont est gérée l'initialisation d'un\nservice y a été découverte.\n",
+  "title": "Vulnérabilité dans le « Service Control Manager » de Windows 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de Sécurité Microsoft",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis du CERT IST",
+      "url": null
+    }
+  ]
+}

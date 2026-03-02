@@ -1,0 +1,147 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Office XP Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2003 Service Pack 2 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Pack de Compatibilité Microsoft Office pour les formats de fichiers Word, Excel et PowerPoint 2007 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2008 pour Mac.",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2000 Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office Excel Viewer 2003 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2007 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2004 pour Mac ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans l'application de\nbureautique Microsoft Excel.\n\n-   l'application ne manipulerait pas convenablement les macros à\n    l'ouverture de fichiers Excel. Cette vulnérabilité a fait l'objet de\n    l'alerte CERTA-2008-ALE-003 ;\n-   l'application ne contrôlerait pas correctement les données des\n    fichiers Excel lorsqu'ils sont chargés en mémoire ;\n-   l'application ne vérifierait pas correctement les données de\n    fichiers qui sont importés ;\n-   l'application ne manipulerait pas correctement des informations\n    liées à un enregistrement STYLE à l'ouverture d'un fichier ;\n-   l'application ne validerait pas correctement des valeurs pour la\n    mise en forme conditionnelle.\n\nL'exploitation de ces vulnérabilités permettrait à une personne\nmalveillante d'exécuter des commandes arbitraires sur le système\nvulnérable sur lequel un document spécifiquement construit serait\nouvert.\n\nDes codes d'exploitation concernant certaines de ces vulnérabilités\ncirculent actuellement sur l'Internet.\n\n## Solution\n\nSe référer au bulletin de sécurité MS08-014 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0081",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0081"
+    },
+    {
+      "name": "CVE-2008-0112",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0112"
+    },
+    {
+      "name": "CVE-2008-0115",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0115"
+    },
+    {
+      "name": "CVE-2008-0117",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0117"
+    },
+    {
+      "name": "CVE-2008-0114",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0114"
+    },
+    {
+      "name": "CVE-2008-0116",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0116"
+    },
+    {
+      "name": "CVE-2008-0111",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0111"
+    }
+  ],
+  "links": [
+    {
+      "title": "Document du CERTA CERTA-2008-ALE-003 du 16 mars 2008 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2008-ALE-003/index.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-125",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-03-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans l'application\nMicrosoft Excel. L'une d'elles a fait l'objet en janvier 2008 de\nl'alerte CERTA-2008-ALE-003. Elles permettraient à une personne\nmalveillante les exploitant via un fichier Excel spécialement construit\nd'exécuter des commandes arbitraires sur le système vulnérable sur\nlequel le document serait ouvert.\n",
+  "title": "Multiples vulnérabilités dans Microsoft Excel",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS08-014 du 11 mars 2008",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-014.mspx"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>gd</TT> versions 2.0.28 et  antérieures.",
+  "content": "## Description\n\ngd est une bibliothèque graphique utilisée pour la manipulation d'images\nde différents formats (GIF, JPEG, PNG, ...).\n\n  \n\nUne vulnérabilité de type débordement de mémoire est présente dans une\nroutine réalisant le chargement des images au format PNG.\n\nAu moyen d'une image au format PNG habilement constituée, cette\nvulnérabilité peut être exploitée par un utilisateur mal intentionné\nafin d'exécuter du code arbitraire via une application utilisant la\nbibliothèque vulnérable.\n\n## Solution\n\nLa version 2.0.29 de la bibliothèque gd corrige cette vulnérabilité.\n\nSe référer aux bulletins de sécurité de l'éditeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-589 du 09 novembre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-589"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-601 du 29 novembre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-601"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200411-08 du 03 novembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200411-08.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-602 du 29 novembre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-602"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour gd du 05 novembre 2004 :",
+      "url": "http://www.vuxml.org/freebsd"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:132 du 15 novembre    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:132"
+    },
+    {
+      "title": "Site Internet de gd :",
+      "url": "http://www.boutell.com/gd"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2004:638 du 17 décembre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-638.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-591 du 09 novembre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-591"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-360",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-11-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité de Debian.",
+      "revision_date": "2004-11-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de Mandrake.",
+      "revision_date": "2004-11-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de Debian DSA-601.",
+      "revision_date": "2004-11-29T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de Debian DSA-602.",
+      "revision_date": "2004-11-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence aux bulletins de sécurité de Red Hat et FreeBSD.",
+      "revision_date": "2004-12-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de la bibliothèque gd",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité GLSA 200411-08 de Gentoo",
+      "url": null
+    }
+  ]
+}

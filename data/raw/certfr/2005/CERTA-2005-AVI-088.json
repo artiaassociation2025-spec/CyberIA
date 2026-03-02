@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les versions suivantes de Solaris  (plates-formes SPARC et x86) sont vulnérables :  <UL>    <LI>Solaris 7;</LI>    <LI>Solaris 8;</LI>    <LI>Solaris 9.</LI>  </UL></p>",
+  "content": "## Description\n\nLa commande kcms_configure est incluse dans le paquetage KCMS (Kodak\nColor Management System).\n\nSelon Sun, une vulnérabilité présente dans la commande kcms_configure\npeut être exploitée par un utilisateur local mal intentionné afin de\nmodifier des fichiers arbitraires sur le système.\n\n## Contournement provisoire\n\nSupprimer le drapeau suid sur le fichier\n/usr/openwin/bin/kcms_configure.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité iDefense du 23 février 2005 :",
+      "url": "http://www.idefense.com/application/poi/display?id=206&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité de Sun #57706 du 22 février 2005 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-57706-1"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-088",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-02-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de KCMS sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #57706 de Sun",
+      "url": null
+    }
+  ]
+}

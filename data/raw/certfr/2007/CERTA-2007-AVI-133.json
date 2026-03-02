@@ -1,0 +1,140 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "CA Server Protection Suite r2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BrightStor Enterprise Backup r10.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA Business Protection Suite for Microsoft Small Business Server Standard Edition r2 ;",
+      "product": {
+        "name": "Small Business",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BrightStor ARCserve Backup r11.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BrightStor ARCserve Backup r11 for Windows ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BrightStor ARCserve Backup r9.01 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA Business Protection Suite for Microsoft Small Business Server Premium Edition r2.",
+      "product": {
+        "name": "Small Business",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BrightStor ARCserve Backup r11.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA Business Protection Suite r2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nQuatre vulnérabilités ont été identifiées dans BrightStor ARCserve :\n\n-   un débordement de tampon possible dans le service Tape Engine qui\n    permet l'exécution de code arbitraire ;\n-   une corruption de mémoire dans le traitement de procédures RPC par\n    le service Tape Engine qui cause un déni de service et\n    potentiellement l'exécution de code arbitraire ;\n-   un mauvais traitement de paramètres par le service catirpc.dll qui\n    permet à un attaquant d'envoyer des requêtes malformées pour causer\n    un déni de service ;\n-   une fonction RPC, pouvant être appelée par une personne\n    malintentionnée distante, qui éteint le service Tape Engine.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-6076",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6076"
+    },
+    {
+      "name": "CVE-2007-0816",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0816"
+    },
+    {
+      "name": "CVE-2007-1447",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1447"
+    },
+    {
+      "name": "CVE-2007-1448",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1448"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-133",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-03-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Quatre vulnérabilités dans BrightStor ARCserve peuvent être exploitées\npar une personne malintentionnée distante afin d'effectuer un déni de\nservice ou une exécution de code arbitraire.\n",
+  "title": "Vulnérabilités dans BrightStor ARCserve",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de CA du 15 mars 2007",
+      "url": "http://supportconnecttw.ca.com/public/storage/infodocs/babtapeng-securitynotice.asp"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions de samba antérieures à 2.2.0 et 2.0.10  sont vulnérables.</P>",
+  "content": "## Description\n\nLe service samba permet sur UNIX le partage de ressources NETBIOS\n(protocole SMB). Le fichier de configuration de samba est /etc/smb.conf.\n\nUne vulnérabilité existe dans la gestion du nom du fichier de\njournalisation. Le nom de ce fichier se trouve dans /etc/smb.conf.\n\nCette vulnérabilité peut permettre d'écraser d'autres fichiers et\nd'obtenir les droits administrateurs pour un utilisateur disposant déjà\nd'un compte sur la machine.\n\n## Contournement provisoire\n\nDans le fichier /etc/smb.conf, remplacer toutes les occurences de %m par\n%I.\n\n## Solution\n\nMettre à jour le service samba. Vous trouverez les mises à jour de samba\nau lien suivant :\n\n    http://va.samba.org/samba/ftp/\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-069",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-06-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Un utilisateur mal intentionné disposant d'un compte sur le serveur samba peut obtenir les droits administrateurs. cette vulnérabilité peut également permettre un déni de service"
+    }
+  ],
+  "summary": "Une faille dans la gestion du nom des fichiers journaux de samba permet\nà un utilisateur mal intentionné d'obtenir les droits administrateurs\nsur la machine. De plus, certains fichiers peuvent être écrasés à\ndistance.\n",
+  "title": "Vulnérabilité dans Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis Samba",
+      "url": null
+    }
+  ]
+}

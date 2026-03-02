@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Tivoli Storage Manager FastBack 5 versions antérieures 5.5.7 ;",
+      "product": {
+        "name": "Tivoli",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Tivoli Storage Manager Fastback 6 versions antérieures 6.1.1.",
+      "product": {
+        "name": "Tivoli",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans IBM Tivoli Storage\nManager FastBack :\n\n-   un problème non spécifié par l'éditeur dans le service FastBack\n    Mount permet l'exécution de code arbitraire à distance ;\n-   une erreur de traitement dans FastBack Mount permet à un utilisateur\n    malintentionné de provoquer un déni de service par le biais de\n    FastBack Shell ;\n-   une erreur de traitement dans FastBack Server permet à un\n    utilisateur malintentionné d'exécuter du code arbitraire à distance\n    ou de provoquer un déni de service à distance par le biais de\n    FastBack Client.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg21443820 du 18 août 2010 :",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21443820"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-390",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-08-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans IBM Tivoli Storage\nManager FastBack. Elles peuvent entraîner un déni de service à distance\nou de l'exécution de code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans IBM Tivoli Storage Manager FastBack",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg1443820 du 18 août 2010",
+      "url": null
+    }
+  ]
+}

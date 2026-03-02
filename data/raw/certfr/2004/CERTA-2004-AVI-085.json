@@ -1,0 +1,51 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Versions des sources de  <TT>sysstat</TT> antérieures à la version 5.0.2.</p>",
+  "content": "## Description\n\nLe paquetage sysstat comprend un ensemble d'outils (sar, iostat, etc.)\npermettant de visualiser les performances du système.\n\nUne vulnérabilité (mauvaise gestion des fichiers temporaires) présente\ndans la commande isag (outil graphique de visualisation des\nstatistiques) peut être exploitée par un utilisateur mal intentionné\nafin de corrompre n'importe quel fichier du système accessible en\nécriture par l'utilisateur lançant la commande isag.\n\n## Solution\n\nLa version 5.0.2 de sysstat corrige cette vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200404-04 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200404-04.xml"
+    },
+    {
+      "title": "Page de sysstat :",
+      "url": "http://perso.wanadoo.fr/sebastien.godard"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2004:093 de Red Hat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-093.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-085",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Gentoo et d'une référence CVE.",
+      "revision_date": "2004-04-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Corruption de données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de sysstat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DSA-460 de Debian",
+      "url": "http://www.debian.org/security/2004/dsa-460"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RHSA-2004:053 de Red Hat",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-053.html"
+    }
+  ]
+}

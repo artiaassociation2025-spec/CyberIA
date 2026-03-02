@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM DB2 Database Server version 8.2, sans FixPak 7.",
+      "product": {
+        "name": "Db2",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM DB2 Database Server version 8.1, sans FixPak 14 ;",
+      "product": {
+        "name": "Db2",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans certaines versions d'IBM DB2\nDatabase Server. Le serveur n'interpréterait pas correctement certaines\nrequêtes d'initiation de connexion. Une personne malveillante distante\npeut exploiter cette vulnérabilité, sous forme d'un paquet de type\nSQLJRA, pour perturber le bon fonctionnement du serveur vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM IY91847 du 30 novembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IY91847"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY86917 du 30 novembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IY86917"
+    },
+    {
+      "title": "Bulletin de sécurité Application Security Inc.(Team    SHATTER) du 30 novembre 2006 :",
+      "url": "http://www.appsecinc.com/resources/alerts/db2/2006-11-30.shtml"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-560",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-12-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité d'IBM DB2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Alerte de Team Shatter du 30 novembre 2006",
+      "url": null
+    }
+  ]
+}

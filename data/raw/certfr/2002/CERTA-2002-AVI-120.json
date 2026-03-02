@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous les serveurs web équipés de l'outil <TT>ASP.NET</TT>.</P>",
+  "content": "## Description\n\nASP.NET est un outil de développement d'applications web.\n\nParmi les modes d'ASP.NET, le mode StateServer permet de gérer des\nsessions en stockant des informations sur l'état de chaque session\nouverte.\n\nUn débordement de mémoire dans une fonction de gestion de cookies\nd'ASP.NET en mode StateServer permet à un utilisateur mal intentionné\nd'exécuter du code arbitraire à distance dans le contexte de sécurité\nd'ASP.NET dont le compte ne possède normalement aucun privilège.\n\nLe mode StateServer n'est pas activé par défaut lors de l'installation\nd'ASP.NET.\n\n## Contournement provisoire\n\n-   Désactiver les cookies d'ASP.NET en mode StateServer ;\n-   ne pas utiliser le mode StateServer si cela est possible.\n\n## Solution\n\nAppliquer le correctif de Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp/ReleaseID=39298\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-120",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut effectuer un débordement de mémoire\nà distance et exécuter du code arbitraire sur un serveur utilisant\nl'outil ASP.NET.\n",
+  "title": "Débordement de mémoire dans l'application <TT>ASP.NET</TT> de Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS02-026",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-026.asp"
+    }
+  ]
+}

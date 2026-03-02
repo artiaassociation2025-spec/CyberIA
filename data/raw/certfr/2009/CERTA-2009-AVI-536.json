@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows Server 2003 avec ADFS activé, toutes éditions, (Windows Server 2003 R2) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2008, toutes éditions.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités présentes dans ADFS (Active Directory Federation\nService) ont été publiées :\n\n-   la première permet à un utilisateur malveillant d'usurper l'identité\n    d'un utilisateur légitime, sous réserve d'accéder à un poste client\n    depuis lequel ce dernier s'est connecté et d'avoir activé la\n    fonction d'identification unique (SSO, Single Sign-On) sur le\n    serveur vulnérable ;\n-   la seconde réside dans le traitement des requêtes des utilisateurs\n    authentifiés. Elle permet à un utilisateur malveillant ayant des\n    informations de connexion valides de prendre le contrôle du serveur\n    vulnérable, à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2509",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2509"
+    },
+    {
+      "name": "CVE-2009-2508",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2508"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS09-070 du 08 décembre 2009    :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-070.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS09-070 du 08 décembre 2009    :",
+      "url": "http://www.microsoft.com/france/technet/security/Bulletin/MS09-070.mspx"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-536",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-12-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans ADFS (<span class=\"textit\">Active\nDirectory Federation Service</span>) ont été publiées. La plus\nimportante permet à un utilisateur malveillant d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilités dans Microsoft ADFS",
+  "vendor_advisories": []
+}

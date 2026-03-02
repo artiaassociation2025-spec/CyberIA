@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows NT 4.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows XP.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nRPC (Remote Procedure Call) est un protocole de type client/serveur\nutilisé pour l'implémentation d'applications réparties. L'implémentation\nde ce protocole sous Windows est dérivé de celui de l'OSF (Open Software\nFoundation).  \n\nUne vulnérabilité a été découverte dans la gestion des messages RPC avec\nTCP/IP. Celle vulnérabilité affecte le processus `RPC EndPoint Mapper`\nécoutant sur le port `135`.\n\nUn utilisateur mal intentionné peut exploiter cette faille afin\nd'effectuer un déni de service sur les services RPC de la machine ou\nentraîner la perte de certaines fonctions `COM`.\n\n## Contournement provisoire\n\nFiltrer le port `135/TCP` et `UDP` avec un élément de filtrage en amont.\n\n## Solution\n\nAppliquer le correctif fourni pour Windows 2000 et XP (cf.\nDocumentation). Aucun correctif n'est disponible pour Windows NT 4.0, il\nest donc nécessaire de filtrer le port `135/TCP et  UDP`.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-066",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans l'implémentation des RPC (Remote\nProcedure Call) sous Windows.\n",
+  "title": "Vulnérabilité dans les RPC sous Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #MS03-010 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS03-010.asp"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PHP 5.3.x antérieure à 5.3.11;",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PHP 5.4.x antérieure à 5.4.1.",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-0831",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0831"
+    },
+    {
+      "name": "CVE-2012-1172",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-1172"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2012-AVI-244",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-05-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requête SQL"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Trois vulnérabilités ont été corrigées dans <span\nclass=\"textit\">PHP</span>. Deux d'entre-elles concernent les branches\n5.3.x et 5.4.x. La dernière (CVE-2012-0831) ne concerne que la branche\n5.3.x et corrige un problème lié à <span\nclass=\"textit\">magic_quote_gpc</span> lors du chargement de variables\nd'environnement, ce qui peut faciliter l'injection de requête SQL par un\nattaquant distant.\n",
+  "title": "Vulnérabilités dans PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PHP du 26 avril 2012",
+      "url": "http://www.php.net/archive/2012.php#id2012-04-26-1"
+    }
+  ]
+}

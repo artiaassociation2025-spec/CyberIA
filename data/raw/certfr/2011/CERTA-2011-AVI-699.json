@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Cacti versions antérieures à 0.8.7i.</p>",
+  "content": "## Description\n\nLes vulnérabilités suivantes ont été corrigées dans Cacti :\n\n-   Contournement de l'authentification au moyen d'une injection SQL sur\n    le paramètre login_username dans la page /cacti/index.php.\n-   Injections de code indirecte à distance (cross-site scripting) dans\n    la page /cacti/graph_settings.php.\n-   Injection de requête illégitime par rebond (cross-site request\n    forgery) dans la page /cacti/logout.php.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). La version 0.8.7i corrige le\nproblème.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Rapport de vulnérabilités de la version 0.8.7g :",
+      "url": "http://bugs.cacti.net/view.php?id=2062"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-699",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-12-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Injection SQL"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Cacti permettent à une personne\nmalintentionnée d'effectuer plusieurs types d'injections pouvant mener à\nune compromission.\n",
+  "title": "Multiples vulnérabilités dans Cacti",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de sortie de Cacti 0.8.7i",
+      "url": "http://www.cacti.net/release_notes_0_8_7i.php"
+    }
+  ]
+}

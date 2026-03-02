@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>DB2 Universal Database 8.x.</P>",
+  "content": "## Description\n\nL'application DB2 d'IBM est une base de données pour les systèmes\nd'exploitation Linux, UNIX et Windows.\n\nCette application présente de multiples vulnérabilités :\n\n-   La version Windows de l'application DB2 d'IBM présente une\n    vulnérabilité dans la méthode utilisée pour gérer les ressources du\n    système. Cette vulnérabilité permet à un utilisateur local mal\n    intentionné d'effectuer un déni de service et de porter atteinte à\n    la confidentialité et à l'intégrité des données ;\n-   une vulnérabilité découverte dans le traitement des messages réseaux\n    lors d'une connection à la base de donnée permet à une personne\n    malveillante d'exécuter du code arbitraire ;\n-   une vulnérabilité affectant certaines fonctions XML-Extender permet\n    à un utilisateur mal intentionnné de porter atteinte à la\n    confidentialité et à l'intégrité des données ;\n-   une vulnérabilité présente lors de la création de certains objets de\n    la base de données permet à un individu malveillant d'exécuter du\n    code arbitraire.\n\nLes vulnérabilités citées ci-dessus ne peuvent être exploitées que si\nl'option \\`\\`federated database support'' est activée.\n\nCertaines fonctions XML(eXtensible Markup Language) présentent une\nvulnérabilité qui permet à un utilisateur mal intentionné d'exécuter du\ncode arbitraire sur le système vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctifs fournit par l'éditeur :",
+      "url": "http://www-306.ibm.com/software/data/db2/udb/support/downloadv8.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-077",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-02-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De nombreuses vulnérabilités découvertes dans IBM DB2 peuvent être\nexploitées par un utilisateur mal intentionnné présent sur le réseau\nlocal afin d'exécuter du code arbitraire, d'effectuer un déni de service\nou de porter atteinte à la confidentialité ou à l'intégrité des données\nprésentes sur le système vulnérable.\n",
+  "title": "Multiples vulnérabilités dans IBM DB2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM n˚1196289 du 20 janvier 2005",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21196289"
+    }
+  ]
+}

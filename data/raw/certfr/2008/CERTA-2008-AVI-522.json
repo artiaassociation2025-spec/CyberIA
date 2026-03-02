@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco PIX.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco ASA 5500 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans les produits de\nsécurité Cisco ASA et Cisco PIX :\n\n-   certains systèmes Cisco ASA ou PIX configurés avec IPSec ou un accès\n    distant VPN basé sur SSL peuvent être trompés par une personne\n    malveillante qui contournerait la phase d'authentification par\n    domaine Windows NT. Les autres méthodes d'authentification externes\n    (LDAP, RADIUS, TACACS+, etc.) ne sont pas concernées ;\n-   certains systèmes Cisco ASA ou PIX utilisant des logiciels de\n    version 7.2(4)9 ou 7.2(4)10 n'interprètent pas correctement des\n    trames IPv6. L'exploitation de cette vulnérabilité peut provoquer le\n    dysfonctionnement du système ;\n-   certains systèmes Cisco ASA (versions 8.0.x) n'interprètent pas\n    correctement des trames qui nécessitent l'usage de l'accélérateur de\n    chiffrement. Plusieurs services y ont recours.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3816",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3816"
+    },
+    {
+      "name": "CVE-2008-3817",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3817"
+    },
+    {
+      "name": "CVE-2008-3815",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3815"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20081022-asa du 22 octobre 2008    :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20081022-asa.shtml"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-522",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-10-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans les produits de\nsécurité Cisco ASA et Cisco PIX. L'exploitation de ces dernières permet\nde perturber le fonctionnement du système vulnérable ou de contourner la\npolitique de sécurité mise en place.\n",
+  "title": "Vulnérabilités dans Cisco PIX et ASA",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité 108009 de Cisco publié le 22 octobre 2008",
+      "url": null
+    }
+  ]
+}

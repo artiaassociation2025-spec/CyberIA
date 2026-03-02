@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions de la bibliothèque ZZIPlib antérieures à la  0.13.49.</P>",
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans la bilbiothèque ZZIPlib. Cette\ndernière fournit un accès en lecture pour les archives de type ZIP. Une\nerreur dans la fonction zzip_open_shared_io qui est mise en œuvre dans\nle fichier zzip/file.c permettrait à une personne malveillante de\nperturber le système vulnérable, voire exécuter des commandes\narbitraires. De manière plus précise, un appel à la fonction strcpy ne\nserait pas correctement contrôlé, et la manipulation d'un nom de fichier\ntrop long pourrait ainsi provoquer un débordement de tampon.\n\n## Solution\n\nSe référer au bulletin de mise à jour du projet pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-1614",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1614"
+    }
+  ],
+  "links": [
+    {
+      "title": "Notes de modifications pour la version 0.13.49 du 17 mars    2007 :",
+      "url": "http://sourceforge.net/project/shownotes.php?group_id=6389&release_id=494587"
+    },
+    {
+      "title": "Page du projet ZZIPlib :",
+      "url": "http://sourceforge.net/projects/zziplib/"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-139",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-03-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de la bibliothèque ZZIPlib",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes de changement dans le projet du 17 mars 2007",
+      "url": null
+    }
+  ]
+}

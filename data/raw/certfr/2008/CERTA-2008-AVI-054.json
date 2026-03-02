@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ACDSee Photo Manager 10.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ACDSee Photo Manager 9.0/",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ACDSee Photo Manager 8.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans l'outil de gestion de contenus\nmultimédia ACDSee Photo Manager. Elle concerne en particulier la\nmanipulation de fichiers au format .XBM (ou X-BitMap). Ce format est\nutilisé dans une interface X (GUI) pour stocker des images associées au\ncurseur ou aux icônes par exemple. Il s'agit dun format d'image\nmonochromatique encore interprété par la plupart des navigateurs\nactuels.\n\nL'avis de sécurité publié par ACD en décembre 2007 mentionne également\nles formats XPM (textitXPixMap), PSP (Paint Shop Pro) et LHA.\n\nUne personne malveillante pourrait exploiter cette vulnérabilité pour\nexécuter à distance des commandes arbitraires sur le système vulnérable,\nou du moins perturber le fonctionnement du service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Note technique ACDSee de référence 2800 publiée le 27    décembre 2007 :",
+      "url": "http://www.acdsee.com/support/knowledgebase/article?id=2800"
+    },
+    {
+      "title": "Avis de sécurité Trend Micro publié le 25 janvier 2008 :",
+      "url": "http://www.trendmicro.com/vinfo/secadvisories/default6.asp?VName=Vulnerability+in+AcdSee+Photo+Manager"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-054",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans l'outil de gestion de contenus\nmultimédia ACDSee Photo Manager. L'exploitation de cette dernière à\ndistance par une personne malveillante peut conduire à l'exécution de\ncode arbitraire sur le système vulnérable, ou à une perturbation du\nservice.\n",
+  "title": "Vulnérabilité dans ACDSee Photo Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour ACDSee référence 2800 du 27 décembre 2007",
+      "url": null
+    }
+  ]
+}

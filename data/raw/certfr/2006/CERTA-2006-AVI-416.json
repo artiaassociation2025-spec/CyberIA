@@ -1,0 +1,149 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apple Mac OS X Server v10.4, pour les versions antérieures à 10.4.8.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple Mac OS X Server version 10.3.9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple Mac OS X v10.4 , pour les versions antérieures à 10.4.8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple Mac OS X version 10.3.9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans le système\nd'exploitation Apple Mac OS X, ainsi que certaines applications\nassociées à ce système. Parmi celles-ci :\n\n-   une vulnérabilité dans CFNetwork, une interface de programmation\n    permettant l'abstraction de certaines fonctionnalités des couches\n    réseau : elle ne manipulerait pas correctement les authentifications\n    SSL. Tout client s'appuyant sur elle, comme le navigateur Safari,\n    pourrait donc montrer une connexion SSL authentifiée et chiffrée\n    (icône cadenas dans la fenêtre du navigateur), bien que\n    l'authentification ne soit pas effectuée.\n-   plusieurs vulnérabilités dans l'application Adobe Flash Player,\n    aussi commentées dans l'avis du CERTA CERTA-2006-AVI-398 : celle-ci\n    ne manipulerait pas convenablement certains fichiers multimedia au\n    format .swf, permettant à un document spécialement construit de\n    contourner le paramètre de sécurité nommé allowScriptAccess de\n    l'application vulnérable.\n-   une vulnérabilité dans l'application ImageIO : elle n'interprèterait\n    pas correctement certaines images JPEG2000. Une personne malveillant\n    pourrait construire un document particulier exploitant cette\n    vulnérabilité, afin d'exécuter du code arbitraire lorsque l'image\n    est visualisée sur le système vulnérable.\n-   une vulnérabilité dans la manipulation des erreurs par le noyau de\n    Mac OS X : quand une erreur survient (fermer une application\n    brutalement par exemple), le noyau fait appel à des ports\n    d'exception Mach. Une personne malveillante pourrait profiter des\n    droits accordés à ces derniers pour élever ses privilèges à ceux de\n    l'administrateur (root).\n-   plusieurs vulnérabilités dans l'application LoginWindow : cette\n    application gère notamment les services autorisés aux utilisateurs\n    qui se connecteraient à distance sur le système. Il serait possible\n    pour une personne malveillante de contourner la politique de\n    contrôle d'accès spécifiée dans le système.\n-   une vulnérabilité dans le service Préferences, servant à configurer\n    le système d'exploitation : les privilèges ne seraient pas\n    correctement nettoyés à la suppression d'un compte administrateur.\n-   une vulnérabilité non documentée concernant la manipulation d'images\n    PICT par l'application QuickDraw Manager.\n-   une vulnérabilité dans le service de messagerie Cyrus SASL, au cours\n    de la négaociation DIGEST-MD5 : une personne malveillante pourrait\n    construire un paquet particulier, perturbant le système vulnérable\n    qui le recevrait.\n-   une vulnérabilité de l'utilitaire WebCore : celui-ci est un moteur\n    de rendu HTML pour le système d'exploitation Mac OS X. C'est un des\n    composants primaires repris dans l'utilitaire WebKit. Il ne\n    manipulerait pas correctement certains documents au format HTML,\n    permettant à un utilisateur d'exécuter du code sur le système qui\n    ouvrirait son document construit de manière malveillante.\n-   une vulnérabilité dans le service d'administration Workgroup\n    Manager, qui n'utiliserait pas correctement les mots de passe\n    ShadowHash avec la hiérarchie des domaines de NetInfo.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4640",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4640"
+    },
+    {
+      "name": "CVE-2006-3587",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3587"
+    },
+    {
+      "name": "CVE-2006-4395",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4395"
+    },
+    {
+      "name": "CVE-2006-4397",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4397"
+    },
+    {
+      "name": "CVE-2006-4394",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4394"
+    },
+    {
+      "name": "CVE-2006-1721",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1721"
+    },
+    {
+      "name": "CVE-2006-4391",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4391"
+    },
+    {
+      "name": "CVE-2006-3311",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3311"
+    },
+    {
+      "name": "CVE-2006-4390",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4390"
+    },
+    {
+      "name": "CVE-2006-4387",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4387"
+    },
+    {
+      "name": "CVE-2006-4393",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4393"
+    },
+    {
+      "name": "CVE-2006-3588",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3588"
+    },
+    {
+      "name": "CVE-2006-3946",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3946"
+    },
+    {
+      "name": "CVE-2006-4392",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4392"
+    },
+    {
+      "name": "CVE-2006-4399",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4399"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Apple du 29 septembre 2006 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=304460"
+    },
+    {
+      "title": "Avis du CERTA CERTA-2006-AVI-398, 'Vulnérabilités dans    Adobe Flash Player', du 14 septembre 2006 :",
+      "url": "http://www.certa/ssi.gouv.fr/site/CERTA-2006-AVI-398/"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-416",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans le système\nd'exploitation Apple Mac OS X, ainsi que certaines applications\nassociées à ce système, telles que Adobe Flash Player, Safari ou\nQuickDraw. L'exploitation de ces vulnérabilités peut permettre à une\npersonne malveillante d'élever ses privilèges localement, voire\nd'exécuter des commandes arbitraires à distance.\n",
+  "title": "Plusieurs vulnérabilités dans Apple Mac OS X et des applications associées",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apple 2006-006 du 29 septembre 2006",
+      "url": null
+    }
+  ]
+}

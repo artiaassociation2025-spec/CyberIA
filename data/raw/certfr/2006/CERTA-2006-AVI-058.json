@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SPIP versions 1.9 Alpha 2 (5539).",
+      "product": {
+        "name": "SPIP",
+        "vendor": {
+          "name": "SPIP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SPIP versions 1.8.2-e et antérieures ;",
+      "product": {
+        "name": "SPIP",
+        "vendor": {
+          "name": "SPIP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSPIP est un gestionnaire de contenu basé sur le langage php. Un manque\nde contrôle dans les paramètres id_article et id_forum du script\nforum.php3 permettent à un utilisateur distant mal intentionné de\nréaliser de l'injection de code SQL dans les requêtes effectuées par ce\nscript. Il peut ainsi porter atteinte soit à la confidentialité soit à\nl'intégrité des données contenues dans la base de données adjointe à\nSPIP.\n\n## Solution\n\nLa vulnérabilité est corrigée dans la dernière version (snapshot 5546)\ndisponible via Subversion (SVN).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de SPIP :",
+      "url": "http://www.spip.net"
+    },
+    {
+      "title": "Bulletin de sécurité Secunia :",
+      "url": "http://www.secunia.com/advisories/18676"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-058",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-02-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans SPIP permet à un utilisateur distant mal\nintentionné de porter atteinte à la confidentialité ou à l'intégrité des\ndonnées du site web vulnérable.\n",
+  "title": "Vulnérabilité dans SPIP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Secunia #SA18676 du 01 février 2006",
+      "url": null
+    }
+  ]
+}

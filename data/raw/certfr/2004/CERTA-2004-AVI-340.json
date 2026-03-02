@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les systèmes d'exploitation Microsoft suivants sont concernés  :</P>  <UL>    <LI>Windows NT4 Serveur ``Service pack'' 6a</LI>    <LI>Windows 2000 Serveur ``Service packs'' 3 et 4</LI>    <LI>Windows 2003 Serveur (versions 32 comme 64 bits)</LI>    <LI>Serveur Exchange 2000 ``Service pack'' 3</LI>    <LI>Serveur Exchange 2003 avec et sans le ``Service pack''    1</LI>  </UL>",
+  "content": "## Description\n\nNNTP est le protocole standard de gestion des groupes de discussion. Ce\nservice est supporté par IIS sur les ports 119/tcp et éventuellement\n563/tcp (connexions SSL/TLS).\n\nUne faille a été identifiée dans la gestion d'une des requêtes du\nprotocole. Cette dernière ne nécessite pas d'authentification préalable\nde l'utilisateur distant. Une mauvaise gestion d'un tampon dans la pile\npermet alors un déni de service ou l'exécution de code arbitraire sur la\nplateforme vulnérable.\n\n## Contournement provisoire\n\nDésactiver le service NNTP dans IIS.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-340",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-10-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans l'interprétation des requêtes NNTP permet à un\nutilisateur mal intentionné de réaliser un déni de service ou d'exécuter\ndu code arbitraire à distance.\n\nLe service Exchange nécessite l'installation du service NNTP. Un système\npeut donc être vulnérable même si il n'a pas vocation à offrir un\nservice NNTP.\n",
+  "title": "Failles dans le service NNTP de Microsoft IIS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Microsoft MS04-036",
+      "url": null
+    }
+  ]
+}

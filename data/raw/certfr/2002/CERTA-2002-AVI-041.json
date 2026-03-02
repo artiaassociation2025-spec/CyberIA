@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft XML Core Services versions 2.6, 3.0 et 4.0.</LI>    <LI>Les produits Microsoft utilisant ce service :      <UL>        <LI>Microsoft Windows XP;</LI>        <LI>Microsoft Internet Explorer 6.0;</LI>        <LI>Microsoft SQL Server 2000.</LI>      </UL>    </LI>  </UL>",
+  "content": "## Description\n\nMicrosoft XML Core Services (MSXML) contient un contrôle ActiveX appelé\nXMLHTTP permettant de recevoir ou d'envoyer dans un navigateur des\ndonnées XML par HTTP en utilisant des opérations telles que GET, PUT et\nPOST.\n\nLe contrôle ActiveX XMLHTTP ne respecte pas la gestion des zones de\nsécurité specifiée dans Internet Explorer.\n\nCette faille peut etre exploitée par un utilisateur mal intentionné afin\nd'accéder en lecture aux données locales du disque.\n\n## Solution\n\nSe référer au bulletin de sécurité Microsoft MS02-008 (cf. Section «\npatch availability ») pour obtenir la liste des correctifs disponibles.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de Microsoft MS02-008 :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-008.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-041",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès en lecture à des fichiers locaux du système"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut accéder en lecture aux données\nlocales du système affecté.\n",
+  "title": "Vulnérabilité du contrôle ActiveX XMLHTTP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS02-008",
+      "url": null
+    }
+  ]
+}

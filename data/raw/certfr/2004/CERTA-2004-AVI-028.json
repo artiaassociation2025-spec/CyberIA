@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "NetBSD 1.6, NetBSD 1.6.1 et NetBSD-current (si les sources sont antérieures au 5 février 2004).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenBSD 3.4 et versions antérieures ;",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nIPv6 (Internet Protocol Version 6) est le successeur de l'actuel\nprotocole IP (IPv4). Une vulnérabilité dans la gestion des MTU (Maximum\nTransmission Unit) IPv6 permet à un utilisateur mal intentionné de créer\nun déni de service en provoquant un arrêt brutal du noyau BSD.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de NetBSD NetBSD-SA2004-002 :",
+      "url": "ftp://ftp.NetBSD.org/pub/NetBSD/security/advisories/NetBSD-SA2004-002.txt.asc"
+    },
+    {
+      "title": "Bulletin de sécurité d'OpenBSD :",
+      "url": "http://www.openbsd.org/errata.html#ip6"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-028",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-02-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité de NetBSD.",
+      "revision_date": "2004-02-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la pile IPv6 des noyaux BSD permet à un\nutilisateur mal intentionné de provoquer un déni de service.\n",
+  "title": "Vulnérabilité IPv6 dans les noyaux BSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de Georgi Guninski #66,2004",
+      "url": "http://www.guninski.com/obsdmtu.html"
+    }
+  ]
+}

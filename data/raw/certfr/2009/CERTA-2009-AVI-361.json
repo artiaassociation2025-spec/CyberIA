@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Dnsmasq versions 2.49 et antérieures.</p>",
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans Dnsmasq. Elles sont relatives à\nla mise en œuvre du protocole TFTP et permettent à un utilisateur\ndistant malintentionné de provoquer un déni de service ou d'exécuter du\ncode arbitraire. Dnsmasq doit être compilé avec le support du protocole\nTFTP pour que la faille soit exploitable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nLa version 2.50 corrige le problème :\n\n    http://www.thekelleys.org.uk/dnsmasq/\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2958",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2958"
+    },
+    {
+      "name": "CVE-2009-2957",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2957"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-361",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-09-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans Dnsmasq permettent à un\nutilisteur distant de provoquer un déni de service ou d'exécuter du code\narbitraire.\n",
+  "title": "Vulnérabilité dans Dnsmasq",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés à la version 2.50 de Dnsmasq",
+      "url": "http://www.thekelleys.org.uk/dnsmasq/CHANGELOG"
+    }
+  ]
+}

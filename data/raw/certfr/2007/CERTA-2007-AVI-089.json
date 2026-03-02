@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco IOS 12.x ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS R12.x.",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe module IPS (Intrusion protection system) des systèmes Cisco IOS\nréagit aux intrusions qu'il détecte sur la base de signatures.\n\n  \n  \n\nDeux vulnérabilités affectent les systèmes IOS lorsque le module IPS est\nactivé :\n\n-   une mauvaise gestion des paquets fragmentés permet, dans certaines\n    circonstances, de contourner le filtrage ;\n-   du trafic malveillant peut provoquer un déni de service par arrêt\n    inopiné (crash) du système.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 81545 du 13 février 2007 :",
+      "url": "http://www.cisco.com/en/US/products/products_security_advisory09186a00807e2484.shtml"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-089",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-02-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités concernent le module IPS des systèmes <span\nclass=\"textit\">Cisco IOS</span> affectés. Elles permettent\nrespectivement de contourner la politique de sécurité et de provoquer un\ndéni de service à distance.\n",
+  "title": "Multiples vulnérabilités du module IPS de Cisco IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Cisco du 13 février 2007",
+      "url": null
+    }
+  ]
+}

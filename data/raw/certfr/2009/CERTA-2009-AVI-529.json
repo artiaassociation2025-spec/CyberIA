@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<SPAN class=\"textit\">IBM  WebSphere</SPAN>, versions 6.0.x sur systèmes <SPAN class=\n  \"textit\">z/OS</SPAN>.",
+  "content": "## Description\n\nPlusieurs vulnérabilités, de type dépassement d'entier, ont été\ndécouvertes dans les outils de la librairie d'exécution Apache Portable\nRuntime (APR-Utility) utilisée par IBM WebSphere. Ces vulnérabilités\npermettent à une personne distante malintentionnée d'exécuter du code\narbitraire.\n\nDe nombreuses vulnérabilités ont été découvertes dans le serveur HTTP.\nL'exploitation de ces vulnérabilités permet d'accéder à des informations\nsensibles ou de réaliser un déni de service à distance.\n\nDeux vulnérabilités concernent le module mod_proxy_ftp. La première est\nde type pointeur nul et permet de provoquer un déni de service par le\nbiais d'un serveur FTP construit de manière particulière. La seconde\npermet à un attaquant d'envoyer des commandes FTP arbitraires en\nutilisant le serveur Apache en tant que serveur mandataire.\n\nUne vulnérabilité a été identifiée dans les protocole SSL et TLS lors de\nrenégociations de sessions. Un utilisateur s'étant au préalable\nintercalé dans la transmissions (man in the middle) peut, dans certaines\ncirconstances, injecter des données au détriment d'un utilisateur\nlégitime, pour, par exemple, forcer l'envoi d'une requête HTTP au\nserveur vers lequel la victime se connecte.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3094",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3094"
+    },
+    {
+      "name": "CVE-2009-3555",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3555"
+    },
+    {
+      "name": "CVE-2009-1891",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1891"
+    },
+    {
+      "name": "CVE-2009-2412",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2412"
+    }
+  ],
+  "links": [
+    {
+      "title": "Document du CERTA CERTA-2009-AVI-424 du 07 octobre 2009 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2009-AVI-424/index.html"
+    },
+    {
+      "title": "Document du CERTA CERTA-2009-AVI-323 du 20 octobre 2009 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2009-AVI-323/index.html"
+    },
+    {
+      "title": "Document du CERTA CERTA-2009-AVI-482 du 27 novembre 2009 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2009-AVI-482/index.html"
+    },
+    {
+      "title": "Document du CERTA CERTA-2009-AVI-408 du 25 septembre 2009 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2009-AVI-408/index.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-529",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-12-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans <span class=\"textit\">IBM\nWebSphere</span> ont été corrigées. Ces vulnérabilités permettent de\nprovoquer un déni de service à distance ou de contourner la politique de\nsécurité.\n",
+  "title": "Vulnérabilités dans IBM WebSphere",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg1PK96157 du 02 décembre 2009",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1PK96157"
+    }
+  ]
+}

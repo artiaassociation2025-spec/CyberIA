@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>client <TT>pfinger</TT> ;</LI>    <LI>serveur esclave <TT>pfinger</TT>.</LI>  </UL>  <P>Les versions du logiciel antérieures à la version 0.7.8 sont  affectées. <TT>pfinger</TT> est un logiciel qui tourne sur UNIX  ou ses variantes.</P>",
+  "content": "## Description\n\nLe protocole finger (cf. [()](#RFC1288)) permet d'accéder à des\ninformations nominatives sur les utilisateurs connectés à un ordinateur.\nChaque utilisateur peut personnaliser les informations nominatives\ndélivrées par le protocole finger en créant un fichier ˜/.plan.\n\nLe logiciel pfinger est un serveur qui met en œuvre ce protocole.\n\nUne vulnérabilité basée sur l'usage des « chaînes de format » permet à\nun utilisateur mal intentionné de construire un fichier .plan\nparticulier sur la machine qui héberge le serveur finger. Lorsque les\ninformations contenues dans le fichier sont affichées par le client\npfinger, il est possible que du code arbitraire placé dans le fichier\n.plan s'exécute sur la machine qui héberge le client.\n\nUne vulnérabilité analogue affecte les serveurs pfinger. Lorsqu'un\nserveur « esclave » pfinger reçoit des informations d'un serveur maître,\nil est possible que dans certaines conditions il reçoive du serveur\nmaître du code à exécuter.\n\nEn principe pfinger s'exécute en ayant les droits de l'utilisateur\nnobody. Cet utilisateur n'a pas beaucoup de droits. Toutefois en\ncombinant avec d'autres vulnérabilités locales, il pourrait être\npossible dans certains cas d'obtenir des privilèges plus élevés.\n\n## Solution\n\n## 5.1 pfinger\n\nUn correctif existe à partir de la version 0.7.8 de pfinger sur le\nsite [()](#pfinger).\n\n## 5.2 le protocole finger\n\nLes failles dans pfinger permettent de s'attaquer à ceux qui consultent\nles informations nominatives. Toutefois, il convient de rappeler que,\nindépendamment de la faille sur ce logiciel, le protocole finger est par\nnature un protocole dangereux. La nature des informations délivrées peut\nnuire au serveur qui les publie. Depuis des années ce protocole est\nconnu comme pouvant servir de préparation à des attaques en aidant à la\ncollecte d'informations sur la victime. C'est pourquoi dans un\nenvironnement hostile, Internet par exemple, il est souhaitable de ne\npas utiliser ce protocole, c'est à dire s'assurer que la la ligne\nsuivante dans le fichier /etc/inetd.conf est commentée (elle doit\ncommencer par le caractère « \\# ») :\n\n    #finger         stream  tcp     nowait  nobody  /usr/sbin/tcpd  /usr/sbin/in.fingerd\n\nOn peut aussi appliquer une politique de filtrage au niveau du garde\nbarrière en interdisant les requêtes sur le port 79/tcp.\n\n## No References!\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-164",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-12-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Le logiciel finger possède des vulnérabilités qui autorisent dans\ncertaines conditions l'exécution de code arbitraire.\n",
+  "title": "Vulnérabilité du serveur pfinger",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "INTEXXIA",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Xen à partir de la version 3.3, fonctionnant sur un processeur x86 seulement et supportant le VPMU",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen versions antérieures à 4.6 pour les invités HVM seulement, fonctionnant sur un processeur x86 seulement et supportant le VPMU",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen à partir de la version 4.6, fonctionnant sur un processeur x86 seulement et supportant le VPMU",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Contournement provisoire\n\nNe pas activer le support du VPMU en omettant l'option \"vpmu\" dans les\noptions de la ligne de commande de l'hyperviseur.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTFR-2015-AVI-507",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2015-11-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Non spécifié par l'éditeur"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été corrigée dans <span class=\"textit\">Xen</span>.\nElle permet à un attaquant de provoquer un problème de sécurité non\nspécifié par l'éditeur, un déni de service et une atteinte à la\nconfidentialité des données.\n",
+  "title": "Vulnérabilité dans Xen",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Xen XSA-163 du 24 novembre 2015",
+      "url": "http://xenbits.xen.org/xsa/advisory-163.html"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows XP Tablet PC Edition 2005 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Home Edition Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Media Center Edition Service Pack 2.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa configuration par défaut de Microsoft Windows XP autorise le partage\nde fichiers et d'imprimante.\n\nUn système se connectant à l'Internet au moyen d'un modem et d'une ligne\ntéléphonique standard ou RNIS, va engendrer une table routage qui sera\ninterpréter de manière incorrecte par le pare-feu de Microsoft Windows\nXP Service Pack2.\n\nCette mauvaise gestion provoque une incohérence dans la définition des\nparamètres de sécurité, le pare-feu considère que la zone Internet fait\npartie de la zone Intranet local. Un utilisateur mal intentionné peut\nalors porter atteinte à la confidentialité et/ou à l'intégrité des\ndonnées partagées par le système vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft :",
+      "url": "http://support.microsoft.com/kb/886185"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-401",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-12-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Un défaut de configuration du pare-feu de Microsoft Windows XP Service\nPack 2 permet à un utilisateur mal intentionné de contourner la\npolitique de sécurité mise en place sur le système.\n",
+  "title": "Vulnérabilité du pare-feu Microsoft Windows XP SP2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft du 14 décembre 2004",
+      "url": null
+    }
+  ]
+}

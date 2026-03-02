@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>lftp</TT> versions 2.3.0 à 2.6.9  incluse.",
+  "content": "## Description\n\nlftp est un client permettant le transfert de fichiers depuis des\nserveurs FTP ou HTTP.\n\n  \n\nUne vulnérabilité de type débordement de mémoire est présente dans le\ntraitement de la réponse à une commande ls ou rels émise lors d'une\nsession réalisée avec un serveur WEB au moyen des protocoles HTTP ou\nHTTPS.\n\nIl est ainsi possible, pour un administrateur mal intentionné, de créer\nun site WEB avec des répertoires constitués de telle façon que, lors de\nl'analyse du résultat de la réponse à la commande ls ou rels renvoyé par\nle serveur WEB, du code arbitraire soit exécuté sur la plate-forme\nclient vulnérable.\n\n## Solution\n\nLa version 2.6.10 de lftp corrige cette vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RHSA-2003:404 de RedHat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-404.html"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2003:403 de RedHat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-403.html"
+    },
+    {
+      "title": "Bulletin de sécurité DSA-406 de Debian :",
+      "url": "http://www.debian.org/security/2004/dsa-406"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE-SA:2003:51 de SuSE :",
+      "url": "http://www.suse.com/de/security/2003_051_lftp.html"
+    },
+    {
+      "title": "Site de lftp :",
+      "url": "http://lftp.yar.ru/news.html"
+    },
+    {
+      "title": "Bulletin de sécurité 200312-07 de Gentoo :",
+      "url": "http://www.securityfocus.com/advisories/6181"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-210",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-12-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de sécurité de RedHat.",
+      "revision_date": "2003-12-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Gentoo.",
+      "revision_date": "2003-12-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Debian.",
+      "revision_date": "2004-01-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans lftp permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire à distance sur la plate-forme\nvulnérable.\n",
+  "title": "Vulnérabilité de lftp",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SuSE-SA:2003:051 de SuSE",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MDKSA-2003:116 de Mandrake",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:116"
+    }
+  ]
+}

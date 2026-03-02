@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MPlayer 1.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité présente dans la fonction sdpplin_parse() du fichier\nsdpplin.c peut être exploitée, au moyen du paramètre StreamCount du\nprotocole SDP (Session Description Protocol), lorsqu'il est renseigné de\nfaçon particulière ; de cette façon, une personne malveillante peut\nexécuter du code arbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1558",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1558"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200805-22 du 29 mai 2008 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200805-22.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1552 du 19 avril 2008 :",
+      "url": "http://www.debian.org/security/2008/dsa-1552"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2008:196 du 15    septembre 2008 :",
+      "url": "http://www.mandriva.com/en/security/advisories?name=MDVSA-2008:196"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-221",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-04-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo et Mandriva.",
+      "revision_date": "2008-09-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité découverte dans le lecteur multimédia MPlayer permet à\nun utilisateur malintentionné d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans mplayer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-1552 du 19 avril 2008",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMware vCenter Update Manager 1.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware vCenter Update Manager 4.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware vCenter Update Manager 4.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans VMware vCenter Update\nManager :\n\n-   une vulnérabilité de type « directory traversal » permet de porter\n    atteinte à la confidentialité des données (CVE-2009-1523) ;\n-   une injection de code indirecte dans Jetty autorise l'exécution de\n    JavaScript si un utilisateur clique sur un lien malveillant\n    (CVE-2009-1524).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1524",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1524"
+    },
+    {
+      "name": "CVE-2009-1523",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1523"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandriva VMSA-2010-0012 du 19 juillet    2010 :",
+      "url": "http://www.vmware.com/security/advisories/VMSA-2010-0012.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-326",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-07-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans VMware vCenter Update Manager permettent\nd'effectuer une injection de code indirecte ou de porter atteinte à la\nconfidentialité des données.\n",
+  "title": "Vulnérabilités dans VMware vCenter Update Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware VMSA-2010-0012 du 19 juillet 2010",
+      "url": null
+    }
+  ]
+}

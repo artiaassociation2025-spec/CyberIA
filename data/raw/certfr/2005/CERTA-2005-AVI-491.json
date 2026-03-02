@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "d'autres versions sont peut être affectées.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Trend Micro",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Trend Micro Damage Cleanup Server 1.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Trend Micro",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Trend Micro ServerProtect for Windows Management Console 5.58 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Trend Micro",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité du daemon Trend Micro Inc's ServerProtect EarthAgent\nconduit permet à un individu mal intentioné distant de confectionner\nastucieusement un seul paquet IP et d'envoyer ce paquet à destination du\nport 5005/TCP. Cette attaque à pour conséquence de consommer toute la\npuissance CPU disponible. Chaque attaque provoquant une fuite de\nmémoire, des attaques répétées ont pour effet de provoquer un autre déni\nde service lorsque toute la mémoire est consommée : l'arrêt brutal du\nsystème d'exploitation.\n\n## Contournement provisoire\n\nVérifier que le pare-feu filtre le port 5005/TCP.\n\n## Solution\n\nLe vendeur fournit un correctif pour cette vulnérabilité. Le correctif\nest identifié de la façon suivante :\n\nSPNT5.59_Hotfix1137.zip\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "avis iDefense :",
+      "url": "http://www.idefense.com/application/poi/display?id=356&type=vulnerabilities"
+    },
+    {
+      "title": "avis Trend Micro :",
+      "url": "http://kb.trendmicro.com/solutions/search/main/search/solutionDetail.asp?solutionID=25254"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-491",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-12-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "\n",
+  "title": "Vulnérabilité de Trend Micro ServerProtect",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis iDefense 12.14.05",
+      "url": null
+    }
+  ]
+}

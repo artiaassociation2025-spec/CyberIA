@@ -1,0 +1,79 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache Tomcat 5, des versions 5.5.0 à 5.5.28 ;",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat 6, des versions 6.0.0 à 6.0.20.",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été corrigées dans Apache Tomcat.\nPlusieurs erreurs dans le module de déploiement permettent la\nmodification des droits d'accès ou la suppression arbitraire de\nfichiers.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). Les correctifs pour la version\n5.5.x ne sont pas encore disponibles sur le site de l'éditeur.\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2901",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2901"
+    },
+    {
+      "name": "CVE-2009-2693",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2693"
+    },
+    {
+      "name": "CVE-2009-2902",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2902"
+    },
+    {
+      "name": "CVE-2009-3548",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3548"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-041",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-02-02T00:00:00.000000"
+    },
+    {
+      "description": "précision de la section Solution du document.",
+      "revision_date": "2010-02-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités permettant de contourner la politique de\nsécurité ont été corrigées dans Apache Tomcat.\n",
+  "title": "Multiples vulnérabilités dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache Tomcat 5",
+      "url": "http://tomcat.apache.org/security-5.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache Tomcat 6",
+      "url": "http://tomcat.apache.org/security-6.html"
+    }
+  ]
+}

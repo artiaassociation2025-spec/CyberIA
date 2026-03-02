@@ -1,0 +1,173 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Veritas Backup Exec for Windows Servers 10.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Veritas Backup Exec for Windows Servers 9.1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Veritas NetBackup for NetWare Media Server Option 5.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Veritas Backup Exec for NetWare Servers 9.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Veritas Backup Exec for NetWare Servers 9.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Veritas NetBackup for NetWare Media Server Option 5.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Veritas Backup Exec Remote Agent for NetWare Servers ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Veritas NetBackup for NetWare Media Server Option 4.5 FP ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Veritas Backup Exec for Windows Servers 8.6 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Veritas Backup Exec for Windows Servers 9.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Veritas NetBackup for NetWare Media Server Option 4.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Veritas Backup Exec Remote Agent for Unix or Linux Servers ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Veritas Backup Exec Remote Agent for Windows Servers ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité, liée à l'utilisation d'un mot de passe statique lors\ndu processus d'authentification entre les agents et les serveurs des\nproduits Veritas, a été découverte. Cette vulnérabilité peut être\nexploitée par un utilisateur mal intentionné afin d'obtenir un accès\ndistant et de télécharger des fichiers vers ou depuis le serveur de\nsauvegarde.\n\n## Contournement provisoire\n\nFiltrer le port 10000/tcp.\n\n## Solution\n\nAppliquer le correctif de Symantec tel qu'indiqué dans le bulletin de\nsécurité SYM05-011 (voir Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctifs pour Veritas Backup Exec for Windows Servers :",
+      "url": "http://support.veritas.com/docs/278434"
+    },
+    {
+      "title": "Correctifs pour Veritas Backup Exec for NetWare Servers :",
+      "url": "http://support.veritas.com/docs/278431"
+    },
+    {
+      "title": "Correctifs pour Veritas NetBackup for NetWare Media Server    Option :",
+      "url": "http://support.veritas.com/docs/278430"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-313",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-08-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans Veritas Backup Exec et dans Veritas NetBackup",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Symantec SYM05-011 du 12 août 2005",
+      "url": "http://securityresponse.symantec.com/avcenter/security/Content/2005.08.12b.html"
+    }
+  ]
+}

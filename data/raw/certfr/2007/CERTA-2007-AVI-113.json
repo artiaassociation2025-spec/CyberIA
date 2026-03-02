@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>OpenBSD versions 4.0 et antérieures.</p>",
+  "content": "## Description\n\nUne erreur dans la gestion de certains tampons dans le noyau du système\nd'exploitation OpenBSD permettrait à un utilisateur distant\nmalintentionné de provoquer un dysfonctionnement du système. En\nparticulier, le tampon impliqué dans la vulnérabilité (mbuf) est utilisé\ndans la mise en œuvre du protocole ICMPv6. Il serait donc possible de\nprovoquer un déni de service par le biais d'un paquet ICMPv6\nparticulier.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de OpenBSD version 4.0 :",
+      "url": "http://www.openbsd.org/errata40.html"
+    },
+    {
+      "title": "Bulletin de sécurité de OpenBSD version 3.9 :",
+      "url": "http://www.openbsd.org/errata39.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-113",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2007-03-09T00:00:00.000000"
+    },
+    {
+      "description": "ajout du caractère distant de la vulnérabilité via un paquet <TT>ICMPv6</TT>.",
+      "revision_date": "2007-03-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans OpenBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenBSD du 07 mars 2007",
+      "url": null
+    }
+  ]
+}

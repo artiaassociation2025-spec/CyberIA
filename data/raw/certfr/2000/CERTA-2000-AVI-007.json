@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Kerberos 5 realeases krb5-1.1 et krb.5-1.1.1, ainsi que les  version beta krb5-1.1.2-beta1 krb5-1.2-beta2</P>",
+  "content": "## Description\n\nGSSFTP est un serveur FTP sécurisé utilisant la suite Kerberos 5 du MIT.\nDeux vulnérabilités y ont été découvertes :\n\n-   Un utilisateur ayant un accès local au serveur FTP peut obtenir les\n    privilèges de root lui permettant d'éxecuter des commandes qui ne\n    lui sont pas autorisées.\n-   Un utilisateur distant peut effectuer un déni de service.\n\nWindows 2000 repose sur les mécanismes d'authentification offerts par le\nprotocole Kerberos 5. À ce titre, un client ftp sous Windows peut\ns'authentifier auprès d'un serveur GSSFTP compromis donnant ainsi un\nfaux sentiment de sécurité.\n\n## Solutions\n\n1.  Appliquer le correctif concernant la vulnérabilité de GSSFTP pour\n    les releases krb5-1.1 et krb.5-1.1.1 de kerberos 5 se trouvant à\n    l'adresse suivante :\n\n        http://web.mit.edu/kerberos/www/advisories/ftpd_111_patch.txt\n\n2.  Mettre à jour la version 1.2 de Kerberos 5 (voir l'adresse qui suit)\n    :\n\n        http://web.mit.edu/kerberos/www\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-007",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-06-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès root"
+    },
+    {
+      "description": "Exécution de commandes non-autorisées"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités sur le serveur FTP utilisant Kerberos 5",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Masachuset's Institute of Technology (MIT)",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "CERT IST",
+      "url": null
+    }
+  ]
+}

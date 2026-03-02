@@ -1,0 +1,84 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Pulse Connect Secure versions antérieures à 22.7R2.6",
+      "product": {
+        "name": "Pulse Connect Secure",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Zero Trust Access Gateways versions antérieures à 22.8R2.2",
+      "product": {
+        "name": "Zero Trust Access gateways",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Ivanti Policy Secure (IPS) versions antérieures à 22.7R1.4",
+      "product": {
+        "name": "Policy Secure (IPS)",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Ivanti Connect Secure (ICS) versions antérieures à 22.7R2.6 (correctif publié le 11 février 2025)",
+      "product": {
+        "name": "Connect Secure (ICS)",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "L'éditeur indique que les correctifs seront disponibles le 19 avril 2025 pour Zero Trust Access Gateways et le 21 avril 2025 pour Ivanti Policy Secure.\nL'éditeur indique que les Pulse Connect Secure en versions 9.1x sont en fin de vie depuis le 31 décembre 2024. Les utilisateurs peuvent contacter Ivanti pour migrer vers une version à jour.",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-22457",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-22457"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis CERT-FR CERTFR-2025-AVI-0121 du 12 février 2025",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-0121/"
+    },
+    {
+      "title": "Bulletin de sécurité Ivanti du 11 février 2025",
+      "url": "https://forums.ivanti.com/s/article/February-Security-Advisory-Ivanti-Connect-Secure-ICS-Ivanti-Policy-Secure-IPS-and-Ivanti-Secure-Access-Client-ISAC-Multiple-CVEs?language=en_US"
+    }
+  ],
+  "reference": "CERTFR-2025-AVI-0273",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-04-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans les produits Ivanti. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance.\n\nIvanti indique que la vulnérabilité CVE-2025-22457 est activement exploitée.",
+  "title": "Vulnérabilité dans les produits Ivanti",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-04-03",
+      "title": "Bulletin de sécurité Ivanti April-Security-Advisory-Ivanti-Connect-Secure-Policy-Secure-ZTA-Gateways-CVE-2025-22457",
+      "url": "https://forums.ivanti.com/s/article/April-Security-Advisory-Ivanti-Connect-Secure-Policy-Secure-ZTA-Gateways-CVE-2025-22457"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>rplrd</TT> en version 2.0.4.<BR>  Les versions antérieures pourraient être affectées.",
+  "content": "## Description\n\nLe paquetage rlpr contient des remplacements compatibles BSD pour les\nprogrammes lpr, lpq et lprm. Il permet aussi d'imprimer sur une\nimprimante locale des fichiers se trouvant sur une machine distante.\n\nLa fonctionnalité de journalisation du paquetage rlpr appelle syslog\nsans spécifier le format. Un utilisateur mal intentionné peut, en\nprovoquant une erreur au moment de la connexion sur le serveur rlprd\ndistant, exécuter du code arbitraire sur le serveur (CAN-2004-0393).\n\nUne vulnérabilité de type dépassement de tampon affecte la fonction\nmsg() dans rlpr. L'exploitation de cette vulnérabilité permet une\nélévation de privilèges (CAN-2004-0454).\n\n## Solution\n\nSe référer au bulletin de l'éditeur pour la disponibilité des correctifs\n(voir Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-524-1 du 19 juin 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-524"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-219",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la fonction de journalisation du démon rlprd\npermet l'exécution de code arbitraire à distance. Une deuxième\nvulnérabilité permet l'élévation de privilèges.\n",
+  "title": "Multiples vulnérabilités de rlpr",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin d'alerte Debian DSA-524-1",
+      "url": null
+    }
+  ]
+}

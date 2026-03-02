@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "cURL et libcURL versions antérieures à 7.19.4.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité présente dans l'implémentation de la fonction redirect\n(la fonctionnalité de suivre les redirections) de cURL et de libcURL\npermet à un individu distant de contourner la politique de sécurité. Les\nversions de cURL et de libcURL compilées pour prendre en charge SCP\npermettent également à un individu distant d'exécuter du code arbitraire\nà distance par le biais d'une redirection utilisant le caractère « ; »\nde façon particulière.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0037",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0037"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-105",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-03-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité de <span class=\"textit\">cURL</span> et de <span\nclass=\"textit\">libcURL</span> permet à un individu distant d'exécuter du\ncode arbitraire ou de contourner la politique de sécurité.\n",
+  "title": "Vulnérabilité dans cURL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cURL du 03 mars 2009",
+      "url": "http://curl.haxx.se/docs/adv_20090303.html"
+    }
+  ]
+}

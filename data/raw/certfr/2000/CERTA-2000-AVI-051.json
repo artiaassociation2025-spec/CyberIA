@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>CiscoSecure Acces Control Server pour Windows NT versions 2.4  (2) et antérieures.</P>",
+  "content": "## Description\n\nLe logiciel CiscoSecure ACS est utilisé comme serveur de contrôle\nd'accès pour définir les accès aux réseaux et les services pouvant être\nautorisés.\n\nTrois vulnérabilités ont été découvertes :\n\n-   Le module CSAdmin ne vérifie pas correctement certaines variables\n    d'environnement. Un utilisateur mal intentionné peut fabriquer une\n    URL malformée provoquant ainsi un débordement de pile. Ce\n    débordement peut soit provoquer un « plantage » du module CSAdmin ou\n    exécuter du code arbitraire.\n-   CiscoSecure ACS utilise TACACS+ afin de gérer l'authentification des\n    utilisateur. Un utilisateur mal intentionné peut, par le biais d'un\n    paquet TACACS+ malformé, mettre le logiciel dans un état instable.\n-   Lors de l'utilisation de CiscoSecure ACS avec un annuaire LDAP\n    autorisant l'absence de mot de passe, un utilisateur mal intentionné\n    peut contourner les mécanismes d'authentification afin d'obtenir des\n    privilèges sur un routeur ou un commutateur.\n\nNota : La version unix n'est pas concernée par ces vulnérabilités\n\n## Solution\n\nTélécharger la version 2.4 (3) de CiscoSecure ACS :\n\n    http://www.cisco.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Cisco :",
+      "url": "http://www.cisco.com/warp/public/707/csecureacsnt-pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-051",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-09-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement des mécanismes d'authentification"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans le produit\nCiscoSecure.\n\nElles permettent à une personne mal intentionnée de :\n\n-   Provoquer une erreur fatale dans le module CSCAdmin ;\n-   Placer CiscoSecure ASC dans un état instable ;\n-   de contourner les mécanismes d'authentification lorsque CiscoSecure\n    ACS est utilisé avec un serveur LDAP.\n",
+  "title": "Vulnérabilités dans CISCOSecure sous Windows NT Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Cisco Security Advisory",
+      "url": null
+    }
+  ]
+}

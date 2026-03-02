@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>IBM AIX 6.1.x.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités permettant à un utilisateur local d'élever ses\nprivilèges sont présentes dans le système d'exploitation IBM AIX :\n\n-   la première est relative à la commande /usr/sbin/ndp qui présente\n    une erreur de type débordement de mémoire si le service netcd est\n    lancé ;\n-   la seconde concerne la commande /usr/sbin/autoconf6 qui présente une\n    erreur de type débordement de mémoire et peut être exploitée si la\n    fonction RBAC est utilisée et que l'attaquant possède la permission\n    :  \n    aix.network.config.tcpip ;\n-   la troisième est relative à la commande /usr/bin/enq qui permet,\n    sous certaines conditions, de supprimer des fichiers du système ;\n-   la dernière concerne la commande /usr/bin/crontab qui permet, sous\n    certaines conditions, de donner des privilèges élevés à l'éditeur\n    qu'il appelle.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-5386",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-5386"
+    },
+    {
+      "name": "CVE-2008-5387",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-5387"
+    },
+    {
+      "name": "CVE-2008-5384",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-5384"
+    },
+    {
+      "name": "CVE-2008-5385",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-5385"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité AIX du 26 novembre 2008 :",
+      "url": "http://aix.software.ibm.com/aix/efixes/security/aix61_advisory.asc"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-594",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-12-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités sont présentes dans IBM AIX et permettent à un\nutilisateur local malintentionné d'élever ses privilèges et de porter\natteinte à l'intégrité des données.\n",
+  "title": "Multiples vulnérabilités dans IBM AIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM AIX du 26 novembre 2008",
+      "url": null
+    }
+  ]
+}

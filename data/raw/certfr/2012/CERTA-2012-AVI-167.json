@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Versions vulnérables à CVE-2012-1569 :      <UL>        <LI>GnuTLS 2.x versions inférieures à 2.12.17 ;</LI>        <LI>GnuTLS 3.x versions inférieures à 3.0.15.</LI>      </UL>    </LI>    <LI>Versions vulnérables à CVE-2012-1573 :      <UL>        <LI>GnuTLS versions 2.x versions inférieures à 2.12.18        ;</LI>        <LI>GnuTLS versions 3.x versions inférieures à 3.0.16.</LI>      </UL>    </LI>  </UL>",
+  "content": "## Description\n\nUne première vulnérabilité affectant la bibliothèque libtasn1 (incluse\ndans GnuTLS) a été corrigée (CVE-2012-1569). Elle permet à un attaquant\nde réaliser un déni de service à distance.  \n\nUne deuxième vulnérabilité dans l'analyse d'enregistrements TLS permet à\nun attaquant de réaliser un déni de service à distance au moyen d'une\nstructure GenericBlockCipher spécialement conçue.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-1569",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-1569"
+    },
+    {
+      "name": "CVE-2012-1573",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-1573"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2012-AVI-167",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-03-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Deux vulnérablités permettant à un attaquant distant de réaliser un déni\nde service à distance ont été corrigées dans <span\nclass=\"textit\">GnuTLS</span>.\n",
+  "title": "Vulnérabilités dans GnuTLS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité GNUTLS-SA-2012-2 et GNUTLS-SA-2012-3",
+      "url": "http://www.gnu.org/software/gnutls/security.html"
+    }
+  ]
+}

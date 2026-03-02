@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Le composant iNotes du serveur Lotus Domino versions antérieures à la 5.0.12 et la version 6.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Le serveur Lotus Domino versions antérieures à la 5.0.12 et la version 6.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe composant iNotes permet l'accès au serveur Lotus Domino via un\nnavigateur Web ou d'autres clients que le client Lotus.\n\nDeux vulnérabilités ont été découvertes sur le serveur Lotus Domino et\nson composant iNotes associé :\n\n-   Un débordement de pile est présent dans l'opération de redirection\n    des URLs du serveur Lotus Domino. Un utilisateur mal intentionné\n    peut, en utilisant une requête malicieusement construite, réaliser\n    un déni de service ou exécuter du code arbitraire sur le serveur.\n-   Un second débordement de pile est présent dans le composant iNotes\n    du serveur Lotus Domino. Une erreur dans le traitement du paramètre\n    PresetFields permet à un utilisateur mal intentionné de réaliser un\n    déni de service ou d'exécuter du code arbitraire sur le serveur avec\n    les privilèges du serveur Lotus Domino.\n\nUne troisième vulnérabilité a été découverte sur le controle ActiveX\nLotusDominoSession présent sur le poste client. L'envoi par message\néléctronique ou par le protocole http d'une page html malicieusement\nconstruite permet d'exécuter du code arbitraire sur le système en\nutilisant les privilèges de l'utilisateur connecté.\n\n## Solution\n\nMettre à jour Lotus Domino avec la version 6.0.1 et le composant iNotes\n(cf. section documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour du composant iNotes :",
+      "url": "http://www14.software.ibm.com/webapp/download/search.jsp?q=&cat=&pf=&k=&dt=&go=y&rs=ESDNOTECLNTi&S_TACT=&S_CMP=&sb=r"
+    },
+    {
+      "title": "Avis de sécurité #NISR17022003a de NSGSoftware :",
+      "url": "http://www.securityfocus.com/archive/1/312043/2003-02-15/2003-02-21/0"
+    },
+    {
+      "title": "Mise à jour de Lotus Domino :",
+      "url": "http://www14.software.ibm.com/webapp/download/search.jsp?q=&cat=&pf=&k=&dt=&go=y&rs=ESDDMNTSRVRi&S_TACT=&S_CMP=&sb=r"
+    },
+    {
+      "title": "Avis de sécurité #NISR17022003b de NSGSoftware :",
+      "url": "http://www.securityfocus.com/archive/1/312042/2003-02-15/2003-02-21/0"
+    },
+    {
+      "title": "Avis de sécurité #NISR17022003c de NSGSoftware :",
+      "url": "http://www.securityfocus.com/archive/1/312047/2003-02-15/2003-02-21/0"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-026",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-02-20T00:00:00.000000"
+    },
+    {
+      "description": "modification des versions des systèmes affectés.",
+      "revision_date": "2003-04-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes sur le serveur Lotus Domino et\nson composant iNotes qui permettent à un utilisateur mal intentionné de\nréaliser un déni de service ou d'exécuter du code arbitraire sur le\nserveur Domino.\n\nUne troisième vulnérabilité à été découverte dans le contrôle ActiveX\nnécessaire au composant iNotes installé sur les postes clients. Cette\nvulnérabilité permet d'exécuter du code arbitraire sur le poste client\navec les privilèges de l'utilisateur.\n",
+  "title": "Vulnérabilités sur le serveur Lotus Domino 6.0",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "NGSSoftware Insight Security Research",
+      "url": null
+    }
+  ]
+}

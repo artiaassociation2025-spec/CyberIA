@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Firefox 3.0.x et 3.5.x.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent le navigateur Firefox :\n\n-   la différence de traitement des noms d'hôtes contenant un caractère\n    null illégal par les autorités de certification, lors de la demande\n    de certificat par le serveur, et par le navigateur, lors de\n    l'établissement d'une session SSL, permet à un utilisateur\n    malveillant de lire ou de modifier des données dans une transaction\n    sécurisée par SSL. Cette vulnérabilité permet à utilisateur\n    malveillant d'exécuter du code arbitraire à distance au travers du\n    système de mise à jour ;\n-   le traitement d'expression régulière dans les certificats de clefs\n    publiques restait compatible avec celui des navigateurs Netscape. Ce\n    traitement laxiste permet à un utilisateur malveillant d'exécuter du\n    code arbitraire à distance en présentant au navigateur un certificat\n    spécialement conçu ;\n-   le contenu de la barre d'adresse peut ne pas être conforme au\n    contenu de la fenêtre principale. Cette vulnérabilité permet à un\n    utilisateur malveillant de contourner la politique de sécurité en\n    trompant l'utilisateur sur l'identité du site sur lequel il navigue.\n\n## Solution\n\nLes versions 3.5.2 et 3.0.13 corrigent ces vulnérabilités.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2408",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2408"
+    },
+    {
+      "name": "CVE-2009-2654",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2654"
+    },
+    {
+      "name": "CVE-2009-2404",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2404"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2009/mfsa2009-44 du 03 août 2009 :",
+      "url": "http://www.mozilla.org/security/announce/2009/mfsa2009-44.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2009/mfsa2009-42 du 01 août 2009 :",
+      "url": "http://www.mozilla.org/security/announce/2009/mfsa2009-42.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2009/mfsa2009-43 du 01 août 2009 :",
+      "url": "http://www.mozilla.org/security/announce/2009/mfsa2009-43.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-306",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent le navigateur Firefox et permettent à\nun utilisateur malveillant d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans Firefox",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Mozilla 2009/mfsa2009-42 à 44",
+      "url": null
+    }
+  ]
+}

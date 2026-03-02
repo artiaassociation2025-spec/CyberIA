@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Lotus Notes 7.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Lotus Notes 6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nQuatre vulnérabilités sont présentes dans le logiciel de messagerie\nLotus Notes de IBM :\n\n-   la première est due à une erreur dans la mise en œuvre de\n    visualiseurs externes de fichiers : mifsr.dll, awsr.dll,\n    kpagrdr.dll, exesr.dll,rtfsr.dll, mwsr.dll,wp6sr.dll, lsar.dll.\n    Cette faille peut être exploitée par le biais d'une pièce jointe\n    construite de façon particulière et peut conduire à de l'exécution\n    de code arbitraire à distance ;\n-   la seconde vulnérabilité est relative à une erreur dans la mise en\n    œuvre des courriers au format HTML et peut conduire à de l'exécution\n    de code arbitraire par le biais d'un courrier particulier ;\n-   la troisième est relative à une mauvaise gestion de la liste de\n    contrôle d'exécution (ECL) et permet l'exécution d'une pièce jointe\n    sans contrôle ou avertissement de l'application ;\n-   la dernière vulnérabilité concerne un manque de restrictions sur\n    certaines zones de mémoire partagée et permet à un utilisateur local\n    d'accéder aux données d'autres utilisateurs locaux.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-4222",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4222"
+    },
+    {
+      "name": "CVE-2007-5544",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5544"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg21272930 du 23 octobre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21272930"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg21270884 du 23 octobre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21270884"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg21271111 du 23 octobre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21271111"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg21272836 du 23 octobre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21272836"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg21257030 du 23 octobre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21257030"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg21271957 du 23 octobre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21271957"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-459",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-10-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités sont présentes dans IBM Lotus Notes\npermettant à un utilisateur malintentionné distant de provoquer un déni\nde service, d'atteindre à la confidentialité des données ou d'exécuter\ndu code arbitraire.\n",
+  "title": "Multiples Vulnérabilités dans IBM Lotus Notes",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurités IBM du 23 octobre 2007",
+      "url": null
+    }
+  ]
+}

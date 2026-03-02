@@ -1,0 +1,84 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Sophos antivirus 6.x pour Windows.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sophos",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sophos antivirus 4.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sophos",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sophos antivirus 3.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sophos",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sophos antivirus 5.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sophos",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur existe dans la bibliothèque veex.dll lors du traitemement\nd'archives au format CPIO. Une autre erreur existe dans la même\nbibliothèque lors du traitement des archives au format SIT (stuffit).\nPar l'utilisation d'un nom de fichier extrêmement long et non terminé\npar un caractère null, un utilisateur distant peut créer un débordement\nde mémoire et exécuter du code arbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-6335",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6335"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité 17340 Sophos du 14 décembre 2006 :",
+      "url": "http://www.sophos.com/support/knowledgebase/article/17340.html"
+    },
+    {
+      "title": "Bulletin de sécurité 21637 Sophos du 14 décembre 2006 :",
+      "url": "http://www.sophos.com/support/knowledgebase/article/21637.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-554",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-12-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux failles de sécurité de l'antivirus Sophos permettent à un\nutilisateur malveillant de compromettre à distance le système\nvulnérable.\n",
+  "title": "Vulnérabilité de l'antivirus Sophos",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Sophos du 14 décembre 2006",
+      "url": null
+    }
+  ]
+}

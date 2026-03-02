@@ -1,0 +1,107 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Avaya CCS/SES, pour les versions SES 3.x et 4.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "AVAYA",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Avaya Message Networking, version MN 3.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "AVAYA",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Avaya Messaging Storage Server, pour les versions MSS 3.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "AVAYA",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Avaya Intuity Audix LX, version IALX 2.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "AVAYA",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Avaya Communication Manager, pour les versions CM 3.x et 4.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "AVAYA",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Avaya AES, version 4.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "AVAYA",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le serveur web inclus dans\nplusieurs produits Avaya. Il s'agit de la version d'Apache avec le\nmodule mod_proxy configurée en mode reverse proxy. Cette vulnérabilité\nest identique à celle mentionnée dans l'avis CERTA-2007-AVI-402 du 13\nseptembre 2007.\n\nUne personne malintentionnée peut provoquer un déni de service du\nserveur suite à une requête construite de manière particulière.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3847",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3847"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité CERTA-2007-AVI-402 du 13 septembre 2007 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2007-AVI-402/"
+    },
+    {
+      "title": "Avis de sécurité Avaya ASA-2007-500 du 06 décembre 2007 :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2007-500.htm"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-527",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans le serveur web inclus dans\nplusieurs produits Avaya. Celle-ci peut être exploitée à distance pour\nperturber le fonctionnement du service.\n",
+  "title": "Vulnérabilité dans plusieurs produits Avaya",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de sécurité Avaya ASA-2007-500 du 06 décembre 2007",
+      "url": null
+    }
+  ]
+}

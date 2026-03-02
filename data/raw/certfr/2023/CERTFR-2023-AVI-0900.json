@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Nagios XI versons antérieures à 5.11.3",
+      "product": {
+        "name": "Nagios XI",
+        "vendor": {
+          "name": "Nagios",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0900",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-11-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Nagios XI.\nCertaines d'entre elles permettent à un attaquant de provoquer une\nexécution de code arbitraire à distance, un contournement de la\npolitique de sécurité et une injection de code indirecte à distance\n(XSS).\n",
+  "title": "Multiples vulnérabilités dans Nagios XI",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Nagios XI 5.11.3 du 01 novembre 2023",
+      "url": "https://www.nagios.com/change-log/"
+    }
+  ]
+}

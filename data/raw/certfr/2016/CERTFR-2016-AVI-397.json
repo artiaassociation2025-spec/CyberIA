@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Xen toutes versions x86 HVM antérieures à 4.4",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen toutes versions x86 HVM avec une version qemu antérieure à 1.6.0",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen toutes versions x86 HVM avec qemu-xen-traditional",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2016-9637",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2016-9637"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2016-AVI-397",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2016-12-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été corrigée dans <span class=\"textit\">Xen\nQEMU</span>. Elle permet à un attaquant de provoquer une élévation de\nprivilèges.\n",
+  "title": "Vulnérabilité dans Xen QEMU",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Xen XSA-199 du 06 décembre 2016",
+      "url": "http://xenbits.xen.org/xsa/advisory-199.html"
+    }
+  ]
+}

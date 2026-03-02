@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "mod_perl, pour les versions anérieures à 1.31.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité causée par un manque de contrôle des variables\nfournies aux modules Apache::Status et Apache2::Status permet à une\npersonne malveillante d'injecter du code arbitraire dans le contexte du\nnavigateur Internet d'un utilisateur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0796",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0796"
+    }
+  ],
+  "links": [
+    {
+      "title": "Page du projet mod_perl pour Apache :",
+      "url": "http://perl.apache.org"
+    },
+    {
+      "title": "Bulletin de sécurité Sun Solaris #274110 du 15 décembre    2009 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-274110-1"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2009:091 du 12 avril    2009 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2009:091"
+    },
+    {
+      "title": "Notes de changements pour la version 1.31 de    mod_perl :",
+      "url": "http://svn.apache.org/repos/asf/perl/modperl/branches/1.x/Changes"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-149",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2009-04-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins de sécurité Sun Solaris et Mandriva.",
+      "revision_date": "2009-12-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le module mod_perl pour Apache permet à une\npersonne distante malintentionnée de réaliser une injection de code\nindirecte (<span class=\"textit\">cross site scripting</span>).\n",
+  "title": "Vulnérabilité dans mod_perl pour Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de changements de la version 1.31 du 01 avril 2009",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les noyaux Linux antérieurs à 2.6.35.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Les noyaux Linux antérieurs à 2.6.32.19 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les noyaux Linux antérieurs à 2.6.34.4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité affectant les noyaux Linux a été rendue publique. Elle\nconcerne l'implémentation du mécanisme de dépassement de pile et permet,\nentre autres, l'élévation de privilèges.\n\n## Solution\n\nLe correctif actuel se trouve dans le Git de kernel.org mais devrait\nêtre rapidement intégré dans les différentes distributions. (cf. section\nDocumentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2240",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2240"
+    }
+  ],
+  "links": [
+    {
+      "title": "Soumission du 13 août 2010 dans le Git de kernel.org :",
+      "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=320b2b8de12698082609ebbc1a17165727f4c893"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-392",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-08-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité affectant les noyaux Linux et permettant un déni de\nservice ou une élévation de privilèges a été corrigée.\n",
+  "title": "Vulnérabilité dans le noyau Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin d'annonce d'erreur Red Hat #606611 du 22 juin 2010",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=606611"
+    }
+  ]
+}

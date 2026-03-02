@@ -1,0 +1,133 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Solaris 10 sur SPARC sans le patch 125215-03 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenSolaris sur SPARC de svn_01 à svn _125 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 9 sur SPARC avec le patch 125326-01 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "wget versions antérieures à la version 1.12 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 10 sur x86 sans le patch 125216-03 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 9 sur x86 avec le patch 125327-01 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenSolaris sur x86 de svn_01 à svn_125.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été découverte dans wget. Cette vulnérabilité est\ndue à une mauvaise interprétation de certains caractères dans un\ncertificat SSL. L'exploitation de cette vulnérabilité permet à un\nutilisateur malintentionné de contournée la politique de confidentialité\ninduite par l'utilisation de SSL.\n\nNote : certains logiciels, en particulier certains gestionnaires de\ntéléchargement, peuvent se servir d'une version non corrigée de wget.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3490",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3490"
+    }
+  ],
+  "links": [
+    {
+      "title": "notes de changements de wget du 27 août 2009 :",
+      "url": "http://hg.addictivecode.org/wget/mainline/rev/1eab157d3be7"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1904 du 09 octobre 2009 :",
+      "url": "http://www.debian.org/security/2009/dsa-1904"
+    },
+    {
+      "title": "Bulletin de sécurité Sun 1-66-273590-1 du 2 décembre 2009 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-273590-1"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-842 du 06 octobre 2009 :",
+      "url": "http://www.ubuntu.com/usn/USN-842-1"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-363",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-09-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian et Ubuntu, et de la référence CVE.",
+      "revision_date": "2009-10-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Sun et des systèmes affectés correspondants.",
+      "revision_date": "2009-12-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité permettant de contourner la politique de sécurité a\nété découverte dans wget.\n",
+  "title": "Vulnérabilité de wget",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes de changements de wget du 27 août 2009",
+      "url": null
+    }
+  ]
+}

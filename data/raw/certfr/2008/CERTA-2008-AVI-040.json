@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<SPAN class=\"textit\">IBM Informix  Dynamic Server</SPAN> 10.x et 11.x, sur <SPAN class=\n  \"textit\">Microsoft Windows</SPAN>.",
+  "content": "## Description\n\nLes modules RPC d'Informix Storage Manager utilisent une bibliothèque\nXDR (couche présentation).\n\n  \n  \n\nLa bibliothèque utilisée sur les systèmes Microsoft Windows présente\nplusieurs vulnérabilités permettant de provoquer des débordements de\nmémoire. L'exploitation de ces vulnérabilités, par le biais de requêtes\nmalformées, permet à un utilisateur malveillant d'exécuter du code\narbitraire à distance avec les droits d'administration sur la machine.\n\n  \n  \n\nSur les systèmes Unix, la bibliothèque XDR utilisée est celle du système\nd'exploitation. Elle n'est pas concernée par les vulnérabilités\nci-dessus.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs dès leur publication (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg21294211 du 28 janvier 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21294211"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-040",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-01-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans <span class=\"textit\">Informix</span>\npermettent à un utilisateur malveillant d'exécuter du code arbitraire à\ndistance avec des droits d'administrateur.\n",
+  "title": "Multiples vulnérabilités dans IBM Informix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin IBM 21294211 du 28 janvier 2008",
+      "url": null
+    }
+  ]
+}

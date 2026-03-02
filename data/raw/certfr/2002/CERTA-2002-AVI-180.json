@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Oracle7 (version 7.3.4).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Oracle8i (versions 8.1.x) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Oracle9i (versions 9.2.x et versions 9.0.x) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe service réseau Oracle Net Listener (port 1521/tcp par défaut) est le\ncomposant principal d' Oracle Net, l'application qui permet d'accèder à\ndistance à une base de données Oracle. L'outil Listener Control Utility\n(lsnrctl) permet d'administrer ce service à distance.\n\nLes droits par défaut du fichier de configuration du démon Oracle Net\nListener (listener.ora) permettent à un utilisateur mal intentionné de\nmodifier ce fichier. Les modifications effectuées peuvent provoquer un\ndéni de service de l'outil Listener Control Utility lorsque\nl'administrateur utilisera cet outil.\n\nUne seconde vulnérabilité présente dans la gestion des paramètres en\nentrée, peut entraîner un déni de service du service Oracle Net\nListener.\n\n## Contournement provisoire\n\nSécuriser l'accès au fichier de configuration du « listener » :\n\n-   mettre l'option set ADMIN_RESTRICTION_listener_name=ON ;\n-   restreindre les droits d'accès au seul propriétaire du fichier.\n\n## Solution\n\nAppliquer le correctif correspondant à votre plate-forme (voir avis de\nsécurité Oracle, section documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-180",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes sur l'outil de configuration Listener\nControl Utility peuvent être exploiitées par un utilisateur mal\nintentionné afin de réaliser un déni de service.\n",
+  "title": "Vulnérabilités sur Oracle Net Listener",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité #40 d'Oracle",
+      "url": "http://otn.oracle.com/deploy/security/pdf/2002alert40rev1.pdf"
+    }
+  ]
+}

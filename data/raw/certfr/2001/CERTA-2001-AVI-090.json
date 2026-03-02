@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>SonOS 5.8, 5.8_x86, 5.7, 5.7_x86, 5.6, 5.6_x86.</P>",
+  "content": "## Description\n\nin.lpd est le service d'impression BSD sous Solaris.\n\nUne vulnérabilité de ce daemon permet à un utilisateur local ou distant\nd'effectuer un débordement de mémoire pouvant conduire à un arrêt du\nservice ou bien à l'exécution de code arbitraire sur le serveur victime\navec les privilèges de ce daemon.\n\nPar défaut les privilèges du daemon in.lpd, sont ceux de root.\n\n## Contournement provisoire\n\nDésactiver ou supprimer in.lpd s'il n'est pas utilisé sur cette machine.\n\n## Solution\n\nTélécharger le correctif de Sun selon les versions à l'adresse suivante\n:\n\n    http://sunsolve.sun.com/securitypatch\n\n-   Pour SunOS 5.8 : 109320-04\n-   Pour SunOS 5.8_x86 : 109321-04\n-   Pour SunOS 5.7 : 107115-09\n-   Pour SunOS 5.7_x86 : 107116-09\n-   Pour SunOS 5.6 : 106235-09\n-   Pour SunOS 5.6_x86 : 106236-09\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sun numéro #00206 à paraître sur :",
+      "url": "http://sunsolve.sun.com/pub-cgi/secBulletin.pl"
+    },
+    {
+      "title": "Avis de sécurité du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2001-15.html"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-090",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-09-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité du <span class=\"textit\">daemon</span> in.lpd sous\nSunOS permet à un utilisateur mal intentionné d'exécuter du code\narbitraire avec les privilèges du compte associé à ce <span\nclass=\"textit\">daemon</span> (par défaut root.\n",
+  "title": "Vulnérabilité de in.lpd sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sun #00206",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis du CERT/CC CA-2001-015",
+      "url": null
+    }
+  ]
+}

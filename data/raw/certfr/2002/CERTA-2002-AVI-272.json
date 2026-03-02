@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Versions de MySQL antérieures à la  version 3.23.54.</p>",
+  "content": "## Description\n\nDeux vulnérabilités présentes dans le serveur de base de données MySQL\npermettent à un utilisateur légitime (possédant un compte MySQL) de\nprovoquer un déni de service par arrêt brutal de l'application.\n\nUne de ces vulnérabilités permet, sous certaines conditions, à un\nutilisateur mal intentionné d'exécuter du code arbitraire dans le\ncontexte du serveur et réaliser ainsi une élévation de privilèges.\n\n  \n\nDeux vulnérabilités de type débordement de mémoire présentes dans les\nroutines read_rows et read_one_row de la bibliothèque libmysqlclient\npeuvent être exploités par un utilisateur mal intentionné (par le biais\nd'un serveur MySQL compromis) pour exécuter du code arbitraire sur les\nclients.\n\nL'exécution de code se fait dans le contexte de l'utilisateur qui lance\nl'application exploitant une version vulnérable de cette bibliothèque.\n\n## Solution\n\nLa version 3.23.54 de MySQL corrige ces vulnérabilités.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SuSE-SA:2003:03 de SuSE :",
+      "url": "http://www.suse.com/de/security/2003_003_mysql.html"
+    },
+    {
+      "title": "Bulletin de sécurité MDKSA-2002:087 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2002:087"
+    },
+    {
+      "title": "Nouveautés de la version 3.23.54 sur le site MySQL :",
+      "url": "http://www.mysql.com/doc/en/News-3.23.54.html"
+    },
+    {
+      "title": "Bulletin de sécurité DSA-212 de Debian :",
+      "url": "http://www.debian.org/security/2002/dsa-212"
+    },
+    {
+      "title": "Bulletin de sécurité \"Multiple MySQL Vulnerabilities\"    d'e-matters :",
+      "url": "http://security.e-matters.de/advisories/042002.html"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2002:288 de Red Hat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-288.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-272",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité SuSE-SA:2003:03 de SuSE.",
+      "revision_date": "2003-01-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité RHSA-2002:288 de Red Hat.",
+      "revision_date": "2003-01-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans la base de données\nMySQL. Elles permettent à un utilisateur possédant un compte MySQL de\nréaliser un déni de service ou une élévation de privilèges.\n\nCertaines de ces vulnérabilités sont exploitables sur des applications\n\"client\" utilisant la bibliothèque libmysqlclient.\n",
+  "title": "Multiples vulnérabilités de MySQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité \"Multiple MySQL Vulnerabilities\" d'e-matters",
+      "url": null
+    }
+  ]
+}

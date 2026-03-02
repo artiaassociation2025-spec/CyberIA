@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Cisco SN 420 Storage Routeurs utilisant une version logicielle  inférieure ou égale à 1.1(3).</P>",
+  "content": "## Description\n\n-   Première vulnérabilité :\n\n    Une succesion rapide de connexions sur le port TCP 8023 déclenche un\n    déni de service sur le Cisco SN 420, entraînant un redémarrage du\n    routeur.\n\n-   Seconde vulnérabilité :\n\n    Un accès « rlogin » effectué sur le port 8023 à partir du\n    GigabitEthernet (carte de connexion haut débit des routeurs Cisco)\n    ou directement sur l'interface d'administration permet d'avoir accès\n    au shell développeur sans mot de passe.\n\n## Solution\n\nTélécharger la version 1.1(4) sur le site CISCO :\n\n    http://www.cisco.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité CISCO :",
+      "url": "http://www.cisco.com/warp/public/707/SN-kernel-pub.html"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-074",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-07-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Accès au shell développeur"
+    }
+  ],
+  "summary": "Une utilisateur distant mal intentionné peut, par le biais de\ndifférentes requêtes sur le port 8023, soit entraîner un redémarrage du\nCisco ou soit avoir accès au shell développeur.\n",
+  "title": "Vulnérabilités dans les Cisco VN 5420",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité CISCO",
+      "url": null
+    }
+  ]
+}

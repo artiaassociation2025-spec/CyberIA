@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Exchange Server 5.5.</P>",
+  "content": "## Description\n\nIMC (Internet Message Connector) est le nom donné au service SMTP de\nMicrosoft Exchange Server.\n\nIl est possible de réaliser un débordement de mémoire sur l'IMC lorsque\nce dernier construit la réponse à la commande SMTP EHLO (Extended HELLO)\ndont le nom de domaine complet (FQDN pour Fully Qualified domain Name) a\nété malicieusement construit. Ceci suppose que l'IMC consulte un serveur\nDNS (lors de la résolution de DNS inverse) dans lequel le FQDN en\nquestion a été enregistré.\n\n## Contournement provisoire\n\n-   Pour les serveurs Exchange n'utilisant pas le protocole SMTP, il est\n    possible de désactiver le service IMC.\n\n-   Dans l'attente de l'application du correctif Microsoft, il est\n    possible de désactiver l'utilisation de la résolution de DNS inverse\n    par le serveur Exchange en modifiant comme suit une clé de la base\n    de registre :\n\n    `HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\MSExchangeIMC\\Parameters\\`\n\n    1.  Situer la valeur DisableReverseResolve ;\n    2.  dans le menu Edit cliquer sur Binary ;\n    3.  puis taper le chiffre «1».\n\n## Solution\n\nConsulter le bulletin de sécurité MS02-037 de Microsoft pour connaître\nla disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-155",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-07-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité de Microsoft Exchange Server permet à un utilisateur\nmal intentionné d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité de Microsoft Exchange Server 5.5",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS02-037 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-037.asp"
+    }
+  ]
+}

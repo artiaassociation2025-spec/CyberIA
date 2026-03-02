@@ -1,0 +1,87 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SG UTM versions antérieures à v9.708 MR8",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sophos",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sophos Intercept X Advanced for Server versions antérieures à 2.0.23",
+      "product": {
+        "name": "Intercept X",
+        "vendor": {
+          "name": "Sophos",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sophos Exploit Prevention versions antérieures à 3.8.3",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sophos",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sophos Intercept X Advanced versions antérieures à 2.0.23",
+      "product": {
+        "name": "Intercept X",
+        "vendor": {
+          "name": "Sophos",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-36807",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-36807"
+    },
+    {
+      "name": "CVE-2021-25269",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-25269"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2021-AVI-909",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-11-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits\nSophos. Elles permettent à un attaquant de provoquer une exécution de\ncode arbitraire à distance et un déni de service.\n",
+  "title": "Multiples vulnérabilités dans les produits Sophos",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sophos sa-20211126-ixa-hmpa-local-dos du 26 novembre 2021",
+      "url": "https://www.sophos.com/fr-fr/security-advisories/sophos-sa-20211126-ixa-hmpa-local-dos"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sophos sa-20211126-sg-sqli du 26 novembre 2021",
+      "url": "https://www.sophos.com/fr-fr/security-advisories/sophos-sa-20211126-sg-sqli"
+    }
+  ]
+}

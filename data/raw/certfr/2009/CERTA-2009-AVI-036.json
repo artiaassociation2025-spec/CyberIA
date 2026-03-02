@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Horde versions antérieures à 3.2.4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Horde",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Horde versions antérieures à 3.3.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Horde",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Horde Groupware versions antérieures à 1.1.5.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Horde",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDes vulnérabilités ont été corrigées dans Horde. Celles-ci concernent un\nmanque de contrôle de paramètres en entrée pour les fichiers\ncloud_search.php et Image.php. Ceci peut être exploité pour effectuer\nune injection de code indirecte et inclure des fichiers locaux.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Annonce de sécurité du 27 janvier 2009 pour Horde 3.3.3 :",
+      "url": "http://lists.horde.org/archives/announce/2009/000482.html"
+    },
+    {
+      "title": "Annonce de sécurité du 27 janvier 2009 pour Horde 3.2.4 :",
+      "url": "http://lists.horde.org/archives/announce/2009/000483.html"
+    },
+    {
+      "title": "Annonce de sécurité du 27 janvier 2009 pour Horde 1.1.5 :",
+      "url": "http://lists.horde.org/archives/announce/2009/000486.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-036",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-01-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Des vulnérabilités dans Horde permettent à une personne malintentionnée\nd'effectuer une injection de code indirecte (<span\nclass=\"textit\">cross-site scripting</span>) et de contourner la\npolitique de sécurité.\n",
+  "title": "Vulnérabilités dans Horde",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonces de sécurité de la liste Horde",
+      "url": null
+    }
+  ]
+}

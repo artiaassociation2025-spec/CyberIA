@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Serveurs de base de données Oracle 8.0x, 8.1.x, et 9.0.1 sur  toutes les plate-formes Unix.</P>",
+  "content": "## Description\n\nUn utilisateur mal intentionné peut, par le biais d'un débordement de\nmémoire de la commande otrcrep, exécuter du code arbitraire avec les\nprivilèges de l'utilisateur Oracle et/ou du groupe dba.\n\nUne autre vulnérabilité permet, en invoquant astucieusement la commande\noracle sous Unix, de bénéficier des droits du groupe dba pour écraser\ndes fichiers de journalisation ou créer de nouveaux fichiers dans le\nrépertoire `ORACLE_HOME/rdbms/log`.\n\nPar ailleurs, en faisant pointer la variable `ORACLE_HOME` sur un\nrépertoire arbitraire, il est possible de créer ou de modifier d'autres\nfichiers sur la machine.\n\n## Contournement provisoire\n\n-   Pour octcrep :\n    -   désactiver les fonctions de trace dans les paramètres du fichier\n        init\\<SID\\>.ora comme suit (où \\<SID\\> est un numéro) :\n        `Oracle_trace_enable=FALSE`\n\n    -   Modifier les permissions des fichiers pour tous les exécutables\n        Oracle Trace :\n\n            chmod -s  otrccol otrcref otrcfmt otrcrep\n            chmod 751 otrccol otrcref otrcfmt otrcrep\n\n-   Pour l'exécutable oracle :\n\n    changer les permissions de l'exécutable oracle : `chmod o-x oracle`\n\n## Solution\n\nSelon Oracle, le correctif ne sera distribué qu'avec la nouvelle version\nd'Oracle : Oracle 9i release 2.\n\nConsultez votre distributeur pour plus d'informations sur la mise à\njour.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletins de sécurité Oracle :",
+      "url": "http://otn.oracle.com/deploy/security/pdf/otrcrep.pdf"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-134",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire avec élévation de privilèges"
+    },
+    {
+      "description": "Création et/ou modification de fichiers"
+    }
+  ],
+  "summary": "Une vulnérabilité des exécutables otrcrep et oracle dans le serveur de\nbase de données permet à un utilisateur mal intentionné d'exécuter du\ncode arbitraire et d'écraser ou créer des fichiers.\n",
+  "title": "Multiples vulnérabilités dans le SGBD Oracle",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Oracle 19 et 20",
+      "url": null
+    }
+  ]
+}

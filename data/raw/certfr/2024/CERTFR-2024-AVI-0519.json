@@ -1,0 +1,106 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMWare ESXi versions 7.0.x sans le correctif de sécurité ESXi70U3sq-23794019 pour la vulnérabilité CVE-2024-37086 ",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware vCenter Server versions 8.0.x antérieures à 8.0 U3",
+      "product": {
+        "name": "vCenter Server",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware vCenter Server versions 7.0.x antérieures à 7.0 U3q",
+      "product": {
+        "name": "vCenter Server",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMWare ESXi versions 8.0.x sans le correctif de sécurité ESXi80U3-24022510 \t",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Cloud Foundation versions 4.x et 5.x",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMWare ESXi versions 7.0.x",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "L'éditeur indique que les versions 7.0.x d'ESXi et 4.x de Cloud Foundation ne bénéficieront pas de correctif de sécurité pour la vulnérabilité CVE-2024-37085. Ces versions bénéficient d'un correctif (ESXi70U3sq-23794019) pour la vulnérabilité CVE-2024-37086. \nDes correctifs sont prévus pour les trois vulnérabilités pour les versions 5.x de VMware Cloud Foundation.\n",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2024-37087",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-37087"
+    },
+    {
+      "name": "CVE-2024-37086",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-37086"
+    },
+    {
+      "name": "CVE-2024-37085",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-37085"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0519",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-06-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits VMware. Elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données, un contournement de la politique de sécurité et un déni de service.",
+  "title": "Multiples vulnérabilités dans les produits VMware",
+  "vendor_advisories": [
+    {
+      "published_at": "2024-06-25",
+      "title": "Bulletin de sécurité VMware 24505 (VMSA-2024-0013)",
+      "url": "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/24505"
+    }
+  ]
+}

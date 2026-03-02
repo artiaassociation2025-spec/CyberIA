@@ -1,0 +1,97 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows NT 4.0 Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 2000.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows NT 4.0 Server, Terminal Server Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Workstation ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows NT 4.0 Server, Entreprise Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nPar conception, le protocole NBNS entre en jeu dans la résolution des\nconflits de noms sous Windows. C'est aussi, par conception, un protocole\nsans authentification il est donc sujet à l'usurpation d'identité\n(spoofing).\n\nUn individu mal intentionné peut, par manipulations des mécanismes de\nConflit de Nom (Name Conflict) et Liberation de Nom (Name Release),\nfaire interpréter par une autre machine que son nom est en conflit.\nSelon le cas, celà peut avoir deux conséquences différentes :\n\n-   La machine ne peut plus enregistrer son nom sur le réseau\n-   La machine libèrera son nom, alors qu'elle avait déjà été\n    enregistrée sous ce nom sur le réseau.\n\nDans les deux cas, elle ne répondra plus à des renquêtes envoyées à ce\nnom.\n\n## Solution\n\nIndépendament de cette vulnérabilité, les packets UDP sur le port 137\nprovenant de l'extérieur du réseau (notament internet) doivent être\nbloqués par un garde-barrière (ou firewall)\n\nMicrosoft distribue un correctif qui permet à l'administrateur de\nconfigurer une machine afin qu'elle n'accepte que des datagrammes de\nconflit de nom en réponse directe à des requêtes d'enregistrement de\nnom. Ce correctif permet aussi à l'administrateur de configurer ses\nmachines pour qu'elle rejettent tous les datagrammes de libération de\nnom.\n\nLe correctif pour Windows 2000 est à l'adresse suivante :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=23370\n\nA ce jour, il n'y a pas de correctif pour Windows NT.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "RFC 1002 : Protocol Standard for a NetBIOS Service on a TCP/UDP Transport : Detailed Specification",
+      "url": "https://datatracker.ietf.org/doc/html/rfc1002"
+    },
+    {
+      "title": "RFC 1001 : Protocol Standard for a NetBIOS Service on a TCP/UDP Transport : Concepts and Methods",
+      "url": "https://datatracker.ietf.org/doc/html/rfc1001"
+    },
+    {
+      "title": "LA FAQ du bulletin de Sécurité de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-047.asp"
+    },
+    {
+      "title": "La liste officielle de Microsoft contenant les mises à jour concernant la sécurité :",
+      "url": "http://www.microsoft.com/downloads/default.asp?Search=Keyword&Value='security_patch'&OpSysID=1"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-021",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-07-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Le protocole NBNS (pour <span class=\"textit\">NetBIOS Name Server</span>)\nfait partie de la famille des protocoles <span class=\"textit\">NetBios\nover TCP/IP</span> (NBT). Il est implémenté pour le service WINS (<span\nclass=\"textit\">Windows Internet Name Server</span>) dans les systèmes\nWindows.\n\nUne vulnérabilité y a été décelée. Elle permet à un individu mal\nintentionné d'empêcher à un serveur WINS de répondre à des requêtes\nprovenant d'une machine possédant un nom donné.\n",
+  "title": "Vulnérabilité dans le protocole NBNS sous Windows NT et 2000",
+  "vendor_advisories": [
+    {
+      "published_at": "2000-07-20",
+      "title": "Bulletin de sécurité Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-047.asp"
+    }
+  ]
+}

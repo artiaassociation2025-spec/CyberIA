@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Sun Solaris 9 (architectures SPARC et x86) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Solaris 7 (architectures SPARC et x86) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Solaris 8 (architectures SPARC et x86) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa commande /usr/lib/print/conv_fix est appelée par le script conv_lpd.\nDans le cas où conv_lpd est exécuté avec les droits du super-utilisateur\nroot, une vulnérabilité permet à un utilisateur local mal intentionné de\ncréer ou d'écraser n'importe quel fichier du système, aboutissant à une\nélévation de privilèges ou à un déni de service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité #57509 de Sun :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F57509"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-055",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la commande conv_fix permet à un utilisateur mal\nintentionné de réaliser un déni de service ou d'élever ses privilèges.\n",
+  "title": "Vulnérabilité de la commande conv_fix de Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Alerte de sécurité Sun #57509",
+      "url": null
+    }
+  ]
+}

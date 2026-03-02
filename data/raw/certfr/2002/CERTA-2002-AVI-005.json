@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Netscape Enterprise Server 3.x et  iPlanet Web Server 4.x.  <P>Ces produits sont disponibles sur de nombreuses plate-formes :  Solaris, AIX, Digital Unix, HP-UX, IRIX, SunOS, Windows NT,  Windows 2000, Linux.</P></p>",
+  "content": "## Description\n\n## 4.1 Déni de service\n\nAu moyen d'une commande ?wp-html-rend habilement constituée, un\nutilisateur mal intentionné peut provoquer l'arrêt à distance du serveur\nweb. Le service doit alors être redémarré manuellement.\n\nCette vulnérabilité n'est exploitable que sur les plate-formes Windows.\n\n## 4.2 Divulgation d'informations\n\nLa commande wp-force-auth de Web Publisher permet d'initier une séquence\nd'authentification (avec une en-tête HTTP Authorization:Basic) même si\naucun document sur le serveur n'est protégé par un mot de passe.\n\nEn utilisant plusieurs commandes wp-force-auth, un utilisateur mal\nintentionné peut réaliser une attaque de type \"force brute\" sur les mots\nde passe utilisés par des comptes bien identifiés tels que nobody, root\nsur un système Unix.\n\n## Contournement provisoire\n\nPour déterminer si le service Web Publishing est activé, on utilisera\nl'url suivante :  \nhttp://\\<nom-du-serveur\\>/publisher.  \n\nIl est conseillé de ne pas démarrer ce service sur les serveurs Web\nexternes :\n\n    http://developer.netscape.com/docs/manuals/enterprise/40/ag/esapuirf.htm#1005372\n\n## Solution\n\nSe référer aux articles \\#7761 et \\#7764 de la base de connaissances\niPlanet.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "bulletin de sécurité VU#191763 du CERT/CC \"iPlanet Web    Server Enterprise Edition and Netscape Enterprise Server    malformed Web Publisher command causes denial-of-service\" :",
+      "url": "http://www.kb.cert.org/vuls/id/191763"
+    },
+    {
+      "title": "article #7761 de la base de connaissances iPlanet    \"?wp-html-rend causes access violation on Windows NT and 2000\"    :",
+      "url": "http://knowledgebase.iplanet.com/ikb/kb/articles/7761.html"
+    },
+    {
+      "title": "bulletin de sécurité PR01-04 de ProCheckUp \"Netscape    ?wp-html-rend denial of service attack\" :",
+      "url": "http://www.procheckup.com/vulnerabilities/pr0104.html"
+    },
+    {
+      "title": "Netscape Enterprise Server Administrator's guide -    configuring Web Publishing :",
+      "url": "http://developer.netscape.com/docs/manuals/enterprise/40/ag/eswebpub.htm"
+    },
+    {
+      "title": "bulletin de sécurité VU#985347 du CERT/CC \"iPlanet Web    Server Enterprise Edition and Netscape Enterprise Server Web    Publisher command exposes server to brute force attack\" :",
+      "url": "http://www.kb.cert.org/vuls/id/985347"
+    },
+    {
+      "title": "article #7764 de la base de connaissances iPlanet    \"?wp-force-auth can be used in a brute force password cracking    attack\" :",
+      "url": "http://knowledgebase.iplanet.com/ikb/kb/articles/7764.html"
+    },
+    {
+      "title": "bulletin de sécurité PR01-05 de ProCheckUp \"Netscape    publishing wp-force-auth\" :",
+      "url": "http://www.procheckup.com/vulnerabilities/pr0105.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-005",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-01-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Netscape Enterprise Server et iPlanet Web Server utilisent un module\nappelé Web Publisher permettant aux utilisateurs d'accéder, d'éditer et\nde gérer des fichiers résidants sur un serveur web distant.\n\nDeux vulnérabilités présentes dans Web Publisher permettent à un\nutilisateur mal intentionné de découvrir les mots de passe des\nutilisateurs ou de réaliser un déni de service sur le serveur web.\n",
+  "title": "Multiples vulnérabilités dans Netscape Enterprise Server et iPlanet Web Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité PR01-04 et PR01-05 de ProCheckUp",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Exchange 5.5 LDAP Service ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les versions d'OpenLDAP version 1.2.11 et antérieures et version 2.0.7 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenLDAP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les versions de Lotus Domino R5 Server antérieures à 5.0.7a ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Oracle Internet Directory version 2.1.1.0.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Netscape / iPlanet Directory Server version 5.0 Beta, version 4.13 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM SecureWay Directory sous Solaris et Windows 2000 version 3.2 et antérieures ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n## 4.1 Netscape / iPlanet Directory Server\n\nLe code chargé de traiter les requêtes LDAP présente des vulnérabilités\npermettant à un utilisateur mal intentionné d'exécuter du code\narbitraire avec les droits du Directory Server qui sont en général ceux\nde l'administrateur root.\n\nCes vulnérabiltés sont exploitables à distance.\n\n## 4.2 IBM SecureWay Directory\n\nDes vulnérabilités permettent à un utilisateur mal intentionné de\nprovoquer un déni de service sur le serveur. Il est possible que ces\nvulnérabilités permettent en plus d'exécuter du code arbitraire.\n\nCes vulnérabilités sont présentes sous Solaris et Windows 2000, et sont\nexploitables à distance, mais les plates-formes Windows NT et AIX ne\nsont pas vulnérables.\n\n## 4.3 Lotus Domino R5 Server\n\nDes vulnérabilités permettent à un utilisateur distant d'exécuter du\ncode arbitraire avec les privilèges du server Domino qui sont en général\nceux de l'administrateur root.\n\n## 4.4 Microsoft Exchange\n\nUne vulnérabilité dans le traitement des requêtes LDAP rend les serveurs\nLDAP de Microsoft Exchange 5.5 vulnérables à un déni de service.\n\nCette vulnérabilité est exploitable à distance.\n\n## 4.5 Oracle Internet Directory\n\nDe multiples vulnérabilités permettent à un utilisateur distant\nd'exécuter du code arbitraire avec les privilèges du serveur Keyserver\nqui sont en général ceux de l'administrateur root.\n\n## 4.6 OpenLDAP\n\nUne vulnérabilité du serveur OpenLDAP rend ce serveur vulnérable à un\ndéni de service par arrêt (crash du serveur).\n\n## Contournement provisoire\n\nFiltrez l'accès aux ports suivants pour limiter l'exploitation des\nvulnérabiltés :\n\n-   ldap 389/tcp\n-   ldap 389/ucp  \n    pour le protocole ldap (Lightweight Directory Access Protocol);  \n-   ldaps 636/tcp\n-   ldaps 636/ucp  \n    pour le protocole ldaps (protocole ldap sur TLS/SSL - anciennement\n    sldap).\n\n## Solution\n\nContactez votre revendeur pour obtenir une mise à jour :\n\n-   IBM :\n\n        http://www.ibm.com/support\n\n-   Lotus Development Corporation :\n\n        http://www.notes.net/qmrdown.nsf/qmrwelcome\n\n-   Microsoft :\n\n        http://www.microsoft.com/support\n\n-   OpenLDAP Project :\n\n        http://openLDAP.org/software/download\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "avis de sécurité Oracle :",
+      "url": "http://otn.oracle.com/deploy/security/pdf/oid_cert_bof.pdf"
+    },
+    {
+      "title": "Avis de sécurité CA-2001-18 du Cert/CC :",
+      "url": "http://www.cert.org/advisories/CA-2001-18.html"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-157",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-12-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De nombreuses implémentations du protocole LDAP (Lightweight Directory\nAccess Protocol) contiennent des vulnérabilités permettant à un\nutilisateur mal intentionné d'exécuter du code arbitraire, d'élever ses\nprivilèges, ou de provoquer des dénis de service.\n",
+  "title": "Multiples vulnérabilités d'implémentations LDAP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2001-18 du CERT/CC",
+      "url": null
+    }
+  ]
+}

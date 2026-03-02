@@ -1,0 +1,89 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "La série Cisco 2000 Wireless LAN controller ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "La série Cisco Aironet 1130 AG Access Point ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "La série Cisco 2400 Wireless LAN controller ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "La série Cisco Aironet 1200 Access Point ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "La série Cisco Aironet 1240 AG Access Point.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne faiblesse dans la mise en œuvre du LWAPP (LightWeight Access Point\nProtocol) des Wireless LAN controller Cisco fait que ces derniers\npeuvent accepter du trafic en clair provenant d'un client arbitraire\nalors qu'il sont configurés pour n'autoriser que du trafic chiffré. Ceci\npermet à un utilisateur distant mal intentionné d'injecter du trafic\narbitraire dans un réseau chiffré sans authentification préalable.\n\nRemarque : La vulnérabilité n'est exploitable que si le point d'accès ou\nAccess Point utilise LWAPP et est contrôlé par un Wireless LAN\nController séparé. Elle n'est pas applicable à un point d'accès\nautonome.\n\n## Solution\n\nSe référer au bulletin de sécurité Cisco pour appliquer le correctif\napproprié (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de l'éditeur :",
+      "url": "http://www.cisco.com"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco #20051102-lwapp du 02 novembre    2005 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20051102-lwapp.shtml"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-432",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans certains équipements de réseau sans-fil Cisco\npermet à un utilisateur distant de contourner la politique de sécurité\ndu système.\n",
+  "title": "Vulnérabilité de certains équipements de réseau sans-fil de Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco #20051102-lwapp du 02 novembre 2005",
+      "url": null
+    }
+  ]
+}

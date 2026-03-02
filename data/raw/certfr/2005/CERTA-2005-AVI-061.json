@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows XP édition 64-Bit Edition Service Pack 1 (Itanium).",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows XP Service Pack 1 et Microsoft Windows XP Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes \"tubes nommés\" (ou named pipes) servent à la communication entre\nplusieurs processus, soit sur une même machine, soit sur des machines\ndifférentes reliées au même réseau.  \n\nUne vulnérabilité dans la gestion de ces \"tubes nommés\" dans les\nsystèmes Microsoft Windows XP permet à un utilisateur mal intentionné\nd'obtenir le nom des utilisateurs connectés au système vulnérable.  \n\nL'exploitation de cette vulnérabilité n'est possible que si le service\n\"Explorateur d'ordinateur\" (ou Computer browser) est activé.\n\nIl est activé par défaut dans les systèmes Windows XP Service Pack 1,\nmais il est désactivé par défaut dans les systèmes Windows XP Service\nPack 2.\n\n## Contournement provisoire\n\n-   Désactiver le service \"Explorateur d'ordinateur\" ;\n-   bloquer les ports 139/tcp et 445/tcp pour limiter les attaques\n    venant de l'extérieur.\n\n## Solution\n\nAppliquer le correctif proposé par Microsoft (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS-05-007 du 08 février 2005  :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS05-007.mspx"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-061",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-02-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la gestion des \"tubes nommés\" permet à un\nutilisateur distant mal intentionné d'obtenir le nom des utilisateurs\nconnectés à un système Microsoft Windows XP vulnérable.\n",
+  "title": "Vulnérabilité dans la gestion des \"tubes nommés\" du système Windows XP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS05-007",
+      "url": null
+    }
+  ]
+}

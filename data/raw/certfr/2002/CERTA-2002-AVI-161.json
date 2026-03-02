@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Cisco IOS versions 11.1, 11.2, 11.3.</P>  <P>Les équipements équipés d'une architecture basée sur un  processeur de type 68040 ne sont pas affectés. La commande  <CODE>show version</CODE> tapée au prompt du routeur permet de  vérifier cette information.</P>",
+  "content": "## Description\n\nLe protocole TFTP (Trivial File Transfert Protocol) permet de transférer\nfacilement des fichiers entre ou sur les équipements réseaux. Une\nvulnérabilité présente dans le serveur TFTP de certaines versions de\nCisco IOS permet à un utilisateur mal intentionné d'effectuer un déni de\nservice par l'envoi d'une requête malicieusement construite.\n\n## Contournement provisoire\n\nDésactiver le serveur TFTP.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-161",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-07-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Le serveur TFTP fourni dans certaines versions de Cisco IOS est\nvulnérable à un débordement de mémoire.\n",
+  "title": "Vulnérabilité du serveur TFTP dans CISCO IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO",
+      "url": "http://www.cisco.com/warp/public/707/ios-tftp-long-filename-pub.shtml"
+    }
+  ]
+}

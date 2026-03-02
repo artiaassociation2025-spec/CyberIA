@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tout système possédant Microsoft  Internet Information Service (IIS) versions 4.0 (Windows NT 4),  5.0 et 5.1 (Windows 2000).</p>",
+  "content": "## Description\n\n-   Un problème existe dans le lancement des ISAPI (Intern Service\n    Application Programming Interface), permettant une élévation de\n    privilège dans certaines conditions ;\n-   la façon dont IIS alloue la mémoire pour les requetes WebDAV (Web\n    based Distributed Authoring and Versioning) conduit à un déni de\n    service dans certains cas ;\n-   un utilisateur peut avoir accès aux sources des scripts des pages\n    dynamiques ;\n-   un « Cross Site Scripting » peut se produire dans les pages\n    d'administration.\n\n## Solution\n\nAppliquer le correctif de Microsoft disponible en téléchargement. (Cf\nsection Documentation)  \nCe correctif est cumulatif et regroupe tous les correctifs précédents\ndestinés à IIS.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-240",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Accès aux sources des scripts"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans IIS de Microsoft.\n",
+  "title": "Multiples vulnérabilités dans Microsoft Internet Information Service (IIS)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis #MS02-062 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-062.asp"
+    }
+  ]
+}

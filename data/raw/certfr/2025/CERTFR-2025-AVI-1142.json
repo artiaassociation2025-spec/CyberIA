@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "NPort 5000 Series toutes versions sans protection d'accès physique",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "NPort 6100 versions v1.0.0 antérieures à v1.1.0",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-1977",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-1977"
+    },
+    {
+      "name": "CVE-2025-15017",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-15017"
+    },
+    {
+      "name": "CVE-2025-2026",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-2026"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-1142",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-12-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Moxa NPort. Certaines d'entre elles permettent à un attaquant de provoquer une élévation de privilèges, un déni de service à distance et une atteinte à l'intégrité des données.",
+  "title": "Multiples vulnérabilités dans Moxa NPort",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-12-31",
+      "title": "Bulletin de sécurité Moxa MPSA-257331",
+      "url": "https://www.moxa.com/en/support/product-support/security-advisory/mpsa-257331-cve-2025-15017-active-debug-code-vulnerability-in-serial-device-servers"
+    },
+    {
+      "published_at": "2025-12-31",
+      "title": "Bulletin de sécurité Moxa MPSA-251731",
+      "url": "https://www.moxa.com/en/support/product-support/security-advisory/mpsa-251731-cve-2025-1977-cve-2025-2026-multiple-vulnerabilities-in-nport-6100-g2-6200-g2-series"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "cfengine 2.1.16 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "cfengine 1.6.5 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\ncfengine est outil permettant d'administrer automatiquement un parc de\nmachine.\n\nLes scripts vicf.in, cfmailfilter et cfcron.in utilisés par cfengine\nsont vulnérables à une attaque qui permet l'écrasement de fichiers via\nle suivi des liens symboliques. A l'aide de liens habilement constitués,\nun utilisateur mal intentionné, ayant un accès local au système, peut\nforcer la modification de fichiers avec les droits de la victime.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-836 01 octobre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-836"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-198-1 du 10 octobre 2005 :",
+      "url": "http://www.ubuntu.com/usn/usn-198-1"
+    },
+    {
+      "title": "Site internet de l'éditeur :",
+      "url": "http://www.cfengine.org/"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-835 01 octobre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-835"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:184 13 octobre    2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:184"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-384",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-10-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références au bulletin de sécurité Ubuntu USN-198-1 et CVE CAN-2005-3137.",
+      "revision_date": "2005-10-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva MDKSA-2005:184.",
+      "revision_date": "2005-10-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités déouvertes dans l'application cfengine permettent à\nun utilisateur local mal intentionné d'élever ses privilèges et de\nporter atteinte à l'intégrité des données.\n",
+  "title": "Multiples vulnérabilités dans cfengine",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-836 du 01 octobre 2005",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-835 du 01 octobre 2005",
+      "url": null
+    }
+  ]
+}

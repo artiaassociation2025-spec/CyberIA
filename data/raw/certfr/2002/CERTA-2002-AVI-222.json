@@ -1,0 +1,31 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Services for Unix</SPAN> (SFU) 3.0  Interix SDK sur les systèmes d'exploitation suivants :</P>  <UL>    <LI>Microsoft Windows NT4 ;</LI>    <LI>Microsoft Windows 2000 ;</LI>    <LI>Microsoft Windows XP.</LI>  </UL>",
+  "content": "## Description\n\nMicrosoft Services for Unix (SFU) est un ensemble de services permettant\nd'intégrer Windows dans un environnement Unix existant. L'application\nInterix SDK, incluse dans la version SFU 3.0, fournit un environnement\nUnix au-dessus d'un noyau Windows, et comprend un certain nombre de\ncompilateurs, d'outils, de bibliothèques et d'interpréteurs. Trois\nvulnérabilités affectent la bibliothèque Sun RPC incluse dans Interix\nSDK.\n\nUne première vulnérabilité, de type débordement de mémoire, permet à un\nutilisateur distant mal intentionné de former une requête particulière\nafin d'effectuer un déni de service sur le serveur ou d'exécuter du code\narbitraire.\n\nUne deuxième vulnérabilité, liée à une mauvaise vérification par le\nserveur de la taille des données envoyées par le client, permet à un\nutilisateur distant mal intentionné de bloquer le serveur et de\nprovoquer ainsi un déni de service.\n\nUne troisième vulnérabilité est due à une erreur d'implémentation RPC et\npermet à un utilisateur distant mal intentionné de former une requête\nparticulière afin d'effectuer un déni de service sur le serveur.\n\n## Contournement provisoire\n\nLe filtrage au niveau du pare-feu sur le port 111/TCP permet d'éviter\nl'exploitation de ces vulnérabilités par un utilisateur distant. Il est\ncependant conseillé d'appliquer le correctif.\n\n## Solution\n\nAppliquer le correctif fourni par Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=43447\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-057.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-222",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Trois vulnérabilités ont été découvertes dans la bibliothèque Sun RPC\ndans les Services for Unix 3.0 développés par Microsoft.\n",
+  "title": "Multiples vulnérabilités dans <SPAN class=\"textit\">Services for Unix</SPAN> 3.0 de Microsoft",
+  "vendor_advisories": []
+}

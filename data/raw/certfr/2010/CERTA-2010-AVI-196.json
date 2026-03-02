@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IBM DB 2.x.</p>",
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans la base de données IBM DB2 :\n\n-   la première est semblable à la vulnérabilité touchant le protocole\n    TLS détaillée dans l'avis CERTA-2009-AVI-482 et permet à un\n    utilisateur distant malintentionné de conduire des attaques de type\n    « Man-in-the-Middle » ;\n-   la seconde, de type débordement de mémoire, concerne la fonction\n    REPEAT et permet à un utilisateur distant ayant accès la base de\n    données de provoquer un déni de service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3555",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3555"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg1IC67848 du 22 avril 2010 :",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IC67848"
+    },
+    {
+      "title": "Document du CERTA CERTA-2009-AVI-482 du 06 novembre 2009 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2009-AVI-482/index.html"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg21426108 du 22 avril 2010 :",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21426108"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg1IC65922 du 22 avril 2010 :",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1IC65922"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-196",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-04-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans IBM DB2 permettent à un\nutilisateur distant malintentionné de provoquer un déni de service ou de\nporter atteinte à la confidentialité ou à l'intégrité des données.\n",
+  "title": "Multiples vulnérabilités de IBM DB2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM n˚IC67848 du 22 avril 2010",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM n˚1426108 du 22 avril 2010",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM n˚IC65922 du 22 avril 2010",
+      "url": null
+    }
+  ]
+}

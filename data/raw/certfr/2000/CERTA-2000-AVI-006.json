@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Netscape Navigator 4.x et Internet Explorer 4.x et 5.x quelque  soit le système utilisé.</P>",
+  "content": "## Description\n\n-   Première vulnérabilité (Netscape Navigator et Internet Explorer)  \n      \n\n    Après avoir vérifié la validité d'un certificat émis par un site,\n    Netscape Navigator et Internet explorer ouvrent une session\n    sécurisée entre le client et le serveur. Toute autre connexion HTTPS\n    (extension au protocole HTTP mettant en oeuvre les sessions SSL)\n    provenant de la même adresse IP est considérée par les navigateurs\n    comme faisant partie de la même session SSL. Ces navigateurs\n    n'effectuent dès lors pas de nouvelles vérifications.\n\n    Un site malveillant, par « usurpation d'adresse IP » peut détourner\n    une connexion SSL vers son site.  \n      \n      \n\n-   Deuxième vulnérabilité (Netscape Navigator)  \n      \n\n    Durant une connexion SSL, si un certificat contenant des\n    informations erronées parvient au navigateur Netscape, un message\n    d'avertissement demande la confirmation de la poursuite de la\n    navigation sur ce site. Si l'utilisateur confirme la poursuite de la\n    navigation, tout site envoyant ce même certificat erroné ne produira\n    plus d'avertissement.\n\n    Un site malveillant, profitant de la confiance accordée à un\n    certificat erroné peut détourner la connexion vers son site.  \n      \n      \n\n-   Troisième vulnérabilité (Internet Explorer)  \n      \n\n    Lorsque qu'une connexion SSL est réalisée en cliquant sur un lien\n    associé à une image ou une frame, Internet Explorer vérifie\n    uniquement la validité de l'autorité de certification ayant délivré\n    le certificat. Aucune vérification n'est faite sur le contenu du\n    certificat (date d'expiration, nom du serveur...)\n\n    Un site malveillant, par « usurpation d'adresse IP » peut détourner\n    une connexion SSL vers son site\n\n## Solutions\n\n-   Première vulnérabilité\n    -   Netscape Navigator et Communicator  \n          \n        Appliquer le correctif pour Netscape Navigator\n\n            http://www.iplanet.com/downloads/download/detail_128_316.html\n\n        Mettre à jour Netscape Communicator avec la version 4.73\n\n            http://home.netscape.com/download/\n\n        Pour linux Red Hat\n\n        -   ftp://updates.redhates.com/5.2/\n\n        -   ftp://updates.redhates.com/6.2/\n\n    -   Internet Explorer  \n          \n        Mise à jour d'Internet Explorer avec la version 5.01 puis\n        appliquer le correctif (version US uniquement)\n\n            http://www.microsoft.com/windows/ie/download/critical/patch7.htm\n\n-   Deuxième vulnérabilité  \n      \n\n    Il n'existe actuellement aucun correctif.\n\n    Les recommandantions proposées par le Cert-CC sont:\n\n    -   Valider les certificats un à un;\n    -   Rejeter les certificats non valides.  \n          \n          \n\n-   Troisième vulnérabilité  \n      \n\n    Mise à jour d'Internet Explorer avec la version 5.01 puis appliquer\n    le correctif (version US uniquement)\n\n        http://www.microsoft.com/windows/ie/download/critical/patch7.htm\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-006",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-06-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation de pages web"
+    },
+    {
+      "description": "Contournement des mécanismes de sécurité"
+    }
+  ],
+  "summary": "Les sessions SSL (Secure Socket Layer) permettent d'effectuer des\nliaisons sécurisées. Trois vulnérabilités ont été récemment découvertes\npermettant de contourner ces mécanismes et dont la conséquence est de\ndétourner les informations vers un site malvaillant.\n",
+  "title": "Vulnérabilités lors de sessions SSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CERT IST",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "CERT CC",
+      "url": null
+    }
+  ]
+}

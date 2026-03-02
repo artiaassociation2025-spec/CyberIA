@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Toutes les versions d'OpenBSD ;",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetBSD 1.6, NetBSD 1.6.1, NetBSD-current (si les sources sont antérieures au 17 janvier 2004).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nisakmpd est un service de gestion des clefs IKE. isakmpd gère notamment\nles associations de sécurité (SA ou Security Associations) pour du\ntrafic réseau chiffré et/ou authentifié. Plusieurs vulnérabilités dans\nla gestion des messages par isakmpd permettent à un utilisateur mal\nintentionné d'effacer des associations de sécurité (SA ou Security\nAssociations) et de réaliser un déni de service dans la cadre d'un\ntrafic réseau chiffré et/ou authentifié.\n\n## Solution\n\n-   Pour OpenBSD version 3.4, mettre à jour OpenBSD en appliquant le\n    correctif disponible à cette adresse :\n\n        ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.4/common/009_isakmpd.patch\n\n-   Pour NetBSD, mettre à jour selon la version de NetBSD (cf. avis de\n    sécurité NetBSD dans la section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité NetBSD SA2004-001 :",
+      "url": "ftp://ftp.NetBSD.org/pub/NetBSD/security/advisories/NetBSD-SA2004-001.txt.asc"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-010",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-01-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité NetBSD.",
+      "revision_date": "2004-02-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Manipulation de données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans la gestion des messages par isakmpd\npermettent à un utilisateur mal intentionné d'effacer des associations\nde sécurité (SA ou Security Associations) et de réaliser un déni de\nservice dans la cadre d'un trafic réseau chiffré et/ou authentifié.\n",
+  "title": "Vulnérabilité de isakmpd",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité OpenBSD 009_isakmpd du 13 janvier 2004",
+      "url": "http://www.openbsd.org/errata.html#isakmpd"
+    }
+  ]
+}

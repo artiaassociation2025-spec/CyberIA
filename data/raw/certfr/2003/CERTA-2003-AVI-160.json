@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD : versions 5.1 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MacOS X : toutes les versions antérieures à la version 10.2.8 ;",
+      "product": {
+        "name": "macOS",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nARP est un protocole réseau permettant de mettre en correspondance une\nadresse MAC avec une adresse IP. En engendrant un grand nombre de\nrequêtes ARP, un utilisateur mal intentionné peut réaliser un déni de\nservice sur la machine.\n\n## Solution\n\n-   Pour MacOS X, mettre à jour en version 10.2.8 ;\n\n-   Pour FreeBSD, appliquer le correctif téléchargeable à l'adresse\n    suivante :\n\n        ftp://ftp.freebsd.org/pub/FreeBSD/CERT/patches/SA-03:14/arp.patch\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Apple :",
+      "url": "http://docs.info.apple.com/article.html?artnum=61798"
+    },
+    {
+      "title": "Avis de sécurité FreeBSD FreeBSD-SA-03:14.arp :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-03:14.arp.asc"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-160",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-10-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la gestion du protocole ARP dans les noyaux BSD\npermet à un utilisateur mal intentionné de réaliser un déni de service.\n",
+  "title": "Vulnérabilité des noyaux BSD dans la gestion du cache ARP",
+  "vendor_advisories": []
+}

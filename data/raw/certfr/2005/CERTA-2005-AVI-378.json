@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de Kaspersky  disponibles pour les systèmes d'exploitation Microsoft Windows.</p>",
+  "content": "## Description\n\nUn mauvais traitement des fichiers \\*.cab provoque un dépassement de\nmémoire permettant à un utilisateur mal-intentionné d'obtenir le\ncontrôle total de la machine cible.\n\nCette vulnérabilité peut être exploitée sans action d'un utilisateur, à\ntravers les protocols courants tels que SMTP, SMB, HTTP, et FTP.\n\n## Contournement provisoire\n\nKaspersky a intégré dans ses bases une signature permettant de\nreconnaître et de supprimer un fichier CAB malicieusement construit. La\nbase de signature doit donc être mise à jour si celle-ci est antérieure\nau 29 septembre 2005.\n\n## Solution\n\nUn patch correctif sera disponible sur le site de l'éditeur à compter du\n05 octobre 2005.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de rem0te.com :",
+      "url": "http://www.rem0te.com/public/images/kaspersky.pdf"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-378",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-10-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de l'antivirus Kaspersky",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note d'information de Kaspersky",
+      "url": "http://www.kaspersky.com/news?id=171512144"
+    }
+  ]
+}

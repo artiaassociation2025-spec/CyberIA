@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les logiciels touchés sont Microsoft Word 97 et 2000. La  vulnérabilité est indépendante de la plate-forme.</P>",
+  "content": "## Description\n\nLa fonction de « fusion-publipostage » est une fonction de WORD\npermettant la création de multiples documents à partir d'un modèle de\ndocument unique et d'une source extérieure (base de données, tableau,\netc.) afin de diffuser des documents à des listes de destinataires, de\ncréer des étiquettes ou des catalogues, etc.\n\nLorsqu'un utilisateur ouvre un document contenant un appel de la\nfonction « fusion-publipostage » dont la source extérieure contient\nnotament du code VBA situé dans une base de donnée (Access), celui-ci\nsera exécuté à l'insu de l'utilisateur.\n\nPour que cette exploitation de la vulnérabilité soit réalisable, il faut\nque l'accès à la base de donnée malicieuse soit fait au travers d'un\nchemin UNC ou d'un lien de type file://.\n\n## Solution\n\nPour Word 2000 Appliquer le correctif de Microsoft :\n\n    http://officeupdate.microsoft.com/2000/DownloadDetails/wrdacc.htm\n\nLe correctif pour Word 97 n'est pas disponible. Consultez régulièrement\nle site pour savoir s'il y a du nouveau.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "La FAQ sur le bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-071.asp"
+    },
+    {
+      "title": "Le bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-071.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-056",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-10-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité de la fonction « fusion-publipostage » de WORD 97 et\n2000 permet l'exécution de code écrit en Visual Basic (VBA) à l'insu de\nl'usager de WORD.\n",
+  "title": "Vulnérabilité dans la fonction de « fusion-publipostage » sous Word 97 et 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de Sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

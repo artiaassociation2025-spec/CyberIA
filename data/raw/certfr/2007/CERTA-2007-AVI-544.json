@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apple QuickTime versions antérieures à 7.3.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités affectent QuickTime :\n\n-   la première, CVE-2007-6166, décrite dans l'alerte CERTA-2007-ALE-017\n    concerne la prise en charge des flux RTSP ;\n-   la seconde, CVE-2007-4706, concerne la gestion des fichiers de liens\n    QuickTime (possédant l'extension QTL). Cette vulnérabilité pourrait\n    permettre à un utilisateur distant d'exécuter du code arbitraire ou\n    de réaliser un déni de service par le biais d'un débordement de\n    mémoire ;\n-   la dernière, CVE-2007-4707, concerne le composant Flash media\n    handler de QuickTime. Ce composant est sujet à de multiples\n    vulnérabilités dont certaines permettent à un utilisateur distant\n    d'exécuter du code arbitraire. Le correctif fournit par Apple\n    consiste à n'activer ce composant que pour des vidéos existantes et\n    de confiance au format QuickTime.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-4706",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4706"
+    },
+    {
+      "name": "CVE-2007-4707",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4707"
+    },
+    {
+      "name": "CVE-2007-6166",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6166"
+    }
+  ],
+  "links": [
+    {
+      "title": "Alerte du CERTA CERTA-2007-ALE-017 du 27 novembre 2007 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2007-ALE-017/"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-544",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans Apple QuickTime permettent d'effectuer\nun déni de service ou d'exécuter du code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités d'Apple QuickTime",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité QuickTime du 13 décembre 2007",
+      "url": "http://docs.info.apple.com/article.html?artnum=307176"
+    }
+  ]
+}

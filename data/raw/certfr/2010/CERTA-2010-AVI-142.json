@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IBM WebSphere 7.0.x, 6.1.x et 6.0.x.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectant IBM WebSphere ont été publiées :\n\n-   (CVE-2010-0768) dans la console d'administration, un manque de\n    vérification des données entrées est exploitable par un utilisateur\n    malveillant pour réaliser de l'injection de code indirecte ;\n-   (CVE-2010-0769) un défaut dans WebSphere Application Server permet à\n    un utilisateur distant authentifié de lire des mots de passe non\n    chiffrés ;\n-   (CVE-2010-0770) une erreur dans le traitement des sessions SSL avec\n    un client ORB (Object Request Broker) permet à un utilisateur\n    distant authentifié de provoquer un déni de service par attente\n    infinie du serveur.\n\n## Solution\n\nLes versions 6.0.2.41, 6.1.0.31 et 7.0.0.9 d'IBM WebSphere remédient à\nces vulnérabilités. Se référer au bulletin de sécurité de l'éditeur pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0768",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0768"
+    },
+    {
+      "name": "CVE-2010-0770",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0770"
+    },
+    {
+      "name": "CVE-2010-0769",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0769"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-142",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-03-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans IBM WebSphere permettent à un\nutilisateur malveillant d'accéder à des données, de provoquer un déni de\nservice à distance ou de réaliser de l'injection de code indirecte.\n",
+  "title": "Vulnérabilités dans IBM WebSphere",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg27004980 du 29 mars 2010",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg27004980"
+    }
+  ]
+}

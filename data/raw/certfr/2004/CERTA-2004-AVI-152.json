@@ -1,0 +1,87 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "xine-lib versions 1-beta1 à 1-rc3c.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MPlayer 1.0pre1-pre3try2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nMPlayer et Xine sont des lecteurs multimedia open-source. RTSP\n(Real-Time Streaming Protocol) est un protocole de gestion de flux\nmultimedia utilisé notamment pour communiquer avec les serveurs\nRealNetworks.  \nMPlayer et Xine partagent le même code source quant à la gestion du\nprotocole RTSP.  \nPlusieurs vulnérabilités ont été découvertes dans le code gérant le\nprocotole RTSP permettant à un utilisateur mal intentionné d'exécuter du\ncode arbitraire à distance.\n\n## Solution\n\n-   Mettre à jour MPlayer en version 1.0pre4. Site Internet de\n    téléchargement de MPlayer :\n\n        http://www.mplayerhq.hu/homepage/dload.html\n\n-   Mettre à jour xine-lib en version 1-rc4. Site Internet de\n    téléchargement de xine-lib :\n\n        http://xinehq.de/index.php/releases\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité MPlayer du 28 avril 2004 :",
+      "url": "http://www.mplayerhq.hu/homepage/design7/news.html"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD mplayer et    xine-lib :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/multimedia/mplayer/README.html"
+    },
+    {
+      "title": "Avis de sécurité pour le paquetage OpenBSD mplayer du 06    mai 2004 :",
+      "url": "http://www.vuxml.org/openbsd/"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD mplayer et    xine-lib :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/multimedia/xine-lib/README.html"
+    },
+    {
+      "title": "Avis de sécurité Gentoo GLSA 200405-24 du 01 juin 2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200405-24.xml"
+    },
+    {
+      "title": "Avis de sécurité SUSE SuSE-SA:2004:012 du 14 mai 2004 :",
+      "url": "http://www.suse.com/de/security/2004_12_mc.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-152",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-05-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité OpenBSD et NetBSD.",
+      "revision_date": "2004-05-12T00:00:00.000000"
+    },
+    {
+      "description": "correction des références aux bulletins de sécurité NetBSD, ajout du bulletin de sécurité de SUSE.",
+      "revision_date": "2004-05-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo et de la référence CVE.",
+      "revision_date": "2004-06-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans MPlayer et Xine\npermettant à un utilisateur mal intentionné d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilité de MPlayer et Xine",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Xine XSA-2004-3",
+      "url": "http://xinehq.de/index.php/security/XSA-2004-3"
+    }
+  ]
+}

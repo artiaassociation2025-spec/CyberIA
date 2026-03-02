@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BIND versions 9.10.5-S1 à 9.10.5-S4",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND version 9.10.6-S1 et 9.10.6-S2",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2018-5734",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2018-5734"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2018-AVI-105",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2018-03-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans ISC BIND. Elle permet à un\nattaquant de provoquer un déni de service à distance.\n",
+  "title": "Vulnérabilité dans ISC BIND",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ISC AA-01562 du 28 février 2018",
+      "url": "https://kb.isc.org/article/AA-01562/74/CVE-2018-5734%3A-A-malformed-request-can-trigger-an-assertion-failure-in-badcache.c.html"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Fetchmail version 6.2.5.1 et versions  antérieures.</p>",
+  "content": "## Description\n\ncette vulnérabilité et injecter du code arbitraire à distance\npermettant, entre autres, d'obtenir les droits administrateurs sur la\nmachine vulnérable.  \n\nL'exploitation de cette faille à destination d'une machine disposant de\nFetchmail 6.2.5.1 ne provoque qu'un déni de service.\n\n## Solution\n\nPasser en version 6.2.5.2 et appliquer le patch fetchmail-patch-6.2.5.2\n:\n\n    http://developer.berlios.de/project/showfiles.php?group_id=1824\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SR:2005:018 du 28 juillet    2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_18_sr.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-774 du 12 août 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-774"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:126 du 28 juillet    2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:126"
+    },
+    {
+      "title": "Bulletin de sécurité de FreeBSD :",
+      "url": "http://www.vuxml.org/freebsd/pkg-fetchmail.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:640 du 25 juillet    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-640.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200507-21 du 25 juillet    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200507-21.xml"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD pour fetchmail du 25 juillet    2005 :",
+      "url": "http://www.vuxml.org/openbsd/pkg-fetchmail.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-278",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-07-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité OpenBSD.",
+      "revision_date": "2005-07-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo GLSA 200507-21.",
+      "revision_date": "2005-07-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Mandriva MDKSA-2005:126 et SUSE SUSE-SR:2005:018.",
+      "revision_date": "2005-07-29T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-774.",
+      "revision_date": "2005-08-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance via un serveur pop3 malicieux"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans Fetchmail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Berlios",
+      "url": "http://fetchmail.berlios.de/fetchmail-SA-2005-01.txt"
+    }
+  ]
+}

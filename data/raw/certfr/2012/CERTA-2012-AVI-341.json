@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>PHP version inférieure à 5.4.4.</P>",
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-2386",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-2386"
+    },
+    {
+      "name": "CVE-2012-2143",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-2143"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis CERTA-2012-AVI-310 Vulnérabilité dans PostgreSQL :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2012-AVI-310/index.html"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-341",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-06-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été corrigées dans PHP. La première\n(CVE-2012-2143) permet à un attaquant de contourner la politique de\nsécurité (se référer à l'avis CERTA-2012-AVI-310). La seconde\n(CVE-2012-2386) permet à un attaquant d'exécuter du code arbitraire à\ndistance via un débordement de tampon sur le tas, si l'extension <span\nclass=\"textit\">phar</span> de PHP est utilisée pour analyser des\nfichiers TAR.\n",
+  "title": "Multiples vulnérabilités dans PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes de mise à jour PHP 5.4.4 du 6 juin 2012",
+      "url": "http://www.php.net/ChangeLog-5.php"
+    }
+  ]
+}

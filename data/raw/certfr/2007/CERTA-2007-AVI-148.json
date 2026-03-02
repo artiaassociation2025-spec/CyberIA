@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Lotus Web Access 7.X.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Lotus Domino 7.X ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Lotus Domino 6.X ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Lotus Web Access (Notes) 6.X ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois vulnérabilités sont présentes dans IBM Lotus Domino :\n\n-   la première de type débordement de tampon a été identifiée dans le\n    service mettant en œuvre le protocole de messagerie IMAP ;\n-   la deuxième, également de type débordement de mémoire, concerne le\n    serveur d'annuaire LDAP ;\n-   la dernière est due à un manque de contrôle de certains paramètres\n    passés à l'application Lotus Domino Web Access.\n\nLes deux premières vulnérabilités peuvent être utilisées par un\nutilisateur malveillant afin de provoquer un déni de service sur la\nmachine vulnérable. Quant à la troisième, elle peut être exploitée pour\nréaliser une attaque de type Cross-Site Scripting.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg21257248 du 27 mars 2007 :",
+      "url": "http://www.1-ibm.com/support/docview.wss?uid=swg21257248"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg21257026 du 27 mars 2007 :",
+      "url": "http://www.1-ibm.com/support/docview.wss?uid=swg21257026"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg21257028 du 27 mars 2007 :",
+      "url": "http://www.1-ibm.com/support/docview.wss?uid=swg21257028"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-148",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-03-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans IBM Lotus Domino permettent à\nun utilisateur distant de provoquer un déni de service ou de réaliser\nune attaque par injection de code indirecte (Cross-Site Scripting).\n",
+  "title": "Multiples vulnérabilités dans IBM Lotus Domino",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité IBM du 27 mars 2007",
+      "url": null
+    }
+  ]
+}

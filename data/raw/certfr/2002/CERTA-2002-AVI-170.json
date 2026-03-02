@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>WS_FTP SERVER 3.1.1 pour Windows NT,  Windows 2000 et Windows XP.</p>",
+  "content": "## Description\n\nWS_FTP SERVER est un serveur FTP distribué par la société Ipswitch.\n\n  \n\nUne vulnérabilité est présente dans la routine de changement des mots de\npasse utilisateur (site cpwd). L'exploitation ce cette vulnérabilité\npermet à un utilisateur mal intentionné d'exécuter du code arbitraire à\ndistance avec les privilèges du compre SYSTEM.\n\n## Contournement provisoire\n\nL'option Disable Password Change positionnée au niveau du serveur ftp\ninterdit à l'utilisateur de changer le mot de passe.\n\n## Solution\n\nAppliquer le correctif WS_FTP SERVER 3.1.2 disponible sur le site de\nl'éditeur (cf. section documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "WS_FTP Server Support Center (Ipswitch) :",
+      "url": "http://www.ipswitch.com/Support/WS_FTP-Server/patch-upgrades.html"
+    },
+    {
+      "title": "Avis de sécurité \"WS_FTP SITE CPWD buffer overflow    vulnerability\" de @stake :",
+      "url": "http://www.atstake.com/research/advisories/2002/a080802-1.txt"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-170",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité de type débordement de mémoire permet à un utilisateur\nmal intentionné d'exécuter du code arbitraire à distance avec les\nprivilèges du compte SYSTEM.\n",
+  "title": "Vulnérabilité de WS_FTP SERVER",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité \"WS_FTP SITE CPWD buffer overflow vulnerability\" de @stake",
+      "url": null
+    }
+  ]
+}

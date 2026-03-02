@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MacOS X versions 10.3.4 et antérieures.",
+      "product": {
+        "name": "macOS",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MacOS X versions 10.2.8 et antérieures.",
+      "product": {
+        "name": "macOS",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSous MacOS X, une application peut s'enregistrer (par le biais de\nl'interface Launch Services), pour être appellée lors de l'ouverture\nd'un type particulier d'URL.\n\nCette fonctionnalité, combinée avec d'autres techniques d'injection de\ncode comme l'emploi du DiskImageMounter (disk://), peut être utilisée\npar un utilisateur mal intentionné afin de forcer l'exécution de code\narbitraire à distance.\n\n  \n\nUne vulnérabilité relative à l'exécution de code à travers l'option\n\"Afficher dans le Finder\" de la fenêtre de téléchargements est également\nprésente dans le navigateur SAFARI.\n\n## Solution\n\nAppliquer le correctif livré par Apple :\n\n-   MacOS X 10.2.8 :\n\n        http://www.apple.com/support/downloads/securityupdate_2004-06-07_(_10_2_8).html\n\n-   MacOS X 10.3.4 :\n\n        http://www.apple.com/support/downloads/securityupdate_2004-06-07_(_10_3_4).html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Apple :",
+      "url": "http://docs.info.apple.com/article.html?artnum=61798"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-183",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-06-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités relatives à la gestion des URL affectent Mac OS\nX.\n",
+  "title": "Mise à jour de sécurité MacOS X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité APPLE-SA-2004-06-07",
+      "url": null
+    }
+  ]
+}

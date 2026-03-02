@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>IBM AIX 4.3, 5.1 et 5.2.</P>",
+  "content": "## Description\n\nLa commande enq gère les files d'attente pour des ressources partagées,\nen particulier les imprimantes. Il est possible pour un utilisateur\nlocal mal intentionné d'obtenir les droits du programme, c'est-à-dire\nl'utilisateur root et le groupe printq.\n\n## Solution\n\nMettre à jour le paquetage bos.te.printers, selon la version d'AIX :\n\n    http://www-1.ibm.com/services/continuity/recover1.nsf/mss/MSS-OAR-E01-2003.1600.1\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Référence CVE CAN-2003-1018 :",
+      "url": "http://cve.mitre.org/cgi-bin/cvename.cgi?CAN-2003-1018"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-012",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-01-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges pour un utilisateur local"
+    }
+  ],
+  "summary": "Un bogue de chaîne de format a été identifié dans la commande <span\nclass=\"textit\">enq</span> sous AIX. Il peut être exploité par un\nutilisateur local mal intentionné pour obtenir les privilèges <span\nclass=\"textit\">root</span>.\n",
+  "title": "Faille dans la commande enq sous AIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité IBM",
+      "url": null
+    }
+  ]
+}

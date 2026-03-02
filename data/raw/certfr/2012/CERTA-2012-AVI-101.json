@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PostgreSQL versions 9.0.7 et antérieures ;",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PostgreSQL versions 8.4.11 et antérieures ;",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PostgreSQL versions 8.3.18 et antérieures.",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PostgreSQL versions 9.1.3 et antérieures ;",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans PostgreSQL :\n\n-   les restrictions d'exécution des fonctions peuvent être contournées\n    par les utilisateurs sous certaines conditions (CVE-2012-0866) ;\n-   lorsque des certificats SSL sont utilisés, il est possible d'usurper\n    un nom de machine si celui-ci fait exactement 32 caractères\n    (CVE-2012-0867) ;\n-   il est possible d'exécuter des commandes SQL via des noms d'objet\n    spécifiques (CVE-2012-0868).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-0866",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0866"
+    },
+    {
+      "name": "CVE-2012-0867",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0867"
+    },
+    {
+      "name": "CVE-2012-0868",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0868"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2012-AVI-101",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-02-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans <span\nclass=\"textit\">PostgreSQL</span>, permettant notamment d'exécuter du\ncode arbitraire à distance et de contourner la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans PostgreSQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PostgreSQL du 27 février 2012",
+      "url": "http://www.postgresql.org/about/news/1377/"
+    }
+  ]
+}

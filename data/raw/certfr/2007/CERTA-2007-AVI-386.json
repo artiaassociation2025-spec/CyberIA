@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Claroline</SPAN> versions 1.8.5 et  antérieures.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans Claroline versions\n1.8.5 et antérieures. Certaines d'entre elles, présentes dans les\nfichiers adminusers.php, advancedUserSearch.php et campusProblem.php du\nrépertoire admin permettent de réaliser des attaques de type cross-site\nscripting (injection de code indirecte). Une autre vulnérabilité,\nprésente dans le fichier language.lib.php permet d'inclure des fichiers\nlocaux. Ceci peut provoquer l'affichage de leur contenu et, dans\ncertains cas, une exécution de code arbitraire à distance sera possible.\n\n## Solution\n\nMettre à jour en version 1.8.6 (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site du projet Claroline :",
+      "url": "http://www.claroline.net/"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-386",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-09-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans <span class=\"textit\">Claroline</span>\npermettent de réaliser des attaques de type <span\nclass=\"textit\">cross-site scripting</span> et d'exécuter des fichiers\nlocaux.\n",
+  "title": "Vulnérabilités dans Claroline",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes de changement de version de Claroline",
+      "url": "http://www.claroline.net/wiki/index.php/Changelog_1.8.x#Security"
+    }
+  ]
+}

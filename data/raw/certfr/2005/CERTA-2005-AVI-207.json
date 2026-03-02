@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de GNU wget des  branches 1.8 et 1.9.</p>",
+  "content": "## Description\n\nWget est un logiciel très utilisé pour automatiser le téléchargement de\nfichiers distants via les protocoles HTTP et FTP.  \nLors du traitement de redirection HTTP, wget effectue une mauvaise\nvérification de l'URL. Il est ainsi possible, pour un administrateur mal\nintentionné, de créer un site HTTP malicieux, permettant de porter\natteinte à l'intégrité des données ou d'exécuter du code arbitraire sur\nla plate-forme vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de GNU wget :",
+      "url": "http://www.gnu.org/software/wget/wget.html"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-771.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:098 du 09 juin    2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:098"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-207",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-06-13T00:00:00.000000"
+    },
+    {
+      "description": "Bulletin Red Hat.",
+      "revision_date": "2005-09-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Corruption de données"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans GNU wget permettent à un utilisateur mal\nintentionné de corrompre des données ou d'exécuter du code arbitraire à\ndistance sur la plate-forme vulnérable.\n",
+  "title": "Vulnérabilité de GNU wget",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:098 du 09 juin 2005",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>OpenSSH versions 4.7 et antérieures.</p>",
+  "content": "## Description\n\nUne erreur est présente dans le serveur de OpenSSH. En effet, le serveur\nsshd peut exécuter le fichier  /.ssh/rc malgré la présence de la\ndirective ForceCommand dans le fichier de configuration sshd_config.\nCeci est un comportement documenté mais considéré comme peu sûr par le\nprojet OpenSSH.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nLa version 4.9 de OpenSSH corrige le problème :\n\n    http://www.openssh.org\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctif de sécurité OpenBSD pour OpenSSH du 30 mars 2008    :",
+      "url": "http://openbsd.org/errata.html#001_openssh"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-171",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-04-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans OpenSSH permet à un utilisateur distant de\ncontourner la politique de sécurité du serveur vulnérable.\n",
+  "title": "Vulnérabilité dans OpenSSH",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenBSD du 30 mars 2008",
+      "url": null
+    }
+  ]
+}

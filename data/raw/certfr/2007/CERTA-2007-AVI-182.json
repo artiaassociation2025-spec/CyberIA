@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ProFTPD versions 1.2.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ProFTPD versions 1.3.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur dans la mise en œuvre simultanée de plusieurs modules\nd'authentification par ProFTPD permet à un utilisateur distant\nmalintentionné de contourner la politique de sécurité.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-2165",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2165"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:130 du 20 juin    2007 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:130"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-182",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-04-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence CVE et de la référence au bulletin de sécurité Mandriva.",
+      "revision_date": "2007-11-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité de ProFTPD permet de contourner la politique de\nsécurité.\n",
+  "title": "Vulnérabilité dans ProFTPD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ProFTPD du 16 avril 2007",
+      "url": "http://bugs.proftpd.org/show_bug.cgi?id=2922"
+    }
+  ]
+}

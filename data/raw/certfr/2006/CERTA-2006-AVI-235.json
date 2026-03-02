@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Wordpress versions 2.x",
+      "product": {
+        "name": "WordPress",
+        "vendor": {
+          "name": "WordPress",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2702",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2702"
+    },
+    {
+      "name": "CVE-2006-2667",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2667"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200606-08.XML du 12 juin 2006 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200606-08.xml"
+    },
+    {
+      "title": "Bulletin de sécurité de l'éditeur",
+      "url": "http://wordpress.org/download/"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-235",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-06-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Lors de l'enregistrement d'un profil utilisateur ou à l'occasion de la\nmise à jour d'un profil, une erreur dans le script PHP peut être\nexploitée pour injecter et exécuter du code arbitraire.\n",
+  "title": "Vulnérabilités dans Wordpress",
+  "vendor_advisories": []
+}

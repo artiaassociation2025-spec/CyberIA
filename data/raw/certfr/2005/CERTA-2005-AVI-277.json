@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Avast Server Edition version 4.6.460 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Avast Managed Client versions antérieures à la version 4.6.394.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Avast Home Edition version 4.6.665 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Avast Professional Edition version 4.6.665 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans la bibliothèque unacev.dll :\n\n-   la première vulnérabilité est une traversée d'arborescence qui est\n    due à un mauvais filtrage des fichiers archive au format ACE. Un\n    utilisateur mal intentionné peut utiliser cette vulnérabilité pour\n    déposer des fichiers sur le système vulnérable ;\n-   la seconde vulnérabilité est due à un débordement de mémoire et\n    permet à un utilisateur mal intentioné d'exécuter du code arbitraire\n    à distance, via l'envoi d'un fichier archive ACE malicieusement\n    construit.\n\nPar defaut, le moteur de l'antivirus Avast est mise à jour\nautomatiquement.\n\n## Solution\n\nMettre à jour l'antivirus. Les versions suivantes corrigent cette\nvulnérabilité :\n\n-   Avast Home Edition version 4.6.691 ;\n-   Avast Professional Edition version 4.6.691 ;\n-   Avast Server Edition version 4.6.489 ;\n-   Avast Managed Client version 4.6.394.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet d'Avast :",
+      "url": "http://www.avast.com"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-277",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-07-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Diffusion d'informations sensibles"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans Avast Antivirus peuvent être\nutilisées par un utilisateur mal intentionné pour exécuter du code\narbitraire ou diffuser des informations sensibles.\n",
+  "title": "Vulnérabilité dans Avast Antivirus",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Historique des changements d'Avast du 9 juillet 2005",
+      "url": "http://www.avast.com/eng/av4_revision_history.html"
+    }
+  ]
+}

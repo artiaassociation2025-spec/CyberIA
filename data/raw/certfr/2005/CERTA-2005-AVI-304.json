@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows XP Professional x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 et Microsoft Windows Server 2003 Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 1 et Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 x64 Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 pour systèmes Itanium et Microsoft Windows Server 2003 pour systèmes Itanium Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe protocole RDP (Remote Desktop Protocol) permet à un utilisateur\nd'établir une session virtuelle graphique vers une autre machine.\n\nUn utilisateur mal intentionné peut, par le biais d'un message RDP\nmalicieusement constitué, provoquer un arrêt du système vulnérable.\n\n## Contournement provisoire\n\nFiltrer le port 3389/tcp au niveau du pare-feu.\n\n## Solution\n\nAppliquer le correctif tel qu'indiqué dans le bulletin de sécurité\nMicrosoft MS05-041 (voir Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2005-AVI-304",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-08-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Remote Desktop Protocol permet de réaliser un\ndéni de service.\n",
+  "title": "Vulnérabilité du protocole RDP de Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS05-041 du 09 août 2005",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS05-041.mspx"
+    }
+  ]
+}

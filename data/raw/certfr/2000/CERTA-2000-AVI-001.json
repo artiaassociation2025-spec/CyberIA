@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les systèmes sur lesquels l'utilitaire ksu de kerberos 5 est installé ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les systèmes faisant fonctionner des services authentifiés par Kerberos 4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "certains systèmes faisant fonctionner des services authentifiés par Kerberos 5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les systèmes faisant fonctionner le démon de shell distant « kerbérisé » (krshd) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les systèmes sur lesquels l'utilitaire krcp de kerberos 5 est installé ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nIl y a au moins quatre vulnérabilités distinctes dans les différentes\nversions et implémentations du logiciel Kerberos. Toutes ces\nvulnérabilités peuvent être exploitées pour obtenir les privilèges de\nroot.\n\n**Débordement de variable dans la fonction krb_rd_req()**\n\n:   Cette vulnérabilité est présente dans la version 4 de Kerberos. Elle\n    est aussi présente dans la version 5 (dans le mode de compatibilité\n    avec la version 4). Cette vulnérabilité peut être exploitée dans les\n    services qui utilisent la version 4 ou la version 5 quand ils\n    effectuent de l'authentification selon la version 4. Cette\n    vulnérabilité peut aussi être exploitée localement à travers le\n    programme de Kerberos 5 v4rcp qui est setuid root.\n\n    Il se peut que cette vulnérabilité soit exploitable dans la\n    version 4. Cette vulnérabilité est exploitable dans la version (en\n    conjonction avec la vulnérabilité de la fonction\n    krb425_conv_principal(), décrite plus loin).\n\n**Débordement de variable dans la fonction krb425_conv_principal()**\n\n:   Cette vulnérabilité est présente dans le code de compatibilité\n    ascendante de la version 5. Cette vulnérabilité est connue pour être\n    exploitable dans la version 5 en conjonction avec une exploitation\n    de la vulnérabilité concernant krb_rd_req().\n\n**Débordement de variables dans krshd**\n\n:   Cette vulnérabilité est seulement présente dans la version 5. Cette\n    vulnérabilité n'est pas liée aux autres vulnérabilités.\n\n**Débordement de variable dans ksu**\n\n:   Cette vulnérabilité est seulement présente dans la version 5 et est\n    corrigée dans les versions krb5-1.1.1 et krb5-1.0.7-beta1. La\n    vulnérabilité de ksu n'est pas liée aux autres vulnérabilités.\n\n## Contournement provisoire\n\nProvisoirement par des configuration il est possible de se prémunir\ncontre certaines vulnérabilités :\n\n-   certains daemons lancés par inetd peuvent s'avérer plus sûr contre\n    l'exploitation de la vulnérabilité si la ligne de commande qui les\n    invoque est modifiée pour exclure l'usage de Kerberos 4 pour\n    l'authentification. Consultez la page de manuel de votre\n    distribution Kerberos pour déterminer la ligne de commande correcte\n    pour désactiver l'authentification Kerberos 4. Les daemons pour\n    lesquels il se peut qu'une telle démarche fonctionne incluent :\n    -   krshd[^1^](#foot88) ;\n    -   klogind ;\n    -   telnetd.\n-   les permissions setuid du programme v4rcp doivent être retirées pour\n    éviter une exploitation locale de la vulnérabilité ;\n-   les permissions setuid du programme du programme krb5 ksu doivent\n    être retirées s'il n'a pas été compilé depuis les distributions\n    krb5-1.1.1, krb5-1.0.7-beta1 ou ultérieures. Il semble sûr de\n    remplacer l'exécutable ksu par un nouvel exécutable compilé à partir\n    des distributions krb5-1.1.1 ou krb5-1.0.7-beta1 pourvu qu'il ne\n    soit pas compilé avec des bibliothèques partagées (la vulnéravilité\n    est due à certains bogues dans les bibliothèques). Si ksu a été\n    compilé avec des bibliothèques partagées, il vaut mieux installer\n    une nouvelle version pour laquelle le bogue dans la bibliothèque a\n    été résolu.\n-   dans la distribution du MIT de Kerberos 5, il se peut qu'il ne soit\n    pas possible de désactiver l'authentification Kerberos 4 dans le\n    programme ftpd. Notez que seules les versions krb5-1.1.1 et\n    ultérieures ont la capacité de recevoir des authentification\n    Kerberos 4.\n\n## Solution\n\n## 6.1 Appliquez le patch de votre fournisseur\n\nSi votre fournisseur n'apparaît pas dans la liste, veuillez contacter le\nCERTA.\n\n### 6.1.1 Microsoft\n\nAucun produit Microsoft n'est touché par cette vulnérabilité.\n\n### 6.1.2 MIT Kerberos\n\nL'avis du MIT sur ce sujet est disponible sur :\n\n    http://web.mit.edu/kerberos/www/advisories/krb4buf.txt\n\n### 6.1.3 NetBSD\n\nNetBSD possède deux référentiels de codes pour les logiciels\ncryptographiques en raison des lois américaines concernant l'export (et\naussi des considérations ayant trait à des brevets).\n\nL'arborescence crypto-intl destiné à l'utilisation hors des États-Unis\nn'est pas affecté.\n\n### 6.1.4 OpenBSD\n\nOpenBSD utilise la ditribution KTH de Kerberos, qui est réputée non\nvulnérable.\n\n### 6.1.5 L'université de Washington\n\nLes logiciels publiés par l'Université de Washington ne sont pas\ndistribués sous forme de distribution binaire. C'est à l'installateur de\ndécider à la compilation si il utilise ou non Kerberos.\n\nLes serveurs POP3 et IMAP de l'Université de Washington sont basés sur\nKerberos 5 et ne font jamais appel à Kerberos 4. A ce titre il ne sont\npas vulnérables.\n\n### 6.1.6 Autres\n\nLa meilleure action à conseiller est de patcher le code dans la\nbibliothèque krb4 et en outre patcher le code du programme krshd. Les\npatches suivants incluent des corrections moins essentielles qui\naffectent aussi les débordement de variable dans du code potentiellement\nvulnérable, mais pour lesquels l'exploitation des vulnérabilités est\nsensiblement plus difficile à construire.\n\nLes patches sont disponibles à l'URL\n\n    http://www.cert.org/advisories/CA-2000-06/mit_10x_patch.txt\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-001",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-05-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Les logiciels vulnérables peuvent permettre à des intrus d'obtenir l'accès aux privilèges de root. le risque est réel puisque des exploitations de ces vulnérabilités ont été publiées"
+    }
+  ],
+  "summary": "Le <span class=\"textit\">CERT Coordination Center</span> a récemment été\ninformé de plusieurs vulnérabilités liées à des débordements de\nvariables dans leur logiciel d'authentification Kerberos. La\nvulnérabilité la plus grave permet à des intrus distants d'obtenir les\nprivilèges de <span class=\"textit\">root</span> sur le système sur lequel\ntourne les services qui utilisent l'authentification de Kerberos. Si des\nservices vulnérables sont autorisés sur le système servant de Centre de\nDistribution des clefs (KDC), il se peut que le domaine Kerberos entier\nsoit compromis.\n",
+  "title": "Débordements de variables dans les services authentifiés par Kerberos",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2000-06 du CERT/CC",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de l'équipe Kerberos du MIT",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>De nombreux serveurs web supportant les  « Web Applications » comme par exemple :  <UL>    <LI>serveur <TT>Sybase</TT> versions antérieures à la version    4.1 ;</LI>    <LI>serveur <TT>Oracle</TT> versions antérieures à la version    9.0.2 ;</LI>    <LI>serveur <TT>Jrun</TT> versions 3.0, 3.1 et 4.0 ;</LI>    <LI>serveur <TT>Orion</TT> versions antérieures à la version    1.5.4 ;</LI>    <LI>serveur <TT>HPAS</TT> version 8.0 ;</LI>    <LI>serveur <TT>Jo Webserver</TT> versions antérieures à la    version 1.0b7.</LI>  </UL></p>",
+  "content": "## Description\n\nUne « Web Application » est une collection de fichiers regroupés dans un\nfichier archive .war. Ce fichier archive est toujours organisé selon le\nmême principe : des fichiers JSP (Java Server Pages), des fichiers html,\nd'autres fichiers et un répertoire WEB-INF contenant les fichiers\nnécessaires au fonctionnement des servlets mais réservé en lecture et en\nécriture aux développeurs.\n\nUne vulnérabilité présente dans de nombreux moteurs de « servlets »\npermet à utilisateur mal intentionné d'accéder au contenu de ce\nrépertoire, et donc aux fichiers de configuration des servlets ou encore\naux informations de sessions des utilisateurs.\n\n## Solution\n\nAppliquer le correctif correspondant à votre serveur Web (cf section\ndocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "avis de sécurité de Westpoint :",
+      "url": "http://www.westpoint.ltd.uk/advisories/wp-02-2002.txt"
+    },
+    {
+      "title": "Site de Sybase pour la version 4.1 de Sybase EAServer :",
+      "url": "http://www.sybase.com"
+    },
+    {
+      "title": "Avis de sécurité de Macromedia :",
+      "url": "http://www.macromedia.com/v1/handlers/index.cfm?ID=23164"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-149",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-07-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation de données"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans de nombreux moteurs de « servlets »\npermet à un utilisateur mal intentionné d'accéder aux fichiers présents\ndans le répertoire WEB-INF. Les servlets sont l'équivalent des CGI\n(Common Gateway Interfaces) dans le langage Java.\n",
+  "title": "Vulnérabilité des Web Applications",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Westpoint",
+      "url": null
+    }
+  ]
+}

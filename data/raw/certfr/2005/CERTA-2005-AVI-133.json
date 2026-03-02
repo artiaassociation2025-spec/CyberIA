@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Exchange 2000 Server SP3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Exchange Server 2003 SP1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Exchange Server 2003 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSelon Microsoft, une vulnérabilité de type débordement mémoire est\nprésente dans Microsoft Exchange Server.\n\nAu moyen de requêtes SMTP habilement constituées, un utilisateur mal\nintentionné peut exploiter cette vulnérabilité afin d'executer du code\narbitraire à distance sur un serveur vulnérable.\n\n## Contournement provisoire\n\nFilter l'accès au port 25/tcp ou forcer l'authentification des sessions\nSMTP dans l'attente de l'application du correctif.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de securité de Microsoft MS05-021 du 12 avril    2005:",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS05-021.mspx"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-133",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-04-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de Microsoft Exchange Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS05-021 de Microsoft",
+      "url": null
+    }
+  ]
+}

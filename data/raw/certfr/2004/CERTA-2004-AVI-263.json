@@ -1,0 +1,98 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SquirrelMail version 1.4.2 (vulnérabilité CVE CAN-2004-0519) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SquirrelMail version antérieures à 1.4.3 (vulnérabilité CVE CAN-2004-0520) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SquirrelMail version 1.2.10 et antérieures (vulnérabilité CVE CAN-2004-0639).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SquirrelMail version antérieures à 1.4.3 RC1 (vulnérabilité CVE CAN-2004-0521) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSquirrelMail est une application de type Webmail écrite en `PHP4`.\nPlusieurs vulnérabilités ont été découvertes dans SquirrelMail :\n\n-   Plusieurs vulnérabilités de type `Cross Site    Scripting`\n    permettent à un individu mal intentionné d'exécuter du code\n    arbitraire à distance, de voler les informations d'authentification\n    ou d'atteindre à l'intégrité des données (vulnérabilité CVE\n    CAN-2004-0519 , CVE CAN-2004-0520 et CVE CAN-2004-0639) ;\n-   une vulnérabilité de type `injection SQL` permet à un individu mal\n    intentionné d'exécuter une requête SQL non sollicitée (vulnérabilité\n    CVE CAN-2004-0521) ;\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200406-08 du 15 juin 2004    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200406-08.xml"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:240-06 du 14 juin    2004 :",
+      "url": "http://www.redhat.com/errata/RHSA-2004-240.html"
+    },
+    {
+      "title": "Bulletin de sécurité Apple du 07 septembre 2004 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=61798"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-535 du 2 août 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-535"
+    },
+    {
+      "title": "Note d'information CERTA-2002-INF-001 du CERTA sur le Cross    Site Scripting :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2002-INF-001/"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-263",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-08-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Apple.",
+      "revision_date": "2004-09-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans différentes versions\nde SquirrelMail.\n",
+  "title": "Multiples vulnérabilités dans SquirrelMail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DSA-535 de Debian",
+      "url": null
+    }
+  ]
+}

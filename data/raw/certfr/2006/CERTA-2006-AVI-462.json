@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Novell eDirectory versions antérieures  à 8.8.1.</p>",
+  "content": "## Description\n\nNCP (NetWare Core Protocol) est le principal protocole utilisé par\nNovell pour la transmission d'information entre le serveur NetWare et\nses clients.  \nDeux vulnérabilités de type dépassement de mémoire existent dans le\nprotocole NCP permettant à un utilisateur distant mal intentionné de\nréaliser un deni de service, d'exécuter du code arbitraire ou de faire\nanormalement grossir les journaux d'événements de Novell eDirectory.  \nDeux autres vulnérabilités existent dans la fonction\nevtFilteredMonitorEventsRequest dues à une mauvaise gestion de\nl'allocation et de la libération de la mémoire. Ces vulnérabilités\npermettent à un utilisateur mal intentionné de réaliser un déni de\nservice ou d'exécuter du code arbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4177",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4177"
+    },
+    {
+      "name": "CVE-2006-4520",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4520"
+    },
+    {
+      "name": "CVE-2006-4509",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4509"
+    },
+    {
+      "name": "CVE-2006-4510",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4510"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Novell TID 3686202 du 23 octobre 2006    :",
+      "url": "http://www.novell.com/support/search.do?cmd=displayKC&docType=kc&externalId=3686202&sliceID=SAL_Public&dialogID=16474066&stateId=0%200%2016472624"
+    },
+    {
+      "title": "Bulletin de sécurité Novell TID 3936018 du 23 octobre 2006    :",
+      "url": "http://www.novell.com/support/search.do?cmd=displayKC&docType=kc&externalId=3936018&sliceID=SAL_Public&dialogID=16474084&stateId=0%200%2016472669"
+    },
+    {
+      "title": "Bulletin de sécurité Novell TID 3496175 du 23 octobre 2006    :",
+      "url": "http://www.novell.com/support/search.do?cmd=displayKC&docType=kc&externalId=3496175&sliceID=SAL_Public&dialogID=16474084&stateId=0%200%2016472669"
+    },
+    {
+      "title": "Bulletin de sécurité Novell TID 3924657 du 23 octobre 2006    :",
+      "url": "http://www.novell.com/support/search.do?cmd=displayKC&docType=kc&externalId=3924657&sliceID=SAL_Public&dialogID=16474066&stateId=0%200%2016472624"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-462",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans Novell eDirectory permettent\nà un utilisateur mal intentionné d'exécuter du code arbitraire à\ndistance ou de réaliser un déni de service.\n",
+  "title": "Multiples vulnérabilités dans Novell eDirectory",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Novell eDirectory",
+      "url": null
+    }
+  ]
+}

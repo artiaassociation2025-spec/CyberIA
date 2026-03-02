@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Samba versions antérieures à la version 2.2.11.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Samba versions antérieures à la version 3.0.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSamba est un logiciel libre, open source, utilisé pour la mise en oeuvre\ndes partages réseau à l'aide des protocoles SMB et CIFS sous Unix.  \nPlusieurs vulnérabilités permettent à un utilisateur mal intentionné,\nvia l'envoi de requêtes habilement selectionnées, de créer un déni de\nservice en provoquant l'arrêt brutal du service Samba smbd.\n\n## Solution\n\n-   A partir des sources, mettre à jour Samba en version 2.2.11 ou en\n    version 3.0.6. Les sources de Samba sont téléchargeables à l'adresse\n    suivante :\n\n        http://download.samba.org/samba/ftp/\n\n-   Se référer au bulletin de sécurité de l'éditeur pour l'obtention des\n    correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de Samba :",
+      "url": "http://www.samba.org"
+    },
+    {
+      "title": "Note relative à la sortie de Samba 3.0.6 :",
+      "url": "http://samba.org/samba/history/samba-3.0.6.html"
+    },
+    {
+      "title": "Message dans la liste de diffusion BugTraq du 31 août 2004    :",
+      "url": "http://www.securityfocus.com/archive/1/373619"
+    },
+    {
+      "title": "Note relative à la sortie de Samba 2.2.11 :",
+      "url": "http://samba.org/samba/history/samba-2.2.11.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200409-14 du 09 septembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200409-14.xml"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-307",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Samba permettent à un utilisateur mal\nintentionné de provoquer un déni de service.\n",
+  "title": "Vulnérabilité de Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA 200409-14 du 09 septembre 2004",
+      "url": null
+    }
+  ]
+}

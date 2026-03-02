@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Produits <SPAN class=\"textit\">Richards-Zeta Mediator    2500</SPAN> ;</LI>    <LI><SPAN class=\"textit\">Cisco Network Building Mediator</SPAN>    modèles NBM-2400 et NBM-4800.</LI>  </UL>  <P>Toutes les versions du logiciel <SPAN class=\"textit\">Mediator  Framework</SPAN> antérieures à 3.1.1 sont affectées.</P>",
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Cisco Network\nBuilding Mediator :\n\n-   des identifiants par défaut sont assignés à de nombreux comptes,\n    incluant celui de l'administrateur (CVE-2010-0595) ;\n-   des utilisateurs authentifiés, ne disposant pas des droits requis,\n    peuvent lire et modifier la configuration du matériel (CVE-2010-0596\n    et CVE-2010-0597) ;\n-   les identifiants de connexion peuvent être interceptés\n    (CVE-2010-0598 et CVE-2010-0599) ;\n-   un attaquant peut lire les fichiers de configuration du système et\n    obtenir notamment la liste des comptes et leur mot de passe associé.\n    Cette attaque ne nécessite pas d'authentification préalable\n    (CVE-2010-0600).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0600",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0600"
+    },
+    {
+      "name": "CVE-2010-0595",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0595"
+    },
+    {
+      "name": "CVE-2010-0598",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0598"
+    },
+    {
+      "name": "CVE-2010-0596",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0596"
+    },
+    {
+      "name": "CVE-2010-0597",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0597"
+    },
+    {
+      "name": "CVE-2010-0599",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0599"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20100526-mediator du 26 mai 2010    :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20100526-mediator.shtml"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-229",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-05-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès au système"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Cisco Network\nBuilding Mediator</span> permettent notamment d'obtenir un accès\nadministrateur au système.\n",
+  "title": "Multiples vulnérabilités dans Cisco Network Building Mediator",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-sa-20100526-mediator du 26 mai 2010",
+      "url": null
+    }
+  ]
+}

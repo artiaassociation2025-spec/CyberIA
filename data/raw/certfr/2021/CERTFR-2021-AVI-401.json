@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Db2 versions v9.7, v10.1, v10.5, v11.1 et v11.5 (uniquement sur l'environnement Windows)",
+      "product": {
+        "name": "Db2",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\n## Contournement provisoire\n\nL'éditeur propose une mesure de contournement temporaire en annulant\nl'enregistrement de l*'agent.exe*.\n",
+  "cves": [
+    {
+      "name": "CVE-2019-4588",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-4588"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2021-AVI-401",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-05-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits IBM.\nElles permettent à un attaquant de provoquer une exécution de code\narbitraire à distance et une injection de requêtes illégitimes par\nrebond (CSRF).\n",
+  "title": "Vulnérabilité dans IBM Db2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM 6456029 du 25 mai 2021",
+      "url": "https://www.ibm.com/support/pages/node/6456029"
+    }
+  ]
+}

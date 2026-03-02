@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Metadirectory Services 2.2</P>",
+  "content": "## Description\n\nMicrosoft Metadirectory Services (MMS) est un service qui permet\nd'assurer des fonctions d'interconnection, d'interopérabilité et de\ngestion centralisée de bases de données et d'annuaires, distribués et\nhétérogènes.\n\nUn défaut dans les mécanismes d'authentification permet à un utilisateur\nmal intentionné de contourner ces mécanismes et d'obtenir les privilèges\nde l'administrateur.\n\n## Contournement provisoire\n\nLe filtrage du port 389 permet d'éviter l'exploitation de cette\nvulnérabilité par un utilisateur se trouvant à l'extérieur du réseau.\n\n## Solution\n\nAppliquer le patch pour Microsoft Metadirectory Services 2.2 Service\nPack 1 fournit par Microsoft :\n\n    http://download.microsoft.com/download/mms22/Patch/Q317138/NT5/EN-US/Q317138.EXE\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-158",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-07-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut obtenir les privilèges de\nl'administrateur, en contournant les mécanismes d'authentification.\n",
+  "title": "Vulnérabilité dans Microsoft Metadirectory Services",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS02-036 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-036.asp"
+    }
+  ]
+}

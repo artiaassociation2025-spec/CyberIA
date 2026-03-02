@@ -1,0 +1,208 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Adaptive Security Appliance (ASA), se référer au site de l'éditeur pour vérifier les versions vulnérables (cf. section Documentation)",
+      "product": {
+        "name": "Adaptive Security Appliance",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Identity Services Engine (ISE) versions antérieures à 2.7P10",
+      "product": {
+        "name": "Identity Services Engine",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Identity Services Engine (ISE) versions 3.1.x antérieures à 3.1P8 (annoncée courant novembre 2023, la vulnérabilité CVE-2023-20213 est corrigée dans la version 3.1P6)",
+      "product": {
+        "name": "Identity Services Engine",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Identity Services Engine (ISE) versions 3.2.x antérieures à 3.2P3",
+      "product": {
+        "name": "Identity Services Engine",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Firepower Threat Defense (FTD), se référer au site de l'éditeur pour vérifier les versions vulnérables (cf. section Documentation)",
+      "product": {
+        "name": "Firepower Threat Defense",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Firepower Management Center (FMC), se référer au site de l'éditeur pour vérifier les versions vulnérables (cf. section Documentation)",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Identity Services Engine (ISE) versions 3.0.x antérieures à 3.0P8",
+      "product": {
+        "name": "Identity Services Engine",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-20213",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-20213"
+    },
+    {
+      "name": "CVE-2023-20155",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-20155"
+    },
+    {
+      "name": "CVE-2023-20063",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-20063"
+    },
+    {
+      "name": "CVE-2023-20219",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-20219"
+    },
+    {
+      "name": "CVE-2023-20196",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-20196"
+    },
+    {
+      "name": "CVE-2023-20086",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-20086"
+    },
+    {
+      "name": "CVE-2023-20244",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-20244"
+    },
+    {
+      "name": "CVE-2023-20220",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-20220"
+    },
+    {
+      "name": "CVE-2023-20083",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-20083"
+    },
+    {
+      "name": "CVE-2023-20175",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-20175"
+    },
+    {
+      "name": "CVE-2023-20170",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-20170"
+    },
+    {
+      "name": "CVE-2023-20095",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-20095"
+    },
+    {
+      "name": "CVE-2023-20048",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-20048"
+    },
+    {
+      "name": "CVE-2023-20195",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-20195"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0906",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-11-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Cisco.\nElles permettent à un attaquant de provoquer une exécution de code\narbitraire à distance, un déni de service à distance et une atteinte à\nl'intégrité des données.\n\nDans le bulletin de sécurité Cisco cisco-sa-ftd-intrusion-dos-DfT7wyGC\ndu 01 novembre 2023, Cisco fournit des indicateurs de compromission pour\nvérifier si la vulnérabilité CVE-2023-20244 a été exploitée.\n",
+  "title": "Multiples vulnérabilités dans les produits Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-asa-icmpv6-t5TzqwNd du 01 novembre 2023",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asa-icmpv6-t5TzqwNd"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-ftd-intrusion-dos-DfT7wyGC du 01 novembre 2023",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-intrusion-dos-DfT7wyGC"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-ise-file-upload-FceLP4xs du 01 novembre 2023",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-file-upload-FceLP4xs"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-fmc-cmd-inj-29MP49hN du 01 novembre 2023",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-cmd-inj-29MP49hN"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-ftd-icmpv6-dos-4eMkLuN du 01 novembre 2023",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-icmpv6-dos-4eMkLuN"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-ise-injection-QeXegrCw du 01 novembre 2023",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ise-injection-QeXegrCw"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-fmc-logview-dos-AYJdeX55 du 01 novembre 2023",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-logview-dos-AYJdeX55"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-fmc-cmdinj-bTEgufOX du 01 novembre 2023",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-fmc-cmdinj-bTEgufOX"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-asa-webvpn-dos-3GhZQBAS du 01 novembre 2023",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asa-webvpn-dos-3GhZQBAS"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-ftd-fmc-code-inj-wSHrgz8L du 01 novembre 2023",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-fmc-code-inj-wSHrgz8L"
+    }
+  ]
+}

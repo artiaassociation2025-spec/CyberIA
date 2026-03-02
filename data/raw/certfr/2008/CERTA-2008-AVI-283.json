@@ -1,0 +1,79 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMware ACE 2.0.3 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Fusion 1.1.1 et versions antérieures.",
+      "product": {
+        "name": "Fusion",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Player 2.0.3 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Workstation 6.0.3 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa première vulnérabilité affecte la fonctionnalité HGFS (Host Guest\nFile System) qui permet de réaliser un partage de fichiers entre le\nsystème virtualisé et le système hôte. Une vulnérabilité de type\ndébordement de mémoire permet à une personne malveillant d'exécuter du\ncode arbitraire sur le système réel.\n\nCette vulnérabilité n'est pas exploitable dans la configuratin par\ndéfaut, sachant qu'aucun répertoire n'est partagé.\n\nLa seconde vulnérabilité affecte le service VMCI (Virtual Machine\nCommunication Interface. Cette vulnérabilité permet à une personne\nmalveillante d'exécuter du code arbitraire sur le système hôte\nfonctionnant sous Microsoft Windows. Cette vulnérabilité est causée par\nune erreur dans le traitement des fichiers de configuration vmx.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2099",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2099"
+    },
+    {
+      "name": "CVE-2008-2098",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2098"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2008-AVI-283",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-06-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Deux vulnérabilités affectent les produits VMware. Elles permettent à\nune personne malveillante ayant accès au système virtualisé d'exécuter\ndu code arbitraire sur l'hôte.\n",
+  "title": "Multiples vulnérabilités dans les produits VMware",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware VMSA-2008-0008 du 30 mai 2008",
+      "url": "http://www.vmware.com/security/advisories/VMSA-2008-0008.html"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Indépendamment du système, les versions suivantes de SDK  (<SPAN class=\"textit\">Software Development Kit</SPAN>) et JRE  sont vulnérables :</P>  <UL>    <LI>Sous Windows et Solaris :      <UL>        <LI>SDK et JRE 1.2.2_005 et précédentes ;</LI>        <LI>SDK et JRE 1.2.1_003 et précédentes ;</LI>        <LI>JDK et JRE 1.1.8_003 et précédentes ;</LI>        <LI>JDK et JRE 1.1.7B_005 et précédentes ;</LI>        <LI>JDK et JRE 1.1.6_007 et précédentes.</LI>      </UL>    </LI>    <LI>Sous Solaris :      <UL>        <LI>SDK et JRE 1.2.2_05a et précédentes ;</LI>        <LI>SDK et JRE 1.2.1 ;</LI>        <LI>JDK et JRE 1.1.8_10 et précédentes ;</LI>        <LI>JDK et JRE 1.1.7B ;</LI>        <LI>JDK et JRE 1.1.6.</LI>      </UL>    </LI>    <LI>Sous Linux : SDK et JRE 1.2.2_005 et précédentes.</LI>    <LI>Sous HP MPE/iX versions 5.5, 6.0 et 6.5 :      <UL>        <LI>JDK/JRE 1.1 ;</LI>        <LI>JDK/JRE 1.2 ;</LI>        <LI>MPE Versions A.22.04 et supérieures.</LI>      </UL>    </LI>  </UL>",
+  "content": "## Description\n\nUne classe java habilement construite peut faire appel à des commandes\nnon autorisées du système. Cependant, il faut pour cela que la\npermission ait été donnée à Java d'exécuter au moins une commande.\n\n## Contournement provisoire\n\nRetirer à Java la permission d'exécuter des commandes en attendant\nd'appliquer le correctif.\n\n## Solution\n\nAppliquer le correctif en fonction du produit :\n\n-   SDK et JRE 1.2.2_007 :\n\n        http://java.sun.com/products/jdk/1.2/\n\n-   SDK et JRE 1.2.1_004\n\n        http://java.sun.com/products/jdk/1.2.1/\n\n-   SDK et JRE 1.1.8_006\n\n        http://java.sun.com/products/jdk/1.1/\n\n-   SDK et JRE 1.1.7B_007\n\n        http://java.sun.com/products/jdk/1.1.7B/\n\n-   SDK et JRE 1.1.6_009\n\n        http://java.sun.com/products/jdk/1.1.6/\n\n-   JDK et JRE 1.2.2_007 :\n\n        http://www.sun.com/software/solaris/java/download.html\n\n-   JDK et JRE 1.1.8_12 Pour Solaris :\n\n        http://www.sun.com/software/solaris/java/archive.html\n\n-   Pour HP MPE/iX 5.5 rechercher le correctif MPELX89D à l'adresse\n    suivante :\n\n        http://itrc.com/\n\n-   Pour HP MPE/iX 6.0 rechercher le correctif MPELX89E à l'adresse\n    suivante :\n\n        http://itrc.hp.com/\n\n-   Pour HP MPE/iX 6.5 rechercher le correctif MPELX89F à l'adresse\n    suivante :\n\n        http://itrc.hp.com/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sun :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doctype=coll&doc=secbull/201&type=0&nav=sec.sba"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-022",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-02-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de commandes systèmes interdites, élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité du <span class=\"textit\">Java Runtime\nEnvironment</span> permet à un utilisateur mal intentionné d'exécuter\ndes commandes qui lui sont normalement interdites à l'aide d'une classe\nJava.\n",
+  "title": "Vulnérabilité dans le <SPAN class= \"textit\">Java Runtime Environment</SPAN> (JRE) de Sun",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Sun et HP",
+      "url": null
+    }
+  ]
+}

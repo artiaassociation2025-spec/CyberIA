@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de KDE jusqu'à la  version 3.0.2 incluse sont vulnérables.</p>",
+  "content": "## Description\n\nLes certificats au standard X.509 possèdent plusieurs champs d'options.\nUn de ces champs s'appelle « Basic Constraints Field » et indique la\nlongueur maximum autorisée pour une chaine de certificats ainsi que si\nle certificat est d'autorité ou non. Les librairies de KDE ne vérifient\npas ce champ et donc, un certificat, habilement conçu par un utilisateur\nmal intentionné, peut passer pour un certificat d'autorité.\n\n## Solution\n\n-   Installer la version 3.0.3 des librairies de KDE (kdelibs3.0.3) ;\n-   Un correctif est disponible pour kde 2.2.2 (Consulter la section\n    Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-203",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2002-09-06T00:00:00.000000"
+    },
+    {
+      "description": "Ajout du bulletin de sécurité de Debian ;",
+      "revision_date": "2002-09-09T00:00:00.000000"
+    },
+    {
+      "description": "Ajout du bulletin de sécurité de Mandrake.",
+      "revision_date": "2002-09-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    }
+  ],
+  "summary": "KDE ne vérifie pas tous les champs des certificats utilisés pour\nauthentifier des pages Web ou pour signer des méls. Un utilisateur mal\nintentionné peut générer son propre certificat permettant une usurpation\nd'identité (attaque de type « man in the middle »).\n",
+  "title": "Vulnérabilité des certificats SSL dans KDE",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis #20020818-1 de KDE",
+      "url": "http://www.kde.org/info/security/advisory-20020818-1.txt"
+    }
+  ]
+}

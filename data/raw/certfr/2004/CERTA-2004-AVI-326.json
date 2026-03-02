@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Symantec Firewall/VPN Appliance 100 en version du firmware antérieure à 1.63 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec Firewall/VPN Appliance 200/200R en version du firmware antérieure à 1.63 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec Gateway Security 360/360R en version du firmware antérieure à 622.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec Gateway Security 320 en version du firmware antérieure à 622 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois vulnérabilités affectent certains produits Symantec.\n\nLa première permet de réaliser un déni de service en envoyant rapidement\ndes paquets UDP sur tous les ports de l'interface Internet du pare-feu.\n\nLa seconde permet d'identifier les services UDP en envoyant des paquets\nayant le port 53/udp en source sur l'interface Internet du pare-feu.\n\nLa troisième vulnérabilité concerne l'existence de noms de communauté\nSNMP par défaut qui ne peuvent être ni désactivés ni modifiés par\nl'interface d'administration. En exploitant la seconde vulnérabilité, il\nest possible d'envoyer des requêtes SNMP GET/SET.\n\n## Solution\n\nMettre le firmware à jour (version 1.63 pour Symantec Firewall/VPN\nAppliance et version 622 pour Symantec Gateway Security) :\n\n    http://www.symantec.com/techsupp\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SYM04-013 de Symantec du 22 septembre  2004 :",
+      "url": "http://securityresponse.symantec.com/avcenter/security/Content/2004.09.22.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-326",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Modification de la configuration du garde-barrière"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement des règles de filtrage pour l'interface internet"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités dans les pare-feux Symantec",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SYM04-013 de Symantec du 22 septembre 2004",
+      "url": null
+    }
+  ]
+}

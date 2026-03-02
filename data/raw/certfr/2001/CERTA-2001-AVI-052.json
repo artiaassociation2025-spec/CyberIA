@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous les routeurs CISCO.</P>",
+  "content": "## Description\n\nLe protocole HSRP (Hot Standby Routing Protocol) est un protocole de\nroutage implémenté dans les routeurs CISCO pour la gestion des liens de\nsecours. HSRP sert à augmenter la tolérance de panne sur le réseau.\n\nD'après CISCO, HSRP n'est pas un protocole sécurisé. Il n'est pas activé\npar défaut.\n\nDans ce protocole, la clé d'authentification des communications entre\nrouteurs est diffusée en clair sur le réseau, et permet à une machine\nfalsifiant l'adresse IP d'un des routeurs d'entraîner un mauvais routage\ndes paquets et des conflits de priorité entre les routeurs.\n\nCette vulnérabilité permet entre autre chose d'effectuer un déni de\nservice, ou une « tempête » sur le réseau. Des outils exploitants de\ncette vulnérabilité ont été diffusés sur l'Internet.\n\n## Contournement provisoire\n\n-   Filtrer le port 1985 en UDP pour les packets provenant de\n    l'extérieur du réseau impliqué.\n-   CISCO propose d'installer IPSec entre les routeurs conformément au\n    document cité dans le paragraphe documentation afin de chiffrer les\n    communications HSRP et par conséquent la clé d'authentification.\n-   Utiliser un autre protocole : VRRP à la place de HSRP.\n\n## Solution\n\nCISCO n'a pas l'intention de développer de correctif pour cette\nvulnérabilité.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-052",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-05-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité pouvant avoir pour conséquences un déni de service ou des « tempêtes » réseau"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la gestion de l'authentification sous HSRP des\nrouteurs CISCO permet à un utilisateur mal intentionné de falsifier\nl'identité d'un routeur CISCO. Cette vulnérabilité est connue depuis\nlongtemps.\n",
+  "title": "Vulnérabilité du protocole HSRP sur les routeurs CISCO",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "<P>Documentation sur CISCO HSRP et IPSEC</P>",
+      "url": null
+    }
+  ]
+}

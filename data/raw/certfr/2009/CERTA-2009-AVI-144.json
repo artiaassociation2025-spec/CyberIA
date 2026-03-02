@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Explorer 7.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 5.01 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Microsoft Internet\nExplorer et permettent à une personne distante malintentionnée\nd'exécuter du code arbitraire :\n\n-   une erreur existe dans la fonction de localisation et d'ouverture\n    des fichiers sur le système (CVE-2008-2540) ;\n-   une erreur existe dans le traitement des informations\n    d'identification NTLM par WinINet lorsque celles-ci sont envoyées\n    via HTTP (CVE-2009-0550) ;\n-   une corruption mémoire existe dans la manière dont Microsoft\n    Internet Explorer traite les transitions entre pages web\n    (CVE-2009-0551) ;\n-   plusieurs erreurs existent dans la manière dont Microsoft Internet\n    Explorer accède à un objet mal initialisé ou supprimé\n    (CVE-2009-0552, CVE-2009-0553 et CVE-2009-0554) ;\n\n## Solution\n\nSe référer au bulletin de sécurité MS09-014 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2540",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2540"
+    },
+    {
+      "name": "CVE-2009-0553",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0553"
+    },
+    {
+      "name": "CVE-2009-0551",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0551"
+    },
+    {
+      "name": "CVE-2009-0550",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0550"
+    },
+    {
+      "name": "CVE-2009-0552",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0552"
+    },
+    {
+      "name": "CVE-2009-0554",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0554"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-144",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-04-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent Microsoft Internet Explorer et\npermettent à une personne malintentionnée d'exécuter du code arbitraire\nà distance.\n",
+  "title": "Multiples vulnérabilités dans Microsoft Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS09-014 du 14 avril 2009",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-014.mspx"
+    }
+  ]
+}

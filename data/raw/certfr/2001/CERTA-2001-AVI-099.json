@@ -1,0 +1,26 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>ArcServe versions 6.61 et 2000 pour Windows NT.</P>",
+  "content": "## Description\n\nLors de l'installation de ArcServe sur une machine Windws NT, un partage\ncaché (ARCSERVE\\$) est créé. Or ce partage possède des droits trop\npermissifs qui permettent à un utilisateur distant de récupérer le mot\nde passe en clair du compte sous lequel est exécuté ArcServe.\n\nCette attaque se fait par le protocole NetBios.\n\n## Contournement provisoire\n\nN'autoriser les accès au partage \"ARCSERVE\\$\" que pour les groupes\n\"Administrateurs\" et \"Opérateurs de sauvegarde\".\n\nPour éviter ce type d'attaques depuis l'Internet, le garde-barrière ne\ndoit pas autoriser l'accès aux répertoires partagés depuis l'Internet,\nou bloquer le protocole NetBios.\n\n## Solution\n\n-   pour la version 2000, appliquer le correctif suivant :\n\n        ftp://ftp.ca.com/CAproducts/unicenter/arcserveitaent/0006/qo00945/QO00945.CAZ\n\n      \n\n-   pour la version 6.61, mettre à jour en installant la version 2000 et\n    appliquer le correctif ci-dessus.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-099",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-09-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès à des données du système"
+    },
+    {
+      "description": "Accès à des mots de passe en clair"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut accèder à un fichier contenant le\nlogin et le mot de passe en clair du compte sous lequel est exécuté\nArcServe.\n",
+  "title": "Vulnérabilité dans ArcServe pour Windows NT",
+  "vendor_advisories": []
+}

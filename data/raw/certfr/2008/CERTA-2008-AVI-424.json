@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions de GnuTLS antérieures à 2.4.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "GnuTLS",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans la bibliothèque GnuTLS. Elle\nconcerne la fonction \\_gnutls_handshake_hash_buffers_clear qui ne\nmanipulerait pas correctement certaines données.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). Il faut noter que la nouvelle\nbranche de GnuTLS (2.5.x) est en cours de développement depuis le début\ndu mois de juillet. Les dernières modifications ont été effectuées dans\nla version 2.5.4.\n\nCependant, à la date de rédaction de cet avis, la dernière version\nstable est la 2.4.1.\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2377",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2377"
+    }
+  ],
+  "links": [
+    {
+      "title": "Répertoires de téléchargement de la bibliothèque GnuTLS :",
+      "url": "ftp://ftp.gnutls.org/pub/gnutls/"
+    },
+    {
+      "title": "Détails du correctif appliqué dans la branche 2.4.1 :",
+      "url": "http://article.gmane.org/gmane.comp.encryption.gpg.gnutls.devel/2947"
+    },
+    {
+      "title": "Annonces de sécurité GnuTLS :",
+      "url": "http://www.gnu.org/software/gnutls/security.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-424",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-08-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans la bibliothèque GnuTLS.\nL'exploitation de cette dernière permettrait sous certaines conditions à\nune personne distante de perturber voire d'exécuter du code arbitraire\nsur le système vulnérable.\n",
+  "title": "Vulnérabilité dans GnuTLS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce CVE-2008-2377 du 12 août 2008",
+      "url": null
+    }
+  ]
+}

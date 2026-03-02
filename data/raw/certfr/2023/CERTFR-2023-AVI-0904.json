@@ -1,0 +1,116 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Nessus versions antérieures à 10.6.2 (la version 10.5.6 est affectée par la vulnérabilité CVE-2023-45853)",
+      "product": {
+        "name": "Nessus",
+        "vendor": {
+          "name": "Tenable",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tenable Security Center versions 5.23.1, 6.0.0, 6.1.0, 6.1.1 et 6.2.0 sans le correctif de sécurité SC-202310.1",
+      "product": {
+        "name": "Security Center",
+        "vendor": {
+          "name": "Tenable",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Nessus Agent version 10.4.2, migrer sur la version 10.4.3",
+      "product": {
+        "name": "Nessus Agent",
+        "vendor": {
+          "name": "Tenable",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-38546",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-38546"
+    },
+    {
+      "name": "CVE-2023-45853",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-45853"
+    },
+    {
+      "name": "CVE-2023-3817",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-3817"
+    },
+    {
+      "name": "CVE-2023-4807",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-4807"
+    },
+    {
+      "name": "CVE-2023-5847",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-5847"
+    },
+    {
+      "name": "CVE-2023-3446",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-3446"
+    },
+    {
+      "name": "CVE-2023-38545",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-38545"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0904",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-11-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Non spécifié par l'éditeur"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits\nTenable. Certaines d'entre elles permettent à un attaquant de provoquer\nun problème de sécurité non spécifié par l'éditeur, un déni de service à\ndistance et un contournement de la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans les produits Tenable",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Tenable tns-2023-38 du 31 octobre 2023",
+      "url": "https://www.tenable.com/security/tns-2023-38"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Tenable tns-2023-35 du 31 octobre 2023",
+      "url": "https://www.tenable.com/security/tns-2023-35"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Tenable tns-2023-36 du 31 octobre 2023",
+      "url": "https://www.tenable.com/security/tns-2023-36"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Tenable tns-2023-37 du 31 octobre 2023",
+      "url": "https://www.tenable.com/security/tns-2023-37"
+    }
+  ]
+}

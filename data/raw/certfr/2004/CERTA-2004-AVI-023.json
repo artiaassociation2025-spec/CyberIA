@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD 5.2 et versions antérieures, FreeBSD 4.9 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenBSD 3.4 et versions antérieures.",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nshmat() permet d'inclure un segment de mémoire partagée dans l'espace\nd'adressage d'un processus.\n\nUne vulnérabilité est présente dans la fonction shmat() (problème dans\nla gestion des références à un segment de mémoire partagée). Un\nutilisateur local peut exploiter cette vulnérabilité pour réaliser une\nélévation de privilèges et obtenir les droits du super-utilisateur root\nsur la plate-forme vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs :\n\n-   Bulletin de sécurité FreeBSD-SA-04:02.shmat de FreeBSD :\n\n        ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-04:02.shmat.asc\n\n-   Bulletin de sécurité d'OpenBSD :\n\n        http://www.openbsd.org/errata.html#sysvshm\n\n-   Bulletin de sécurité de NetBSD :\n\n        ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2004-004.txt.asc\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité PINE-CERT-20040201 de Pine Digital    Security :",
+      "url": "http://www.pine.nl/press/pine-cert-20040201.txt"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-023",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-02-06T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence au bulletin de sécurité de NetBSD.",
+      "revision_date": "2004-02-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans la fonction shmat() présente dans les\nnoyaux de souche BSD peut être exploitée par un utilisateur mal\nintentionné pour réaliser une élévation de privilèges.\n",
+  "title": "Vulnérabilité de shmat sur les noyaux BSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PINE-CERT-20040201 de Pine Digital Security",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD-SA-04:02.shmat de FreeBSD",
+      "url": null
+    }
+  ]
+}

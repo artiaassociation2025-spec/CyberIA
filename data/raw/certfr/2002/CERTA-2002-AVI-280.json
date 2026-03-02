@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Cyrus IMAP Server versions 2.1.10 ou  antérieures.</p>",
+  "content": "## Description\n\nLe serveur Cyrus IMAP permet à un utilisateur distant de récupérer ses\nmessages électroniques via les protocoles IMAP, POP3 ou KPOP.\n\n  \n\nUne vulnérabilité de type débordement de mémoire présente dans le\nserveur Cyrus IMAP permet, sous certaines conditions, à un utilisateur\ndistant d'éxécuter du code arbitraire sur la machine hébergeant le\nserveur vulnérable.\n\nIl est à noter que cette vulnérabilité est exploitable avant la phase\nd'authentification.\n\n## Solution\n\nLa version 2.1.11 de Cyrus IMAP Server corrige cette vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité DSA-215 de Debian :",
+      "url": "http://www.debian.org/security/2002/dsa-215"
+    },
+    {
+      "title": "Site de Cyrus IMAP Server :",
+      "url": "http://asg.web.cmu.edu/cyrus/imapd/"
+    },
+    {
+      "title": "Note VU#740169 du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/740169"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE-SA:2002:048 de SuSE :",
+      "url": "http://www.suse.com/de/security/2002_048_cyrus_imapd.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-280",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité SuSE-SA:2002:048 de SuSE.",
+      "revision_date": "2003-01-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le serveur Cyrus IMAP permet à un\nutilisateur mal intentionné d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité de Cyrus IMAP Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de Sécurité DSA-215 de Debian",
+      "url": null
+    }
+  ]
+}

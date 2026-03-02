@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IBM WebSphere 6.x et 7.x.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été corrigées dans IBM WebSphere :\n\n-   lors de la déconnexion d'un utilisateur, celui-ci peut être dérouté\n    vers une page non légitime, permettant par exemple le filoutage ;\n-   un problème dans la bibliothèque de programmes APR (Apache Portable\n    Runtime) permet à un utilisateur malveillant d'épuiser les\n    ressources processeur à distance ;\n-   un utilisateur local peut obtenir des informations sensibles au\n    moyen d'une requête spécialement construite à destination de la\n    console d'administration ;\n-   la vérification de validité des certificats de clefs publiques est\n    incorrecte ;\n-   la console d'administration permet l'injection de requêtes par\n    rebond (CRSF) ;\n-   un utilisateur distant peut, sans autorisation, parcourir\n    l'arborescence du système de fichiers au moyen d'un adresse (URI)\n    particulière ;\n-   l'encapsulation de signatures XML permet de contourner\n    l'authentification.\n\n## Solution\n\nLes versions IBM WebSphere 6.1.0.39 et 7.0.0.19 résolvent ces problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1411",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1411"
+    },
+    {
+      "name": "CVE-2011-1356",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1356"
+    },
+    {
+      "name": "CVE-2011-1359",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1359"
+    },
+    {
+      "name": "CVE-2011-1355",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1355"
+    },
+    {
+      "name": "CVE-2011-0419",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0419"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg27007951 du 18 juillet 2011 :",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg27007951#61039"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-515",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-09-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été corrigées dans IBM WebSphere. Elles\npermettent diverses atteintes à la disponibilité, à l'intégrité et à la\nconfidentialité.\n",
+  "title": "Vulnérabilités dans IBM WebSphere",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg27014463 du 12 septembre 2011",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg27014463#70019"
+    }
+  ]
+}

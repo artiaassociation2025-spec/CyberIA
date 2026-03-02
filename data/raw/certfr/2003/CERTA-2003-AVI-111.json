@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows XP ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT 4.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT 4.0 Terminal Services Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Micorsoft Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nRPC (Remote Procedure Call) est un protocole de type client/serveur\nutilisé pour la réalisation d'applications réparties. L'adaptation de ce\nprotocole sous Windows est dérivée de celui de l'OSF (Open Software\nFoundation).\n\nUne vulnérabilité a été découverte dans la gestion des messages RPC avec\nTCP/IP. Cette vulnérabilité affecte l'interface DCOM (Distributed\nComponent Object Model) en écoute sur le port 135.\n\nUn utilisateur mal intentionné peut exploiter cette vulnérabilité afin\nd'exécuter du code arbitraire à distance avec les privilèges du compte\n`Local System`.\n\n## Contournement provisoire\n\nFiltrer le port `135/TCP` et `UDP` avec un élément de filtrage en amont.\n\n## Solution\n\nAppliquer le correctif fourni par Microsoft suivant la version du\nsystème d'exploitation (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-111",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans la mise en oeuvre des RPC\n(Remote Procedure Call) sous Windows.\n",
+  "title": "Vulnérabilité dans l'interface RPC Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #MS03-026 de Microsoft",
+      "url": "http://www.microsoft.com/security/security_bulletins/ms03-026.asp"
+    }
+  ]
+}

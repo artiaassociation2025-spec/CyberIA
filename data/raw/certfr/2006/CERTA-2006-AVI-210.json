@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions Cyrus IMAP Server antérieures à 2.3.3.</P>",
+  "content": "## Description\n\nIMAP (pour Internet Message Access Protocol) est un protocole pour\naccéder aux messages électroniques. Il faut pour cela contacter un\nserveur IMAP, tel que Cyrus IMAP Server. Une vulnérabilité de type\ndébordement de mémoire a été identifiée dans le module popsubfolders\n(fichier imap/pop3d.c) de ce dernier. Il ne gère pas correctement les\nnoms d'utilisateurs lors du traitement de la commande USER. Une personne\nmalveillante peut, à distance, utiliser cette vulnérabilité pour lancer\ndes commandes arbitraires sur la machine hébergeant le serveur Cyrus.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour sur le site du projet Cyrus IMAP Server :",
+      "url": "http://asg.web.cmu.edu/cyrus/imapd/"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-210",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans le module popsubfolders des\ndifférentes versions de Cyrus IMAP Server. Un utilisateur malveillant\ndistant peut l'utiliser afin d'exécuter des commandes arbitraires sur la\nmachine hébergeant le serveur Cyrus.\n",
+  "title": "Vulnérabilité dans Cyrus IMAP Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise à jour du projet Cyrus IMAP Server",
+      "url": null
+    }
+  ]
+}

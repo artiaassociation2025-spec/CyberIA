@@ -1,0 +1,101 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Toutes les versions antérieures à xli 1.17.0-r1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "toutes les versions antérieures à xloadimage 4.1-r2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nxli et xloadimage sont utilisés pour afficher et manipuler un grand\nchoix de formats d'image.\n\n-   Une première vulnérabilité découverte dans le traitement des images\n    compressées peut être exploitée par un utilisateur distant mal\n    intentionné afin d'injecter des commandes shell au moyen d'un\n    fichier malicieusement nommé ;\n-   une seconde vulnérabilité de type débordement de mémoire est\n    présente dans la fonction facesload(). Cette vulnérabilité permet à\n    un utilisateur mal intentionné d'exécuter du code arbitraire à\n    distance au moyen d'un fichier image malicieusement construit ;\n-   la validation des propriétés des images présente certaines erreurs\n    pouvant être exploitées afin d'exécuter du code arbitraire.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletins de sécurité FreeBSD pour xli et xloadimage du 03    juin 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-xli.html"
+    },
+    {
+      "title": "Bulletin de sécurité Avaya ASA-2005-134 du 14 juin 2005 :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2005-134_RHSA-2005-332.pdf"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:076 du 20 avril    2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:076"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-695 du 21 mars 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-695"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-694 du 21 mars 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-694"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2005:332 du 19 avril 2005    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-332.html"
+    },
+    {
+      "title": "Bulletins de sécurité FreeBSD pour xli et xloadimage du 03    juin 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-xloadimage.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-114",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-03-14T00:00:00.000000"
+    },
+    {
+      "description": "changement titre. Ajout référence CVE CAN-2005-0638. Ajout référence aux bulletins de sécurité DSA-694 et DSA-695 de Debian.",
+      "revision_date": "2005-03-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Red Hat et Mandriva.",
+      "revision_date": "2005-04-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité FreeBSD.",
+      "revision_date": "2005-06-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Avaya ASA-2005-134.",
+      "revision_date": "2005-06-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités découvertes dans xli permettent à un\nutilisateur mal intentionné d'exécuter du code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités de xli",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA 200503-05 du 02 mars 2005",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200503-05.xml"
+    }
+  ]
+}

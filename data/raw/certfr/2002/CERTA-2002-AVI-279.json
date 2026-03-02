@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Safe.pm version 2.06 dans Perl 5.6.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Safe.pm version 2.07 dans Perl 5.8.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe module `Safe` permet la création de compartiments dans lesquels du\ncode perl peut être évalué sans aucun accès à des variables extérieures.\n\nUne vulnérabilité présente dans l'une des fonctions de ce module ne\npermet pas de garantir la bonne exécution du code dans ce compartiment.\n\n## Solution\n\nMettre à jour les versions affectées de Perl.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "bulletin de sécurité Trustix :",
+      "url": "http://www.trustix.net/errata/misc/2002/TSL-2002-0087-perl.asc.txt"
+    },
+    {
+      "title": "bulletin de sécurité Debian :",
+      "url": "http://www.debian.org/security/2002/dsa-208"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-279",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Baisse du niveau de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans l'une des fonctions du module\n`safe.pm`.\n",
+  "title": "Vulnérabilité dans PERL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de securite DEBIAN DSA208-1",
+      "url": null
+    }
+  ]
+}

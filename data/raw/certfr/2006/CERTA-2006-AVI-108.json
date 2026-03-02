@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mac OS X version 10.4.5",
+      "product": {
+        "name": "macOS",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mac OS X Server version 10.4.5",
+      "product": {
+        "name": "macOS",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités existent dans la version actuelle de Mac 0S\nX v.10.4.5. Parmi les services impactés, nous notons :\n\n-   Mail : Une personne malveillante peut envoyer un courriel\n    particulier avec pièces jointes, afin d'inciter l'utilisateur à\n    ouvrir celles-ci. Cette action peut entraîner un dépassement de\n    tampon permettant l'exécution de code arbitraire sur le système. Le\n    problème n'existe pas pour les versions Mac OS antérieures à 10.4.\n-   Safari, LaunchServices : Safari ouvre automatiquement des fichiers\n    courants, comme les images ou les vidéos. Une personne malveillante\n    peut alors insérer sur son site un code ayant une telle apparence,\n    afin d'exécuter un code arbitraire à distance. Le problème n'existe\n    pas pour les versions de Mac OS antérieures à 10.4.\n-   CoreTypes : Une page contenant un code JavaScript malveillant permet\n    d'accéder et modifier des documents d'origine différente (voir la\n    notion sous Mac OS de Same-Origin, une origine étant un triplet\n    constitué par le protocole, le port et le serveur Internet).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0397",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0397"
+    },
+    {
+      "name": "CVE-2006-0398",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0398"
+    },
+    {
+      "name": "CVE-2006-0399",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0399"
+    },
+    {
+      "name": "CVE-2006-0396",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0396"
+    },
+    {
+      "name": "CVE-2006-0400",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0400"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Apple du 13 mars 2006 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=303453"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-108",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-03-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités dans MacOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise à jour sécurité de l'éditeur Apple",
+      "url": null
+    }
+  ]
+}

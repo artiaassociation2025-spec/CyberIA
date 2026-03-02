@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les noyaux Linux, des versions 2.6.13 jusqu'à la version  2.6.17.4 non comprise, et 2.6.16 antérieure à 2.6.16.24.</P>",
+  "content": "## Description\n\nprctl est une fonction du noyau Linux permettant d'effectuer certaines\nopérations sur les processus. Il est aussi possible, depuis les versions\n2.6.13 du noyau Linux, de spécifier si les processus peuvent créer des\nfichiers core dump, et sous quelles conditions. Cela peut être un\nargument de la fonction prctl. Une vulnérabilité a été identifiée dans\ncelle-ci combinée à un tel argument.\n\nUn utilisateur malveillant local peut profiter de cette vulnérabilité\npour éléver ses privilèges à ceux d'administrateur (root) sur le système\naffecté.\n\n## Solution\n\nSe référer aux différents bulletins de sécurité pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2451",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2451"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0574 du 07 juillet    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0574.html"
+    },
+    {
+      "title": "Mise à jour de sécurité Fedora Core 4 du 15 juillet 2006 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/4/"
+    },
+    {
+      "title": "Mise à jour des noyaux Linux :",
+      "url": "http://www.kernel.org/pub/linux/kernel/v2.6/"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-311-1 du 11 juillet 2006 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-311-1"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-295",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-07-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de la fonction prctl du noyau Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RedHat du 07 juillet 2006",
+      "url": null
+    }
+  ]
+}

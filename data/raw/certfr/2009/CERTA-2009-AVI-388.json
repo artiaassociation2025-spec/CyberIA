@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Wireshark versions 1.0.8 et antérieures ;",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Wireshark versions 1.2.1 et antérieures.",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois vulnérabilités sont présentes dans Wireshark :\n\n-   la première est relative à l'analyseur de protocole OpcUa des\n    versions 0.99.6 à 1.0.8 et 1.2.0 à 1.2.1 ;\n-   la seconde concerne l'analyseur de protocole GSM A RR des versions\n    1.2.0 et 1.2.1 ;\n-   la dernière est relative à la mise en œuvre de TLS dans les versions\n    1.2.0 et 1.2.1.\n\nToutes ces vulnérabilités permettent à un utilisateur distant\nmalintentionné de provoquer un déni de service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nLes versions 1.0.9 et 1.2.2 de Wireshark corrigent le problème :\n\n    http://www.wireshark.org.org/download.html\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2562",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2562"
+    },
+    {
+      "name": "CVE-2009-2563",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2563"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurité Wireshark du 15 septembre 2009 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2009-05.html"
+    },
+    {
+      "title": "Bulletins de sécurité Wireshark du 15 septembre 2009 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2009-06.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-388",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-09-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans Wireshark permettent à un\nutilisateur distant malintentionné de provoquer un déni de service.\n",
+  "title": "Multiples vulnérabilités dans Wireshark",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité du 15 septembre 2009",
+      "url": null
+    }
+  ]
+}

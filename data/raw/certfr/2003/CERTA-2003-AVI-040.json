@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Novell eDirectory 8.7.0.</P>",
+  "content": "## Description\n\nNovell eDirectory est une solution annuaire ouverte et multi\nplates-formes.\n\n-   Première vulnérabilité : le service DHost présente une vulnérabilité\n    de type débordement de mémoire. Un utilisateur mal intentionné peut\n    utiliser cette vulnérabilité pour exécuter du code arbitraire.\n\n    Cette vulnérabilité peut éventuellement être exploitée à distance,\n    mais cela n'a cependant pas été confirmé.\n\n-   Seconde vulnérabilité : cette vulnérabilité permet à un utilisateur\n    mal intentionné d'accéder aux fichiers du répertoire `\\dibfiles`.\n    Ces fichiers peuvent contenir des informations confidentielles.\n\n## Solution\n\nAppliquer le correctif fourni par Novell :\n\n    http://support.novell.com/servlet/tidfinder/2964477\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-040",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Accès à des informations sensibles"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes dans l'annuaire Novell\neDirectory 8.7.0.\n",
+  "title": "Vulnérabilités de Novell eDirectory",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Novell",
+      "url": "http://support.novell.com/filefinder/security/index.html"
+    }
+  ]
+}

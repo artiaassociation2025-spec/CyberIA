@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>La première vulnérabilité affecte :</P>  <UL>    <LI>Windows 2000 Server avec Active Directory activé.</LI>  </UL>  <P>La seconde vulnérabilité affecte les versions suivantes :</P>  <UL>    <LI>Microsoft Windows 2000 Advanced Server ;</LI>    <LI>Microsoft Windows 2000 Datacenter Server ;</LI>    <LI>Microsoft Windows 2000 Professional ;</LI>    <LI>Microsoft Windows 2000 Server.</LI>  </UL>",
+  "content": "## Description\n\n-   LDAP (Lightweight Data Access Protocol) est un protocole standardisé\n    permettant à un client d'interroger un annuaire situé sur un ou\n    plusieurs serveurs. C'est l'un des protocoles utilisés dans Windows\n    2000 pour accéder à Active Directory.\n\n    L'envoi d'une requête LDAP malicieusement construite vers un serveur\n    de domaine Windows 2000 permet à un utilisateur mal intentionné\n    d'effectuer un déni de service ou bien d'exécuter du code arbitraire\n    à distance.\n\n-   La primitive système ShellExecute présente dans la bibliothèque\n    shell32.dll permet d'ouvrir ou d'exécuter un fichier associé à une\n    extension connue. Cette API est utilisée dans de nombreuses\n    applications telles que les navigateurs, les messageries ou certains\n    éditeurs de texte.\n\n    Un débordement de tampon présent dans cette API permet à un\n    utilisateur mal intentionné d'exécuter du code arbitraire à distance\n    ou bien d'effectuer un déni de service.\n\n## Solution\n\nAppliquer le `Service Pack 4` pour Windows 2000.\n\n    http://www.microsoft.com/windows2000/downloads/servicepacks/sp4/default.asp\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-102",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-04T00:00:00.000000"
+    },
+    {
+      "description": "Références sources.",
+      "revision_date": "2003-11-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans certaines versions de\nWindows 2000. Elles permettent à un utilisateur mal intentionné\nd'effectuer un déni de service ou bien d'exécuter du code arbitraire à\ndistance.\n",
+  "title": "Vulnérabilités dans Windows 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Advisory CORELABS",
+      "url": "http://www.coresecurity.com/common/showdoc.php?idx=351&idxseccion=10"
+    },
+    {
+      "published_at": null,
+      "title": "Base de connaissances Microsoft",
+      "url": "http://support.microsoft.com/default.aspx?kbid=319709"
+    },
+    {
+      "published_at": null,
+      "title": "Advisory SNS",
+      "url": null
+    }
+  ]
+}

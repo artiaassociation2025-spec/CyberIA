@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PHP de la version 4.0.1 à la version 4.1.1",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PHP de la version 3.10 à la version 3.18.",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPHP est un langage permettant la création de pages Web dynamiques.\n\nPlusieurs débordements de mémoire présents dans la fonction\nphp_mime_split (fonction servant à traiter les requêtes HTTP de type\n«POST multiple-part») permettent à un utilisateur mal intentionné\nl'exécution d'un code arbitraire à distance.\n\n## Contournement provisoire\n\nDésactiver la fonction upload (file_upload = off) dans le fichier\nphp.ini.\n\n## Solution\n\nInstaller la version 4.1.2 de PHP disponible sur\n\n    http://www.php.net\n\nou appliquer le correctif de la version concernée.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-047",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution d'un code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de type « débordement de mémoire » permettent à\nun utilisateur mal intentionné d'exécuter un code arbitraire à distance.\n",
+  "title": "Vulnérabilités de PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité CA-2002-05 du CERT/CC",
+      "url": "http://www.cert.org/advisories/CA-2002-05.html"
+    }
+  ]
+}

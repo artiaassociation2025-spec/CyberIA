@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IRIX 6.5 à 6.5.10.  <P>Les versions antérieures, non maintenues, n'ont pas été  testées.</P></p>",
+  "content": "## Description\n\nLe daemon nsd (Unified Name Service Daemon) met en cache des\ninformations relatives aux utilisateurs, groupes et machines, en puisant\ndans les fichiers de configuration locaux et en interrogeant les\nserveurs NIS, NIS+, LDAP, DNS sur le réseau.\n\nnsd est installé par défaut sur toutes les versions 6.5.x d'Irix.\n\n#### 4.0.0.1\n\nA la réception du signal USR1, nsd écrit dans le fichier /usr/tmp/nsd\nsans vérifier l'identité du propriétaire de ce fichier. Un utilisateur\nmal intentionné peut ainsi créer un lien symbolique nommé\n/usr/tmp/nsd.dump pointant sur n'importe quel fichier du système pour le\ncorrompre.\n\n## Solution\n\nLa version 6.5.11 d'IRIX corrige cette vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité 20020501-01-I de SGI  disponible à l'adresse suivante :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20020501-01-I"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-089",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-05-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "En exploitant une vulnérabilité du daemon nsd, un utilisateur local peut\ncorrompre n'importe quel fichier du système.\n",
+  "title": "Vulnérabilité du service nsd sous IRIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis 20020501-01-I de SGI",
+      "url": null
+    }
+  ]
+}

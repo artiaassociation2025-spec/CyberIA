@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les gardes-barrières Cisco Secure PIX versions 4.4, 5.1, 5.2,  5.3 et 6.0.</P>",
+  "content": "## Description\n\nUne fonctionnalité \"mailguard\" du garde-barrière Cisco PIX permet de\nlimiter les commandes SMTP à un jeu très restreint de commandes. Une\nvulnérabilité dans le filtrage permet à un utilisateur mal intentionné\nde contourner ces règles de filtrage et d'attaquer alors le serveur de\ncourrier se trouvant derrière le garde-barrière. Si la configuration du\nserveur est trop permissive, l'attaquant pourra alors récupérer des\ninformations sur les comptes du serveur, ou exécuter du code arbitraire\nà distance.\n\n## Solution\n\nAppliquer les correctifs Cisco suivants les versions de Cisco PIX. Ces\ncorrectifs se trouvent sur le site de Cisco.  \n\n    http://www.cisco.com\n\n  \n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco :",
+      "url": "http://www.cisco.com/warp/public/707/PIXfirewallSMTPfilter-regression-pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-102",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-09-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement des règles de filtrage"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut contourner les règles de filtrage\ndes commandes SMTP (Simple Mail Tranfert Protocol).\n",
+  "title": "Vulnérabilité dans le garde-barrière PIX de Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Cisco",
+      "url": null
+    }
+  ]
+}

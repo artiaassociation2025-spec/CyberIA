@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Kerberos 5</SPAN> versions 1.6.3 et  antérieures.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans Kerberos 5 :\n\n-   l'utilisation d'un pointeur non initialisé pour certains types de\n    messages krb4 peut provoquer un déni de service ou l'exécution de\n    code arbitraire à distance. L'exploitation de cette vulnérabilité\n    nécessite l'activation du support Kerberos 4, ce qui n'est pas le\n    cas par défaut (CVE-2008-0062) ;\n-   des messages krb4 peuvent contenir des informations stockées en\n    mémoire, ce qui peut porter atteinte à la confidentialité des\n    données. L'exploitation de cette vulnérabilité nécessite\n    l'activation du support Kerberos 4 (CVE-2008-0063) ;\n-   un utilisateur malintentionné peut provoquer une corruption de la\n    mémoire dans le processus kadmind, ce qui se traduit par un déni de\n    service et, éventuellement, une exécution de code arbitraire à\n    distance. L'exploitation de cette vulnérabilité nécessite des\n    configurations qui permettent l'ouverture d'un grand nombre de\n    descripteurs de fichier par processus (CVE-2008-0947 et\n    CVE-2008-0948).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0063",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0063"
+    },
+    {
+      "name": "CVE-2008-0948",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0948"
+    },
+    {
+      "name": "CVE-2008-0947",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0947"
+    },
+    {
+      "name": "CVE-2008-0062",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0062"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-1524 du 18 mars 2008 :",
+      "url": "http://www.debian.org/security/2008/dsa-1524"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-587-1 du 19 mars 2008 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-587-1"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2008:0180 du 18 mars 2008    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2008-0180.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2008:069 du 19 mars    2008 :",
+      "url": "http://www.mandriva.com/en/security/advisroies?name=MDVSA-2008:069"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200803-31 du 24 mars 2008    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200803-31.xml"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-154",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-03-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo, Debian et Mandriva.",
+      "revision_date": "2008-03-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Kerberos 5</span>\npermettent de porter atteinte à la confidentialité des données, de\nréaliser un déni de service à distance et éventuellement, d'exécuter du\ncode arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans Kerberos",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MITKRB5-SA-2008-001 du 18 mars 2008",
+      "url": "http://web.mit.edu/kerberos/www/advisories/MITKRB5-SA-2008-001.txt"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MITKRB5-SA-2008-002 du 18 mars 2008",
+      "url": "http://web.mit.edu/kerberos/www/advisories/MITKRB5-SA-2008-002.txt"
+    }
+  ]
+}

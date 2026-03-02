@@ -1,0 +1,44 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Package <SPAN class=\n  \"textit\">MySQL</SPAN> dans les versions :  <UL>    <LI>Corporate 3.0</LI>    <LI>2006.0</LI>    <LI>10.2</LI>  </UL></p>",
+  "content": "## Description\n\nCette vulnérabilité dans MySQL permet à un utilisateur de contourner la\npolitique de sécurité en trompant le mécanisme de journalisation via une\nrequête SQL contenant le caractère NULL. Ce caractère n'est ensuite pas\ncorrectement interprété par la fonction mysql_real_query.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:064 du 05 avril    2006 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDKSA-2006:064"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1071 du 22 mai 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1071"
+    },
+    {
+      "title": "Site de rapport d'incidents MySQL :",
+      "url": "http://bugs.mysql.com/bug.php?id=17667"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1073 du 22 mai 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1073"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-137",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2006-04-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux Bulletins de sécurité Debian.",
+      "revision_date": "2006-05-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans MySQL",
+  "vendor_advisories": []
+}

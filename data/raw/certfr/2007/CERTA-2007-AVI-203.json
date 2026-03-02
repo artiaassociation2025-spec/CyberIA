@@ -1,0 +1,122 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Office 2004 pour Mac.",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Excel 2002 dans la suite Office XP Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Pack de compatibilité des formats de fichiers pour Excel 2007 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Excel 2007 dans la suite Office 2007 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Excel 2003 Viewer dans la suite Office 2003 Service Pack 2 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Excel 2003 dans la suite Office 2003 Service Pack 2 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Excel 2000 dans la suite Office 2000 Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois vulnérabilités ont été identifiées dans l'outil de bureautique\nExcel, inclus dans la suite Microsoft Office :\n\n1.  l'application ne manipulerait pas correctement des fichiers Excel\n    contenant des enregistrements de type BIFF (pour Binary Interchange\n    File Format). Il s'agit du format d'enregistrement commun d'Excel,\n    qui se décline suivant plusieurs versions (BIFF8 pour Excel 2000, ou\n    BIFF8X pour Excel 2002 et Excel 2003). L'exploitation de cette\n    vulnérabilité provoque un débordement de mémoire, permettant une\n    exécution de code arbitraire.\n2.  l'application ne manipulerait pas correctement des fichiers Excel\n    contenant des valeurs particulières qui devraient indiquer une\n    police de caractères. L'exploitation de cette vulnérabilité provoque\n    également un débordement de mémoire, permettant une exécution de\n    code arbitraire.\n3.  l'application ne manipulerait pas correctement des fichiers Excel\n    contenant des enregistrements de filtres particuliers.\n    L'exploitation de cette vulnérabilité provoque aussi un débordement\n    de mémoire.\n\n## Solution\n\nSe référer au bulletin de sécurité MS07-023 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-1203",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1203"
+    },
+    {
+      "name": "CVE-2007-0215",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0215"
+    },
+    {
+      "name": "CVE-2007-1214",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1214"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-023 du 08 mai 2007 :",
+      "url": "http://www.microsoft.com/france/technet/security/bulletin/MS07-023.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-023 du 08 mai 2007 :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-023.mspx"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-203",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-05-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans l'outil de bureautique\nExcel, inclus dans la suite Microsoft Office. L'exploitation de ces\ndernières peut conduire à l'exécution de code arbitraire sur la machine\ncontenant une version vulnérable de l'application.\n",
+  "title": "Plusieurs vulnérabilités dans Microsoft Excel",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-203 du 08 mai 2007",
+      "url": null
+    }
+  ]
+}

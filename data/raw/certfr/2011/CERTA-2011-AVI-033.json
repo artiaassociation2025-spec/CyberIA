@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Cisco Content Service Gateway deuxième  génération (CSG2).</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans Cisco Content Service\nGateway.\n\n-   L'envoi d'un paquet TCP particulier peut entrainer un déni de\n    service sur la passerelle ;\n-   L'envoi d'une requête HTTP particulière, aprés avoir accédé à un\n    site autorisé, permet un contournement de la politique de sécurité\n    en place. Il est ainsi possible d'accéder à des sites normalement\n    interdits ou de contourner le système de facturation. Cette\n    vulnérabilité ne concerne que le traffic HTTP et non les autres\n    protocoles tel que HTTPS.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0349",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0349"
+    },
+    {
+      "name": "CVE-2011-0350",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0350"
+    },
+    {
+      "name": "CVE-2011-0348",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0348"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20110126-csg2 du 26 janvier 2011    :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20110126-csg2.shtml"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-033",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-01-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités sont présentes dans Cisco Content Service\nGateway CSG2. Elles permettent de contourner la politique de sécurité\n(accés à des sites non autorisés, non facturation de l'accés), ou de\nprovoquer un déni de service à distance.\n",
+  "title": "Multiples vulnérabilités dans Cisco Content Service Gateway",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis Cisco-sa-20110126-csg2",
+      "url": null
+    }
+  ]
+}

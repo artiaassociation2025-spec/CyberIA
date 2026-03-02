@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Wireshark version 1.2.11 et antérieures.",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Wireshark version 1.4.0 ;",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans le dissecteur BER (ASN.1 Basic Encoding Rules)\npeut permettre à un attaquant de provoquer un déni de service à\ndistance, en injectant des paquets malformés, ou en local, en piégeant\nun fichier de capture réseau qui sera ouvert avec Wireshark.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). Les versions 1.4.1 et 1.2.12 de\nWireshark corrigent cette vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Version 1.4.1 du logiciel Wireshark :",
+      "url": "http://www.wireshark.org/download.html"
+    },
+    {
+      "title": "Bulletin de sécurité Wireshark wmpa-sec-2010-11 du 11    octobre 2010 :",
+      "url": "http://www.wireshark.org/security/wmpa-sec-2010-11/html"
+    },
+    {
+      "title": "Bulletin de sécurité Wireshark wmpa-sec-2010-12 du 11    octobre 2010 :",
+      "url": "http://www.wireshark.org/security/wmpa-sec-2010-12/html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-497",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-10-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le logiciel Wireshark peut permettre à un\nattaquant malintentioné de provoquer un déni de service à distance.\n",
+  "title": "Vulnérabilité dans Wireshark",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Wireshark wmpa-sec-2010-12 du 11 octobre 2010",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Wireshark wmpa-sec-2010-11 du 11 octobre 2010",
+      "url": null
+    }
+  ]
+}

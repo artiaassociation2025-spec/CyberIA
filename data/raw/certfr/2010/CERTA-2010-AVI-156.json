@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "CA XOsoft High Availability r12.0 et r12.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA XOsoft Content Distribution r12.0 et r12.5.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA XOsoft Replication r12.0 et r12.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans CA XOsoft :\n\n-   un manque d'authentification permet à un attaquant de faire une\n    requête SOAP afin d'obtenir les noms d'utilisateur (CVE-2010-1221) ;\n-   un problème similaire permet la récupération de données sensibles\n    (CVE-2010-1222) ;\n-   de nombreux débordements de mémoire permettent l'exécution de code\n    arbitraire à distance (CVE-2010-1223).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-1223",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1223"
+    },
+    {
+      "name": "CVE-2010-1222",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1222"
+    },
+    {
+      "name": "CVE-2010-1221",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1221"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-156",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-04-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">CA XOsoft</span>\npermettent d'exécuter du code arbitraire à distante et d'obtenir des\ndonnées sensibles.\n",
+  "title": "Multiples vulnérabilités dans CA XOsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CA20100406-01 du 06 avril 2010",
+      "url": "https://support.ca.com/irj/portal/anonymous/phpsupcontent?contentID=232869"
+    }
+  ]
+}

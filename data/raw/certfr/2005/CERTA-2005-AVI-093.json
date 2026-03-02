@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><TT>cURL</TT> versions 7.12.1 et antérieures.</P>",
+  "content": "## Description\n\ncURL est un outil en ligne de commande permettant de transférer des\nfichiers.\n\nUne première vulnérabilité de type débordement de mémoire existe dans\nl'authentification NTLM (NT Lan Manager).\n\nUne seconde vulnérabilité de type débordement de mémoire existe dans\nl'authentification Kerberos.\n\nUn utilisateur mal intentionné peut, en incitant sa victime à se\nconnecter à un serveur malicieux en utilisant l'authentification NTLM ou\nl'authentification Kerberos, exécuter du code arbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SA:2005:011 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_11_curl.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200503-20 du 16 mars 2005    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200503-20.xml"
+    },
+    {
+      "title": "Site de cURL :",
+      "url": "http://cool.haxx.se/curl/"
+    },
+    {
+      "title": "Bulletin de sécurité de FreeBSD du 27 février 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-curl.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2005:048 du 04 mars    2005 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2005:048"
+    },
+    {
+      "title": "Bulletin de sécurité de NetBSD :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/www/curl/README.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-093",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-03-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandrake.",
+      "revision_date": "2005-03-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2005-03-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans cURL/libcURL permettent l'exécution de code\narbitraire à distance.\n",
+  "title": "Vulnérabilités dans cURL/libcURL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité iDefense du 21 février 2005",
+      "url": null
+    }
+  ]
+}

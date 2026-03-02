@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Versions <TT>iptables</TT> antérieures  à la version <TT>1.2.6a</TT>.</p>",
+  "content": "## Description\n\niptables est un des composants utilisés pour le filtrage des paquets\nréseau sur les noyaux Linux supérieurs à la version 2.4.x. Ce garde\nbarrière permet également d'effectuer de la traduction d'adresses (NAT)\nvers un réseau local.\n\nUn utilisateur mal intentionné peut, par le biais de paquets\nmalicieusement construits, provoquer des messages d'erreurs ICMP. Ces\nmessages d'erreurs peuvent contenir les adresses IP des machines du\nréseau interne, accompagnées des ports en écoute sur ces machines.\n\n## Contournement provisoire\n\nIl n'existe pas de correctif disponible pour le moment, cependant il est\npossible de contourner le problème en appliquant la règle de filtrage\nsuivante :\n\niptables -A OUTPUT -m state -p icmp -state INVALID -j DROP\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité MDKSA-2002:030 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-030.php"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2002:086 de Redhat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-086.html"
+    },
+    {
+      "title": "Bulletin de sécurité 20020402 de Cartel :",
+      "url": "http://netfilter.samba.org/security/2002-04-02-icmp-dnat.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-100",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-05-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations sur la topologie du réseau"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans l'implémentation de iptables permet à un\nutilisateur mal intentionné de retrouver la topologie d'un réseau local\nsi la traduction d'adresses est utilisée.\n",
+  "title": "Vulnérabilité sur Netfilter (iptables)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité 20020402 de CARTEL",
+      "url": null
+    }
+  ]
+}

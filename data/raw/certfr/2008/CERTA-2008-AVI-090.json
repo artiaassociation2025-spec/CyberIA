@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Ignite-UX versions antérieures à 7.0.212, 7.1.93, 7.2.94 et 7.3.144 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "DynRootDisk versions antérieures à 1.0.16.417, 1.0.18.245, 1.1.0.344 et 2.0.0.592.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans la commande get_system_info de Ignite-UX et de\nDynRootDisk (DRD) permet à une personne malveillante de modifier les\nconfigurations réseaux de la machine à l'insu de l'utilisateur.\n\n## Solution\n\nLa version 7.3.148 de Ignite-UX et la version 3.0.0 de DynRootDisk\ncorrigent le problème. Se référer au bulletin de sécurité de l'éditeur\npour l'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-4590",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4590"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2008-AVI-090",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité de Ignite-UX et de DynRootDisk permet de contourner la\npolitique de sécurité.\n",
+  "title": "Vulnérabilité dans HP Ignite-UX et DynRootDisk",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité HP c01118367 du 11 février 2008",
+      "url": "http://itrc.hp.com/service/cki/docDisplay.do?docId=c01118367"
+    }
+  ]
+}

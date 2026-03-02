@@ -1,0 +1,121 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM AIX 5.3.",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM AIX 5.2 ;",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été identifiées dans IBM AIX :\n\n-   des débordements de mémoire présents dans certaines commandes ont\n    des impacts inconnus ;\n-   une erreur inconnue au niveau de la commande invscout cause la\n    suppression de certains fichiers ;\n-   une erreur de vérification de privilèges dans l'extension perfstat\n    du noyau peut être exploitée pour changer des paramètres du noyau,\n    ce qui peut causer l'arrêt inopiné du système.\n\n## Contournement Provisoire\n\nDes correctifs temporaires ont été mis à disposition par IBM pour\ncertaines des vulnérabilités (IY98506, IZ02717, IZ02718, IY98819,\nIY98804, IZ00997). Ces correctifs peuvent avoir certains effets de bord,\nil est recommandé de les tester avant un déploiement sur des systèmes en\nproduction.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM IY97233 du 06 juin 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY97233"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY91132 du 06 juin 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY91132"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY95852 du 24 mai 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY95852"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY97215 du 25 mai 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY97215"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY98804 du 06 juin 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY98804"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY94761 du 06 juin 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY94761"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IZ00997 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IZ00997"
+    },
+    {
+      "title": "Emplacement des correctifs temporaires d'IBM pour AIX :      /",
+      "url": "ftp://aix.software.ibm.com/aix/efixes/security"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IZ02718 du 31 août 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IZ02718"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY94739 du 06 juin 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY94739"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY98819 du 06 juin 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY98819"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IZ02717 du 31 août 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IZ02717"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY97309 du 03 août 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY97309"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY91145 du 06 juin 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY91145"
+    },
+    {
+      "title": "Liste des correctifs temporaires d'IBM pour AIX :",
+      "url": "ftp://aix.software.ibm.com/aix/efixes/security/README"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY98506 du 13 juin 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY95852"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-392",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-09-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans IBM AIX permettent à une personne\nmalintentionnée d'effectuer un déni de service, d'élever ses privilèges\net de porter atteinte à l'intégrité des données.\n",
+  "title": "Vulnérabilités dans IBM AIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité de IBM AIX",
+      "url": null
+    }
+  ]
+}

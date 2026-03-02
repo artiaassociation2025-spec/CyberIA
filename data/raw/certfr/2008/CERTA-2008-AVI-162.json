@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<SPAN class=\"textit\">MySQL</SPAN>,  version 4.1.23 et antérieures.",
+  "content": "## Description\n\nDe nombreuses vulnérabilités affectent la branche 4 de MySQL.\n\nLa création de tables MyISAM avec certaines options permet d'écraser des\ntables existantes.\n\nLe renommage utilisé avec certains paramètres permet la réécriture de\ntables système.\n\nDes erreurs provoquent des débordements de mémoire ou de pile ou des\nviolations de la segmentation de la mémoire. Dans certains cas\nl'exploitation permet à un utilisateur d'exécuter du code arbitraire à\ndistance.\n\nCertaines erreurs permettent de provoquer un arrêt inopiné (crash) du\nserveur. L'utilisation d'un paquet d'authentification malformé permet de\nprovoquer cet arrêt à distance.\n\nCertaines erreurs conduisent à des insertions dans les affichages ou à\nla corruption de tables.\n\n## Solution\n\nLa version 4.1.24 corrige ces problèmes. Se référer au bulletin de\nsécurité de l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n\n  \n  \n\n<span class=\"textbf\">Note</span> : la branche 4 du logiciel MySQL n'est\nplus maintenue (cf. section Documentation). Il est recommandé de migrer\nvers la branche 5 de ce logiciel.\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5969",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5969"
+    },
+    {
+      "name": "CVE-2007-3780",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3780"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de version de MySQL :",
+      "url": "http://dev.mysql.com/doc/refman/4.1/en/news-4-1-24.html"
+    },
+    {
+      "title": "Politique et calendrier de support pour MySQL :",
+      "url": "http://www.mysql.com/company/legal/lifecycle/"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-162",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-03-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent les versions 4.x du gestionnaire de\nbase de données <span class=\"textit\">MySQL</span>. En particulier,\ncertaines d'entre elles permettent à un utilisateur malveillant\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans MySQL",
+  "vendor_advisories": []
+}

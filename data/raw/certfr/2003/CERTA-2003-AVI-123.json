@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Serveurs Novell Netware 5.1 et 6.</P>",
+  "content": "## Description\n\nUne vulnérabilité a été découverte dans l'interpréteur PERL du serveur\nWeb de Novell (Netware Entreprise Web Server).\n\nUne mauvaise gestion des requêtes HTTP à destination de l'interpréteur\nPERL par le module CGI2PERL.NLM peut entraîner un débordement de pile,\npermettant à un utilisateur distant de réaliser un déni de service,\nvoire l'exécution de code arbitraire avec les privilèges du serveur web\n(Admin).\n\n## Solution\n\nAppliquer le correctif disponible sur le site de l'éditeur :\n\n    http://support.novell.com/servlet/filedownload/ftf/cgiperl71903.exe\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-123",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur distant mal intentionné peut, par le biais d'une requête\nHTTP judicieusement composée, exécuter du code arbitraire sur le serveur\nvulnérable ou réaliser un déni de service.\n",
+  "title": "Vulnérabilité dans les serveurs Novell Netware",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "VU#185593 du CERT/CC",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Novell",
+      "url": "http://support.novell.com/cgi-bin/search/searchtid.cgi?/2966549.htm"
+    }
+  ]
+}

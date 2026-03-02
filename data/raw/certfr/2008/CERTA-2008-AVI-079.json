@@ -1,0 +1,98 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows XP Professional Edition x64 (SP2 compris) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows XP Professional Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 Service Pack 1 et Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 pour les systèmes Itanium (SP1 et SP2).",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 Edition x64 (SP2 compris) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans la mise en oeuvre d'Active\nDirectory sur des systèmes d'exploitation Microsoft Windows. Il s'agit\ndes services d'autorisation et d'authentification centralisés sous\nWindows. En mode application, ou ADAM, le service est un LDAP\n(Lightweight Directory Access Protocol). Il serait également vulnérable.\n\nLe service ne gère pas correctement certaines requêtes LDAP. Cette\nvulnérabilité peut être exploitée par une personne distante sous\ncertaines conditions pour perturber le système, comme l'empêcher de\nrépondre ou le redémarrer.\n\n## Solution\n\nSe référer au bulletin de sécurité MS08-003 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0088",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0088"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2008-AVI-079",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans la mise en oeuvre d'Active\nDirectory sur des systèmes d'exploitation Microsoft Windows. Elle existe\négalement pour Active Directory en mode application (ADAM). Elle\npermettrait à une personne malveillante distante d'empêcher le système\nde répondre et de redémarrer.\n",
+  "title": "Vulnérabilité dans Microsoft Active Directory",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS08-003 du 12 février 2008",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-003.mspx"
+    }
+  ]
+}

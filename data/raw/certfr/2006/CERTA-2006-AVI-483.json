@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD versions 6.1 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD versions 5.5 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa bibliothèque de fonctions libarchive de FreeBSD permet la mise en\nœuvre dans des applications de la manipulation d'archives de différents\nformats (tar, cpio, ...). Une vulnérabilité dans cette bibliothèque\npermet à un utilisateur malintentionné de provoquer un déni de service\nde la machine vulnérable par le biais d'une archive tar construite de\nfaçon particulière.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-5680",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5680"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-06:24 du 08 novembre 2006 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-06:24.libarchive.asc"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-483",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la bibliothèque de fonctions libarchive de\nFreeBSD permet à un utilisateur malintentionné de provoquer un déni de\nservice du système vulnérable.\n",
+  "title": "Vulnérabilité dans FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD-SA-06:24 du 08 novembre 2006",
+      "url": null
+    }
+  ]
+}

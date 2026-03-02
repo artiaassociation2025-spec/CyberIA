@@ -1,0 +1,31 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système Linux utilisant PAM avec une base  d'authentification sous LDAP.</P>",
+  "content": "## Description\n\nParmi les divers modules, pam_ldap permet de gérer l'interface avec un\nannuaire LDAP. Cette configuration est généralement utilisée lorsque\nl'on souhaite centraliser les données d'authentification (comme dans le\ncas de NIS). Cependant un problème de chaıne de format dans le code de\njournalisation de ce module permet d'exécuter du code sur l'hôte\nréalisant l'authentification avec des privilèges élevés (généralement\nroot).\n\n## Solution\n\nMettre à jour le module dans une version au moins égale à la 144.\n\n-   Linux Red Hat 6.2, 7.0, 7.1, 7.2 et 7.3\n\n        http://rhn.redhat.com/errata/RHSA-2002-084.html\n\n-   SCO Open Linux 3.1 et 3.1.1\n\n        ftp://ftp.sco.com/pub/security/OpenLinux/CSSA-2002-041.0.txt\n\n-   SuSE Linux 7.1, 7.2, 7.3 et 8.0\n\n        http://www.suse.de/us/private/download/updates/index.html\n\n-   Yellow Dog 2.2\n\n        http://www.yellowdoglinux.com/resources/errata/YDU-20020606-2.txt\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Blackshell",
+      "url": "http://archives.neohapsis.com/archives/vulnwatch/2002-q2/0053.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-242",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "PAM (« Pluggable Authentication Module ») est un système modulaire de\ngestion de la politique d'authentification, utilisé, entre autres, sur\ntous les systèmes d'exploitation Linux récents.\n\nUn bogue dans <span class=\"textit\">pam_ldap</span> (versions antérieures\nà 144) permet à un utilisateur mal intentionné d'exécuter du code\nmalicieux.\n",
+  "title": "Vulnérabilité dans le module d'authentification pam_ldap",
+  "vendor_advisories": []
+}

@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mircosoft Internet Information Server 5.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Information Server 4.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Première vulnérabilité :\n\n    Une fonctionnalité sous IIS permet de traiter les appels aux\n    programmes de type CGI.\n\n    Une vulnérabilité dans cette fonctionnalité permet à un utilisateur\n    distant d'exécuter des commandes du système d'exploitation sur le\n    serveur Web cible avec les privilèges du compte Web (compte\n    IUSR\\_\\[nom_machine\\]). Elle lui fournit la possibilité de modifier\n    des pages Web, d'ajouter ou de supprimer des fichiers, ou de\n    reformater le disque dur.\n\n-   Seconde vulnérabilité :\n\n    Dans le cas où un serveur FTP est membre d'un domaine NT ou Windows\n    2000, une vulnérabilité permet à un utilisateur distant mal\n    intentionné d'ouvrir une connexion sur le serveur avec le compte «\n    invité » et le mot de passe par défaut (souvent vide sur ce type de\n    compte).\n\n-   Troisème vulnérabilité :\n\n    Une vulnérabilité dans la gestion des requêtes sur un serveur FTP\n    permet à un utilisateur distant, par le biais de caractères « joker\n    », d'interrompre le serveur FTP par saturation de la mémoire.\n\n## Solution\n\nTélécharger les correctifs sur le site Microsoft :\n\n-   Microsoft IIS 4.0 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=29787\n\n-   Microsoft IIS 5.0 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=29764\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms01-026.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-053",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-05-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de commandes à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Accès aux données"
+    }
+  ],
+  "summary": "Trois vulnérabiltés ont été découvertes sous IIS 4.0 et 5.0.\n\nLa première vulnérabilité permet à un utilisateur distant d'exécuter des\ncommandes sur le serveur cible. La seconde permet de se loguer en FTP,\nsous certaines conditions, sur un compte « invité » de l'un des domaines\ndu réseau et la troisième permet d'entraîner un déni de service sur le\nserveur FTP.\n",
+  "title": "Vulnérabilités dans Microsoft IIS 4.0 et 5.0",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-026",
+      "url": null
+    }
+  ]
+}

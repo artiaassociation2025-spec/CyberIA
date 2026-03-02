@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>Oracle9iAS</TT> version 1.0.2.x",
+  "content": "## Vulnérabilités dans le module mod_plsql\n\n## 4.1 Description\n\nLe module mod_plsql v3.0.9.8.2 est une passerelle PL/SQL utilisée pour\ninterfacer des applications web avec le langage PL/SQL, ce module\nprésente plusieurs vulnérabilités :\n\n-   Une vulnérabilité de type « débordement de mémoire » permet à un\n    utilisateur mal intentionné d'utiliser Oracle9iAS pour récupérer les\n    droits du compte système sur les plateformes Microsoft.\n-   En utilisant certaines requêtes HTTP, un utilisateur mal intentionné\n    peut provoquer un déni de service du module mod_plsql ou accèder à\n    des fichiers du compte système.\n-   En utilisant les pages web pour la configuration de la passerelle\n    mod_plsql, un utilisateur mal intentionné peut contourner\n    l'authentification en utilisant les mots de passe par défaut pour\n    administrer les points d'accès aux bases de données.\n\n## 4.2 Contournement provisoire\n\nPour supprimer ces vulnérabilités il est nécessaire de :\n\n-   changer le chemin d'accès et configurer le fichier wdbsvr.app.\n-   d'appliquer le correctif approprié à la plateforme (voir Bulletin de\n    sécurité \\#28 d'Oracle).\n\n## Vulnérabilité dans les modules OracleJSP and SQLJSP\n\n## 5.1 Description\n\nLe module OracleJSP/SQLJSP permet de faire intéragir une base de données\nOracle avec des applications web.\n\nLors d'une requête JSP sur un serveur OracleJSP, la page envoyée par\nl'utilisateur est traduite, compilée et exécutée. Trois fichiers\nintermédiaires contenant des informations de la base de données sont\nalors créés. Un utilisateur mal intentionné peut déduire l'emplacement\net le nom de ces fichiers et récupérer des informations sensibles du\nsystème Oracle.\n\n## 5.2 Contournement provisoire\n\nPour contourner cette vulnérabilité, il est nécessaire de modifier le\nfichier httpd.conf du module OracleJSP.\n\n## Vulnérabilités dans le module XSQL 1.0.x\n\n## 6.1 Description\n\nOracle XSQL est une application qui permet d'intégrer les données\nrésultant de requêtes SQL dans un document XML. Les vulnérabilités dans\nle module XSQL 1.0.x permettent à un utilisateur mal intentionné :\n\n-   d'exécuter un code arbitraire par le biais d'une vulnérabilité dans\n    la requête HTTP.\n-   d'accéder à des informations sensibles du système Oracle en\n    utilisant les applications XSQL.\n-   d'accéder au système via un exemple installé par défaut lors de\n    l'installation d'Oracle.\n\n## 6.2 Contournement provisoire\n\nPour supprimer ces vulnérabilités, il est conseillé (comme pour toutes\nles applications) de supprimer les exemples installés lors de\nl'installation. Il est également conseillé de déplacer le fichier\nXSQLConfig.xml dans un répertoire protégé.\n\n## Vulnérabilité dans le module EXTPROC\n\n## 7.1 Description\n\nLe module « External Procedure » (EXTPROC) permet l'appel de\nfonctionnalités du système d'exploitation.\n\nUne vulnérabilité présente dans ce module permet à un utilisateur mal\nintentionné d'exécuter des commandes avec des privilèges administrateur.\n\n## 7.2 Contournement provisoire\n\nSi le module EXTPROC n'est pas nécessaire, il est recommandé de\nsupprimer ce module.\n\nSi ce module est nécessaire il est alors recommandé de créer deux\nprocessus « LISTENER », l' un étant utilisé par la base de données\nOracle et l'autre par le module EXTPROC. La configuration de ces deux\nprocessus est détaillée dans le bulletin de sécurité \\#29 d'Oracle (voir\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité #28 de Oracle  \n Avis de sécurité #29 de Oracle http://technet.oracle.com/deploy/security/pdf/plsextproc_alert.pdf",
+      "url": "http://technet.oracle.com/deploy/security/pdf/ias_modplsql_alert.pdf"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-028",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Compromission de données"
+    },
+    {
+      "description": "Contournement des mécanismes d'authentification"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans Oracle9iAS permettent à un\nutilisateur mal intentionné de réaliser une élèvation de privilèges,\nd'accéder à des données non autorisées, de réaliser un déni de service\net de contourner les paramètres d'authentification.\n",
+  "title": "Multiples vulnérabilités sur Oracle 9iAS v1.0.2.x",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité #28 et #29 d'Oracle.",
+      "url": null
+    }
+  ]
+}

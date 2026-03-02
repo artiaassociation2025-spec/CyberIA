@@ -1,0 +1,84 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM HTTP Server 6.1.x ;",
+      "product": {
+        "name": "HTTP Server",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM HTTP Server 6.0.x ;",
+      "product": {
+        "name": "HTTP Server",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM HTTP Server 7.0.x.",
+      "product": {
+        "name": "HTTP Server",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "APR-Utility versions antérieures à la 1.3.9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités, de type dépassement d'entier, ont été\ndécouvertes dans les outils de la librairie d'exécution Apache Portable\nRuntime (APR-Utility). Ces vulnérabilités permettent à une personne\ndistante malintentionnée d'exécuter du code arbitraire.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2412",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2412"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM PK93225 :",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1PK93225"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-323",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité IBM PK93225.",
+      "revision_date": "2009-10-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans APR-Utility permettent à une personne\nmalintentionnée d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans Apache APR-Utility",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de nouvelle version APR-Utility 1.3.9",
+      "url": "http://www.apache.org/dist/apr/Announcement1.3.html"
+    }
+  ]
+}

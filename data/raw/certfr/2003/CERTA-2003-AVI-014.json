@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SuSE Linux Enterprise Server 8 ;",
+      "product": {
+        "name": "SUSE Linux Enterprise Server",
+        "vendor": {
+          "name": "SUSE",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SuSE Linux Office Server ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SuSE Linux Openexchange Server 4.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SUSE",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SuSE Linux 8.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SUSE",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe paquetage susehelp contient de l'aide pour l'installation et la\nconfiguration de la distribution SuSE. Ce paquetage n'est pas installé\npar défaut.  \n\nUn des programmes CGI (Common Gateway Interface) présente une\nvulnérabilité, qui peut être exploitée si l'utilitaire susehelp est\naccessible depuis un serveur HTTP installé sur la machine. Dans ce\ncas-là, il est possible d'exécuter du code arbitraire avec les droits du\nserveur (wwwrun).\n\n## Solution\n\nAppliquer le correctif disponible sur le site de SuSE (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-014",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-01-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité du paquetage <span class=\"textit\">susehelp</span>\npermet à un utilisateur mal intentionné d'exécuter du code arbitraire à\ndistance.\n",
+  "title": "Vulnérabilité de susehelp",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité SuSE SuSE-SA:2003:005",
+      "url": "http://www.suse.de/de/security/2003_005_susehelp.html"
+    }
+  ]
+}

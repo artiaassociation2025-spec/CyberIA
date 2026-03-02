@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>SGI Irix de la version 6.5.4 à la version 6.5.11.</P>",
+  "content": "## Description\n\nLe daemon nsd (Unified Name Service Daemon) met en cache des\ninformations relatives aux utilisateurs, groupes et machines, en puisant\ndans les fichiers de configuration locaux et en interrogeant les\nserveurs NIS, NIS+, LDAP, DNS sur le réseau.\n\nnsd est installé par défaut sur toutes les versions 6.5.x d'Irix.\n\nUne vulnérabilité présente dans une fonction de limitation du cache peut\nentrainer un déni de service par saturation du disque dur.\n\n## Solution\n\nAppliquer le correctif de sécurité de SGI selon la version ou bien\ninstaller la version 6.12m/f :\n\n    http://support.sgi.com/colls/patches/tools/relstream/index.html\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-007",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-01-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Il est possible de saturer le disque dur de la machine par le biais du\ndaemon nsd.\n",
+  "title": "Vulnérabilité du daemon <TT>nsd</TT> sous SGI Irix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SGI numéro 20020102-02-I",
+      "url": "http://patches.sgi.com/support/free/security/advisories/20020102-02-I"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Sun Solaris 10 pour architecture SPARC ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Solaris 10 pour architecture x86.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur est présente dans le moteur de traitement des fichiers au\nformat PKCS#11 de OpenSSL pour Sun Solaris 10. Cette vulnérabilité peut\nengendrer des corruptions de mémoire cache interne dans OpenSSL.\n\nAinsi, un utilisateur distant malintentionné peut provoquer un déni de\nservice de OpenSSL ou d'une application s'appuyant sur ce dernier par le\nbiais d'un fichier au format PKCS#11 construit de façon particulière.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sun Solaris #246846 du 03 décembre    2008 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-246846-1"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-600",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-12-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la version de OpenSSL pour Sun Solaris 10 permet\nà un utilisateur distant malintentionné de provoquer un déni de service.\n",
+  "title": "Vulnérabilité dans OpenSSL de Sun Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sun #246846",
+      "url": null
+    }
+  ]
+}

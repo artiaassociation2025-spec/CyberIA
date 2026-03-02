@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Solaris 7 plates-formes SPARC et x86 ",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 9 plates-formes SPARC et x86 ",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 8 plates-formes SPARC et x86 ",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nSelon Sun, une vulnérabilité présente dans la commande newgrp peut être\nexploitée par un utilisateur local mal intentionné afin de d'obtenir les\ndroits du super-utilisateur root sur le système vulnérable.\n\n## Contournement provisoire\n\nSupprimer le drapeau suid sur le fichier /usr/bin/newgrp.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs.\n",
+  "cves": [
+    {
+      "name": "CVE-2005-0816",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0816"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2005-AVI-120",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-03-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "",
+  "title": "Vulnérabilité de Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": "2005-03-16",
+      "title": "Bulletin de sécurité #57710 de Sun",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-57710-1"
+    }
+  ]
+}

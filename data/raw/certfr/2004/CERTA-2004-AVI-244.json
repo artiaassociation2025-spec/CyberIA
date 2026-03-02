@@ -1,0 +1,134 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PHP branche 5 : toutes les versions de PHP antérieures à la version 5.0.0.",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PHP branche 4 : toutes les versions de PHP antérieures à la version 4.3.8 ;",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPHP est un langage de script permettant la réalisation de pages web\ndynamiques.  \nDeux vulnérabilités sont présentes dans php :\n\n-   Une première vulnérabilité concerne la directive memory_limit qui\n    peut être déclenchée à un moment voulu. Ceci peut être utilisé par\n    un utilisateur mal intentionné pour exécuter du code arbitraire\n    (CAN-2004-0594) ;\n-   Une seconde vulnérabilité concerne la fonction strip_tags(). Cette\n    fonction ne filtre pas correctement certaines balises, ce qui peut\n    conduire un utilisateur mal intentionné à réaliser des attaques de\n    type cross site scripting (CAN-2004-0595).\n\n## Solution\n\n-   Pour la branche 4 de PHP : mettre à jour PHP en version 4.3.8 ;\n-   pour la branche 5 de PHP : mettre à jour PHP en version 5.0.0.\n\nPHP est téléchargeable à l'adresse suivante :\n\n    http://www.php.net/downloads.php\n\nDans tous les cas, se référer au bulletin de sécurité de l'éditeur pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD php4 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/www/php4/README.html"
+    },
+    {
+      "title": "Site Internet de PHP :",
+      "url": "http://www.php.net"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD pour php4 du 15 juillet 2004 :",
+      "url": "http://www.vuxml.org/openbsd/"
+    },
+    {
+      "title": "Liste des changements dans PHP pour la branche 5 :",
+      "url": "http://www.php.net/ChangeLog-5.php"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200407-13 du 15 juillet    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200407-13.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2004:392 du 19 juillet    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-392.html"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SA:2004:021 du 16 juillet    2004 :",
+      "url": "http://www.suse.com/de/security/2004_21_php4.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-531 du 20 juillet 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-531"
+    },
+    {
+      "title": "Bulletin de sécurité e-matters 12/2004 du 14 juillet 2004 :",
+      "url": "http://security.e-matters.de/advisories/122004.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour PHP du 15 juillet 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Liste des changements dans PHP pour la branche 4 :",
+      "url": "http://www.php.net/ChangeLog-4.php"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2004:395 du 19 juillet    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-395.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-669 du 07 février 2005 :",
+      "url": "http://www.debian.org/security/2004/dsa-669"
+    },
+    {
+      "title": "Bulletin de sécurité e-matters 11/2004 du 14 juillet 2004 :",
+      "url": "http://security.e-matters.de/advisories/112004.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-244",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SUSE.",
+      "revision_date": "2004-07-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité OpenBSD.",
+      "revision_date": "2004-07-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Red Hat.",
+      "revision_date": "2004-07-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-531.",
+      "revision_date": "2004-07-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-669.",
+      "revision_date": "2005-02-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité NetBSD.",
+      "revision_date": "2005-03-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans PHP permettent à un utilisateur mal intentionné\nde réaliser du cross site scripting ou d'exécuter du code arbitraire à\ndistance sur la plate-forme vulnérable.\n",
+  "title": "Vulnérabilité de PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:068",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:068"
+    }
+  ]
+}

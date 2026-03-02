@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Catalyst 6500 ASA Services Module.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco 5500 Adaptative Security Appliance (ASA) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs modules dans les produits Cisco ASA et ASASM contiennent des\nvulnérabilités :\n\n-   le moteur d'inspection du trafic UDP ;\n-   le moteur de recherche d'attaques (Threat Detection), non activé par\n    défaut ;\n-   le client Syslog ;\n-   le gestionnaire du protocole PIM (voir l'avis CERTA-2012-AVI-149).\n\nCes vulnérabilités permettent à un attaquant de provoquer un déni de\nservice à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-0356",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0356"
+    },
+    {
+      "name": "CVE-2012-0355",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0355"
+    },
+    {
+      "name": "CVE-2012-0354",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0354"
+    },
+    {
+      "name": "CVE-2012-0353",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0353"
+    }
+  ],
+  "links": [
+    {
+      "title": "Document du CERTA CERTA-2012-AVI-149 du 16 mars 2012 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2012-AVI-149/index.html"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-150",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-03-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans des produits Cisco permettent à un\nattaquant de provoquer un déni de service à distance.\n",
+  "title": "Vulnérabilités dans Cisco 6500 et 5500",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20120314-asa du 14 mars 2012",
+      "url": "http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120314-asa"
+    }
+  ]
+}

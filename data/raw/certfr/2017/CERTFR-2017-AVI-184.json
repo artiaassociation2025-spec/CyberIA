@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BIND 9 versions 9.11.x antérieures à 9.11.1-P1",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND 9 versions 9.10.x antérieures à 9.10.5-P1",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND 9 versions 9.9.x antérieures à 9.9.10-P1",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2017-3140",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2017-3140"
+    },
+    {
+      "name": "CVE-2017-3141",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2017-3141"
+    }
+  ],
+  "links": [
+    {
+      "title": "Note Opérationelle sur BIND 9.11.1",
+      "url": "https://kb.isc.org/article/AA-01497"
+    }
+  ],
+  "reference": "CERTFR-2017-AVI-184",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2017-06-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans <span\nclass=\"textit\">ISC BIND</span>. Elles permettent à un attaquant de\nprovoquer un déni de service à distance et une élévation de privilèges.\n",
+  "title": "Multiples vulnérabilités dans ISC BIND",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ISC AA-01496 du 14 juin 2017",
+      "url": "https://kb.isc.org/article/AA-01496/74/CVE-2017-3141%3A-Windows-service-and-uninstall-paths-are-not-quoted-when-BIND-is-installed.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ISC AA-01495 du 14 juin 2017",
+      "url": "https://kb.isc.org/article/AA-01495/74/CVE-2017-3140%3A-An-error-processing-RPZ-rules-can-cause-named-to-loop-endlessly-after-handling-a-query.html"
+    }
+  ]
+}

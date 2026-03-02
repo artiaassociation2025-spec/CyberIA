@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toute machine Unix équipée du service NTP (<SPAN class=\n  \"textit\">Network Time Protocol</SPAN>) dont le numéro de version  est inférieur ou égal à 4.0.99k.</P>  <P><TT>Nota</TT> : Les équipement CISCO sous IOS et possédant un  serveur NTP sont vulnérables.</P>",
+  "content": "## Description\n\nIl est possible à un utilisateur mal intentionné d'effectuer un\ndébordement de mémoire du daemon ntpd lorsque ce dernier doit répondre à\nune requête de dimension trop importante.\n\nL'exploitation de cette vulnérabilité permet d'exécuter du code\narbitraire à distance avec les droits du daemon ntpd (généralement\nroot).\n\n## Contournement provisoire\n\nBloquer l'accès au service NTP (port 123 en UDP) à l'aide du garde\nbarrière, ou en limiter les accès à votre serveur NTP uniquement aux\nclients autorisés.\n\nLe bulletin de sécurité CISCO (voir paragraphe documentation) explique\ncomment empêcher le traitement des requêtes NTP, employer\nl'authentification sur le protocole NTP ou bien ajouter des ACL (Access\nControl Lists) sous IOS.\n\n## Solution\n\nSe référer aux bulletins de sécurité (voir paragraphe documentation) des\ndifférentes distributions ou contacter le distributeur pour connaitre la\ndisponibilité des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité RedHat :",
+      "url": "http://www.redhat.com/support/errata/RHSA-2001-045.html"
+    },
+    {
+      "title": "Avis de sécurité Debian :",
+      "url": "http://www.debian.org/security/2001/dsa-045"
+    },
+    {
+      "title": "Bulletin de sécurité Hewlett Packard pour HP-UX 10.20,    10.24, 11.0, 11.04 et 11.11 :",
+      "url": "http://archives.neohapsis.com/archives/hp/2002-q4/0061.html"
+    },
+    {
+      "title": "Bulletin de sécurité CISCO :",
+      "url": "http://www.cisco.com/warp/public/707/NTP-pub.shtml"
+    },
+    {
+      "title": "Avis de sécurité Mandrake :",
+      "url": "http://www.linux-mandrake.com/en/security/2001/MDKSA-2001-036.php3?dis=7.2"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-045",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-04-20T00:00:00.000000"
+    },
+    {
+      "description": "seconde version : ajout de CISCO, et relativisation des liens dans le paragraphe Solution.",
+      "revision_date": "2002-05-13T00:00:00.000000"
+    },
+    {
+      "description": "troisième version : ajout du constructeur HP.",
+      "revision_date": "2002-12-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut exécuter à distance du code\narbitraire sur un serveur NTP. Ce code sera exécuté avec les privilèges\nde l'administrateur <span class=\"textit\">root</span> dans la plupart des\ncas.\n",
+  "title": "Débordement de mémoire dans NTPd",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Linux Debian, Mandrake, RedHat",
+      "url": null
+    }
+  ]
+}

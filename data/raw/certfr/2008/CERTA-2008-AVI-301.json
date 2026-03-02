@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions d'Apple QuickTime antérieures à 7.5.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent le lecteur multimédia Apple\nQuickTime :\n\n-   l'application ne manipule pas correctement certains fichiers image\n    au format PICT, en particulier leurs structures PixData. Cela peut\n    provoquer sous certaines conditions un débordement de pile ;\n-   l'application ne manipule pas correctement des contenus multimédias\n    encodés par AAC (Advanced Audio Coding). L'exploitation de cette\n    vulnérabilité peut entraîner une corruption de la mémoire.\n-   l'application ne manipule pas correctement certains contenus\n    multimédias nécessitant des codecs video Indeo.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1583",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1583"
+    },
+    {
+      "name": "CVE-2008-1584",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1584"
+    },
+    {
+      "name": "CVE-2008-1582",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1582"
+    },
+    {
+      "name": "CVE-2008-1585",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1585"
+    },
+    {
+      "name": "CVE-2008-1581",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1581"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Apple 106704 du 10 juin 2008 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=106704"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-301",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-06-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent le lecteur multimédia Apple\nQuickTime. L'exploitation de ces dernières peut conduire à l'exécution\nde code arbitraire sur le poste vulnérable ou à un dysfonctionnement du\nlecteur.\n",
+  "title": "Multiples vulnérabilités dans Apple QuickTime",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de sécurité KB HT1991 Apple du 10 juin 2008",
+      "url": "http://support.apple.com/kb/HT1991"
+    }
+  ]
+}

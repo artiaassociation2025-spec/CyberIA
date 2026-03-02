@@ -1,0 +1,47 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les versions 1.9.3 et antérieures.</p>",
+  "content": "## Description\n\nUn défaut d'initialisation de variable permet, lorsque l'option\nregisters_global est activée, d'exécuter du code arbitraire au moyen\nd'une requête spécialement écrite. La dernière version de Moodle corrige\nla vulnérabilité et ajoute une vérification lors de l'installation qui\nse bloque si l'option registers_global est activée.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-5432",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-5432"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-1691 du 22 décembre 2008 :",
+      "url": "http://www.debian.org/security/2008/dsa-1691"
+    },
+    {
+      "title": "Bulletin de mise à jour Moodle 1.9.3+ :",
+      "url": "http://download.moodle.org/stable19/CHANGES"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-608",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-12-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence CVE et du bulletin de sécurité Debian.",
+      "revision_date": "2008-12-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Un défaut d'initialisation de variable permet l'exécution de code\narbitraire à distance.\n",
+  "title": "Vulnérabilité dans Moodle",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour de Moodle de la version 1.9.3+",
+      "url": null
+    }
+  ]
+}

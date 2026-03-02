@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Serveur Telnet sous Microsoft Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Service Telnet sous Microsoft Interix 2.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne mauvaise gestion de la mémoire du serveur Telnet peut permettre\nd'exécuter à distance, par le biais de requêtes judicieusement\ncomposées, du code arbitraire (avec les droits system sous Windows 2000)\nou entraîner un déni de service.\n\nSous Windows 2000, le serveur Telnet est installé par défaut mais non\nlancé.  \n  \n\n## Solution\n\nTélécharger le correctif sur le site Microsoft :\n\n-   Windows 2000 :\n\n        http://www.microsoft.com/windows2000/downloads/security/q307298/default.asp\n\n-   Interix 2.2 :\n\n        http://www.microsoft.com/downloads/release.asp?ReleaseID=35969\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-004.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-025",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur distant mal intentionné peut, en provoquant un\ndébordement de mémoire dans le serveur Telnet, exécuter du code\narbitraire ou entraîner un déni de service.\n",
+  "title": "Vulnérabilité dans le serveur Telnet Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS02-004",
+      "url": null
+    }
+  ]
+}

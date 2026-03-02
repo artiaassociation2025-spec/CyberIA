@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Versions antérieures à Debian sid 1.1.17-1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Nginx",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Versions antérieures à Debian squeeze 0.7.67-3+squeeze2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Nginx",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe correctif concerne une fuite d'information côté serveur. En générant\nune demande mal formatée il était possible de lire des zones mémoires\nprécédemment libérées et donc des informations potentiellement\nsensibles.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-1180",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-1180"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 2434 du 19 mars 2012 :",
+      "url": "http://www.debian.org/security/2012/dsa-2434"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-161",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-03-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été corrigée dans <span class=\"textit\">Nginx</span>.\nL'exploitation de cette vulnérabilité pouvait conduire à des fuites\nd'informations côté serveur.\n",
+  "title": "Vulnérabilité dans Nginx",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DSA-2434-1",
+      "url": null
+    }
+  ]
+}

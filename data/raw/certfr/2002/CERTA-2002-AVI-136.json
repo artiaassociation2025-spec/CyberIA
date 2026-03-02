@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système utilisant OpenSSH dans des versions comprises  entre 2.3.1p1 et 3.3.</P>",
+  "content": "## Description\n\nLes vulnérabilités sont deux débordements de mémoire dans la gestion du\nnombre de réponses reçues durant une authentification par défi/réponse\nde type SKEY ou BSD_AUTH (système d'authentification BSD) d'une part, et\nPAM (« Pluggable Authentification Modules » système modulaire de gestion\nde l'authentification présent entre autres sur la plupart des Linux et\nsur Sun Solaris) d'autre part.\n\n## Contournement provisoire\n\nAppliquer au fichier de configuration de sshd (sshd_config) au moins\nl'une des recommendations suivantes :\n\n-   Désactiver le support de SSH2 : Protocol 1 ;\n-   Si la version d'OpenSSH est au moins 3.3, la directive\n    UsePrivilegeSeparation yes limite les risques de compromission root\n    (peut cependant affecter la compression sur les noyaux linux 2.2,\n    rajouter alors UseCompression no) ;\n-   Désactiver le support des options de défi/réponse :\n    -   ChallengeResponseAuthentication no\n    -   PAMAuthenticationViaKbdInt no (versions supérieures à 2.9)\n    -   KbdInteractiveAuthentication no (versions comprises entre\n        2.3.1p1 et 2.9)\n\n## Solution\n\nMettre à jour OpenSSH avec une version au moins égale à la 3.4.\n\n-   Sources OpenSSH\n\n        http://www.openssh.com/\n\n-   Mandrake Linux\n\n        http://www.linux-mandrake.com/en/secuirty/2002/MDKSA-2002-040.php\n\n-   Debian\n\n        http://www.debian.org/security/2002/dsa-134\n\n-   SuSE Linux\n\n        http://archives.neohapsis.com/archives/linux/suse/2002-q2/1166.html\n\n-   Conectiva Linux\n\n        http://distro.conectiva.com/atualizacoes/?id=a&anuncio=00500\n\n-   OpenWall Linux (version « current »)\n\n        http://www.openwall.com/Owl/\n\n-   OpenBSD\n\n        http://www.openbsd.org/errata.html#sshd\n\n-   FreeBSD\n\n        ftp://ftp.FreeBSD.org/pub/FreeBSD/branches/-current/ports/security/openssh/\n\n-   Sun Solaris 9\n\n        http://sunsolve.sun.com/pub-cgi/retrieve.pl?type=0&doc=fsalert%2F45525&display=plain\n\n-   Sun Cobalt RaQ 550\n\n        http://sunsolve.sun.com/pub-cgi/retrieve.pl?type=0&doc=fsalert%2F45508&display=plain\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis ISS",
+      "url": "http://bvlive01.iss.net/issEn/delivery/xforce/alertdetail.jsp?oid=20584"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-136",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins Sun.",
+      "revision_date": "2002-07-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution distante de code arbitraire avec les privilèges du service sshd (généralement root )"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes dans la gestion des\ndéfis/réponses (protocole SSH2) interne à OpenSSH. L'une au moins permet\nà un utilisateur mal intentionné d'exécuter du code sur l'hôte du\nservice <span class=\"textit\">sshd</span>.\n",
+  "title": "Vulnérabilités dans OpenSSH v2 et v3",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2002-18 du CERT/CC",
+      "url": "http://www.kb.cert.org/vuls/id/369347"
+    },
+    {
+      "published_at": null,
+      "title": "Avis OpenSSH",
+      "url": "http://www.openssh.com/txt/preauth.adv"
+    }
+  ]
+}

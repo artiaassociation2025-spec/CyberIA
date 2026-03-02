@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>tcpdump versions 3.8.1 et antérieures.</p>",
+  "content": "## Description\n\nA l'aide de paquets ISAKMP habilement constitués, un utilisateur mal\nintentionné peut provoquer un déni de service (arrêt brutal) de\nl'application tcpdump si celle-ci est employée avec l'option -v\n(visualisation des protocoles).\n\n## Solution\n\nLa version 3.8.3 de tcpdump corrige cette vulnérabilité. Installer cette\nversion à partir des sources ou appliquer le correctif fournit par\nl'éditeur :\n\n-   Sources de tcpdump :\n\n        http://tcpdump.org\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:219 du 26 mai 2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-219.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 478 du 06 avril 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-478"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200404-03 du 31 mars 2004    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200404-03.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Apple du 07 septembre 2004 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=61798"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD du 31 mars 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Annonce de la sortie de tcpdump 3.8.3 :",
+      "url": "http://tcpdump.org/tcpdump-changes.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:030 du 14 avril    2004 :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:030"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-106",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-31T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Gentoo.",
+      "revision_date": "2004-04-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Mandrake.",
+      "revision_date": "2004-04-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2004-05-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat.",
+      "revision_date": "2004-06-09T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Apple.",
+      "revision_date": "2004-09-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux failles dans l'affichage des paquets ISAKMP (Internet Security\nAssociation and Key Management Protocol) ont été identifiées.\n",
+  "title": "Vulnérabilités de tcpdump",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité R7-0017 de Rapid7",
+      "url": "http://www.rapid7.com/advisories/R7-0017.html"
+    }
+  ]
+}

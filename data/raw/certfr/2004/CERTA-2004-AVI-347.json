@@ -1,0 +1,117 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MySQL 3.x ;",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MySQL 4.x.",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Une vulnérabilité dans les requêtes SQL (Standard Query Language) de\n    type « ALTER TABLE ... RENAME » permet à un utilisateur mal\n    intentionné d'élever ses privilèges et d'accèder à des informations\n    confidentielles.\n-   Une seconde vulnérabilité permet à un utilisateur mal intentionné de\n    réaliser un déni de service, via l'envoi de plusieurs requêtes SQL\n    de type « ALTER ».\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).  \nLes versions 3.23.59 et 4.0.21 corrigent ces vulnérabilités.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de Mysql n°2408 :",
+      "url": "http://bugs.mysql.com/bug.php?id=2408"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:569 du 20 octobre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-569.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200410-22 du 24 octobre    2004 :",
+      "url": "http://www.gentoo.org/security/en/GLSA/GLSA-200410-22.xml"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:597 du 20 octobre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-597.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:611 du 27 octobre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-611.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-562 du 11 octobre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-562"
+    },
+    {
+      "title": "Bulletins de sécurité FreeBSD du 16 décembre 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SR:2004:001 du 24 novembre    2004 :",
+      "url": "http://www.suse.de/de/security/2004_01_sr.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:119 du 01 novembre    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:119"
+    },
+    {
+      "title": "Bulletin de sécurité de Mysql n°3270 :",
+      "url": "http://bugs.mysql.com/bug.php?id=3270"
+    },
+    {
+      "title": "Site internet de Mysql :",
+      "url": "http://www.mysql.com"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-347",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-10-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité redhat.",
+      "revision_date": "2004-10-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Mandrake et Gentoo.",
+      "revision_date": "2004-11-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité SUSE, Debian, RedHat et ajout de la référence CVE CAN-2004-0836.",
+      "revision_date": "2004-11-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence aux bulletins de sécurité FreeBSD du 16 décembre 2004.",
+      "revision_date": "2004-12-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes sur le gestionnaire de base de données\nMySQL permettent à un utilisateur mal intentioné de réaliser un déni de\nservice ou d'élever ses privilèges sur le gestionnaire de base de\ndonnées vulnérable.\n",
+  "title": "Vulnérabilités dans MySQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Mysql",
+      "url": null
+    }
+  ]
+}

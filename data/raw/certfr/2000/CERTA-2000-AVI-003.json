@@ -1,0 +1,118 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "HP Web JetAdmin Version 5.6 (Microsoft Windows 2000)",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP Web JetAdmin Version 5.6 (Red Hat Linux)",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP Web JetAdmin Version 5.6 (Solaris)",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP Web JetAdmin Version 5.6 (Linux - SuSe)",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP Web JetAdmin Version 5.6 (Novell Netware)",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP Web JetAdmin Version 5.6 (HP-UX 11.x)",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP Web JetAdmin Version 5.6 (HP-UX 10.20)",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP Web JetAdmin Version 5.6 (Microsoft Windows NT 4.0) (Testé par CERTA)",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPar le biais d'une URL construite astucieusement, un utilisateur mal\nintentionné peu avoir accès à certains fichiers présents sur le serveur\néquipé de HP Web JetAdmin.\n\n## Solution\n\n## 4.1 Passage en version 6\n\nLe passage en version 6 de HP Web jetAdmin supprime cette vulnérabilité\nmais une autre faille a été découverte : grâce à une URL mal formée un\nutilisateur distant peut entraîner un déni de service sur la machine\nhébergeant HP Web JetAdmin.\n\n## 4.2 Solution temporaire\n\nDans le gestionnaire de l'application, n'autoriser l'accès que sur des\nadresses IP de machines reconnues sûres.\n\nEditeur Informé : Un correctif est en cours de réalisation.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-003",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-05-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès aux données"
+    },
+    {
+      "description": "Contournement des règles de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité sous HP Web JetAdmin Version 5.6 et antérieures",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CERT HP",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "ussrback",
+      "url": null
+    }
+  ]
+}

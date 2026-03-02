@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "rsync version 2.6.9 ainsi que les versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDes vulnérabilités ont été identifiées dans l'utilitaire rsync. Parmi\ncelles-ci, il y aurait un mauvais décalage d'indice (off-by-one) dans la\nfonction f_name() qui permettrait à une personne de contourner la\npolitique de sécurité en trichant sur les noms de répertoires.\n\n## Solution\n\nSe référer aux différents bulletins de sécurité des éditeurs pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-4091",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4091"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2007:017 du 17 août 2007    :",
+      "url": "http://www.novell.com/linux/security/advisories/2007_17_sr.html"
+    },
+    {
+      "title": "Page du projet rsync :",
+      "url": "http://samba.anu.edu.au/rsync/"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:166 du 18 août    2007 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDKSA-2007:166"
+    },
+    {
+      "title": "Communiqué de RedHat sur le bogue du 15 août 2007 :",
+      "url": "http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=CVE-2007-4091#c1"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-500-1 du 20 août 2007 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-500-1"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-371",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-08-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Des vulnérabilités ont été identifiées dans l'utilitaire rsync.\nL'exploitation de ces dernières permettrait à une personne malveillante\nde perturber le système, voire d'élever ses privilèges ou exécuter du\ncode arbitraire.\n",
+  "title": "Vulnérabilités dans rsync",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de sécurité Mandriva MDKSA-2007:166 du 18 août 2007",
+      "url": null
+    }
+  ]
+}

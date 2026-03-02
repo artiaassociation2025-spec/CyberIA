@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft ISA Server 2000.</P>",
+  "content": "## Description\n\nISA Server 2000 est un logiciel conçu pour Windows 2000 intégrant un\ngarde barrière ainsi qu'un service de relayage HTTP.\n\nUn utilisateur local lançant, lors de la consultation de sites internet,\nune requête HTTP trop longue provoque un arrêt brutal du service de\nrelais HTTP obligeant l'administrateur à relancer ce service.\n\nDans la configuration par défaut cette fonction n'est pas accessible\ndepuis l'extérieur. Cependant un mél contenant une URL malformée expédié\nà un destinataire intérieur peut provoquer l'arrêt du service lorsque le\ndestinataire clique sur le lien.\n\n## Solution\n\nAppliquer le correctif Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=29081\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms01-021.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-044",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-04-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, par le biais d'une requête HTTP\nmalformée, créer un deni de service sur un relais HTTP.\n",
+  "title": "Vulnérabilité dans Microsoft ISA Server 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-021",
+      "url": null
+    }
+  ]
+}

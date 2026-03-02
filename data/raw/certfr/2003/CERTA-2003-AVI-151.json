@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MySQL versions 3.23.57 et antérieures ;",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MySQL versions 4.0.14 et antérieures.",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité est présente dans une routine de contrôle des mots de\npasse.\n\n  \n\nUn utilisateur légitime de MySQL possédant le droit d'administration\nALTER sur la table mysql.user peut exploiter cette vulnérabilité afin\nd'exécuter du code arbitraire sur la plate-forme hébergeant le serveur\nMySQL avec les privilèges du processus mysqld.\n\n## Solution\n\nLes versions 3.23.58 et 4.0.15 de MySQL corrigent cette vulnérabilité :\n\n-   Annonce MySQL 4.0.15 :\n\n        http://lists.mysql.com/announce/168\n\n-   Annonce MySQL 3.23.58 :\n\n        http://www.mysql.com/doc/en/News-3.23.58.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité MDKSA-2003:094 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:094"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2003:281 de Red Hat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-281.html"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE-SA:2003:042 de SuSE :",
+      "url": "http://www.suse.com/de/security/2003_042_mysql.html"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2003:282 de Red Hat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-282.html"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-151",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-09-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de SuSE et Mandrake.",
+      "revision_date": "2003-10-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de Red Hat.",
+      "revision_date": "2003-10-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité du serveur de base de données MySQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité 200309-08 de Gentoo",
+      "url": "http://www.securityfocus.com/advisories/5812"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DSA-381 de Debian",
+      "url": "http://www.debian.org/security/2003/dsa-381"
+    }
+  ]
+}

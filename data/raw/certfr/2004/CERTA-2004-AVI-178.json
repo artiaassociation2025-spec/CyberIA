@@ -1,0 +1,128 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "mod_ssl versions antérieures à 2.8.18.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache 2.0.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire est présente dans la\nfonction ssl_util_uuencode_binary() du module mod_ssl d'Apache, fonction\nappellée lors de la vérification des certificats client.\n\nPar le biais d'un certificat habilement constitué, un utilisateur mal\nintentionné peut exécuter du code arbitraire à distance sur un serveur\napache vulnérable.\n\nPour que la vulnérabilité puisse être exploitée, deux conditions doivent\nêtre réunies :\n\n-   l'option FakeBasicAuth est activée ;\n-   le certificat client est valide (autorité de certification reconnue\n    par le serveur).\n\n## Solution\n\nAppliquer les correctifs à partir des sources :\n\n-   pour Apache 1.3.x :\n\n        http://www.modssl.org/source/mod_ssl-2.8.18-1.3.31.tar.gz\n\n-   pour Apache 2.0.x :\n\n        http://cvs.apache.org/viewcvs.cgi/httpd-2.0/modules/ssl/ssl_engine_kernel.c?r1=1.105&r2=1.106\n\nPour OpenBSD, appliquer les correctifs :\n\n-   Pour OpenBSD 3.5, le correctif est téléchargeable à l'adresse\n    suivante :\n\n        ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.5/common/013_httpd.patch\n\n-   pour OpenBSD 3.4, le correctif est téléchargeable à l'adresse\n    suivante :\n\n        ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.4/common/025_httpd3.patch\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD apache et    apache2 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/www/apache2/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD du 12 juin 2004 :",
+      "url": "http://www.openbsd.org/errata.html#httpd"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200406-05 du 09 juin 2004    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200406-05.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:054 du 01 juin    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:054"
+    },
+    {
+      "title": "Bulletin de sécurité Apple du 07 septembre 2004 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=61798"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:245 du 14 juin 2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-245.html"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD apache et    apache2 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/www/apache/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:342 du 06 juillet    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-342.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:055 du 01 juin    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:055"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD du 12 juin 2004 :",
+      "url": "http://www.openbsd.org/errata34.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-178",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-06-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2004-06-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité OpenBSD.",
+      "revision_date": "2004-06-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat.",
+      "revision_date": "2004-06-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité NetBSD.",
+      "revision_date": "2004-06-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout d'une seconde référence au bulletin de sécurité RedHat.",
+      "revision_date": "2004-07-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Apple.",
+      "revision_date": "2004-09-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le module mod_ssl d'Apache peut être\nexploitée par un utilisateur mal intentionné pour réaliser, sous\ncertaines conditions, l'exécution de code arbitraire à distance ou\nprovoquer un déni de service.\n",
+  "title": "Vulnérabilité du module Apache mod_ssl",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MDKSA-2004:054 de Mandrake",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis SA11534 de Secunia",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MDKSA-2004:055 de Mandrake",
+      "url": null
+    }
+  ]
+}

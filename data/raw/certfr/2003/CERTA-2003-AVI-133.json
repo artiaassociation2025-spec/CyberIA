@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système Microsoft Windows dont les services «NAI ePolicy  Orchestrator» en version serveur ou agent sont démarrés.</P>",
+  "content": "## Description\n\n«ePolicy Orchestrator» est un outil de gestion centralisée de la\npolitique de sécurité antivirale. Il est composé de consoles\nd'administration, de serveurs et enfin d'agents sur chaque poste où la\npolitique antivirus doit être appliquée et surveillée.\n\nTrois vulnérabilités permettant l'exécution de code arbitraire avec les\nprivilèges SYSTEM ont été découvertes :\n\n-   sur les serveurs en version 2.x et 3.0 il est possible d'obtenir, à\n    l'aide d'une requête HTTP bien formée, la configuration du serveur.\n    On y trouve entre autres le compte utilisé et son mot de passe\n    chiffré. L'algorithme de chiffrement et la clef utilisée pouvant\n    être retrouvés, il est possible de faire exécuter sur l'hôte des\n    commandes arbitraires en s'authentifiant sous ce compte.\n-   Une mauvaise gestion des chaînes de format dans les serveurs en\n    version 2.x permet d'exécuter du code avec les privilèges du service\n    à l'aide d'une requête HTTP POST.\n-   Inversement une commande POST habilement constituée et envoyée à un\n    client provoque un débordement de mémoire et permet l'exécution de\n    code.\n\nEnfin une requête HTTP bien construite envoyée à un agent permet de lire\nn'importe quel fichier du système hôte.\n\n## Solution\n\nContacter votre revendeur NAI pour obtenir le correctif :\n\n    http://www.networkassociates.com/us/downloads/updates/hotfixes.asp\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Description du produit «ePolicy Orchestrator» :",
+      "url": "http://www.mcafeesecurity.com/international/france/products/epolicy/default-management-solution.asp"
+    },
+    {
+      "title": "Avis de sécurité de @stake :",
+      "url": "http://www.atstake.com/research/advisories/2003/a073103-1.txt"
+    },
+    {
+      "title": "Avis de sécurité et correctif de NAI :",
+      "url": "http://www.nai.com/us/promos/mcafee/epo_vulnerabilities.asp"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-133",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-08-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance avec des privilèges élevés"
+    }
+  ],
+  "summary": "Des vulnérabilités permettent à un utilisateur mal intentionné distant\nd'exécuter du code sur une machine hébergeant un agent ou un serveur\navec les privilèges élévés du niveau <span class=\"textit\">SYSTEM</span>.\nDe plus, l'ensemble des fichiers de l'hôte d'un agent en version 3.0 est\naccessible en lecture.\n",
+  "title": "Multiples failles dans McAfee »Security ePolicy Orchestrator»",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité @stake du 31/07/2003",
+      "url": null
+    }
+  ]
+}

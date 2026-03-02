@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Db2 versions 11.x antérieures à 11.1.4.7 sans le dernier correctif de sécurité",
+      "product": {
+        "name": "Db2",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Db2 versions 11.5.x antérieures à 11.5.9 sans le dernier correctif de sécurité",
+      "product": {
+        "name": "Db2",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Db2 versions 12.1.x antérieures à 12.1.1 sans le dernier correctif de sécurité",
+      "product": {
+        "name": "Db2",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-30065",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-30065"
+    },
+    {
+      "name": "CVE-2024-7254",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-7254"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0467",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-05-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans IBM Db2. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et un déni de service à distance.",
+  "title": "Multiples vulnérabilités dans IBM Db2",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-05-29",
+      "title": "Bulletin de sécurité IBM 7235042",
+      "url": "https://www.ibm.com/support/pages/node/7235042"
+    },
+    {
+      "published_at": "2025-05-29",
+      "title": "Bulletin de sécurité IBM 7235067",
+      "url": "https://www.ibm.com/support/pages/node/7235067"
+    }
+  ]
+}

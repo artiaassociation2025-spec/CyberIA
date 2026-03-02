@@ -1,0 +1,122 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Catalyst SD-WAN et Catalyst SD-WAN Manager versions antérieures à 20.9.8.2",
+      "product": {
+        "name": "Catalyst SD-WAN",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Catalyst SD-WAN et Catalyst SD-WAN Manager versions 20.12.6.x antérieures à 20.12.6.1",
+      "product": {
+        "name": "Catalyst SD-WAN",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Catalyst SD-WAN et Catalyst SD-WAN Manager versions 20.15.x antérieures à 20.15.4.2",
+      "product": {
+        "name": "Catalyst SD-WAN",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Catalyst SD-WAN et Catalyst SD-WAN Manager versions 20.18.x antérieures à 20.18.2.1",
+      "product": {
+        "name": "Catalyst SD-WAN",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Catalyst SD-WAN et Catalyst SD-WAN Manager versions 20.12.5.x antérieures à 20.12.5.3",
+      "product": {
+        "name": "Catalyst SD-WAN",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "Cisco indique que la publication de la version corrective 20.9.8.2 pour Catalyst SD-WAN et Catalyst SD-WAN Manager est prévue le 27 février 2026. Les versions 20.11.x, 20.13.x, 20.14.x et 20.16.x sont affectées par les vulnérabilités mais ne bénéficieront pas de correctifs de sécurité car elles ont atteint la fin de période de maintenance. Le CERT-FR recommande de migrer vers une version maintenue et avec les derniers correctifs de sécurité.\n\nL'éditeur précise aussi que la solution Cisco SD-WAN a été renommée Cisco Catalyst SD-WAN. Les avis éditeurs indiquent également d'autres changements de noms pour les composants de cette solution. ",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-20126",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-20126"
+    },
+    {
+      "name": "CVE-2026-20128",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-20128"
+    },
+    {
+      "name": "CVE-2026-20122",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-20122"
+    },
+    {
+      "name": "CVE-2026-20129",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-20129"
+    },
+    {
+      "name": "CVE-2026-20127",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-20127"
+    },
+    {
+      "name": "CVE-2026-20133",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-20133"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0210",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-02-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Cisco Catalyst SD-WAN. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la confidentialité des données.\n\nCisco indique que la vulnérabilité CVE-2026-20127 est activement exploitée.",
+  "title": "Multiples vulnérabilités dans Cisco Catalyst SD-WAN",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-02-25",
+      "title": "Bulletin de sécurité Cisco cisco-sa-sdwan-authbp-qwCX8D4v",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-authbp-qwCX8D4v"
+    },
+    {
+      "published_at": "2026-02-25",
+      "title": "Bulletin de sécurité Cisco cisco-sa-sdwan-rpa-EHchtZk",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-rpa-EHchtZk"
+    }
+  ]
+}

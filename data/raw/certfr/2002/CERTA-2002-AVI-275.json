@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de CUPS antérieures  à la version 1.1.18.</p>",
+  "content": "## Description\n\nCUPS est un système d'impression pour Unix développé par Easy Software\nProducts et largement employé dans le monde Unix.  \nLes systèmes d'exploitations suivants livrent CUPS par défaut :\n\n-   Apple ;\n-   GNU/Linux RedHat, Debian, Mandrake, Suse, Slackware ;\n-   FreeBSD et NetBSD.\n\nSept vulnérabilités ont été découvertes dans CUPS permettant à un\nutilisateur mal intentionné de réaliser un déni de service et d'exécuter\ndu code arbitraire à distance.\n\n## Contournement provisoire\n\nFiltrer le port 631/TCP au niveau du garde-barrière.\n\n## Solution\n\nMettre à jour CUPS en version 1.1.18.  \nLe téléchargement de la nouvelle version de CUPS se fait depuis\nl'adresse :  \n\n    http://www.cups.org/software.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Apple pour Mac OS X :",
+      "url": "http://docs.info.apple.com/article.html?artnum=61798"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2003:001 :",
+      "url": "http://www.mandrakesecure.com/en/advisories/advisory.php?name=MDKSA-2003:001"
+    },
+    {
+      "title": "Bulletin de sécurité Suse :",
+      "url": "http://www.suse.com/de/security/2003_002_cups.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2002:295-07 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-295.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo :",
+      "url": "http://forums.gentoo.org/viewtopic.php?t=27949"
+    },
+    {
+      "title": "Annonce de la sortie de CUPS en version 1.1.18 :",
+      "url": "http://www.cups.org/news.php?V87"
+    },
+    {
+      "title": "Bulletin de sécurité DSA-232 de Debian :",
+      "url": "http://www.debian.org/security/2003/dsa-232"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-275",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité d'Apple.",
+      "revision_date": "2002-12-23T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins de sécurité Suse et Gentoo.",
+      "revision_date": "2003-01-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Mandrake.",
+      "revision_date": "2003-01-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité RedHat.",
+      "revision_date": "2003-01-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Debian.",
+      "revision_date": "2003-01-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans le système\nd'impression CUPS (Common Unix Printing System) permettant à un\nutilisateur mal intentionné de réaliser un déni de service ou d'exécuter\ndu code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans CUPS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de iDEFENSE du 19-12-02",
+      "url": null
+    }
+  ]
+}

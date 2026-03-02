@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Exchange 5.5.</P>",
+  "content": "## Description\n\nExchange 5.5 offre une particularité (Outlook Web Access -OWA- )\npermettant à des utilisateurs connus d'accèder à leurs méls par\nl'intermédiaire d'un navigateur classique. OWA se comporte comme un\nserveur Web et autorise les utilisateurs à lire ou expédier du courrier\nsans passer par un logiciel de messagerie.\n\nUne vulnérablité présente dans OWA permet, lors de la lecture d'un\nmessage au format « HTML », d'exécuter automatiquement des scripts.\nAinsi, si un utilisateur mal intentionné expédie un message de ce type à\nun destinataire utilisant la fonction OWA, le ou les scripts seront\nexécutés lors de la lecture. Ces scripts peuvent agir sur les méls\nprésents et les modifier, les supprimer, etc.\n\n## Contournement provisoire\n\nSi cette fonction n'est pas utilisée par vos utilisateurs, il est\nrecommandé de la désactiver.\n\n## Solution\n\nTélécharger le correctif sur le site Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=34402\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-057.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-160",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-12-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, via la fonction OWA, manipuler la\nboîte aux lettres d'un utilisateur.\n",
+  "title": "Vulnérabilité d'OWA dans Microsoft Exchange 5.5",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-057",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Unity 5.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unity 4.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unity 7.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabiltés sont présentes dans les produits Cisco Unity :\n\n-   la première concerne le processus d'authentification auprès du\n    serveur Cisco Unity. Elle permet à un utilisateur malintentionné de\n    contourner cette authentification pour accéder à certaines parties\n    de la configuration du serveur ;\n-   la seconde est relative à la gestion des sessions ouvertes sur le\n    serveur et permet à un utilisateur distant de provoquer un déni de\n    service en consommant toutes les sessions disponibles ;\n-   la dernière concerne un mauvais positionnement de permissions sur un\n    répertoire du serveur. Celle-ci permet à un utilisateur\n    malintentionné du domaine de porter atteinte à certaines\n    informations sensibles du système.\n\nLes deux premières vulnérabilités ne sont exploitables que si le serveur\nCisco Unity est configuré pour accepter les authentifications anonymes.\nCe qui n'est pas le cas par défaut.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3814",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3814"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 107983 du 08 octobre 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sr-20081008-unity.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco ID 108036 du 08 octobre 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20081008-unity.shtml"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-489",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-10-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans les produits Cisco Unity permettent à un\nutilisateur distant de provoquer un déni de service, de contourner la\npolitique de sécurité ou de porter atteinte à la confidentialité de\ncertaines données.\n",
+  "title": "Multiples vulnérabilités dans Cisco Unity",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Cisco #108036 et #107983",
+      "url": null
+    }
+  ]
+}

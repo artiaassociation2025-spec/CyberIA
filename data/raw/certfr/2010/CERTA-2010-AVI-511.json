@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Noyau Linux versions 2.6.30 à  2.6.36-rc8</p>",
+  "content": "## Description\n\nUne vulnérabilité a été corrigée dans l'implémentation du protocole RDS\n(Reliable Datagram Sockets) utilisée par le noyau Linux. Cette\nimplémentation ne vérifie pas, lors de la copie de données depuis\nl'espace noyau vers l'espace utilisateur, que l'adresse de destination\nse trouve bien en espace utilisateur. Un attaquant peut exploiter cette\nvulnérabilité afin d'écrire des données arbitraire en espace noyau, ce\nqui peut lui permettre d'élever ses privilèges au niveau administrateur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3904",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3904"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-511",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-10-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le noyau Linux permet à un attaquant d'élever ses\nprivilèges.\n",
+  "title": "Vulnérabilité dans le noyau Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise à jour des sources du noyau",
+      "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commitdiff;h=799c10559d60f159ab2232203f222f18fa3c4a5f"
+    }
+  ]
+}

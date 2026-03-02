@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Confluence Data Center et Confluence Server versions 8.4.x antérieures à 8.4.3",
+      "product": {
+        "name": "Confluence",
+        "vendor": {
+          "name": "Atlassian",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Confluence Data Center et Confluence Server versions 8.0.x à 8.3.x antérieures à 8.3.3",
+      "product": {
+        "name": "Confluence",
+        "vendor": {
+          "name": "Atlassian",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Confluence Data Center et Confluence Server versions 8.5.x antérieures à 8.5.2",
+      "product": {
+        "name": "Confluence",
+        "vendor": {
+          "name": "Atlassian",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-22515",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-22515"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0803",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-10-05T00:00:00.000000"
+    },
+    {
+      "description": "Ajout du risque \"Contournement de la politiique de sécurité\" suite à la mise à jour de l'avis par l'éditeur.",
+      "revision_date": "2023-10-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Atlassian Confluence. Elle\npermet à un attaquant de provoquer une élévation de privilèges et un\ncontournement de la politique de sécurité.\n\nL'éditeur a connaissance d'un rapport indiquant que la vulnérabilité a\nété exploitée sur des instances Confluence Data Center et Server\naccessibles depuis internet.\n",
+  "title": "Vulnérabilité dans Atlassian Confluence",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Atlassian 1295682276 du 04 octobre 2023",
+      "url": "https://confluence.atlassian.com/security/cve-2023-22515-privilege-escalation-vulnerability-in-confluence-data-center-and-server-1295682276.html"
+    }
+  ]
+}

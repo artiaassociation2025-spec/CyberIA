@@ -1,0 +1,120 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "DXP versions 2024.x antérieures à 2024.Q1.1",
+      "product": {
+        "name": "DXP",
+        "vendor": {
+          "name": "Liferay",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Portal versions antérieures à 7.4.3.112",
+      "product": {
+        "name": "Portal",
+        "vendor": {
+          "name": "Liferay",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "DXP versions 2023.Q3.x antérieures à 2023.Q3.9 ",
+      "product": {
+        "name": "DXP",
+        "vendor": {
+          "name": "Liferay",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "DXP versions 2023.Q4.x antérieures à 2023.Q4.6",
+      "product": {
+        "name": "DXP",
+        "vendor": {
+          "name": "Liferay",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2024-38002",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-38002"
+    },
+    {
+      "name": "CVE-2024-8980",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-8980"
+    },
+    {
+      "name": "CVE-2024-26272",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-26272"
+    },
+    {
+      "name": "CVE-2024-26273",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-26273"
+    },
+    {
+      "name": "CVE-2024-26271",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-26271"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0912",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-10-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Liferay. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une injection de code indirecte à distance (XSS) et une injection de requêtes illégitimes par rebond (CSRF).",
+  "title": "Multiples vulnérabilités dans Liferay",
+  "vendor_advisories": [
+    {
+      "published_at": "2024-10-22",
+      "title": "Bulletin de sécurité Liferay cve-2024-26273",
+      "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2024-26273"
+    },
+    {
+      "published_at": "2024-10-22",
+      "title": "Bulletin de sécurité Liferay cve-2024-26271",
+      "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2024-26271"
+    },
+    {
+      "published_at": "2024-10-22",
+      "title": "Bulletin de sécurité Liferay cve-2024-8980",
+      "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2024-8980"
+    },
+    {
+      "published_at": "2024-10-22",
+      "title": "Bulletin de sécurité Liferay cve-2024-26272",
+      "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2024-26272"
+    },
+    {
+      "published_at": "2024-10-22",
+      "title": "Bulletin de sécurité Liferay cve-2024-38002",
+      "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2024-38002"
+    }
+  ]
+}

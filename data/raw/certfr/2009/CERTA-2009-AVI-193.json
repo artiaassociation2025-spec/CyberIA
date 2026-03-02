@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Claroline</SPAN> versions 1.8.11 et  antérieures.</P>",
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans Claroline :\n\n-   un paramètre n'est pas correctement filtré dans le fichier\n    /claroline/group/group.php, ce qui permet d'injecter du code SQL ;\n-   une faille dans le fichier /claroline/linker/notfound.php permet de\n    réaliser des injections de code indirectes.\n\n## Solution\n\nMettre Claroline à jour en version 1.9.0.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Forum de Claroline :",
+      "url": "http://forum.claroline.net/"
+    },
+    {
+      "title": "Version 1.9.0 de Claroline :",
+      "url": "http://www.claroline.net/download/stable.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-193",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-05-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code SQL"
+    },
+    {
+      "description": "Injection de code indirecte"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans <span class=\"textit\">Claroline</span>\npermettent d'injecter du code SQL et de réaliser des injections de code\nindirectes.\n",
+  "title": "Vulnérabilités dans Claroline",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Messages du 05 mai 2009 et du 11 mai 2009 sur le forum de Claroline",
+      "url": null
+    }
+  ]
+}

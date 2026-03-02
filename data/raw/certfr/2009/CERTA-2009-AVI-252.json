@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Foxit Reader 3.0 versions antérieures à la version 1817 ;",
+      "product": {
+        "name": "PDF Reader",
+        "vendor": {
+          "name": "Foxit",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Foxit Reader JPEG2000/JBIG2 decoder add-on 2.0 versions antérieures à la version 2009.616.",
+      "product": {
+        "name": "PDF Reader",
+        "vendor": {
+          "name": "Foxit",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans le convertisseur additionel\nJPEG2000/JBIG2 de Foxit Reader. L'exploitation de ces deux\nvulnérabilités permettent à un utilisateur malveillant d'exécuter du\ncode arbitraire.\n\nLa version 3.0 de Foxit Reader contient par défaut ce convertisseur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0690",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0690"
+    },
+    {
+      "name": "CVE-2009-0691",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0691"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de mise à jour Foxit Reader du 19 juin 2009 :",
+      "url": "http://www.foxitsoftware.com/pdf/reader/security.htm#0602"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-252",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-06-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités permettant l'exécution de code arbitraire à distance\nont été découvertes dans le convertisseur additionel JPEG2000/JBIG2 de\nFoxit Reader.\n",
+  "title": "Multiples vulnérabilités du lecteur Foxit Reader",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour Foxit du 19 juin 2009",
+      "url": null
+    }
+  ]
+}

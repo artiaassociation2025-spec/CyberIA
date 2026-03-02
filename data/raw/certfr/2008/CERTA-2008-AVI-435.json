@@ -1,0 +1,28 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>AWStats Totals, versions 1.x.</p>",
+  "content": "## Description\n\nAWStats Totals est une extension multisite du logiciel AWStats.\n\nUne première vulnérabilité réside dans un manque de filtrage du\nparamètre sort transmis à la fonction multisort(). Cette vulnérabilité\npermet à un utilisateur malveillant d'exécuter des scripts PHP sur le\nsystème vulnérable.\n\nUne deuxième vulnérabilité provient d'un manque de filtrage des\nparamètres year et month passés dans les URL. Cette vulnérabilité permet\nà un utilisateur malveillant de réaliser une injection de code indirecte\n(cross site scripting).\n\n## Solution\n\nLa version 1.15 remédie à ces problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de téléchargement de AWStats Totals :",
+      "url": "http://www.telartis.nl/xcms/awstats/"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-435",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-09-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans AWStats Totals permettent à un utilisateur\nmalveillant d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités de AWStats Totals",
+  "vendor_advisories": []
+}

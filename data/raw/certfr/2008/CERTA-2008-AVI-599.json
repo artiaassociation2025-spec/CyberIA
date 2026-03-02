@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Asterisk Business Edition, pour les versions de la branche B.x.x antérieures à B.2.5.6.",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Open Source, pour les versions de la branche 1.2.x antérieures à 1.2.30.4 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans l'application de téléphonie\nAsterisk. Elle concerne en particulier le protocole IAX2 (Inter Asterisk\neXchange) et la gestion des utilisateurs en temps réel.\n\nCette vulnérabilité peut être exploitée par une personne distante, même\nnon authentifiée auprès du serveur, afin de perturber le fonctionnement\ndu service de téléphonie.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur Digium pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Digium AST-2008-012 du 09 décembre    2008 :",
+      "url": "http://downloads.digium.com/pub/security/AST-2008-012.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-599",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-12-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans l'application de téléphonie\nAsterisk. Celle-ci peut être exploitée par une personne distante afin de\nperturber le fonctionnement du serveur.\n",
+  "title": "Vulnérabilité dans Asterisk",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Digium AST-2008-012 du 09 décembre 2008",
+      "url": null
+    }
+  ]
+}

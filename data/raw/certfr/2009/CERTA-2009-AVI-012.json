@@ -1,0 +1,93 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows XP (SP2 et SP3), y compris la version x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2008 pour les systèmes 32-bit, x64 ou Itanium.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Vista et Windows Vista SP1, y compris la version x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 (SP1 et SP2), y compris les versions x64 Edition ou pour systèmes Itanium ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois vulnérabilités ont été identifiées dans la mise en œuvre de SMB\n(Microsoft Server Message Block) sous Windows. Aucune ne nécessite\nd'authentification préalable. Leur exploitation peut conduire à un déni\nde service du système vulnérable distant, voire à l'exécution de code\narbitraire.\n\n## Solution\n\nSe référer au bulletin de sécurité MS09-001 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-4114",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4114"
+    },
+    {
+      "name": "CVE-2008-4835",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4835"
+    },
+    {
+      "name": "CVE-2008-4834",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4834"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-012",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-01-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans la mise en œuvre de\nSMB sous Windows. L'exploitation de ces dernières par une personne\nmalveillante distante peut permettre dans certaines conditions\nd'exécuter du code arbitraire sur le système vulnérable.\n",
+  "title": "Plusieurs vulnérabilités de SMB dans Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS09-001 du 13 janvier 2009",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-001.mspx"
+    }
+  ]
+}

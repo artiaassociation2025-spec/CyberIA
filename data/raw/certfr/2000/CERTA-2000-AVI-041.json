@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows NT.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 9x ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe ver Apology remplace le fichier wsock32.dll par une version modifiée\ndans le but de surveiller le trafic réseau. Lorsque l'utilisateur d'une\nmachine infecté expédie un mèl, un second est automatiquement transmis\nau même destinataire.\n\nCe second message ne contient ni sujet, ni corps mais un fichier\nexécutable en pièce jointe qui, une fois exécuté, installe le ver sur la\nmachine du destinataire. Ce fichier joint est susceptible de porter l'un\ndes noms suivants :\n\n-   README.TXT.pif\n-   I_wanna_see_YOU.TXT.pif\n-   MATRiX_Screen_Saver.SCR\n-   LOVE_LETTER_FOR_YOU.TXT.pif\n-   NEW_playboy_Screen_saver.SCR\n-   BILL_GATES_PIECE.JPG.pif\n-   TIAZINHA.JPG.pif\n-   FEITICEIRA_NUA.JPG.pif\n-   Geocities_Free_sites.TXT.pif\n-   NEW_NAPSTER_site.TXT.pif\n-   METALLICA_SONG.MP3.pif\n-   ANTI_CIH.EXE\n-   INTERNET_SECURITY_FORUM.DOC.pif\n-   ALANIS_Screen_Saver.SCR\n-   READER_DIGEST_LETTER.TXT.pif\n-   WIN\\_\\$100_NOW.DOC.pif\n-   IS_LINUX_GOOD_ENOUGH!.TXT.pif\n-   QI_TEST.EXE\n-   AVP_Updates.EXE\n-   SEICHO-NO-IE.EXE\n-   YOU_are_FAT!.TXT.pif\n-   FREE_xxx_sites.TXT.pif\n-   I_am_sorry.DOC.pif\n-   Me_nude.AVI.pif\n-   Sorry_a bout_yesterday.DOC.pif\n-   Protect_your_credit.HTML.pif\n-   JIMI_HMNDRIX.MP3.pif\n-   HANSON.SCR\n-   F\\*\\*\\*\\*\\*\\*\\_WITH_DOGS.SCR\n-   MATRiX_2\\_is_OUT.SCR\n-   zipped_files.EXE\n-   BLINK_182.MP3.pif\n\nApology bloque l'accès aux sites internet de différents éditeurs\nd'anti-virus et empêche d'envoyer des mèls à ces éditeurs. Il tente\négalement de se connecter sur un site dans le but de récupérer des\ncomposants à exécuter sur la machine infectée.  \n  \n\nApology crée les fichiers suivants dans le répertoire d'installation de\nWindows :\n\n-   IE_PACK.EXE\n-   MTX\\_.EXE\n-   WIN32.DLL\n-   WSOCK32.MTX\n\nLe fichier WININIT.INI est modifié afin de lancer WSOCK32.MTX à la place\nde WSOCK32.DLL lors du redémarrage de la machine.  \n  \n\nDeux entrées sont également ajoutées à la base de registre :\n\n-   `HKLM\\Software\\[MATRix]`\n\n-   `HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run`\n\n    `SystemBackup = \"C:\\WINDOWS\\MTX_.EXE\"`\n\nLe fichier MTX\\_.EXE tente toute les deux minutes d'établir une\nconnexion TCP sur le port 1137.\n\n## Solution\n\n-   Bloquer le port 1137 afin de stopper la connexion TCP ;\n-   Mettre à jour votre anti-virus.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-041",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de commandes"
+    },
+    {
+      "description": "Propagation de virus"
+    }
+  ],
+  "summary": null,
+  "title": "Ver sous Windows : W32/Apology",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Sophos",
+      "url": "http://www.sophos.com/virusinfo/analyses/w32apology.html"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>subversion</TT> versions 1.0.5 et  versions antérieures.",
+  "content": "## Description\n\nsubversion est un système de contrôle des versions de fichiers, ajoutant\ndes fonctionnalités à CVS (Concurrent Versions System) telle la\npossibilité de copier, déplacer ou effacer des fichiers ou\nrépertoires.  \nUn serveur subversion peut être mis en place à partir d'un module\nApache, d'un service autonome (svnserver) ou à la demande encapsulé dans\nle protocole SSH.  \nLe module Apache mod_authz_svn fonctionne avec subversion afin de\nlimiter les accès aux répertoires gérés par subversion en fonction d'une\npolitique de sécurité définie par l'administrateur.  \nUne vulnérabilité du module Apache mod_authz_svn permet à un utilisateur\nd'écrire dans des répertoires non autorisés.\n\n## Contournement provisoire\n\n-   Désactiver le module Apache mod_authz_svn (utiliser le serveur\n    svnserve à la place) ;\n-   garder les données sensibles dans des emplacements séparés des\n    répertoires gérés par subversion.\n\n## Solution\n\n-   A partir des sources, mettre à jour subversion en version 1.0.6 ;\n\n        http://subversion.tigris.org/tarballs/subversion-1.0.6.tar.bz2\n\n-   se référer au bulletin de sécurité de l'éditeur pour l'obtention des\n    correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité subversion :",
+      "url": "http://subversion.tigris.org/security/mod_authz_svn-copy-advisory.txt"
+    },
+    {
+      "title": "Site Internet de subversion :",
+      "url": "http://subversion.tigris.org"
+    },
+    {
+      "title": "Liste des changements dans subversion :",
+      "url": "http://svn.collab.net/repos/svn/tags/1.0.6/CHANGES"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD ap2-subversion    :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/www/ap2-subversion/README.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-256",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité du module Apache mod_authz_svn inclus dans subversion\npermet à un utilisateur mal intentionné de contourner la politique de\nsécurité.\n",
+  "title": "Vulnérabilité de subversion",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA 200407-20",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200407-20.xml"
+    }
+  ]
+}

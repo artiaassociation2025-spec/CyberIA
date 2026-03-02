@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>VMware ESX 4.0 Console OS (COS).</p>",
+  "content": "## Description\n\nPlusieurs logiciels vulnérables inclus dans VMware ESX Console OS ont\nété mis à jour par l'éditeur :\n\n-   le composant NSS_db est mis à jour pour corriger une vulnérabilité\n    permettant à un utilisateur malveillant d'accéder à des données\n    confidentielles (CVE-2010-0826) ;\n-   une mise à jour du composant OpenLDAP corrige un erreur dans la\n    gestion du Common Name d'un certificat X.509, qui permet une attaque\n    du type « homme au milieu » (CVE-2009-3767) ;\n-   la bibliothèque libcurl est mise à jour afin de corriger une\n    vulnérabilité permettant à un attaquant d'effectuer à distance un\n    déni de service par arrêt inopiné (CVE-2010-0734) ;\n-   le logiciel sudo est mis à jour pour corriger une erreur concernant\n    la gestion d'une variable d'environnement permettant à un\n    utilisateur malveillant d'élever ses privilèges (CVE-2010-1646) ;\n-   une mise à jour groupée des composants OpenSSL, GnuTLS, NSS et NSPR\n    corrige différentes vulnérabilités permettant entre autres un déni\n    de service et l'élévation de privilèges (CVE-2009-3555,\n    CVE-2009-2409, CVE-2009-3245 et CVE-2010-0433).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0433",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0433"
+    },
+    {
+      "name": "CVE-2010-0826",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0826"
+    },
+    {
+      "name": "CVE-2010-0734",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0734"
+    },
+    {
+      "name": "CVE-2009-3767",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3767"
+    },
+    {
+      "name": "CVE-2010-1646",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1646"
+    },
+    {
+      "name": "CVE-2009-3555",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3555"
+    },
+    {
+      "name": "CVE-2009-3245",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3245"
+    },
+    {
+      "name": "CVE-2009-2409",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2409"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-461",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-10-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De nombreuses vulnérabilités affectant différents logiciels inclus dans\n<span class=\"textit\">VMware ESX Console OS</span> ont été corrigées.\n",
+  "title": "Multiples vulnérabilités dans VMware ESX Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMSA-2010-0015 du 30 septembre 2010",
+      "url": "http://lists.vmware.com/pipermail/security-announce/2010/000106.html"
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Expressway Series versions antérieures à 14.2",
+      "product": {
+        "name": "Expressway Series",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Enterprise NFVIS versions antérieures à 4.9.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco TelePresence VCS versions antérieures à 14.2",
+      "product": {
+        "name": "TelePresence VCS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-20853",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-20853"
+    },
+    {
+      "name": "CVE-2022-20814",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-20814"
+    },
+    {
+      "name": "CVE-2022-20929",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-20929"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-885",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-10-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Cisco.\nElles permettent à un attaquant de provoquer un contournement de la\npolitique de sécurité, une élévation de privilèges, un déni de service à\ndistance et une injection de requêtes illégitimes par rebond (CSRF).\n",
+  "title": "Multiples vulnérabilités dans les produits Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-expressway-csrf-sqpsSfY6 du 05 octobre 2022",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-expressway-csrf-sqpsSfY6"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-NFVIS-ISV-BQrvEv2h du 05 octobre 2022",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-NFVIS-ISV-BQrvEv2h"
+    }
+  ]
+}

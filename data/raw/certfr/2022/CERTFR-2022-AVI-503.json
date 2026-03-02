@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "QTS versions 4.5.x et QTS versions 5.0.x avec Proxy Server versions antérieures à 1.4.2 (2021/12/30)",
+      "product": {
+        "name": "QTS",
+        "vendor": {
+          "name": "Qnap",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "QuTScloud versions c4.5.x et QuTScloud versions c5.0.x avec Proxy Server versions antérieures à 1.4.2 (2021/12/30)",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Qnap",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "QuTS hero versions h5.0.x avec Proxy Server versions antérieures à 1.4.3 (2022/01/18)",
+      "product": {
+        "name": "QuTS hero",
+        "vendor": {
+          "name": "Qnap",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-34360",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-34360"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-503",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-05-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans QNAP Proxy Server. Elle permet à\nun attaquant de provoquer une injection de requêtes illégitimes par\nrebond (CSRF).\n",
+  "title": "Vulnérabilité dans QNAP Proxy Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité QNAP qsa-22-18 du 26 mai 2022",
+      "url": "https://www.qnap.com/fr-fr/security-advisory/qsa-22-18"
+    }
+  ]
+}

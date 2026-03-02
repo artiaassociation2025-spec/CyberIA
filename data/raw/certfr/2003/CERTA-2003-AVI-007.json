@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Solaris 2.6 sous architecture i386 et Sparc ;</LI>    <LI>Solaris 7 sous architecture i386 et Sparc ;</LI>    <LI>Solaris 8 sous architecture i386 et Sparc ;</LI>    <LI>Solaris 9 sous architecture i386 et Sparc.</LI>  </UL>  <P><TT>Nota :</TT> La vulnérabilité n'a pas été vérifiée par Sun  sur la version 2.5.1 de Solaris, et Sun indique qu'il ne  développera pas de correctif pour ce système.</P>",
+  "content": "## Description\n\nLe programme utmp_update présent dans le répertoire /usr/lib est une\nfonction non documentée appelée par le système pour mettre à jour les\nenregistrements des fichiers utmp et utmpx.\n\nCes derniers journalisent les connexions des utilisateurs au système et\nsont accessibles par des programmes tels que who, login, last, etc.\n\nUn utilisateur mal intentionné peut exécuter du code arbitraire avec les\nprivilèges de l'administrateur root au moyen d'un débordement de mémoire\nde la fonction utmp_update.\n\nIl faut être connecté localement pour pouvoir exploiter cette\nvulnérabilité.\n\n## Solution\n\nConsulter le bulletin d'alerte \\#50008 de Sun (voir paragraphe\nDocumentation) pour connaître la disponibilité des correctifs à\nappliquer.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité #50008 de Sun :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F50008"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-007",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-01-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Un débordement de mémoire de la fonction utmp_update sous Solaris permet\nd'exécuter du code arbitraire avec les privilèges de l'administrateur\nroot.\n",
+  "title": "Vulnérabilité de utmp_update sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin d'alerte #50008 de Sun",
+      "url": null
+    }
+  ]
+}

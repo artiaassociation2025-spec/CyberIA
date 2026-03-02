@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions de libgtop antérieures à la version  1.0.6-1.1.</P>",
+  "content": "## Description\n\nLe démon libgtop présente deux vulnérabilités : une de type chaîne de\nformat, et une autre de type débordement de mémoire.\n\nLa première peut être utilisée pour exécuter du code arbitraire, et la\nseconde peut servir à un utilisateur mal intentionné pour obtenir un\ncompte sur le système.\n\nComme le démon libgtop est lancé sous l'utilisateur nobody, les droits\nobtenus en exploitant ces vulnérabilités sont ceux de l'utilisateur\nnobody.\n\n## Solution\n\nContactez votre éditeur pour obtenir une mise à jour.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-011",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-01-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Obtention d'un compte à distance"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut obtenir un compte sur le système.\n",
+  "title": "Vulnérabilités dans la fonction libgtop",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Debian DSA-098-1",
+      "url": "http://www.debian.org/security/2002/dsa-098"
+    }
+  ]
+}

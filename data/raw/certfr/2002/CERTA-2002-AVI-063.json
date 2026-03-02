@@ -1,0 +1,23 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Gestor version 2.21.</P>",
+  "content": "## Description\n\nGestor est un progiciel destiné à la planification et à la gestion des\ntemps (temps de travail par exemple). Il possède un module permettant\nd'effectuer des tâches d'administration et de consultation à distance au\ntravers d'une interface web. Ce module utilise une bibliothèque\njavascript (overhelp.js) librement distribuée par Erik Bosrup contenant\nune fonction de traçage mise en œuvre par un site de mesure d'audience\n(www.nedstat.nl). Cette fonction appelle trois URLs dont l'une contenant\nl'adresse IP du réseau local (adresse IP de la machine sur laquelle\nréside le module de consultation) et une référence à l'application\ngestor (obtenues au travers de la variable REFERER).\n\n-   http://www.bosrup.com/web/overlib/o2/tr.gif\n\n-   http://www.nedstat.nl/cgi-bin/nedstat.gif?name=ol2t\n\n-   http://www.nedstat.nl/cgi-bin/referstat.gif?name=ol2t&refer=http=/X.X.X.X/gestor/formplanninga_u.asp\n\n    où X.X.X.X désigne l'adresse IP du serveur Gestor.\n\nAucune information nominative n'est toutefois transmise par ce procédé.\n\n## Contournement provisoire\n\nSi l'application Gestor est sur une machine directement ou indirectement\nreliée à Internet, bloquer au niveau du pare-feu ou du relais HTTP\nl'adresse du serveur de statistiques (www.nedstat.nl) et du site d'Erik\nBosrup (www.bosrup.com).\n\n## Solution\n\nLa société GFI a affirmé au CERTA que tous les clients utilisant Gestor\nversion 2.21 étaient prévenus et que la vulnérabilité avait été corrigée\nsur leur plateforme. Contactez la société GFI si vous utilisez la\nversion vulnérable du produit et que vous n'avez pas été contacté.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-063",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-03-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Publication de l'adresse ip de machines contenant des données nominatives"
+    }
+  ],
+  "summary": "Gestor est un progiciel édité par la société GFI Progiciels.\n\nUne fonction présente dans une bibliothèque javascript utilisée se\nconnecte à plusieurs sites web pour délivrer des données à des fins de\nstatistiques.\n",
+  "title": "Vulnérabilité dans GESTOR 2.21",
+  "vendor_advisories": []
+}

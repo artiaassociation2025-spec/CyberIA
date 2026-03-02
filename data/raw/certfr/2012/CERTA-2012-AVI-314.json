@@ -1,0 +1,108 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MySQL versions 5.1.x antérieures à 5.1.63 ;",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MariaDB versions 5.3.x antérieures à 5.3.6 ;",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MariaDB versions 5.1.x antérieures à 5.1.62 ;",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MySQL versions 5.5.x antérieures à 5.5.24 ;",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MariaDB versions 5.5.x antérieures à 5.5.23.",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MariaDB versions 5.2.x antérieures à 5.2.12 ;",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-2122",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-2122"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site officiel de MariaDB :",
+      "url": "http://mariadb.org"
+    },
+    {
+      "title": "Notes de versions MySQL :",
+      "url": "http://dev.mysql.com/doc/refman/5.5/en/news-5-5-24.html"
+    },
+    {
+      "title": "Notes de versions MySQL :",
+      "url": "http://dev.mysql.com/doc/refman/5.1/en/news-5-1-63.html"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-314",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-06-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été corrigée dans <span class=\"textit\">MySQL</span>\net <span class=\"textit\">MariaDB</span>. À condition de connaître un nom\nd'utilisateur valide, la vulnérabilité permet de s'authentifier, en\nutilisant un mot de passe incorrect, avec une chance sur 256 en moyenne.\nLa vulnérabilité est due à une conversion de type incorrecte.\n",
+  "title": "Vulnérabilité dans MySQL et MariaDB",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes de versions de MySQL du 07 mai 2012",
+      "url": null
+    }
+  ]
+}

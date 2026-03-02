@@ -1,0 +1,105 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SDK et JRE versions antérieures à 1.3.1_25.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "JDK et JRE 5.0 avec une mise à jour antérieure à la version 18 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "JDK et JRE 6 avec une mise à jour antérieure à la version 13 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SDK et JRE versions antérieures à 1.4.2_20 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités existent dans le composant et l'applet Java\n:\n\n-   la première est présente dans l'implémentation de l'initialisation\n    de connexions LDAP et permet à un individu distant de réaliser un\n    déni de service ;\n-   la deuxième est présente dans le client LDAP du JRE et permet à un\n    individu distant d'exécuter du code arbitraire présent sur un\n    serveur LDAP spécialement paramétré ;\n-   la troisième concerne les composants Java utilisant l'application\n    unpack200, elle permet à un individu distant, par le biais de\n    plusieurs débordements, d'élever ses privilèges au moyen d'une\n    application Java spécialement construite ;\n-   la quatrième est un débordement de mémoire lors de la manipulation\n    d'images, elle permet à un individu distant d'élever ses privilèges\n    par le biais d'un fichier image spécialement construit ;\n-   la cinquième concerne la gestion du stockage temporaire de certains\n    fichiers (font files), elle permet à un individu distant de réaliser\n    un déni de service en remplissant l'espace de stockage ;\n-   la sixième concerne le service JAX-WS, présent dans l'implémentation\n    du serveur HTTP, elle permet à un individu distant de réaliser un\n    déni de service ;\n-   la septième concerne la machine virtuelle du JRE, elle permet à un\n    individu distant de contourner la politique de sécurité et\n    d'exécuter du code arbitraire ;\n-   la dernière concerne le composant Java, de multiples vulnérabilités\n    de ce composant permettent à un individu distant de contourner la\n    politique de sécurité, d'exécuter du code arbitraire et de réaliser\n    un déni de service.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sun Solaris #254571 du 24 mars 2009 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-254571-1"
+    },
+    {
+      "title": "Bulletin de sécurité Sun Solaris #254611 du 24 mars 2009 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-254611-1"
+    },
+    {
+      "title": "Bulletin de sécurité Sun Solaris #254570 du 24 mars 2009 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-254570-1"
+    },
+    {
+      "title": "Bulletin de sécurité Sun Solaris #254608 du 24 mars 2009 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-254608-1"
+    },
+    {
+      "title": "Bulletin de sécurité Sun Solaris #254609 du 24 mars 2009 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-254609-1"
+    },
+    {
+      "title": "Bulletin de sécurité Sun Solaris #254569 du 24 mars 2009 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-254569-1"
+    },
+    {
+      "title": "Bulletin de sécurité Sun Solaris #254610 du 24 mars 2009 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-254610-1"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-119",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-03-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités du composant et de l'applet Java permettent\nà un individu distant de contourner la politique de sécurité, d'exécuter\ndu code arbitraire et de réaliser un déni de service.\n",
+  "title": "Multiples vulnérabilités dans Java",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité 254569, 254570, 254571, 254608, 254609, 254610 et 254611 du 24 mars 2009",
+      "url": null
+    }
+  ]
+}

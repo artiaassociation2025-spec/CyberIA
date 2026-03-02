@@ -1,0 +1,107 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Informix Dynamic Server 7.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Informix Dynamic Server 11.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Informix Dynamic Server 10.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Informix Dynamic Server 9.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités dans IBM Informix Dynamic Server ont été\ndécouvertes :\n\n-   une erreur non spécifiée dans la gestion des demandes de connexion\n    malformée peut être exploitée via un paquet spécialement conçu ;\n-   une erreur dans oinit.exe lors de l'utilisation de la variable\n    DBPATH pendant l'authentification permet à une personne\n    malintentionnée de provoquer un déni de service via une variable\n    DBPATH trop longue envoyée au port par défaut 1526/TCP ;\n-   une erreur dans le fichier oinit.exe permet un dépassement de\n    mémoire tampon via l'envoi, pendant le processus d'authentification,\n    d'un mot de passe trop long sur le port par défaut 1526/TCP.\n\n## Solution\n\nSe référer aux bulletins de sécurité IBM pour l'obtention des correctifs\n(cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0727",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0727"
+    },
+    {
+      "name": "CVE-2008-0949",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0949"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg1IC55210 du 20 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IC55210"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg1IC55208 du 20 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IC55208"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg1IC55207 du 20 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IC55207"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg1IC55225 du 20 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IC55225"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg1IC55224 du 20 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IC55224"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg1IC55209 du 20 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IC55209"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-155",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-03-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans IBM Informix Dynamic\nServer permettant à un individu malveillant d'effectuer un déni de\nservice ou une exécution de code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans IBM Informix Dynamic Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité IBM",
+      "url": null
+    }
+  ]
+}

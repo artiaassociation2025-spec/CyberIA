@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMware Player versions antérieures à 4.0.5 pour Windows",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Workstation versions antérieures à 8.0.5 pour Windows",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware OVF Tool versions antérieures à 3.0.1 pour Windows",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-5458",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-5458"
+    },
+    {
+      "name": "CVE-2012-3569",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-3569"
+    },
+    {
+      "name": "CVE-2012-5459",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-5459"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité VMware VMSA-2012-0015 du 08 novembre    2012 :",
+      "url": "http://www.vmware.com/security/advisories/VMSA-2012-0015.html"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-642",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-11-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans <span\nclass=\"textit\">VMware Workstation et Player</span>. La plus critique\npermet à un attaquant de modifier les permissions d'un fil d'exécution\n(thread) pour provoquer une élévation de privilèges. Une autre\nvulnérabilité permet à un attaquant d'exécuter du code arbitraire au\nmoyen de fichiers <span class=\"textit\">.OVF</span> spécialement conçus.\n",
+  "title": "Multiples vulnérabilités dans VMware Workstation et Player",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware du 08 novembre 2012",
+      "url": null
+    }
+  ]
+}

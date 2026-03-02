@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "la version 4.7.0 de Drupal.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "La version 4.6.6 de Drupal et les versions antérieures ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDrupal est un environnement pour gérer les contenus de sites Internet.\nDeux vulnérabilités ont été identifiées dans les versions 4.6.X et 4.7.0\n:\n\n-   La première concerne les droits manquants au répertoire files. Un\n    utilisateur malveillant peut donc lire ou écrire certains fichiers\n    (voire même les exécuter s'il peut les télécharger au préalable sur\n    le site vulnérable).\n-   La seconde repose sur un mauvais contrôle de paramètres intégrés\n    dans des requêtes SQL. Il est alors possible pour un utilisateur\n    malveillant d'injecter du code SQL arbitraire dans la base de\n    données.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour du projet Drupal :",
+      "url": "http://drupal.org/project"
+    },
+    {
+      "title": "Bulletin de sécurité DRUPAL-SA-2006-005 du 18 mai 2006 :",
+      "url": "http://drupal.org/node/65357"
+    },
+    {
+      "title": "Bulletin de sécurité DRUPAL-SA-2006-006 du 24 mai 2006 :",
+      "url": "http://drupal.org/node/65409"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-219",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour du projet Drupal du 18 mai 2006",
+      "url": null
+    }
+  ]
+}

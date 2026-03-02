@@ -1,0 +1,98 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Tivoli Storage Manager Express client versions antérieures à 5.3.6.6.",
+      "product": {
+        "name": "Tivoli",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tivoli Storage Manager 5.3 client versions antérieures à 5.3.6.6 ;",
+      "product": {
+        "name": "Tivoli",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tivoli Storage Manager 5.1 client versions antérieures à 5.1.8.3 ;",
+      "product": {
+        "name": "Tivoli",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tivoli Storage Manager 5.4 client versions antérieures à 5.4.2 ;",
+      "product": {
+        "name": "Tivoli",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tivoli Storage Manager 5.2 client versions antérieures à 5.2.5.4 ;",
+      "product": {
+        "name": "Tivoli",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tivoli Storage Manager 5.5 client versions antérieures à 5.5.2 ;",
+      "product": {
+        "name": "Tivoli",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités affectent le client de Tivoli Storage\nManager (ou TSM) :\n\n-   plusieurs vulnérabilités affectent les interfaces graphiques des\n    clients (Web et Java) et permettent à un individu malveillant\n    d'avoir accès au système de fichiers de la machine disposant du\n    client TSM ;\n-   une vulnérabilité de type homme au milieu (ou man in the middle)\n    affectent les versions du client TSM fonctionnant sous AIX et\n    Windows. Cette vulnérabilité permet à un individu malintentionné de\n    contourner la politique de sécurité de la machine ;\n-   la dernière vulnérabilité concerne Tivoli Storage Manager Agent\n    Client : un individu distant peut réaliser un déni de service au\n    moyen d'un paquet construit de façon malveillante.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-4828",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4828"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-178",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-05-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de <span class=\"textit\">Tivoli Storage\nManager</span> permettent à un individu malintentionné de contourner la\npolitique de sécurité et de réaliser un déni de service.\n",
+  "title": "Multiples vulnérabilités de Tivoli Storage Manager client",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg21384389 du 30 avril 2009",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21384389"
+    }
+  ]
+}

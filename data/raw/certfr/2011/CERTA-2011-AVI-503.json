@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Wireshark versions 1.6.0 à 1.6.1 ;",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Wireshark versions 1.4.0 à 1.4.8.",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans le logiciel Wireshark\n:\n\n-   des bogues dans l'interprétation des formats CSN.1 et IKE permettent\n    à une personne malintentionnée distante de provoquer un déni de\n    service au moyen de paquets spécialement conçus ;\n-   une vulnérabilité présente au chargement de fichiers de capture\n    réseau permet de provoquer un deni de service au moyen d'un fichier\n    spécialement conçu ;\n-   l'exécution de scripts LUA arbitraires est possible grâce à\n    l'utilisation d'une méthode similaire au « DLL hijacking ».\n\n## Solution\n\nLes versions 1.6.2 et 1.4.9 de Wireshark corrigent ces vulnérabilités.\n\nSe référer au bulletin de sécurité du projet Wireshark pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-3360",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3360"
+    },
+    {
+      "name": "CVE-2011-3266",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3266"
+    },
+    {
+      "name": "CVE-2011-3482",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3482"
+    },
+    {
+      "name": "CVE-2011-3483",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3483"
+    },
+    {
+      "name": "CVE-2011-3484",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3484"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-503",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-09-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout de références CVE.",
+      "revision_date": "2011-09-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans le logiciel Wireshark.\nElles permettent à une personne malintentionnée de provoquer une\nperturbation du service ou d'exécuter des commandes arbitraires à\ndistance sur le système utilisant une version vulnérable.\n",
+  "title": "Multiples vulnérabilités dans Wireshark",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Wireshark du 07 septembre 2011",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2011-16.html"
+    }
+  ]
+}

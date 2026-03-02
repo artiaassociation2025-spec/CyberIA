@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Bugzilla</SPAN>, versions 2.x et 3.x.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent Bugzilla :\n\n-   une gestion incorrecte des entrées dans le formulaire de signalement\n    de bogue permet à un utilisateur malveillant de réaliser une\n    injection de code indirecte ;\n-   un filtrage insuffusant des entrées dans une fonctionnalité de\n    courrier électronique permet l'exécution de code arbitraire à\n    distance ;\n-   l'interface XML-RPC permet à des utilisateurs non autorisés des\n    données confidentielles.\n\n## Solution\n\nLes versions 2.20.5, 2.22.3, 3.0.1 et 3.1.1 corrigent ces\nvulnérabilités. Se référer au bulletin de sécurité de l'éditeur pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité du projet Bugzilla du 23 août 2007 :",
+      "url": "http://www.bugzilla.org/security/2.20.4/"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-379",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-08-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de <span class=\"textit\">Bugzilla</span>\npermettent à un utilisateur malveillant de réaliser des injections de\ncode indirectes, de divulguer de données ou d'exécuter du code\narbitraire à distance.\n",
+  "title": "Multiples vulnérabilités de Bugzilla",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Bugzilla du 23 août 2007",
+      "url": null
+    }
+  ]
+}

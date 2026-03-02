@@ -1,0 +1,94 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Internet Explorer 5.01 SP4 et 6 SP1 sur Windows 2000 SP4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Internet Explorer 6 sur Windows XP SP2 et Professionnel Édition x64 et Windows Server 2003 SP1 et SP2 (dont les versions pour x64 et Itanium) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Internet Explorer 7 sur Windows XP SP2, Professionnel Édition x64 et Professionnel Édition x64 SP2, Windows Server 2003 SP1 et SP2 (dont les versions pour x64 et Itanium) et Vista (dont Édition x64).",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nInternet Explorer est le navigateur Internet de Microsoft. Plusieurs\nvulnérabilités affectent ce composant :\n\n-   un défaut d'initialisation peut conduire à un corruption de la\n    mémoire. Ce défaut permet à un utilisateur malveillant d'exécuter du\n    code arbitraire à distance ;\n-   une corruption de la mémoire lors de l'instanciation d'objets COM\n    permet à un utilisateur malveillant d'exécuter du code arbitraire à\n    distance ;\n-   l'appel à la méthode property peut, dans certaines circonstances,\n    corrompre la mémoire. Cela permet à un utilisateur malveillant\n    d'exécuter du code arbitraire à distance ;\n-   une corruption de mémoire non spécifiée, liée aux objets HTML,\n    permet à un utilisateur malveillant d'exécuter du code arbitraire à\n    distance ;\n-   une vulnérabilité permet la réécriture de fichiers arbitraires. Elle\n    permet à un utilisateur malveillant d'exécuter du code arbitraire à\n    distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0944",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0944"
+    },
+    {
+      "name": "CVE-2007-0947",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0947"
+    },
+    {
+      "name": "CVE-2007-2221",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2221"
+    },
+    {
+      "name": "CVE-2007-0942",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0942"
+    },
+    {
+      "name": "CVE-2007-0946",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0946"
+    },
+    {
+      "name": "CVE-2007-0945",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0945"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-027 du 08 mai 2007 :",
+      "url": "http://www.microsoft.com/france/technet/security/bulletin/ms07-027.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-027 du 08 mai 2007 :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/ms07-027.mspx"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-207",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-05-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent le navigateur <span\nclass=\"textit\">Internet Explorer</span> de <span\nclass=\"textit\">Microsoft</span>. Elles permettent à un utilisateur\nmalintentionné d'exécuter du code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités d'Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS07-027 du 08 mai 2007",
+      "url": null
+    }
+  ]
+}

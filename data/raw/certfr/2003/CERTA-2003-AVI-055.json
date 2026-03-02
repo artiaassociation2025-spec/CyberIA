@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Versions de Mutt antérieures ou égales à la version 1.4.0 (stable) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "versions de Mutt antérieures ou égales à la version 1.5.3 (instable).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nMutt est un client de messagerie très utilisé sur les plates-formes\nLinux. Il supporte les protocoles POP3 (Post Office Protocol) et IMAP\n(Internet Message Access Protocol) pour l'interrogation des serveurs de\nmessagerie.\n\n  \n\nUne vulnérabilité de type débordement de mémoire est présente dans la\nroutine de traitement des noms de dossiers sous IMAP.\n\nUn utilisateur mal intentionné administrant un serveur de messagerie\nIMAP peut exploiter cette vulnérabilité pour exécuter du code arbitraire\nà distance sur la plate-forme cliente avec les privilèges du compte\nutilisant l'application Mutt.\n\n## Solution\n\nInstaller la version 1.4.1 ou 1.5.4 de Mutt :\n\n    http://www.mutt.org\n\n  \nou appliquer le correctif de l'éditeur :\n\n-   Bulletin de sécurité SuSE SuSE-SA:2003:020 :\n\n        http://www.suse.de/de/security/2003_020_mutt.html\n\n-   Bulletin de sécurité Gentoo GLSA:mutt(200303-19) :\n\n        http://www.gentoo.org\n\n-   Bulletin de sécurité DSA-268 de Debian :\n\n        http://www.debian.org/security/2003/dsa-268\n\n-   Bulletin de sécurité MDKSA-2003:041 de Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:041\n\n-   Bulletin de sécurité RHSA-2003:109 de Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2003-109.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité CORE-20030304-02 \"Mutt controlled IMAP    server buffer overflow\" de CORELABS :",
+      "url": "http://www.coresecurity.com/common/showdoc.php?idx=310&idxseccion=10"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-055",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-21T00:00:00.000000"
+    },
+    {
+      "description": "Ajout des bulletins de sécurité SuSE et Gentoo.",
+      "revision_date": "2003-03-25T00:00:00.000000"
+    },
+    {
+      "description": "Ajout bulletin de sécurité Debian. Ajout référence CVE.",
+      "revision_date": "2003-03-27T00:00:00.000000"
+    },
+    {
+      "description": "Ajout bulletins de sécurité Mandrake et Red Hat.",
+      "revision_date": "2003-04-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le client de messagerie Mutt peut être\nexploitée afin d'exécuter du code arbitraire sur la plate-forme\nvulnérable.\n",
+  "title": "Vulnérabilité du client de messagerie Mutt",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CORE-20030304-02 de CORELABS",
+      "url": null
+    }
+  ]
+}

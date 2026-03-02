@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>3Com SuperStack 3 Switch 4400 ;</LI>    <LI>3Com SuperStack 3 Switch 4400PWR ;</LI>    <LI>3Com SuperStack 3 Switch 4400SE ;</LI>    <LI>3Com SuperStack 3 Switch 4400FW.</LI>  </UL>  <P>Les logiciels des matériels ayant une version antérieure ou  égale à 5.11, 6.00 ou 6.10 seraient vulnérables.</P>",
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans les produits 3Com de la famille\ndes SuperStack 3 (SS3) 4400 Switch. Il s'agirait d'une mauvaise\nmanipulation de certains paquets liés à la gestion du système. Une\npersonne créant de tels paquets et pouvant les adresser au système dans\nle VLAN de gestion, pourrait accéder à des informations de\nconfiguration, comme la chaîne de caractères community string de SNMP.\nConnaissant cette dernière, il pourrait alors effectuer un ensemble\nd'opérations sur le système vulnérable, tels désactiver des ports ou\nreconfigurer les VLANs.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur 3Com pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-5382",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5382"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité 3Com 3COM-2006-004 du 19 octobre 2006    :",
+      "url": "http://www.3com.com/securityalert/alerts/3COM-06-004.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-493",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans les produits 3Com SuperStack 3 Switch 4400",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité 3Com 3COM-06-004 du 19 octobre 2006",
+      "url": null
+    }
+  ]
+}

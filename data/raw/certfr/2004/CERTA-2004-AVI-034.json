@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>XFree86 versions 4.3.0 et antérieures.  <P>Xsun et Xprt sous Solaris sont également vulnérables.</P></p>",
+  "content": "## Description\n\nXFree86 est une mise en oeuvre du système X Window très utilisée sur les\nplates-formes Linux.\n\nXsun est le serveur X11 sous Solaris. Xprt est un serveur d'impression\nsous Solaris.\n\n  \nDeux vulnérabilités de type débordement de mémoire sont présentes dans\nle code réalisant l'analyse du fichier font.alias.\n\nPar le biais d'un fichier font.alias habilement constitué, un\nutilisateur mal intentionné peut exploiter une de ces vulnérabilités\nafin d'obtenir les privilèges du super-utilisateur root sur la\nplate-forme vulnérable.\n\n## Solution\n\nAppliquer le correctif disponible sur ftp.xfree86.org :\n\n    ftp://ftp.xfree86.org/pub/XFree86/4.3.0/fixes/fontfile.diff\n\nou réaliser la mise à jour du paquetage XFree86 :\n\n-   Bulletin de sécurité 200402-02 de Gentoo :\n\n        http://www.securityfocus.com/advisories/6313\n\n-   Bulletin de sécurité RHSA-2004:059 de Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2004-059.html\n\n-   Bulletin de sécurité MDKSA-2004:012 de Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:012\n\n-   Bulletin de sécurité IY53508 d'IBM pour AIX 4.3.3 :\n\n        http://www-1.ibm.com/support/docview.wss?uid=isg1IY53508\n\n-   Bulletin de sécurité IY53673 d'IBM pour AIX 5.1.0 :\n\n        http://www-1.ibm.com/support/docview.wss?uid=isg1IY53673\n\n-   Bulletin de sécurité IY53519 d'IBM pour AIX 5.2.0 :\n\n        http://www-1.ibm.com/support/docview.wss?uid=isg1IY53519\n\n-   Bulletin de sécurité d'OpenBSD :\n\n        http://www.openbsd.org/errata.html#font\n\n-   Bulletin de sécurité Suse :\n\n        http://www.suse.com/de/security/2004_06_xf86.html\n\n-   Bulletin de sécurité HPSBUX01018 de Hewlett-Packard :\n\n        http://www-1.ibm.com/services/continuity/recover1.nsf/mss/MSS-OAR-E01-2004.0551.1\n\n-   Bulletin de sécurité FreeBSD du 12 février 2004 :\n\n        http://www.vuxml.org/freebsd\n\nBulletin de sécurité Sun \\#57768 du 18 mai 2005 :\n\n    http://www.sunsolve.com/search/document.do?assetkey=1-26-57768-1\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité 02.12.04 d'iDEFENSE :",
+      "url": "http://www.idefense.com/application/poi/display?id=73"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-034",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-02-12T00:00:00.000000"
+    },
+    {
+      "description": "Prise en compte du second bulletin de sécurité d'iDEFENSE. Ajout référence au bulletin de sécurité de Red Hat.",
+      "revision_date": "2004-02-13T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence au bulletin de sécurité de Mandrake.",
+      "revision_date": "2004-02-16T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence aux bulletins de sécurité d'IBM et OpenBSD.",
+      "revision_date": "2004-02-19T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence au bulletin Suse.",
+      "revision_date": "2004-02-24T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence au bulletin de Hewlett-Packard.",
+      "revision_date": "2004-04-29T00:00:00.000000"
+    },
+    {
+      "description": "Ajout du bulletin de sécurité FreeBSD.",
+      "revision_date": "2004-05-13T00:00:00.000000"
+    },
+    {
+      "description": "Nouveau titre. Ajout référence au bulletin de sécurité de Sun.",
+      "revision_date": "2005-06-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités de XFree86 et XSun",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité 02.10.04 d'iDEFENSE",
+      "url": "http://www.idefense.com/application/poi/display?id=72"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité 200402-02 de Gentoo",
+      "url": null
+    }
+  ]
+}

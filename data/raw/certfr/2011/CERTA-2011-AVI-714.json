@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>PuTTY, version 0.61 et versions  antérieures.</p>",
+  "content": "## Description\n\nLors de l'authentification interactive en SSH-2, le client PuTTY\nconservait en mémoire le mot de passe au-delà du temps nécessaire. Ce\nmot de passe pouvait alors être récupéré de manière illégitime.\n\n## Solution\n\nLa version 0.62 de PuTTY remédie à ce problème.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2011-AVI-714",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-12-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité de PuTTY permet de récupérer des informations\nd'authentification.\n",
+  "title": "Vulnérabilité dans PuTTY",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de la version 0.62 de PuTTY du 10 décembre 2011",
+      "url": "http://lists.tartarus.org/pipermail/putty-announce/2011/000017.html"
+    }
+  ]
+}

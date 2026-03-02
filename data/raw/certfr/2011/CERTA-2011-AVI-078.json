@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>MIT Kerberos 5-1.6 à 5-1.9.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans Kerberos :\n\n-   (CVE-2010-4022, versions 5-1.7 à 5-1.9) le processus démon kpropd\n    traite de manière incorrecte des entrées réseau invalides. Cela peut\n    provoquer l'arrêt de ce processus et celui de son processus père,\n    bloquant la propagation des mises à jour en provenance du KDC (Key\n    distribution centre) maître ;\n-   (CVE-2011-0281, versions 5-1.6 à 5-1.9) l'interrogation d'un\n    annuaire LDAP, quand ce procédé est utilisé par Kerberos, contient\n    un défaut qui est exploitable au moyen d'une requête particulière\n    pour empêcher les communications entre le KDC et l'annuaire ;\n-   (CVE-2011-0282, versions 5-1.6 à 5-1.9) quand Kerberos utilise un\n    annuaire LDAP, certaines recherches provoquent un arrêt inopiné du\n    serveur, exploitable au moyen d'une requête spécialement conçue ;\n-   (CVE-2011-0283, version 5-1.9) un paquet malformé peut provoquer un\n    arrêt inopiné du serveur.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0283",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0283"
+    },
+    {
+      "name": "CVE-2011-0282",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0282"
+    },
+    {
+      "name": "CVE-2010-4022",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4022"
+    },
+    {
+      "name": "CVE-2011-0281",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0281"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Kerberos MITKRB5-SA-2011-001 du 08    février 2011 :",
+      "url": "http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2011-001.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-1062-1 du 15 février 2011 :",
+      "url": "http://www.ubuntu.com/usn/usn-1062-1"
+    },
+    {
+      "title": "Bulletin de sécurité Kerberos MITKRB5-SA-2011-002 du 08    février 2011 :",
+      "url": "http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2011-002.txt"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2011:0199-1 du 08 février    2011 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2011-0199.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-078",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-02-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins RedHat et Ubuntu et rectification des CVE.",
+      "revision_date": "2011-02-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Kerberos permettent à un utilisateur\nmalveillant de provoquer un déni de service à distance.\n",
+  "title": "Vulnérabilités dans MIT Kerberos",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Kerberos MITKRB5-SA-2011-002 du 08 février 2011",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Kerberos MITKRB5-SA-2011-001 du 08 février 2011",
+      "url": null
+    }
+  ]
+}

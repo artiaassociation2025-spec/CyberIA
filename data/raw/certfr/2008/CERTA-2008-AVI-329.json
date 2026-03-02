@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD 7.0-RELEASE.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn problème a été identifié dans la gestion des options TCP sous\nFreeBSD. Il ne remplirait pas correctement, sous certaines conditions,\ndes options TCP. Ces dernières sont facultatives mais peuvent servir à\ndes fins d'optimisation.\n\nUn pare-feu intermédiaire peut filtrer les trames TCP qu'il jugerait mal\nconstruite lors de l'initiation d'une communication vers ou depuis un\nsystème affecté.\n\n## Solution\n\nSe référer au correctif de sécurité FreeBSD pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité FreeBSD FreeBSD-EN-08:02.tcp du 19 juin    2008 :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-EN-08:02.tcp.asc"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-329",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-06-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Un problème a été identifié dans la gestion des options TCP sous\nFreeBSD. Sous certaines conditions, cela peut géner la communication\navec d'autres systèmes.\n",
+  "title": "Vulnérabilité de l'implémentation TCP sous FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis FreeBSD FreeBSD-EN-08:02.tcp du 19 juin 2008",
+      "url": null
+    }
+  ]
+}

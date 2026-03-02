@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions de Shadow antérieures à 4.0.14.</P>",
+  "content": "## Description\n\nL'application passwd de shadow ne vérifie pas correctement si l'appel\nfonction setuid() s'effectue correctement, lorsque les options -f, -g ou\n-s sont choisies. Une personne malveillante peut profiter de cette\nvulnérabilité pour lancer d'autres commandes avec les privilèges\nadministrateur, sous certaines conditions.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de shadow :",
+      "url": "http://ftp.pld.org.pl/software/shadow/"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-279",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-07-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de Shadow",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ubuntu",
+      "url": "http://www.ubuntu.com/usn/usn-308-1"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Le risque affecte la plupart des machines Compaq (voir le  paragraphe 'description') indépendamment du système  d'exploitation.</P>",
+  "content": "## Description\n\nLes agents d'administration Compaq avec une interface de présentation en\nHTML (web-enabled Management Agent) permettent une administration\ncentralisée du matériel informatique de la marque Compaq (mettre à jour\nles pilotes de périphériques, lister le matériel, démarrer ou arrêter\nles cartes réseau, etc.) en s'appuyant sur un serveur web.\n\nUne vulnérabilité de ce logiciel permet, si l'interface de présentation\nen HTML est activée sur la machine cible, d'exécuter à distance du code\navec des privilèges élevés (par exemple : Local System sous Windows NT).\n\nL'interface web est activée par défaut sur les systèmes Windows.\n\n## Contournement provisoire\n\nDésactiver l'interface HTML de l'agent d'administration à distance.\n\n-   Pour l'agent d'administration (Management agent) Sous Windows :\n\n    Dans le « Menu Démarrer », choisir « Paramètres », puis « Panneau\n    Configuration », double-cliquer sur « Services » Dans la liste des\n    services choisir « INSIGHT WEB AGENT » et cliquer sur le bouton «\n    Arrêter » si le service est en marche. Et pour l'empêcher de\n    redémarrer automatiquement ultérieurement, cliquer sur le bouton «\n    Démarrage » puis « Manuel ». Cliquer sur « OK » puis « Fermer ».\n\n-   Pour les stations et portables sous Windows, il faut désinstaller\n    l'agent web (web-enabled Agent) pour le réinstaller avec l'option «\n    DMI web agent » en moins.\n\n    Dans le panneau configuration choisir « ajout/suppression de\n    programmes ». Après avoir sélectionné Compaq Insight Management Web\n    Agent », cliquer sur le bouton « ajouter/supprimer ».\n\n    Puis réinstaller le logiciel.\n\n    -   Pour les stations de travail : ne pas cocher la case « DMI Web\n        Components » pendant l'installation.\n    -   Pour les portables, pendant l'installation, il faut choisir «\n        Custom » (pour « personnaliser »), puis choisir « DMI options »\n        et cliquer sur le bouton « Change ». Décocher les options «\n        Compaq DMI Web Agent » et « Compaq DMI Web Viewer ».\n\n-   Pour l'agent d'administration sous Netware :\n\n    Démarrer le programme « CPQAGIN ». Choisir l'option « Configurer un\n    Agent Netware existant ». Sur la ligne mentionnant le chargement de\n    « CPQWEBAG » sélectionner « NON ». Enregistrer et sortir du\n    programme « CPQAGIN ».\n\n-   Pour l'agent d'administration sous Linux :\n\n    Se connecter comme root, et lancer\n\n    /etc/rc.d/init.d/cmafdtn pour arrêter le démon cmawebd.\n\n    Pour l'empêcher de redémarrer automatiquement ultérieurement, éditer\n    le fichier\n\n    /etc/rc.d/init.d/cmafdtn\n\n    et supprimer cmawebd de la ligne :\n\n    PNAMES=\"cmafdtnpeerd wmhostd cmathreshd cmawebd.\n\n-   Pour l'agent d'administration sous SCO UnixWare 7 :\n\n    Se connecter comme root, et lancer :\n\n    sh /etc/init.d/cmafdtn stop pour arrêter le démon cmawebd.\n\n    Pour l'empêcher de redémarrer automatiquement ultérieurement,\n    détruire ou plutôt déplacer ou renommer le fichier :\n\n    /etc/rc2.d/\\[SK\\]\\*cmafdtn.\n\n-   Pour l'agent d'administration sous SCO OpenWare :\n\n    Se connecter comme root, et lancer :\n\n    sh /etc/cmafdtn stop pour arrêter le démon cmawebd.\n\n    Pour l'empêcher de redémarrer automatiquement ultérieurement,\n    détruire ou plutôt déplacer ou renommer le fichier\n\n    /etc/rc2.d/\\[SK\\]\\*cmafdtn.\n\n-   Pour le logiciel Survey sous Windows :\n\n    Passer sous l'invite de commande, et taper :\n\n    `%systemdrive%\\COMPAQ\\SURVEY\\SURVEY-U`.\n\n    Ceci arrête le service Survey et l'empêchera de redémarrer à\n    l'avenir.\n\n-   Pour le logiciel Survey sous Netware :\n\n    Passer sous l'invite de commande, et taper :\n\n    UNLOAD SURVEY.\n\n    Pour qu'il ne redémarre pas ultérieurement, supprimer la ligne :\n\n    load SURVEY -w10 -cWed.12,7 du fichier AUTOEXEC.NCF.\n\n-   Pour l'agent d'administration sous OpenVMS :\n\n    Se connecter au compte système, et taper la commande suivante :\n\n    -   Pour les versions 1.0 et 2.0 : \\$@sys\\$specific:\\[wbem\\]stop\n        webagents\n    -   Pour la version 2.1 : \\$@sys\\$specific:\\[wbem\\]wbem\\$shutdown\n\n-   Pour l'agent d'administration sous Tru64 Unix :\n\n    Se connecter comme root, et exécuter la commande suivante :\n\n    /sbin/init.d/insightd stop pour arrêter le service.\n\n    Afin empêcher le serveur de redémarrer :\n\n    -   Pour les version 4.0f et 4.0g supprimer le fichier\n        /sbin/rc2.d/\\*insightd.\n\n        Il pourra être redémarré après application du correctif par la\n        commande :\n\n        ln -s /sbin/init.d/insightd/sbin/rc2.d/kxxinsightd\n\n        où les 'x' représentent n'importe quelle séquence de nombres\n        supérieure à celle utilisée pour snmpd.\n\n    -   pour les versions 5.0 et supérieures taper la commande :\n\n        /usr/bin/rcmgr set INSIGHTD_CONF -1\n\n        Il pourra être redémarré après application du correctif par la\n        commande :\n\n        /usr/sbin/rcmgr set INSIGHTD_CONF 1\n\n-   Pour désinstaller le « web-enabled Agent » de Tru64 :\n\n    En tant que root taper la commande suivante :\n\n    /sbin/init.d/insightd stop.\n\n-   Pour le logiciel Healthcheck :\n\n    Aller dans le répertoire des binaires de SHC (par exemple :\n    `cd \\%systemdrive\\%\\compaq\\shc\\bin`), arrêter le service en tapant :\n\n    net stop cpqshc, puis supprimer le service en tapant :\n\n    shcsvc -remove.\n\n    Nota : L'interface de commande de SHC fonctionnera toujours après la\n    suppression du service.\n\n-   Pour Compaq Power Agent :\n\n    Arrêter l'agent web : dans le « Panneau Configuration »\n    double-cliquer sur « Services » dans la liste des services,\n    sélectionner « Compaq Power Agent », et cliquer sur le bouton «\n    arrêter ».\n\n    Pour l'empêcher de redémarrer à l'avenir : cliquer sur le bouton «\n    Démarrage » et choisir « Désactivé ».\n\n-   Pour Compaq Management Agent et ses outils pour SCO UnixWare NonStop\n    Cluster :\n\n    Se connecter avec le compte root, puis exécuter les commandes :\n\n    onall /etc/init.d/cmaweb stop et\n\n    chmod 777 /etc/init.d/cmaweb 000\n\n## Solution\n\nAppliquer selon les cas rencontrés les correctifs indiqués sur l'avis de\nCompaq:\n\n    http://www5.compaq.com/products/servers/management/agentsecurity.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "avis de sécurité du CIAC :",
+      "url": "http://www.ciac.org/ciac/bulletins/l-042.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité de Compaq :",
+      "url": "http://www5.compaq.com/products/servers/management/agentsecurity.html"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-016",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-02-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance avec des privilèges élevés"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité du logiciel d'administration à distance du matériel\nCompaq avec interface HTML permet à un utilisateur mal intentionné de\ncompromettre une machine indépendamment du système d'exploitation qui y\nest installé.\n",
+  "title": "Vulnérabilité des logiciels d'administration à distance de Compaq",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Compaq",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis du CIAC",
+      "url": null
+    }
+  ]
+}

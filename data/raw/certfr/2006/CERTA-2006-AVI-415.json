@@ -1,0 +1,165 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM AIX 5.3.0",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM AIX 5.2.0",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été identifiées dans le système\nd'exploitation IBM AIX. Elles permettraient à un utilisateur malveillant\nlocal au système vulnérable d'élever ses privilèges à ceux de\nl'administrateur (root), voire de modifier des données ou de provoquer\nun déni de service. Parmi ces vulnérabilités :\n\n-   la commande mkvg ne faisant pas appel aux chemins absolus vers\n    certaines fonctions ;\n-   une erreur non précisée dans named8, un serveur de noms de domaines\n    DNS ;\n-   une mauvaise manipulation des fichiers par la commande rdist,\n    servant à distribuer des copies de fichiers à plusieurs hôtes ;\n-   une mauvaise manipulation de la base de données par l'utilitaire\n    Inventory Scout, permettant de lister entre autres les éléments\n    matériels du système ;\n-   une erreur non précisée dans la commande utape associée au mode\n    Diagnostics ;\n-   une mauvaise manipulation des paramètres fournis à la commande\n    cfgmgr, pouvant provoquer un débordement de mémoire ;\n-   une erreur non précisée dans xlock, commande qui permet de\n    verrouiller l'écran, et pouvant être exploitée pour provoquer un\n    débordement de tampon et exécuter des commandes avec les droits de\n    l'administrateur.\n\n## Solution\n\nSe référer aux différents bulletins de sécurité d'IBM pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-5003",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5003"
+    },
+    {
+      "name": "CVE-2006-5005",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5005"
+    },
+    {
+      "name": "CVE-2006-5006",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5006"
+    },
+    {
+      "name": "CVE-2006-5009",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5009"
+    },
+    {
+      "name": "CVE-2006-4416",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4416"
+    },
+    {
+      "name": "CVE-2006-5004",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5004"
+    },
+    {
+      "name": "CVE-2006-5002",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5002"
+    },
+    {
+      "name": "CVE-2006-5007",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5007"
+    },
+    {
+      "name": "CVE-2006-5008",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5008"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM IY88722 du 14 septembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY88722"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY88688 du 14 septembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY88688"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY88642 du 14 septembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY88642"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY88566 du 14 septembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY88566"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY88699 du 14 septembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY88699"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY89434 du 14 septembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY89434"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY88615 du 14 septembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY88615"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY88735 du 14 septembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY88735"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY88687 du 14 septembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY88687"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY88818 du 14 septembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY88818"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY89512 du 14 septembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY89512"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY88641 du 14 septembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY88641"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY88565 du 14 septembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY88565"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY87943 du 14 septembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY87943"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY88820 du 14 septembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY88820"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY88614 du 14 septembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY88614"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY87894 du 14 septembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY87894"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-415",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités dans IBM AIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité IBM AIX",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IBM DB2 version 9.7.</p>",
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans IBM DB2 :\n\n-   la suppression de droits au groupe PUBLIC n'est pas convenablement\n    répercutée sur des fonctions d'accès aux objets de la base de\n    données. Ce défaut permet à un utilisateur malveillant d'utiliser\n    ces fonctions sans droits ;\n-   si un utilisateur ayant les droits suffisants sur une table donnée\n    exécute une instruction update dans une requête SQL compilée et mise\n    en cache, tout utilisateur pourra exécuter cette instruction, même\n    sans droit suffisant.\n\n## Solution\n\nLa version 9.7 Fix Pack 3 d'IBM DB2 remédie à ces vulnérabilités.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3474",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3474"
+    },
+    {
+      "name": "CVE-2010-3475",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3475"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-443",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-09-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE.",
+      "revision_date": "2010-09-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans IBM DB2 permettent à un utilisateur malveillant\nde contourner la politique de sécurité.\n",
+  "title": "Vulnérabilités dans IBM DB2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg2I446455 du 18 septembre 2010",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21446455"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Les logiciels CISCO WAAS dont les versions sont comprises    entre 4.0.7 et 4.0.9 incluse.</LI>  </UL>  <P>Cette vulnérabilité concerne les WAE Appliance et le module de  réseau NM-WAE-502, qui sont configurés avec Edge Services et  l'optimisation CIFS. Les adresses en référence fournissent les  commandes permettant de vérifier si de telles options de  configuration sont utilisées.</P>",
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le service Wide Area Application\n(WAAS) de Cisco. Ce logiciel offre des techniques pour optimiser le\ntemps de latence du transport de différents flux ainsi que l'occupation\nde la bande passante. Il s'installe sur une combinaison de produits\nCisco, directement dans le WAE (pour Wide Area Application Engine) et\nsous forme de module sur d'autres équipements comme des NAS (Network\nAccess Server).\n\nLe WAAS pourrait être perturbé par l'envoi massif de paquets TCP\nd'établissement de connexion (SYN) vers les ports 139 ou 445. Ces ports\nsont utilisés pour la fonctionnalité CIFS du logiciel. Une personne\nmalveillante pourrait ainsi exploiter cette vulnérabilité en inondant le\nWAAS de tels paquets, l'empêchant de gérer le trafic de données et le\ntrafic de gestion.\n\n## Solution\n\nSe référer au bulletin de sécurité de Cisco pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 92020 du 18 juillet 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070718-waas.shtml"
+    },
+    {
+      "title": "Note d'information Cisco ID 97398 du 18 juillet 2007    proposant quelques mesures de contournement :",
+      "url": "http://www.cisco.com/en/US/products/products_applied_intelligence_response09186a0080883ccf.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-321",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans le service Wide Area Application\n(WAAS) de Cisco. Une personne malveillante pourrait l'exploiter afin\nd'empêcher le système vulnérable de gérer le trafic de données et le\ntrafic de gestion.\n",
+  "title": "Vulnérabilité dans Cisco Wide Area Application Services (WAAS)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO 92020 publié le 18 juillet 2007",
+      "url": null
+    }
+  ]
+}

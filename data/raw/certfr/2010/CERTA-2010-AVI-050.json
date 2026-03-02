@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Fetchmail 6.3.12 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Fetchmail 6.3.11 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Fetchmail 6.3.13.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire est présente dans\nFetchmail lorsqu'il est configuré en mode verbeux. Cette faille permet à\nun utilisateur distant de provoquer un déni de service ou d'exécuter du\ncode arbitraire par le biais d'un certificat au format x509 construit de\nfaçon particulière.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de fetchmail :",
+      "url": "http://www.fetchmail.info"
+    },
+    {
+      "title": "Bulletin de sécurité Fetchmail fetchmail-SA-2010-01 du 04    février 2010 :",
+      "url": "http://mknod.org/svn/fetchmail/branches/BRANCH_6-3/fetchmail-SA-2010-01.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Fetchmail fetchmail-SA-2010-01 du 04    février 2010 :",
+      "url": "http://www.fetchmail.info/fetchmail-SA-2010-01.txt"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-050",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-02-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité affectant Fetchmail permet à un utilisateur distant de\nprovoquer un déni de service ou potentiellement d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilité dans Fetchmail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fetchmail fetchmail-SA-2010-01 du 04 février 2010",
+      "url": null
+    }
+  ]
+}

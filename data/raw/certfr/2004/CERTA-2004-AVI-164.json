@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenBSD 3.5.",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenBSD 3.4 ;",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn débordement de mémoire existe dans le code procfs du noyau OpenBSD.\nCette vulnérabilité permet à un utilisateur local mal intentionné de\nporter atteinte à la confidentialité des données ou de réaliser un déni\nde service.\n\n## Solution\n\nAppliquer le correctif fourni par OpenBSD puis recompiler le noyau\nOpenBSD.\n\n-   Pour la version OpenBSD 3.4 :\n\n        ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.4/common/020_procfs.patch\n\n-   Pour la version OpenBSD 3.5 :\n\n        ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.5/common/006_procfs.patch\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-164",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-05-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service local"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le noyau OpenBSD permet à un utilisateur mal\nintentionné d'avoir accès à des données non autorisées ou de réaliser un\ndéni de service local.\n",
+  "title": "Vulnérabilité du noyau OpenBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité OpenBSD du 13 mai 2004",
+      "url": "http://www.openbsd.org/errata34.html"
+    }
+  ]
+}

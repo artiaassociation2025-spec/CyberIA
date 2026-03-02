@@ -1,0 +1,108 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ESXi versions 7.0 sans le correctif de sécurité ESXi70U3p-23307199",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Workstation versions 17.x antérieures à 17.5.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Fusion versions 13.x antérieures à 13.5.1 sur MacOS",
+      "product": {
+        "name": "Fusion",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Cloud Foundation (ESXi) versions 5.x et 4.x sans le correctif de sécurité KB88287",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ESXi versions 8.0 sans les correctifs de sécurité ESXi80U1d-23299997 et ESXi80U2sb-23305545",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer aux mesures de contournement proposées par l’éditeur (cf.\nsection Documentation).\n\n## Contournement provisoire\n\nSe référer au bulletin de sécurité de l'éditeur pour les mesures de\ncontournement (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2024-22252",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-22252"
+    },
+    {
+      "name": "CVE-2024-22253",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-22253"
+    },
+    {
+      "name": "CVE-2024-22255",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-22255"
+    },
+    {
+      "name": "CVE-2024-22254",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-22254"
+    }
+  ],
+  "links": [
+    {
+      "title": "How to remove USB controllers from a Virtual Machine",
+      "url": "https://kb.vmware.com/s/article/96682"
+    }
+  ],
+  "reference": "CERTFR-2024-AVI-0186",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-03-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans <span\nclass=\"textit\">les produits VMware</span>. Certaines d'entre elles\npermettent à un attaquant de provoquer une exécution de code arbitraire,\nune atteinte à la confidentialité des données et une atteinte à\nl'intégrité des données.\n",
+  "title": "Multiples vulnérabilités dans les produits VMware",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware VMSA-2024-0006 du 05 mars 2024",
+      "url": "https://www.vmware.com/security/advisories/VMSA-2024-0006.html"
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BrightStor ARCserve Backup v9.01 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA Business Protection Suite r2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BrightStor Enterprise Backup r10.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA Business Protection Suite for Microsoft Small Business Server Premium Edition r2 ;",
+      "product": {
+        "name": "Small Business",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BrightStor ARCserve Backup r11 pour Windows ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA Business Protection Suite for Microsoft Small Business Server Standard Edition r2 ;",
+      "product": {
+        "name": "Small Business",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BrightStor ARCserve Backup r11.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CA Server Protection Suite r2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BrightStor ARCserve Backup r11.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs failles ont été découvertes dans BrightStor ARCserve Backup :\n\n-   des vulnérabilités, de type débordement de mémoire, permettent\n    d'exécuter du code arbitraire à distance (CVE-2007-5325,\n    CVE-2007-5326 et CVE-2007-5327) ;\n-   un utilisateur peut accéder à des fonctionnalités nécessitant\n    théoriquement des privilèges élevés (CVE-2007-5328) ;\n-   plusieurs problèmes dans la gestion des procédures RPC par\n    différents services permettent de réaliser un déni de service. La\n    possibilité d'exécuter du code arbitraire n'est pas exclue\n    (CVE-2007-5329, CVE-2007-5330, CVE-2007-5331 et CVE-2007-5332).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5326",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5326"
+    },
+    {
+      "name": "CVE-2007-5330",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5330"
+    },
+    {
+      "name": "CVE-2007-5329",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5329"
+    },
+    {
+      "name": "CVE-2007-5325",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5325"
+    },
+    {
+      "name": "CVE-2007-5327",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5327"
+    },
+    {
+      "name": "CVE-2007-5331",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5331"
+    },
+    {
+      "name": "CVE-2007-5328",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5328"
+    },
+    {
+      "name": "CVE-2007-5332",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5332"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-437",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-10-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans <span class=\"textit\">BrightStor ARCserve\nBackup</span> permettent, à distance, d'exécuter du code arbitraire, de\nréaliser un déni de service ou de contourner la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans BrightStor ARCserve Backup",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Computer Associates du 11 octobre 2007",
+      "url": "http://supportconnectw.ca.com/public/storage/infodocs/basb-secnotice.asp"
+    }
+  ]
+}

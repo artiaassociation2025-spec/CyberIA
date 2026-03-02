@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows 98 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 98 SE ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows XP.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Millenium Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe service UPnP ( Universal Plug and Play ) est un service permettant de\ndécouvrir automatiquement de nouveaux équipements réseau. Ce service est\ndisponible sur divers équipements : imprimantes, etc.\n\nUne machine utilisant le service UPnP transmet une requête « M-SEARCH »\nafin de connaître les ressources UPnP du réseau. Les machines proposant\nde telles ressources (exemple : imprimantes) transmettent une requête «\nNOTIFY ».\n\nDeux vulnérabilités ont été découvertes dans le service UPnP.\n\nLa première vulnérabilité permet, pas le biais d'un débordement de pile\ndans la gestion des requêtes « NOTIFY », d'exécuter du code arbitraire\nsur la machine cible ( avec les privilèges « SYSTEM » sous Windows XP ).\n\nLa seconde vulnérabilité permet, par le biais d'une mauvaise gestion des\nrequêtes « NOTIFY », de réaliser un déni de service en consommant toutes\nles ressources de la machine cible.\n\n## Contournement provisoire\n\nFiltrer les ports 1900 et 5000 ( TCP et UDP ) au niveau du\ngarde-barrière, pour éviter les attaques provenant de l'extérieur.\n\n## Solution\n\nTélécharger le correctif sur le site Microsoft :\n\n-   Windows 98/98SE :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=34991\n\n-   Windows ME :\n\n        http://download.microsoft.com/download/winme/Update/22940/WinMe/EN-US/314757USAM.EXE\n\n-   Windows XP :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=34951\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-059.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-165",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-12-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur distant mal intentionné peut, par le biais de requêtes\nUPnP habilement composées, exécuter du code arbitraire ou entraîner un\ndéni de service sur la machine cible.\n",
+  "title": "Vulnérabilité de UPnP sous Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-059",
+      "url": null
+    }
+  ]
+}

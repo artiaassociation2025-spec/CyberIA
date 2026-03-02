@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de FreeBSD.</p>",
+  "content": "## Description\n\nOPIE (One-time Passwords In Everything) est une mis en œuvre du système\nOTP (One-Time Password), un système basé sur des mots de passe dits\njetables permettant de se prémunir contre les attaques par rejeu. Le\nprogrammme opiepasswd est utilisé afin de contôler l'authentification\nOPIE pour un utilisateur. Sous FreeBSD, le mécanisme OPIE est activé par\ndéfaut au travers de PAM (Pluggable Authentication Module). Une\nvulnérabilité dans ce mécanisme d'authentification OPIE permet à un\nutilisateur mal intentionné, dans certaines conditions, d'élever ses\nprivilèges.\n\n## Contournement provisoire\n\n-   Désactiver l'authentification par OPIE à travers PAM. Pour ceci, on\n    pourra exécuter la commande :\n\n        sed -i \"\" -e /opie/s/^/#/ /etc/pam.d/*\n\n-   enlever le drapeau setuid du binaire opiepasswd. Pour cela :\n\n         \n          chflags noschg /usr/bin/opiepasswd\n          chmod 555 /usr/bin/opiepasswd\n          chflags schg /usr/bin/opiepasswd\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-1283",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1283"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-06:12.opie du 22 mars 2006    :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-06:12.opie.asc"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-126",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-03-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans un mécanisme d'authentification sous FreeBSD\npermet à un utilisateur mal intentionné d'élever ses privilèges.\n",
+  "title": "Vulnérabilité de l'authentification OPIE dans FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD FreeBSD-SA-06:12.opie du 22 mars 2006",
+      "url": null
+    }
+  ]
+}

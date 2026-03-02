@@ -1,0 +1,44 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>EMC Captiva eInput 2.x.</p>",
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans EMC Captiva eInput :\n\n-   certaines entrées non spécifiées ne sont pas correctement traitées\n    avant d'être retournées à l'utilisateur, et permettent ainsi une\n    injection de code indirecte à distance ;\n-   Une erreur dans une fonction EMC Captiva eInput ActiveX permet un\n    accès distant à des données locales. Un déni de service peut aussi\n    être conduit via ce vecteur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nLa mise à jour EMC Captiva eInput 2.1.1.37 corrige ces problèmes.\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1743",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1743"
+    },
+    {
+      "name": "CVE-2011-1744",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1744"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-418",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-07-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans EMC Captiva eInput ont été corrigées. Elles\npermettent à un utilisateur malveillant de conduire des attaques par\ninjection de code indirecte, d'accéder à des données protégées, ou de\nporter atteinte à la disponibilité du système.\n",
+  "title": "Multiples vulnérabilités dans EMC Captiva eInput",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité EMC ESA-2011-024 du 26 juillet 2011",
+      "url": "http://archives.neohapsis.com/archives/bugtraq/2011-07/att-0178/ESA-2011-024.txt"
+    }
+  ]
+}

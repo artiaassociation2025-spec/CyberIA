@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Ruby on Rails 3.0.x ;",
+      "product": {
+        "name": "Ruby on Rails",
+        "vendor": {
+          "name": "Ruby on Rails",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Ruby on Rails 2.3.x",
+      "product": {
+        "name": "Ruby on Rails",
+        "vendor": {
+          "name": "Ruby on Rails",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nRuby on Rails utilise un mécanisme de prévention des XSS en protégeant\nles chaînes de caractères présentées au client avant de les marquer\ncomme étant html safe. Une vulnérabilité dans ce mécanisme permet de\ncréer une chaîne html safe alors que celle ci n'a pas été protégée, ce\nqui permet de provoquer une injection de code indirecte à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Notes des versions 2.3.12, 3.0.8 et 3.1.0.rc2 de Ruby on    Rails du 08 juin 2011 :",
+      "url": "http://weblog.rubyonrails.org/2011/6/8/potential-xss-vulnerability-in-ruby-on-rails-applications"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-339",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-06-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité de type injection de code indirecte à distance (<span\nclass=\"textit\">XSS</span>) a été identifiée dans Ruby on Rails.\n",
+  "title": "Vulnérabilité dans Ruby on Rails",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes des versions 2.3.12, 3.0.8 et 3.1.0.rc2 de Ruby on Rails du 08 juin 2011",
+      "url": null
+    }
+  ]
+}

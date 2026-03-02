@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft FrontPage Server Extensions 2000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft SharePoint Team Services 2002.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft FrontPage Server Extensions 2002 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Microsoft FrontPage Server Extensions est un ensemble de\n    fonctionnalités permettant notamment l'administration et la mise en\n    ligne à distance d'un serveur Web. Une vulnérabilité dans la gestion\n    de mémoire d'une DLL permet à un utilisateur distant, non\n    authentifié, d'exécuter du code arbitraire ou de créer des comptes\n    avec privilèges sur la machine cible (CAN-2003-0822).\n-   Une vulnérabilité dans l'interpréteur SmartHTML permet à un\n    utilisateur distant, par le biais de requêtes judicieusement\n    composées, de réaliser un déni de service en bloquant le traitement\n    par le serveur de toutes les requêtes suivantes (CAN-2003-0824).\n\n## Solution\n\nAppliquer le correctif de l'éditeur :\n\n    http://www.microsoft.com/technet/security/bulletin/MS03-051.asp\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-187",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-11-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans Microsoft FrontPage Server Extensions\npermettent à un utilisateur distant mal intentionné de réaliser un déni\nde service ou d'exécuter du code arbitraire sur la machine cible.\n",
+  "title": "Vulnérabilités dans Microsoft FrontPage Server Extensions",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS03-051",
+      "url": null
+    }
+  ]
+}

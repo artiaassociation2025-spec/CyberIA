@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "phpMyAdmin 2.x.",
+      "product": {
+        "name": "phpMyAdmin",
+        "vendor": {
+          "name": "phpMyAdmin",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans le fichier server_databases.php permet à un\nutilisateur distant, précédemment authentifié, d'exécuter du code\narbitraire de type shell.\n\nCette vulnérabilité ne peut être exploitée que si la configuration du\nserveur PHP autorise les commandes de type exec.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs. (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-4096",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4096"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FEDORA-2008-8370",
+      "url": "https://www.redhat.com/archives/fedora-package-announce/2008-september/msg01290.html"
+    },
+    {
+      "title": "Bulletin de sécurité FEDORA-2008-8335",
+      "url": "https://www.redhat.com/archives/fedora-package-announce/2008-september/msg01228.html"
+    },
+    {
+      "title": "Bulletin de sécurité phpMyAdmin PMASA-2008-7 du 15    septembre 2008 :",
+      "url": "http://www.phpmyadmin.net/home_page/security.php?issue=PMASA-2008-7"
+    },
+    {
+      "title": "Bulletin de sécurité FEDORA-2008-8269",
+      "url": "https://www.redhat.com/archives/fedora-package-announce/2008-september/msg01137.html"
+    },
+    {
+      "title": "Bulletin de sécurité FEDORA-2008-8286",
+      "url": "https://www.redhat.com/archives/fedora-package-announce/2008-september/msg01155.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-464",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-09-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence CVE.",
+      "revision_date": "2008-09-19T00:00:00.000000"
+    },
+    {
+      "description": "Ajout Fedora.",
+      "revision_date": "2008-09-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans phpMyAdmin permet à un utilisateur distant\nd'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité dans phpMyAdmin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité phpMyAdmin PMASA-2008-7 du 15 septembre 2008",
+      "url": null
+    }
+  ]
+}

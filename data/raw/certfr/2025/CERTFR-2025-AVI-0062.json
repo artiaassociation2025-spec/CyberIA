@@ -1,0 +1,94 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Kibana versions 7.x antérieures à 7.17.23",
+      "product": {
+        "name": "Kibana",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Kibana versions 8.x antérieures à 8.15.0",
+      "product": {
+        "name": "Kibana",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Fleet Server versions antérieures à 8.15.0",
+      "product": {
+        "name": "Fleet Server",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2024-43708",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-43708"
+    },
+    {
+      "name": "CVE-2024-43707",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-43707"
+    },
+    {
+      "name": "CVE-2024-43710",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-43710"
+    },
+    {
+      "name": "CVE-2024-52975",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-52975"
+    },
+    {
+      "name": "CVE-2024-52972",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-52972"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0062",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-01-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Elastic. Elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans les produits Elastic",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-01-22",
+      "title": "Bulletin de sécurité Elastic ESA-2024-31",
+      "url": "https://discuss.elastic.co/t/fleet-server-8-15-0-security-update-esa-2024-31/373522"
+    },
+    {
+      "published_at": "2025-01-23",
+      "title": "Bulletin de sécurité Elastic ESA-2024-33",
+      "url": "https://discuss.elastic.co/t/kibana-7-17-23-8-15-0-security-updates-esa-2024-32-esa-2024-33/373548"
+    },
+    {
+      "published_at": "2025-01-22",
+      "title": "Bulletin de sécurité Elastic ESA-2024-29 et ESA-2024-30",
+      "url": "https://discuss.elastic.co/t/kibana-8-15-0-security-update-esa-2024-29-esa-2024-30/373521"
+    }
+  ]
+}

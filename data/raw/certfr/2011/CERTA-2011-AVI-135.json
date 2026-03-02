@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "LibTIFF version 3.9.4.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur dans l'analyse des images au format TIFF compressées avec\nl'algorithme CCITT Group 4 peut être exploitée par une personne\nmalveillante pour exécuter du code arbitraire à distance, via un\ndébordement de tampon sur le tas.\n\n## Solution\n\nSe référer au bulletin de sécurité des différents éditeurs pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0192",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0192"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2011:0318 du 02 mars 2011    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2011-0318.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-135",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-03-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la bibliothèque LibTIFF permet à un attaquant\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans LibTIFF",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apple HT4554 du 02 mars 2011",
+      "url": "http://docs.info.apple.com/article.html?artnum=HT4554"
+    }
+  ]
+}

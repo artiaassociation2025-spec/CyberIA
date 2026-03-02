@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>gzip 1.x et versions antérieures.</p>",
+  "content": "## Description\n\nL'application gzip est un outil de compression, présent dans de\nnombreuses bibliothèques fournies avec des distributions de Linux et\nUnix. Les scripts gzexe.in, zdiff.in et znew.in présents dans gzip sont\nvulnérables à une attaque classique d'écrasement de fichiers via le\nsuivi des liens symboliques. A l'aide de liens habilement constitués, un\nutilisateur mal intentionné, ayant un accès local au système, peut\nforcer la modification de fichiers avec les droits de la victime.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Référence CVE CAN-2004-0970 :",
+      "url": "http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2004-0970"
+    },
+    {
+      "title": "Site Internet de gzip :",
+      "url": "http://www.gzip.org"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-588 du 08 novembre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-588"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-364",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-11-09T00:00:00.000000"
+    },
+    {
+      "description": "ajout du site Internet de gzip et de la référence au bulletin de sécurité Debian.",
+      "revision_date": "2004-12-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité découverte dans gzip permet à un utilisateur local,\nmal intentionné, de porter atteinte à l'intégrité des données présentes\nsur le système.\n",
+  "title": "Vulnérabilité de gzip",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Trustix #2004-0050",
+      "url": "http://www.trustix.org/errata/2004/0050/"
+    }
+  ]
+}

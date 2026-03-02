@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SAP Web Application Server 6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SAP Web Application Server 7.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SAP Enterprise Portal 6.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SAP NetWeaver 7.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans différents produits SAP.\n\nLa première permet à une personne malintentionnée d'injecter du code à\ndistance. Elle concerne les produits SAP NetWeaver 7.X et SAP Web\nApplication Server 6.x et 7.x. Elle touche les modules ITS Mobile Start\net ITS Mobile Test qui ne gèrent pas correctement certaines entrées.\n\nLa seconde permet à une personne malintentionnée d'obtenir certaines\ninformations sensibles. Elle touche les produits SAP Enterprise Portal\n6.x et SAP Netweaver 7.x. Cette vulnérabilité concerne l'affichage de\nmessages d'erreur pouvant contenir le chemin d'installation complet du\nmodule fautif. Elle est déclenchée suite à la réception de requêtes HTTP\nspécialement conçues.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SAP 1513182",
+      "url": "https://service.sap.com/sap/support/notes/1513182"
+    },
+    {
+      "title": "Bulletin de sécurité SAP 1512134:",
+      "url": "https://service.sap.com/sap/support/notes/1512134"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-233",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-04-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Des vulnérabilités permettant une injection indirecte de code à distance\net une atteinte à la confidentialité des données ont été découvertes\ndans plusieurs produits <span class=\"textit\">SAP</span>.\n",
+  "title": "Vulnérabilités dans SAP NetWeaver, SAP Web Application Server et SAP Enterprise Portal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SAP 1512134 et 1513182",
+      "url": null
+    }
+  ]
+}

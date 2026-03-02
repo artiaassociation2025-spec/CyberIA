@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>ClamAV 0.96.4 et versions antérieures.</p>",
+  "content": "## Description\n\nDeux vulnérabilités ont été corrigées dans ClamAV :\n\n-   une erreur dans le traitement des fichiers au format PDF permet de\n    provoquer un arrêt inopiné ;\n-   une erreur dans la fonction icon_cb() permet de corrompre la\n    mémoire.\n\n## Solution\n\nLa version 0.96.5 remédie à ces problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-4479",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4479"
+    },
+    {
+      "name": "CVE-2010-4261",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4261"
+    },
+    {
+      "name": "CVE-2010-4260",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4260"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Fedora FEDORA-2010-18568 du 07    décembre 2010 :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-December/051905.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2010:249 du 07 décembre    2010 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:249"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-1031-1 du 10 décembre 2010    :",
+      "url": "http://www.ubuntu.com/usn/usn-1031-1"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-576",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins Fedora, Mandriva et Ubuntu, et des CVE.",
+      "revision_date": "2010-12-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans ClamAV permettent à un utilisateur malveillant\nde provoquer un déni de service à distance.\n",
+  "title": "Vulnérabilités dans ClamAV",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Site des sources de ClamAV",
+      "url": "http://git.clamav.net/"
+    }
+  ]
+}

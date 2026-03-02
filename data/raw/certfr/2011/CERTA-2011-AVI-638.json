@@ -1,0 +1,93 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco TelePresence System Integrator C Series avec les versions logicielles TC4.0, TC4.1 ou TC4.2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco TelePresence Quick Set avec les versions logicielles TC4.0, TC4.1 ou TC4.2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tandberg E, EX et C Series Endpoints avec les versions logicielles antérieures à TC4.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco TelePresence Ex C Series avec les versions logicielles TC4.0, TC4.1 ou TC4.2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes dispositifs Tanberg possèdent leur compte administrateur (root)\nactivé par défaut, sans mot de passe, ce qui était initialement prévu\npour des tâches de déboguage mais non nécessaire lors des opérations\nnormales.\n\nCertains dispositifs Cisco TelePresence ont été distribués avec une\nconfiguration non sécurisée. La vulnérabilité est due à un échec de\nrestauration de la configuration par défaut après avoir fait des tests\net configuré des options. Ces dispositifs pourraient avoir leur compte\nadministrateur (root) activé et configuré avec un mot de passe connu.\n\nUne personne malveillante pourrait prendre le contrôle total d'un de ces\nsystèmes à distance.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0997",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0997"
+    },
+    {
+      "name": "CVE-2011-0354",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0354"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco    20111109-telepresence-c-ex-series du 09 novembre 2011 :",
+      "url": "http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111109-telepresence-c-ex-series"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco 20110202 du 2 février 2011 :",
+      "url": "http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20110202-tandberg"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-638",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-11-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Un défaut de configuration dans les produits cités plus haut pourrait\npermettre à une personne malveillante de prendre le contrôle total du\nsystème à distance.\n",
+  "title": "Vulnérabilités dans des produits Cisco TelePresence et Tandberg",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-20110202-tandberg",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-20111109-telepresence-c-ex-series",
+      "url": null
+    }
+  ]
+}

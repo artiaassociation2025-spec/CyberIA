@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Système IRIX versions 6.5 à 6.5.10.</P>  <P>Les versions antérieures, non maintenues, n'ont pas été  testées.</P>",
+  "content": "## Description\n\nLe fichier `/dev/ipfilter` est créé par défaut sur les systèmes IRIX 6.5\npendant l'installation. Ce fichier est utilisé par le service\n`ipfilterd` du paquetage `eoe.sw.ipgate` pour le filtrage du trafic IP.\n\nLes droits par défaut sur ce fichier sont 0x644, et permettent à un\nutilisateur non privilégié de pertuber le trafic IP.\n\n## Contournement provisoire\n\nModifier les droits du fichier `/dev/ipfilter` :  \n`# chmod 600 /dev/ipfilter`\n\nAttention : le script `/dev/MAKEDEV` repositionne les droits à `0x644`\nchaque fois qu'il est exécuté.\n\n## Solution\n\nLa version IRIX 6.5.11 et les versions suivantes corrigent le problème.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité SGI 20020408-01-I :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20020408-01-I"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-093",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-05-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Les droits d'accès au fichier `/dev/ipfilter` sont trop permissifs et\npermettent à un utilisateur mal intentionné de provoquer un déni de\nservice.\n",
+  "title": "Vulnérabilité de /dev/ipfilter sous IRIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité IRIX 20020408-01-I",
+      "url": null
+    }
+  ]
+}

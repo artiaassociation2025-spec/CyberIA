@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeRADIUS versions 1.1.0 et  antérieures.",
+      "product": {
+        "name": "FreeRADIUS",
+        "vendor": {
+          "name": "FreeRadius",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nUne erreur dans la mise en œuvre du protocole d'authentification\nEAP-MSCHAPv2 dans FreeRADIUS permet à un utilisateur mal intentionné\ndistant, mais sur le même segment de réseau, de provoquer un déni de\nservice du système vulnérable par le biais d'une machine cliente\nmalicieusement configurée.\n\n## Solution\n\nLa version 1.1.1 de FreeRADIUS corrige le problème :\n\n    http://www.freeradius.org/getting.html\n",
+  "cves": [
+    {
+      "name": "CVE-2006-1354",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1354"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0271-11 du 4 avril    2006 :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2006-0271.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200604-03 du 4 avril 2006    :",
+      "url": "http://security.gentoo.org/glsa/glsa-200604-03.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1089 du 3 juin 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1089"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:066 du 05 mars    2006 :   ",
+      "url": "http://frontal2.mandriva.com/security/advisories?name=MDKSA-2006:066"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:060 du 23 mars    2006 :",
+      "url": "http://frontal2.mandriva.com/security/advisories?name=MDKSA-2006:060"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD du 4 avril 2006 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-freeradius.html"
+    },
+    {
+      "title": "Site de FreeRADIUS :",
+      "url": "http://www.freeradius.org"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-121",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2006-03-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva et de la référence CVE ;",
+      "revision_date": "2006-03-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de RedHat ;",
+      "revision_date": "2006-04-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de Mandriva ;",
+      "revision_date": "2006-04-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de Debian.",
+      "revision_date": "2006-06-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans FreeRADIUS permet à un utilisateur distant de\nprovoquer un déni de service du système vulnérable.\n",
+  "title": "Vulnérabilité dans FreeRADIUS",
+  "vendor_advisories": [
+    {
+      "published_at": "2006-03-21",
+      "title": "Bulletin de sécurité FreeRADIUS ",
+      "url": "http://www.freeradius.org/security.html"
+    }
+  ]
+}

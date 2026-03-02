@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>MySQL 5.1.x versions antérieures à la 5.1.47.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités dans MySQL ont été découvertes :\n\n-   une erreur dans la gestion des paramètres de la commande\n    COM_FIELD_LIST permet de contourner la politique de sécurité\n    (CVE-2010-1848) ;\n-   une erreur non spécifiée par l'éditeur dans la gestion de la taille\n    de certains paquets permet de provoquer un déni de service à\n    distance (CVE-2010-1849) ;\n-   une vulnérabilité de type dépassement de la mémoire tampon dans la\n    gestion du paramètre de nom de table de la commande COM_FIELD_LIST\n    permet d'exécuter du code arbitraire à distance (CVE-2010-1850).\n\n## Solution\n\nSe référer à la note de nouvelle version de l'éditeur pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-1849",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1849"
+    },
+    {
+      "name": "CVE-2010-1850",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1850"
+    },
+    {
+      "name": "CVE-2010-1848",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1848"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-223",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-05-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans MySQL permettent à une personne\nmalintentionnée de contourner la politique de sécurité, de provoquer un\ndéni de service ou d'exécuter du code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans MySQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de nouvelle version MySQL 5.1.47 du 06 mai 2010",
+      "url": "http://dev.mysql.com/doc/refman/5.1/en/news-5-1-47.html"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>OpenBSD versions 2.9 et 3.0.</p>",
+  "content": "## Description\n\nCertains caractères de contrôle peuvent être utilisés à l'intérieur d'un\nmél pour spécifier une commande à exécuter via l'interpréteur de\ncommandes.\n\nLa commande /usr/bin/mail interprète ces caractères même si elle n'est\npas exécutée en mode interactif. Un utilisateur mal intentionné peut\nainsi forcer l'exécution de commandes avec les privilèges de\nl'administrateur (root) lors du lancement des scripts programmés (cron)\ninstallés par défaut et utilisant la commande /usr/bin/mail.\n\n## Solution\n\nAppliquer le correctif mentionné dans les avis de sécurité d'OpenBSD\n(cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité OpenBSD 3.0 :",
+      "url": "http://www.openbsd.org/errata.html#mail"
+    },
+    {
+      "title": "Avis de sécurité OpenBSD 2.9 :",
+      "url": "http://www.openbsd.org/errata29.html#mail"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-078",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-04-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans la commande /usr/bin/mail permet à un\nutilisateur mal intentionné d'obtenir les privilèges de l'administrateur\n(root).\n",
+  "title": "Vulnérabilité de mail sous OpenBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité #18 (OpenBSD 3.0) et #23 (OpenBSD 2.9)",
+      "url": null
+    }
+  ]
+}

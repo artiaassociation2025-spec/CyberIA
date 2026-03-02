@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "NetApp FAS/AFF BIOS version A900/9500 sans le dernier correctif",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetApp",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Les versions de NetApp Cloud Insights Telegraf Agent sans le correctif du 11/11/2022",
+      "product": {
+        "name": "Cloud Insights Telegraf Agent",
+        "vendor": {
+          "name": "NetApp",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-33117",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-33117"
+    },
+    {
+      "name": "CVE-2022-28131",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-28131"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0030",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-01-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes les produits NetApp.\nElles permettent à un attaquant de provoquer un déni de service à\ndistance, une atteinte à l'intégrité des données et une atteinte à la\nconfidentialité des données.\n",
+  "title": "Multiples vulnérabilités les produits NetApp",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité NetApp ntap-20220818-0001 du 13 janvier 2023",
+      "url": "https://security.netapp.com/advisory/ntap-20220818-0001/"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité NetApp ntap-20221111-0009 du 13 janvier 2023",
+      "url": "https://security.netapp.com/advisory/ntap-20221111-0009/"
+    }
+  ]
+}

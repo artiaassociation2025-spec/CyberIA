@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système offrant un service DNS à l'aide de BIND version 4  (4.9.5 à 4.9.10) ou 8 (8.1, 8.2 à 8.2.6 et 8.3.0 à 8.3.3).</P>",
+  "content": "## Description\n\nL'avis d'ISS identifie les problèmes suivants :\n\n-   Il existe un débordement de mémoire dans la gestion des\n    enregistrements (\\`\\`rr, resource record'') de type SIG (RFC 2535)\n    au sein du cache. Un utilisateur mal intentionné contrôlant un DNS\n    autorité pour une zone pourrait alors exécuter du code arbitraire.\n-   En fabriquant une réponse UDP de grande taille, pour un sous-domaine\n    inexistant ou un domaine dont les DNS autorités sont inaccessibles,\n    il est possible de mettre fin au service.\n-   Comme dans le premier cas, le contrôle d'un DNS autorité permet de\n    fabriquer des enregistrements SIG avec une date d'expiration\n    invalide, pour lesquels une mauvaise gestion du cache conduit à\n    désallouer deux fois la mémoire correspondant et donc à l'arrêt du\n    service.\n\n## Contournement provisoire\n\nPour les rares cas où cela est possible (caches DNS ne répondant que\npour les domaines dont ils sont autorité), désactiver la récursivité :\n\n-   BIND 4 : dans named.boot inclure options no-recursion.\n-   BIND 8 : dans named.conf inclure recursion no; dans l'entrée options\n    {}.\n\nDans le cas de BIND 8, il est possible de restreindre les adresses IP\npour lesquelles la récursivité est autorisée : utiliser une entrée de la\nforme allow-recursion { adresse/masque; }; où adresse/masque correspond\naux adresses pour lesquelles l'usage du cache est légitime. Sans\nsupprimer les vulnérabilités, cette option limite les opportunités de\nles activer.\n\n## Solution\n\n-   Migrer vers BIND 9 ou un autre programme de service DNS.\n\n-   Mise à jour par ISC des fichiers sources :\n    -   Bind 8 :\n\n            http://www.isc.org/products/BIND/bind8.html\n\n    -   Bind 4 :\n\n            http://www.isc.org/products/BIND/bind4.html\n\n-   Red Hat Linux 6.2, 7.0, 7.1, 7.2 et 7.3\n\n        http://rhn.redhat.com/errata/RHSA-2002-133.html\n\n-   Linux Mandrake 7.2\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2002:077\n\n-   Debian Linux\n\n        http://www.debian.org/secuirty/2002/dsa-196\n\n-   SuSE Linux 7.0, 7.1, 7.2, 7.3, 8.0 et 8.1\n\n        http://www.suse.com/de/security/2002_004_bind8.html\n\n-   Conectiva Linux 6.0\n\n        http://distro.conectiva.com/atualizacoes/?id=a&anuncio=000546\n\n-   OpenBSD 3.0, 3.1 et 3.2 (attention les versions 2 ne sont plus\n    maintenues)\n\n        http://www.openbsd.com/errata.html#named\n\n-   FreeBSD 4.4, 4.5, 4.6 et 4.7\n\n        ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-02%3A43.bind.asc\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité ISS :",
+      "url": "http://bvlive01.iss.net/issEn/delivey/xforce/alertdetail.jsp?uid=21469"
+    },
+    {
+      "title": "Vulnérabilités BIND recensées par ISC et point de contact :",
+      "url": "http://www.isc.org/products/BIND/bind-security.html"
+    },
+    {
+      "title": "Syntaxe de l'entrée options dans BIND 8 :",
+      "url": "http://www.isc.org/products/BIND/docs/config/options.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-246",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-11-13T00:00:00.000000"
+    },
+    {
+      "description": "rajout de correctifs constructeurs.",
+      "revision_date": "2002-11-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Trois failles différentes ont été identifiées dans la fonction cache de\nBIND. Elles nécessitent que la récursivité (\\`\\`recursion'' : capacité à\nconduire une résolution à la place des clients) soit activée, ce qui est\nle cas par défaut. L'une d'entre elles permet l'exécution de code\narbitraire avec les privilèges du service, les deux autres l'arrêt du\nservice.\n",
+  "title": "Multiples vulnérabilités sur les serveurs DNS BIND 4 et 8",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis Internet Security Systems du 12 novembre 2002",
+      "url": null
+    }
+  ]
+}

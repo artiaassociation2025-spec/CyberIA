@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>OpenBSD versions 3.7 et 3.8.</p>",
+  "content": "## Description\n\nUne vulnérabilité a été découverte dans la gestion de /dev/fd. Cette\nvulnérabilité peut être exploitée par un utilisateur mal-intentionné\nafin de tomper des programmes suid et ainsi, contourner la politique de\nsécurité ou procéder à une élévation de privilèges.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctif de sécurité pour les version 3.7 et 3.8 :",
+      "url": "ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.8/common/002_fd.patch"
+    },
+    {
+      "title": "Correctif de sécurité pour les version 3.7 et 3.8 :",
+      "url": "ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.7/common/008_fd.patch"
+    },
+    {
+      "title": "Liste des correctifs de sécurité OpenBSD pour fd    du 05 janvier 2006 :",
+      "url": "http://openbsd.org/errata37.html#fd"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-010",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-01-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le gestion de /dev/fd permet de contourner de la\npolitique de sécurité.\n",
+  "title": "Vulnérabilité dans le gestion de /dev/fd de OpenBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des mises à jour OpenBSD",
+      "url": null
+    }
+  ]
+}

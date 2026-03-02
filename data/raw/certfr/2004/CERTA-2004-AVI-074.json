@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>wu-ftpd</TT> version 2.6.2.",
+  "content": "## Description\n\nLa première vulnérabilité concerne la restriction d'accès au répertoire\nd'un utilisateur : un utilisateur local mal intentionné peut en\nchangeant les privilèges d'accès à son répertoire, accèder au répertoire\nracine du serveur wu-ftpd.\n\nLa seconde vulnérabilité concerne la méthode d'authentification skey :\nla non-vérification de la longueur de la variable name dans la fonction\nskey_challenge permet à un utilisateur mal intentionné distant\nd'exécuter du code arbitraire avec les privilèges du super utilisateur\nroot.\n\n## Solution\n\nAppliquer le correctif ou récupérer la mise à jour correspondant à votre\nsystème (cf. section documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD du 08 mars 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité HPSBTU01012 pour HP Tru64 Unix du 08    avril 2004 :",
+      "url": "http://www4.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBTU01012"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:096 du 08 mars 2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-096.html"
+    },
+    {
+      "title": "Bulletin de sécurité HPSBUX01059 pour HP-UX du 14 juillet    2004 :",
+      "url": "http://www4.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBUX01059"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-074",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin HPSBTU01012 pour HP Tru64 Unix.",
+      "revision_date": "2004-04-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2004-05-13T00:00:00.000000"
+    },
+    {
+      "description": "modification des références aux bulletins de sécurité Debian et HP. Modification de la référence CVE CAN-2004-0148. Ajout de la référence au bulletin de sécurité HP-UX.",
+      "revision_date": "2004-07-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes sur le serveur wu-ftpd permettent à un\nutilisateur mal intentionné d'accèder à des informations confidentielles\net d'exécuter du code arbitraire avec les privilèges du super\nutilisateur root.\n",
+  "title": "Vulnérabilités du serveur wu-ftpd",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-457 du 08 mars 2004",
+      "url": "http://www.debian.org/security/2004/dsa-457"
+    }
+  ]
+}

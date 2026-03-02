@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Versions de Snort antérieures à la  version 2.4.3.</p>",
+  "content": "## Description\n\nSnort est un logiciel libre de détection d'intrusion.  \nUne vulnérabilité dans le pré-processeur Back Orifice de Snort permet à\nun utilisateur mal intentionné, au moyen d'un paquet habilement\nconstruit, d'exécuter du code arbitraire à distance sur la machine\nvulnérable.\n\n## Contournement provisoire\n\nDésactiver le pré-processeur Back Orifice. Pour cela, commenter la ligne\npreprocessor bo dans le fichier de configuration Snort snort.conf.  \nRedémarrer Snort afin de prendre en compte les modifications.\n\n## Solution\n\nMettre à jour Snort en version 2.4.3.  \nSnort est téléchargeable à l'adresse suivante :\n\n    http://www.snort.org/dl/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité US-CERT VU#175500 du 18 octobre 2005 :",
+      "url": "http://www.kb.cert.org/vuls/id/175500"
+    },
+    {
+      "title": "Liste des changements dans Snort 2.4.3 :",
+      "url": "http://www.snort.org/docs/change_logs/2.4.3/Changelog.txt"
+    },
+    {
+      "title": "Site Internet de Snort :",
+      "url": "http://www.snort.org"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-408",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-10-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de Snort",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Snort du 18 octobre 2005",
+      "url": "http://www.snort.org/pub-bin/snortnews.cgi#99"
+    }
+  ]
+}

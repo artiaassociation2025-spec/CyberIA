@@ -1,0 +1,125 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Adobe Reader versions 9.x, 8.x et 7.x ;",
+      "product": {
+        "name": "PDF Reader",
+        "vendor": {
+          "name": "Foxit",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xpdf versions antérieures à la mise à jour 3.02pl3.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Adobe Acrobat Standard, Pro et Pro Extended, versions 9.x, 8.x et 7.x.",
+      "product": {
+        "name": "Acrobat",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "KDE versions antérieures à la version 3.4.5-12 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Foxit",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur dans différents produits relative à l'interprétation des\nobjets encodés au format JBIG2 dans des fichiers PDF permet à un\nutilisateur de provoquer l'arrêt du logiciel (crash).\n\nElle permet également l'exécution de code arbitraire sur le système\nvulnérable avec les droits de l'utilisateur.\n\nL'exploitation de la vulnérabilité ne nécessite pas nécessairement :\n\n-   l'intervention de l'utilisateur ;\n-   l'activation ou la désactivation du support du langage JavaScript.\n\n  \n  \n\nCertains codes d'exploitation circulant actuellement sur l'Internet sont\nreconnus par des antivirus sous divers noms : Trojan.Pidief.E,\nBloodhound.PDF-6 (Symantec), Exploit-PDF.i (NAI, Mac Afee)...\n\n  \n  \n\nCertains lecteurs PDF installent une extension permettant à\nl'explorateur de fichiers de Microsoft Windows de réaliser un aperçu des\nfichiers au format PDF. De ce fait, la vulnérabilité peut également être\nexploitée par les méthodes suivantes :\n\n-   lors de la sélection d'un fichier PDF exploitant cette vulnérabilité\n    ;\n-   lors de l'exploration d'un répertoire avec un affichage en mode\n    miniature des icônes.\n\nDe plus, il semblerait que cette vulnérabilité puisse être exploitée\nlors de l'affichage de l'infobulle lié à un fichier PDF malveillant dont\nles méta-données ont été spécialement construites.\n\nEnfin, l'utilisation de services d'indexation automatique (comme WIS,\nWindows Indexing Services) pourrait déclencher l'exploitation de la\nvulnérabilité sur un fichier présent sur l'espace de stockage sans\nintervention particulière de l'utilisateur.\n\n## Solution\n\nSe référer à la documentation des éditeurs afin d'obtenir les correctifs\n(cf. Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0658",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0658"
+    },
+    {
+      "name": "CVE-2009-0927",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0927"
+    }
+  ],
+  "links": [
+    {
+      "title": "Mise à jour Xpdf du 30 mars 2009 :",
+      "url": "ftp://ftp.foolabs.com/pub/xpdf/xpdf-3.02pl3.patch"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RSHA-2009-0431 et    RSHA-2009-430 du 16 avril 2009 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2009-0430.html"
+    },
+    {
+      "title": "Alerte CERTA-2009-ALE-001 du 20 février 2009:",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2009-ALE-001/"
+    },
+    {
+      "title": "Avis de sécurité Adobe apsa09-01 du 19 février 2009 :",
+      "url": "http://www.adobe.com/support/security/advisories/apsa09-01.html"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RSHA-2009-0431 et    RSHA-2009-430 du 16 avril 2009 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2009-0431.html"
+    },
+    {
+      "title": "Bulletin de sécurité Adobe apsb09-03 du 10 mars 2009 :",
+      "url": "http://www.adobe.com/support/security/bulletins/apsb09-03.html"
+    },
+    {
+      "title": "Document du CERTA CERTA-2009-ALE-001 du 20 février 2009 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2009-ALE-001/index.html"
+    },
+    {
+      "title": "Bulletin de sécurité Adobe apsb09-04 du 18 mars 2009 :",
+      "url": "http://www.adobe.com/support/security/bulletins/apsb09-04.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-094",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2009-03-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références au bulletin de sécurité APSB09-04 concernant les versions 7.x et 8.x ;",
+      "revision_date": "2009-03-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins Red Hat et Xpdf.",
+      "revision_date": "2009-04-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans l'interprétation des documents PDF par différents\nlecteurs permet à un utilisateur malveillant d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilité dans l'interprétation JBIG2 dans le format PDF",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Adobe APSB09-03 du 10 mars 2009",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Adobe APSB09-04 du 18 mars 2009",
+      "url": null
+    }
+  ]
+}

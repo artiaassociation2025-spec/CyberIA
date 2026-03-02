@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Windows NT server et 2000 server</P>",
+  "content": "## Description\n\nNetMon est un utilitaire d'analyse réseau livré dans sa version de base\navec les Système Windows NT 4.0 et 2000 servers, et dans une version un\npeu plus complète dans les versions 1.2 et 2.0 du logiciel SMS (Systems\nManagement Server). Cet utilitaire comprend des fonctions d'analyse de\nprotocole que l'administrateur peut effectuer sur une capture faite au\npréalable sur son réseau. Ces fonctions d'analyse sont sujettes à des\ndébordements de mémoire. Un utilisateur mal intentionné peut avoir\nenvoyé des trames habilement conçues pour soit bloquer le système, soit\nexécuter du code avec les privilèges de l'administrateur.\n\n## Solution\n\nAppliquer le correctif de Microsoft :\n\n-   Pour Windows NT 4.0 Server et Enterprise Edition Service Pack 6a :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=25487\n\n-   Pour Windows 2000 Server et Datacenter Server Gold ou Service Pack 1\n    :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=25485\n\n-   Pour Windows NT 4.0 terminal Server Service Pack 6, correctif encore\n    non disponible.\n\n-   Pour les systèmes ayant SMS 1.2 Service Pack 4, le correctif :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=25505\n\n-   Pour SMS 2.0 gold, Service Pack 1 ou 2 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=25514\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité et FAQ de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-083.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-067",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-11-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire avec privilèges administrateur"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs débordements de mémoire dans l'utilitaire <span\nclass=\"textit\">NetMon</span> permettent à un utilisateur mal intentionné\nde bloquer le système ou d'exécuter du code sur la machine sur laquelle\nl'administrateur utilise les fonctions d'analyse d'enregistrements de\nl'utilitaire NetMon sous windows NT server et 2000 server.\n",
+  "title": "Vulnérabilité de Netmon sous Windows NT server et Windows 2000 server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "bulletin de Sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

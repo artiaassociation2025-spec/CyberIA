@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les systèmes d'exploitation suivants sont affectés (utilisant  Internet Information Services versions 5.0 à 7.0) :</P>  <UL>    <LI>Windows 2000 SP4 (MS08-005) ;</LI>    <LI>Windows XP SP2 (MS08-005, MS08-006) ;</LI>    <LI>Windows XP Professionnel Edition x64 et Windows XP    Professionnel Edition x64 SP2 (MS08-005, MS08-006) ;</LI>    <LI>Windows Server 2003 SP1, Windows Server 2003 SP2 (MS08-005,    MS08-006) ;</LI>    <LI>Windows Server 2003 Edition x64 et Windows Server 2003    Edition x64 SP2 (MS08-005, MS08-006) ;</LI>    <LI>Windows Server 2003 avec SP1 pour les systèmes Itanium et    Windows Server 2003 avec SP2 pour les systèmes Itanium    (MS08-005, MS08-006) ;</LI>    <LI>Windows Vista et Windows Vista x64 (MS08-005).</LI>  </UL>",
+  "content": "## Description\n\nDeux vulnérabilités affectent Microsoft Internet Information Services :\n\n-   La première vulnérabilité (MS08-005) concerne les services W3SVC,\n    FTPSVC et NNTPSVC. Elle permet à une personne locale d'élever ses\n    privilèges ;\n-   La deuxième vulnérabilité (MS08-006) concerne la façon dont IIS\n    traite les entrées de données dans les pages web ASP. Une personne\n    malintentionnée pourrait ainsi exécuter du code arbitraire à\n    distance en envoyant des données spécialement conçues au serveur.\n\n## Solution\n\nSe référer aux bulletins de sécurité MS08-005 et MS08-006 de Microsoft\npour l'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0075",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0075"
+    },
+    {
+      "name": "CVE-2008-0074",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0074"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2008-AVI-077",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités touchant <span class=\"textit\">Microsoft Internet\nInformation Services</span> (<span class=\"textit\">IIS</span>) permettent\nà une personne malintentionnée d'exécuter du code arbitraire à distance\nou d'élever ses privilèges.\n",
+  "title": "Vulnérabilités dans Microsoft Internet Information Services (IIS)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS08-005 du 12 février 2008",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-005.mspx"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS08-006 du 12 février 2008",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-006.mspx"
+    }
+  ]
+}

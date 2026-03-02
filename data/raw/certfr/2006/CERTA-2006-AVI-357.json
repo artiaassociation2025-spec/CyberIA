@@ -1,0 +1,35 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>eNovell edirectory 8.7.3.8 ainsi que les versions  antérieures.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été rapportées dans le système de gestion\nd'identités et de privilèges d'accès eNovell eDirectory. Parmi celles-ci\n:\n\n-   La fonction eMBoxClient.jar iManager affiche le mot de passe de\n    l'utilisateur dans les fichiers journaux (ou logs).\n-   Une mauvaise résolution DNS peut entraîner un arrêt de l'application\n    eDirectory. Cette vulnérabilité peut être exploitée pour des\n    attaques de type déni-de-service.\n-   Une mauvaise utilisation de ressources de la part de NCPENGINE peut\n    provoquer un déni de service à distance par des outils courants de\n    balayage de ports.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2006-AVI-357",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités de Novell eDirectory",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour Novell TID2973826 du 11 août 2006",
+      "url": "http://support.novell.com/cgi-bin/search/searchtid.cgi?/2973826.htm"
+    }
+  ]
+}

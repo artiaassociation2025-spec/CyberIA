@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système fournissant un service DNS à l'aide de BIND 8,  hormis les versions 8.3.7 et 8.4.3.</P>",
+  "content": "## Description\n\nLe principe du cache DNS consiste à stocker localement des données déjà\nreçues pour les restituer aux clients, avec un certain temps\nd'expiration, de manière à limiter la charge sur les serveurs autorités\ndes domaines cachés.\n\nUn cache peut être pollué lorsqu'il garde des informations sur des\nressources sans vérifier la légitimité du serveur, lui ayant transmis,\npour ces données particulières. Il ne semble plus possible de polluer le\ncache d'un serveur BIND à jour avec des enregistrements usurpés, mais la\nprésente faille permet de faire mémoriser au cache une information de\n\\`\\`non-existence'' d'une ressource. Les clients interrogeant le cache\nne peuvent alors plus accéder à cette dernière.\n\n## Solution\n\nMettre à jour BIND 8 :\n\n-   Sources :\n\n        http://www.isc.org/products/BIND/bind8.html\n\n-   SuSE Linux :\n\n        http://www.suse.com/de/security/2003_47_bind8.html\n\n-   Sun Solaris :\n\n        http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fslaert/57434\n\n-   HP-UX :\n\n        http://www4.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBUX0311-303\n\n-   IBM AIX :\n\n        http://www-1.ibm.com/support/docview.wss?uid=isg1IY49881\n\n        http://www-1.ibm.com/services/continuity/recover1.nsf/mss/MSS-OAR-E01-2003.1565.1\n\n-   FreeBSD :\n\n        ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-03:19.bind.asc\n\n-   Debian :\n\n        http://www.debian.org/security/2004/dsa-409\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Note de vulnérabilité du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/734644"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-205",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2003-12-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence à l'avis de sécurité de Debian ;",
+      "revision_date": "2004-01-07T00:00:00.000000"
+    },
+    {
+      "description": "mise à jour IBM ;",
+      "revision_date": "2004-01-20T00:00:00.000000"
+    },
+    {
+      "description": "conflit dans les révisions du document : lien Debian restauré.",
+      "revision_date": "2004-01-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Il est possible, pour l'administrateur mal intentionné d'un serveur DNS,\nde transmettre des réponses négatives qui seront stockées dans le cache\ndes serveurs BIND 8 l'interrogeant, concernant des ressources pour\nlesquelles il n'est pourtant pas autorité (\\`\\`negative cache\npoisoning'').\n",
+  "title": "Mauvaise gestion du cache dans BIND 8",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Internet Software Consortium",
+      "url": null
+    }
+  ]
+}

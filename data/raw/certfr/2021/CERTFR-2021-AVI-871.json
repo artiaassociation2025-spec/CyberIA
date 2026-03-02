@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "NGINX Ingress Controller versions 1.x antérieures à 1.12.2",
+      "product": {
+        "name": "NGINX Ingress Controller",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NGINX Ingress Controller versions 2.x antérieures à 2.0.2",
+      "product": {
+        "name": "NGINX Ingress Controller",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-23055",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-23055"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2021-AVI-871",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-11-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans F5 NGINX Ingress Controller.\nElle permet à un attaquant de provoquer un contournement de la politique\nde sécurité et une atteinte à la confidentialité des données.\n",
+  "title": "Vulnérabilité dans F5 NGINX Ingress Controller",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F5 K01051452 du 11 novembre 2021",
+      "url": "https://support.f5.com/csp/article/K01051452"
+    }
+  ]
+}

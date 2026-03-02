@@ -1,0 +1,51 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Bibliothèque libxml2, versions  antérieures à la version 2.7.8.  <P>Les applications s'appuyant sur cette bibliothèque peuvent  être concernées.</P></p>",
+  "content": "## Description\n\nUne vulnérabilité est présente dans le traitement du langage XPath par\nla bibliothèque libxml2. Ce problème permet à un utilisateur malveillant\nde provoquer un déni de service à l'aide d'un fichier XML spécialement\nconçu.\n\nLa possibilité d'exécution de code arbitraire est suspectée, mais non\nconfirmée.\n\nLes applications basées sur la bibliothèque libxml2 peuvent être\nvulnérables.\n\n## Solution\n\nLa bibliothèque libxml2-2.7.8 remédie à cette vulnérabilité.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-4008",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4008"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-1016-1 du 10 novembre 2010    :",
+      "url": "http://www.ubuntulinux.org/usn/usn-1016-1"
+    },
+    {
+      "title": "Annonce de la publication de libxml2-2.7.8 du 04 novembre    2010 :",
+      "url": "http://mail.gnome.org/archives/xml/2010-November/msg00015.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-2128 du 01 décembre 2010 :",
+      "url": "http://www.debian.org/security/2010/dsa-2128"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-549",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-11-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian.",
+      "revision_date": "2010-12-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la bibliothèque libxml2 permet à un utilisateur\nmalveillant de provoquer un déni de service.\n",
+  "title": "Vulnérabilité dans libxml2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de la publication de libxml2-2.7.8 du 04 novembre 2010",
+      "url": null
+    }
+  ]
+}

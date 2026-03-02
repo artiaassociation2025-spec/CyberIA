@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>ClamAV versions antérieures à 0.96.</p>",
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans ClamAV :\n\n-   un fichier d'archive spécialement conçu peut contourner le\n    dispositif de vérification de signature de ClamAV ;\n-   une erreur dans la fonction qtm_decompress provoque un déni de\n    service lors de l'analyse d'un fichier spécialement conçu.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0098",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0098"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-158",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-04-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans ClamAV permettent un déni de service à\ndistance ou le contournement de la politique de sécurité du logiciel.\n",
+  "title": "Multiples vulnérabilités dans ClamAV",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport de bogue du 01 avril 2010",
+      "url": "https://wwws.clamav.net/bugzilla/show_bug.cgi?id=1826"
+    }
+  ]
+}

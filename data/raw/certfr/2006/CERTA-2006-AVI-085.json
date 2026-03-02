@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><TT>ProxyAV</TT> en versions antérieures à la 2.4.2.4.</P>",
+  "content": "## Description\n\nProxyAV est un serveur mandataire (« proxy ») doté de fonctions\nadditionnelles destinées à lutter contre le pourriel et les logiciels\nespions.\n\nL'interface web est vulnérable à une attaque utilisant un des champs\nHTTP comme vecteur.\n\n## Contournement provisoire\n\nRestreindre l'accès de l'interface web à des adresses IP de confiance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Blue Coat du 16 février 2006    :",
+      "url": "http://www.bluecoat.com/support/knowledge/advisory_host_header_stack_overflow.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-085",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-02-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans l'interface web permet à un utilisateur distant\nmal intentionné d'exécuter du code arbitraire à l'aide d'une requête\nHTTP volontairement mal construite.\n",
+  "title": "Vulnérabilité de Blue Coat ProxyAV",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDefense",
+      "url": "http://www.idefense.com/intelligence/vulnerabilities/display?id=364"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<ul> <li><del>MobileIron Core versions antérieures à 11.3</del></li> <li>Ivanti MobileIron Core et Endpoint Manager Mobile toutes versions.</li> </ul> <p>La version 11.2 est en fin de vie depuis le 15 mars 2022 et ne recevra pas de correctif, tout comme les versions antérieures.</p> <p>Ivanti fournit un script RPM corrigeant la vulnérabilité CVE-2023-35082 pour les versions 11.8.1.2, 11.9.1.2 et 11.10.0.3. Si l’équipement est dans une version antérieure, il est conseillé de le mettre à jour vers l’une de ces trois versions, puis d’exécuter le script. Cette procédure est décrite dans l’avis</p> ",
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-35082",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-35082"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0615",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-08-03T00:00:00.000000"
+    },
+    {
+      "description": "La vulnérabilité CVE-2023-35082 affecte toutes les versions d'Ivanti MobileIron Core et Endpoint Manager Mobile.",
+      "revision_date": "2023-08-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Ivanti MobileIron Core. Elle\npermet à un attaquant de provoquer un contournement de la politique de\nsécurité, une atteinte à l'intégrité des données et une atteinte à la\nconfidentialité des données.\n",
+  "title": "Vulnérabilité dans Ivanti MobileIron Core et Endpoint Manager Mobile",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ivanti du 02 août 2023",
+      "url": "https://forums.ivanti.com/s/article/CVE-2023-35082-Remote-Unauthenticated-API-Access-Vulnerability-in-MobileIron-Core-11-2-and-older"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ivanti du 07 août 2023",
+      "url": "https://forums.ivanti.com/s/article/KB-Remote-Unauthenticated-API-Access-Vulnerability-CVE-2023-35082"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Google Chrome versions antérieures à 1.0.154.64.</P>",
+  "content": "## Description\n\nDeux vulnérabilités ont été corrigées dans Google Chrome :\n\n-   un débordement de mémoire dans la fonction\n    ParamTraits\\<SkBitmap\\>::Read permet à une personne malintentionnée\n    d'effectuer un déni de service voire d'exécuter du code arbitraire\n    (CVE-2009-1441) ;\n-   un débordement d'entier dans le calcul de taille d'images permet à\n    une personne malintentionnée distante d'effectuer un déni de service\n    voire d'exécuter du code arbitraire au moyen d'une image\n    spécialement conçue (CVE-2009-1442).\n\n## Solution\n\nLes deux vulnérabilités sont corrigées dans la version 1.0.154.64.\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1441",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1441"
+    },
+    {
+      "name": "CVE-2009-1442",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1442"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bloc-notes de suivi de versions de Google Chrome :      http://googlechromereleases.blogspot.com/",
+      "url": "http://googlechromreleases.blogspot.com"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-180",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-05-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans <span class=\"textit\">Google Chrome</span>\npermettent à une personne malintentionnée d'exécuter du code arbitraire\nà distance.\n",
+  "title": "Vulnérabilités dans Google Chrome",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport de bogue #10869 de Google Chromium du 22 avril 2009",
+      "url": "http://code.google.com/p/chromium/issues/details?id=10869"
+    },
+    {
+      "published_at": null,
+      "title": "Rapport de bogue #10736 de Google Chromium du 19 avril 2009",
+      "url": "http://code.google.com/p/chromium/issues/details?id=10736"
+    }
+  ]
+}

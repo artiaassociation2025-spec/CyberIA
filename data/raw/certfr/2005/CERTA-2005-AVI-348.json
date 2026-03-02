@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>ClamAV versions 0.86.2 et antérieures.</p>",
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans ClamAV :\n\n-   la première est due à une erreur dans la fonction d'analyse des\n    exécutables compressés à l'aide de l'utilitaire UPX (Ultimate Packer\n    for eXecutables).\n-   la deuxième vulnérabilité est due à une erreur dans la fonction\n    d'analyse des exécutables compressés à l'aide de l'utilitaire FSG .\n\nCes deux vulnérabilités permettent à un utilisateur distant mal\nintentionné de provoquer un déni de service ou, potentiellement,\nd'exécuter du code arbitraire par le biais d'un exécutable\nmalicieusement construit avec UPX ou FSG.\n\n## Solution\n\nMettre à jour le logiciel en passant à la version 0.87 disponible à\nl'adresse suivante :\n\n    http://sourceforge.net/project/showfiles.php?group_id=86638&release_id=356974\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:166 du 20    septembre 2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:166"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour clamav et clamav-devel du    24 septembre 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-clamav.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200509-13 du 19 septembre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200509-13.xml"
+    },
+    {
+      "title": "Site Internet de ClamAV :",
+      "url": "http://www.clamav.net"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour clamav et clamav-devel du    24 septembre 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-clamav-devel.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-824 du 29 septembre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-824"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SA:2005:055 du 26 septembre    2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_55_clamav.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-348",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-09-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva MDKSA-2005:166 et aux références CVE CAN-2005-2919 et CAN-2005-2920.",
+      "revision_date": "2005-09-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité FreeBSD et SUSE.",
+      "revision_date": "2005-09-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence aux bulletin de sécurité Debian.",
+      "revision_date": "2005-09-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Exécution potentielle de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans ClamAV permettent à un utilisateur distant mal\nintentionné de provoquer un déni de service ou, potentiellement,\nd'exécuter du code arbitraire.\n",
+  "title": "Multiples vulnérabilités dans ClamAV",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour ClamAV du 16 septembre 2005",
+      "url": "http://sourceforge.net/project/showfiles.php?release_id=356974"
+    }
+  ]
+}

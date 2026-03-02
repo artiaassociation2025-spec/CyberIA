@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Me ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 98 avec le service Pack Plus ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes versions affectées de Windows disposent d'un utilitaire permettant\nde compresser les répertoires au format zip afin de bénéficier de plus\nd'espace disque.\n\nCet utilitaire permet également d'employer ces répertoires compressés de\nmanière transparente pour l'utilisateur.\n\nDeux vulnérabilités ont été découvertes dans cet utilitaire.\n\nUne mauvaise interprétation des noms de fichiers longs par l'utilitaire\nde décompression permet à un utilisateur mal intentionné d'exécuter du\ncode arbitraire ou d'effectuer un déni de service de l'explorateur au\nmoyen d'un dossier compressé judicieusement composé.\n\nLa seconde vulnérabilité permet de forcer la décompression des fichiers\ndans un emplacement spécifique, par exemple Dossier Démarrage, dans le\nbut de faire exécuter ultérieurement ces fichiers.\n\nCes deux vulnérabilités ne peuvent être exploitées à distance.\nCependant, il est possible de proposer un dossier dangereux à un\nutilisateur soit par le biais d'une page Web le proposant en\ntéléchargement, soit par envoi de mél.\n\n## Solution\n\nAppliquer le correctif disponible en téléchargement sur le site de\nMicrosoft (consulter la section documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-054.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-219",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans l'utilitaire de décompression des\ndossiers sous Windows permettent d'exécuter du code arbitraire ou\nd'entraîner un déni de service sur la machine cible.\n",
+  "title": "Vulnérabilités dans les fonctions de décompression des dossiers sous Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS02-054",
+      "url": null
+    }
+  ]
+}

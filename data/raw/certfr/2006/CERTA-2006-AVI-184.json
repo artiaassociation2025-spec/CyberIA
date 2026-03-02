@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions 6.4 et 6.5 d'AWStats.</P>",
+  "content": "## Description\n\nAWStats est un outil d'analyse statistique pour site web. Les versions\n6.4 et 6.5 présentent une vulnérabilité de la mise à jour des valeurs\nstatistiques lançée à partir de la page web. La valeur d'entrée du\nparamètre migrate n'est pas suffisamment contrôlée. Un utilisateur peut\nalors envoyer une requête particulière qui ne sera pas correctement\ninterprétée par la fonction Perl open(), afin d'injecter et d'exécuter\ndes commandes à distance. Celles-ci seront lancées avec les mêmes\nprivilèges que le processus associé à l'interface CGI d'AWStats. Il faut\nnoter que cette méthode est possible si l'option\nAllowToUpdateStatsFromBrowser est activée dans le fichier de\nconfiguration d'AWStats. Ce n'est pas le cas par défaut.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2237",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2237"
+    }
+  ],
+  "links": [
+    {
+      "title": "Mise à jour de l'outil AWStats :",
+      "url": "http://awstats.sourceforge.net"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1058 du 18 mai 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1058"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD du 05 mai 2006 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-awstats.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200606-06 du 07 juin 2006    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200606-06.xml"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-184",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité FreeBSD, Debian et de la référence CVE.",
+      "revision_date": "2006-05-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2006-06-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité existe dans les versions 6.4 et 6.5 d'AWStats. Elle\npermet à une personne malveillante d'envoyer une requête particulière\nconduisant à l'exécution de code arbitraire à distance.\n",
+  "title": "Vulnérabilité de AWStats",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour de AWStats",
+      "url": null
+    }
+  ]
+}

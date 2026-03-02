@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Apple iTunes versions antérieures à  9.1.</p>",
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans iTunes :\n\n-   plusieurs erreurs dans les modules ColorSync et ImageIO peuvent\n    conduire à une fuite de données ou de l'exécution de code\n    arbitraire, notamment par le biais d'images spécialement conçues ;\n-   un fichier MP4 importé spécialement conçu entraîne la création d'une\n    boucle infinie dans iTunes, provoquant ainsi un déni de service à\n    distance ;\n-   une erreur dans le paquet d'installation d'iTunes pour Windows peut\n    provoquer une élévation de privilèges.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0043",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0043"
+    },
+    {
+      "name": "CVE-2010-0042",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0042"
+    },
+    {
+      "name": "CVE-2010-0041",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0041"
+    },
+    {
+      "name": "CVE-2010-0040",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0040"
+    },
+    {
+      "name": "CVE-2009-2285",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2285"
+    },
+    {
+      "name": "CVE-2010-0531",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0531"
+    },
+    {
+      "name": "CVE-2010-0532",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0532"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-147",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-03-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités découvertes dans iTunes peuvent être exploitées\npar un utilisateur malintentionné afin de compromettre le système ou\nd'entraver son bon fonctionnement.\n",
+  "title": "Multiples vulnérabilités dans Apple iTunes",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apple HT4105 du 30 mars 2010",
+      "url": "http://support.apple.com/kb/HT4105"
+    }
+  ]
+}

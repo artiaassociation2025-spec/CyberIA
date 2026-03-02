@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Adobe Flash Player versions 10.0.42.34 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Adobe AIR versions 1.5.3.1920 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans différentes versions\ndes produits Adobe Flash Player et Adobe Air. Ces vulnérabilités\npermettent un contournement de la sandbox, ainsi que l'exécution non\nautorisée de requêtes (violation du same origin policy).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0186",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0186"
+    },
+    {
+      "name": "CVE-2010-0187",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0187"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Adobe APSB10-06 du 11 février 2010 :",
+      "url": "http://www.adobe.com/support/security/bulletins/apsb10-06.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-078",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-02-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans les produits Adobe Flash Player et Adobe\nAir permettent, entre autre, le contournement de la politique de\nsécurité.\n",
+  "title": "Multiples vulnérabilités dans Adobe Flash Player et Adobe Air",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Adobe apsb10-06 du 11 février 2010",
+      "url": null
+    }
+  ]
+}

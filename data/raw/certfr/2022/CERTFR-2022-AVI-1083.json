@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Xen versions 4.14.x à 6.1-rc sans le correctif de sécurité xsa423-linux.patch",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen versions 6.0.x à 6.1-rc sans le correctif de sécurité xsa424-linux.patch",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-42329",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-42329"
+    },
+    {
+      "name": "CVE-2022-3643",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-3643"
+    },
+    {
+      "name": "CVE-2022-42328",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-42328"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-1083",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-12-08T00:00:00.000000"
+    },
+    {
+      "description": "Correction des systèmes affectés",
+      "revision_date": "2023-01-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Xen. Elles\npermettent à un attaquant de provoquer un déni de service à distance et\nun contournement de la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans Xen",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Xen du 06 décembre 2022",
+      "url": "https://xenbits.xen.org/xsa/advisory-424.html"
+    }
+  ]
+}

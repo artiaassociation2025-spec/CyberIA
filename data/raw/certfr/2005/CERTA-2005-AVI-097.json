@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>UW-Imap</TT> versions antérieures à  la version imap-2004b.",
+  "content": "## Description\n\nUW-Imap est le serveur de messagerie IMAP (Internet Message Access\nProtocol) créé par l'université de Washington.\n\nUne vulnérabilité est présente dans le mécanisme d'authentification\nCRAM-MD5  \n(Challenge-Response Authentication Mechanism with MD5). Cette\nvulnérabilité permet à un utilisateur mal intentionné d'accéder à la\nboîte aux lettres d'un utilisateur sans être authentifié.\n\n## Solution\n\nSe référer au bulletin de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. Documentation).  \n  \nLa version imap-2004b est disponible à l'adresse ci-dessous :\n\n    ftp://ftp.cac.washington.edu/mail/imap.tar.Z\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD imap-uw :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/mail/imap-uw/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité de SUSE du 01 mars 2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_12_imap.html"
+    },
+    {
+      "title": "Site Internet du serveur UW-Imap :",
+      "url": "http://www.washington.edu/imap/"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200502-02 du 02 février    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200502-02.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2005:128 du 23 février    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-128.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2005:026 du 01 février    2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:026"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD \"imap-uw - authentification    bypass when CRAM-MD5 is enabled\" du 03 juin 2005 :",
+      "url": "http://www.vuxml.org/freebsd"
+    },
+    {
+      "title": "Bulletin de sécurité VU#702777 de l'US-CERT du 27 janvier    2005 :",
+      "url": "http://www.kb.cert.org/vuls/id/702777"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-097",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-03-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité NetBSD.",
+      "revision_date": "2005-03-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo, Mandrake, Red Hat, FreeBSD.",
+      "revision_date": "2005-06-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de l'authentification"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans UW-Imap permet à un utilisateur mal\nintentionné d'accéder à la boîte aux lettres d'un utilisateur sans être\nauthentifié.\n",
+  "title": "Vulnérabilité dans UW-imapd",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de securité VU#702777 de l'US-CERT",
+      "url": null
+    }
+  ]
+}

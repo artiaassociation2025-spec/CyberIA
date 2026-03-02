@@ -1,0 +1,94 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Squid version 2.5.STABLE10 et versions  antérieures.</p>",
+  "content": "## Description\n\nSquid est un logiciel sous licence libre servant de Proxy cache. Deux\nvulnérabilités ont été découvertes dans ce logiciel.\n\n  \nLa première vulnérabilité est due à une erreur présente dans la fonction\nsslConnectTimeout(). Cette fonction ne gère pas correctement certaines\nrequêtes malformées.\n\nLa seconde vulnérabilité est due à une erreur présente dans la fonction\nstoreBuffer(). Là aussi, cette fonction peut être exploitée par le biais\nd'une requête malformée.\n\n  \nL'exploitation d'une de ces deux vulnérabilités peut entraîner un déni\nde service.\n\n## Solution\n\nAppliquer les correctifs respectifs. Ces correctifs peuvent être fournis\npar la distribution utilisée (cf. Documentation), ou directement sur le\nsite de l'éditeur :\n\n-   Correctif de la fonction sslConnectTimeout() :\n\n        http://www.squid-cache.org/Versions/v2/2.5/bugs/squid-2.5.STABLE10-sslConnectTimeout.patch\n\n-   Correctif de la fonction storeBuffer() :\n\n        http://www.squid-cache.org/Versions/v2/2.5/bugs/squid-2.5.STABLE10-STORE_PENDING.patch\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de mises à jour Squid :",
+      "url": "http://www.squid-cache.org/Versions/v2/2.5/bugs/"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:766 du 15 septembre    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-766.html"
+    },
+    {
+      "title": "Mises à jour Fedora :       Fedora Core 3 :          \n  Fedora Core 4 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/4"
+    },
+    {
+      "title": "Bulletin de sécurité Suse :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2005-Sep/0012.html"
+    },
+    {
+      "title": "Fedora Core 3 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/3"
+    },
+    {
+      "title": "Mises à jour Fedora :       Fedora Core 3 :          \n  Fedora Core 4 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/3"
+    },
+    {
+      "title": "Fedora Core 4 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/4"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD :",
+      "url": "http://www.vuxml.org/freebsd/pkg-squid.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:162 du 12    septembre 2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:162"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-809 du 13 septembre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-809"
+    },
+    {
+      "title": "Site de l'éditeur :",
+      "url": "http://www.squid-cache.org"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200509-06 du 07 septembre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200509-06.xml"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-337",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-09-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence Gentoo.",
+      "revision_date": "2005-09-09T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références Mandriva, Debian et CVE.",
+      "revision_date": "2005-09-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat.",
+      "revision_date": "2005-09-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Suse.",
+      "revision_date": "2005-10-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités pouvant provoquer un déni de service ont été\ndécouvertes dans Squid.\n",
+  "title": "Multiples vulnérabilités dans Squid",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Squid",
+      "url": null
+    }
+  ]
+}

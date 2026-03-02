@@ -1,0 +1,104 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache Tomcat 5 versions antérieures à 5.5.32 ;",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat 7 versions antérieures à 7.0.8.",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat 6 versions antérieures à 6.0.32 ;",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été corrigées sur les serveurs Apache\nTomcat. Elles peuvent notament être exploitées par des utilisateurs\nlocaux pour contourner la politique de sécurité, et par des attaquants\ndistants pour réaliser un déni de service ou une injection de code\nindirecte.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-4476",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4476"
+    },
+    {
+      "name": "CVE-2011-0534",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0534"
+    },
+    {
+      "name": "CVE-2011-0013",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0013"
+    },
+    {
+      "name": "CVE-2010-3718",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3718"
+    }
+  ],
+  "links": [
+    {
+      "title": "Liste des vulnérabilités affectant Apache Tomcat 6 :",
+      "url": "http://tomcat.apache.org/security-6.html"
+    },
+    {
+      "title": "Liste des vulnérabilités affectant Apache Tomcat 7 :",
+      "url": "http://tomcat.apache.org/security-7.html"
+    },
+    {
+      "title": "Liste des vulnérabilités affectant Apache Tomcat 5 :",
+      "url": "http://tomcat.apache.org/security-5.html"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg21507512 du 29 juillet 2011 :",
+      "url": "http://www-01.ibm.com/support/docview.wws?uid=swg21507512"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-081",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-02-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin IBM.",
+      "revision_date": "2011-08-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été corrigées sur les serveurs Apache\nTomcat versions 5, 6 et 7.\n",
+  "title": "Multiples vulnérabilités dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Listes des vulnérabilités affectant Apache Tomcat 5, 6 et 7",
+      "url": null
+    }
+  ]
+}

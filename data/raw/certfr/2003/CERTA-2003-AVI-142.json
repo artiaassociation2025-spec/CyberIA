@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Routeurs Netgear RP614, RP614v2, DG814, MR814 et HR314.</P>",
+  "content": "## Description\n\nLes routeurs Netgear font appel au protocole SNTP (Simple Network Time\nProtocol) afin de se synchroniser avec des serveurs NTP publics. Les\ndatagrammes UDP ainsi émis ont pour caractéristique d'utiliser le port\nsource 23457. La cadence d'interrogation du client SNTP est trop élevée\n(une requête par seconde jusqu'à obtention d'une réponse), ce qui\nentraîne un déni de service pour les serveurs NTP publics ainsi que du\ntrafic inutile sur le réseau.\n\n## Solution\n\nAppliquer le correctif de Netgear :\n\n    http://kbserver.netgear.com/kb_web_files/n101176.asp\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-142",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-08-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Participation à un déni de service"
+    }
+  ],
+  "summary": "Un défaut dans le client SNTP intégré aux routeurs Netgear est à la\nsource d'un déni de service à l'encontre de certains serveurs NTP\npublics.\n",
+  "title": "Défaut du client SNTP des routeurs Netgear",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport technique de l'université du Wisconsin",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de Netgear",
+      "url": "http://kbserver.netgear.com/kb_web_files/n101176.asp"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>ProFTPD versions antérieures à 1.3.2b.</P>",
+  "content": "## Description\n\nUne vulnérabilité dans le traitement de certificats SSL par le module\nmod_tls de ProFTPD permet à une personne malintentionnée de contourner\nla politique de sécurité. Ceci peut être exploité par un client pour\nfalsifier un certificat SSL en incluant un caractère NULL dans le champ\nsubjectAltName du certificat.\n\n## Solution\n\nLa version 1.3.2b de ProFTPD corrige le problème.\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3639",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3639"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-456",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-10-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans ProFTPD permet à une personne malintentionnée de\ncontourner la politique de sécurité.\n",
+  "title": "Vulnérabilité dans ProFTPD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport de bogue ProFTPD #3275",
+      "url": "http://bugs.proftpd.org/show_bug.cgi?id=3275"
+    }
+  ]
+}

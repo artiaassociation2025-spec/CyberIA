@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tous les systèmes utilisant <TT>CDE  ToolTalk(rpc.ttdbserverd)</TT>.  <P>Une liste des systèmes vulnérables est publiée dans le  document VU#387387 du CERT/CC (cf. section documentation).</P></p>",
+  "content": "## Description\n\nCDE (Common Desktop Environment) est une interface graphique livrée sur\ndifférents systèmes UNIX. Cette interface utilise le service ToolTalk,\nbasé sur les RPC, pour la communication inter-applications.\n\n  \nUne vulnérabilité de type débordement de mémoire présente dans le\ntraitement des arguments passés à la procédure \\_TT_CREATE_FILE() permet\nà un utilisateur mal intentionné d'exécuter du code arbitraire, à\ndistance, avec les privilèges de l'administrateur système (root).\n\n## Contournement provisoire\n\n-   Désactiver le service rpc.ttdbserverd si ce service n'est pas\n    nécessaire ;\n-   filtrer les ports 111/tcp, 111/udp et le port utilisé par\n    rpc.ttdbserverd au niveau du garde-barrière afin d'empêcher\n    l'exploitation de la vulnérabilité depuis l'Internet.\n\n## Solution\n\nConsulter le site de l'éditeur pour connaître la disponibilité des\ncorrectifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis CA-2002-26 \"Buffer Overflow in CDE ToolTalk\" du    CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2002-26.html"
+    },
+    {
+      "title": "Note VU#387387 \"ToolTalk vulnerable to buffer overflow via    _TT_CREATE_FILE()\" :",
+      "url": "http://www.kb.cert.org/vuls/id/387387"
+    },
+    {
+      "title": "Bulletin Alert Notification #46366 \"Buffer Overflow in the    ToolTalk Library\" :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F46366&zone_32=category%3Asecurity"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-173",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-13T00:00:00.000000"
+    },
+    {
+      "description": "Ajout Bulletin Alert Notification #46366 de Sun.",
+      "revision_date": "2002-09-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans CDE ToolTalk(rpc.ttdbserverd) permet à\nun utilisateur mal intentionné d'exécuter du code arbitraire, à\ndistance, avec les privilèges de l'administrateur système (root).\n",
+  "title": "Vulnérabilité de ToolTalk",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2002-26 du CERT/CC",
+      "url": null
+    }
+  ]
+}

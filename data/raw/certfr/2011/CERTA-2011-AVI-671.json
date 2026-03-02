@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>JBoss AS 7.</p>",
+  "content": "## Description\n\nUne vulnérabilité dans l'interface d'administration de JBoss est due à\nun manque de filtrage d'entrées, dont le paramètre onerror. Cette\ninsuffisance est exploitable pour réaliser des injections de code\nindirectes à distance (XSS).\n\nUn défaut de restriction des accès par cette même console\nd'administration permet à un utilisateur malveillant d'injecter des\nrequêtes illégitimes par rebond (CSRF).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-3606",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3606"
+    },
+    {
+      "name": "CVE-2011-3609",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3609"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de suivi de bogues JBoss AS7-2400 du 01 décembre    2011 :",
+      "url": "https://issues.jboss.org/browse/AS7-2400"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-671",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-12-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités de JBoss permettent respectivement de l'injection de\ncode indirecte à distance et de l'injection de requêtes illégitimes par\nrebond.\n",
+  "title": "Vulnérabilités dans JBoss",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de suivi de bogues JBoss AS7-2400 du 01 décembre 2011",
+      "url": null
+    }
+  ]
+}

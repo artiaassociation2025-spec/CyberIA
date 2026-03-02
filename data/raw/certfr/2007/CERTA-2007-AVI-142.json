@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenAFS, pour les versions comprises entre 1.0 et 1.4.3 (version incluse) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenAFS, pour les versions 1.5.0 à 1.5.16 inclus.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le système de fichiers distribué\nOpenAFS. Ce dernier fonctionne en mode client-serveur, mais le\ngestionnaire de cache n'utiliserait pas de connexion authentifiée pour\nles utilisateurs (clients) qui chercheraient à le contacter. Une\npersonne malveillante pourrait donc accéder à certaines données dans le\ncache, voire élever ses privilèges en profitant du mode setuid utilisé\npar défaut par l'application.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-1507",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1507"
+    }
+  ],
+  "links": [
+    {
+      "title": "Page d'accueil du projet OpenAFS :",
+      "url": "http://www.openafs.org"
+    },
+    {
+      "title": "Avis de sécurité OpenAFS 2007-001 du 21 mars 2007 :",
+      "url": "http://www.openafs.org/pages/security/OPENAFS-SA-2007-001.txt"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-142",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-03-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités dans OpenAFS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité OpenAFS du 21 mars 2007",
+      "url": null
+    }
+  ]
+}

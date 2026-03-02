@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions de <TT>xterm</TT> antérieures à 238-1 sous  Debian.</P>",
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans l'émulateur de terminal standard\nxterm sous Debian. L'interprétation de certains noms de commande n'est\npas correctement effectuée dans une DECRQSS (Device Control Request\nStatus String). Cela permettrait à une personne malveillante distante\nd'exécuter des commandes arbitraires.\n\nCette vulnérabilité est à mettre en relation avec des corrections\napportées en 2003 et 2006 à l'application.\n\n## Solution\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2003-0063",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2003-0063"
+    },
+    {
+      "name": "CVE-2006-7236",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-7236"
+    },
+    {
+      "name": "CVE-2003-0071",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2003-0071"
+    },
+    {
+      "name": "CVE-2008-2383",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2383"
+    }
+  ],
+  "links": [
+    {
+      "title": "Rapport de bogue Debian 384593 du 25 août 2006 :",
+      "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=384593"
+    },
+    {
+      "title": "Avis CERTA-2003-AVI-067 du 28 mars 2003 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2003-AVI-067/"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-002",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-01-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans l'émulateur de terminal standard\nxterm sous Debian. Elle permet à une personne malveillante distante\nd'exécuter du code arbitraire sur le poste ayant une version vulnérable.\n",
+  "title": "Vulnérabilité dans xterm",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport de bogue Debian 510030",
+      "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=510030"
+    }
+  ]
+}

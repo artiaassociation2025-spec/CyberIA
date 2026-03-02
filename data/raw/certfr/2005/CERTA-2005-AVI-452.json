@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système <TT>Unix</TT> ou <TT>Windows</TT> utilisant un  client de messagerie :</P>  <UL>    <LI><TT>Sylpheed</TT> antérieur aux versions stables 2.0.4 ou    1.0.6 et de développement 2.1.6,</LI>    <LI><TT>Sylpheed-Claws</TT> en version antérieure à la    1.9.100.</LI>  </UL>",
+  "content": "## Description\n\nSylpheed et Sylpheed-Claws sont des clients de messagerie utilisant la\nboîte à outils graphique GTK+ et disponible sur Unix et Windows.\n\nLDIF est un format de fichier texte permettant l'échange et la\nsynchronisation de données entre serveurs d'annuaire LDAP. Ce format est\ndonc employé pour l'échange de carnets d'adresses par certains clients\nde messagerie (Thunderbird, Evolution, Messenger, Outlook, Kmail,...).\n\nDes erreurs dans le code de Sylpheed et Sylpheed-Claws induisent un\nrisque d'exécution de code.\n\n## Solution\n\nMettre à jour les versions source :\n\n-   Sylpheed versions stables 2.0.4 ou 1.0.6 au moins et version de\n    développement 2.1.6 au moins,\n-   Sylpheed-Claws version 1.9.100 au moins.\n\nOu se référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2005-3354",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-3354"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-906 du 22 novembre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-906"
+    },
+    {
+      "title": "Bulletin de sécurité Fedora Core 3 du 09 novembre 2005 :",
+      "url": "http://www.redhat.com/archives/fedora-announce-list/2005-November/msg00025.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-908 du 22 novembre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-908"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200511-13 du 15 novembre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200511-13.xml"
+    },
+    {
+      "title": "Site internet de Sylpheed-Claws :",
+      "url": "http://sylpheed-claws.sourceforge.net"
+    },
+    {
+      "title": "Site internet de Sylpheed :",
+      "url": "http://sylpheed.good-day.net/en/"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-452",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2005-11-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian DSA-906 et DSA-908.",
+      "revision_date": "2005-11-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance avec les privilèges de l'utilisateur courant"
+    }
+  ],
+  "summary": "L'importation d'un carnet d'adresse au format d'échange LDIF («\nLightweight Directory Interchange Format ») malicieusement construit,\nprésente un risque d'exécution de code arbitraire.\n",
+  "title": "Vulnérabilité des clients de messagerie Sylpheed et Sylpheed-Claws",
+  "vendor_advisories": []
+}

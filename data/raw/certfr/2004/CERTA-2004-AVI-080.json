@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Mozilla 1.4.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent Mozilla de la façon suivante :\n\n-   un site malicieux peut contourner les mécanismes d'authentification\n    d'un serveur mandataire ;\n-   une vulnérabilité présente dans les scripts\n    `Script.prototype.freeze` et `Script.thaw` permet à un utilisateur\n    mal intentionné d'exécuter du code arbitraire à distance ;\n-   NSS (Network Security Suite) est un ensemble de bibliothèques\n    offrant des fonctions de chiffrement au navigateur. Une\n    vulnérabilité présente dans la mise en œuvre de S/MIME permet à un\n    individu mal intentionné d'effectuer un déni de service ou bien\n    d'exécuter du code arbitraire à distance à l'aide d'un mél\n    malicieusement constitué ;\n-   une vulnérabilité dans le mécanisme de gestion des cookies permet à\n    un utilisateur mal intentionné de contourner les restrictions\n    spécifiées sur les chemins.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs :\n\n-   Avis MDKSA-2004:021 de Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:021\n\n-   Avis RHSA-2004:112 de Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2004-112.html\n\n-   Bulletin de sécurité HPSBTU01021 pour HP Tru64 UNIX :\n\n        http://www.itrc.hp.com\n\n-   Bulletin de sécurité HPSBUX01036 pour HP-UX :\n\n        http://www.itrc.hp.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis CERTA-2004-AVI-081 du CERTA :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2004-AVI-081/"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-080",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Red Hat.",
+      "revision_date": "2004-03-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de sécurité relatifs à HP Tru64 UNIX et HP-UX.",
+      "revision_date": "2004-05-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Accès non sollicité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans le navigateur Mozilla.\n",
+  "title": "Multiples vulnérabilités dans Mozilla",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis MDKSA-2004:021 de Mandrake",
+      "url": null
+    }
+  ]
+}

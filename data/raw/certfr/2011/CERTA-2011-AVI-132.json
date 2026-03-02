@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>syslog-ng Premium Edition 3.0.x, 3.2.x  et 4.0.x.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans syslog-ng Premium Edition :\n\n-   des débordements d'entiers dans la version utilisée de la\n    bibliothèque GLib permettent à un utilisateur malveillant d'exécuter\n    du code arbitraire à distance ;\n-   des erreurs dans la version utilisée de la bibliothèque OpenSSL\n    permettent à un utilisateur malveillant de contourner la politique\n    de sécurité.\n\n## Solution\n\nLes versions 3.0.7a, 3.2.1b et 4.0.1a de syslog-ng Premium Edition\ncorrigent ces problèmes.\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-7270",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-7270"
+    },
+    {
+      "name": "CVE-2009-3555",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3555"
+    },
+    {
+      "name": "CVE-2008-4316",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4316"
+    },
+    {
+      "name": "CVE-2010-4180",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4180"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-132",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-03-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans syslog-ng permettent à un utilisateur\nmalveillant d'exécuter du code arbitraire à distance ou de contourner la\npolitique de sécurité.\n",
+  "title": "Vulnérabilités dans syslog-ng",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonces des versions de syslog-ng du 24 février 2011",
+      "url": "https://lists.balabit.com/pipermail/syslog-ng-announce/2011-February/000111.html"
+    }
+  ]
+}

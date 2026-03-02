@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows 2000 Advanced Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 2000 Datacenter Server.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 2000 Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe service d'annuaire Active Directory permet d'utiliser des objets\nstratégie de groupe (appelé GPO pour Group Policy Object) afin de\ndéployer une stratégie de sécurité sur un domaine Windows 2000.\n\nPar défaut, ces stratégies de sécurité sont propagées toutes les 90\nminutes et un changement dans un objet de la stratégie n'est pris en\ncompte qu'après cette propagation.\n\nUn utilisateur mal intentionné peut verrouiller l'objet GPO nouvellement\nmodifié avant la propagation de la stratégie et empêcher l'application\nde ce changement.\n\nLe nouvel objet GPO ne sera dès lors pas pris en compte lorsqu'un\nutilisateur du groupe ouvrira une session sur le domaine.\n\nNota : Tous les anciens paramètres seront conservés.\n\n## Solution\n\nAppliquer le correctif de Microsoft disponible à l'adresse suivante :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=36844\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-071",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-04-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Suppression de règles de sécurité"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut empêcher les paramètres de sécurité\nde groupe d'être appliqués sur le système.\n",
+  "title": "Vulnérabilité de Windows 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS02-016 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-016.asp"
+    }
+  ]
+}

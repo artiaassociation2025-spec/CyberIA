@@ -1,0 +1,104 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les pilotes NVidia pour FreeBSD (architecture x86) versions 1.0-8774 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les pilotes NVidia pour GNU/Linux (architecture AMD64/EM64T) versions 1.0-8774 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les pilotes NVidia pour Sun Solaris 10 (architectures x86 et x64) versions 1.0-8774 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Les pilotes NVidia pour GNU/Linux (architecture IA-32) versions 1.0-8774 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nNVidia fournit pour un certain nombre d'Unix dont GNU/Linux et FreeBSD\ndes pilotes propriétaires, sous forme binaire uniquement, permettant\nd'utiliser les fonctions 3D des cartes graphiques basées sur les GPU\n(Graphic Processor Unit) NVidia. Une vulnérabilité de type débordement\nde mémoire présente dans ces pilotes permet à un utilisateur\nmalintentionné d'exécuter du code arbitraire à distance si le serveur X\n(Xorg ou XFree) utilisant les pilotes vulnérables accepte les connexions\ndistantes. Si ce n'est pas le cas, l'exploitation de la vulnérabilité ne\npeut se faire que localement.\n\n## Solution\n\nLa version 1.0-8776 corrige le problème :\n\n    http://www.nvidia.com/object/unix.html\n",
+  "cves": [
+    {
+      "name": "CVE-2006-5379",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5379"
+    }
+  ],
+  "links": [
+    {
+      "title": "Notes de révision des pilotes NVidia 1.0-8776 pour Unix du    19 octobre 2006 :",
+      "url": "http://www.nvidia.com/object/linux_display_amd64_1.0-8776.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-377-1 du 03 novembre 2006 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-377-1"
+    },
+    {
+      "title": "Notes de révision des pilotes NVidia 1.0-8776 pour Unix du    19 octobre 2006 :",
+      "url": "http://www.nvidia.com/object/solaris_display_1.0-8776.html"
+    },
+    {
+      "title": "Bulletin de sécurité Sun Solaris #102693 du 02 novembre    2006 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-102693-1"
+    },
+    {
+      "title": "Notes de révision des pilotes NVidia 1.0-8776 pour Unix du    19 octobre 2006 :",
+      "url": "http://www.nvidia.com/object/linux_display_ia32_1.0-8776.html"
+    },
+    {
+      "title": "Note de vulnérabilité de l'US-CERT VU#147252 du 17 octobre    2006 :",
+      "url": "http://www.kb.cert.org/vuls/id/147252"
+    },
+    {
+      "title": "Notes de révision des pilotes NVidia 1.0-8776 pour Unix du    19 octobre 2006 :",
+      "url": "http://www.nvidia.com/object/freebsd_1.0-8776.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-480",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans les pilotes propriétaires pour les cartes\ngraphiques NVidia permet à un utilisateur distant d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilité des drivers NVidia",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes de révision des pilotes NVidia 1.0-8776 pour Unix du 19 octobre 2006",
+      "url": null
+    }
+  ]
+}

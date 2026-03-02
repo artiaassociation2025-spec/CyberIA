@@ -1,0 +1,88 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ISC BIND 9 versions 9.8.0 à 9.8.3-P1 ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC BIND 9 versions 9.6-ESV-R1 à 9.6-ESV-R7-P1 ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC BIND 9 versions 9.9.0 à 9.9.1-P1.",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC BIND 9 versions 9.7.1 à 9.7.6-P1 ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-3817",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-3817"
+    },
+    {
+      "name": "CVE-2012-3868",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-3868"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité ISC AA-00729 du 24 juillet 2012 :",
+      "url": "https://kb.isc.org/article/AA-00729"
+    },
+    {
+      "title": "Bulletin de sécurité ISC AA-00730 du 24 juillet 2012 :",
+      "url": "https://kb.isc.org/article/AA-00730"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-405",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-07-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été corrigées dans ISC BIND 9. Elles\npeuvent être exploitées pour effectuer des attaques par déni de service\nà distance.\n\nLa première vulnérabilité (CVE-2012-3817) concerne les serveurs ayant la\nvalidation DNSSEC activée.\n\nLa seconde vulnérabilité (CVE-2012-3868) est due à une fuite mémoire\npouvant se produire lorsque le serveur est soumis à de nombreuses\nrequêtes TCP entrantes.\n",
+  "title": "Vulnérabilités dans ISC BIND",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité ISC AA-00729 et AA-00730 du 24 juillet 2012",
+      "url": null
+    }
+  ]
+}

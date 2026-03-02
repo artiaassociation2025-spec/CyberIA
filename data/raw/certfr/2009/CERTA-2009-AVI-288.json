@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>CDF versions 3.2.4 et antérieures.</p>",
+  "content": "## Description\n\nCommin Data Format (CDF) est un logiciel en sources ouvertes fourni par\nla NASA pour manipuler les fichiers au format homonyme. CDF peut être\nutilisé avec des logiciels comme MatLab pour des opérations\nparticulières.\n\nDeux vulnérabilités sont présentes dans le logiciel CDF. Elles sont\nrelatives à plusieurs fonctions comme ReadAEDRList64(),\nSearchForRecord_r\\_64(), LastRecord64() ou CDFsel64(). Ces failles\npermettent à un utilisateur distant de provoquer un déni de service ou\nd'exécuter du code arbitraire via un fichier CDF particulier.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nLa version 3.3 de CDF corrige le problème :\n\n<ftp://cdaweb.gsfc.nasa.gov/pub/cdf/dist/latest-release2>\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de CDF :",
+      "url": "http://cdf.gsfc.nasa.gov"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-288",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-07-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans le produit Common Data Format\n(CDF) permettent à un utilisateur distant de provoquer un déni de\nservice ou d'exécuter du code arbitraire.\n",
+  "title": "Multiples vulnérabilités de Common Data Format",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité sur CDF de la NASA",
+      "url": "http://cdf.gsfc.nasa.gov/html/CDF_v330.html"
+    }
+  ]
+}

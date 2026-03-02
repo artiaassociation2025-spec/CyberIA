@@ -1,0 +1,84 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft SQL Server 7.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft SQL 2000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Desktop Engine (MSDE) 2000.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Data Engine (MSDE) 1.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Un débordement de mémoire présent dans une partie du code de SQL\n    Server 2000 (et MSDE 2000) associé à l'authentification des\n    utilisateurs permet d'exécuter du code arbitraire dans le contexte\n    de sécurité du service SQL Server ou bien d'effectuer un déni de\n    service ;\n-   un débordement de mémoire présent dans l'une des Database Console\n    Commands (DBCCs) permet d'exécuter du code arbitraire avec le\n    contexte de sécurité du service SQL Server et de prendre le contrôle\n    des bases de données du serveur ;\n-   une vulnérabilité associée à la planification des tâches dans les\n    serveurs SQL 7.0 et 2000 permet à un utilisateur mal intentionné de\n    créer un fichier de commandes exécutable par un utilisateur lors du\n    démarrage de son profil ou bien de remplacer certains fichiers du\n    système afin d'en pertuber le fonctionnement.\n\n## Solution\n\nAppliquer le correctif cumulatif fourni par Microsoft (cf.\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité MS02-056 de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms02-056.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-220",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Prise de contrôle de la base SQL"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Trois nouvelles vulnérabilités ont été découvertes dans SQL Server.\n",
+  "title": "Multiples vulnérabilités dans MS-SQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de securite #MS02-056 de Microsoft",
+      "url": null
+    }
+  ]
+}

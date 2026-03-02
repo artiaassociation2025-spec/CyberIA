@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">MySQL</SPAN>, versions 4.x et 5.x.</P>",
+  "content": "## Description\n\nDans une base de données MySQL, la construction d'une table MyISAM\ncontenant certaines options permet d'écraser une table existante. Cette\nécrasement est utilisable pour contourner des vérifications de droits.\nCette exploitation de vulnérabilité permet à un utilisateur malveillant\nde contourner la politique de sécurité.\n\n## Solution\n\nLes versions 5.0.60 et 4.1.24 remédient à cette vulnérabilité. Se\nréférer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2079",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2079"
+    }
+  ],
+  "links": [
+    {
+      "title": "Notes de version du projet MySQL du 28 avril 2008 :",
+      "url": "http://dev.mysql.com/doc/refman/5.0/en/releasenotes-es-5-0-60.html"
+    },
+    {
+      "title": "Notes de version du projet MySQL du 28 avril 2008 :",
+      "url": "http://dev.mysql.com/doc/refman/4.1/en/news-4-1-24.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-237",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-05-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans <span class=\"textit\">MySQL</span> permet à un\nutilisateur malveillant de contourner la politique de sécurité.\n",
+  "title": "Vulnérabilité dans MySQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CVE-2008-2079",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2079"
+    }
+  ]
+}

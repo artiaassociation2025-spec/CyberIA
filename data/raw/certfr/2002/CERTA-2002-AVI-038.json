@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les commutateurs HP procurve 2524 (Produit J4813A) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Les anciennes versions des produits JetDirect (se référer au bulletin de sécurité HP pour connaître les versions vulnérables) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Network Node Manager (NNM) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP-UX 10.x 11.x avec snmpd ou HPOpenview.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes tests effectués par l'université finlandaise d'Oulu ont mis en\névidence la présence de vulnérabilités dans les routines de décodage et\nde traitement des messages SNMP dans de nombreuses implémentations (se\nréférer au bulletin d'alerte CERTA-2002-ALE-004 du CERTA).\n\nUn utilisateur mal intentionné peut utiliser une vulnérabilité de\nl'agent SNMP pour exécuter du code arbitraire avec les privilèges de\nl'administrateur root ou effectuer des dénis de services sur les\néquipements HP concernés.\n\nCette vulnérabilité, de type débordement de mémoire, est exploitable à\ndistance.\n\n## Contournement provisoire\n\n-   Filtrer le port 161/udp sur le garde-barrière de façon à éviter une\n    attaque provenant de lInternet.\n-   Pour les systèmes munis de NNM désactiver snmpd et snmpdm.\n\nNOTA : Dans son bulletin de sécurité, HP souligne le fait que supprimer\nsnmp peut entrainer des dysfonctionnements inattendus, entre autres, sur\nles systèmes EMS (Event Monitoring System) et MC/ServiceGuard\n(supervision des clusters).\n\n## Solution\n\nSe référer au bulletin de sécurité de HP (cf. section Documentation)\npour la disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le bulletin de sécurité HPSBUX0202-184 de HP disponible sur le  site :",
+      "url": "http://www.itrc.hp.com"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-038",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès non autorisé"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité des agents SNMP pour les équipements HP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité HPSBUX0202-184 de HP",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMware ESX Server 3.x ;",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESXi 3.x.",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été découverte dans la gestion des disques virtuels\nde VMware ESX Server et ESXi. Cette vulnérabilité est due à une mauvaise\ngestion du traitement de disques virtuels VMDK malformés.\n\nL'exploitation de cette vulnérabilité permet de réaliser un déni de\nservice à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). Après application des\ncorrectifs, il est nécessaire de redémarrer les machines virtuelles\nconcernées.\n",
+  "cves": [
+    {
+      "name": "CVE-2008-4914",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4914"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-043",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-02-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité permettant de réaliser un déni de service a été\ndécouverte dans la gestion des disques virtuels de VMware ESX Server et\nESXi.\n",
+  "title": "Vulnérabilité dans VMware ESX et ESXi",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware du 30 janvier 2009",
+      "url": "http://www.vmware.com/security/advisories/VMSA-2009-0001.html"
+    }
+  ]
+}

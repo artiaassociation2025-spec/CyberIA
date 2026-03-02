@@ -1,0 +1,89 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "3.1.x.",
+      "product": {
+        "name": "SpamAssassin",
+        "vendor": {
+          "name": "SpamAssassin",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "3.0.x;",
+      "product": {
+        "name": "SpamAssassin",
+        "vendor": {
+          "name": "SpamAssassin",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "2.6.x;",
+      "product": {
+        "name": "SpamAssassin",
+        "vendor": {
+          "name": "SpamAssassin",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "2.5.x;",
+      "product": {
+        "name": "SpamAssassin",
+        "vendor": {
+          "name": "SpamAssassin",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPour que la vulnérabilité soit mise en oeuvre il est nécessaire que les\ndirectives -vpopmail et -paranoid soit activées dans le fichier de\nconfiguration. Il est à noter qu'il ne s'agit pas de la configuration\npar défaut.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0543 du 06 juin 2006    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0543.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200606-09 du 11 juin 2006    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200606-09.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:103 du 14 juin    2006 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:103"
+    },
+    {
+      "title": "Nouvelle version de SpamAssassin",
+      "url": "http://spamassassin.apache.org/downloads.cgi?update=200606050750"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1090 du 06 juin 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1090"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-234",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-06-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian, RedHat, Gentoo et Mandriva.",
+      "revision_date": "2006-06-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité a été publiée dans le logiciel anti-spam SpamAssassin.\nElle permet l'éxécution de code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans SpamAssassin",
+  "vendor_advisories": []
+}

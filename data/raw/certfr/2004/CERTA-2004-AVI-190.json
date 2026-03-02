@@ -1,0 +1,106 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les versions de CVS égales ou antérieures à la version 1.12.8 (branche de développement) sont affectées.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Les versions de CVS égales ou antérieures à la version 1.11.16 (branche stable) sont affectées ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCVS (\\`\\`Concurrent Versions System'') est un système client/serveur\nutilisé pour la gestion des versions de fichiers essentiellement\ntextuels.\n\n  \n\nUn audit de code a révélé que de nombreuses vulnérabilités de type\ndébordement de mémoire sont présentes dans le code du serveur CVS.\n\nUn utilisateur mal intentionné peut utiliser ces vulnérabilités afin de\nréaliser un déni de service ou l'exécution de code arbitraire, à\ndistance, sur une plate-forme vulnérable.\n\n## Solution\n\nLes versions 1.11.17 ou 1.12.9 disponibles sur le site CVS (cf. section\nDocumentation) corrigent ces vulnérabilités.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RHSA-2004:233 de Red Hat du 09 juin    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-233.html"
+    },
+    {
+      "title": "Avis de sécurité DSA-519 de Debian du 15 juin 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-519"
+    },
+    {
+      "title": "Bulletin de sécurité MDKSA-2004:058 de Mandrake du 09 juin    2004 :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:058"
+    },
+    {
+      "title": "Avis de sécurité GLSA-200406-06 de Gentoo du 10 juin 2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200406-06.xml"
+    },
+    {
+      "title": "site Internet de CVS :",
+      "url": "http://www.cvshome.org"
+    },
+    {
+      "title": "Avis de sécurité DSA-517 de Debian du 10 juin 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-517"
+    },
+    {
+      "title": "Avis de sécurité OpenBSD pour CVS du 09 juin 2004 :",
+      "url": "http://www.openbsd.org/errata.html"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD cvs :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/devel/cvs/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE-SA:2004:015 de SuSE du 09 juin    2004 :",
+      "url": "http://www.suse.com/de/security/2004_15_cvs.html"
+    },
+    {
+      "title": "Avis de sécurité d'eMatters :",
+      "url": "http://security.e-matters.de/advisories/092004.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-190",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-06-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de Debian et Gentoo.",
+      "revision_date": "2004-06-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence à la mise à jour de NetBSD.",
+      "revision_date": "2004-06-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian.",
+      "revision_date": "2004-06-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités de CVS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité \"More CVS remote vulnerabilities\" d'e-matters",
+      "url": null
+    }
+  ]
+}

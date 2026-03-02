@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de qpopper de la  série 4.0.x antérieures à la version 4.0.4-9. Pour Debian 3.0  (woody), toutes les versions de qpopper de la série 4.0.x  antérieures à la version 4.0.4-2.woody.3.</p>",
+  "content": "## Description\n\nqpopper est un serveur POP3 (Post Office Protocol) développé par\nQualcomm. Une vulnérabilité dans la fonction Qvsnprintf() permet à un\nutilisateur possédant un compte sur la machine d'obtenir un shell ou\nd'exécuter du code à distance avec les privilèges de l'utilisateur mail.\n\n## Solution\n\nPour la Debian 3.0 (woody), mettre à jour qpopper en version\n4.0.4-2.woody.3. Sinon, mettre à jour qpopper en version 4.0.4-9.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site internet de qpopper :",
+      "url": "http://www.eudora.com/qpopper/"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE-SA:2003:018 de SuSE :",
+      "url": "http://www.suse.com/de/security/2003_018_qpopper.html"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-042",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-13T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence au bulletin de SuSE. Ajout référence CVE.",
+      "revision_date": "2003-03-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans qpopper permet à un utilisateur possédant un\ncompte sur la machine d'augmenter ses privilèges, d'obtenir un shell ou\nd'exécuter du code à distance avec les privilèges de l'utilisateur mail.\n",
+  "title": "Vulnérabilité de qpopper",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Debian DSA-259-1",
+      "url": "http://www.debian.org/security/"
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Safari versions antérieures à 3.1.1.</P>",
+  "content": "## Description\n\nQuatre vulnérabilités ont été identifiées dans le navigateur Safari :\n\n-   le contenu de la barre d'adresses d'une victime peut être changé\n    sans que la page correspondante soit chargée (CVE-2007-2398) ;\n-   une erreur de corruption de mémoire pourrait permettre à une\n    personne malintentionnée distante d'exécuter du code arbitraire en\n    incitant une victime à télécharger un fichier ayant un nom\n    spécialement construit (CVE-2008-1024) ;\n-   un mauvais traitement de certaines URL par Webkit permet à une\n    personne malintentionnée d'effectuer des attaques de type injection\n    de code indirecte (cross-site scripting) (CVE-2008-1025) ;\n-   un débordement de mémoire dans le traitement d'expressions\n    régulières en Javascript par Webkit peut permettre à une personne\n    malintentionnée d'exécuter du code arbitraire à distance\n    (CVE-2008-1026).\n\nLes deux premières vulnérabilités affectent Safari sur Microsoft Windows\nuniquement. Les deux suivantes affectent également Safari sur Mac OSX.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1024",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1024"
+    },
+    {
+      "name": "CVE-2008-1026",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1026"
+    },
+    {
+      "name": "CVE-2007-2398",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2398"
+    },
+    {
+      "name": "CVE-2008-1025",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1025"
+    }
+  ],
+  "links": [
+    {
+      "title": "Article HT1467 de la base de connaissances d'Apple :",
+      "url": "http://support.apple.com/kb/HT1467"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-211",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-04-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités sur <span class=\"textit\">Safari</span>\npermettent à une personne malintentionnée distante d'exécuter du code\narbitraire, d'effectuer un déni de service, de contourner la politique\nde sécurité ou d'effectuer une injection de code indirecte.\n",
+  "title": "Multiples vulnérabilités dans Apple Safari",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Article de la base de connaissances Apple HT1467",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>La version 2.0.13.2 de Xoops, ainsi que celles  antérieures.</P>",
+  "content": "## Description\n\nXoops est un système dynamique de gestion de contenu écrit en PHP, et\npouvant servir au développement de sites Internet. Une vulnérabilité\nconcernant la version 2.0.13.2 et celles antérieures peut permettre à un\nutilisateur malveillant de contourner la politique de sécurité. Plus\nprécisément, Ces versions ne vérifient pas correctement les valeurs\nattribuées au paramètre xoopsConfig. Il est alors possible :\n\n1.  de récupérer des fichiers locaux à la machine où Xoops fonctionne en\n    envoyant une requête particulière ;\n2.  d'injecter du code PHP dans certains fichiers journaux d'Apache ou\n    dans des images avatars (images associées aux noms d'utilisateurs).\n\nCes deux actions sont possibles si le serveur Xoops est configuré avec\nl'option register_globals.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité du projet Xoops du 23 mai 2006 :",
+      "url": "http://www.frxoops.org/modules/news/article.php?storyid=1007"
+    },
+    {
+      "title": "Site du projet Xoops :",
+      "url": "http://www.frxoops.org"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-213",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans Xoops. Des utilisateurs\nmalveillants distants peuvent l'utiliser pour accéder à des informations\nsur le système où Xoops fonctionne, ou injecter dans certaines\nconditions du code PHP.\n",
+  "title": "Vulnérabilité dans Xoops",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Correctif de sécurité du projet Xoops",
+      "url": null
+    }
+  ]
+}

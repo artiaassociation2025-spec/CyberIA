@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Bibliothèque Qt versions 3.x  antérieures à la version 3.3.3.</p>",
+  "content": "## Description\n\nUn débordement de mémoire est présent sur la fonction read_dib()\nutilisée pour le traitement des fichiers BMP compressés au format RLE 8\nbits.\n\nUn utilisateur mal intentionné peut, par le biais d'une image au format\nBMP, exploiter cette vulnérabilité et réaliser un déni de service de\nl'application qui utilise cette bibliothèque partagée ou exécuter du\ncode arbitraire sur le système.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-542 du 30 août 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-542"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200408-20 du 22 août 2004    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200408-20.xml"
+    },
+    {
+      "title": "Bulletin de sécurité de Chris Evans CESA-2004-004 :",
+      "url": "http://scary.beasts.org/security/CESA-2004-004.txt"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD qt3-libs :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/x11/qt3-libs/README.html"
+    },
+    {
+      "title": "Liste des changements de Qt version 3.3.3 :",
+      "url": "http://www.trolltech.com/developer/changes/changes-3.3.3.html"
+    },
+    {
+      "title": "Bulletin de sécurité Redhat RHSA-2004:414 du 20 août 2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-414.html"
+    },
+    {
+      "title": "Bulletin de sécurité Suse du 19 août 2004 :",
+      "url": "http://www.suse.de/de/security/2004_27_qt3.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour qt du 22 août 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-275",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-08-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité de Chris Evans, FreeBSD et NetBSD ainsi que la liste des changements dans Qt 3.3.3.",
+      "revision_date": "2004-08-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de Debian.",
+      "revision_date": "2004-09-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans la bibliothèque Qt permet à un\nutilisateur mal intentionné d'exécuter du code arbitraire ou de réaliser\nun déni de service.\n",
+  "title": "Vulnérabilité dans la bibliothèque Qt",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Mandrake",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:085"
+    }
+  ]
+}

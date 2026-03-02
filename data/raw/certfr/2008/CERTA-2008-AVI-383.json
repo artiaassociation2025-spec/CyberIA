@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<SPAN class=\"textit\">phpMyAdmin</SPAN>,  versions antérieures à la version 2.11.8.",
+  "content": "## Description\n\nUne première vulnérabilité réside dans un manque de vérification lors\ndes requêtes HTTP. Le détournement par un utilisateur malveillant d'une\nrequête d'un utilisateur authentifié peut conduire à la création d'une\nbase de données ou à la modification du jeu de caractères à l'insu de ce\ndernier.\n\nUne deuxième vulnérabilité permet à un utilisateur malveillant de\nréaliser de l'injection de code indirecte (cross site scripting).\n\n## Solution\n\nLa version 2.11.8 ne présente pas ces vulnérabilités. Se référer au\nbulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf.\nsection Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3197",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3197"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site de téléchargement du projet phpMyAdmin :",
+      "url": "http://www.phpMyAdmin.net"
+    },
+    {
+      "title": "Bulletins de sécurité du projet phpMyAdmin :",
+      "url": "http://www.phpMyAdmin.net/home_page/security.php?issue=PMASA-2008-5"
+    },
+    {
+      "title": "Bulletins de sécurité du projet phpMyAdmin :",
+      "url": "http://www.phpMyAdmin.net/home_page/security.php?issue=PMASA-2008-6"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-383",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-08-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de <span class=\"textit\">phpMyAdmin</span>\npermettent à un utilisateur malveillant de réaliser de l'injection de\ncode indirecte ou de porter atteinte à l'intégrité des données.\n",
+  "title": "Vulnérabilités de phpMyAdmin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins PMASA-2008-5 et PMASA-2008-6",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>glibc</TT> est l'implémentation GNU  de la bibliothèque standard C.  <P>Cette bibliothèque est livrée avec les distributions linux  mais peut être présente sur d'autres systèmes.</P>",
+  "content": "## Description\n\nLa fonction glob de la bibliothèque glibc est utilisée par certaines\napplications pour réaliser des recherches sur des noms de fichiers en\nfonction d'une chaîne de caractères spécifiée en paramètre.\n\nUne vulnérabilité présente dans la fonction glob permet à un utilisateur\nmal intentionné de réaliser une élévation de privilèges au moyen d'un\ndébordement mémoire.\n\nCette vulnérabilité n'est toutefois exploitable que par le biais de\nprogrammes utilisant cette fonction.\n\n## Solution\n\nIl est conseillé d'appliquer les correctifs des différents éditeurs\n(consultez la section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité SuSE-SA:2001:046 :",
+      "url": "http://www.suse.com/de/support/security/2001_046_glibc_txt.txt"
+    },
+    {
+      "title": "Avis de sécurité RHSA-2001:160 :",
+      "url": "http://www.redhat.com/support/errata/RHSA-2001-160.html"
+    },
+    {
+      "title": "Avis de sécurité dsa-103-1 :",
+      "url": "http://www.debian.org/security/2002/dsa-103"
+    },
+    {
+      "title": "Avis de sécurité MDKSA-2001:095 :",
+      "url": "http://www.mandrakesecure.net/en/advisories/2001/MDKSA-2001-095.php3"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-001",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-01-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence à l'avis debian.",
+      "revision_date": "2002-01-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans la fonction glob de la bibliothèque\nglibc permet à un utilisateur mal intentionné de réaliser un débordement\nmémoire par le biais d'applications utilisant cette fonction.\n",
+  "title": "Vulnérabilité dans glibc sous linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de RedHat RHSA-2001:160-09",
+      "url": null
+    }
+  ]
+}

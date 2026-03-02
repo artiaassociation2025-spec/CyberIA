@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft SQL Server 7.0 et 2000.</P>",
+  "content": "## Description\n\nDe nombreuses vulnérabilités de MSSQL Server permettent à un utilisateur\nmal intentionné de prendre le contrôle de la base de données, ou du\nsystème.\n\n-   Un débordement de mémoire dans la procédure de chiffrement des\n    données d'authentification de MSSQL Server 2000 permet à un\n    utilisateur mal intentionné d'obtenir le contrôle de la base de\n    données, voire du serveur dans son ensemble selon la configuration\n    du compte d'administration (sa).\n-   Un autre débordement de mémoire dans la procédure d'insertion de\n    données dans les tables SQL sous MSSQL Server 2000 permet à un\n    utilisateur mal intentionné de prendre le contrôle de la base de\n    données voire du serveur dans son intégralité.\n-   Une mauvaise configuration des permissions sur les clés de la base\n    de registre concernant le compte d'administration (sa) de MSQL\n    Server 2000 permet à un utilisateur mal intentionné d'obtenir des\n    privilèges plus élevés que ceux qui lui ont été attribués par\n    l'administrateur. Il peut obtenir les privilèges du système\n    d'exploitation lui-même.\n-   Lors de l'installation de MSSQL Server 7.0 ou MSDE 1.0 (Microsoft\n    Data Engine) ou de MSSQL Server 2000 certaines informations\n    concernant le compte de l'administrateur de serveur (sa), dont son\n    mot de passe, sont stockées (parfois en clair) dans un fichier\n    temporaire situé dans un répertoire accessible à n'importe quel\n    utilisateur. Ce fichier n'est pas supprimé après l'installation.\n-   Toujours lors de l'installation de MSSQL Server 7.0 ou MSDE 1.0\n    (Microsoft Data Engine) ou de MSSQL Server 2000, un fichier journal\n    est créé et contient lui aussi les mots de passe entrés dans le\n    fichier de configuration.\n\nNota : Dans la plupart des cas, pour exploiter ces vulnérabilités, il\nfaut pouvoir se connecter à la machine en local. Il n'est pas recommandé\nde laisser des utilisateurs, même sans privilège, se connecter\nlocalement sur un serveur.\n\n## Solution\n\nConsulter les deux bulletins de sécurité Microsoft (voir paragraphe\ndocumentation) pour connaitre la disponibilité des différents correctifs\nselon les version et les vulnérabilités de MSSQL Server.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-145",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-07-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs débordements de mémoire permettent à un utilisateur mal\nintentionné de prendre le contrôle de la base de données SQL ou du\nsystème.\n\nIl est aussi possible d'obtenir des privilèges élevés au moyen d'une clé\nde la base de registre.\n\nEnfin, il est possible de retrouver le mot de passe de l'administrateur\ndu serveur (compte sa) pendant et après une installation ou une mise à\njour de MSSQL. Dans certains cas le compte sa peut être le compte de\nl'administrateur du domaine.\n",
+  "title": "Multiples vulnérabilités dans Microsoft SQL Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS02-035 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms02-035.asp"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS02-034 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms02-034.asp"
+    }
+  ]
+}

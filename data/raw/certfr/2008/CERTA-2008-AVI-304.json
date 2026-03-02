@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Internet Explorer 5.01 ;</LI>    <LI>Internet Explorer 6 ;</LI>    <LI>Internet Explorer 6 Service Pack 1 ;</LI>    <LI>Internet Explorer 7.</LI>  </UL>  <P>Tous les systèmes d'exploitation Windows utilisant ces  versions du navigateur sont potentiellement affectés.</P>",
+  "content": "## Description\n\nDes vulnérabilités ont été identifiées dans le navigateur Microsoft\nInternet Explorer :\n\n-   le navigateur ne manipulerait pas correctement des appels de méthode\n    pour des objets HTML, en particulier substringData() appliqué à des\n    objets DOM spécialement construits ;\n-   le navigateur n'interprète pas correctement certains en-têtes de\n    requêtes HTTP permettant à une personne distante de contourner la\n    politique de sécurité du navigateur (same origin policy) via une\n    page Web spécialement construite.\n\n## Solution\n\nSe référer au bulletin de sécurité MS08-031 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1544",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1544"
+    },
+    {
+      "name": "CVE-2008-1442",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1442"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité ZDI-08-039 du 10 juin 2008 :",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-08-039"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-304",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-06-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Des vulnérabilités ont été identifiées dans le navigateur Microsoft\nInternet Explorer. L'exploitation de celles-ci peuvent conduire une\npersonne malveillante distante à récupérer des informations auxquelles\nelle ne devrait pas avoir accès ou à exécuter du code arbitraire sur le\nsystème vulnérable.\n",
+  "title": "Vulnérabilités dans Microsoft Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS08-031 du 10 juin 2008",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-031.mspx"
+    }
+  ]
+}

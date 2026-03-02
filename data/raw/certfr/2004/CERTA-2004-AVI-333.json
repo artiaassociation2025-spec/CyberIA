@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows NT Terminal Server 4.0 Edition Service Pack 6.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT Server 4.0 Service Pack 6a ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSelon Microsoft, une vulnérabilité de type débordement de mémoire\naffecte la bibliothèque RPC Runtime.\n\nUn utilisateur mal intentionné peut, par l'envoi de messages habilement\nconstitués, lire des parties de la mémoire ou provoquer un déni de\nservice du serveur vulnérable.\n\n## Contournement provisoire\n\nFiltrer les ports 135/tcp, 139/tcp, 445/tcp, 593/tcp, 135/udp, 137/udp,\n138/udp , 445/udp et tout port arbitraire utilisé par un service RPC.\n\nSi le service CIS ou RPC sur HTTP est activé, alors les ports 80/tcp et\n443/tcp sont également à filtrer (en tenant compte des serveurs web).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS04-029 du 12 octobre 2004    :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms04-029.mspx"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-333",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-10-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de la bibliothèque RPC sous Windows NT 4.0",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS04-029 de Microsoft",
+      "url": null
+    }
+  ]
+}

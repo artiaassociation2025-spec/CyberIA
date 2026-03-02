@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>JRUN versions 3.0, 3.1 et 4.0.</P>",
+  "content": "## Description\n\nJRUN est un serveur applicatif présent dans les serveurs web les plus\ncourants (Apache et Internet Information Server (IIS)). Plusieurs\nvulnérabilités affectent ce serveur :\n\n-   Une vulnérabilité dans la génération et la manipulation de\n    l'identifiant de sessions `JSESSIONID` du serveur JRUN permet à un\n    utilisateur mal intentionné d'usurper une session entre un client et\n    le serveur vulnérable ;\n-   une vulnérabilité de type `Cross-site scripting` est présente dans\n    la console d'administration JRUN Management Console ;\n-   une vulnérabilité présente dans le connecteur JRUN du serveur Web\n    Internet Information Server de Microsoft permet à un utilisateur mal\n    intentionné, au moyen d'une URL malicieusement construite, de\n    contourner les restrictions d'accès appliquées à certaines pages web\n    (possèdants les extentions .php, .asp et .pl) afin d'en visualiser\n    le code source ;\n-   une vulnérabilité du serveur JRUN permet à un individu mal\n    intentionné d'éxecuter du code arbitraire à distance afin de\n    provoquer l'arrêt de la machine lorsque celle-ci est configurée en\n    mode de débogage.\n\nLes trois premières vulnérabilités affectent uniquement la version 4.0\ndu serveur JRUN.\n\n## Solution\n\nAppliquer le correctif de sécurité disponible à partir du site de\nl'éditeur (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-327",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Usurpation de session"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités dans JRUN Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MPSB04-08 de Macromédia",
+      "url": "http://www.macromedia.com/devnet/security/security_zone/mpsb04-08.html"
+    }
+  ]
+}

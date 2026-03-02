@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache Tomcat versions 8.x antérieures à 8.5.63",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat versions 7.x antérieures à 7.0.108",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat versions 9.x antérieures à 9.0.43",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-25329",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-25329"
+    },
+    {
+      "name": "CVE-2021-25122",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-25122"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2021-AVI-164",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-03-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Apache Tomcat.\nElles permettent à un attaquant de provoquer une exécution de code\narbitraire à distance et une atteinte à la confidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache 7 du 01 mars 2021",
+      "url": "https://tomcat.apache.org/security-7.html#Fixed_in_Apache_Tomcat_7.0.108"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache 9 du 01 mars 2021",
+      "url": "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.43"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache 8 du 01 mars 2021",
+      "url": "https://tomcat.apache.org/security-8.html#Fixed_in_Apache_Tomcat_8.5.63"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Heartbeat 1.2.4.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Heartbeat 2.0.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nHeartbeat est un logiciel permettant la mise en œuvre de systèmes de\ntolérence aux pannes au moyen de 2 serveurs. Si l'un connaît une\ndéfaillance l'autre prend le relais. Une vulnérabilité dans Heartbeat\npermet à un utilisateur distant de provoquer un déni de service sur les\ndeux machines offrant ce service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3815",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3815"
+    },
+    {
+      "name": "CVE-2006-3121",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3121"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 1151 du 15 août 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1151"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-335-1 du 16 août 2006 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-335-1"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:142 du 14 août    2006 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:142"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-360",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Heartbeat permet à un utilisateur distant mal\nintentionné de provoquer un déni de service.\n",
+  "title": "Vulnérabilité dans Heartbeat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Heartbeat du 13 août 2006",
+      "url": "http://www.linux-ha.org/_cache/SecurityIssues__sec03.txt"
+    }
+  ]
+}

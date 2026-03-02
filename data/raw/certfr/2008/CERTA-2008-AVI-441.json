@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco PIX 8.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Adaptive Security Appliance (ASA) 8.x ;",
+      "product": {
+        "name": "Adaptive Security Appliance",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco PIX 7.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Adaptive Security Appliance (ASA) 7.x ;",
+      "product": {
+        "name": "Adaptive Security Appliance",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités sont présentes dans les produits ASA et PIX\nde Cisco :\n\n-   la première est relative à la mise en œuvre du protocole SIP et\n    permet à un utilisateur distant de provoquer un redémarrage\n    intempestif du système vulnérable ;\n-   la seconde est relative à la gestion des connexions de clients VPN\n    et permet également de provoquer un déni de service de l'équipement\n    ;\n-   la troisième est due à une fuite mémoire dans le composant gérant\n    les paquets SSL ou HTTP et permet de provoquer un arrêt inopiné du\n    système ;\n-   la quatrième est relative à une erreur dans la manipulation de\n    certaines URI particulières utilisées dans le cadre d'accès VPN et\n    peut causer également un déni de service ;\n-   la dernière permet à un utilisateur distant de collecter certaines\n    données du système en incitant un utilisateur à visiter un site web\n    construit de façon particulière ou à répondre à un courriel\n    particulier.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2735",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2735"
+    },
+    {
+      "name": "CVE-2008-2734",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2734"
+    },
+    {
+      "name": "CVE-2008-2733",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2733"
+    },
+    {
+      "name": "CVE-2008-2736",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2736"
+    },
+    {
+      "name": "CVE-2008-2732",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2732"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 10475 du 03 septembre 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080903-asa.shtml"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-441",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-09-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans les produits ASA et PIX de Cisco\npermettent à un utilisateur distant de provoquer un déni de service ou\nde porter atteinte à la confidentialité de certaines données.\n",
+  "title": "Multiples vulnérabilités des équipements Cisco ASA et PIX.",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco #107475 du 03 septembre 2008",
+      "url": null
+    }
+  ]
+}

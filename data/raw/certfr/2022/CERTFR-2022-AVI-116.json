@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MongoDB Server versions 5.0.x antérieures à 5.0.4 ou 5.1.0-rc0",
+      "product": {
+        "name": "Server",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Toutes les versions antérieures remontant à v2.0.0",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MongoDB Server versions 4.4.x antérieures à 4.4.10",
+      "product": {
+        "name": "Server",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MongoDB Server versions 4.2.x antérieures à 4.2.18",
+      "product": {
+        "name": "Server",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-32037",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-32037"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-116",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-02-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans MongoDB. Elle permet à un\nattaquant de provoquer un déni de service à distance et une atteinte à\nl'intégrité des données.\n",
+  "title": "Vulnérabilité dans MongoDB",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MongoDB SERVER-59294 du 04 février 2022",
+      "url": "https://jira.mongodb.org/browse/SERVER-59294"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Elasticsearch et Kibana versions 8.1.x antérieures à 8.1.0",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Elasticsearch et Kibana versions 7.17.x antérieures à 7.17.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Elasticsearch et Kibana versions 8.0.x antérieures à 8.0.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-23708",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-23708"
+    },
+    {
+      "name": "CVE-2022-23710",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-23710"
+    },
+    {
+      "name": "CVE-2022-23709",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-23709"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-191",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-03-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans ElasticSearch et\nKibana. Certaines d'entre elles permettent à un attaquant de provoquer\nun contournement de la politique de sécurité, une atteinte à l'intégrité\ndes données et une atteinte à la confidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans ElasticSearch et Kibana",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ElasticSearch du 28 février 2022",
+      "url": "https://www.elastic.co/community/security/"
+    }
+  ]
+}

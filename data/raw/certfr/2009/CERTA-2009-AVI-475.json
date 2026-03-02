@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Linux 2.6.x.</p>",
+  "content": "## Description\n\nUne vulnérabilité de type 'pointeur nul' (null pointer) relative à la\ngestion des tubes (pipes) est présente dans le noyau Linux. Cette faille\npermet à un utilisateur local malintentionné de provoquer un déni de\nservice ou d'obtenir des privilèges élevés.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nLa version 2.6.32-rc6 du noyau Linux corrige le problème :\n\n    http://www.kernel.org\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3547",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3547"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-475",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-11-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le noyau Linux permet à un utilisateur\nlocal de provoquer un déni de service ou d'élever ses privilèges.\n",
+  "title": "Vulnérabilité du noyau Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport de bogue noyau #14416 du 16 octobre 2009",
+      "url": "http://bugzilla.kernel.org/show_bug.cgi?id=14416"
+    }
+  ]
+}

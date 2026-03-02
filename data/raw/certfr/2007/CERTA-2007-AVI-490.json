@@ -1,0 +1,95 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Server 2003 x64 Edition Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 avec SP1 et SP2 pour systèmes Itanium.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans la méthode de génération des\nidentifiants de transaction DNS. Ce procédé n'est pas complètement\naléatoire, et pourrait permettre à une personne malveillante de prédire\ncertaines valeurs de ces identifiants.\n\nCette personne pourrait alors utiliser un outil cherchant à répondre à\nune requête DNS d'un système vulnérable, afin de rediriger la victime\nvers une autre adresse (IP) que celle retournée par le serveur DNS\nlégitime. Cette nouvelle adresse peut correspondre à un site de phishing\nou contenant des codes malveillants par exemple.\n\n## Solution\n\nSe référer au bulletin de sécurité MS07-062 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3898",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3898"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-490",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-11-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans la génération des identifiants\nde transaction DNS. Cette dernière pourrait être exploitée par une\npersonne malveillante pour répondre à une requête DNS d'un système\nvulnérable, afin de rediriger la victime vers une autre adresse que\ncelle retournée par le serveur DNS légitime.\n",
+  "title": "Vulnérabilité du serveur DNS de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-062 du 13 novembre 2007",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-062.mspx"
+    }
+  ]
+}

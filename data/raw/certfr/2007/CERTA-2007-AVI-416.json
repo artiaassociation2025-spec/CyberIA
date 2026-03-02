@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Linux kernel versions 2.6.22.6 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Linux kernel versions 2.4.35.2 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans la mise en œuvre de l'appel système ptrace par le\nnoyau Linux permet à un utilisateur local d'élever ses privilèges. La\nfaille est relative à une mauvaise initialisation de registre sur une\narchitecture x86_64 lors de la sortie d'un appel système ptrace en mode\n32bit.\n\n## Solution\n\nLes versions 2.4.35.3 et 2.6.22.7 du noyau Linux corrigent le problème :\n\n    http://www.kernel.org/pub/linux/kernel/v2.4/\n\n    http://www.kernel.org/pub/linux/kernel/v2.6/\n",
+  "cves": [
+    {
+      "name": "CVE-2007-4573",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4573"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site du noyau Linux :",
+      "url": "http://www.kernel.org"
+    },
+    {
+      "title": "Liste des changements apportés à la version 2.4.35.3 du    noyau Linux :",
+      "url": "http://www.kernel.org/pub/linux/kernel/v2.4/Changelog-2.4.35.3"
+    },
+    {
+      "title": "Liste des changements apportés à la version 2.6.22.7 du    noyau Linux :",
+      "url": "http://www.kernel.org/pub/linux/kernel/v2.4/Changelog-2.6.22.7"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-416",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-09-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le noyau Linux permet à un utilisateur local\nd'élever ses privilèges.\n",
+  "title": "Vulnérabilité du noyau Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés aux versions 2.4.35.3 et 2.6.22.7 du noyau Linux",
+      "url": null
+    }
+  ]
+}

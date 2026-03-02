@@ -1,0 +1,44 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous les systèmes Windows équipés d'Internet Explorer 4.01,  5.5 ou 6.</P>",
+  "content": "## Description\n\n-   Sous Internet Explorer, il est possible de saisir dans l'URL\n    l'adresse IP d'un site web sous forme décimale.\n\n    Mais une mauvaise implémentation dans la gestion des paramètres de\n    sécurité du logiciel entraine le traitement des adresse en décimales\n    comme des adresses du réseau local (Zone Locale). Par défaut, dans\n    les versions à jour d'Internet Explorer, les paramètres de sécurité\n    sont plus laxistes que ceux de la Zone Internet.\n\n-   Il est possible d'usurper l'identité d'un utilisateur navigant sur\n    un site web. Ceci permet à un utilisateur mal intentionné d'accéder,\n    par des services web (webmail, etc.), à des données dont il n'est\n    pas le propriétaitre.\n\n-   Il est possible d'ouvrir une session telnet par le biais d'un lien\n    situé dans une page en HTML. Un utilisateur mal intentionné peut, en\n    utilisant les paramètres passés au client telnet, créer ou écraser\n    un fichier situé n'importe où sur le disque dur du client (NT\n    ou 2000) s'il est équipé de SFU (Services for Unix), et ainsi lui\n    faire exécuter du code arbitraire.\n\n    Cette vulnérabilité est semblable à celle décrite dans l'avis\n    CERTA-2001-AVI-027 et le bulletin de sécurité Microsoft : MS01-015.\n\n## Contournement provisoire\n\n-   Paramètrer le navigateur pour qu'il traite la Zone Locale comme la\n    Zone Internet.\n-   Ne pas utiliser de logiciels clients (navigateur ou courrier\n    électronique par exemple) depuis un serveur, ni depuis une machine\n    contenant des données sensibles.\n\n## Solution\n\nAppliquer le correctif de Microsoft :\n\n    http://www.microsoft.com/windows/ie/downloads/critical/q306121/default.asp\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-051.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-116",
+  "revisions": [
+    {
+      "description": "version initiale",
+      "revision_date": "2001-10-16T00:00:00.000000"
+    },
+    {
+      "description": "seconde version : correction de l'URL du bulletin de sécurité Microsoft du paragraphe Documentation.",
+      "revision_date": "2001-10-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Réduction des paramètres de sécurité"
+    }
+  ],
+  "summary": "Internet Explorer possède trois vulnérabilités mettant en cause la façon\nde traiter les URL du champ adresse du navigateur.\n",
+  "title": "Vulnérabilité de Microsoft Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS01-051",
+      "url": null
+    }
+  ]
+}

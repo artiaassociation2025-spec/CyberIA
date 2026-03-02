@@ -1,0 +1,110 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Tivoli Provisioning Manager for OS Deployment 5.x ;",
+      "product": {
+        "name": "Tivoli",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Tivoli Business Service Manager 4.x ;",
+      "product": {
+        "name": "Tivoli",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Websphere Business Modeler 6.x ;",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Websphere Application Server 6.0.X.",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans des produits IBM :\n\n-   une vulnérabilité dans l'applicatif IBM Tivoli Provisioning Manager\n    for OS Deployment permet à un utilisateur malintentionné d'effectuer\n    un déni de service depuis le réseau local ;\n-   une vulnérabilité dans l'applicatif IBM Tivoli Business Service\n    Manager permet de récupérer des mots de passes stockés en clair ;\n-   une vulnérabilité dans l'applicatif IBM Websphere Business Modeler\n    permet à un utilisateur légitime malintentionné d'effacer des\n    données importantes ne lui appartenant pas.\n-   D'autres vulnérabilités dont l'impact n'a pas été spécifié par IBM\n    ont été découvertes dans IBM Websphere Application Server.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0389",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0389"
+    },
+    {
+      "name": "CVE-2008-0401",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0401"
+    },
+    {
+      "name": "CVE-2008-0402",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0402"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg24017939 du 23 janvier 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg24017939"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg24018061 du 23 janvier 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg24018061"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg24018060 du 23 janvier 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg24018060"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg27006876 du 23 janvier 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg27006876"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg24018010 du 23 janvier 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg24018010"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-035",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-01-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans des produits IBM.\nL'exploitation de ces vulnérabilités permet de provoquer un déni de\nservice ou d'effectuer des actions malveillantes sur le système de\nfichiers de la machine cible.\n",
+  "title": "Multiples vulnérabilités des produits IBM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mises à jour de sécurité IBM",
+      "url": null
+    }
+  ]
+}

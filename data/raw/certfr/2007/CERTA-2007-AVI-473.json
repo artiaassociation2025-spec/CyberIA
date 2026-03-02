@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Nagios Plugins versions 1.4.9 et antérieures (CVE-2007-5198) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Nagios",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Nagios Plugins versions 1.4.10 et antérieures (CVE-2007-5623).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Nagios",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérbilités sont présentes dans les extensions pour Nagios\n(Nagios Plugins) :\n\n-   la première est relative à l'extension check_http (CVE-2007-5198) et\n    permet à un utilisateur distant d'exécuter du code arbitraire via un\n    serveur web particulier si le paramètre -f a été passé à l'extension\n    ;\n-   la seconde est relative à l'extension check_snmp (CVE-2007-5623) et\n    permet à un utilisateur distant d'exécuter du code arbitraire via\n    une réponse à une requête SNMP (snmpget) construite de façon\n    particulière.\n\n## Solution\n\nSe référer au bulletin de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5198",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5198"
+    },
+    {
+      "name": "CVE-2007-5623",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5623"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site des extensions pour Nagios :",
+      "url": "http://nagiosplug.sourceforge.net/"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-532-1 du 02 novembre 2007 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-532-1"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-473",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-11-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Nagios Plugins permettent à un utilisateur\ndistant d'exécuter du code arbitraire.\n",
+  "title": "Multiples vulnérabilités dans les extensions de Nagios",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fedora du 01 novembre 2007",
+      "url": "https://www.redhat.com/archives/fedora-package-announce/2007-November/msg00010.html"
+    }
+  ]
+}

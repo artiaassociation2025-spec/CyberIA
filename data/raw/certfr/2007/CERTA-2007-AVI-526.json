@@ -1,0 +1,36 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Novell BorderManager 3.X.</P>",
+  "content": "## Description\n\nL'une des vulnérabilités est causée par une erreur dans le traitement\ndes requêtes UDP vers le service Client Trust Application. Cette\nvulnérabilité, de type débordement de mémoire, affecte le fichier\nclntrust.exe et peut être exploitée par une personne malveillante afin\nd'exécuter du code arbitraire à distance.\n\nL'autre vulnérabilité est causée par une erreur dans le traitement du\ntrafic HTTP encodé en unicode qui permet à une personne malintentionnée\nde contourner la politique de sécurité.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5767",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5767"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Novell #5007301 du 04 décembre 2007 :",
+      "url": "http://support.novell.com/docs/Readmes/InfoDocument/patchbuilder/readme_5007301.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-526",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités découvertes dans Novell BorderManager permettent à\nun utilisateur distant malintentionné de contourner la politique de\nsécurité ou d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans Novell BorderManager",
+  "vendor_advisories": []
+}

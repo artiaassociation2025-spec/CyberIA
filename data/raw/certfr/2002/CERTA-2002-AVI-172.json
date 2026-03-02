@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les serveurs Web <CODE>SunONE</CODE>,  <CODE>iPlanet</CODE> et <CODE>Netscape</CODE> de versions  antérieures à 4.1 SP11 et 6.0 SP4.</p>",
+  "content": "## Description\n\nLa première vulnérabilité est présente dans la fonction Transfer\nEncoding du serveur. Une requête malicieusement construite, utilisant la\nméthode de transfert \\`\\``chunked encoding`'', reçue par le serveur peut\ncauser un débordement de mémoire. Ce débordement de mémoire peut aboutir\nà l'exécution de code arbitraire sur le serveur avec les privilèges de\nl'application.  \nLa deuxième vulnérabilité concerne la commande `NS-query-pat`. Cette\ncommande permet de spécifier le chemin d'un fichier utilisé pour définir\nle type de la recherche sur un site Web. Le moteur de recherche ne\nvérifie pas le chemin de ce fichier permettant ainsi le rapatriement de\ndonnées non autorisées.\n\n## Contournement provisoire\n\nSi vous ne pouvez pas mettre à jour votre serveur, un module `NSAPI` est\ndisponible sur le site de Sun pour vous permettre de bloquer les accès\nde type \\`\\`chunk encoding''.  \nPour la deuxième vulnérabilité, il est conseillé de désactiver la\nfonction de recherche sur le serveur. Dans la mesure du possible, il\nfaut restreindre les permissions de l'utilisateur exécutant le serveur\nWeb au minimum. C'est difficile sur les plateformes Windows NT car le\nserveur fonctionne typiquement avec les permissions d'un service\nsystème. Sur les serveurs UNIX, il est conseillé de créer un\nenvironnement d'exécution restreint (chroot) pour l'application.\n\n## Solution\n\nDes correctifs sont disponibles en téléchargement sur le site de Sun,\nconsultez la section Documentation.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de Sun concernant la première  vulnérabilité :  \n Bulletin de Sun concernant la deuxième vulnérabilité : http://www.sun.com/service/support/software/iplanet/alerts/remotefileviewing-23july2002.html\n Page de téléchargement des correctifs : http://wwws.sun.com/software/download/allproducts.html",
+      "url": "http://www.sun.com/service/support/software/iplanet/alerts/transferencodingalert-23july2002.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-172",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Divulgation de données"
+    }
+  ],
+  "summary": "Deux nouvelles vulnérabilités affectent les serveurs Web de Sun. La\npremière est de type débordement de mémoire et permet à un utilisateur\nmal intentionné d'exécuter un code arbitraire sur le serveur. La\ndeuxième donne accès à des fichiers non autorisés.\n",
+  "title": "Multiples vulnérabilités sur les serveurs Web SunONE, iPlanet et Netscape",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de SUN",
+      "url": null
+    }
+  ]
+}

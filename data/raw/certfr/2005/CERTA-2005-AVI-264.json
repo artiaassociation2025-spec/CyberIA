@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>CISCO ONS 15216 OADM version 2.2.2 et  versions antérieures.</p>",
+  "content": "## Description\n\nLe produit clef-en-main CISCO ONS 15216 OADM (Optical Add/Drop\nMultiplexer) permet le multiplexage de fibre optique. Il peut être\nadministré via le service Telnet.  \n\nUne faille dans la gestion des sessions Telnet permettrait à un\nutilisateur mal intentionné, après avoir ouvert une session (ce qui\nnécessite une authentification préalable), de causer un déni de service\nvia certaines requêtes habilement construites.  \n\nLe déni de service n'impacte que le service d'administration à distance,\net le trafic n'est en rien perturbé par une telle attaque. En revanche,\nun redémarrage de la machine est necessaire pour réactiver le service\nd'administration, ce qui provoque une interruption du trafic.\n\n## Solution\n\nUtiliser CISCO ONS 15216 OADM version 2.2.3\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2005-AVI-264",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-07-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service sur la fonctionnalité de gestion à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans CISCO ONS 15216 OADM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO 65541 du 13 juillet 2005",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20050713-ons.shtml"
+    }
+  ]
+}

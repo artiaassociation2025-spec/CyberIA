@@ -1,0 +1,88 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco WebEx Business Suite version 27.11.26 (T27 L SP11 EP26) et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco WebEx Business Suite version 27.25.9 (T27 LC SP25 EP9) et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco WebEx Business Suite version 27.32.0 (T27 LD SP32) et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco WebEx Business Suite version 27.21.10 (T27 LB SP21 EP10) et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nPlusieurs scénarios sont possibles concernant la mise à jour vers une\nversion corrigée :\n\n-   si le lecteur WRF a été installé manuellement, il est nécessaire\n    d'installer la nouvelle version manuellement après l'avoir\n    téléchargée sur le site <http://www.webex.com> ;\n-   si le lecteur WRF a été installé automatiquement, la mise à jour\n    vers la dernière version est automatique lorsqu'un utilisateur ouvre\n    un fichier d'enregistrement hébergé sur un site WebEx meeting.\n\nSe référer au bulletin de sécurité de l'éditeur pour de plus amples\ndétails (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-1335",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-1335"
+    },
+    {
+      "name": "CVE-2012-1336",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-1336"
+    },
+    {
+      "name": "CVE-2012-1337",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-1337"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20120404-webex du 04 avril 2012    :",
+      "url": "http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120404-webex"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-193",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-04-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Trois vulnérabilités de type <span class=\"textit\">buffer overflow</span>\nont été corrigées dans le lecteur <span class=\"textit\">Cisco WebEx\nRecording Format</span> (WRF).\n\nDans certains cas, l'exploitation de ces vulnérabilités permettent à un\nattaquant d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans Cisco WebEx Player",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-sa-20120404 du 04 avril 2012",
+      "url": null
+    }
+  ]
+}

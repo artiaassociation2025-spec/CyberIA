@@ -1,0 +1,186 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Firepower Threat Defense (FTD) sur la plate-forme Firepower 1000 versions antérieures à 6.4.0.9, 6.5.0.5 et 6.6.0",
+      "product": {
+        "name": "Firepower Threat Defense",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Firepower Threat Defense (FTD) versions antérieures à 6.2.3.16, 6.3.0.6, 6.4.0.9, 6.5.0.5 et 6.6.0",
+      "product": {
+        "name": "Firepower Threat Defense",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Adaptive Security Appliance (ASA) versions antérieures à 9.8.4.20, 9.9.2.67, 9.10.1.39, 9.12.3.9 et 9.13.1.10",
+      "product": {
+        "name": "Adaptive Security Appliance",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nNote de l'éditeur :\n\n-   les correctifs pour Cisco ASA ne sont pas disponibles pour les\n    versions antérieures à 9.8, l'éditeur recommande de migrer vers une\n    version plus récente ;\n-   les correctifs pour Cisco FTD ne sont pas disponibles pour les\n    versions antérieures à 6.2.3, l'éditeur recommande de migrer vers\n    une version plus récente.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2020-3255",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3255"
+    },
+    {
+      "name": "CVE-2020-3195",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3195"
+    },
+    {
+      "name": "CVE-2020-3191",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3191"
+    },
+    {
+      "name": "CVE-2020-3259",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3259"
+    },
+    {
+      "name": "CVE-2020-3187",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3187"
+    },
+    {
+      "name": "CVE-2020-3179",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3179"
+    },
+    {
+      "name": "CVE-2020-3283",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3283"
+    },
+    {
+      "name": "CVE-2020-3254",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3254"
+    },
+    {
+      "name": "CVE-2020-3196",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3196"
+    },
+    {
+      "name": "CVE-2020-3189",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3189"
+    },
+    {
+      "name": "CVE-2020-3298",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3298"
+    },
+    {
+      "name": "CVE-2020-3125",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3125"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité cisco-sa-asaftd-info-disclose-9eJtycMB du 06 mai 2020",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-info-disclose-9eJtycMB"
+    },
+    {
+      "title": "Bulletin de sécurité cisco-sa-asaftd-ipv6-67pA658k du 06 mai 2020",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-ipv6-67pA658k"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco cisco-sa-ftd-tls-dos-4v5nmWtZ du 06 mai 2020",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-tls-dos-4v5nmWtZ"
+    }
+  ],
+  "reference": "CERTFR-2020-AVI-274",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2020-05-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Cisco\nAdaptive Security Appliance et Firepower Threat Defense. Certaines\nd'entre elles permettent à un attaquant de provoquer un déni de service\nà distance, un contournement de la politique de sécurité et une atteinte\nà l'intégrité des données.\n",
+  "title": "Multiples vulnérabilités dans les produits Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-sa-asa-ssl-vpn-dos-qY7BHpjN du 06 mai 2020",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asa-ssl-vpn-dos-qY7BHpjN"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-sa-asa-ftd-ospf-memleak-DHpsgfnv du 06 mai 2020",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asa-ftd-ospf-memleak-DHpsgfnv"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-ftd-dos-N2vQZASR du 06 mai 2020",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-dos-N2vQZASR"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-ftd-tls-dos-4v5nmWtZ du 06 mai 2020",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-sa-asaftd-path-JE3azWw43 du 06 mai 2020",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-path-JE3azWw43"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-sa-asa-ftd-ospf-dos-RhMQY8qx du 06 mai 2020",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asa-ftd-ospf-dos-RhMQY8qx"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-ftd-dos-2-sS2h7aWe du 06 mai 2020",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-dos-2-sS2h7aWe"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-ftd-dos-Rdpe34sd8 du 06 mai 2020",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ftd-dos-Rdpe34sd8"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-sa-asaftd-mgcp-SUqB8VKH du 06 mai 2020",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-mgcp-SUqB8VKH"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-asa-kerberos-bypass-96Gghe2sS du 06 mai 2020",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-asa-kerberos-bypass-96Gghe2sS"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-sa-asaftd-ipv6-67pA658k du 06 mai 2020",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-sa-asaftd-info-disclose-9eJtycMB du 06 mai 2020",
+      "url": null
+    }
+  ]
+}

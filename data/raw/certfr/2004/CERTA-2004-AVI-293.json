@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Solaris 7 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 9.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nxdm (X Display Manager) est un gestionnaire de sessions d'environnement\ngraphique.  \n\nUne vulnérabilité a été découverte dans la gestion des requêtes XDMCP (X\nDisplay Manager Control Protocol).  \n\nCette vulnérabilité peut être exploitée par un utilisateur mal\nintentionné pour provoquer l'arrêt brutal du service xdm.\n\n## Contournement provisoire\n\n-   Pour se protéger des attaques provenant de l'extérieur, filtrer le\n    port 177/udp sur les pare-feux.\n\n-   Désactiver la gestion des sessions distantes XDMCP.\n\n    Pour cela, rajouter la ligne suivante\n\n    `DisplayManager.requestPort: 0`\n\n    dans le fichier /usr/openwin/lib/X11/xdm/xdm-config.\n\n## Solution\n\nIl n'existe pas de correctif pour les systèmes Solaris 7 et Solaris 8.  \nPour le système Solaris 9, appliquer le correctif suivant la plate-forme\nconcernée :\n\n-   plate-forme SPARC : correctif 112785-38 ou suivants ;\n-   plate-forme x86 : correctif 112786-27 ou suivants.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-293",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité de <span class=\"textit\">xdm</span> permet à un\nutilisateur mal intentionné de provoquer un déni de service.\n",
+  "title": "Vulnérabilité de Sun xdm",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sun #57619",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-57619-1"
+    }
+  ]
+}

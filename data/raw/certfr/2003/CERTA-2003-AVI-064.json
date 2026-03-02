@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tous les systèmes avec  <TT>Ethereal</TT> version 0.9.9 et versions antérieures.</p>",
+  "content": "## Description\n\nEthereal est un renifleur réseau. Il permet l'analyse de données depuis\nle réseau ou à partir d'un fichier.\n\n  \n\nUne vulnérabilité de type chaîne de format est présente dans la gestion\ndu protocole SOCKS.\n\nUn utilisateur mal intentionné, composant judicieusement un fichier\ndestiné à être lu par Ethereal ou injectant un paquet malicieusement\nconstruit sur le réseau, peut exploiter cette vulnérabilité afin\nd'exécuter du code arbitraire ou réaliser un déni de service sur la\nplate-forme utilisant une version vulnérable d'Ethereal.\n\n## Contournement provisoire\n\nRetirer le protocole SOCKS de la liste des protocoles supportés par\nEthereal.\n\n## Solution\n\nInstaller la version 0.9.10 d'Ethereal :\n\n    http://www.ethereal.com\n\nou appliquer le correctif de l'éditeur :\n\n-   Bulletin de sécurité DSA-258 de Debian :\n\n        http://www.debian.org/security/2003/dsa-258\n\n-   Bulletin de sécurité SuSE-SA:2003:019 de SuSE :\n\n        http://www.suse.com/de/security/2003_019_ethereal.html\n\n-   Bulletin de sécurité 200303-10 de Gentoo :\n\n        http://www.securityfocus.com/advisories/5076\n\n-   Bulletin de sécurité RHSA-2003:076-01 de RedHat :\n\n        https://rhn.redhat.com/errata/RHSA-2003-076.html\n\n-   Bulletin de sécurité MDKSA-2003:051 de Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:051\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité #60 \"Ethereal format string bug, yet    still ethereal much better than windows\" de Georgi Guninski :",
+      "url": "http://www.guninski.com/etherre.html"
+    },
+    {
+      "title": "Bulletin de sécurité enpa-sa-00008 \"SOCKS string format    vulnerability in Ethereal 0.9.9\" d'Ethereal :",
+      "url": "http://www.ethereal.com/appnotes/enpa-sa-00008.html"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-064",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité RedHat et d'une nouvelle référence CVE.",
+      "revision_date": "2003-04-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Mandrake.",
+      "revision_date": "2003-04-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans l'utilitaire réseau Ethereal permet à un\nutilisateur mal intentionné d'exécuter du code arbitraire ou réaliser un\ndéni de service sur la machine cible.\n",
+  "title": "Vulnérabilité dans Ethereal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #60 de Georgi Guninski",
+      "url": null
+    }
+  ]
+}

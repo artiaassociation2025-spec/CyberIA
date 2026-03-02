@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco PIX, pour les versions logicielles 7.1 et 7.2 antérieures à 7.1(2)49 et 7.2(2)19.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco ASA (Adaptive Security Appliance), pour les versions logicielles 7.1 et 7.2 antérieures à 7.1(2)49 et 7.2(2)19 ;",
+      "product": {
+        "name": "Adaptive Security Appliance",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans les produits Cisco ASA\net PIX. Parmi celles-ci :\n\n-   dans le contexte d'un tunnel L2TP, il serait possible de contourner\n    le processus d'authentification LDAP, lorsque le protocole utilisé\n    n'est pas PAP (Password Authentication Protocol), mais CHAP,\n    MS-CHAPv1 ou MS-CHAPv2 par exemple ;\n-   la vulnérabilité précédente serait également applicable au cours de\n    la phase d'authentification des sessions d'administration (telnet,\n    SSH ou HTTP) ;\n-   la gestion de la date d'expiration des mots de passe ne serait pas\n    correctement prise en compte au cours de la fermeture d'une\n    connexion distante VPN IPSec ;\n-   une situation de compétition (ou race condition) existerait dans la\n    manipulation de sessions SSL particulières par Cisco ASA. Cette\n    vulnérabilité peut provoquer le redémarrage du système.\n-   DHCP est un protocole permettant de fournir automatiquement des\n    éléments de configuration aux machines du réseau (adresse IP, masque\n    de réseau, adresse de la passerelle par défaut, adresse du serveur\n    DNS, etc.). ASA et PIX offrent la possibilité d'utiliser le système\n    comme agent de liaison DHCP vers les serveurs DHCP du réseau. Les\n    paquets de type DHCPREQUEST ou DHCPINFORM provoquent des réponses de\n    la forme DHCPACK de la part des serveurs DHCP. Les agents de relais\n    Cisco ne parviendraient pas à stocker toutes les informations\n    concernant ces échanges, et bloqueraient des paquets. Cette\n    vulnérabilité peut donc être utilisée par une personne malveillante\n    pour empêcher l'agent de relais de transférer les paquets légitimes.\n\n## Solution\n\nSe référer au bulletin de sécurité de Cisco pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-2464",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2464"
+    },
+    {
+      "name": "CVE-2007-2462",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2462"
+    },
+    {
+      "name": "CVE-2007-2463",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2463"
+    },
+    {
+      "name": "CVE-2007-2461",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2461"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 82451 du 02 mai 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070502-asa.shtml"
+    },
+    {
+      "title": "Document de réponse Cisco ID 91337 du 02 mai 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sr-20070502-pix.shtml"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-198",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-05-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans les produits Cisco ASA\net PIX. L'exploitation de celles-ci permettent à un utilisateur distant\nde contourner la politique de sécurité, ou de perturber le\nfonctionnement du système vulnérable.\n",
+  "title": "Multiples vulnérabilités dans Cisco ASA et PIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 82451 du 02 mai 2007",
+      "url": null
+    }
+  ]
+}

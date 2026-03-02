@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Cisco ASA Adaptative Security Appliances série 5500, dans les  versions qui suivent. Vulnérabilité « pare-feu transparent »  (CVE-2011-0393) :</P>  <UL>    <LI>versions 7.0 strictement inférieures à 7.0(8.12) ;</LI>    <LI>versions 7.1 ;</LI>    <LI>versions 7.2 strictement inférieures à 7.2(5.2) ;</LI>    <LI>versions 8.0 strictement inférieures à 8.0(5.21) ;</LI>    <LI>versions 8.1 strictement inférieures à 8.1(2.49) ;</LI>    <LI>versions 8.2 strictement inférieures à 8.2(3.6) ;</LI>    <LI>versions 8.3 strictement inférieures à 8.3(2.7).</LI>  </UL>Vulnérabilité « <SPAN class=\"textit\">SCCP</SPAN> »  (CVE-2011-0394) :  <UL>    <LI>versions 7.0 strictement inférieures à 7.0(8.11) ;</LI>    <LI>versions 7.1 ;</LI>    <LI>versions 7.2 strictement inférieures à 7.2(5.1) ;</LI>    <LI>versions 8.0 strictement inférieures à 8.0(5.19) ;</LI>    <LI>versions 8.1 strictement inférieures à 8.1(2.47) ;</LI>    <LI>versions 8.2 strictement inférieures à 8.2(2.19) ;</LI>    <LI>versions 8.3 strictement inférieures à 8.3(1.8).</LI>  </UL>Vulnérabilité « <SPAN class=\"textit\">RIP</SPAN> »  (CVE-2011-0395) :  <UL>    <LI>versions 8.0 strictement inférieures à 8.0(5.20) ;</LI>    <LI>versions 8.1 strictement inférieures à 8.1(2.48) ;</LI>    <LI>versions 8.2 strictement inférieures à 8.2(3) ;</LI>    <LI>versions 8.3 strictement inférieures à 8.3(2.1).</LI>  </UL>Vulnérabilité « accès non autorisé » (CVE-2011-0396) :  <UL>    <LI>versions 8.0 strictement inférieures à 8.0(5.23) ;</LI>    <LI>versions 8.1 strictement inférieures à 8.1(2.49) ;</LI>    <LI>versions 8.2 strictement inférieures à 8.2(4.1) ;</LI>    <LI>versions 8.3 strictement inférieures à 8.3(2.13).</LI>  </UL>",
+  "content": "## Description\n\nUne vulnérabilité concerne le pare-feu intégré si celui-ci est configuré\nen mode « transparent » (le mode par défaut est le mode « routé »). Un\nattaquant peut épuiser les ressources du système en envoyant des paquets\nIPv6 particuliers.\n\nUne vulnérabilité dans le module d'inspection de trafic SCCP permet à un\nattaquant de forcer le rechargement de la configuration de l'équipement\nen envoyant un paquet spécialement conçu. Par défaut, cette fonction\nd'inspection de trafic est activée.\n\nLorsque le protocole RIP ainsi que la fonctionalité Cisco Phone Proxy\nsont activés sur l'appareil, une personne malveillante peut forcer le\nredémarrage de celui-ci en envoyant des paquets RIP valides.\n\nEnfin, lorsque l'équipement est configuré comme autorité locale de\ncertification, un attaquant distant non authentifié peut exploiter une\nvulnérabilité pour accéder à des données confidentielles sur le système\nde fichiers.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0396",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0396"
+    },
+    {
+      "name": "CVE-2011-0393",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0393"
+    },
+    {
+      "name": "CVE-2011-0394",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0394"
+    },
+    {
+      "name": "CVE-2011-0395",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0395"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco cisco-sa-20110223-asa du 23    février 2011 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20110223-asa.shtml"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-109",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-02-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Quatre vulnérabilités ont été corrigées dans les appareils Cisco ASA\nsérie 5500. Trois d'entre elles permettent de réaliser un déni de\nservice à distance, et la quatrième permet d'accéder à des données\nconfidentielles sur le système de fichiers.\n",
+  "title": "Multiples vulnérabilités dans Cisco ASA série 5500",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-20110223-asa du 23 février 2011",
+      "url": null
+    }
+  ]
+}

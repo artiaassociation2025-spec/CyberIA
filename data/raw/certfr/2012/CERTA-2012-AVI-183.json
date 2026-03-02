@@ -1,0 +1,84 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "libpng versions 1.0.x antérieures à 1.0.59.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "libpng versions 1.4.x antérieures à 1.4.11 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "libpng versions 1.2.x antérieures à 1.2.49 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "libpng versions 1.5.x antérieures à 1.5.10 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa vulnérabilité est due à une erreur dans la fonction png_set_text_2()\net permet à un attaquant de corrompre la mémoire grâce à un fichier PNG\nspécialement conçu.\n\nL'exploitation de cette vulnérabilité pourrait permettre l'exécution de\ncode arbitraire.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-3048",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3048"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de mise à jour libpng    1.2.49 du 29 mars 2012 :",
+      "url": "http://www.libpng.org/pub/png/src/libpng-1.2.49-README.txt"
+    },
+    {
+      "title": "Bulletin de mise à jour libpng    1.5.10 du 29 mars 2012 :",
+      "url": "http://www.libpng.org/pub/png/src/libpng-1.5.10-README.txt"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-183",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-04-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité dans <span class=\"textit\">libpng</span> permet à une\npersonne malintentionnée de compromettre une application utilisant cette\nbibliothèque.\n",
+  "title": "Vulnérabilité dans libpng",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour libpng du 29 mars 2012",
+      "url": null
+    }
+  ]
+}

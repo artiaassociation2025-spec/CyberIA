@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Systèmes Windows équipés de pcAnywhere serveur version 9.2x ou  10.0.</P>",
+  "content": "## Description\n\nUn utilisateur mal intentionné peut, en générant un traffic aléatoire\nanormalement élevé vers le serveur, bloquer la communication entre le\nserveur et ses clients. Le port de pcAnywhere serveur sera toujours\nouvert, mais le serveur ne répondra plus aux clients.\n\n## Solution\n\nAppliquer les correctifs de Symantec :\n\n-   pour les versions 9.x :\n\n        http://www.symantec.com/techsupp/files/pca/pca9-9598nt.html\n\n-   Pour les versions 10.x :\n\n        http://www.symantec.com/techsupp/files/pca/pca_10.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "L'avis du CIAC :",
+      "url": "http://www.ciac.org/ciac/bulletins/l-055.shtml"
+    },
+    {
+      "title": "Le bulletin de sécurité de Symantec :",
+      "url": "http://service1.symantec.com/sarc/sarc.nsf/info/html/pcAnywhere.Denial.of.service.html"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-035",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-03-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Il est possible de bloquer la communication entre un serveur\nd'administration à distance pcAnywhere et ses clients.\n\nIl s'agit d'un débordement de mémoire. Comme pour tout débordement de\nmémoire, il y a un risque d'exécution de code arbitraire sur la machine\ncible.\n",
+  "title": "Vulnérabilité de pcAnywhere.",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis du CIAC et de Symantec",
+      "url": null
+    }
+  ]
+}

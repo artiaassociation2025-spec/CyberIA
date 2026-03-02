@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tout système Windows ainsi que certains  produits pour Macintosh sont vulnérables dont :  <UL>    <LI>Microsoft Windows 98 ;</LI>    <LI>Microsoft Windows 98 Second Edition ;</LI>    <LI>Microsoft Windows Me ;</LI>    <LI>Microsoft Windows NT 4.0 ;</LI>    <LI>Microsoft Windows NT 4.0, Terminal Server Edition ;</LI>    <LI>Microsoft Windows 2000 ;</LI>    <LI>Microsoft Windows XP ;</LI>    <LI>Microsoft Office pour Mac ;</LI>    <LI>Microsoft Internet Explorer pour Mac ;</LI>    <LI>Microsoft Outlook Express pour Mac.</LI>  </UL></p>",
+  "content": "## Description\n\nLes certificats au standard X.509 possèdent plusieurs champs d'options.\nUn de ces champs s'appelle « Basic Constraints Field » et indique la\nlongueur maximum autorisée pour une chaine de certificats ainsi que si\nle certificat est d'autorité ou non. Les procédures de Microsoft ne\nvérifient pas ce champ et donc, un certificat, habilement conçu par un\nutilisateur mal intentionné, peut passer pour un certificat d'autorité.\n\n## Solution\n\nAppliquer le correctif de Microsoft disponible en téléchargement sur la\npage de l'avis \\#MS02-050 (Consultez la section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-202",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-09-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    }
+  ],
+  "summary": "Les produits Microsoft ne vérifient pas tous les champs des certificats\nutilisés pour authentifier des pages Web ou pour signer des méls. Un\nutilisateur mal intentionné peut générer son propre certificat\npermettant une usurpation d'identitée.\n",
+  "title": "Mauvaise vérification des certificats dans les produits Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis #MS02-050 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-050.asp"
+    }
+  ]
+}

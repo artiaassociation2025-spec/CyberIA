@@ -1,0 +1,109 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Asterisk 1.8.x ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk 1.6.1.x ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk 1.6.2.x ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk 1.4.x ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Business Edition C.x.x.",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans Asterisk :\n\n-   Une personne malveillante peut provoquer un déni de service en\n    saturant le serveur au moyen d'un grand nombre de connexions TCP non\n    authentifiées (Protocole Skinny, SIP sur TCP, sur le serveur HTTP ou\n    sur l'interface d'administration) ;\n-   une erreur dans la console d'administration permet à un utilisateur\n    authentifié de contourner des mesures de protection en place, et\n    d'exécuter du code arbitraire sur le système.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nLes versions 1.4.40.1, 1.6.1.25, 1.6.2.17.3, 1.8.3.3 et C.3.6.4\ncorrigents ces vulnérabilités.\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1599",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1599"
+    },
+    {
+      "name": "CVE-2011-1507",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1507"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Asterisk AST-2011-005 du 21 avril 2011    :",
+      "url": "http://downloads.asterisk.org/pub/security/AST-2011-005.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-2225 du 25 avril    2011 :",
+      "url": "http://www.debian.org/security/2011/dsa-2225"
+    },
+    {
+      "title": "Bulletin de sécurité Asterisk AST-2011-006 du 21 avril 2011    :",
+      "url": "http://downloads.asterisk.org/pub/security/AST-2011-006.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-249",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-04-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence CVE CVE-2011-1599 et du bulletin de sécurité Debian.",
+      "revision_date": "2011-05-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes dans <span\nclass=\"textit\">Asterisk</span> :\n\n-   Il est possible de provoquer un déni de service à distance ;\n-   un utilisateur authentifié sur la console d'administration peut\n    exécuter du code arbitraire sur le système.\n",
+  "title": "Multiples vulnérabilités dans Asterisk",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité AST-2011-005 et AST-2011-006 du 21 avril 2011",
+      "url": null
+    }
+  ]
+}

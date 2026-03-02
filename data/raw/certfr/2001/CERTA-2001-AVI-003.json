@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>La vulnérabilité est indépendante du système d'exploitation.  Cependant, les versions du logiciel affectées sont :</P>  <UL>    <LI>Borland/Inprise 4.x et 5.x;</LI>    <LI>Open source Interbase 6.0 et 6.01;</LI>    <LI>Open source Firebird 0.9-3 et toutes les versions    précédentes.</LI>  </UL>",
+  "content": "## Description\n\nInterbase Server est un serveur de base de données SQL dont les sources\nsont disponibles et distribuées en version compilées ou non par Borland,\nSourceForge et IBPhoenix.\n\nLe logiciel, une fois installé, est accessible pour maintenance par le\nport 3050/TCP, ou localement avec un simple mot de passe écrit en clair\ndans le code. Ce mot de passe ne peut malheureusement pas être changé\nune fois le serveur installé.\n\nCet accès permet de manipuler tous les objets de la base de données ce\nqui permet aussi d'installer des chevaux de Troie ou tout autre logiciel\nsous la forme d'une procédure stockée.\n\nSi le serveur est lancé par root, l'utilisateur profitant de cette porte\ndérobée peut avoir accès en lecture et en écriture à tous les fichiers\nprésents sur le système. Il peut donc modifier le système et exécuter du\ncode avec les privilèges root.\n\n## Contournement provisoire\n\nIl faut bloquer le port 3050/TCP à l'aide du garde barrière.\n\nIl ne faut jamais exécuter un serveur en tant que root.\n\n## Solution\n\nAppliquer les correctifs selon la version du logiciel et le système\nd'exploitation :\n\n-   IBPhoenix :\n\n        http://firebird.ibphoenix.com\n\n-   Borland :\n    -   pour HP-UX :\n\n            http://inprise-svca.www.conxion.com/IbHpuxPatch.tar.Z\n\n    -   pour Linux :\n\n            http://inprise-svca.www.conxion.com/IbLinuxPatch.tar.Z\n\n    -   pour Solaris :\n\n            http://inprise-svca.www.conxion.com/IbSolarisPatch.tar.Z\n\n    -   pour SCO Unix :\n\n            http://inprise-svca.www.conxion.com/IbSCOPatch.tar.Z\n\n    -   Windows :\n\n            http://inprise-svca.www.conxion.com/IbWinPatch.zip\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "L'avis d'IBPhoenix :",
+      "url": "http://firebird.ibphoenix.com"
+    },
+    {
+      "title": "L'avis du CERT/CC :",
+      "url": "http://www.cert.org/advisorie/VA-2001-01.html"
+    },
+    {
+      "title": "L'avis du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/247371"
+    },
+    {
+      "title": "L'avis de Borland :",
+      "url": "http://www.borland.com/interbase/downloads/patches.html"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-003",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-01-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès local ou distant, avec privilèges, à l'intégralité de la base de données"
+    },
+    {
+      "description": "Exécution de code (avec les privilèges root dans certains cas)"
+    }
+  ],
+  "summary": "Un accès privilégié (<span class=\"textit\">back door</span>) permettant\nd'administrer entièrement la base de données Interbase localement ou à\ndistance a été laissé dans le code source et son exécutable.\n",
+  "title": "Accès privilégié oublié dans le code de Interbase Server de Borland",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2001-01 du CERT-CC",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Systèmes Unix et Linux possédant RPC.statd.</P>",
+  "content": "## Description\n\nLe Daemon RPC.statd passe des informations fournies par les utilistaeur\ndu service à la fonction syslog() (journalisation) et manipule des\nfichiers avec les privilèges de root par défaut. Un défaut dans la\nconception de ce daemon permet à un utilisateur mal intentionné\nd'injecter dans les données transmise à syslog du code executable avec\nles privilèges de RPC.statd (typiquement ceux de root).\n\n## Contournement provisoire\n\nDésactiver RPC.statd ou NFS s'il n'est pas utile au fonctionnement du\nsystème et des réseaux.\n\n## Solution\n\nMettre à jour RPC.statd selon le système que vous avez :\n\n-   Connectiva Linux 5.1:\n\n        ftp://ftp.conectiva.com.br/pub/conectiva/atualizacoes/5.1/i386/nfs-utils-0.1.9.1-4cl.i386.rpm\n\n-   Connectiva Linux 5.0:\n\n        ftp://ftp.conectiva.com.br/pub/conectiva/atualizacoes/5.0/i386/nfs-utils-0.1.9.1-3cl.i386.rpm\n\n-   Connectiva Linux 4.2:\n\n        ftp://ftp.conectiva.com.br/pub/conectiva/atualizacoes/4.2/i386/nfs-utils-0.1.9.1-3cl.i386.rpm\n\n-   Connectiva Linux 4.1:\n\n        ftp://ftp.conectiva.com.br/pub/conectiva/atualizacoes/4.1/i386/nfs-utils-0.1.9.1-3cl.i386.rpm\n\n-   Connectiva Linux 4.0es:\n\n        ftp://ftp.conectiva.com.br/pub/conectiva/atualizacoes/4.0es/i386/nfs-utils-0.1.9.1-3cl.i386.rpm\n\n-   Connectiva Linux 4.0:\n\n        ftp://ftp.conectiva.com.br/pub/conectiva/atualizacoes/4.0/i386/nfs-utils-0.1.9.1-3cl.i386.rpm\n\n-   Debian Linux pour powerpc:\n\n        http://http.us.debian.org/debian/dists/unstable/main/binary-powerpc/net/nfs-common_0.1.9.1-1.deb\n\n-   Debian Linux pour PC:\n\n        http://http.us.debian.org/debian/dists/unstable/main/binary-i386/net/nfs-common_0.1.9.1-1.deb\n\n-   Debian Linux pour sparc:\n\n        http://http.us.debian.org/debian/dists/unstable/main/binary-sparc/net/nfs-common_0.1.9.1-1.deb\n\n-   Debian Linux pour alpha:\n\n        http://http.us.debian.org/debian/dists/potato/main/binary-alpha/net/nfs-common_0.1.9.1-1.deb\n\n-   RedHat Linux pour sparc:\n\n        ftp://updates.redhat.com/6.2/sparc/nfs-utils-0.1.9.1-1.sparc.rpm\n\n-   RedHat Linux i386:\n\n        ftp://updates.redhat.com/6.2/i386/nfs-utils-0.1.9.1-1.i386.rpm\n\n-   RedHat Linux alpha:\n\n        ftp://updates.redhat.com/6.2/alpha/nfs-utils-0.1.9.1-1.alpha.rpm\n\n-   Trustix Trustix Secure Linux\n\n        ftp://ftp.trustix.com/pub/Trustix/updates/1.1/RPMS/nfs-utils-0.1.9.1-1tr.i586.rpm\n\n-   Suse Linux selon la version :\n\n        ftp://ftp.suse.com/pub/suse/i386/update/6.4/nl/knfsd.rpm\n\n        ftp://ftp.suse.com/pub/suse/i386/update/6.4/zql/knfsd.rpm\n\n        ftp://ftp.suse.com/pub/suse/i386/update/6.3/nl/knfsd.rpm\n\n        ftp://ftp.suse.com/pub/suse/i386/update/6.3/zql/knfsd.rpm\n\n        ftp://ftp.suse.com/pub/suse/i386/update/6.2/nl/linuxnfs.rpm\n\n        ftp://ftp.suse.com/pub/suse/i386/update/6.2/zql/linuxnfs.rpm\n\n        ftp://ftp.suse.com/pub/suse/i386/update/6.1/nl/linuxnfs.rpm\n\n        ftp://ftp.suse.com/pub/suse/i386/update/6.1/zql/linuxnfs.rpm\n\n        ftp://ftp.suse.com/pub/suse/axp/update/6.4/nl/knfsd.rpm\n\n        ftp://ftp.suse.com/pub/suse/axp/update/6.4/zql/knfsd.rpm\n\n        ftp://ftp.suse.com/pub/suse/axp/update/6.3/nl/knfsd.rpm\n\n        ftp://ftp.suse.com/pub/suse/axp/update/6.3/zql/knfsd.rpm\n\n        ftp://ftp.suse.com/pub/suse/axp/update/6.1/nl/linuxnfs.rpm\n\n        ftp://ftp.suse.com/pub/suse/axp/update/6.1/zql/linuxnfs.rpm\n\n        ftp://ftp.suse.com/pub/suse/ppc/update/6.4/nl/knfsd.rpm\n\n        ftp://ftp.suse.com/pub/suse/ppc/update/6.4/zql/knfsd.rpm\n\nNota : Cette liste n'est pas exhaustive car elle s'aggrandit de jour en\njours. Il existe, depuis longtemps, de nombreuses vulnérabilités liées\nRPC.statd pour SunOS et solaris. Pour savoir s'il existe une mise à jour\nde RPC.statd pour votre système, contactez votre éditeur.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis du CERT/CC",
+      "url": "http://www.cert.org/advisories/CA-2000-17.html"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-039",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès root à distance sans compte utilisateur"
+    }
+  ],
+  "summary": "Le daemon RPC.statd intervient dans le fonctionnement du service NFS\nsous Unix. Ce daemon possède une vulnérabilité permettant à un\nutilisateur distant d'éxécuter du code ou d'accéder à un shell avec les\nprivilèges root.\n\nLes exploits utilisant les vulnérabilités de RPC.statd se multiplient\ntoujours.\n",
+  "title": "vulnérabilités de RPC.statd sous Unix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2000-17 du CERT/CC",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis du CIAC",
+      "url": "http://www.ciac.org/ciac/bulletins/k-069.shtml"
+    }
+  ]
+}

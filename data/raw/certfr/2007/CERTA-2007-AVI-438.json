@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes versions de Cisco IOS mettant en œuvre le service  <TT>Line Printer Daemon</TT>.</P>  <P><SPAN class=\"textit\">Remarque : le service <TT>ldp</TT> n'est  pas activé par défaut.</SPAN></P>",
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire dans la fonction\nsprintf() du démon Line Printer Deamon peut être exploitée par une\npersonne malveillante, au moyen d'un nom d'hôte spécialement construit,\nafin de provoquer un déni de service ou d'exécuter du code arbitraire à\ndistance.\n\n## Contournement provisoire\n\nUn contournement provisoire est proposé par Cisco sur son bulletin de\nsécurité, disponible à l'adresse suivante :\n\n    http://www.cisco.com/warp/public/707/cisco-sr-20071010-lpd.shtml\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2007-AVI-438",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-10-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Cisco IOS permet à un utilisateur distant\nmalintentionné de provoquer un déni de service ou d'exécuter du code\narbitraire.\n",
+  "title": "Vulnérabilité dans Cisco IOS Line Printer Daemon",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco ID 99109 du 10 octobre 2007",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sr-20071010-lpd.shtml"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IRM ID 024 du 10 octobre 2007",
+      "url": "http://www.irmplc.com/index.php/155-Advisory-024"
+    }
+  ]
+}

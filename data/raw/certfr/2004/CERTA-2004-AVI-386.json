@@ -1,0 +1,96 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apple Mac OS X Server v10.2.8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple Mac OS X v10.2.8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple Mac OS X v10.3.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple Mac OS X Server v10.3.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   De multiples vulnérabilités dans le serveur web Apache permet à un\n    utilisateur malveillant d'élever localement ses privilèges,\n    d'effectuer un déni de service à distance et d' exécuter du code\n    arbitraire sur le serveur vulnérable (cf. références CAN-2004-1082,\n    CAN-2003-0020, CAN-2003-0987, CAN-2004-0174, CAN-2004-0488,\n    CAN-2004-0492, CAN-2004-0885, CAN-2004-0940, CAN-2004-1083,\n    CAN-2004-1084 et bulletin de sécurité CERTA-2004-AVI-370 du CERTA) ;\n-   une vulnérabilité est présente dans Apache 2 permettant à un\n    individu mal intentionné d'effectuer un déni de service à distance\n    ou d'élever ses privilèges sur le serveur affecté (cf. références\n    CAN-2004-0747, CAN-2004-0786, CAN-2004-0751, CAN-2004-0748 et\n    bulletin de sécurité CERTA-2004-AVI-313 du CERTA) ;\n-   Deux vulnérabilités présentes dans Appkit permettent à une personne\n    malveillante d'exécuter du code arbitraire, d'effectuer un déni de\n    service ou de porter atteinte à la confidentialité des données (cf.\n    références CAN-2004-1081, CAN-2004-0803, CAN-2004-0804 et\n    CAN-2004-0886) ;\n-   une vulnérabilité découverte dans Cyrus IMAP permet à un utilisateur\n    mal intentionné de porter atteinte à la confidentialité des données\n    portant sur les boîtes de messagerie électroniques présentes sur le\n    système (cf. références CAN-2004-1089 et bulletin de sécurité\n    CERTA-2004-AVI-379 du CERTA) ;\n-   une vulnérabilité dans HIToolbox permet à un utlisateur mal\n    intentionné de forcer la fermeture de l'application au moyen d'une\n    combinaison de touche spéciale (cf. référence CAN-2004-1085) ;\n-   une vulnérabilité dans le protocole d'authentification Kerberos\n    permet à une personne malveillante d'effectuer un déni de service\n    (cf. références CAN-2004-0642, CAN-2004-0643, CAN-2004-0644,\n    CAN-2004-0772 et bulletin de sécurité CERTA-2004-AVI-362 du CERTA) ;\n-   une vulnérabilité découverte dans Postfix permet à un individu mal\n    intentionné d'envoyer des messages électronique sans avoir été\n    correctement authentifié par un serveur Postfix utilisant CRAM-MD5\n    (cf. référence CAN-2004-1088) ;\n-   une vulnérabilité de type débordement de mémoire est présente dans\n    PSNormalizer. Lors d'une conversion de document PostScript en PDF\n    (Portable Document Format). Cette vulnérabilité permet à une\n    personne malveillante d'exécuter du code arbitraire à distance (cf.\n    référence CAN-2004-1086) ;\n-   une vulnérabilité présente dans le serveur de flux QuickTime permet\n    à un utilisateur mal intentionné d'effectuer un déni de service au\n    moyen de requêtes malicieusement constituées (cf. référence\n    CAN-2004-1123) ;\n-   Deux vulnérabilités découvertes dans le navigateur Internet Safari\n    permettent à une personne malveillante d'afficher de fausses\n    informations dans Safari, notamment au moyen d'une page HTML\n    malicieusement constituée (cf. références CAN-2004-1121 et\n    CAN-2004-1122) ;\n-   une vulnérabilité dans Terminal affiche à l'utilisateur que l'option\n    'Secure Keyboard Entry' est activée alors qu'elle ne l'est pas (cf.\n    référence CAN-2004-1087).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité CERTA-2004-AVI-370 du CERTA :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2004-AVI-370/"
+    },
+    {
+      "title": "Bulletin de sécurité CERTA-2004-AVI-313 du CERTA :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2004-AVI-313/"
+    },
+    {
+      "title": "Bulletin de sécurité CERTA-2004-AVI-362 du CERTA :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2004-AVI-362/"
+    },
+    {
+      "title": "Bulletin de sécurité CERTA-2004-AVI-379 du CERTA :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2004-AVI-379/"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-386",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-12-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités découvertes dans le système d'exploitation\nMac OS X d'Apple peuvent être exploitées par un utilisateur mal\nintentionné afin de réaliser un déni de service, d'exécuter du code\narbitraire, d'élever ses privilèges ou de porter atteinte à l'intégrité\ndes données.\n",
+  "title": "Multiples vulnérabilités dans Mac OS X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité d'Apple du 02 décembre 2004",
+      "url": "http://docs.info.apple.com/article.html?artnum=61798"
+    }
+  ]
+}

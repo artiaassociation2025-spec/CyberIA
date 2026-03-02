@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD version 6.4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD version 6.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD version 7.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD version 7.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans FreeBSD :\n\n-   la première est relative à la mise en œuvre des tubes (pipe) et\n    permet à un utilisateur local de provoquer un déni de service ou\n    d'exécuter du code arbitraire dans le contexte du noyau. Cette\n    vulnérabilité ne touche que les versions 6.x de FreeBSD ;\n-   la seconde vulnérabilité touche le composant devfs (device file\n    system) et permet à un utilisateur local de provoquer un déni de\n    service ou d'exécuter du code arbitraire dans le contexte du noyau.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-09:14.devfs du 02 octobre    2009 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-09:14.devfs.asc"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-09:13.pipe du 02 octobre    2009 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-09:13.pipe.asc"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-425",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-10-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans FreeBSD permettent à un utilisateur\nlocal de provoquer un déni de service ou d'exécuter du code arbitraire\navec des droits élevés.\n",
+  "title": "Multiples vulnérabilités de FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité FreeBSD du 02 octobre 2009",
+      "url": null
+    }
+  ]
+}

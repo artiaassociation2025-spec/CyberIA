@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>CUPS 1.x.</p>",
+  "content": "## Description\n\nUne erreur a été identifiée dans le serveur d'impression CUPS. Elle est\nrelative à la fonction IppReadIO() intervenant dans la mise en œuvre du\nprotocole IPP (Internet Printing Protocol). Cette vulnérabilité de type\ndébordement de mémoire permet à un utilisateur distant de provoquer un\ndéni de service ou d'exécuter du code arbitraire par le biais d'une\nrequête IPP construite de façon particulière.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention du\ncorrectif (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-4351",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4351"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de Red Hat RHSA-2007:1020 du 31    octobre 2007 :",
+      "url": "http://www.rhn.redhat.com/errata/RHSA-2007-1020.html"
+    },
+    {
+      "title": "Bulletin de sécurité de SuSE SUSE-SA:2007:058 du 31 octobre    2007 :",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2007-10/msg00010.html"
+    },
+    {
+      "title": "Bulletin de sécurité de CUPS du 31 octobre 2007 :",
+      "url": "http://www.cups.org/str.php?L2561"
+    },
+    {
+      "title": "Bulletin de sécurité de Mandriva MDKSA-2007:204 du 01    novembre 2007 :",
+      "url": "http://www.mandriva.com/en/security/advisories?name=MDKSA-2007:204"
+    },
+    {
+      "title": "Bulletin de sécurité de Ubuntu USN-539-1 du 06 novembre    2007 :",
+      "url": "http://www.ubuntu.com/usn/usn-539-1"
+    },
+    {
+      "title": "Site de CUPS :",
+      "url": "http://www.cups.org"
+    },
+    {
+      "title": "Note de vulnérabilité de l'US-CERT VU#446897 du 01 novembre    2007 :",
+      "url": "http://www.kb.cert.org/vuls/id/446897"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-467",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-11-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Mandriva, SuSE et Red Hat.",
+      "revision_date": "2007-11-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Ubuntu.",
+      "revision_date": "2007-11-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans CUPS permet à un utilisateur distant de provoquer\nun déni de service ou d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité dans CUPS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CUPS du 31 octobre 2007",
+      "url": null
+    }
+  ]
+}

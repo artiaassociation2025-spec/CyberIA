@@ -1,0 +1,98 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>OpenSSL, versions 0.9.8d et précédentes.</P>",
+  "content": "## Description\n\nUne erreur entache l'implantation de l'algorithme de multiplication avec\nréduction modulaire de Montgomery. Cette erreur permet à un utilisateur\nmalveillant de reconstruire la clé secrète utilisée.\n\n  \n  \n\nUn défaut de vérification de taille de tampon mémoire existe dans la\nfonction SSL_get_shared_ciphers. Cette vulnérabilité permet à un\nutilisateur malveillant de provoquer un déni de service et lui\npermettrait d'exécuter du code arbitraire à distance.\n\n## Solution\n\nLa version 0.9.8-stable corrige ces problèmes. Se référer au bulletin de\nsécurité de l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5135",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5135"
+    },
+    {
+      "name": "CVE-2007-4995",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4995"
+    },
+    {
+      "name": "CVE-2007-3108",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3108"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SR:2007:020 du 12 octobre    2007 :",
+      "url": "http://www.novell.com/linux/security/advisories/2007_20_sr.html"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD ID 17 du 10 octobre 2007 :",
+      "url": "http://www.openbsd.org/errata40.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:193 du 04 octobre    2007 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:193"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2007:0964 du 12 octobre    2007 :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2007:0964.html"
+    },
+    {
+      "title": "Bulletin de sécurité Blue Coat du 27 novembre 2007 :",
+      "url": "http://www.bluecoat.com/support/securityadvisories/advisory_openssl_rsa_key_reconstruction_vulnerability"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-07:08 du 03 octobre 2007 :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-07:08.openssl.asc"
+    },
+    {
+      "title": "Correctif OpenSSL du 29 juin 2007 :",
+      "url": "http://openssl.org/news/patch-CVE-2007-3108.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1379-1 du 02 octobre 2007 :",
+      "url": "http://www.debian.org/security/2007/dsa-1379"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-522-1 du 29 septembre 2007    :",
+      "url": "http://www.ubuntulinux.org/usn/usn-522-1"
+    },
+    {
+      "title": "Bulletin OpenSSL du 19 septembre 2007 :",
+      "url": "http://cvs.openssl.org/chngview?cn=16587"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200710-06 du 07 octobre    2007 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200710-06.xml"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-423",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-10-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence CVE-2007-4995 et des références aux bulletins de sécurité OpenBSD, Gentoo, Red Hat, SuSE et Mandriva.",
+      "revision_date": "2007-10-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence Blue Coat.",
+      "revision_date": "2007-11-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités affectent OpenSSL. La première permet à un\nutilisateur malveillant d'accéder à des données sensibles. La seconde\npermettrait à un utilisateur malveillant d'exécuter du code arbitraire à\ndistance.\n",
+  "title": "Vulnérabilités d'OpenSSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Ubuntu USN-522-1 du 29 septembre 2007",
+      "url": null
+    }
+  ]
+}

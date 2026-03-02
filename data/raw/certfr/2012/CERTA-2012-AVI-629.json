@@ -1,0 +1,95 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Versions antérieures à Apache Tomcat 7.0.30",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Versions antérieures à Apache Tomcat 5.5.36",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Versions antérieures à Apache Tomcat 6.0.36",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-3439",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-3439"
+    },
+    {
+      "name": "CVE-2012-2733",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-2733"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Apache Tomcat version 7.0.30 du 06    septembre 2012",
+      "url": "http://tomcat.apache.org/security-7.html#Fixed_in_Apache_Tomcat_7.0.30"
+    },
+    {
+      "title": "Bulletin de sécurité Apache Tomcat 5.5.36 du 10 octobre    2012",
+      "url": "http://tomcat.apache.org/security-5.html#Fixed_in_Apache_Tomcat_5.5.36"
+    },
+    {
+      "title": "Bulletin de sécurité Apache Tomcat version 6.0.36 du 19    octobre 2012",
+      "url": "http://tomcat.apache.org/security-6.html#Fixed_in_Apache_Tomcat_6.0.36"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-629",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-11-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été corrigées dans <span class=\"textit\">Apache\nTomcat</span>. Elles permettent à un attaquant de contourner la\npolitique de sécurité et de provoquer un déni de service à distance. La\nplus critique concerne un problème d'implémentation dans le composant\nd'authentification Digest. Elle permet dans certaines circonstances de\nmener une attaque par rejeu.\n",
+  "title": "Multiples vulnérabilités dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache Tomcat version 6.0.36 du 19 octobre 2012",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache Tomcat version 5.5.36 du 10 octobre 2012",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache Tomcat version 7.0.30 du 06 septembre 2012",
+      "url": null
+    }
+  ]
+}

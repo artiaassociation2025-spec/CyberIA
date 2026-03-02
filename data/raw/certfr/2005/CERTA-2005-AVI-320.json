@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IDSMC version 2.0 et 2.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "CiscoWorks Monitoring Center for Security (Security Monitor ou Secmon) de la version 1.1 à la version 2.0 ainsi que la version 2.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCiscoWorks Management Center for IDS Sensors (IDSMC) est un logiciel\npermettant la configuration et la gestion des signatures pour les IDS\n(Intrusion Detection System) et les IPS (Intrusion Prevention System)\nCisco. Monitoring Center for Security (Secmon), quant à lui, permet de\ncollecter, visualiser et manipuler des événements envoyés par des\néquipements Cisco.\n\nUne erreur dans la validation des certificats SSL (Secure Sockets Layer)\nde ces produits permet à un utilisateur mal intentionné du réseau local\nde substituer une machine arbitraire à un IDS ou à un IPS. Il peut alors\nenvoyer de fausses données à IDSMC ou Secmon.\n\n## Solution\n\nSe référer au bulletin de sécurité Cisco pour appliquer le correctif\napproprié (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2005-AVI-320",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-08-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Cisco IDSMC et CiscoWorks Monitoring for Security\npermet à un utilisateur mal intentionné de porter atteinte à l'intégrité\ndes données.\n",
+  "title": "Vulnérabilité dans Cisco IDS Management Software",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 66142 du 22 août 2005",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20050824-idsmc.shtml"
+    }
+  ]
+}

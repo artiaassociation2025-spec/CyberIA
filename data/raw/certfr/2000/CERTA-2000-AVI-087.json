@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>La plupart des systèmes proposant le module LPRng.</P>",
+  "content": "## Description\n\nUne vulnérabilité liée à l'exploitation de la librairie glibc (Cf.\nAlerte CERTA-2000-ALE-014 : Vulnérabilité dans la bibliothèque glibc\nsous Unix) permet à un utilisateur mal intentionné d'effectuer un\ndébordement de mémoire à distance dans le module LPRng. Ce débordement\nde mémoire peut avoir comme conséquence un déni de service d'impression\nlocal ou en réseau, mais peut aussi, s'il est bien mené, conduire à\nl'exécution de code arbitraire.\n\n## Contournement provisoire\n\nLe port utilisé par le module d'impression LPRng est le port 515 en TCP.\nSon accès de l'extérieur du réseau doit être bloqué par le\ngarde-barrière.\n\n## Solution\n\nSupprimer LPRng de toute machine ne l'utilisant pas.\n\nConsulter l'éditeur du système pour obtenir le correctif à appliquer.\n\nPour les systèmes :\n\n-   RedHat, appliquer le correctif suivant :\n\n        http://www.redhat.com/support/errata/RHSA-2000-065-06.html\n\n-   Pour Caldera :\n\n        http://www.calderasystems.com/support/security/advisories/CSSA-2000-033.0.txt\n\n-   Pour les anciennes versions de FreeBSD :\n\n        ftp://FreeBSD.org/pub/FreeBSD/CERT/advisorie/FreeBSD-SA-00:56.lprng.asc\n\nNota : Si l'éditeur n'a pas de correctif, ou si LPRng est un ajout\nexterne à la distribution utilisée, passer à la version 3.6.25 :\n\n    ftp://ftp.astart.com/pub/LPRng/LPRng/LPRng-3.6.25.tgz\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "L'avis de sécurité du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2000-22.html"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-087",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-12-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "LPRng est un module d'impression équivalent à lpd de plus en plus\nprésent dans la plupart des distributions Unix ou Linux.\n\nUne vulnérabilité de ce module permet à un utilisateur mal intentionné\nd'effectuer à distance un débordement de mémoire pouvant conduire à\nl'exécution de code arbitraire sur la machine victime.\n",
+  "title": "Problèmes de validation pour LPRng",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2000-22 du CERT/CC",
+      "url": null
+    }
+  ]
+}

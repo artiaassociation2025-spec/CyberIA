@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "NetWeaver (Visual Composer development server) versions VCFRAMEWORK 7.50 sans le dernier correctif de sécurité",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "L'éditeur indique que la vulnérabilité CVE-2025-31324 est activement exploitée. \n\nCette information est disponible sur la foire aux questions relative à cette vulnérabilité  [1]. L'accès à ce lien nécessite un compte utilisateur pour le support SAP. \n\nCette vulnérabilité, ajoutée au bulletin de sécurité SAP du 08 avril 2025, nécessite un correctif disponible depuis le 22 avril 2025. La mise à jour du 08 avril 2025 ne semble donc pas couvrir cette vulnérabilité.",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-31324",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-31324"
+    }
+  ],
+  "links": [
+    {
+      "title": "[1] FAQ sur l'exploitation de la vulnérabilité CVE-2025-31324",
+      "url": "https://me.sap.com/notes/3596125"
+    },
+    {
+      "title": "Avis CERTFR-2025-AVI-0285 du 08 avril 2025",
+      "url": "https://cert.ssi.gouv.fr/avis/CERTFR-2025-AVI-0285/"
+    }
+  ],
+  "reference": "CERTFR-2025-AVI-0350",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-04-25T00:00:00.000000"
+    },
+    {
+      "description": "Correction dune répétition dans la source.",
+      "revision_date": "2025-05-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans SAP NetWeaver. Elle permet à un attaquant de provoquer une atteinte à l'intégrité des données et un contournement de la politique de sécurité.",
+  "title": "Vulnérabilité dans SAP NetWeaver",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-04-08",
+      "title": "Bulletin de sécurité SAP april-2025",
+      "url": "https://support.sap.com/en/my-support/knowledge-base/security-notes-news/april-2025.html"
+    }
+  ]
+}

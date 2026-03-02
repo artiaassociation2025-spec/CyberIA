@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "phpMyAdmin versions 4.9.x antérieures à 4.9.8",
+      "product": {
+        "name": "phpMyAdmin",
+        "vendor": {
+          "name": "phpMyAdmin",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "phpMyAdmin versions 5.1.x antérieures à 5.1.2",
+      "product": {
+        "name": "phpMyAdmin",
+        "vendor": {
+          "name": "phpMyAdmin",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-23807",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-23807"
+    },
+    {
+      "name": "CVE-2022-23808",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-23808"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-069",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-01-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans phpMyAdmin. Elles\npermettent à un attaquant de provoquer un contournement de la politique\nde sécurité et une injection de code indirecte à distance (XSS).\n",
+  "title": "Multiples vulnérabilités dans phpMyAdmin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité phpMyAdmin PMASA-2022-2 du 10 janvier 2022",
+      "url": "https://www.phpmyadmin.net/security/PMASA-2022-2"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité phpMyAdmin PMASA-2022-1 du 10 janvier 2022",
+      "url": "https://www.phpmyadmin.net/security/PMASA-2022-1"
+    }
+  ]
+}

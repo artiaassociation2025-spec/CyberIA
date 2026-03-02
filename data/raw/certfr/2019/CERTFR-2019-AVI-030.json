@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "APT sans le dernier correctif de sécurité sur Ubuntu 12.04 ESM, 14.04 LTS, 16.04 LTS, 18.04 LTS, 18.10",
+      "product": {
+        "name": "Ubuntu",
+        "vendor": {
+          "name": "Ubuntu",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "APT versions antérieures à 1.4.9 sur Debian",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2019-3462",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-3462"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2019-AVI-030",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2019-01-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans le gestionnaire de paquets APT .\nElle permet à un attaquant de provoquer une exécution de code arbitraire\nà distance.\n",
+  "title": "Vulnérabilité dans le gestionnaire de paquets APT",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ubuntu usn-3863-1 du 22 janvier 2019",
+      "url": "https://usn.ubuntu.com/3863-1/"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ubuntu usn-3863-2 du 22 janvier 2019",
+      "url": "https://usn.ubuntu.com/3863-2/"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian du 22 janvier 2019",
+      "url": "https://lists.debian.org/debian-security-announce/2019/msg00010.html"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>SuSE 7.2 et 7.3.</P>",
+  "content": "## Description\n\nLe package susehelp est basé sur un service http, et fournit des pages\nd'aide en ligne aux utilisateurs. Il contient plusieurs scripts CGI qui\nprésentent des vulnérabilités, et permettent ainsi à un utilisateur mal\nintentionné d'exécuter du code arbitraire sur la machine avec les droits\ndu serveur httpd.  \n\nPar défaut, ce service est démarré, et les droits du serveur sont ceux\nde l'utilisateur wwwrun.\n\n## Contournement provisoire\n\nArrêter le démon httpd ou filtrer l'accès à ce service pour limiter\nl'exploitation de ces vulnérabiltés.\n\n## Solution\n\nMettre à jour le package susehelp suivant la distribution utilisée :\n\n-   SuSE-7.3 :\n\n        ftp://ftp.suse.com/pub/suse/i386/update/7.3/doc1/susehelp-2001.09.06-110.norach.rpm\n\n-   SuSE-7.2 :\n\n        ftp://ftp.suse.com/pub/suse/i386/update/7.2/doc1/susehelp-2001.05.14-41.noarch.rpm\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-149",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-11-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Des vulnérabilités dans le package <span class=\"textit\">susehelp</span>\npermet à un utilisateur mal intentionné d'exécuter du code arbitraire\nsur la machine.\n",
+  "title": "Vulnérabilités dans le package susehelp de SuSE",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité SuSE",
+      "url": "http://www.securityfocus.com/advisories/3675"
+    }
+  ]
+}

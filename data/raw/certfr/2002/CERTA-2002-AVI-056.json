@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Plusieurs implémentations de machines virtuelles Java livrées  sur de nombreux systèmes d'exploitation (Solaris, Linux, Windows,  HP-UX, Tru64 Unix, OpenVms, Irix), des navigateurs (Internet  Explorer, Netscape Navigator) ou outils de supervision (Compaq  Insight Manager, Compaq Management Agent).</P>  <P>Pour connaître les versions des systèmes affectés par cette  vulnérabilité, consultez les différents bulletins de sécurité  mentionnés à la section Documentation.</P>",
+  "content": "## Description\n\nUne vulnérabilité d'un composant de la machine virtuelle Java (JRE\nBytecode Verifier chez Sun et Virtual Machine Verifier chez Microsoft),\npermet à un utilisateur mal intentionné d'exécuter du code arbitraire en\ncontournant les mécanismes de sécurité restreignant les privilèges d'une\nappliquette (Sandbox) s'exécutant dans une machine virtuelle Java.\n\n## Solution\n\nAppliquez le correctif fourni par l'éditeur :\n\n-   Bulletin de sécurité \\#00218 de Sun :\n\n        http://sunsolve.sun.com/pub-cgi/retrieve.pl?type=0&doc=secbull%2F218&display=plain\n\n-   Bulletin de sécurité MS02-013 de Microsoft :\n\n        http://www.microsoft.com/technet/security/bulletin/MS02-013.asp\n\n-   Bulletin de sécurité HPSBUX0203-186 de Hewlett-Packard :\n\n        http://archives.neohapsis.com/archives/hp/2002-q1/0084.html\n\n-   Bulletin de sécurité SSRT0822 de Compaq :\n\n        http://archives.neohapsis.com/archives/tru64/2002-q2/0021.html\n\n-   Avis de sécurité Netscape :\n\n        http://www.netscape/com/security/\n\n-   Bulletin de sécurité 20030303-01-I de SGI :\n\n        ftp://patches.sgi.com/support/free/security/advisories/20030303-01-I\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Référence CVE CAN-2002-0076 :",
+      "url": "http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2002-0076"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-056",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-03-19T00:00:00.000000"
+    },
+    {
+      "description": "seconde version : prise en compte du bulletin de sécurité SSRT0822 de Compaq.",
+      "revision_date": "2002-06-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout bulletin de sécurité de SGI. Ajout référence CVE.",
+      "revision_date": "2003-04-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Il est possible d'exécuter du code arbitraire avec les privilèges de\nl'utilisateur grâce à une appliquette Java habilement conçue.\n",
+  "title": "Vulnérabilité de la machine virtuelle Java",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Seconde version du bulletin de sécurité Microsoft MS02-013",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SSRT0822 de Compaq",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #00218 de Sun",
+      "url": null
+    }
+  ]
+}

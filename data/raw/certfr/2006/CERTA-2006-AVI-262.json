@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>MacOS X 10.4 jusqu'à la version 10.4.6.</p>",
+  "content": "## Description\n\nDe multiples vulnérabilités affectent Apple MacOS X :\n\n-   Une vulnérabilité dans le serveur AFP (Apple File Protocol) permet à\n    un utilisateur mal intentionné de porter atteinte à la\n    confidentialité des données (CVE-2006-1468) ;\n-   une vulnérabilité dans ClamAV permet à un utilisateur mal\n    intentionné d'exécuter du code arbitraire à distance (CVE-2006-1989)\n    ;\n-   une vulnérabilité dans ImageIO permet à un utilisateur mal\n    intentionné d'exécuter du code arbitraire au moyen d'un fichier\n    image au format TIFF habilement constitué (CVE-2006-1469) ;\n-   une vulnérabilité dans launchd permet à un utilisateur local\n    authentifié d'élever ses privilèges (CVE-2006-1471) ;\n-   une vulnérabilité dans OpenLDAP permet à un utilisateur mal\n    intentionné d'exécuter du code arbitraire à distance au moyen d'une\n    requête LDAP habilement constituée (CVE-2006-1470).\n\n## Solution\n\nMettre à jour Apple MacOS X en version 10.4.7. Se référer au bulletin de\nsécurité de l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-1470",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1470"
+    },
+    {
+      "name": "CVE-2006-1468",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1468"
+    },
+    {
+      "name": "CVE-2006-1471",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1471"
+    },
+    {
+      "name": "CVE-2006-1989",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1989"
+    },
+    {
+      "name": "CVE-2006-1469",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1469"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2006-AVI-262",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-06-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans Apple MacOS X permettent à un\nutilisateur mal intentionné de porter atteinte à la confidentialité des\ndonnées, de réaliser un déni de service ou d'exécuter du code arbitraire\nà distance sur la plate-forme vulnérable.\n",
+  "title": "Vulnérabilités de Apple MacOS X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apple du 27 juin 2006",
+      "url": "http://docs.info.apple.com/article.html?artnum=303973"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Internet Explorer 6 pour Windows ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Internet Explorer 7 pour Windows.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Internet Explorer 5.01 pour Windows ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent Internet Explorer :\n\n-   certaines (CVE-2008-2254, CVE-2008-2255, CVE-2008-2257 et\n    CVE-2008-2258), concernent l'accès dans certaines conditions à des\n    zones de la mémoire non-initialisées ;\n-   une autre (CVE-2008-2256), concerne l'accès à des objets supprimés\n    ou non-initialisés ;\n-   une dernière (CVE-2008-2259), affecte la fonctionnalité aperçu avant\n    l'impression et consiste en une mauvaise gestion de la validation de\n    certains arguments.\n\nToutes ces vulnérabilités peuvent être exploitées à distance par une\npersonne malveillante pour exécuter du code arbitraire par le biais\nd'une page Web spécifiquement conçue.\n\nBien que ces vulnérabilités soient corrigées, il est bon de rappeler\nqu'utiliser un compte n'ayant pas des droits d'administration limite\nl'impact de l'exploitation de ces vulnérabilités.\n\n## Solution\n\nMicrosoft met à disposition un correctif cumulatif identifié comme\ncritique pour Internet Explorer. Se référer au bulletin de sécurité\nMS08-045 pour l'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2258",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2258"
+    },
+    {
+      "name": "CVE-2008-2257",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2257"
+    },
+    {
+      "name": "CVE-2008-2255",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2255"
+    },
+    {
+      "name": "CVE-2008-2254",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2254"
+    },
+    {
+      "name": "CVE-2008-2259",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2259"
+    },
+    {
+      "name": "CVE-2008-2256",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2256"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2008-AVI-412",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-08-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectant Microsoft Internet Explorer\npermettent d'exécuter du code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS08-045 du 12 août 2008",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-045.mspx"
+    }
+  ]
+}

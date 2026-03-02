@@ -1,0 +1,112 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les noyaux Linux 2.4.37.4 et antérieurs ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les noyaux 2.6.30.4 et antérieurs.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité récente affectant les noyaux Linux a été rendue\npublique. Elle concerne un déréférencement de pointeur NULL à la\ncréation de sockets pour quelques protocoles et permet l'élévation de\nprivilèges.\n\n## Solution\n\nLe correctif actuel se trouve dans le Git de kernel.org mais devrait\nêtre rapidement intégré dans les différentes distributions. (cf. section\nDocumentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2692",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2692"
+    }
+  ],
+  "links": [
+    {
+      "title": "Soumission du 13 août 2009 dans le Git de kernel.org :",
+      "url": "http://git.kernel.org/?p=linux/kernel/git/torvalds/linux-2.6.git;a=commit;h=e694958388c50148389b0e9b9e9e8945cf0f1b98"
+    },
+    {
+      "title": "Bulletin de sécurité Suse SUSE-SA:2009:045 du 20 août 2009    :",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2009-08/msg00007.html"
+    },
+    {
+      "title": "Article de l'ISC SANS 6964 du 14 août 2009 :",
+      "url": "http://isc.sans.org/diary.html?storyid=6964"
+    },
+    {
+      "title": "Bulletins de sécurité Debian DSA-1862 du 14 août 2009 et    DSA-1864 du 16 août 2009 :",
+      "url": "http://www.us.debian.org/security/2009/dsa-1864"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-819-1 du 19 août 2009 :",
+      "url": "http://www.ubuntu.com/usn/usn-819-1"
+    },
+    {
+      "title": "Bulletins d'annonce d'erreur RedHat 516949 du 14 août 2009    :",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=516949"
+    },
+    {
+      "title": "Bulletins de sécurité Debian DSA-1862 du 14 août 2009 et    DSA-1864 du 16 août 2009 :",
+      "url": "http://www.us.debian.org/security/2009/dsa-1862"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2009:205 du 17 août    2009 :",
+      "url": "http://www.mandriva.com/en/security/advisories?name=MDVSA-2009:205"
+    },
+    {
+      "title": "Bulletins de sécurité Fedora 10 et 11 du 15 août 2009 :",
+      "url": "https://www.redhat.com/archives/fedora-package-announce/2009-August/msg00728.html"
+    },
+    {
+      "title": "Bulletins de sécurité Fedora 10 et 11 du 15 août 2009 :",
+      "url": "https://www.redhat.com/archives/fedora-package-announce/2009-August/msg00727.html"
+    },
+    {
+      "title": "Bulletins d'annonce d'erreur RedHat 516949 du 14 août 2009    :",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2009-2692"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-337",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Mandriva, Fedora et Debian.",
+      "revision_date": "2009-08-18T00:00:00.000000"
+    },
+    {
+      "description": "correction de coquille et ajout de la référence au bulletin de sécurité Ubuntu.",
+      "revision_date": "2009-08-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Suse.",
+      "revision_date": "2009-08-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité affectant les noyaux Linux et permettant une élévation\nde privilèges a été corrigée.\n",
+  "title": "Vulnérabilité du noyau Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin d'annonce d'erreur RedHat 516949 du 14 août 2009",
+      "url": null
+    }
+  ]
+}

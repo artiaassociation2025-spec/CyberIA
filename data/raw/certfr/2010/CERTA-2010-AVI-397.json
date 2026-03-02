@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Branche 2.x de phpMyAdmin : versions inférieures à 2.11.10.1 ;",
+      "product": {
+        "name": "phpMyAdmin",
+        "vendor": {
+          "name": "phpMyAdmin",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "branche 3.x de phpMyAdmin : versions inférieures à 3.3.5.1 .",
+      "product": {
+        "name": "phpMyAdmin",
+        "vendor": {
+          "name": "phpMyAdmin",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans phpMyAdmin :\n\n-   une vulnérabilité (CVE-2010-3055) permet à une personne malveillante\n    d'insérer du code PHP dans un fichier de configuration, via le\n    script d'installation. L'exploitation de cette faille ne peut\n    réussir que si les bonnes pratiques d'installation de phpMyAdmin\n    n'ont pas été suivies, et que les scripts d'installation n'ont pas\n    été supprimés une fois celle-ci terminée. Cette faille ne touche que\n    les versions inférieures à 2.11.10.1 ;\n-   les versions inférieures à 3.3.5.1 pour la branche 3.x et\n    inférieures à 2.11.10.1 pour la branche 2.x sont vulnérables à une\n    attaque de type injection de code indirecte à distance sur de\n    nombreuses pages (CVE-2010-3056).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3056",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3056"
+    },
+    {
+      "name": "CVE-2010-3055",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3055"
+    }
+  ],
+  "links": [
+    {
+      "title": "Notes de sécurité phpMyAdmin du    20 août 2010 :",
+      "url": "http://www.phpmyadmin.net/home_page/security/PMASA-2010-5.php"
+    },
+    {
+      "title": "Notes de sécurité phpMyAdmin du    20 août 2010 :",
+      "url": "http://www.phpmyadmin.net/home_page/security/PMASA-2010-4.php"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-397",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-08-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    }
+  ],
+  "summary": "Des vulnérabilités dans <span class=\"textit\">phpMyAdmin</span>\npermettent notamment à un attaquant d'inclure du code <span\nclass=\"textit\">PHP</span> dans un fichier de configuration.\n",
+  "title": "Vulnérabilités dans phpMyAdmin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes de sécurité phpMyAdmin du 20 août 2010",
+      "url": null
+    }
+  ]
+}

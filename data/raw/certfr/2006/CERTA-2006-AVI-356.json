@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>La version 1.5 et 1.4.3 ainsi que celles antérieures.</P>",
+  "content": "## Description\n\nKerberos est un protocole d'authentification crée par le MIT. Il\nfonctionne sur le principe de tickets donnant différents droits d'accès\n(période de validité, services accordés, etc). L'implémentation la plus\nfréquente est la version 5 du MIT, nommée krb5.\n\nPlusieurs vulnérabilités ont été identifiées dans ce dernier. Sous\ncertaines conditions, différentes applications fournies avec krb5\n(krshd, v4rcp, ftpd, ksu) ne contrôleraient pas de manière suffisamment\nrigoureuse les appels aux fonctions système setuid() et seteuid(). Ces\ndernières fixent les propriétés UIDs/GIDs (pour User/Group IDs) d'un\nprocessus. Un utilisateur malveillant local au système pourrait\nexploiter ces vulnérabilités pour élever ses privilèges à ceux\nd'administrateur (root) et exécuter des commandes arbitraires sur le\nsystème.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3084",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3084"
+    },
+    {
+      "name": "CVE-2006-3083",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3083"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-334-1 du 16 août 2006 :",
+      "url": "http://www.ubuntu.com/usn/usn-334-1"
+    },
+    {
+      "title": "Mise à jour proposée par le MIT pour les versions 1.5 de    Kerberos krb5 du 08 août 2006 :",
+      "url": "http://web.mit.edu/Kerberos/advisories/2006-001-patch_1.5.txt"
+    },
+    {
+      "title": "Mise à jour Fedora FEDORA-2006-905 du 09 août 2006 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/5/"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1146-1 du 09 août 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1146"
+    },
+    {
+      "title": "Mise à jour Fedora FEDORA-2006-905 du 09 août 2006 :",
+      "url": "http://www.redhat.com/archives/fedora-package-announce/2006-August/msg00023.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0612-8 du 08 août    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0612.html"
+    },
+    {
+      "title": "Mise à jour proposée par le MIT pour les versions 1.4.3 de    Kerberos krb5 du 08 août 2006 :",
+      "url": "http://web.mit.edu/Kerberos/advisories/2006-001-patch_1.4.3.txt"
+    },
+    {
+      "title": "Bulletin de sécurité MITKRB5-SA-2006-001 du 08 août 2OO6 :",
+      "url": "http://web.mit.edu/Kerberos/advisories/MITKRB5-SA-2006-001-setuid.txt"
+    },
+    {
+      "title": "Page du projet MIT Kerberos Version 5 krb5 :",
+      "url": "http://web.mit.edu/Kerberos/"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:139 du 09 août    2006 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:139"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-356",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins de sécurité Ubuntu, Debian, Fedora, RedHat et Mandriva.",
+      "revision_date": "2006-08-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Plusieurs vulnérabilités dans MIT Kerberos krb5",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MITKRB5-SA-2006-001 du 08 août 2006",
+      "url": null
+    }
+  ]
+}

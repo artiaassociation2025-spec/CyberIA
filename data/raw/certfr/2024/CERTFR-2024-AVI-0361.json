@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "pgAdmin 4 versions antérieures à 8.6",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2024-4216",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-4216"
+    },
+    {
+      "name": "CVE-2024-4215",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-4215"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0361",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-05-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans <span\nclass=\"textit\">PostgreSQL pgAdmin</span>. Elles permettent à un\nattaquant de provoquer une injection de code indirecte à distance (XSS)\net un contournement de la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans PostgreSQL pgAdmin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PostgreSQL pgadmin-4-v86-released-2853 du 02 mai 2024",
+      "url": "https://www.postgresql.org/about/news/pgadmin-4-v86-released-2853/"
+    }
+  ]
+}

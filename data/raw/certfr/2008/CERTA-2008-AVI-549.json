@@ -1,0 +1,120 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Server 2008 pour systèmes 32-bit, x64 et Itanium.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 pour systèmes Itanium (SP1 et SP2) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Vista (Service Pack 1 compris) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Professional x64 Edition (Service Pack 2 compris) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 x64 Edition (Service Pack 2 compris) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 2 et Service Pack 3 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 Service Pack 1 et Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans la mise en oeuvre du protocole\nMicrosoft Server Message Block (SMB) de Windows. Elle permettrait à une\npersonne malveillante de rediriger une tentative de connexion SMB vers\nla machine émettrice puis exploiter les crédits d'authentification pour\ns'y connecter (technique aussi appelée \"credential reflection\").\n\nL'exploitation de cette vulnérabilité permet donc, sous certaines\nconditions, d'exécuter du code arbitraire sur le système vulnérable. Du\ncode d'exploitation est actuellement disponible sur l'Internet.\n\n## Solution\n\nSe référer au bulletin de sécurité MS08-068 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-4037",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4037"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bloc-notes de Microsoft, \"MS08-068:    SMB credential reflection defense\" publié le 11 novembre    2008 :",
+      "url": "http://blogs.technet.com/swi/archive/2008/11/11/smb-credential-reflection.aspx"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-549",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-11-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans la mise en oeuvre du protocole\nSMB de Windows. L'exploitation de cette dernière peut provoquer, sous\ncertaines conditions, l'exécution de code arbitraire sur le système\nvulnérable.\n",
+  "title": "Vulnérabilité de SMB dans Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS08-068 du 11 novembre 2008",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-068.mspx"
+    }
+  ]
+}

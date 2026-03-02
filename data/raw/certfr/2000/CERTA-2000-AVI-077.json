@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Plates-formes sous Windows 9x, NT, 2000 ou Millenium Edition  utilisant le lecteur multimédia version 6.4 ou 7.</P>",
+  "content": "## Description\n\n## 4.1 Fichiers au format .ASX\n\nLes fichiers au format ASX (Active Stream Redirector) permettent à un\nutilisateur de visionner des séquences multimédia à distance par\ninternet.\n\nLe lecteur multimédia ne vérifie pas correctement certaines variables\nd'environnement concernant les fichiers ASX. Un concepteur de site\ninternet mal intentionné peut concevoir un fichier ASX provoquant un\ndébordement de pile et exécuter du code arbitraire sur la machine\ndistante.\n\nLes versions 6.4 et 7 du lecteur multimédia sont concernées par cette\nvulnérabilité.\n\n## 4.2 Fichiers au format .WMS\n\nLes fichiers au format WMS permettent de personaliser l'apparence du\nlecteur multimédia.\n\nUn script malicieux placé dans un tel fichier permet de faire exécuter\ndu code sur le poste distant avec les privilèges de ce dernier.\n\nCette vulnérablité n'affecte que la version 7 du lecteur multimédia,\ninstallée par défaut sous Windows Millenium Edition.\n\n## Solution\n\nCorrectif pour la version 6.4 :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=26069\n\n  \n  \n\nCorrectif pour la version 7 :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=26067\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-077",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-11-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans les versions 6.4 et 7 du lecteur\nmultimédia de Windows permettent, à un concepteur malicieux d'un site\ninternet ou par le biais d'un fichier transmis par mél ou tout autre\nmoyen, d'exécuter du code arbitraire sur une machine distante.\n",
+  "title": "Vulnérabilité dans le lecteur multimédia Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft (MS00-090)",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-090.asp"
+    }
+  ]
+}

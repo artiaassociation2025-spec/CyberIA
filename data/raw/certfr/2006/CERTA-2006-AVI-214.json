@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>La version de GNU Binutils 2.16.1 ainsi que celles  antérieures.</P>",
+  "content": "## Description\n\nGNU Binutils est un groupe d'outils fourni dans la plupart des\ndistributions Linux, et permettant de travailler sur des fichiers au\nformat binaire : parmi eux se trouvent strings (pour lister les chaînes\nde caractères inclues dans le code binaire), ld (ou GNU Linker pour\nterminer une compilation), l'assembleur as, etc. Ces outils emploient un\nensemble commun de bibliothèques.\n\nUne vulnérabilité a été identifiée dans l'une d'entre elles, libbfd :\nelle ne gère pas correctement, quand un fichier contient une entrée au\nformat Tektronix Hex (TekHex), une valeur dont la longueur ne correspond\npas à un caractère hexadécimal. Un utilisateur malveillant peut donc\nconstruire un fichier particulier pour créer un débordement de tampon.\nCe dernier peut provoquer un déni de service ou l'exécution de commandes\narbitraires dans le cas où une personne le manipule avec l'un des outils\nGNU Binutils.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2362",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2362"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site du projet GNU Binutils :",
+      "url": "http://www.gnu.org/software/binutils/"
+    },
+    {
+      "title": "Référence du bogue et correctif provisoire :",
+      "url": "http://sourceware.org/bugzilla/show_bug_cgi?id=2584"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-214",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans GNU Binutils peut permettre à un utilisateur\nmalveillant de créer un déni de service ou d'exécuter des commandes\narbitraires sur le système vulnérable.\n",
+  "title": "Vulnérabilité de GNU Binutils",
+  "vendor_advisories": []
+}

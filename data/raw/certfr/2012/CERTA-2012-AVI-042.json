@@ -1,0 +1,208 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "JBoss Enterprise Application Platform 5 for RHEL 4 AS (mod_cluster-native) ;",
+      "product": {
+        "name": "Platform",
+        "vendor": {
+          "name": "SolarWinds",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "JBoss Enterprise Web Platform 5.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "JBoss Enterprise Web Server 1.0 for RHEL 6 Server ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "JBoss Enterprise Application Platform 5 for RHEL 6 AS (mod_cluster-native) ;",
+      "product": {
+        "name": "Platform",
+        "vendor": {
+          "name": "SolarWinds",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "JBoss Enterprise Application Platform 5.1 ;",
+      "product": {
+        "name": "Platform",
+        "vendor": {
+          "name": "SolarWinds",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "JBoss Enterprise Web Server 1.0 for RHEL 5 Server ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "JBoss Enterprise Application Platform 5 for RHEL 5 AS (mod_cluster-native) ;",
+      "product": {
+        "name": "Platform",
+        "vendor": {
+          "name": "SolarWinds",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "JBoss Enterprise Web Server 1.0 for RHEL 4 AS ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "JBoss Enterprise Web Platform 5 for RHEL 4 AS (mod_cluster-native) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "JBoss Enterprise Web Platform 5 for RHEL 5 Server (mod_cluster-native) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "JBoss Enterprise Web Server 1.0 ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "JBoss Enterprise Web Platform 5 for RHEL 6 Server (mod_cluster-native) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe module mod_cluster de JBoss Enterprise Application Platform pour Red\nHat Linux autorise les noeuds de travail à s'enregistrer auprès de\nn'importe quel hôte virtuel. Une personne malintentionnée peut alors\nforcer un enregistrement auprès d'un hôte virtuel externe qui ne met en\nplace aucune restriction de sécurité et, ainsi, passer outre la\npolitique de sécurité. L'attaquant peut alors voler des données\nsensibles comme des informations d'identification, afin d'élever ses\nprivilèges, ou bien encore proposer du contenu malveillant à des\nutilisateurs légitimes.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-4608",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4608"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2012:0035 du 18 janvier    2012 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2012-0035.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2012:0038 du 18 janvier    2012 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2012-0038.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2012:0039 du 18 janvier    2012 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2012-0039.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2012:0036 du 18 janvier    2012 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2012-0036.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2012:0037 du 18 janvier    2012 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2012-0037.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2012:0040 du 18 janvier    2012 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2012-0040.html"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-042",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-01-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le module <span class=\"textit\">mod_cluster</span>\nde <span class=\"textit\">JBoss Enterprise Application Platform</span>\npour <span class=\"textit\">Red Hat Linux</span> permet à un utilisateur\nmalintentionné distant de contourner la politique de sécurité, voler des\nidentifiants de session et d'élever ses privilèges.\n",
+  "title": "Vulnérabilité dans JBoss",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité redhat RHSA-2012:0037",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité redhat RHSA-2012:0040",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité redhat RHSA-2012:0038",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité redhat RHSA-2012:0039",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité redhat RHSA-2012:0035",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité redhat RHSA-2012:0036",
+      "url": null
+    }
+  ]
+}

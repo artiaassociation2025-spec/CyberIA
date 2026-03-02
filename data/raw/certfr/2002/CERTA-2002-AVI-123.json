@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Différentes versions de Microsoft  SQLXML, qui est un module de SQL Server 2000, sont vulnérables :  <UL>    <LI>Microsoft SQLXML contenu dans la suite SQL Server 2000 Gold    ;</LI>    <LI>Microsoft SQLXML version 1, 2 et 3.</LI>  </UL></p>",
+  "content": "## Description\n\nXML (eXtended Markup Language) permet d'échanger facilement des données\nstructurées entre différentes architectures. SQLXML est un module de\nMicrosoft SQL Server permettant de transmettre des données dans le\nformat XML ainsi que d'accéder à la base SQL grâce à un navigateur\nHTTP.  \n  \nIl existe deux vulnérabilités dans SQLXML :\n\n-   Un utilisateur mal intentionné peut exécuter du code arbitraire sur\n    un serveur IIS au moyen d'un débordement de tampon ;\n-   Une vulnérabilité dans une fonction spécifiant une balise XML permet\n    à un utilisateur mal intentionné d'exécuter des scripts sur un poste\n    client.\n\n## Solution\n\nAppliquer le correctif correspondant à votre version de SQLXML. Ces\ncorrectifs sont disponibles sur le site web de Microsoft.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Consultez le site microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-030.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-123",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    },
+    {
+      "description": "Exécution de scripts sur un poste client"
+    }
+  ],
+  "summary": "Deux vulnérabilités permettent d'exécuter du code arbitraire sur un\nserveur SQLXML ainsi que des scripts sur un client Internet Explorer.\n",
+  "title": "Vulnérabilités dans Microsoft SQLXML",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Microsoft Security Bulletin #MS02-030",
+      "url": null
+    }
+  ]
+}

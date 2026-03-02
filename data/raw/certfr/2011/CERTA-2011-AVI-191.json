@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "xrdb versions 1.0.8 et inférieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "X11R7.6 (xrdb 1.0.7 y est inclus).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été découverte dans xrdb. Elle provient d'une\nmauvaise gestion des noms d'hôtes présents dans la base de ressources\naccédée via xrdb par certains gestionnaires d'affichage. Elle permet à\nune personne malintentionnée d'exécuter des commandes sous l'identité de\nl'utilisateur root. Ce type d'attaque n'est cependant possible que si\nl'attaquant dispose d'un moyen de remplacer le nom d'hôte de la machine\npar un nom d'hôte spécialement forgé. Ainsi seules les machines\ndéfinissant leur nom d'hôte via le protocole DHCP ou autorisant les\nconnexions distantes via xdmcp sont vulnérables.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0465",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0465"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-191",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-04-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité permettant une exécution de code arbitraire à distance\na été découverte dans <span class=\"textit\">xrdb</span>.\n",
+  "title": "Vulnérabilité dans xrdb (X.Org)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité X.Org",
+      "url": "http://lists.freedesktop.org/archives/xorg-announce/2011-April/001636.html"
+    }
+  ]
+}

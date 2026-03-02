@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "la version 2.3.7 d'Evolution n'est pas vulnérable.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Evolution versions 1.5, 2.0, 2.1, 2.2 et 2.3 jusqu'à 2.3.6.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nEvolution est un logiciel qui offre aux utilisateurs de l'environnement\nde bureau GNOME l'intégration d'un courrier électronique, la gestion\nd'un carnet d'adresse et d'un calendrier.\n\nUne vCard est l'équivalent numérique d'une carte de visite.\n\nPlusieurs vulnérabilités de type format string affectent les versions\nvulnérables du logiciel Evolution :\n\n-   la visualisation des vCards est vulnérable. Un utilisateur mal\n    intentionné peut confectionner une vCard astucieusement construite\n    et l'envoyer par courriel sous la forme d'une pièce jointe. Lorsque\n    l'utilisateur d'une version vulnérable d'Evolution cliquera pour\n    voir l'affichage complet d'une vCard dans un message ou dans le\n    carnet d'adresse, il risque d'exécuter à son insu du code arbitraire\n    ;\n-   la visualisation des données de contact issues d'un serveur LDAP\n    distant est vulnérable ;\n-   la visualisation des données d'une « liste de tâches » provenant\n    d'un serveur distant est vulnérable ;\n-   d'autres vulnérabilités de ce type affectent la gestion du\n    calendrier.\n\n## Contournement provisoire\n\nLa version 2.3.7 du logiciel Evolution n'est pas vulnérable. Il s'agit\ncependant d'une version expérimentale.\n\n## Solution\n\nAppliquer les correctifs des vendeurs de logiciel.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Fedora Core 3 :",
+      "url": "http://www.redhat.com/archives/fedora-announce-list/2005-August/msg0030.html"
+    },
+    {
+      "title": "Fedora Core 4 :",
+      "url": "http://www.redhat.com/archives/fedora-announce-list/2005-August/msg0031.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:141 du 17 août    2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:141"
+    },
+    {
+      "title": "Mises à jour de sécurité Fedora :       Fedora Core 3 :          \n  Fedora Core 4 :",
+      "url": "http://www.redhat.com/archives/fedora-announce-list/2005-August/msg0031.html"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SA:2005:054 du 16 septembre    2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_54_evolution.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:267 du 29 août 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-267.html"
+    },
+    {
+      "title": "Mises à jour de sécurité Fedora :       Fedora Core 3 :          \n  Fedora Core 4 :",
+      "url": "http://www.redhat.com/archives/fedora-announce-list/2005-August/msg0030.html"
+    },
+    {
+      "title": "Site Internet du logiciel Evolution :",
+      "url": "http://www.gnome.org/projects/evolution"
+    },
+    {
+      "title": "Le bulletin de sécurité du SITIC :",
+      "url": "http://www.sitic.se/eng/advisories_and_recommendations/sa05-001.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1016 du 23 mars 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1016"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-314",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-08-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Mandriva MDKSA-2005:141, RedHat RHSA-2005:743 et SUSE SUSE-SA:2005:054 ainsi qu'aux références CVE CAN-2005-2549 et CAN-2005-2550.",
+      "revision_date": "2005-09-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-1016.",
+      "revision_date": "2006-03-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité d'Evolution",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SA05-001 du SITIC",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Ruby on Rails versions 2.3.10 et antérieures (CVE-2011-0446 à CVE-2011-0449) ;",
+      "product": {
+        "name": "Ruby on Rails",
+        "vendor": {
+          "name": "Ruby on Rails",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Ruby on Rails versions 3.0.3 et antérieures (CVE-2011-0448 et CVE-2011-0449 uniquement).",
+      "product": {
+        "name": "Ruby on Rails",
+        "vendor": {
+          "name": "Ruby on Rails",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nQuatres vulnérabilités ont été identifiées dans Ruby on Rails.\n\nLa première et la deuxième, présentes dans les versions de la branche 2\net de la branche 3 de Ruby on Rails, permettent à un utilisateur de\nconduire des attaques de type injection de code indirecte à distance\n(CVE-2011-446 et CVE-2011-447).\n\nLa troisième et la quatrième, ne touchant que les versions de la branche\n3, permettent à un utilisateur distant malintentionné de contourner\ncertains filtrages du système (CVE-2011-448) et de réaliser des attaques\nde type injection SQL (CVE-2011-449).\n\n## Solution\n\nSe référer à la note de sortie de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0447",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0447"
+    },
+    {
+      "name": "CVE-2011-0449",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0449"
+    },
+    {
+      "name": "CVE-2011-0448",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0448"
+    },
+    {
+      "name": "CVE-2011-0446",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0446"
+    }
+  ],
+  "links": [
+    {
+      "title": "Note de sortie des versions 2.3.11 et 3.0.4 de Ruby on    Rails du 08 février 2011 :",
+      "url": "http://weblog.rubyonrails.org/2011/2/8/new-releases-2-3-11-and-3-0-4"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-083",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-02-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans Ruby on Rails permettent à un\nutilisateur distant de contourner la politique de sécurité, de porter\natteinte à l'intégrité de données et de conduire des attaques de type\ninjection de code indirecte à distance.\n",
+  "title": "Multiples vulnérabilités dans Ruby on Rails",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de sortie des versions 2.3.11 et 3.0.4 de Ruby on Rails du 08 février 2011",
+      "url": null
+    }
+  ]
+}

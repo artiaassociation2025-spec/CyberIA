@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système Unix avec la commande <SPAN class=\n  \"textit\">mformat</SPAN> des <SPAN class=\"textit\">mtools</SPAN>  installée avec les droits ``set user id'' (setuid) <SPAN class=\n  \"textit\">root</SPAN>.</P>",
+  "content": "## Description\n\nLes mtools permettent d'accéder à des disques MS-DOS sans nécessité de\nmonter les disques en question dans le système de fichiers. Afin de\npermettre à un utilisateur non privilégié d'utiliser ces commandes, ces\noutils peuvent être installés avec délégation des privilèges\nadministrateur (setuid root).\n\nmformat conservant ses privilèges, il est possible de détourner son\nfonctionnement pour accéder au système de fichiers avec les droits root.\n\n## Contournement provisoire\n\nSupprimer les privilèges \\`\\`setuid'' root de la commande mformat.\n\n## Solution\n\nMettre à jour en suivant les recommendations de l'éditeur :\n\n-   Linux Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:016\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site des mtools :",
+      "url": "http://mtools.linux.lu/"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-058",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation locale des privilèges administrateur"
+    },
+    {
+      "description": "Atteintes à l'intégrité et à la confidentialité des données"
+    }
+  ],
+  "summary": "Un utilisateur local mal intentionné peut détourner la commande <span\nclass=\"textit\">mformat</span> pour lire ou écrire des fichiers\narbitraires sur le système.\n",
+  "title": "Vulnérabilité des mtools sous Unix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Mandrake Linux",
+      "url": null
+    }
+  ]
+}

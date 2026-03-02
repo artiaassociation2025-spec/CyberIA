@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Une première vulnérabilité affecte la version  <CODE>9.0.2</CODE> d'Oracle9i Application Server, la seconde  vulnérabilité concerne également la version  <CODE>9.0.3</CODE>.</P>",
+  "content": "## Description\n\nDeux vulnérabilités permettent d'effectuer des dénis de service à l'aide\nd'URLs malicieusement construites.\n\n## Contournement provisoire\n\nLa première vulnérabilité peut être corrigée en modifiant la variable\n`DAV` du fichier `moddav.conf` (situé dans le répertoire\n`ORACLE\\_HOME/Apache/oradav/conf`) :\n\nremplacer `DAV on` par `DAV off`.\n\n## Solution\n\nAppliquer les correctifs disponibles sur le site d'Oracle suivant les\nversions et les plates-formes afin de corriger ces vulnérabilités (cf.\nDocumentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-024",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-02-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités dans Oracle9i Application Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin d'alerte #52 d'Oracle",
+      "url": "http://otn.oracle.com/deploy/security/pdf/2003alert52.pdf"
+    }
+  ]
+}

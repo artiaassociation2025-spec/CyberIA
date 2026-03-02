@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toute version de PhpNuke jusqu'à la 5.2 comprise sur système  d'exploitation Unix/Linux, OS/2, Windows, MacOS et FreeBSD.</P>",
+  "content": "## Description\n\nUn script mal sécurisé permet à un utilisateur mal intentionné de\ntélécharger et d'exécuter sur le serveur n'importe quel programme ou de\nlire tout fichier accessible au script.\n\nCombiné avec un exploit local, cette faille permet d'obtenir les droits\nd'administrateur sur le serveur.\n\n## Contournement provisoire\n\nDésactiver la fonction de téléchargement sur le serveur.\n\n## Solution\n\n-   Modifier le fichier admin.php comme suggéré à l'adresse suivante :\n\n        http://www.securityfocus.com/cgi-bin/vulns-item.pl?section=solution&id=3361\n\n-   Télécharger et installer le port/paquetage correspondant à la\n    distribution lorsqu'il sera disponible.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "PhpNuke Remote File Copy Vulnerability",
+      "url": "http://www.securityfocus.com/bid/3361"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-113",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code à distance avec les privilèges de l'utilisateur d'apache"
+    },
+    {
+      "description": "Altération des données du portail"
+    }
+  ],
+  "summary": "PhpNuke est un kit de création et gestion d'un portail internet/intranet\ns'appuyant sur un serveur Web Apache, le langage de pages \\`\\`web''\ndynamiques Php et le gestionnaire de base de données MySQL.\n\nIl est possible d'exécuter du code malicieux sur le serveur ou de lire\nle contenu d'un certain nombre de fichiers (dont le fichier de mots de\npasse de MySQL).\n",
+  "title": "Vulnérabilité dans PhpNuke",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste de diffusion BugTraq",
+      "url": null
+    }
+  ]
+}

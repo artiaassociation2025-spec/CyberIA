@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Paquetage IPsec-tools (pour les noyaux  linux 2.6) version 0.3rc4 et antérieures.</p>",
+  "content": "## Description\n\nracoon est un service de gestion des clefs IKE. racoon gère notamment\nles associations de sécurité (SA ou Security Association) pour du trafic\nréseau chiffré et/ou authentifié (IPSEC).\n\n  \n\nUne vulnérabilité est présente dans racoon dans le cas où les\ncertificats X.509 sont utilisés pour l'authentification en phase 1.\nracoon ne vérifiant pas les signatures RSA, il est possible pour un\nutilisateur mal intentionné de réaliser une usurpation d'identité.\n\n## Solution\n\n-   La version 0.3rc5 du paquetage ipsec-tools corrige cette\n    vulnérabililité :\n\n        http://ipsec-tools.sourceforge.net\n\n-   Bulletin de sécurité GLSA-200404-05 de Gentoo\n\n        http://www.gentoo.org/security/en/glsa/glsa-200404-05.xml\n\n-   Bulletin de sécurité MDKSA-2004:027 de Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:027\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Projet Kame :",
+      "url": "http://www.kame.net"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD racoon :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/vulnerabilities"
+    },
+    {
+      "title": "Avis de sécurité FreeBSD du 07 avril 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Message de Ralf Spenneberg \"CAN-2004-0155: The KAME IKE    daemon racoon\":",
+      "url": "http://marc.theaimsgroup.com/?l=full-disclosure&m=108137769100111&w=2"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004-165 du 11 mai 2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-165.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-123",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-04-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Mandrake.",
+      "revision_date": "2004-04-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de sécurité FreeBSD et NetBSD.",
+      "revision_date": "2004-05-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité RedHat.",
+      "revision_date": "2004-05-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    }
+  ],
+  "summary": "Une vulnérabilité est présente dans le service racoon lors de\nl'authentification en phase 1 basée sur des certificats X.509.\n",
+  "title": "Vulnérabilité du service IKE racoon",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité GLSA-200404-05 de Gentoo",
+      "url": null
+    }
+  ]
+}

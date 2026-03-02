@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mozilla Firefox version 2.0.0.6 ainsi que celles antérieures.",
+      "product": {
+        "name": "Firefox",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le navigateur Mozilla Firefox,\nen relation avec l'alerte CERTA-2007-ALE-014. L'exploitation de cette\ndernière permet à des fichiers, notamment au format QuickTime (qtl) de\nlancer le navigateur par défaut en ligne de commandes avec des options\narbitraires. Ainsi, l'option -chrome permet de lancer des scripts de\ncommandes sur le système avec les droits de l'utilisateur. La politique\nde sécurité configurée dans le navigateur est alors contournée, cette\nvulnérabilité pouvant être utilisée pour installer et exécuter tout code\narbitraire sur le système vulnérable.\n\nLe correctif proposé par Mozilla bloque ainsi l'exécution de script\narbitraire depuis la ligne de commandes.\n\n## Solution\n\nSe référer au bulletin de sécurité MFSA2007-028 de Mozilla pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mozilla MFSA2007-028 du 18 septembre    2007 :",
+      "url": "http://www.mozilla.org/security/announce/2007/mfsa2007-28.html"
+    },
+    {
+      "title": "Alerte CERTA-2007-ALE-014 du 14 septembre 2007 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2007-ALE-014/"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-407",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-09-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans le navigateur Mozilla Firefox,\nen relation avec l'alerte CERTA-2007-ALE-014. L'exploitation de cette\ndernière permet à des fichiers, notamment au format QuickTime de lancer\nle navigateur par défaut en ligne de commandes avec des options\narbitraires. La politique de sécurité configurée dans le navigateur est\nalors contournée.\n",
+  "title": "Vulnérabilité dans Firefox",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Mozilla MFSA2007-28 du 18 septembre 2007",
+      "url": null
+    }
+  ]
+}

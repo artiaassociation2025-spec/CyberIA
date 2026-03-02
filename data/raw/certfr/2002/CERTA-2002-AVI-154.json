@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>PHP</TT> versions 4.2.0 et 4.2.1.",
+  "content": "## Description\n\nPlusieurs vulnérabilités, de type « débordement de mémoire », sont\nprésentes dans la fonction php_mime_split. Les vulnérabilités sur cette\nfonction qui est appelée lors de l'envoi des requêtes\nmultipart/form-data POST peuvent permettre à un utilisateur mal\nintentionné de réaliser un déni de service ou d'exécuter du code\narbitraire sur le système.\n\n## Contournement provisoire\n\nInterdire les requêtes POST sur le serveur web.\n\n## Solution\n\nAppliquer les correctifs correspondant à votre éditeur ou installer la\nversion 4.2.2 (cf site PHP, section documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité CA-2002-21 du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2002-21.html"
+    },
+    {
+      "title": "Version 4.2.2 de PHP disponible sur :",
+      "url": "http://www.php.net/downloads.php"
+    },
+    {
+      "title": "Avis de sécurité de e-matters :",
+      "url": "http://security.e-matters.de/advisories/012002.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-154",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-07-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs débordements de mémoire présents sur PHP permettent à un\nutilisateur mal intentionné de réaliser un déni de service ou d'exécuter\ndu code arbitraire sur le système.\n",
+  "title": "Vulnérabilités sur PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2002-21 du CERT/CC",
+      "url": null
+    }
+  ]
+}

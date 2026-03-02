@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Kaspersky Anti-Virus 6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Kaspersky",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Kaspersky Anti-Virus 4.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Kaspersky",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Kaspersky Anti-Virus 5.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Kaspersky",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Kaspersky Internet Security 6.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Kaspersky",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans les produits antivirus de\nKaspersky :\n\n-   la première concerne un manque de vérification par des contrôles\n    ActiveX fournis avec les produits Kaspersky. Ceci permet à un\n    utilisateur distant d'obtenir des fichiers présents sur le système\n    vulnérable via un site web particulier ;\n-   la deuxième vulnérabilité est présente dans le fichier klif.sys et\n    permet l'exécution de code arbitraire à distance ;\n-   la dernière concerne la mise en œuvre du support des fichiers de\n    type ARJ et permet l'exécution de code arbitraire au moyen d'un\n    fichier .arj particulier.\n\n## Solution\n\nLa version 6.0.2.614 corrige le problème. Se référer au bulletin de\nsécurité de l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2007-AVI-161",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-04-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans les produits antivirus de Kaspersky\npermettent à un utilisateur distant de porter atteinte à la\nconfidentialité des données, de provoquer un déni de service, d'exécuter\ndu code arbitraire.\n",
+  "title": "Vulnérabilité des produits Kaspersky",
+  "vendor_advisories": [
+    {
+      "published_at": "2007-04-05",
+      "title": "Bulletins de sécurité Kaspersky #203038693",
+      "url": "http://www.kaspersky.com/technews?id=203038693"
+    },
+    {
+      "published_at": "2007-04-05",
+      "title": "Bulletin de sécurité Kaspersky  #203038694",
+      "url": "http://www.kaspersky.com/technews?id=203038694"
+    }
+  ]
+}

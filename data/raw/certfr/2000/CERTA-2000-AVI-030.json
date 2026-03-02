@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Internet Information Server 5.0</P>",
+  "content": "## Description\n\nInternet Information Server 5.0 utilise l'interface ISAPI pour les\nfichiers de type ASP, ASA, HTR etc... Un utilisateur malveillant, par le\nbiais d'une URL malformée, peut forcer le serveur à renvoyer le code du\nscript du fichier. Ce code est susceptible de contenir des informations\ntels que l'emplacement des bases de données ainsi que des mots de passe\nde connexion.\n\n## Solution\n\nCorrectif concernant IIS 5.0\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=23769\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-058.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-030",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Perte de confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité sous Internet Information Server 5.0 permet à un\nutilisateur mal intentionné de récupérer le code source de fichiers\nutilisant Internet Service Application Programming Interface (ISAPI).\n",
+  "title": "Vulnérabilité sous Internet Information Server 5.0",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Security Focus",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

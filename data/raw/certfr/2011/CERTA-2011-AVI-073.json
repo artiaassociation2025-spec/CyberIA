@@ -1,0 +1,88 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenSSL versions 0.9.8h à 0.9.8q ;",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenSSL versions 1.0.0 à 1.0.0c.",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans OpenSSL permet de provoquer un déni de service à\ndistance en envoyant des messages spécialement conçus au serveur.\n\nCette faille ne concerne que les serveurs utilisant la fonction\nSSL_CTX_set_tlsext_status_cb(). Les versions 2.3.3 et suivantes du\nserveur Apache httpd sont notamment concernées.\n\n## Solution\n\nMettre à jour en version 1.0.0d ou en version 0.9.8r.\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0014",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0014"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Fedora FEDORA-2011-1273 du 10 février    2011 :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2011-February/054007.html"
+    },
+    {
+      "title": "Bulletin de sécurité Fedora FEDORA-2011-1255 du 10 février    2011 :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2011-March/056102.html"
+    },
+    {
+      "title": "Bulletin de sécurité Fedora FEDORA-2011-5876 du 23 avril    2011 (mingw32-openssl) :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2011-May/059314.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2011:028 du 15 février    2011 :",
+      "url": "http://www.mandriva.com/support/security/advisories/?name=MDVSA-2011:028"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-1064-1 du 15 février 2011 :",
+      "url": "http://www.ubuntu.com/usn/usn-1064-1"
+    },
+    {
+      "title": "Bulletin de sécurité Fedora FEDORA-2011-5865 du 23 avril    2011 (mingw32-openssl) :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2011-May/059313.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-073",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-02-09T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins Fedora, Mandriva et Ubuntu.",
+      "revision_date": "2011-02-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin Fedora (mingw32-openssl).",
+      "revision_date": "2011-05-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans OpenSSL permet à une personne malintentionnée de\nprovoquer un déni de service à distance.\n",
+  "title": "Vulnérabilité dans OpenSSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité OpenSSL du 08 février 2011",
+      "url": "http://www.openssl.org/news/secadv_20110208.txt"
+    }
+  ]
+}

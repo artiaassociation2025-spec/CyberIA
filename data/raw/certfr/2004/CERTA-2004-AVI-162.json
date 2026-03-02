@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>WebLogic Server et WebLogic Express version 8.1 jusqu'au    Service Pack 2 ;</LI>    <LI>WebLogic Server et WebLogic Express version 7.0 jusqu'au    Service Pack 5.</LI>  </UL>  <P>Toutes les plates-formes sont affectées.</P>",
+  "content": "## Description\n\nLes serveurs WebLogic de la société BEA, fournissent un support pour le\ndéploiement d'applications Java distribuées (serveur J2EE).\n\nDeux vulnérabilités sont présentes dans BEA WebLogic Server et Express :\n\n-   une mauvaise gestion des \"tags\" lors de la mise à jour des pages\n    WebLogic au format XML permet à un utilisateur mal intentionné\n    d'élever ses privilèges ;\n-   une mauvaise gestion de la politique de sécurité permet à un\n    utilisateur préalablement authentifié de démarrer ou de stopper le\n    serveur sans en posseder les droits.\n\n## Solution\n\nAppliquer les correctifs disponibles sur le site de l'éditeur (cf.\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité #BEA04-60.00 de BEA :",
+      "url": "http://dev2dev.bea.com/resourcelibrary/advisoriesnotifications/BEA04_60.00.jsp"
+    },
+    {
+      "title": "Bulletin de sécurité #BEA04-59.00 de BEA :",
+      "url": "http://dev2dev.bea.com/resourcelibrary/advisoriesnotifications/BEA04_59.00.jsp"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-162",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-05-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans BEA WebLogic Server et Express permettent à un\nutilisateur mal intentionné de désactiver la sécurité mise en place sur\nune application Web ou bien d'effectuer un déni de service.\n",
+  "title": "Multiples vulnérabilités dans BEA WebLogic",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité BEA",
+      "url": null
+    }
+  ]
+}

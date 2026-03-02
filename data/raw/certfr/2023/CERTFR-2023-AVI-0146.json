@@ -1,0 +1,853 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FortiWeb versions 5.x à 7.x antérieures à 7.0.5",
+      "product": {
+        "name": "FortiWeb",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiGate versions antérieures à 6.4.2",
+      "product": {
+        "name": "FortiGate",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiNAC-F versions antérieures à 7.2.0",
+      "product": {
+        "name": "FortiNAC",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiPortal versions 7.0.x antérieures à 7.0.3",
+      "product": {
+        "name": "FortiPortal",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiSwitchManager versions 7.2.x antérieures à 7.2.1",
+      "product": {
+        "name": "FortiSwitchManager",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiOS versions 6.0.x à 7.0.x antérieures à 7.0.9",
+      "product": {
+        "name": "FortiOS",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiADC versions 5.x à 6.2.x antérieures à 6.2.4",
+      "product": {
+        "name": "FortiADC",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiAnalyzer versions 7.0.x antérieures à 7.0.5",
+      "product": {
+        "name": "FortiAnalyzer",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiAuthenticator versions 6.1.x antérieures à 6.1.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiExtender versions 3.3.x antérieures à 3.3.3",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiExtender versions 5.3.x antérieures à 7.0.4",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiNAC versions 8.x à 9.4.x antérieures à 9.4.2",
+      "product": {
+        "name": "FortiNAC",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiSandbox versions 3.2.x à 4.x antérieures à 4.2.0",
+      "product": {
+        "name": "FortiSandbox",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiADC versions 7.0.x antérieures à 7.0.2",
+      "product": {
+        "name": "FortiADC",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiProxy versions 7.2.x antérieures à 7.2.2",
+      "product": {
+        "name": "FortiProxy",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiAnalyzer versions 7.2.x antérieures à 7.2.2",
+      "product": {
+        "name": "FortiAnalyzer",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiExtender versions 3.x antérieures à 3.2.4",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiExtender versions 4.2.x antérieures à 4.2.5 (version à venir)",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiSwitch versions 7.0.x antérieures à 7.0.4",
+      "product": {
+        "name": "FortiSwitch",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiWAN versions 4.x antérieures à 4.5.10",
+      "product": {
+        "name": "FortiWAN",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiExtender versions 4.1.x antérieures à 4.1.9 (version à venir)",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiSwitch versions 6.x antérieures à 6.4.11",
+      "product": {
+        "name": "FortiSwitch",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiADC 5.1 all versions",
+      "product": {
+        "name": "FortiADC",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiADC 5.0 all versions",
+      "product": {
+        "name": "FortiADC",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiExtender versions 4.0.x antérieures à 4.0.3 (version à venir)",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiAnalyzer versions 6.x antérieures à 6.4.9",
+      "product": {
+        "name": "FortiAnalyzer",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiProxy versions 1.x à 7.0.x antérieures à 7.0.8",
+      "product": {
+        "name": "FortiProxy",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiOS versions 7.2.x antérieures à 7.2.4",
+      "product": {
+        "name": "FortiOS",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiAuthenticator versions 5.x à 6.0.x antérieures à 6.0.5",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FortiSwitchManager versions 7.0.x antérieures à 7.0.1",
+      "product": {
+        "name": "FortiSwitchManager",
+        "vendor": {
+          "name": "Fortinet",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-30304",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-30304"
+    },
+    {
+      "name": "CVE-2021-42756",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-42756"
+    },
+    {
+      "name": "CVE-2023-23780",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-23780"
+    },
+    {
+      "name": "CVE-2022-40678",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-40678"
+    },
+    {
+      "name": "CVE-2022-40677",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-40677"
+    },
+    {
+      "name": "CVE-2022-33869",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-33869"
+    },
+    {
+      "name": "CVE-2022-30303",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-30303"
+    },
+    {
+      "name": "CVE-2022-26115",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-26115"
+    },
+    {
+      "name": "CVE-2023-22638",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-22638"
+    },
+    {
+      "name": "CVE-2022-42472",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-42472"
+    },
+    {
+      "name": "CVE-2022-39948",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-39948"
+    },
+    {
+      "name": "CVE-2022-41335",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-41335"
+    },
+    {
+      "name": "CVE-2022-38378",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-38378"
+    },
+    {
+      "name": "CVE-2022-30306",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-30306"
+    },
+    {
+      "name": "CVE-2023-23782",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-23782"
+    },
+    {
+      "name": "CVE-2021-43074",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-43074"
+    },
+    {
+      "name": "CVE-2023-23778",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-23778"
+    },
+    {
+      "name": "CVE-2023-25602",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-25602"
+    },
+    {
+      "name": "CVE-2022-22302",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22302"
+    },
+    {
+      "name": "CVE-2022-27489",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-27489"
+    },
+    {
+      "name": "CVE-2022-43954",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-43954"
+    },
+    {
+      "name": "CVE-2022-30299",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-30299"
+    },
+    {
+      "name": "CVE-2022-30300",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-30300"
+    },
+    {
+      "name": "CVE-2022-38375",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-38375"
+    },
+    {
+      "name": "CVE-2022-29054",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-29054"
+    },
+    {
+      "name": "CVE-2022-33871",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-33871"
+    },
+    {
+      "name": "CVE-2022-39952",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-39952"
+    },
+    {
+      "name": "CVE-2023-22636",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-22636"
+    },
+    {
+      "name": "CVE-2022-40683",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-40683"
+    },
+    {
+      "name": "CVE-2023-23777",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-23777"
+    },
+    {
+      "name": "CVE-2023-23779",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-23779"
+    },
+    {
+      "name": "CVE-2023-23784",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-23784"
+    },
+    {
+      "name": "CVE-2022-38376",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-38376"
+    },
+    {
+      "name": "CVE-2021-42761",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-42761"
+    },
+    {
+      "name": "CVE-2022-39954",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-39954"
+    },
+    {
+      "name": "CVE-2022-40675",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-40675"
+    },
+    {
+      "name": "CVE-2023-23783",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-23783"
+    },
+    {
+      "name": "CVE-2022-27482",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-27482"
+    },
+    {
+      "name": "CVE-2023-23781",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-23781"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-273"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-329"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-157"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-080"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-133"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-166"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-187"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-167"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-111"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-430"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-260"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-280"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-300"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-460"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-304"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-046"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-362"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-164"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-21-126"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-346"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-151"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-391"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-20-220"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-21-214"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-118"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-312"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-131"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-163"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-21-234"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-21-186"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-20-014"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-224"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-048"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-257"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-251"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-348"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-265"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-136"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-146"
+    },
+    {
+      "title": "Bulletin de sécurité Fortinet du 16 février 2023",
+      "url": "https://www.fortiguard.com/psirt/FG-IR-22-142"
+    }
+  ],
+  "reference": "CERTFR-2023-AVI-0146",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-02-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans <span\nclass=\"textit\">les produits Fortinet</span>. Certaines d'entre elles\npermettent à un attaquant de provoquer une exécution de code arbitraire\nà distance, un contournement de la politique de sécurité et une atteinte\nà l'intégrité des données.\n",
+  "title": "Multiples vulnérabilités dans les produits Fortinet",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-166 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-460 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-046 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-280 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-273 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-251 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-312 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-20-014 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-362 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-300 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-21-214 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-391 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-164 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-430 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-146 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-131 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-157 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-265 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-21-234 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-118 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-348 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-187 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-20-220 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-260 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-167 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-151 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-346 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-111 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-080 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-133 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-304 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-329 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-142 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-163 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-048 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-21-186 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-257 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-21-126 du 16 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fortinet FG-IR-22-136 du 16 février 2023",
+      "url": null
+    }
+  ]
+}

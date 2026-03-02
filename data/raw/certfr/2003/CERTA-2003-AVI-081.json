@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Explorer 5.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 5.01 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 6.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Première vulnérabilité (CVE CAN-2003-0113) : un débordement de\n    mémoire dans la bibliothèque URLMON.DLL permet à un utilisateur mal\n    intentionné d'exécuter du code arbitraire.  \n-   Deuxième vulnérabilité (CVE CAN-2003-0114) : le programme de\n    contrôle de téléchargement de fichiers (File Upload Control) est\n    vulnérable et permet à un utilisateur mal intentionné de récupérer\n    n'importe quel fichier situé sur le disque dur de la victime.  \n-   Troisième vulnérabilité (CVE CAN-2003-0115) : Internet Explorer ne\n    gère pas correctement les liens hypertextes (URL) qui invoquent un\n    module d'une application tierce. Il est alors possible d'exécuter du\n    script sur la machine vulnérable dans la zone de sécurité locale.  \n-   Quatrième vulnérabilité (CVE CAN-2003-0116) : un paramètre des\n    feuilles de style (Cascading Style Sheet) utilisées pour les boîtes\n    de dialogue (Modal Dialog) n'est pas vérifié et permet à un\n    utilisateur mal intentionné d'exécuter un script sur l'ordinateur de\n    la victime.  \n\n## Solution\n\nAppliquer le correctif fourni par Microsoft :\n\n    http://www.microsoft.com/windows/ie/downloads/critical/813489.asp\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-081",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-04-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Quatre vulnérabilités de Microsoft Internet Explorer ont été découvertes\net peuvent être exploitées par le biais d'un site web ou d'un mél au\nformat HTML habilement contruit.\n",
+  "title": "Vulnérabilités de Microsoft Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Microsoft MS03-015",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS03-015.asp"
+    }
+  ]
+}

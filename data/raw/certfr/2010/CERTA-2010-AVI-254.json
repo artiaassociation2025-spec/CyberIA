@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IBM WebSphere 6.x et 7.x.</p>",
+  "content": "## Description\n\nLorsque les deux conditions suivantes sont réunies :\n\n-   l'utilisateur s'authentifie par mot de passe sans hachage ;\n-   la journalisation des transactions SIP est complète\n    (com.ibm.ws.sip.\\*=all) ,\n\nalors le journal contient des informations sensibles non chiffrées comme\nle contenu des messages instantanés.\n\n## Solution\n\nLes versions 6.1.0.31 et 7.0.0.11 remédient à ces problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-1651",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1651"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-254",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-06-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la gestion du protocole SIP par IBM WebSphere\npermet à un utilisateur malveillant de lire des informations sensibles.\n",
+  "title": "Vulnérabilité dans IBM WebSphere",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg1PM08892 du 03 juin 2010",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1PM08892"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg1PM12247 du 08 juin 2010",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1PM12247"
+    }
+  ]
+}

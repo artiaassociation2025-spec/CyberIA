@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>PHP versions 5.2.3 et antérieures.</p>",
+  "content": "## Description\n\nPlusieurs failles sont présentes dans PHP :\n\n-   une erreur d'impact non précisé par l'éditeur a été identifiée dans\n    la fonction money_format() ;\n-   une seconde dans la fonction zend_alter_ini_entry() permet de\n    déclencher une interruption arbitraire ;\n-   plusieurs failles de type débordement de mémoire dans la mise en\n    œuvre de la bibliothèque de fonctions GD par PHP permettent à un\n    utilisateur distant de provoquer un déni de service ou d'exécuter du\n    code arbitraire ;\n-   une erreur dans la mise en œuvre de requêtes SQL sur un serveur\n    MySQL dans PHP permet à un utilisateur de contourner les\n    restrictions associées aux directives open_basedir et safe_mode ;\n-   un manque de contrôle dans la fonction glob permet également de\n    contourner les restrictions de open_basedir ;\n-   une dernière vulnérabilité relative à l'extension session permet de\n    contourner les restrictions de open_basedir si le fichier de session\n    est un lien symbolique.\n\n## Solution\n\nLa version 5.2.4 de PHP corrige le problème :\n\n    http://www.php.net/downloads.php\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3378",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3378"
+    },
+    {
+      "name": "CVE-2007-3997",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3997"
+    },
+    {
+      "name": "CVE-2007-3996",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3996"
+    }
+  ],
+  "links": [
+    {
+      "title": "Liste des changements apportés à la version 5.2.4 de    PHP :",
+      "url": "http://www.php.net/releases/5_2_4.php"
+    },
+    {
+      "title": "Site de PHP :",
+      "url": "http://www.php.net"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-388",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-09-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités sont présentes dans PHP et permettent à un\nutilisateur distant d'exécuter du code arbitraire ou de contourner la\npolitique de sécurité du site mis en œuvre avec PHP.\n",
+  "title": "Multiples vulnérabilités dans PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés à la version 5.2.4 de PHP du 30 août 2007",
+      "url": null
+    }
+  ]
+}

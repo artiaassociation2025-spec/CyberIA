@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système Microsoft Windows dont le service ``Agent NAI  ePolicy Orchestrator'' est démarré.</P>",
+  "content": "## Description\n\n\\`\\`ePolicy Orchestrator'' est un outil de gestion centralisée de la\npolitique de sécurité antivirale. Il est composé de consoles\nd'administration, de serveurs et enfin d'agents sur chaque poste où la\npolitique antivirus doit être appliquée et surveillée.\n\nLes agents sont des services ayant les privilèges SYSTEM qui peuvent\nêtre interrogés à l'aide du protocole HTTP sur le port 8081/tcp. Une\nmauvaise gestion des chaînes de format dans ces requêtes permet\nl'exécution de code arbitraire.\n\n## Contournement provisoire\n\nAfin de prévenir toute agression externe, les pare-feux peuvent être\nconfigurés pour filtrer le port 8081/tcp, cependant la faille reste\nalors exploitable depuis la même zone de sécurité. Si un pare-feu\npersonnel est présent sur l'hôte, il peut être paramètré pour\nrestreindre au serveur \\`\\`ePolicy Orchestrator'' les adresses IP\nautorisées à se connecter au port 8081/tcp.\n\n## Solution\n\nContacter votre revendeur NAI pour obtenir le correctif.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Description du produit ``ePolicy Orchestrator'' :",
+      "url": "http://www.mcafeeb2b.com/international/france/products/epolicy/default-management-solution.asp"
+    },
+    {
+      "title": "Avis de sécurité de @stake :",
+      "url": "http://www.atstake.com/research/advisories/2003/a031703-1.txt"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-062",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance avec des privilèges élevés"
+    }
+  ],
+  "summary": "Une vulnérabilité de type chaîne de format, permet à un utilisateur mal\nintentionné distant d'exécuter du code sur la machine visée avec les\nprivilèges élévés du niveau <span class=\"textit\">SYSTEM</span>.\n",
+  "title": "Faille dans McAfee \"Security ePolicy Orchestrator\"",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité @stake du 17/03/2003",
+      "url": null
+    }
+  ]
+}

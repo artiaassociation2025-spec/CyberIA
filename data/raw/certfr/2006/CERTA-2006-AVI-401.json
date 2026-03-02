@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Dokeos versions 1.x et précédentes ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Dokeos Community Release versions 2.x et précédentes.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDokeos est une application d'e-learning largement utilisée. La\nvulnérabilité découverte provient d'une mauvaise vérification du\nparamètre extAuthSource\\['newUser'\\]. Il devient ainsi possible\nd'inclure des fichiers arbitraires à distance ou localement. L'attaque\nnécessite tout de même d'avoir la variable register_globals positionnée\nsur ON.\n\n## Contournement provisoire\n\nDans l'attente d'un correctif de sécurité, positionner la variable\nregister_globals sur OFF.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de Dokeos:",
+      "url": "http://www.dokeos.com"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-401",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-09-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans Dokeos",
+  "vendor_advisories": []
+}

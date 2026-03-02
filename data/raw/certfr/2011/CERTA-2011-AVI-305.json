@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Moodle versions 2.0.x antérieures à 2.0.3 ;",
+      "product": {
+        "name": "Moodle",
+        "vendor": {
+          "name": "Moodle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Moodle versions 1.9.x antérieures à 1.9.12.",
+      "product": {
+        "name": "Moodle",
+        "vendor": {
+          "name": "Moodle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Moodle :\n\n-   un enseignant peut voir les rapports de quizz de tous les étudiants,\n    même ceux qui ne sont pas dans ses groupes (MSA-11-0013) ;\n-   les adresses de messagerie des utilisateurs sont affichées dans la\n    page de profil, lorsqu'elles ne devraient apparaître qu'aux membres\n    du cours seulement (MSA-11-0014) ;\n-   plusieurs injections de code indirectes sont possibles (MSA-11-0015)\n    ;\n-   un utilisateur légitime peut créer plusieurs enregistrements\n    invalides dans la base de données, ce qui peut conduire à un déni de\n    service (MSA-11-0016) ;\n-   un utilisateur légitime peut remplir la table des commentaires dans\n    la base de données avec des enregistrements invalides (MSA-11-0017).\n\n## Solution\n\nLes versions 2.0.3 et 1.9.12 de Moodle corrigent ces vulnérabilités.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletins de sécurité Moodle MSA-11-0013 à MSA-11-0017 :",
+      "url": "http://moodle.org/mod/forum/discuss.php?d=175594"
+    },
+    {
+      "title": "Bulletins de sécurité Moodle MSA-11-0013 à MSA-11-0017 :",
+      "url": "http://moodle.org/mod/forum/discuss.php?d=175593"
+    },
+    {
+      "title": "Bulletins de sécurité Moodle MSA-11-0013 à MSA-11-0017 :",
+      "url": "http://moodle.org/mod/forum/discuss.php?d=175590"
+    },
+    {
+      "title": "Bulletins de sécurité Moodle MSA-11-0013 à MSA-11-0017 :",
+      "url": "http://moodle.org/mod/forum/discuss.php?d=175592"
+    },
+    {
+      "title": "Bulletins de sécurité Moodle MSA-11-0013 à MSA-11-0017 :",
+      "url": "http://moodle.org/mod/forum/discuss.php?d=175591"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-305",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-05-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Moodle</span>\npermettent, entre autres, de réaliser un déni de service ou une\ninjection de code indirecte à distance.\n",
+  "title": "Multiples vulnérabilités dans Moodle",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce des nouvelles versions de Moodle du 19 mai 2011",
+      "url": "http://moodle.org/mod/forum/discuss.php?d=175658"
+    }
+  ]
+}

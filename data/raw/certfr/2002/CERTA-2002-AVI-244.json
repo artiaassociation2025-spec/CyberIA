@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>SuSE eMail server III, 3.1 ;</LI>    <LI>SuSE Firewall on CD/admin host ;</LI>    <LI>SuSE Firewall on CD 2 ;</LI>    <LI>SuSE Linux Connectivity Server ;</LI>    <LI>SuSE Linux Enterprise Server 7 ;</LI>    <LI>SuSE Linux Office Server ;</LI>    <LI>Linux Debian 3.0 (Woody) ;</LI>    <LI>Linux Debain 2.2 (Potato) ;</LI>    <LI>Linux Debian sid.</LI>  </UL>  <P>Il n'est cependant pas impossible que d'autres distributions  de Linux soient affectées.</P>",
+  "content": "## Description\n\nLPRng est un module d'impression équivalent à lpd de plus en plus\nprésent dans la plupart des distributions Unix ou Linux.\n\nCe paquetage contient un programme nommé runlpr permettant à\nl'utilisateur lp d'exécuter le programme lpr avec les privilèges de\nl'utilisateur root.\n\nUn utilisateur local mal intentionné peut passer certains arguments à la\nligne de commande lpr exécutée en tant que root de façon à exécuter du\ncode arbitraire.\n\nLes filtres d'impression de l'outil html2ps permettent aussi d'utiliser\ncette vulnérabilité.\n\nNota : Il faut avoir compromis le compte lp pour exploiter cette\nvulnérabilité.\n\n## Contournement provisoire\n\nDésinstaller html2ps et lprng s'ils ne sont pas utilisés.\n\n## Solution\n\nSe référer aux bulletins de sécurité et d'alerte (voir le paragraphe\nDocumentation) des éditeurs pour connaître la disponibilité des\ncorrectifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité DSA-192-1 de Debian :",
+      "url": "http://www.debian.org/security/2002/dsa-192"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-244",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-11-08T00:00:00.000000"
+    },
+    {
+      "description": "première révision : ajout du bulletin de sécurité de Debian.",
+      "revision_date": "2002-11-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire en local"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Un utilisateur local peut exécuter des commandes avec les privilèges de\nl'administrateur root en passant certains paramètres à la commande lpr.\n",
+  "title": "Vulnérabilité de <TT>lprng</TT> et <TT>html2ps</TT> sous Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SuSE-SA:2002:040 de SuSE",
+      "url": "http://www.suse.com/de/security/2002_040_lprng_html2ps.html"
+    }
+  ]
+}

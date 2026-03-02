@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "2.4 jusqu'au 2.4.27,",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "2.6 jusqu'au 2.6.9.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "Tout système Linux utilisant un noyau original («vanilla»)  ou la version d'un éditeur non corrigée.",
+  "content": "## Description\n\nL'appel système execve est utilisé pour lancer un nouveau programme. Par\nailleurs, les systèmes d'exploitation Linux récents utilisent le format\nd'exécutable ELF (« Executable and Linkable Format »). Pour ces\nprogrammes, execve appelle du code dédié pour charger en mémoire le\nbinaire. Ce code ne valide pas bien certains appels et il est alors\npossible de leurrer le système quand au bon chargement du binaire.\n\nDans le cas des programmes SUID, le noyau va alors permettre l'exécution\navec les droits root d'un code mal formé.\n\n## Contournement provisoire\n\nRestreindre à des utilisateurs de confiance l'exécution de programmes\nSUID.\n\n## Solution\n\nMettre à jour le noyau « vanilla » en version 2.6.10 au moins ou se\nréférer au bulletin de sécurité de l'éditeur.\n\nLes noyaux Gentoo on été mis à jour courant novembre et, bien qu'aucun bulletin de sécurité n'ait été édité, un noyau postérieur au 1er décembre 2004 ne doit plus être vulnérable.\n",
+  "cves": [
+    {
+      "name": "CVE-2004-1073",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2004-1073"
+    },
+    {
+      "name": "CVE-2004-1071",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2004-1071"
+    },
+    {
+      "name": "CVE-2004-1072",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2004-1072"
+    },
+    {
+      "name": "CVE-2004-1070",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2004-1070"
+    }
+  ],
+  "links": [
+    {
+      "title": "Sources du noyau Linux :",
+      "url": "http://www.kernel.org"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2004:042 du 01 décembre    2004 :",
+      "url": "http://www.novell.com/linux/security/advisories/2004_42_kernel.html"
+    },
+    {
+      "title": "Bulletin de sécurité Secunia du 10 novembre 2004 :",
+      "url": "http://secunia.com/advisories/13126"
+    },
+    {
+      "title": "Bulletin de sécurité Avaya ASA-2005-006 :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2005-006_RHSA-2004-549RHSA-2004-505RHSA-2004-689.pdf"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:549-10 du 02 décembre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-549.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-372",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2004-11-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE CAN-2004-1070, CAN-2004-1071, CAN-2004-1072 et CAN-2004-1073, des bulletins des éditeurs RedHat et SuSE et du statut de la distribution Gentoo.",
+      "revision_date": "2004-12-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité Avaya ASA-2005-006.",
+      "revision_date": "2005-01-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur local pouvant exécuter des programmes SUID (« Set User ID\n») <span class=\"textit\">root</span> peut provoquer un déni de service.\nIl n'est pas exclu que l'exécution de code arbitraire avec les\nprivilèges du super-utilisateur soit également possible.\n",
+  "title": "Vulnérabilité des noyaux Linux 2.4 et 2.6",
+  "vendor_advisories": [
+    {
+      "published_at": "2004-11-19",
+      "title": "Bulletin de sécurité iSEC Security Research",
+      "url": "http://isec.pl/vulnerabilities/isec-0017-binfmt_elf.txt"
+    }
+  ]
+}

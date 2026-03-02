@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Cisco ASA 5500 series.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités de Cisco ASA ont été publiées :\n\n-   à la réception de certains segments (PDU) TCP lors de la phase de\n    terminaison d'une connexion TCP, la création de nouvelle connexion\n    peut devenir impossible. Cela permet à un utilisateur malveillant de\n    provoquer un déni de service à distance par épuisement des\n    ressources ;\n-   deux vulnérabilités dans le traitement des paquets SIP en transit\n    permettent à un utilisateur malveillant de provoquer un redémarrage\n    du boîtier Cisco ;\n-   une vulnérabilité dans le traitement des paquets SCCP en transit\n    permet à un utilisateur malveillant de provoquer un redémarrage du\n    boîtier Cisco ;\n-   une vulnérabilité dans le traitement de paquets DTLS malformés à\n    destination du boîtier permet à un utilisateur malveillant de\n    provoquer un redémarrage du boîtier Cisco. Le boîtier doit être\n    configuré pour le transport DTLS et pour WebVPN ;\n-   une vulnérabilité dans le traitement de paquets TCP malformés en\n    transit permet à un utilisateur malveillant, dans des conditions\n    particulières, de provoquer un redémarrage du boîtier Cisco ;\n-   une vulnérabilité dans le traitement des messages IKE permet à un\n    utilisateur de mettre fin à un tunnel IPsec ;\n-   une vulnérabilité affecte les boîtiers configurés pour authentifier\n    des utilisateurs avec le protocole NTLMv1. Elle permet de contourner\n    l'authentification.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0567",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0567"
+    },
+    {
+      "name": "CVE-2010-0149",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0149"
+    },
+    {
+      "name": "CVE-2010-0566",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0566"
+    },
+    {
+      "name": "CVE-2010-0565",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0565"
+    },
+    {
+      "name": "CVE-2010-0150",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0150"
+    },
+    {
+      "name": "CVE-2010-0151",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0151"
+    },
+    {
+      "name": "CVE-2010-0569",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0569"
+    },
+    {
+      "name": "CVE-2010-0568",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0568"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-085",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-02-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de Cisco ASA ont été publiées. Elles sont\nexploitables par un utilisateur malveillant pour provoquer un déni de\nservice à distance ou pour contourner l'authentification.\n",
+  "title": "Vulnérabilités de Cisco ASA",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20100217-asa du 17 février 2010",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20100217-asa.shtml"
+    }
+  ]
+}

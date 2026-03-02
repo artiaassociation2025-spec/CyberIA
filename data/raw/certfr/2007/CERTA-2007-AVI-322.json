@@ -1,0 +1,56 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Ipswitch iMail Server 2006, pour les versions antérieures à 2006.21.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités de type « débordement de tampon » ont été\nidentifiées dans le serveur de messagerie Ipswitch iMail Server 2006.\nElles concernent le démon IMAP qui est utilisé pour accéder aux\ncourriels, et impliqueraient notamment les commandes IMAP Search et\nSearch charset.\n\nL'exploitation de ces dernières permettrait à une personne malveillante\nd'exécuter du code arbitraire à distance avec les droits de\nl'administrateur. Il faut néanmoins qu'elle se soit authentifiée\ncorrectement au préalable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Notes de changement de version concernant Ipswitch iMail    Server :",
+      "url": "http://docs.ipswitch.com/IMail%202006.21/ReleaseNotes/IMail_RelNotes.htm#NewRelease"
+    },
+    {
+      "title": "Bulletin de sécurité iDefense du 18 juillet 2007 :",
+      "url": "http://labs.idefense.com/intelligence/vulnerabilities/display?id=563"
+    },
+    {
+      "title": "Page officielle du produit Ipswitch iMail Server :",
+      "url": "http://ipswitch.com/products/imail/index.asp"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-322",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans le serveur de\nmessagerie Ipswitch iMail Server 2006. L'exploitation de ces dernières\npermettrait à une personne malveillante d'exécuter du code arbitraire à\ndistance.\n",
+  "title": "Plusieurs vulnérabilités dans Ipswitch IMail Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDefense Labs 563 du 18 juillet 2007",
+      "url": null
+    }
+  ]
+}

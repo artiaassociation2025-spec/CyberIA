@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Unified IP Interactive Voice Response (IP-IVR), 6.x, 7.x et 8.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified Communications Manager (CUCM), 5.x, 6.x, 7.x et 8.x ;",
+      "product": {
+        "name": "Unified Communications Manager",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified Contact Center Express (UCCX), 6.x, 7.x et 8.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes produits Cisco affectés présentent une vulnérabilité de type\ndirectory traversal. Un utilisateur malintentionné peut, à l'aide d'une\nadresse réticulaire (URL) conçue à cet effet, lire tous les fichiers\nprésents sur le système.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-3315",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3315"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20111026-uccx du 26 octobre 2011    :",
+      "url": "http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111026-uccx"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco 20111026-cucm du 26 octobre 2011    :",
+      "url": "http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20111026-cucm"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-601",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-10-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans plusieurs produits Cisco permet à un utilisateur\nmalintentionné de porter atteinte à la confidentialité des données.\n",
+  "title": "Vulnérabilité dans Cisco CUCM, UCCX et Unified IP-IVR",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Cisco 20111026-cucm et 20111026-uccx du 26 octobre 2011",
+      "url": null
+    }
+  ]
+}

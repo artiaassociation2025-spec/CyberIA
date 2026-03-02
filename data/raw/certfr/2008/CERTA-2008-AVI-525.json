@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Drupal versions 6.5 et antérieures.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Drupal versions 5.11 et antérieures ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Drupal :\n\n-   sur les serveurs configurés pour utiliser des machines virtuelles,\n    il est possible d'inclure et d'exécuter des fichiers qui se trouvent\n    en dehors de l'arborescence de Drupal (versions 5.x et 6.x) ;\n-   des attaques de type cross-site scripting sont possibles via\n    certains titres (versions 6.x).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2008-AVI-525",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-10-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Drupal</span>\npermettent de contourner la politique de sécurité et de réaliser des\nattaques de type <span class=\"textit\">cross-site scripting</span>.\n",
+  "title": "Multiples vulnérabilités dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Drupal SA-2008-067 du 22 octobre 2008",
+      "url": "http://drupal.org/node/324824"
+    }
+  ]
+}

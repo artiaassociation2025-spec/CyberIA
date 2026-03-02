@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Me ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 9x ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nWebDAV est un standard d'Internet qui permet à plusieurs utilisateurs de\ncoopérer sur des documents en utilisant le système de partage de\nfichiers.\n\nThéoriquement, WebDAV devrait être capable de faire la différence entre\nune requête faite par un utilisateur, et une requête faite par un script\ndu navigateur de l'utilisateur.\n\nNéanmoins, du fait d'une faille dans son implémentation, WebDAV traite\ntoutes les requêtes comme étant celles de l'utilisateur.\n\nIl en résulte que si un utilisateur navigue sur une page web ou ouvre un\nmél écrit en HTML contenant un script, ce script aura accès aux\nressources web avec les droits de l'utilisateur.\n\n## Contournement provisoire\n\nDésactiver l'activation automatique de script dans le navigateur et le\nlogiciel de messagerie.\n\n## Solution\n\nCorrectif Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=29129\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-022.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-046",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-04-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès aux données"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, par le biais d'un script habilement\nconstruit, avoir accès à un réseau WebDav interne avec les privilèges de\nla machine cible.\n",
+  "title": "Vulnérabilité dans WebDAV Service Provider",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-022",
+      "url": null
+    }
+  ]
+}

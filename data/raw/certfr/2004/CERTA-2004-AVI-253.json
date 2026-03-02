@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "HP-UX 11 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP OpenVMS.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP Tru64 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe service dced est l'implementation du service RPC DCE (Distributed\nComputing Environment) endpoint mapper (epmap) sous HP; DCE étant un\nensemble de service et d'outils qui permettent la création et le\ndéploiement d'applications distibuées.\n\nUn débordement de mémoire est présent dans le service dced en écoute par\ndéfaut sur le port 135/tcp. L'exploitation de cette vulnérabilité permet\nà un utilisateur mal intentionné d'exécuter du code arbitraire à\ndistance avec les privilèges de l'utilisateur sous lequel le service a\nété démarré; par défaut les privillèges du super utilisateur (root).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité concernant HP-UX Tru64 (HPSBTU01051) :",
+      "url": "http://www2.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBTU01051"
+    },
+    {
+      "title": "Bulletin de sécurité concernant HP OpenVMS (HPSB0V01056) :",
+      "url": "http://www2.itrc.hp.com/service/cki/docDisplay.do?docId=HPSB0V01056"
+    },
+    {
+      "title": "Bulletin de sécurité concernant HP-UX 11.x (HPSBUX0311-299)    :",
+      "url": "http://www2.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBUX0311-299"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-253",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Exécution de commande arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le service RPC DCE (dced) peut être\nexploitée par un utilisateur mal intentionné afin de réaliser un déni de\nservice ou d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité du service RPC DCE",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité HP HPSBUX0311-299, HPSBTU01051 et HPSB0V01056",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IOs avec la fonctionnalité RSVP activée sans les derniers correctifs de sécurité (se référer au site de l'éditeur pour les versions affectées)",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "1000 Series Integrated Services Routers (ISRs), Catalyst 8000v Edge Software, Catalyst 8200 Series Edge Platforms, Catalyst 8300 Series Edge Platforms, Catalyst 8500L Edge Platforms, Catalyst IR8300 Rugged Series Routers avec la fonctionnalité UTD installée et activée, avec des tunnels SD-WAN configurés pour utiliser IPSec et sans les derniers correctifs de sécurité",
+      "product": {
+        "name": "Catalyst SD-WAN",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Catalyst Center versions 2.3.7.x antérieures à 2.3.7.5",
+      "product": {
+        "name": "Catalyst Center",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IOS XE sans les derniers correctifs de sécurité (se référer au site de l'éditeur pour les versions affectées)",
+      "product": {
+        "name": "IOS XE",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Catalyst Center versions antérieures à 2.3.5.6",
+      "product": {
+        "name": "Catalyst Center",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "L'éditeur indique que les versions 2.3.6.x de Catalyst Center sont également affectées par la vulnérabilité CVE-2024-20350 mais ne bénéficieront pas d'un correctif de sécurité. ",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2024-20480",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20480"
+    },
+    {
+      "name": "CVE-2024-20437",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20437"
+    },
+    {
+      "name": "CVE-2024-20455",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20455"
+    },
+    {
+      "name": "CVE-2024-20350",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20350"
+    },
+    {
+      "name": "CVE-2024-20464",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20464"
+    },
+    {
+      "name": "CVE-2024-20436",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20436"
+    },
+    {
+      "name": "CVE-2024-20433",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20433"
+    },
+    {
+      "name": "CVE-2024-20467",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20467"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0813",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-09-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Cisco. Certaines d'entre elles permettent à un attaquant de provoquer un déni de service à distance, une injection de requêtes illégitimes par rebond (CSRF) et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans les produits Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": "2024-09-25",
+      "title": "Bulletin de sécurité Cisco cisco-sa-webui-csrf-ycUYxkKO",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-webui-csrf-ycUYxkKO"
+    },
+    {
+      "published_at": "2024-09-25",
+      "title": "Bulletin de sécurité Cisco cisco-sa-pim-APbVfySJ",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-pim-APbVfySJ"
+    },
+    {
+      "published_at": "2024-09-25",
+      "title": "Bulletin de sécurité Cisco cisco-sa-dnac-ssh-e4uOdASj",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-dnac-ssh-e4uOdASj"
+    },
+    {
+      "published_at": "2024-09-25",
+      "title": "Bulletin de sécurité Cisco cisco-sa-rsvp-dos-OypvgVZf",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-rsvp-dos-OypvgVZf"
+    },
+    {
+      "published_at": "2024-09-25",
+      "title": "Bulletin de sécurité Cisco cisco-sa-ios-xe-sda-edge-dos-MBcbG9k",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-ios-xe-sda-edge-dos-MBcbG9k"
+    },
+    {
+      "published_at": "2024-09-25",
+      "title": "Bulletin de sécurité Cisco cisco-sa-sdwan-utd-dos-hDATqxs",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sdwan-utd-dos-hDATqxs"
+    },
+    {
+      "published_at": "2024-09-25",
+      "title": "Bulletin de sécurité Cisco cisco-sa-httpsrvr-dos-yOZThut",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-httpsrvr-dos-yOZThut"
+    },
+    {
+      "published_at": "2024-09-25",
+      "title": "Bulletin de sécurité Cisco cisco-sa-cpp-vfr-dos-nhHKGgO",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-cpp-vfr-dos-nhHKGgO"
+    }
+  ]
+}

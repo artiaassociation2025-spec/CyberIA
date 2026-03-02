@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>KDE 3.3.2 et versions antérieures.</p>",
+  "content": "## Description\n\nKDE est un environnement graphique utilisé sur les systèmes Unix et\nLinux.\n\n  \n\nLors de la création de liens vers des fichiers distants, un partage\nSAMBA par exemple, les données d'authentification de l'utilisateur sont\nstockées en clair dans un fichier portant une extention \".desktop\".\n\nSi les droits d'accès par défaut aux fichiers de l'utilisateur ne sont\npas correctement positionnés (umask), il est alors possible pour un\nutilisateur local au système de prendre connaissance des mots-de-passe\nde l'utilisateur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200412-16 du 19 décembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200412-16.xml"
+    },
+    {
+      "title": "Bulletin de sécurité KDE du 09 décembre 2004 :",
+      "url": "http://www.kde.org/info/security/advisory-20041209-1.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:150 du 15 décembre    2004 ;",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:150"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-406",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-12-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de KDE",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité KDE du 12 décembre 2004",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Système IRIX versions 6.5.10 et antérieures.</P>  <P>Les versions antérieures, non maintenues, n'ont pas été  testées.</P>",
+  "content": "## Description\n\nLe service `/usr/etc/pmcd` est l'un des l'outils de surveillance des\nperformances du système, regroupés dans le paquetage\n`SGI Performance Co-Pilot`.\n\nCe paquetage n'est pas installé par défaut, mais livré avec le système\nd'exploitation de base.\n\nIl est possible d'appeler ce service avec certains paramètres\nmalicieusement choisis qui provoqueront un déni de service. Cette\nvulnérabilité est exploitable à distance.\n\n## Contournement provisoire\n\nNe pas utiliser le logiciel SGI Performance Co-Pilot. Il peut être\ndésinstallé par la commande suivante :  \n`# versions remove pcp_eoe`\n\n## Solution\n\nMettre à jour le système à la version IRIX 6.5.11 ou suivantes.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-092",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-05-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité du service `pmcd` sous IRIX peut entraîner un déni de\nservice.\n",
+  "title": "Vulnérabilité du service pmcd sous IRIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité IRIX 20020407-01-I",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20020407-01-I"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Word 2002 dans la suite Office XP Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Works Suite 2004 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Works Suite 2005 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Word 2003 dans la suite Office 2003 Service Pack 2 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Word 2000 dans la suite Office 2000 Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2004 pour Mac ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Works Suite 2006.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Word 2003 Viewer dans la suite Office 2003 Service Pack 2 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans l'application Word de\nla suite bureautique Microsoft Office :\n\n1.  l'application ne manipulerait pas correctement les données incluses\n    dans les tableaux (arrays). Une personne malveillante pourrait ainsi\n    construire un fichier particulier exploitant cette vulnérabilité,\n    afin d'exécuter du code arbitraire sur le système.\n2.  l'application ne manipulerait pas correctement les objets contenus\n    dans le flux d'un document. L'exploitation de cette vulnérabilité\n    provoque une corruption de la mémoire, permettant ainsi une\n    exécution de code arbitraire. Cette vulnérabilité a fait l'objet de\n    l'alerte CERTA-2007-ALE-006 à la suite d'une diffusion publique de\n    codes malveillants.\n3.  l'application ne manipulerait pas correctement les propriétés d'un\n    fichier au format RTF (ou Rich Text Format). L'exploitation de cette\n    vulnérabilité provoque également une corruption de la mémoire,\n    permettant ainsi une exécution de code arbitraire.\n\n## Solution\n\nSe référer au bulletin de sécurité MS07-024 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-1202",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1202"
+    },
+    {
+      "name": "CVE-2007-0870",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0870"
+    },
+    {
+      "name": "CVE-2007-0035",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0035"
+    }
+  ],
+  "links": [
+    {
+      "title": "Alerte CERTA-2007-ALE-006 du 16 février 2007 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2007-ALE-006/"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-204",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-05-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans l'application Word de\nla suite bureautique Microsoft Office. L'exploitation de ces dernières\npermet d'exécuter du code arbitraire sur le système utilisant une\nversion vulnérable.\n",
+  "title": "Plusieurs vulnérabilités dans Microsoft Word",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-024 du 08 mai 2007",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-024.mspx"
+    }
+  ]
+}

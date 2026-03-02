@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>IRIX 5.3 et 6.1 à 6.5 munis des outils « Workshop Debugger and  Performance » versions 2.6 et inférieures.</P>",
+  "content": "## Description\n\nDans son utilisation normale, « cvconnect » n'est pas utilisé\nmanuellement par l'utilisateur, mais appelé par le fonctionnement de la\nsuite logicielle « WorkShop » .\n\nOr, il a été découvert qu'il est possible à n'importe quel utilisateur\npossédant un compte local d'exécuter la commande manuellement, en local\nou à distance. Cette commande permet à un utilisateur mal intentionné\nd'écraser n'importe quel fichier du système.\n\n## Contournement provisoire\n\nAprès avoir vérifié la version de « WorkShop », il faut, en ayant accès\nen root à la machine, supprimer les permissions nuisibles à « cvconnect\n» .\n\nPour vérifier la version, utiliser la commande 'version' :\n\n\\# version -b WorkShop\n\nPour changer les permissions de « cvconnect », utiliser la commande\n'chmod' :\n\n\\# /bin/chmod 500 /usr/lib/WorkShop/cvconnect\n\nVérifier les nouvelles permissions :\n\n\\# ls -l /usr/lib/WorkShop/cvconnect\n\n-r-x--- 1 root sys 428664 Sep 11 1997 cvconnect\n\n## Solution\n\nIl existe une version 2.7 de « WorkShop » qui corrige le problème. Il\nfaut donc mettre à jour la version de « WorkShop ».\n\nNota : Cette mise à jour n'est possible que sur les versions 6.2 à 6.5\nd'IRIX. Pour les versions 5.3 et 6.1, il faut : soit mettre à jour le\nsystème, soit faire la manipulation décrite dans le\nparagraphe [5](#sec:provisoire).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis du CIAC :",
+      "url": "http://www.ciac.org/ciac.bulletins/k-056.shtml"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-012",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-06-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Ecrasements de fichiers. de façon générale, un écrasement de fichier peut avoir pour conséquences : une destruction de la configuration de la machine, un accès root à la machine, etc"
+    }
+  ],
+  "summary": "Workshop est une suite logicielle d'outils aidant les développeurs à\nmettre au point les programmes. Le programme « cvconnect » est appelé\npar ce logiciel.\n\nUne vulnérabilité dans « cvconnect » a été découverte, autorisant\nn'importe quel utilisateur à l'exécuter.\n",
+  "title": "Vulnérabilité dans « Workshop » cvconnect sous IRIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis K-056 du CIAC",
+      "url": null
+    }
+  ]
+}

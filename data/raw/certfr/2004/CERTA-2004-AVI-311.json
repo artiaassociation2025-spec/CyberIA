@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Samba versions 3.0.6 et antérieures.</p>",
+  "content": "## Description\n\nSamba est un logiciel libre, open source, utilisé pour la mise en oeuvre\ndes partages réseau à l'aide des protocoles SMB et CIFS sous Unix.  \n\nPlusieurs vulnérabilités sont présentes dans samba :\n\n-   CVE CAN-2004-0807 : vulnérabilité dans le décodage de données ASN.1\n    lors de la phase d'authentification d'un utilisateur ;\n-   CVE CAN-2004-0808 : vulnérabilité dans le traitement de paquets\n    NETBIOS.\n\nL'exploitation de ces vulnérabilités permet à un utilisateur mal\nintentionné, via l'envoi de paquets habilement constitués, de créer un\ndéni de service en provoquant l'arrêt brutal du service nmbd ou la\nconsommation excessive de mémoire par le service smbd.\n\n## Solution\n\nLa version 3.0.7 de Samba corrige ces vulnérabilités.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Note \"Samba 3.0.x Denial of service flaw\" :",
+      "url": "http://sambafr.idealx.org/samba/history/3.0_DOS_sept04_announce.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:092 du 13    septembre 2004 :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:092"
+    },
+    {
+      "title": "Site Internet de Samba :",
+      "url": "http://www.samba.org"
+    },
+    {
+      "title": "Bulletin de sécurité Red Har RHSA-2004:467 du 22 septembre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-467.html"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD samba :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/net/samba/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité \"Samba NMBD invalid length denial of    service vulnerability\" d'IDEFENSE :",
+      "url": "http://www.idefense.com/application/poi/display?id=138&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD \"samba3 DoS attack\" du 14    septembre 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité \"Samba 3.x SMBD remote denial of    service vulnerability\" d'IDEFENSE :",
+      "url": "http://www.idefense.com/application/poi/display?id=139&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200409-16 du 13 septembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200409-16.xml"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-311",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de Red Hat.",
+      "revision_date": "2004-09-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Samba permettent à un utilisateur mal\nintentionné de provoquer un déni de service.\n",
+  "title": "Multiples vulnérabilités de Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité d'iDEFENSE",
+      "url": null
+    }
+  ]
+}

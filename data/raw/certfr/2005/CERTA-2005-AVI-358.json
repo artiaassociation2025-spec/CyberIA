@@ -1,0 +1,115 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mozilla Firefox version 1.0.6 et antérieures ;",
+      "product": {
+        "name": "Firefox",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mozilla Suite versions 1.7.11 et versions antérieures.",
+      "product": {
+        "name": "Firefox",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn manque de contrôle dans l'analyse des paramètres passés à Firefox en\nligne de commande permet à un utilisateur distant mal intentionné\nd'éxecuter du code arbitraire par le biais d'un lien réticulaire\nmalicieusement construit présent dans une application externe comme un\nclient de messagerie. Remarque : Cette vulnérabilité n'est exploitable\nque sur des systèmes de type Unix et GNU/Linux. Plusieurs autres\nvulnérabilités ont été découvertes dans Mozilla Firefox et Mozilla Suite\npermettant d'exécuter du code arbitraire à distance.\n\n## Solution\n\nMettre à jour Mozilla Firefox en version 1.0.7 et Mozilla Suite en\nversion 1.7.12. Dans tous les cas, se référer au bulletin de sécurité de\nl'éditeur pour l'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Liste des correctifs appliqués dans Mozilla Suite 1.7.12 :",
+      "url": "http://www.mozilla.org/releases/mozilla1.7.12/"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour mozilla et firefox du 22    septembre 2005 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:169 du 26    septembre 2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:169"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:170 du 26    septembre 2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:170"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:789 du 22 septembre    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-789.html"
+    },
+    {
+      "title": "Liste des correctifs appliqués dans Mozilla Firefox 1.0.7 :",
+      "url": "http://www.mozilla.org/products/firefox/releases/1.0.7.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla MFSA 2005-59 du 22 septembre    2005 :",
+      "url": "http://www.mozilla.org/security/announce/mfsa2005-59.html"
+    },
+    {
+      "title": "Site Internet de Mozilla Firefox :",
+      "url": "http://www.mozilla.org/products/firefox/"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:785 du 22 septembre    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-785.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla MFSA 2005-58 du 22 septembre    2005 :",
+      "url": "http://www.mozilla.org/security/announce/mfsa2005-58.html"
+    },
+    {
+      "title": "Site Internet de Mozilla Suite :",
+      "url": "http://www.mozilla.org/products/mozilla1.x/"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-838 du 02 octobre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-838"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-358",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-09-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2005-09-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Mozilla, ajout du produit Mozilla Suite, ajout des bulletins de sécurité RedHat et des références CVE.",
+      "revision_date": "2005-09-23T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Mandriva MDKSA-2005:169 et MDKSA-2005:170.",
+      "revision_date": "2005-09-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-838.",
+      "revision_date": "2005-10-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Des vulnérabilités dans Mozilla Firefox et dans Mozilla Suite permettent\nà un utilisateur distant mal intentionné d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilités de Mozilla Firefox et Mozilla Suite",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité de Mozilla",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>LibTIFF version 3.9.2 et versions  antérieures.  <P>Les applications utilisant cette bibliothèque peuvent être  vulnérables.</P></p>",
+  "content": "## Description\n\nUn débordement d'entier affecte le décodeur d'une catégorie d'images au\nformat TIFF (FAX3). Cette vulnérabilité est exploitable par un\nutilisateur malveillant pour exécuter du code arbitraire.\n\nUn autre débordement d'entier, dans le traitement d'une macro, permet à\nun utilisateur malveillant de provoquer un déni de service et,\npotentiellement, d'exécuter du code arbitraire.\n\nUn problème de traitement du format OJPEG est exploitable par un\nutilisateur malveillant pour provoquer un déni de service.\n\n## Solution\n\nLa version 3.9.3 de la bibliothèque LibTIFF remédie à ces problèmes.\n\nÀ la date de mise à jour de cet avis, des vulnérabilités de la version\n3.9.3 sont corrigées par la version 3.9.4.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2443",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2443"
+    },
+    {
+      "name": "CVE-2010-2065",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2065"
+    },
+    {
+      "name": "CVE-2010-1411",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1411"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de la version 3.9.3 de la bibliothèque LibTIFF du    11 juin 2010 :",
+      "url": "http://www.remotesensing.org/libtiff/v3.9.3.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-262",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-06-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout d'autres vulnérabilités et des références CVE correspondantes.",
+      "revision_date": "2010-06-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Des vulnérabilités dans des décodeurs de la bibliothèque LibTIFF sont\nexploitables par un utilisateur malveillant pour exécuter du code\narbitraire.\n",
+  "title": "Vulnérabilités dans LibTIFF",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de la version 3.9.3 de la bibliothèque LibTIFF du 11 juin 2010",
+      "url": null
+    }
+  ]
+}

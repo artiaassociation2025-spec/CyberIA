@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "sudo, version 1.x.",
+      "product": {
+        "name": "Sudo",
+        "vendor": {
+          "name": "Sudo",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nLorsque le programme sudo est utilisé avec l'option secure path, un\nutilisateur malveillant peut exécuter des commandes qui ne lui sont pas\nautorisées en manipulant la variable PATH.\n\n## Solution\n\nLes version 1.6.9p23 et 1.7.2p7 remédient à ce problème.\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-1646",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1646"
+    }
+  ],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité Fedora FEDORA-2010-9417 du 21 juin    2010 :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-June/043012.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2010:118 du 17 juin    2010 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:118"
+    },
+    {
+      "title": "Mise à jour de sécurité Fedora FEDORA-2010-9402 du 14 juin    2010 :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-June/042838.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 2062 du 17 juin 2010 :",
+      "url": "http://www.debian.org/security/2010/dsa-2062"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-956-1 du 30 juin 2010 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-956-1"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2010:0475 du 15 juin 2010    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2010-0475.html"
+    },
+    {
+      "title": "Mise à jour de sécurité Fedora FEDORA-2010-9415 du 21 juin    2010 :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-June/043026.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-299",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-07-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de <span class=\"textit\">sudo</span> permet à un\nutilisateur malveillant d'élever ses privilèges.\n",
+  "title": "Vulnérabilité de sudo",
+  "vendor_advisories": [
+    {
+      "published_at": "2010-06-02",
+      "title": "Bulletin de sécurité du projet sudo",
+      "url": "http://www.sudo.ws/sudo/alerts/secure_path.html"
+    }
+  ]
+}

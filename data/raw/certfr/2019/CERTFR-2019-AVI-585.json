@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BIND versions 9.15.x antérieures à 9.15.6",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND versions antérieures à 9.11.13",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND versions 9.12.x et 9.14.x antérieures à 9.14.8",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2019-6477",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-6477"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2019-AVI-585",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2019-11-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans BIND. Elle permet à un attaquant\nde provoquer un déni de service à distance et un contournement de la\npolitique de sécurité.\n",
+  "title": "Vulnérabilité dans BIND",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité BIND cve-2019-6477 du 20 novembre 2019",
+      "url": "https://kb.isc.org/docs/cve-2019-6477"
+    }
+  ]
+}

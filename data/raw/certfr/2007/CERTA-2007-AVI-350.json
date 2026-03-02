@@ -1,0 +1,101 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Unified Communications Manager.",
+      "product": {
+        "name": "Unified Communications Manager",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS XR 3.x ;",
+      "product": {
+        "name": "IOS XR",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS R12.x ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS 12.x ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent Cisco IOS :\n\n-   la première (cisco-sa-20070808-scp), affectant l'implémentation de\n    Secure Copy (SCP), permet à un utilisateur connecté localement de\n    contourner la politique de sécurité ;\n-   la seconde (cisco-sa-20070808-nhrp), présente dans le protocol Next\n    Hop Resolution Protocol (NHRP), permet à un utilisateur distant\n    malintentionné de réaliser un déni de service ou d'exécuter du code\n    arbitraire par le biais d'un paquet spécialement conçu ;\n-   la troisième (cisco-sa-20070808-IOS-IPv6-leak) permet à un\n    utilisateur distant de réaliser un déni de service ou de porter\n    atteinte à la confidentialité des données par le biais d'un paquet\n    IPv6 malicieusement construit ;\n-   les dernières (cisco-sa-20070808-IOS-voice) concernent également le\n    produit Cisco Unified Communications Manager. Ces vulnérabilités\n    affectent les protocoles Session Initiation Protocal (SIP), Media\n    Gateway Control Protocol (MGCP), H.323, H.254, Real-time Transport\n    Protocol (RTP) et Facsimile reception. Un utilisateur distant\n    exploitant ces vulnérabilités peut réaliser un déni de service ou\n    exécuter du code arbitraire par le biais d'un paquet malicieusement\n    construit.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-4263",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4263"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco cisco-sa-20070808-IOS-voice du    08 août 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070808-IOS-voice.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco cisco-sa-20070808-IOS-IPv6-leak    du 08 août 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070808-IOS-IPv6-leak.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco cisco-sa-20070808-nhrp du 08    août 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070808-nhrp.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco cisco-sa-20070808-scp du 08 août    2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070808-scp.shtml"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-350",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-08-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités affectent différentes versions de Cisco IOS\net permettent notament d'exécuter du code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans Cisco IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Cisco du 08 août 2007",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mandriva 2006.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mandriva CS4.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mandriva 2007.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa vulnérabilité du module pam_ldap provoque une réponse positive de la\nfonction pam_authenticate même si l'authentification du client pam_ldap\na échoué. Cette vulnérabilité permet donc à un attaquant de se connecter\nde façon illégitime.\n\n## Contournement provisoire\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:201 du 09 novembre    2006 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDKSA-2006:201"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-485",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "PAM (Pluggable Authentification Module) est un système de gestion de la\npolitique d'authentification. Parmi les modules, pam_ldap permet de\ngérer l'interface avec un annuaire ldap. Une vulnérabilité dans le\nmodule pam_ldap pourrait être exploitée afin de contourner la politique\nde sécurité en faussant la phase d'authentification.\n",
+  "title": "Vulnérabilité dans le module pam_ldap",
+  "vendor_advisories": []
+}

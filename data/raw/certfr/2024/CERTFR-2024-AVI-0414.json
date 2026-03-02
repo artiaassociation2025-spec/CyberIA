@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GlobalProtect app toutes versions pour Linux",
+      "product": {
+        "name": "GlobalProtect App",
+        "vendor": {
+          "name": "Palo Alto Networks",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GlobalProtect app toutes versions sans l'option Endpoint Traffic Policy Enforcement positionnée à All Traffic pour Windows et macOS",
+      "product": {
+        "name": "GlobalProtect App",
+        "vendor": {
+          "name": "Palo Alto Networks",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GlobalProtect app toutes versions sans l'option IncludeAllNetworks positionnée à 1 pour iOS",
+      "product": {
+        "name": "GlobalProtect App",
+        "vendor": {
+          "name": "Palo Alto Networks",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2024-3661",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-3661"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0414",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-05-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans <span class=\"textit\">les\nproduits Palo Alto Networks</span>. Elle permet à un attaquant de\nprovoquer une atteinte à la confidentialité des données, une atteinte à\nl'intégrité des données et un contournement de la politique de sécurité.\n",
+  "title": "Vulnérabilité dans les produits Palo Alto Networks",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Palo Alto Networks CVE-2024-3661 du 16 mai 2024",
+      "url": "https://security.paloaltonetworks.com/CVE-2024-3661"
+    }
+  ]
+}

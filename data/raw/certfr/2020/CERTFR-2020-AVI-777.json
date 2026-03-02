@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<ul> <li>Drupal 9.x versions antérieures à 9.0.9</li> <li>Drupal 8.9.x versions antérieures à 8.9.10</li> <li>Drupal 8.8.x versions antérieures à 8.8.12</li> <li>Drupal 7.x versions antérieures à 7.75</li> </ul> <p>L'éditeur ne maintient plus les versions 8 antérieures à 8.8.x. Les utilisateurs d'une version obsolète doivent préalablement mettre à jour Drupal pour bénéficier des correctifs de sécurité.</p> ",
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\n## Contournement provisoire\n\nL'éditeur propose comme mesure de contournement pour ces vulnérabilités\nde limiter aux utilisateurs de confiance le téléchargement des fichiers\n*.tar*, *.tar.gz*, .*bz2* et .*tlz*.\n",
+  "cves": [
+    {
+      "name": "CVE-2020-28949",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-28949"
+    },
+    {
+      "name": "CVE-2020-28948",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-28948"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2020-AVI-777",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2020-11-26T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de la mesure de contournement",
+      "revision_date": "2020-11-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Drupal core. Elles\npermettent à un attaquant de provoquer une atteinte à l'intégrité des\ndonnées et une atteinte à la confidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans Drupal core",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Drupal sa-core-2020-013 du 25 novembre 2020",
+      "url": "https://www.drupal.org/sa-core-2020-013"
+    }
+  ]
+}

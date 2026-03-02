@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Versions de <TT>CUPS</TT> antérieures à  la version 1.1.14.</p>",
+  "content": "## Description\n\nCUPS est un système de gestion d'impressions pour les plateformes UNIX\nbasé sur le protocole d'impression d'internet (IPP).\n\nUne vulnérabilité de type « debordement de mémoire » exploitable sur\nCUPS est présente lors de la lecture des noms d'attributs sur CUPS.\n\n  \nCette vulnérabilité est exploitable à distance.\n\n## Contournement provisoire\n\nFiltrer le port 631  \ntcp au niveau du garde barrière pour éviter l'exploitation de cette\nvulnérabilité depuis l'Internet.\n\n## Solution\n\nInstaller la version 1.1.14 de CUPS.\n\nDes mises à jour sont également disponibles sous forme de paquetages\npour les distributions Linux (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité DSA-110 de Debian :",
+      "url": "http://www.debian.org/security/2002/dsa-110"
+    },
+    {
+      "title": "Avis de sécurité RHSA-2002:032 de Redhat :",
+      "url": "http://www.redhat.com/support/errata/RHSA-2002-032.html"
+    },
+    {
+      "title": "Avis de sécurité MDKSA-2002:015 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-015.php"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-035",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-18T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de l'avis de sécurité de Redhat",
+      "revision_date": "2002-03-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans CUPS permet à un utilisateur mal\nintentionné de réaliser l'exécution de code arbitraire à distance.\n",
+  "title": "Débordement de mémoire dans CUPS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulettin de sécurité DSA-110 de Debian.",
+      "url": null
+    }
+  ]
+}

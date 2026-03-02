@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>ClamAV versions 0.92.x et antérieures.</p>",
+  "content": "## Description\n\nPlusieurs erreurs ont été identifiées dans l'antivirus ClamAV :\n\n-   la première concerne l'analyseur de fichiers exécutables au format\n    PE engendrés par le « packer » : Upack ;\n-   la seconde concerne l'analyseur de fichiers exécutables au format PE\n    engendrés par un autre « packer » : SpinPE ;\n-   la dernière est relative à l'analyseur de fichiers compressés au\n    format ARJ.\n\nLes deux premières vulnérabilités permettent à un utilisateur distant de\nprovoquer un déni de service ou d'exécuter du code arbitraire. Quant à\nla dernière, elle permet de provoquer un déni de service de l'antivirus\nvulnérable.\n\n## Solution\n\nLa version 0.93 de ClamAV corrige le problème :\n\n    http://www.clamav.net/download/sources\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1100",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1100"
+    },
+    {
+      "name": "CVE-2008-1387",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1387"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité ClamAV :",
+      "url": "http://www.clamav.net/bugzilla/show_bug.cgi?id=876"
+    },
+    {
+      "title": "Bulletin de sécurité ClamAV :",
+      "url": "http://www.clamav.net/bugzilla/show_bug.cgi?id=897"
+    },
+    {
+      "title": "Bulletin de sécurité ClamAV :",
+      "url": "http://www.clamav.net/bugzilla/show_bug.cgi?id=878"
+    },
+    {
+      "title": "Site de ClamAV :",
+      "url": "http://www.clamav.net"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-206",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-04-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans ClamAV permettent à un\nutilisateur distant de provoquer un déni de service ou d'exécuter du\ncode arbitraire.\n",
+  "title": "Multiples vulnérabilités dans ClamAV",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité ClamAV du 14 avril 2008",
+      "url": null
+    }
+  ]
+}

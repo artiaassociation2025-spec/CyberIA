@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Zimbra Collaboration versions 10.0.x antérieures à 10.0.16",
+      "product": {
+        "name": "Zimbra Collaboration",
+        "vendor": {
+          "name": "Synacor",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Zimbra Collaboration versions 10.1.x antérieures à 10.1.10",
+      "product": {
+        "name": "Zimbra Collaboration",
+        "vendor": {
+          "name": "Synacor",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-54390",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-54390"
+    },
+    {
+      "name": "CVE-2025-54391",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-54391"
+    },
+    {
+      "name": "CVE-2025-27789",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-27789"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0609",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-07-21T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence CVE CVE-2025-54390 et CVE-2025-54391",
+      "revision_date": "2025-07-22T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence CVE CVE-2025-27789",
+      "revision_date": "2025-07-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Non spécifié par l'éditeur"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Synacor Zimbra Collaboration. Certaines d'entre elles permettent à un attaquant de provoquer un déni de service à distance, une injection de requêtes illégitimes par rebond (CSRF) et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans Synacor Zimbra Collaboration",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-07-18",
+      "title": "Bulletin de sécurité Synacor 10.0.16",
+      "url": "https://wiki.zimbra.com/wiki/Zimbra_Releases/10.0.16"
+    },
+    {
+      "published_at": "2025-07-18",
+      "title": "Bulletin de sécurité Synacor 10.1.10",
+      "url": "https://wiki.zimbra.com/wiki/Zimbra_Releases/10.1.10"
+    }
+  ]
+}

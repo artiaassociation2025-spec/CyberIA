@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Système Cisco ACNS versions 4.X, 5.0, 5.1 et 5.2.<BR></P>  <P>Voici la liste des plates-formes supportant le service ACNS  :</P>  <UL>    <LI>Cisco Content Engines 500 et 7300 ;</LI>    <LI>Cisco Content Routers 4400 ;</LI>    <LI>Cisco Content Distribution Manager 4600 ;</LI>    <LI>Cisco Content Engine Module pour Cisco 2600, 2800, 3600,    3700 et 3800 (Integrated Service Routers).<BR></LI>  </UL>  <P>Se reporter au bulletin de sécurité Cisco pour connaître  quelles versions du système ACNS sont précisément vulnérables en  fonction de chaque vulnérabilité.</P>",
+  "content": "## Description\n\nLe système Cisco ACNS (Application and Content Networking System) est\nutilisé pour la diffusion de données et d'applications Web.  \n\n-   Vulnérabilité CSCef27476 : un utilisateur mal intentionné peut\n    provoquer le redémarrage du processus du cache ACNS par le biais de\n    paquets TCP malicieusement construits.  \n-   Vulnérabilité CSCef30460 : un utilisateur mal intentionné peut\n    provoquer une saturation des ressources par le biais de paquets IP\n    malicieusement construits.  \n-   Vulnérabilité CSCeg49648 : cette vulnérabilité concerne le service\n    «RealServer Real Subscriber» et permet à un utilisateur mal\n    intentionné de provoquer une saturation des ressources par le biais\n    de paquets IP malicieusement construits. Par défaut, le service\n    «RealServer Real Subscriber» n'est pas activé.  \n-   Vulnérabilité CSCeg23731 : cette vulnérabilité concerne la gestion\n    des paquets IP et permet à un utilisateur mal intentionné de\n    provoquer un déni de service.  \n-   Vulnérabilité CSCef30743 : un mot de passe par défaut est activé\n    pour le compte administrateur sur le produit ACNS.  \n\n## Contournement provisoire\n\nVulnérabilité CSCef30743 : modifier le mot de passe par défaut.\n\n## Solution\n\nSe référer au bulletin de sécurité pour obtenir les correctifs (cf.\nsection Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2005-AVI-090",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-02-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Quatre vulnérabilités découvertes dans le système Cisco ACNS peuvent\nêtre exploitées pour provoquer un déni de service.\n\nDe plus, un mot de passe est activé par défaut pour le compte\nadministrateur.\n",
+  "title": "Vulnérabilités du système Cisco ACNS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco #64069 du 24 février 2005",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20050224-acnsdos.shtml"
+    }
+  ]
+}

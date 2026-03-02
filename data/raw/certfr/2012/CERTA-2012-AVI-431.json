@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM WebSphere MQ Managed File Transfer version 7.5.",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM WebSphere MQ File Transfer Edition Web Gateway versions 7.0.4 et antérieures ;",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-2206",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-2206"
+    },
+    {
+      "name": "CVE-2012-3294",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-3294"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg21607482 du 08 août 2012 :",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21607482"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg21607481 du 08 août 2012 :",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21607481"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-431",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-08-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Des vulnérabilités ont été corrigées dans les produits IBM WebSphere. La\npremière concerne un manque de contrôle d'accès dans IBM WebSphere MQ\nFile Transfer Edition permettant à un utilisateur authentifié d'accéder\naux transferts d'autres utilisateurs. La seconde concerne également le\nproduit IBM WebSphere MQ Managed File Transfer et permet à un\nutilisateur malintentionné d'effectuer une injection de requêtes\nillégitime par rebond <span class=\"textit\">(Cross Site Request\nForgery)</span>.\n",
+  "title": "Vulnérabilités dans les produits IBM WebSphere",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité IBM du 08 août 2012",
+      "url": null
+    }
+  ]
+}

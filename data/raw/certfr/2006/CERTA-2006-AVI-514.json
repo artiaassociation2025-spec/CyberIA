@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GNU Radius 1.x",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa vulnérabilité concerne GNU Radius compilé avec le support SQL et\nutilisant une base de données SQL pour l'imputation (accounting). Ces\noptions sont activées par défaut dans les distributions Gentoo Linux et\nFreeBSD.\n\n  \n  \n\nUne chaîne de contrôle de format est construite à partir de données de\nl'utilisateur. Elle est transmise sans vérifications suffisantes à la\nfonction sqllog(). Un utilisateur malveillant peut, par le biais de\ndonnées malicieusement construites, exécuter du code à distance dans le\ncontexte du service (daemon) radiusd.\n\n## Contournement provisoire\n\n-   Basculer vers l'un des deux autres modes d'imputation, pour\n    maintenir la fonction sans la vulnérabilité.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4181",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4181"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité iDefense du 26 novembre 2006 :",
+      "url": "http://www.idefense.com/application/poi/display?id=443"
+    },
+    {
+      "title": "Version 1.4 de GNU Radius du 24 novembre 2006 :",
+      "url": "http://www.gnu.org/software/radius/#downloading"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-514",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "GNU Radius est un serveur du protocole RADIUS destiné à\nl'authentification des utilisateurs (RFC 2138).\n\nUne vulnérabilité de l'interface SQL de GNU Radius permet à un\nutilisateur d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité de GNU Radius",
+  "vendor_advisories": []
+}

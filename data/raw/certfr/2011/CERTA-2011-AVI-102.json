@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>RedHat Directory Server v8 EL4 et EL5.</p>",
+  "content": "## Description\n\nTrois vulnérabilités de RedHat Directory Server viennent d'être\ncorrigées :\n\n-   le lancement simultané de recherches d'un certain type par un\n    utilisateur distant non authentifié permet de provoquer un arrêt\n    inopiné du serveur ;\n-   un défaut de positionnement des droits existe quand plusieurs\n    serveurs annuaire s'exécutent sur la même machine, avec des comptes\n    système non privilégiés. Ce défaut est exploitable par un\n    utilisateur malveillant local pour provoquer un déni de service ;\n-   plusieurs scripts accompagnant le paquet RedHat Directory Server\n    donnent à une variable d'environnement une valeur vide. Ceci peut\n    être mis à profit par un utilisateur local pour élever ses\n    privilèges.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0019",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0019"
+    },
+    {
+      "name": "CVE-2011-0532",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0532"
+    },
+    {
+      "name": "CVE-2011-0022",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0022"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2011:0293 du 22 février    2011 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2011-0293.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-102",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-02-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans l'annuaire RedHat Directory Server\npermettent à un utilisateur malveillant de provoquer un déni de service\nà distance ou d'élever ses privilèges.\n",
+  "title": "Vulnérabilités dans RedHat Directory Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RedHat RHSA-2011:0293 du 22 février 2011",
+      "url": null
+    }
+  ]
+}

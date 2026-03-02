@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>at</TT> Version 3.1.8 ou  antérieures.",
+  "content": "## Description\n\nLe problème est dû à l'analyseur syntaxique qui désalloue la même\nallocation de mémoire deux fois.\n\nUn utilisateur peut exploiter cette vulnérabilité pour réaliser une\nélévation de privilèges. Cette vulnérabilité n'est exploitable qu'en\nlocal.\n\n## Solution\n\nInstaller les mises à jour disponibles sous forme de paquetage pour les\ndistributions Linux (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité DSA-102 de Debian :",
+      "url": "http://www.debian.org/security/2002/dsa-102"
+    },
+    {
+      "title": "Avis de sécurité SuSE-SA:2002:003 de SuSE :",
+      "url": "http://www.suse.com/us/support/security"
+    },
+    {
+      "title": "Avis de sécurité MDKSA-2002:007 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-007.php"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-009",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-01-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "at est un utilitaire qui permet l'exécution d'une commande à une heure\nspécifiée.\n\nUne vulnérabilité présente dans at permet à un utilisateur mal\nintentionné de prendre les droits du super-utilisateur sur la machine.\n",
+  "title": "Vulnérabilité de la commande at",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulettin de sécurité DSA 102-1 de Debian",
+      "url": null
+    }
+  ]
+}

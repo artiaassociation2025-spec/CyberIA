@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows XP ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe composant NDProxy du noyau de Windows ne vérifie pas suffisament les\nentrées provenant du mode utilisateur. Cette vulnérabilité permet à un\nutilisateur malveillant d'élever ses privilèges.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3963",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3963"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-602",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le composant NDProxy du noyau de Windows permet à\nun utilisateur malveillant d'élever ses privilèges.\n",
+  "title": "Vulnérabilité dans le noyau de Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS10-099",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-099.mspx"
+    }
+  ]
+}

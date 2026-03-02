@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions de <SPAN class=\"textit\">Veritas File  System</SPAN>.</P>",
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans la fonctionnalité Quick I/O\nfor Database du produit Veritas File System (VxFS) :\n\n-   la commande qiomkfile attribue des blocs du système de fichiers sans\n    les initialiser. Cette technique est utilisée pour optimiser les\n    performances de la base de données mais elle permet la lecture de\n    l'ancien contenu des blocs ;\n-   la commande qioadmin peut être utilisée avec n'importe quel fichier\n    du système, ce qui permet dans certains cas de réaliser une\n    élévation de privilèges.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3248",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3248"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2008-AVI-513",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-10-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans <span class=\"textit\">Veritas File System</span>\npermettent d'élever les privilèges ou d'accéder arbitrairement en\nlecture à des données.\n",
+  "title": "Vulnérabilités dans Veritas File System",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symantec SYM08-018 du 20 octobre 2008",
+      "url": "http://securityresponse.symantec.com/avcenter/security/Content/2008.10.20.html"
+    }
+  ]
+}

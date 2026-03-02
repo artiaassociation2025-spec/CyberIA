@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Ubuntu 5.10 (Breezy Badger).",
+      "product": {
+        "name": "Ubuntu",
+        "vendor": {
+          "name": "Ubuntu",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe code d'installation de la version Linux Ubuntu 5.10 (aussi appelée\nBreezy Badger) ne nettoie pas correctement les fichiers de commentaires\nlors de l'installation. Le mot de passe administrateur peut donc se\nretrouver en lecture dans le fichier\n/var/log/installer/cdebconf/questions.dat. Un utilisateur malveillant\npeut profiter de la lecture du mot de passe pour élever ses privilèges\net exécuter localement des commandes.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). Il est nécessaire de faire une\nmise à jour automatique, ou plus précisément installer les paquets\nbase-config (2.67ubuntu20) et passwd (1:4.0.3-37ubuntu8).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-1183",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1183"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-262-1 du 12 mars 2006 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-262-1"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-102",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-03-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans l'installation Ubuntu",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise à jour de sécurité Ubuntu",
+      "url": null
+    }
+  ]
+}

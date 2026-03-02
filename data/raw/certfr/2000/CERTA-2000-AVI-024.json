@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SunOS, Solaris.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nL'utilitaire lpset permet de mettre les informations de configuration de\nl'imprimante dans la base de données de configuration du système. Cet\noutil utilise la librairie libprint.so.2 qui présente une faille. Un\nutilisateur local mal intentionné peut exécuter du code grâce à un\ndépassement de mémoire de la commande lpset -r à une zone mémoire tampon\nhabilement construite (l'option -r de lpset n'est pas documentée, donc\npeu connue).\n\nUn autre débordement de pile est possible dans l'exécutable\n/usr/lib/lp/bin/netpr utilisée par les commandes d'impression pour\nenvoyer les données vers une imprimante en passant par un réseau.\n\nIl en est de même avec la commande beaucoup plus connue : lp suivie de\nl'option -d\n\nL'utilisateur mal intentionné peut, dans chacun des cas, exécuter du\ncode afin d'obtenir les privilèges root.\n\n## Contournement provisoire\n\nIl est possible de supprimer le caractère suid, pour les commandes lpset\net lp et netpr, mais cela aura pour effet d'en empêcher l'exécution par\nun utilisateur sans privilèges root.\n\n          chmod a-s `find / -name lp -print`\n\n          chmod a-s `find / -name lpset -print`\n\n          chmod a-s `find / -name netpr -print`\n\nSous Solaris 2.6, 2.7 et 2.8, une solution temporaire mais pas\ntotalement efficace (car elle peut être contournée à son tour) consiste\nà inhiber l'exécution de code situé dans la pile. Pour cela, ajoutez les\nvariables suivantes dans le fichier /etc/system :\n\n         set noexec_user_stack=1\n\n         set noexec_user_stack_log=1\n\nRedémarrer la machine après avoir effectué cette modification.\n\n## Solution\n\nIl faut appliquer les correctifs de Sun disponibles aux adresses\nsuivantes :\n\n-   Sous Solaris 8\n\n        http://sunsolve.sun.com/pub-cgi/patchDownload.pl?target=109320&method=F\n\n-   Solaris 8_x86\n\n        http://sunsolve.sun.com/pub-cgi/patchDownload.pl?target=109321&method=F\n\n-   Solaris 7\n\n        http://sunsolve.sun.com/pub-cgi/patchDownload.pl?target=107115&method=F\n\n-   Solaris 7_x86\n\n        http://sunsolve.sun.com/pub-cgi/patchDownload.pl?target=107116&method=F\n\n-   Solaris 2.6\n\n        http://sunsolve.sun.com/pub-cgi/patchDownload.pl?target=106235&method=F\n\n-   Solaris 2.6_x86 (SunOS 5.6)\n\n        http://sunsolve.sun.com/pub-cgi/patchDownload.pl?target=106236&method=F\n\n-   Solaris 2.5.1\n\n        http://sunsolve.sun.com/pub-cgi/patchDownload.pl?target=103948&method=F\n\n-   Solaris 2.5 (SunOS 5.5)\n\n        http://sunsolve.sun.com/pub-cgi/patchDownload.pl?target=102964&method=F\n\n-   Solaris 2.5_x86\n\n        http://sunsolve.sun.com/pub-cgi/patchDownload.pl?target=102959&method=F\n\n-   Solaris 2.4 (SunOS 5.4)\n\n        http://sunsolve.sun.com/pub-cgi/patchDownload.pl?target=101317&method=F\n\n-   Solaris 2.4_x86\n\n        http://sunsolve.sun.com/pub-cgi/patchDownload.pl?target=101962&method=F\n\nCes correctifs, rectifient aussi d'autres erreurs dans l'implémentation\nde lp.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité de Sun concernant les débordements de pile  des outils d'impression :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doctype=coll&doc=secbull/195&type=0&nav=sec.sba"
+    },
+    {
+      "title": "Les avis de sécurité récents de Sun sont tous à cette adresse :",
+      "url": "http://sunsolve.sun.com/pub-cgi/secBulletin.pl"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-024",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs débordements de piles ont été détectés dans les librairies et\nles programmes d'impressions de Solaris. Ils permettent à un utilisateur\nlocal d'exécuter du code et d'obtenir les privilèges <span\nclass=\"textit\">root</span>.\n\nDes exploitations de ces vulnérabilités ont été largement diffusées sur\ninternet.\n",
+  "title": "Vulnérabilités dans les programmes et librairies d'impression sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": "2000-08-08",
+      "title": "Avis du CERT IST",
+      "url": "None"
+    },
+    {
+      "published_at": "2000-08-08",
+      "title": "Bulletin de sécurité de Sun",
+      "url": "None"
+    },
+    {
+      "published_at": "2000-08-08",
+      "title": "Bugtraq",
+      "url": "None"
+    }
+  ]
+}

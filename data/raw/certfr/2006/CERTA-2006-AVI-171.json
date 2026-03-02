@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PHP 4.x.x ;",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PHP 5.x.x.",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPHP est un langage de script permettant la réalisation de pages web\ndynamiques.\n\n-   une vulnérabilité dans la fonction phpinfo() peut être exploitée par\n    un utilisateur mal intentionné, au moyen d'argument long et\n    astucieusement formé, afin de placer du code arbitraire sur le\n    serveur vulnérable qui sera exécuté depuis le poste d'un internaute.\n-   deux vulnérabilités dans les fonctions tempnam() et copy()\n    permettent à un individu distant mal intentionné de contourner la\n    politique de sécurité.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:074 du 24 avril    2006 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDKSA-2006:074"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-171",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-04-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Attaque de type cross site scripting"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités découvertes dans PHP permettent à un\nutilisateur distant mal intentionnée contourner la politique de sécurité\net/ou de réaliser des attaques de type injection de code indirecte\n(Cross Site Scripting).\n",
+  "title": "Multiples vulnérabilités dans PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:074 du 24 avril 2006",
+      "url": null
+    }
+  ]
+}

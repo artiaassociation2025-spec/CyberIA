@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>versions de <TT>webmin</TT> antérieures  à la version 0.97.</p>",
+  "content": "## Description\n\nwebmin est un outil qui permet l'administration de machines à distance\nvia un navigateur Web. webmin est installé par défaut sur certaines\ndistributions.\n\nLa première vulnérabilité de type « cross site scripting » présente dans\nla gestion des messages d'erreurs permet à un utilisateur mal\nintentionné de faire exécuter du code sur la machine de l'utilisateur\nvisualisant ces messages d'erreurs.\n\nUne seconde vulnérabilité présente dans la gestion de l'authentification\npermet à un utilisateur mal intentionné de contourner l'authentification\npar mot de passe.\n\n## Contournement provisoire\n\nFilter le port 10000/tcp au niveau du garde-barrière.\n\n## Solution\n\nMettre à jour webmin avec la version 0.97 (se référer à la section\ndocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité 4700 de SecurityFocus :",
+      "url": "http://online.securityfocus.com/bid/4700"
+    },
+    {
+      "title": "Site de webmin :",
+      "url": "http://www.webmin.com"
+    },
+    {
+      "title": "Avis de sécurité 4694 de SecurityFocus :",
+      "url": "http://online.securityfocus.com/bid/4694"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-105",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-05-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    },
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans webmin permettent à un\nutilisateur mal intentionné d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités sur Webmin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste de diffusion Bugtraq",
+      "url": null
+    }
+  ]
+}

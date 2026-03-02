@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions du logiciel <TT>portupgrade</TT> strictement  inférieures à 20041226_2.</P>",
+  "content": "## Description\n\nportupgrade est un logiciel destiné à mettre à jour les logiciels\ninstallés sur un système d'exploitation FreeBSD.\n\nUne vulnérabilité liée à la gestion des fichiers temporaires permet à un\nutilisateur local malicieux de :\n\n-   écraser n'importe quel fichier ;\n-   d'exécuter n'importe quelle commande avec les droits du\n    superutilisateur ;\n\n## Contournement provisoire\n\nPlacer la variable d'environnement PKG_TMPDIR avec le nom d'un\nréperrtoire dans lequel seul l'utilisateur qui exécute portupgrade peut\nécrire.\n\n## Solution\n\nMettre à jour portupgrade.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "FreeBSD, bulletin de sécurité du 2005-04-12 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-portupgrade.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-132",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-04-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "D'un utilisateur local"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de portupgrade",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CVE : CAN-2005-0610",
+      "url": "https://www.cve.org/CVERecord?id=CAN-2005-0610"
+    },
+    {
+      "published_at": null,
+      "title": "Avis FreeBSD : VuXML",
+      "url": null
+    }
+  ]
+}

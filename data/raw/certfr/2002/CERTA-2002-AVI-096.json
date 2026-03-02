@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Sun Solaris 2.5.1, 2.6, 2.7 et 2.8.</P>",
+  "content": "## Description\n\nLe démon rpc.rwalld est un serveur en écoute sur le réseau des requêtes\nwall. Lorsqu'il reçoit une telle requête, il appelle la fonction wall\nqui a pour but d'envoyer un message à tous les terminaux du système.\n\nUne vulnérabilité présente dans le code d'affichage des messages\nd'erreur du démon rwalld permet à un utilisateur mal intentionné, sous\ncertaines conditions, d'exécuter du code arbitraire avec les droits du\ndémon rwalld (souvent ceux de l'administrateur).\n\n## Contournement provisoire\n\n-   Désactiver le service rpc.rwalld dans le fichier /etc/inetd.conf si\n    celui-ci n'est pas indispensable.\n-   Filtrer le port 32777/udp et le port 111/tcp au niveau du\n    garde-barrière.\n\n## Solution\n\nAppliquer les correctifs (se référer à la section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2002-10.html"
+    },
+    {
+      "title": "Bulletin Sun Alert Notification #44502 :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F44502&zone_32=category%3Asecurity"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-096",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-05-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout du lien vers avis Sun.",
+      "revision_date": "2002-06-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité du service rpc.rwalld permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité de rpc.rwalld sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2002-10 du CERT/CC",
+      "url": null
+    }
+  ]
+}

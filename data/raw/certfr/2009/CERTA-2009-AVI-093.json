@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les serveurs DNS et WINS pour les versions  suivantes&nbsp;:</P>  <UL>    <LI>Microsoft Windows 2000 Server Service Pack 4&nbsp;;</LI>    <LI>Windows 2003 Server Service Pack 1 et Service Pack    2&nbsp;;</LI>    <LI>Windows 2003 Server Edition x64 (Service Pack 2    compris)&nbsp;;</LI>    <LI>Windows 2003 Server pour systèmes basés sur Itanium    (Service Pack 1 et Service Pack 2)&nbsp;;</LI>    <LI>Windows 2008 Server pour les systèmes 32-bit ou x64.</LI>  </UL>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans les serveurs DNS et\nWINS de Microsoft Windows :\n\n-   le serveur ne valide pas correctement certaines requêtes en\n    s'appuyant sur les informations mises en cache. Cette vulnérabilité\n    permet à une personne malveillante, par le biais de trames\n    spécialement construites, de corrompre des données en cache. Cette\n    attaque est semblable à celle présentée l'an dernier dans le\n    bulletin d'actualité CERTA-2008-ACT-028 ;\n-   le serveur ne traite pas correctement certaines réponses DNS\n    erronées, ce qui peut également conduire à un empoisonnement des\n    données mises en case ;\n-   le serveur ne valide pas correctement les enregistrements de type\n    WPAD (Web Proxy Auto-Discovery) (et ISATAP pour les tunnels IPv6).\n\n## Solution\n\nSe référer au bulletin de sécurité MS09-008 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0234",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0234"
+    },
+    {
+      "name": "CVE-2009-0093",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0093"
+    },
+    {
+      "name": "CVE-2009-0233",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0233"
+    },
+    {
+      "name": "CVE-2009-0094",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0094"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-093",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-03-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans les serveurs DNS et\nWINS de Microsoft Windows. L'exploitation de ces vulnérabilités permet à\nune personne malveillante distante, par le biais de trames spécialement\nconstruites, de détourner du trafic légitime.\n",
+  "title": "Vulnérabilités dans les serveurs Windows DNS et WINS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS09-008 du 10 mars 2009",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-008.mspx"
+    }
+  ]
+}

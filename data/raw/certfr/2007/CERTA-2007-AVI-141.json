@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "CISCO IP Phone 7940/7960 exécutant le micrologiciel 7.4.",
+      "product": {
+        "name": "IP Phone",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn manque de vérification du champ sipURI au moment de l'envoi d'un\nmessage INVITE permettrait à un individu malintentionné de faire\nredémarrer l'équipement à distance par le biais d'un message INVITE\nspécialement conçu.\n\n## Solution\n\nLa version 8.6 du micrologiciel corrige le problème. La dernière version\ndu micrologiciel pour les téléphones IP CISCO 7940 et 7960 est\ntéléchargeable à l'adresse suivante :\n\n    http://www.cisco.com/pcgi-bin/tablebuild.pl/sip-ip-phone7960?psrtdcat20e2\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 87392 du 20 mars 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sr-20070320-sip.shtml"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-141",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-03-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans les téléphones IP CISCO 7940 et 7960\npermet à un individu de réaliser un déni de service à distance.\n",
+  "title": "Vulnérabilité dans les téléphones CISCO 7940/7960",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO ID 87392 du 20 mars 2007",
+      "url": null
+    }
+  ]
+}

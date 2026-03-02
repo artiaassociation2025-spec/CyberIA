@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Trend Micro Interscan eManager pour NT ;</P>",
+  "content": "## Description\n\nLe logiciel Interscan de Trend Micro est un logiciel de filtrage de\ncertains protocoles courants destiné aux passerelles Internet. Le module\neManager est un greffon optionnel au logiciel Interscan. Ce greffon est\nspécialisé dans le filtrage des méls.\n\neManager permet la configuration du filtrage par le WEB. Des scripts CGI\nqui permettent cette configuration sont vulnérables au débordement de\nvariable. Ces vulnérabilités permettent à n'importe quel individu mal\nintentionné d'exécuter à distance du code avec les droits associés au\ncontexte local, dans la mesure où il n'y aucune authentification.\n\n## Contournement provisoire\n\n-   Supprimer le répertoire virtuel /eManager à l'aide de Internet\n    Service Manager si la console d'administration par le WEB n'est pas\n    nécessaire ;\n-   Mettre en place une authentification par Windows (NTLM) afin de\n    restreindre l'accès à la console d'administration par le WEB ;\n-   Interdire, au niveau du pare-feu, les accès à la console\n    d'administration par le WEB aux sites auxquels on ne fait pas\n    confiance.\n\n## Solution\n\nAppliquer le correctif fourni par Trend Micro :\n\n    ftp://ftp.trendmicro.fr/pub/trendmicro/produitsfull/isnt/patchs/ISEM352_HotFix_1521.zip\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-098",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-09-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Reconfiguration du filtrage à l'insu de l'administrateur"
+    },
+    {
+      "description": "Exécution distante de code arbitraire avec des privilèges locaux"
+    },
+    {
+      "description": "Déni de service sur le serveur iis"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités dans le logiciel Interscan eManager de Trend Micro",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Cert-IST",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Trend Micro",
+      "url": null
+    }
+  ]
+}

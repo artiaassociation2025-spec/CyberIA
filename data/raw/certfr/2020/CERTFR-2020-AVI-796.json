@@ -1,0 +1,91 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GitLab CE et EE 13.5.x versions antérieures à 13.5.5",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "GitLab",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GitLab CE et EE 13.6.x versions antérieures à 13.6.2",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "GitLab",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GitLab CE et EE 13.4.x versions antérieures à 13.4.7",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "GitLab",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2020-26411",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-26411"
+    },
+    {
+      "name": "CVE-2020-13357",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-13357"
+    },
+    {
+      "name": "CVE-2020-26409",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-26409"
+    },
+    {
+      "name": "CVE-2020-26408",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-26408"
+    },
+    {
+      "name": "CVE-2020-26407",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-26407"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2020-AVI-796",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2020-12-08T00:00:00.000000"
+    },
+    {
+      "description": "Ajout du lien éditeur",
+      "revision_date": "2020-12-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans GitLab CE et EE.\nElles permettent à un attaquant de provoquer un déni de service à\ndistance, une atteinte à la confidentialité des données et une injection\nde code indirecte à distance (XSS).\n\nCertaines vulnérabilités n'ont pas encore d'identifiant CVE.\n",
+  "title": "Multiples vulnérabilités dans GitLab CE et EE",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité GitLab du 07 décembre 2020",
+      "url": "https://about.gitlab.com/releases/2020/12/07/security-release-gitlab-13-6-2-released/"
+    }
+  ]
+}

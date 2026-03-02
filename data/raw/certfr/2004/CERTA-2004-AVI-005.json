@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Exchange Server 2003.<BR></P>  <P>Les produits Microsoft Exchange 2000 Server et Microsoft  Exchange Server 5.5 ne sont pas vulnérables.</P>",
+  "content": "## Description\n\nIl est possible de déployer Exchange Server 2003 sur un serveur frontal,\nqui offre un accès Outlook Web Access (OWA) aux utilisateurs, et un ou\nplusieurs serveurs principaux, sur lesquels seront stockées les boîtes\naux lettres.  \n\nSi l'authentification NTLM est utilisée pour les connexions HTTP entre\nle serveur frontal et un serveur principal, un utilisateur mal\nintentionné peut exploiter une vulnérabilité dans la gestion de ces\nconnexions pour accèder à la boîte aux lettres d'un autre utilisateur.  \n\nIl faut pour cela que l'attaquant se soit authentifié au préalable au\nserveur frontal Exchange Server 2003, que les boîtes aux lettres de\nl'attaquant et de la victime soient sur le même serveur principal, et\nque la victime ait récemment accédé à sa boîte aux lettres.  \n\nDe plus, l'exploitation de cette vulnérabilité est aléatoire, et la\nboîte aux lettres frauduleusement accédée ne peut pas être choisie.  \n\n## Contournement provisoire\n\nIl existe deux contournements provisoires.\n\n-   Désactiver la réutilisation des connexions HTTP sur le serveur\n    frontal Exchange Server 2003. Cela peut éventuellement provoquer une\n    baisse des performances si les clients utilisent OWA pour accèder à\n    leurs boîtes aux lettres.\n-   Activer l'authentification Kerberos sur le serveur virtuel qui offre\n    la fonctionnalité OWA sur le serveur principal Exchange Server 2003.\n\n## Solution\n\nAppliquer le correctif proposé par Microsoft :\n\n    http://www.microsoft.com/technet/security/bulletin/ms04-002.asp\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-005",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-01-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de Microsoft Exchange Server 2003 permet à un\nutilisateur mal intentionné d'accèder à des informations non autorisées.\n",
+  "title": "Vulnérabilité de Microsoft Exchange Server 2003",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Microsoft MS04-002",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms04-002.asp"
+    }
+  ]
+}

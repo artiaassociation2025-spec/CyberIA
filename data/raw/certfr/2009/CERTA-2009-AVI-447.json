@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "phpMyAdmin 2.11.x ;",
+      "product": {
+        "name": "phpMyAdmin",
+        "vendor": {
+          "name": "phpMyAdmin",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "phpMyAdmin 3.x.",
+      "product": {
+        "name": "phpMyAdmin",
+        "vendor": {
+          "name": "phpMyAdmin",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans le traitement des noms de tables MySQL peut être\nexploitée afin d'injecter du code arbitraire qui sera exécuté dans le\ncontexte du navigateur Internet d'un utilisateur.\n\nUne autre vulnérabilité, causée par une erreur dans le traitement des\nentrées fournies à la fonctionnalité PDF schema generator, peut être\nexploitée afin d'exécuter des requêtes SQL arbitraires.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3697",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3697"
+    },
+    {
+      "name": "CVE-2009-3696",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3696"
+    }
+  ],
+  "links": [
+    {
+      "title": "Annonce de sécurité phpMyAdmin PMASA-2009-6 du 13 octobre    2009 :",
+      "url": "http://www.phpmyadmin.net/home_page/security/PMASA-2009-6.php"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-447",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-10-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de requêtes SQL arbitraires"
+    },
+    {
+      "description": "Injection de code indirecte"
+    }
+  ],
+  "summary": "Deux vulnérabilités découvertes dans phpMyAdmin permettent à un\nutilisateur distant malintentionné d'exécuter des requêtes SQL (<span\nclass=\"textit\">Structured Query Language</span>) ou de réaliser une\ninjection de code indirecte.\n",
+  "title": "Vulnérabilités dans phpMyAdmin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de sécurité phpMyAdmin PMASA-2009-6 du 13 octobre 2009",
+      "url": null
+    }
+  ]
+}

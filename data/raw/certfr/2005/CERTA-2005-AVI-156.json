@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>MySQL MaxDB versions antérieures à 7.5.00.26.</P>",
+  "content": "## Description\n\nMySQL MaxDB est un système de gestion de base de données.\n\n-   Une vulnérabilité de type débordement de mémoire présente dans la\n    gestion des requêtes HTTP permet à un utilisateur distant mal\n    intentionné d'exécuter du code arbitraire, au moyen d'une requête\n    GET HTTP malicieusement contruite ;\n-   deux vulnérabilités de type débordement de mémoire, présentes dans\n    la fonctionnalité WebDAV permettent à un utilisateur distant mal\n    intentionné d'exécuter du code arbitraire à distance.\n\n## Solution\n\nLa version MySQL MaxDB 7.5.00.26 permet de corriger ces vulnérabilités\n(cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de l'éditeur :",
+      "url": "http://dev.mysql.com"
+    },
+    {
+      "title": "Mise à jour de sécurité MySQL MaxDB 7.5.00.26 :",
+      "url": "http://dev.mysql.com/downloads/maxdb/7.5.00.html"
+    },
+    {
+      "title": "Bulletin de sécurité iDEFENSE #236 du 25 avril 2005 :",
+      "url": "http://www.idefense.com/application/poi/display?id=236&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité iDEFENSE #234 du 25 avril 2005 :",
+      "url": "http://www.idefense.com/application/poi/display?id=234&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité iDEFENSE #235 du 25 avril 2005 :",
+      "url": "http://www.idefense.com/application/poi/display?id=235&type=vulnerabilities"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-156",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-04-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout d'une nouvelle vulnérabilité.",
+      "revision_date": "2005-04-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Trois vulnérabilités découvertes dans MySQL MaxDB permettent à un\nutilisateur distant mal intentionné d'exécuter du code arbitraire sur le\nsystème vulnérable.\n",
+  "title": "Multiples vulnérabilités dans MySQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #234 du 25 avril 2005",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #235 du 25 avril 2005",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #236 du 26 avril 2005",
+      "url": null
+    }
+  ]
+}

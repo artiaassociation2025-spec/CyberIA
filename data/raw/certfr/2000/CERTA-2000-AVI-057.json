@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows 98 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 98SE ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Millenium.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 95 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes versions Windows 9x et Millenium fournissent un dispositif de\nprotection par mots de passe pour les fichiers se trouvant dans des\nrépertoires partagés. La vulnérabilité permet à un utilisateur mal\nintentionné de contourner cette protection et d'accèder en « contrôle\ntotal » à des fichiers appartenant à un autre utilisateur.\n\nWindows NT et 2000, utilisant un principe de contrôle d'accès différent,\nne sont pas touchés par cette vulnérabilité.\n\n## Solution\n\nCorrectif pour Windows 98 et 98SE (Version US) :\n\n    http://download.microsoft.com/download/win98SE/Update/11958/W98/EN-US/\n\n  \n  \n\nCorrectif pour Windows Millenium ( Version US) :\n\n    http://download.microsoft.com/download/winme/Update/11958/WinMe/EN-US/\n\n  \n  \n\nLe correctif pour Windows 95 n'est pas disponible.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-057",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-10-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès aux données"
+    },
+    {
+      "description": "Contournement des règles de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans l'autorisation d'accès au partage de ressources\npermet à un utilisateur mal intentionné d'avoir accès à des fichiers\ncensés être protégés par mots de passe.\n",
+  "title": "Vulnérabilité dans les protections de fichiers sous Windows 9x et Me",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-72.asp"
+    }
+  ]
+}

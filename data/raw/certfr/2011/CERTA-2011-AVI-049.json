@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>PMB, versions 3.3 à 3.3.9 et 3.4 à  3.4.3.  <P>Les autres versions ne sont pas maintenues et peuvent être  vulnérables.</P></p>",
+  "content": "## Description\n\nPMB est un logiciel de gestion des bibliothèques.\n\nUne vulnérabilité de type injection SQL est présente dans plusieurs\nprogrammes de PMB. Elle permet à un utilisateur malveillant de lire des\ninformations sans droit légitime.\n\nSelon le compte système sous lequel s'exécute le serveur MySQL,\nl'attaquant peut lire tous les fichiers du système et exécuter n'importe\nquelle requête dans la base de données.\n\nCette vulnérabilité est activement exploitée.\n\n## Solution\n\nLes versions 3.3.10 et 3.4.4 de PMB remédient à ce problème.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2011-AVI-049",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-02-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le logiciel de gestion de bibliothèque PMB permet\nà un utilisateur malveillant de porter atteinte à la confidentialité et\nà l'intégrité des données.\n",
+  "title": "Vulnérabilité dans PMB",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Site de téléchargement de PMB",
+      "url": "http://www.pmbservices.fr/nouveau_site/telecharger_inter.html"
+    }
+  ]
+}

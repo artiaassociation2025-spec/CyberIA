@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows NT 4.0 Workstation, Server et Terminal Server Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows XP Pro.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 2000 Pro, Server et Advanced Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nNetwork Share Provider est le gestionnaire de ressources partagées sous\nWindows. Il utilise un protocole appelé SMB (Server Message Block) et\npermet de partager des ressources telles que des fichiers, imprimantes,\nports série, etc.\n\nUn utilisateur mal intentionné peut effectuer un débordement de mémoire\nsur un serveur de ressources partagées au moyen d'une requête de client\nSMB habilement construite. Pour effectuer cette attaque l'utilisateur\nmal intentionné doit être un utilisateur authentifié ou bien utiliser le\ncompte anonyme.\n\n## Contournement provisoire\n\n-   Désactiver le compte anonyme du serveur (ceci n'empêche pas\n    d'utiliser un compte utilisateur authentifié pour effectuer\n    l'attaque).\n-   Bloquer les ports 139/TCP et 445/TCP sur le garde-barrière pour\n    empêcher les attaques provenant de l'extérieur du réseau.\n-   Désactiver le serveur Lanman si le système n'est pas un serveur de\n    ressources partagées.\n\n## Solution\n\nAppliquer le correctif de Microsoft comme indiqué dans le bulletin de\nsécurité MS02-045 (voir paragraphe documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-185",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut utiliser un débordement de mémoire\ndans le gestionnaire des ressources partagées pour effectuer un déni de\nservice, voire exécuter du code arbitraire.\n",
+  "title": "Débordement de mémoire dans le gestionnaire de ressources partagées sous Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS02-045 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms02-045.asp"
+    }
+  ]
+}

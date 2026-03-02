@@ -1,0 +1,156 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PHP 4.4.x",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PHP 5.0.x",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PHP 4.2.x",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PHP 4.0.x",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PHP 4.1.x",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PHP 4.3.x",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   La première vulnérabilité est présente lorsque la variable\n    register_globals est activée. Cette vulnérabilité est due à un\n    manque de protection sur le tableau GLOBALS contenant les variables\n    globales du système. Un utilisateur peut exploiter cette\n    vulnérabilité par l'envoi d'un fichier malicieusement construit ;\n-   une seconde vulnérabilité dans le traitement de la fonction\n    parse_str peut-être exploitée pour activer le paramètre\n    registers_globals ;\n-   une vulnérabilité due à l'absence de vérification des entrées\n    passées dans la fonction phpinfo peut être utilisée par un\n    utilisateur mal intentionné, via un script du même nom sur un\n    serveur web malicieusement construit, pour exécuter un script\n    arbitraire ou envoyer du code html arbitraire au cours d'une\n    consultation par un navigateur tiers ;\n-   une vulnérabilité déjà citée dans l'avis CERTA-2005-AVI-336 sur la\n    bibliothèque pcrelib peut être exploitée, via une expression\n    régulière dans un script utilisant les fonctions php vulnérables,\n    pour exécuter du code arbitraire sur le système vulnérable.\n\n## Solution\n\nAppliquer les correctifs comme indiqué par l'éditeur (cf.\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:831 du 10 novembre    2005 :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2005-831.html"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SA:2005:069 du 14 décembre    2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_69_php.html"
+    },
+    {
+      "title": "Mise à jour de PHP pour la version 4 :",
+      "url": "http://www.php.net/release_4_4_1.php"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:213 du 16 novembre    2005 :",
+      "url": "http://frontal2.mandriva.com/security/advisories?name=MDKSA-2005:213"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:035 du 07 février    2006 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDKSA-2006:035"
+    },
+    {
+      "title": "Bulletin de sécurité 19/2005 du hardened-php project :",
+      "url": "http://www.hardened-php.net/advisory_192005.78.html"
+    },
+    {
+      "title": "Bulletin de sécurité CERTA-2005-AVI-336 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2005-AVI-336/"
+    },
+    {
+      "title": "Site Internet du hardened-php project :",
+      "url": "http://www.hardened-php.net"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200511-08 du 13 novembre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200511-08.xml"
+    },
+    {
+      "title": "Bulletin de sécurité 18/2005 du hardened-php project :",
+      "url": "http://www.hardened-php.net/advisory_182005.77.html"
+    },
+    {
+      "title": "Bulletin de sécurité 20/2005 du hardened-php project :",
+      "url": "http://www.hardened-php.net/advisory_202005.79.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-428",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE et des références aux bulletins de sécurité RedHat, Gentoo et Mandriva.",
+      "revision_date": "2005-11-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SUSE.",
+      "revision_date": "2005-12-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva MDKSA-2006:035.",
+      "revision_date": "2006-03-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Attaque de type « cross site scripting »"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans PHP peuvent être exploitées par\nun utilisateur mal intentionné pour réaliser un déni de service,\ncontourner la politique de sécurité, réaliser une attaque de type «\ncross site scripting » ou encore exécuter du code arbitraire sur le\nserveur où se trouve installée une version vulnérable de PHP.\n",
+  "title": "Multiples vulnérabilités dans PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité du site Hardened-PHP Project",
+      "url": null
+    }
+  ]
+}

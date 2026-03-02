@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft Windows XP ;</LI>    <LI>Microsoft Windows XP Service Pack 1 ;</LI>    <LI>Microsoft Windows XP 64-Bit Edition Service Pack 1 ;</LI>    <LI>Microsoft Windows XP 64-Bit Edition Version 2003 ;</LI>    <LI>Microsoft Windows Server 2003 ;</LI>    <LI>Microsoft Windows Server 2003 64-Bit Edition.</LI>  </UL>  <P>Les autres versions de Microsoft Windows ne sont pas affectées  par cette vulnérabilité.</P>",
+  "content": "## Description\n\nLe Centre d'Aide et de Support (`Help and Support  Center`) est un\nservice unifié permettant à l'utilisateur d'obtenir divers types\nd'assistance tels que l'accès aux informations du système ou à sa\nconfiguration. On peut y accéder à l'aide du protocole HCP (adresses\nréticulaires de type \"hcp://\").\n\nUne vulnérabilité présente dans la gestion des liens réticulaires de\ntype HCP permet à un individu mal intentionné d'exécuter du code\narbitraire à distance à l'aide d'un site malicieux ou d'un message\nélectronique malicieusement formé.\n\n## Contournement provisoire\n\n-   Désactiver l'utilisation du protocole HCP dans la base de registres\n    :\n\n    Effacer la clé `HKEY_CLASSES_ROOT\\HCP` du registre ;\n\n-   mettre à jour les correctifs de sécurité, si vous utilisez Outlook\n    2000 Service Pack 1 ou les versions antérieures :\n\n        http://www.microsoft.com/office/previous/outlook/2002security.asp\n\n-   ne lire et n'envoyer vos messages éléctoniques qu'au format texte :\n\n        http://www.certa.ssi.gouv.fr/site/CERTA-2000-INF-002/\n\n## Solution\n\nAppliquer le correctif fourni par Microsoft (cf. Documentation).  \n\nAttention l'application des correctifs peut présenter certains problèmes\nsi le Centre d'Aide et de Support est désactivé :\n\n    http://www.microsoft.com/default.asp?scid=kb;en-us;841996\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-160",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-05-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans le Centre d'Aide et de Support\nde certaines versions de Microsoft Windows.\n",
+  "title": "Vulnérabilité dans le Centre d'Aide et de Support de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #MS04-015 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms04-015.mspx"
+    }
+  ]
+}

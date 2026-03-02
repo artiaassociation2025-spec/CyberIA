@@ -1,0 +1,35 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions du serveur wu-ftpd jusqu'à la version  2.6.1 incluse, y compris certaines versions <SPAN class=\n  \"textit\">Beta</SPAN> 2.7.0.</P>  <P>wu-ftpd est livré avec la plupart des distributions Linux.</P>",
+  "content": "## Description\n\nUne vulnérabilité de la fonction glob utilisée par le serveur wu-ftpd\npermet à un utilisateur mal intentionné d'exécuter du code arbitraire\nsur la machine.\n\nSi le compte anonymous du serveur FTP est désactivé, l'utilisateur doit\npouvoir s'authentifier auprès du serveur pour exploiter cette\nvulnérabilité.\n\n## Contournement provisoire\n\nEn attendant d'appliquer les correctifs, arrêter le serveur wu-ftpd, ou\nfiltrer le port 21/tcp au niveau des gardes-barrières pour limiter\nl'exploitation de cette vulnérabilité.\n\n## Solution\n\nPour la version 2.6.1, il faut appliquer tous les correctifs présents\ndans le répertoire suivant :\n\n    ftp://ftp.wu-ftpd.org/pub/wu-ftpd-attic/wu-ftpd-2.6.1-patches/\n\n  \n\nLa version 2.6.2 n'est pas vulnérable et est disponible sur le site de\nwu-ftpd.  \n\nContactez votre éditeur pour obtenir la mise à jour du serveur wu-ftpd\ncorrespondant à votre distribution.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "site de wu-ftpd :",
+      "url": "http://www.wu-ftpd.org"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-153",
+  "revisions": [
+    {
+      "description": "version initiale;",
+      "revision_date": "2001-11-29T00:00:00.000000"
+    },
+    {
+      "description": "première révision : <UL> <LI>retrait de l'avis RedHat (la version présentée étant encore vulnérable) ;</LI> <LI>mention de la version 2.6.2 (non vulnérable) ;</LI> <LI>ajouts des avis de sécurité Mandrake et Debian.</LI> </UL>",
+      "revision_date": "2001-12-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité du serveur wu-ftpd permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire sur la machine.\n",
+  "title": "Vulnérabilité de wu-ftpd",
+  "vendor_advisories": []
+}

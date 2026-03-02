@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Ethereal versions 0.9.0 à 0.10.7 incluse.</P>",
+  "content": "## Description\n\nEthereal est un renifleur réseau. Il permet l'analyse de données depuis\nle réseau ou à partir d'un fichier. Quatre vulnérabilités ont été\ndécouvertes dans Ethereal :\n\n-   une première vulnérabilité lors de l'analyse de certains paquets\n    DICOM permet à un utilisateur mal intentionné de créer un déni de\n    service. Cette vulnérabilité affecte les versions 0.10.4 à 0.10.7\n    d'Ethereal ;\n-   une vulnérabilité est dûe à une mauvaise manipulation du champ\n    `timestamp` contenu dans l'entête des paquets RTP (Real-Time\n    Transfert Protocol). L'exploitation de cette vulnérabilité par un\n    individu mal intentionné permet d'arrêter le programme ou de créer\n    un fichier temporaire pouvant occuper l'ensemble de l'espace disque\n    disponible. Cette vulnérabilité affecte les versions 0.10.1 à 0.10.7\n    incluse ;\n-   une vulnérabilité présente dans la manipulation de paquets HTTP,\n    peut sous certaines conditions, causer l'arrêter du programme. Cette\n    vulnérabilité affecte les versions 0.10.1 à 0.10.7 d'Ethereal ;\n-   une vulnérabilité dans la gestion de certains paquets SMB (Server\n    Message Block) permet à un utilisateur mal intentionné de créer un\n    déni de service par l'envoi de paquets SMB malicieusement construits\n    afin de consommer toutes les ressources CPU. Cette vulnérabilité\n    affecte les versions 0.9.0 à 0.10.7 d'Ethereal.\n\n## Solution\n\nMettre à jour Ethereal avec la version 0.10.8 corrigeant ces\nvulnérabilités (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD \"ethereal - multiple    vulnerabilities\" du 23 décembre 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200412-15 du 19 décembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200412-15.xml"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005-037 du 15 février    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-037.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-613 du 21 décembre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-613"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:152 du 20 décembre    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:152"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-400",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-12-15T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence au bulletin de sécurité de Gentoo. Ajout références CVE.",
+      "revision_date": "2004-12-20T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence au bulletin de sécurité de Mandrake.",
+      "revision_date": "2004-12-21T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence au bulletin de sécurité de Debian.",
+      "revision_date": "2004-12-22T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence au bulletin de sécurité de FreeBSD.",
+      "revision_date": "2004-12-23T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence au bulletin de sécurité RedHat.",
+      "revision_date": "2005-02-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités dans Ethereal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ENPA-SA-00016 de Ethereal",
+      "url": "http://www.ethereal.com/appnotes/enpa-sa-00016.html"
+    }
+  ]
+}

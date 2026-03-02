@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SD-WAN édition Standard/Premium versions 11.4.x.x antérieures à 11.4.4.46",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Hypervisor versions 8.x pour CSS antérieures à 8.2 CU 1 sans le correctif de sécurité XS82ECU1057",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\n## Contournement provisoire\n\nS’il n’est pas possible de procéder à l’installation d’une version\ncorrigeant la vulnérabilité, se référer aux mesures de contournement\nproposées par l’éditeur à la section *Mitigating Factors*.\n",
+  "cves": [
+    {
+      "name": "CVE-2024-2049",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-2049"
+    },
+    {
+      "name": "CVE-2023-38575",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-38575"
+    },
+    {
+      "name": "CVE-2023-39368",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-39368"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0211",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-03-13T00:00:00.000000"
+    },
+    {
+      "description": "Mise à jour du lien du bulletin de sécurité Citrix CTX616982",
+      "revision_date": "2024-03-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Non spécifié par l'éditeur"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "<span class=\"textit\">De multiples vulnérabilités ont été découvertes\ndans les produits Citrix</span>. Elle permet à un attaquant de provoquer\nune atteinte à la confidentialité des données et un problème de sécurité\nnon spécifié par l'éditeur.\n",
+  "title": "Multiples vulnérabilités dans les produits Citrix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Citrix CTX617071 du 12 mars 2024",
+      "url": "https://support.citrix.com/article/CTX617071/citrix-sdwan-security-bulletin-for-cve20242049"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Citrix CTX616982 du 12 mars 2024",
+      "url": "https://support.citrix.com/article/CTX616982/citrix-hypervisor-security-update-for-cve202339368-and-cve202338575"
+    }
+  ]
+}

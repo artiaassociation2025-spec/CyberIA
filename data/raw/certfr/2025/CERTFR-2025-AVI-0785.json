@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "DXP versions 2024.Q2.x et 2024.Q3.x antérieures à 2024.Q3.2",
+      "product": {
+        "name": "DXP",
+        "vendor": {
+          "name": "Liferay",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "DXP versions 2024.Q1.x antérieures à 2024.Q1.13",
+      "product": {
+        "name": "DXP",
+        "vendor": {
+          "name": "Liferay",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Portal versions antérieures à 7.4.3.129",
+      "product": {
+        "name": "Portal",
+        "vendor": {
+          "name": "Liferay",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-43784",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-43784"
+    },
+    {
+      "name": "CVE-2025-43783",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-43783"
+    },
+    {
+      "name": "CVE-2025-43785",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-43785"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0785",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-09-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Liferay. Elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données et une injection de code indirecte à distance (XSS).",
+  "title": "Multiples vulnérabilités dans Liferay",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-09-10",
+      "title": "Bulletin de sécurité Liferay cve-2025-43785",
+      "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2025-43785"
+    },
+    {
+      "published_at": "2025-09-10",
+      "title": "Bulletin de sécurité Liferay cve-2025-43783",
+      "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2025-43783"
+    },
+    {
+      "published_at": "2025-09-10",
+      "title": "Bulletin de sécurité Liferay cve-2025-43784",
+      "url": "https://liferay.dev/portal/security/known-vulnerabilities/-/asset_publisher/jekt/content/cve-2025-43784"
+    }
+  ]
+}

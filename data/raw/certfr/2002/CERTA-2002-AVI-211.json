@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Windows XP.</P>",
+  "content": "## Description\n\nHelp Center (utilisant le protocole HCP) est un système d'aide à\nl'installation de nouveau matériel sous Windows XP. Lors de\nl'installation d'un nouveau périphérique, l'utilisateur est invité à\nremplir un formulaire afin de se procurer les pilotes adéquats.\n\nCe formulaire, stocké sur la machine victime, contient un JScript\n(Microsoft Java Script) permettant d'effacer des fichiers sur le\nsystème.\n\nUn utilisateur mal intentionné peut supprimer des fichier du système au\nmoyen d'un lien habilement contruit placé dans une page HTML, un mél, ou\ntout autre moyen d'afficher des liens cliquables.\n\n## Contournement Provisoire\n\nSi vous n'utilisez pas la fonction Help Center qui consiste à remplir un\nformulaire envoyé à Microsoft pour obtenir les informations adéquates\nsur les périphériques que vous installez, supprimez le fichier nommé :\n\n`\\windows\\PCHEALTH\\HELPCTR\\upldrvinfo.htm`\n\n## Solution\n\nAppliquer le Service Pack 1 pour Windows XP qui corrige cette\nvulnérabilité :\n\n    http://www.microsoft.com/WindowsXP/pro/downloads/servicepacks/sp1/default.asp\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Liste des corrections effectuées par le Service Pack 1 pour    Windows XP :",
+      "url": "http://support.microsoft.com/default.aspx?scid=/support/ServicePacks/Windows/XP/SP1FixListe.asp"
+    },
+    {
+      "title": "Article Q328940 de la base de connaissances de Microsoft :",
+      "url": "http://support.microsoft.com/default.aspx?scid=kb;en-us;Q328940"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-211",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-09-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Destruction de fichiers"
+    }
+  ],
+  "summary": "Une vulnérabilité du <span class=\"textit\">Help Center</span> de Windows\nXP permet à un utilisateur mal intentionné de supprimer des fichiers du\nsystème de sa victime.\n",
+  "title": "Vulnérabilité du Help Center de Windows XP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des correctifs apportés par le Service Pack 1",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Base de connaissances de Microsoft",
+      "url": null
+    }
+  ]
+}

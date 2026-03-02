@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Sun Solaris 9 (x86 et SPARC) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Solaris 10 (x86 et SPARC).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Solaris 8 (x86 et SPARC) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'éditeur de liens dynamiques ld.so de Sun Solaris possède deux\nvulnérabilités.\n\nLa première vulnérabilité permet à un utilisateur local de contourner la\npolitique de sécurité après avoir au préalable modifié la valeur de\ncertaines variables d'environement locales afin d'accéder à des données\nprotégées.\n\nLa seconde vulnérabilité permet, par le biais d'un débordement de\nmémoire, d'exécuter du code arbitraire. Cette vulnérabilité n'est\nexploitable qu'en utilisant les droits du super utilisateur (root).\n\nEn parvenant à combiner ces deux vulnérabilités, un utilisateur local\nnon privilègié peut exécuter du code arbitraire en usurpant les droits\ndu super utilisateur (root).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-6495",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6495"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sćurité Sun 102724 du 12 décembre 2006 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-102724-1"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-065",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-02-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de services"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans l'éditeur de liens dynamiques de Sun\nSolaris permettent, une fois combinées, de contourner la politique de\nsécurité ou d'exécuter du code arbitraire.\n",
+  "title": "Multiples vulnérabilités dans Sun Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sun 102724 du 12 décembre 2006",
+      "url": null
+    }
+  ]
+}

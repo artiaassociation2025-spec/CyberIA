@@ -1,0 +1,89 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "HP-UX 11.0, HP-UX 11.04, HP-UX 11.11, HP-UX 11.22 (vulnérabilité dans libDtSvc) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP-UX 11.0, HP-UX 11.1 (vulnérabilité dans rwrite).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP-UX 11.0, HP-UX 11.04, HP-UX 11.11 (vulnérabilité dans calloc()) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité est présente dans la fonction calloc(). Un utilisateur\nmal intentionné peut exploiter cette vulnérabilité au travers d'une\napplication qui utiliserait cette fonction afin d'exécuter du code\narbitraire, en local ou à distance, sur une plate-forme vulnérable.\n\n  \n\nDes vulnérabilités sont également présentes dans la commande\n/usr/lbin/rwrite ou la bibliothèque libDtSvc. L'exploitation d'une de\nces vulnérabilités peut permettre à un utilisateur local de réaliser une\nélévation de privilèges (obtention des privilèges du super-utlisateur\nroot).\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HPSBUX0401-308 \"SSRT3492 libDtSvc\" de    Hewlett-Packard :",
+      "url": "http://itrc.hp.com"
+    },
+    {
+      "title": "Bulletin de sécurité HPSBUX0401-310 \"SSRT2341 calloc(3c) in    HP-UX\" de Hewlett-Packard :",
+      "url": "http://itrc.hp.com"
+    },
+    {
+      "title": "Bulletin de sécurité HPSBUX0401-312 \"SSRT3556    /usr/lbin/rwrite\" de Hewlett-Packard :",
+      "url": "http://itrc.hp.com"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-016",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-01-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Hewlett-Packard a publié plusieurs bulletins concernant des\nvulnérabilités sous HP-UX.\n",
+  "title": "Multiples vulnérabilités sous HP-UX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité HPSBUX0401-310 de Hewlett-Packard",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité HPSBUX0401-312 de Hewlett-Packard",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité HPSBUX0401-308 de Hewlett-Packard",
+      "url": null
+    }
+  ]
+}

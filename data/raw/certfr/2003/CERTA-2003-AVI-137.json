@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>CiscoWorks Common Mangement Foundation (CMF) versions 2.1 et  antérieures.<BR></P>  <P>L'application CiscoWorks CMF est intégrée dans les produits  suivants :</P>  <UL>    <LI>toutes les versions de CiscoWorks CD 1 ;</LI>    <LI>Ressource Manager Essentials (RME) versions 2.0, 2.1 et 2.2    ;</LI>    <LI>Cisco Ressource Manager (CRM) versions 1.0 et 1.1.</LI>  </UL>",
+  "content": "## Description\n\nLa première vulnérabilité permet à un utilisateur non privilégié de\nl'application CiscoWorks - y compris le compte invité s'il est activé -\nd'obtenir les droits de l'administrateur par le biais d'une URL\nmalicieusement constituée.  \n\nLa deuxième vulnérabilité permet à un utilisateur de l'application\nCiscoWorks d'exécuter du code arbitraire sur le serveur hébergeant cette\napplication, avec les privilèges de l'utilisateur \"casuser\", sous lequel\ntourne l'application CiscoWorks.\n\n## Contournement provisoire\n\nPour limiter le risque d'exploitation de la première vulnérabilité, il\nest recommandé de désactiver le compte invité.\n\n## Solution\n\nLa version CiscoWorks CMF 2.2 corrige ces deux vulnérabilités.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-137",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-08-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités de CiscoWorks CMF permettent à un utilisateur local\nmal intentionné d'obtenir les privilèges de l'administrateur ou\nd'exécuter du code arbitraire sur le serveur hébergeant l'application\nCiscoWorks.\n",
+  "title": "Vulnérabilités de l'application CiscoWorks",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Cisco #44502",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20030813-cmf.shtml"
+    }
+  ]
+}

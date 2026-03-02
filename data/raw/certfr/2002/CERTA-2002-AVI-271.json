@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de fetchmail  antérieures ou égales à 6.1.3.</p>",
+  "content": "## Description\n\nFetchmail est un utilitaire permettant de récupérer ses messages depuis\nun serveur de messagerie distant via divers protocoles (POP, IMAP...).\nLa routine réalisant l'allocation mémoire pour le traitement des\nadresses locales ne réserve pas suffisamment de place en mémoire.\nL'exploitation de cette vulnérabilité permet à un utilisateur mal\nintentionné de provoquer l'arrêt brutal de fetchmail ou l'exécution de\ncode arbitraire avec les privilèges de l'utilisateur qui se sert de\ncette commande.\n\n## Solution\n\nLa version 6.2.0 corrige cette vulnérabilité. Cette version est\ndisponible sur le site :\n\n    http://www.tuxedo.org/ esr/fetchmail\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité DSA-216 de Debian :",
+      "url": "http://www.debian.org/security/2002/dsa-216"
+    },
+    {
+      "title": "\"The fetchmail Home Page\" :",
+      "url": "http://www.tuxedo.org/~esr/fetchmail"
+    },
+    {
+      "title": "Avis de sécurité \"Fetchmail remote vulnerability\"    d'e-matters :",
+      "url": "http://security.e-matters.de/advisories/052002.html"
+    },
+    {
+      "title": "Avis de sécurité SuSE-SA:2003:001 de SuSE :",
+      "url": "http://www.suse.com/de/security/2003_001_fetchmail.html"
+    },
+    {
+      "title": "Bulletin de sécurité MDKSA-2003:011 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:011"
+    },
+    {
+      "title": "Avis de sécurité RHSA-2002:293 de RedHat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-293.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-271",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité DSA-216 de Debian.",
+      "revision_date": "2002-12-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité SuSE-SA:2003:001 de SuSE.",
+      "revision_date": "2003-01-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité MDKSA-2003:011 de Mandrake.",
+      "revision_date": "2003-01-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un débordement de mémoire dans fetchmail permet à un utilisateur mal\nintentionné de provoquer l'arrêt brutal ou l'exécution de code\narbitraire avec les privilèges de l'utilisateur qui se sert de cette\ncommande.\n",
+  "title": "Vulnérabilité de fetchmail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RHSA-2002:293 de Red Hat",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité \"Fetchmail remote vulnerability\" d'e-matters",
+      "url": null
+    }
+  ]
+}

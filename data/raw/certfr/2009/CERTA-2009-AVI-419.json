@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>VMware Fusion version 2.0.5 et versions  antérieures</p>",
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans VMware Fusion :\n\n-   la première vulnérabilité est due à une erreur au niveau de\n    l'extension noyau vmx86. L'exploitation de cette vulnérabilité\n    permet d'exécuter du code arbitraire dans le contexte du noyau du\n    système hôte ;\n-   la seconde vulnérabilité résulte d'un dépassement de capacité\n    d'entier au niveau de l'extension noyau vmx86. Cette vulnérabilité\n    peut être exploitée par un utilisateur malintentionné afin de causer\n    un déni de service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3281",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3281"
+    },
+    {
+      "name": "CVE-2009-3282",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3282"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité VMware numéro VMSA-2009-0013 du 01    octobre 2009 :",
+      "url": "http://lists.vmware.com/pipermail/security-announce/2009/000066.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-419",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-10-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilité permettant de provoquer un déni de service ou\nd'obtenir des privilèges plus élevés ont été découvertes dans VMware\nFusion.\n",
+  "title": "Multiples vulnérabilités du logiciel VMware Fusion",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware numéro VMSA-2009-0013 du 01 octobre 2009",
+      "url": null
+    }
+  ]
+}

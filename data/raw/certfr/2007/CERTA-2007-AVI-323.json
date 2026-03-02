@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Tcpdump, pour la version 3.9.6 ainsi que celles antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans l'outil d'analyse de trafic\nréseau tcpdump. Il ne manipulerait pas correctement certains paquets du\nprotocole BGP (Border Gateway Protocol), utilisé pour des échanges\nd'information sur le routage. Cette vulnérabilité, de type « débordement\nde tampon », peut être exploitée par un utilisateur distant envoyant un\npaquet spécialement construit. Cette exploitation permettrait\nl'exécution de code arbitraire sur le système utilisant une version\nvulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité pour l'obtention des correctifs (cf.\nsection Documentation).\n\nIl n'y a pas de mise à jour officielle de tcpdump à la date de rédaction\nde cet avis. Cependant, un patch est disponible dans le répertoire SVN\ndu projet.\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3798",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3798"
+    }
+  ],
+  "links": [
+    {
+      "title": "Correctif disponible sous forme de patch dans le répertoire    CVS :",
+      "url": "http://cvs.tcpdump.org/cgi-bin/cvsweb/tcpdump/print-bgp.c?r1=1.91.2.11&r2=1.91.2.12"
+    },
+    {
+      "title": "Avis de sécurité Secunia SA26135 du 19 juillet 2007 :",
+      "url": "http://secunia.com/advisories/26135/"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200707-14 du 28 juillet    2007 :",
+      "url": "http://www.gentoo.org/en/glsa/glsa-200707-14.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:148 du 25 juillet    2007 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:148"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-492-1 du 30 juillet 2007 :",
+      "url": "http://www.ubuntu.com/usn/usn-492-1"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-323",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva.",
+      "revision_date": "2007-07-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo et Ubuntu.",
+      "revision_date": "2007-08-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans l'outil d'analyse de trafic\nréseau tcpdump. L'exploitation de cette dernière pourrait permettre\nl'exécution de code arbitraire sur le système utilisant une version\nvulnérable.\n",
+  "title": "Vulnérabilité dans Tcpdump",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Secunia SA26135 du 19 juillet 2007",
+      "url": null
+    }
+  ]
+}

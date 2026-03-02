@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2000 Servoce Pack 4.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'installation d'un serveur RIS se traduit par la mise en œuvre d'un\nservice TFTP (Trivial File Transfert Protocol) sur ce système. La\nvulnérabilité est due au fait qu'un utilisateur anonyme puisse accéder\nau serveur TFTP afin de porter atteinte à l'intégrité des fichiers\nutilisés durant l'installation à distance et ainsi exécuter du code\narbitraire.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-5584",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5584"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2006-AVI-549",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-12-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le service d'installation à distance (Remove\nInstallation Service - RIS) permet à un utilisateur distant\nmalintentionné de d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans Remote Installation Service de Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-077 du 12 décembre 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-077.mspx"
+    }
+  ]
+}

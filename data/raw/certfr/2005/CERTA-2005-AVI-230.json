@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Plate-forme Windows :      <UL>        <LI>RealPlayer 10.5 (6.0.12.1040-1069) ;</LI>        <LI>RealPlayer 10 ;</LI>        <LI>RealOne Player v1 ;</LI>        <LI>RealOne Player v2 ;</LI>        <LI>RealPlayer 8 ;</LI>        <LI>RealPlayer Enterprise 1.x.</LI>      </UL>    </LI>    <LI>Plate-forme Linux :      <UL>        <LI>RealPlayer 10 (10.0.0 -4) ;</LI>        <LI>Helix Player (10.0.0 -4).</LI>      </UL>    </LI>    <LI>Plate-forme Mac :      <UL>        <LI>RealPlayer 10 (10.0.0.305 -331) ;</LI>        <LI>Mac RealOne Player;</LI>      </UL>    </LI>  </UL>",
+  "content": "## Description\n\nDeux vulnérabilités de type débordement de mémoire sont présentes dans\nle traitement des fichiers RealMedia utilisant RealText et des fichiers\nAVI.\n\nEn incitant un utilisateur à visualiser un de ces fichiers\nmalicieusement construits, il est possible d'exploiter ces\nvulnérabilités afin d'exécuter du code arbitraire sur le système\nutilisant le lecteur RealPLayer.\n\nDeux autre vulnérabilités affectent les plate-formes Windows :\n\n-   par le biais d'un fichier MP3 malicieusement constitué il est\n    possible d'écraser des fichiers arbitraires sur un système\n    vulnérable ;\n-   certains paramétrages d'Internet Explorer permettent la création et\n    le référencement d'un fichier HTML local.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200507-04 du 06 juillet    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200507-04.xml"
+    },
+    {
+      "title": "Mise à jour de sécurité Fedora Core 4 pour HelixPlayer du    24 juin 2005 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/4/"
+    },
+    {
+      "title": "Site Internet de RealNetworks :",
+      "url": "http://www.real.com"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD du 24 juin 2005 pour    linux-realplayer :",
+      "url": "http://www.vuxml.org/freebsd/pkg-linux-realplayer.html"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2005:517 du 23 juin 2005    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005:517.html"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2005:523 du 23 juin 2005    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005:523.html"
+    },
+    {
+      "title": "Bulletin de sécurité iDEFENSE id=250 06.23.05 :",
+      "url": "http://www.idefense.com/application/poi/display?id=250&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SA:2005:037 du 27 juin 2005    :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_37_real_player.html"
+    },
+    {
+      "title": "Bulletin de sécurité de RealNetworks du 23 juin 2005 :      http://service.real.com/help/faq/security/050623_player",
+      "url": "http://service.real.com/help/faq/security/050623_player/"
+    },
+    {
+      "title": "Mise à jour de sécurité Fedora Core 3 pour HelixPlayer du    24 juin 2005 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/3/"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-230",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-06-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de SuSE, Red Hat, Fedora et FreeBSD. Ajout références CVE.",
+      "revision_date": "2005-06-28T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité iDEFENSE et Gentoo.",
+      "revision_date": "2005-07-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités des lecteurs RealPlayer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RealNetworks",
+      "url": null
+    }
+  ]
+}

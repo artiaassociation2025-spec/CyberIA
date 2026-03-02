@@ -1,0 +1,94 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Red Hat Enterprise Linux HPC Node v.6 ;",
+      "product": {
+        "name": "Red Hat Enterprise Linux",
+        "vendor": {
+          "name": "Red Hat",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Red Hat Enterprise Linux Server v.6 ;",
+      "product": {
+        "name": "Red Hat Enterprise Linux Server",
+        "vendor": {
+          "name": "Red Hat",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Red Hat Enterprise Linux Workstation v.6.",
+      "product": {
+        "name": "Red Hat Enterprise Linux",
+        "vendor": {
+          "name": "Red Hat",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Red Hat Enterprise Linux Desktop v.6 ;",
+      "product": {
+        "name": "Red Hat Enterprise Linux",
+        "vendor": {
+          "name": "Red Hat",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été corrigées dans logrotate. La première\npermet à une personne malintentionnée d'exécuter du code arbitraire sous\nl'identité du propriétaire du processus logrotate (root, par défaut)\n(CVE-2011-1154). La deuxième rend possible le déclenchement d'un déni de\nservice (CVE-2011-1098). La troisième permet à un utilisateur\nmalintentionné de porter atteinte à la confidentialité des données\n(CVE-2011-1155).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1154",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1154"
+    },
+    {
+      "name": "CVE-2011-1155",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1155"
+    },
+    {
+      "name": "CVE-2011-1098",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1098"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2011:0407 du 31 mars 2011    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2011-0407.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-189",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-04-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités pouvant conduire à un déni de service, une\nexécution de code arbitraire et une atteinte à la confidentialité des\ndonnées ont été découvertes dans <span class=\"textit\">logrotate</span>.\n",
+  "title": "Vulnérabilités dans logrotate",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RHSA-2011:0407 de Red Hat du 31 mars 2011",
+      "url": null
+    }
+  ]
+}

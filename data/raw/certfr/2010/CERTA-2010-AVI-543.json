@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Office XP SP3, 2003 SP3, 2007 SP2 et 2010 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office pour Mac 2004, 2008 et 2011 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Open XML File Format Converter pour Mac.",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités dans Microsoft Office permettent à un\nutilisateur malveillant d'exécuter du code avec les droits de\nl'utilisateur connecté :\n\n-   une possibilité de débordement de mémoire dans le traitement des\n    fichiers au format RTF est exploitable au moyen d'un fichier\n    spécialement conçu ;\n-   des corruptions de mémoire dans les traitements de dessin et\n    d'objets graphiques sont exploitables au moyen de fichiers Office\n    spécialement construits ;\n-   la gestion d'une violation d'accès est également exploitable en\n    utilisant un fichier Office spécialement conçu ;\n-   l'ordre de recherche des bibliothèques (DLL) est utilisable pour\n    substituer une bibliothèque malveillante.\n\n## Solution\n\nÀ la date du 10 novembre 2010, les correctifs pour Microsoft Office pour\nMac 2004 et 2008 et pour Open XML File Format Converter ne sont pas\nencore disponibles.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3336",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3336"
+    },
+    {
+      "name": "CVE-2010-3337",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3337"
+    },
+    {
+      "name": "CVE-2010-3335",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3335"
+    },
+    {
+      "name": "CVE-2010-3334",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3334"
+    },
+    {
+      "name": "CVE-2010-3333",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3333"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-543",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-11-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Microsoft Office permettent à un\nutilisateur malveillant d'exécuter du code avec les droits de\nl'utilisateur connecté.\n",
+  "title": "Vulnérabilités dans Microsoft Office",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS10-087 du 09 novembre 2010",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-087.mspx"
+    }
+  ]
+}

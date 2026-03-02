@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toute machine Windows NT 4.0. Le service Internet Information  Server (IIS) est affecté, d'autres services pourraient l'être  également.</P>",
+  "content": "## Description\n\nLorsqu'un utilisateur demande d'afficher cette URL malformée au serveur,\nle processus INETINFO.EXE consomme progressivement toutes les ressources\ndu système (99-100% dans le gestionnaire des tâches).\n\nLorsque la mémoire virtuelle ne peut plus être étendue, le système tue\n(kill) le processus. Il se peut qu'une boîte de dialogue annonce que le\nsystème manque de mémoire virtuelle.\n\n## Solution\n\nD'après Microsoft, la vulnérabilité ne provient pas du fonctionnement de\nl'application IIS, mais des systèmes Windows NT 4.0.\n\nIl est donc recommandé d'appliquer ce correctif même si le serveur IIS\nn'est pas utilisé.\n\nAppliquer le correctif pour les systèmes Windows NT 4.0 Workstation,\nServer et Server Enterprise Edition :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=24079\n\nIl n'existe pas encore de correctif pour Terminal Server Edition.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le bulletin de sécurité de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-063.asp"
+    },
+    {
+      "title": "L'avis de sécurité de VIGILANTe aillant publié la    vulnérabilité :",
+      "url": "http://www.vigilante.com/inetsecurity/advisories/VIGILANTE-2000009.htm"
+    },
+    {
+      "title": "La FAQ sur le bulletin de sécurité de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-063.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-044",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-09-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, à l'aide d'une URL malformée,\narrêter à distance le service IIS.\n",
+  "title": "Vulnérabilité de Windows NT4.0 affectant Internet Information Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

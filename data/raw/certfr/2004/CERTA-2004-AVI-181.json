@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Base de données Firebird 1.0.2.</P>",
+  "content": "## Description\n\nFirebird est une version en source ouverte dérivée d'une version\nd'Interbase mise à disposition par Borland.\n\nUn débordement de mémoire dans la gestion du nom des bases de données\npeut provoquer un arrêt inopiné du serveur.\n\n## Contournement provisoire\n\nRestreindre l'accès au serveur de la base de données à des sites de\nconfiance.\n\n## Solution\n\nMettre à jour en version 1.5 :\n\n    http://firebird.sourceforge.net/\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-181",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-06-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, par une tentative de connexion\nhabilement construite, provoquer un déni de service de la fonction\nserveur.\n",
+  "title": "Vulnérabilité de la base de données Firebird",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Secunia",
+      "url": "http://secunia.com/advisories/11756"
+    }
+  ]
+}

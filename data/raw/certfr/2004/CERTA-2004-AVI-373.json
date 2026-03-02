@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "unarj pour FreeBSD version 2.43_1 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "unarj pour Gentoo version 2.63a-r1 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "unarj pour Debian en version antérieure à 2.43-3woody1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nunarj est un outil de décompression d'archives au format ARJ.  \nDeux vulnérabilités sont présentes dans unarj : une vulnérabilité de\ntype débordement de mémoire et une vulnérabilité de type traversée de\nrépertoire.  \nCes vulnérabilités peuvent être exploitées par un utilisateur mal\nintentionné afin d'exécuter du code arbitraire sur la plate-forme\nvulnérable.\n\n## Solution\n\nLa version 2.63a-r2 de unarj pour Gentoo corrige cette vulnérabilité.  \nLa version 2.43_2 de unarj pour FreeBSD corrige cette vulnérabilité.  \nSe référer au bulletin de sécurité de l'éditeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de unarj :",
+      "url": "http://www.arjsoftware.com"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour unarj du 26 novembre 2004    :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200411-29 du 19 novembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200411-29.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian du 21 janvier 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-652"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-373",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-11-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2004-11-29T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian.",
+      "revision_date": "2005-01-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans unarj permettent à un utilisateur mal\nintentionné d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité de unarj",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA 200411-29 du 19 novembre 2004",
+      "url": null
+    }
+  ]
+}

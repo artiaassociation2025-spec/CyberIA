@@ -1,0 +1,98 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions de Wireshark (anciennement Ethereal) antérieures  à la version 0.99.2.</P>",
+  "content": "## Description\n\nWirehsark est un analyseur de trafic réseau qui succède à Ethereal.\nPlusieurs vulnérabilités ont été identifiées dans celui-ci ainsi que les\nversions Ethereal précédentes. Il s'agit pour la majorité de\ndébordements de mémoire. Un utilisateur malveillant peut utiliser l'une\nd'entre elles pour construire un paquet spécial, qui provoquera le\ndysfonctionnement, voir l'interruption de l'application. Sous certaines\nconditions, une exécution de code à distance est également possible.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3631",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3631"
+    },
+    {
+      "name": "CVE-2006-3629",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3629"
+    },
+    {
+      "name": "CVE-2006-3628",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3628"
+    },
+    {
+      "name": "CVE-2006-3627",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3627"
+    },
+    {
+      "name": "CVE-2006-3630",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3630"
+    },
+    {
+      "name": "CVE-2006-3632",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3632"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Avaya ASA-2006-197 du 22 septembre    2006 :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2006-197.htm"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSA-SA:2006:020 du 16 août 2006    :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2006-Aug/0006.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200607-09 du 25 juillet    2006 :",
+      "url": "http://www.gentoo.org/en/glsa/glsa-200607-09.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2006:0602 du 16 août 2006    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0602.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1127 du 28 juillet 2006 :",
+      "url": "http://www.us.debian.org/security/dsa-1127/"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:128 du 18 juillet    2006 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:128"
+    },
+    {
+      "title": "Bulletin de sécurité Wireshark WNPA-SEC-2006-01 du 17    juillet 2006 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2006-01.html"
+    },
+    {
+      "title": "Site du projet Wireshark :",
+      "url": "http://www.wireshark.org"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-301",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-07-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian, Gentoo et Mandriva.",
+      "revision_date": "2006-08-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Avaya, SuSE et Red Hat.",
+      "revision_date": "2006-09-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités dans Ethereal/Wireshark",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Wireshark du 17 juillet 2006",
+      "url": null
+    }
+  ]
+}

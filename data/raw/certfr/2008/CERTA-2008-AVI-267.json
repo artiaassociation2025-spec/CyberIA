@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<SPAN class=\"textit\">IBM AIX</SPAN>,  version 5.2, 5.3 et 6.1.",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent IBM AIX :\n\n-   un débordement de mémoire est possible dans une fonction\n    d'impression et utilisable par un utilisateur malveillant pour\n    exécuter du code arbitraire avec les droits d'administration du\n    système ;\n-   un autre débordement de mémoire concerne le noyau et permet de\n    provoquer une arrêt inopiné ou une exécution de code arbitraire à\n    distance ;\n-   un débordement de mémoire est possible dans la fonction errpt et\n    permet à un utilisateur malveillant d'exécuter du code arbitraire\n    avec les droits d'administration du système ;\n-   deux vulnérabilités concernent OpenSSH et permettent à un\n    utilisateur malveillant de contourner la politique de sécurité ;\n-   le service FTP peut révéler des données sensibles à un utilisateur\n    malveillant sans nécessiter l'authentification de ce dernier ;\n-   une erreur de gestion des variables d'environnement dans iostat est\n    exploitable par un utilisateur malveillant local pour exécuter du\n    code arbitraire avec les droits d'administration du système.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1483",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1483"
+    },
+    {
+      "name": "CVE-1999-0201",
+      "url": "https://www.cve.org/CVERecord?id=CVE-1999-0201"
+    },
+    {
+      "name": "CVE-2007-5764",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5764"
+    },
+    {
+      "name": "CVE-2008-1657",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1657"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM du 21 mai 2008 :",
+      "url": "http://aix.software.ibm.com/aix/efixes/security/ssh_advisory.asc"
+    },
+    {
+      "title": "Bulletin de sécurité IBM du 21 mai 2008 :",
+      "url": "http://aix.software.ibm.com/aix/efixes/security/iostat_advisory.asc"
+    },
+    {
+      "title": "Bulletin de sécurité IBM du 21 mai 2008 :",
+      "url": "http://aix.software.ibm.com/aix/efixes/security/unix_advisory.asc"
+    },
+    {
+      "title": "Bulletin de sécurité IBM du 19 mai 2008 :",
+      "url": "http://aix.software.ibm.com/aix/efixes/security/pioout_advisory.asc"
+    },
+    {
+      "title": "Bulletin de sécurité IBM du 21 mai 2008 :",
+      "url": "http://aix.software.ibm.com/aix/efixes/security/ftpd_advisory.asc"
+    },
+    {
+      "title": "Bulletin de sécurité IBM du 21 mai 2008 :",
+      "url": "http://aix.software.ibm.com/aix/efixes/security/errpt_advisory.asc"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-267",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-05-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent <span class=\"textit\">IBM AIX</span>\net permettent, en particulier, à un utilisateur malveillant d'exécuter\ndu code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités d'AIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin IBM du 21 mai 2008",
+      "url": null
+    }
+  ]
+}

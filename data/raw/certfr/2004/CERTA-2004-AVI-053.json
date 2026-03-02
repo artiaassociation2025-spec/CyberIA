@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Proventia séries A, G et M ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BlackICE PC ou Server version 3.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealSecure Desktop, Network ou Server Sensor 7.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealSecure Sentry, Guard ou Desktop 3.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes produits d'ISS (Internet Security Systems) cités ci-dessus incluent\nsystématiquement une sonde de détection d'intrusions parfois couplée à\nun pare-feu (BlackIce, Porventia).\n\nLe code d'analyse du protocole SMB (Server Message Block), utilisé par\nles systèmes d'exploitation de Microsoft pour partager des ressources,\ncomporte une faille qui peut être utilisée pour corrompre la mémoire.\n\nUn seul paquet serait suffisant pour exploiter ce défaut.\n\n## Contournement provisoire\n\nFiltrer les ports SMB (445/tcp ou encapsulé dans NetBIOS 137, 138/udp et\n139/tcp) sur les pare-feux permet de limiter les risques à des attaques\nprovenant de la même zone de sécurité (ce qui n'exclut pas les rebonds).\nCette règle est, par aileurs, recommandée de façon générale.\n\n## Solution\n\nMettre à jour en fonction des recommendations du vendeur :\n\n-   BlackICE :\n\n        http://blackice.iss.net/update_center/index.php\n\n-   RealSecure :\n\n        http://www.iss.net/download/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Note de vulnérabilité du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/150326"
+    },
+    {
+      "title": "Avis AD20040226 de eEye digital security :",
+      "url": "http://www.eeye.com/html/Research/Advisories/AD20040226.html"
+    },
+    {
+      "title": "Avis de sécurité d'ISS :",
+      "url": "http://xforce.iss.net/xforce/alerts/id/165"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-053",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-02-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une faille a été identifiée dans les sondes d'ISS qui permet d'exploiter\nune vulnérabilité de type débordement de tampon. Cette dernière pourrait\npermettre à un utilisateur mal intentionné d'exécuter du code arbitraire\nà distance sans authentification avec des privilèges élevés.\n",
+  "title": "Vulnérabilité des produits Proventia, BlackICE et RealSecure d'ISS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis AD20040226 d'eEye digital security",
+      "url": null
+    }
+  ]
+}

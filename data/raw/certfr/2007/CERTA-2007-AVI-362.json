@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Tomcat</SPAN>, versions antérieures à  6.0.14.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans le moteur de servlets\nTomcat :\n\n-   (CVE-2007-2449 et CVE-2007-3383) les exemples de JSP livrés avec le\n    logiciels ne filtrent pas les données entrées par l'utilisateur.\n    Cette absence de filtrage permet la réalisation malveillante\n    d'injections de code indirectes (cross site scripting) ;\n-   (CVE-2007-2450) les applications web Manager et Host Manager ne\n    filtrent pas les données entrées par l'utilisateur. Cette absence de\n    filtrage permet la réalisation malveillante d'injections de code\n    indirectes (cross site scripting) ;\n-   (CVE-2007-3382) le moteur Tomcat ne traite pas de manière correcte\n    le caractère apostrophe (') quand il sert de délimiteur dans des\n    cookies. Dans certaines conditions, cette erreur permet la\n    divulgation de l'identifiant de session et le détournement de cette\n    session ;\n-   (CVE-2007-3385) le moteur Tomcat ne traite pas de manière correcte\n    la séquence de caractères /TT\\> utilisée des cookies. Dans certaines\n    conditions, cette erreur permet la divulgation de l'identifiant de\n    session et le détournement de cette session ;\n-   (CVE-2007-3386) la servlet Host Manager ne filtre pas les données\n    entrées par l'utilisateur. Cette absence de filtrage permet la\n    réalisation malveillante d'injections de code indirectes (cross site\n    scripting).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-2450",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2450"
+    },
+    {
+      "name": "CVE-2007-3382",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3382"
+    },
+    {
+      "name": "CVE-2007-3383",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3383"
+    },
+    {
+      "name": "CVE-2007-3386",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3386"
+    },
+    {
+      "name": "CVE-2007-2449",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2449"
+    },
+    {
+      "name": "CVE-2007-1355",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1355"
+    },
+    {
+      "name": "CVE-2007-3385",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3385"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurité du projet Tomcat :",
+      "url": "http://tomcat.apache.org/security-6.html"
+    },
+    {
+      "title": "Bulletins de sécurité du projet Tomcat :",
+      "url": "http://tomcat.apache.org/security-5.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-362",
+  "revisions": [
+    {
+      "description": "<TT>version initiale.</TT>",
+      "revision_date": "2007-08-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités du moteur de <span\nclass=\"textit\">servlets</span> <span class=\"textit\">Tomcat</span>\npermettent à un utilisateur malveillant de réaliser des injections de\ncode indirectes ou de voler des identifiants de session.\n",
+  "title": "Multiples vulnérabilités de Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité du projet Tomcat",
+      "url": null
+    }
+  ]
+}

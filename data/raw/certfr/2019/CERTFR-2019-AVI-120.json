@@ -1,0 +1,103 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco IP Phone exécutant une version logicielle de SIP antérieure à 11.0(5) pour Wireless IP Phone 8821-EX et 12.5(1)SR1 pour la série IP Phone 8800",
+      "product": {
+        "name": "IP Phone",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IP Phone 7800 et 8800 exécutant une version logicielle de SIP avec la fonctionnalité web service active antérieure à 10.3(1)SR5 pour Unified IP Conference Phone 8831, 11.0(4)SR3 pour Wireless IP Phone 8821 et 8821-EX et 12.5(1)SR1 pour le restes des IP Phone 7800 et 8800",
+      "product": {
+        "name": "IP Phone",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2019-1766",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-1766"
+    },
+    {
+      "name": "CVE-2019-1764",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-1764"
+    },
+    {
+      "name": "CVE-2019-1763",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-1763"
+    },
+    {
+      "name": "CVE-2019-1765",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-1765"
+    },
+    {
+      "name": "CVE-2019-1716",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-1716"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2019-AVI-120",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2019-03-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Cisco IP Phone.\nCertaines d'entre elles permettent à un attaquant de provoquer une\nexécution de code arbitraire à distance, un déni de service à distance\net un contournement de la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans Cisco IP Phone",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-20190320-ipab du 20 mars 2019",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190320-ipab"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-20190320-ip-phone-csrf du 20 mars 2019",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190320-ip-phone-csrf"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-20190320-ip-phone-rce du 20 mars 2019",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190320-ip-phone-rce"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-20190320-ipptv du 20 mars 2019",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190320-ipptv"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-20190320-ipfudos du 20 mars 2019",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190320-ipfudos"
+    }
+  ]
+}

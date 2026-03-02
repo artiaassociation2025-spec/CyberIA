@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Logstash versions 8.10.x et 8.11.x, antérieures à 8.11.1",
+      "product": {
+        "name": "Kibana",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Kibana versions 8.x antérieures à 8.11.1",
+      "product": {
+        "name": "Kibana",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-46671",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-46671"
+    },
+    {
+      "name": "CVE-2023-46672",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-46672"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité ElasticSearch 347149 du 14 novembre 2023",
+      "url": "https://discuss.elastic.co/t/8-11-1-7-17-15-security-update-esa-2023-25/347149"
+    }
+  ],
+  "reference": "CERTFR-2023-AVI-0937",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-11-15T00:00:00.000000"
+    },
+    {
+      "description": "Modification des produits affectés. L'éditeur ne considère plus les versions 7.x comme vulnérables.",
+      "revision_date": "2023-11-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Kibana et Logstash.\nElles permettent à un attaquant de provoquer une atteinte à la\nconfidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans Kibana et Logstash",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ElasticSearch 347149 du 14 novembre 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ElasticSearch 347191 du 15 novembre 2023",
+      "url": "https://discuss.elastic.co/t/logstash-8-11-1-security-update-esa-2023-26/347191"
+    }
+  ]
+}

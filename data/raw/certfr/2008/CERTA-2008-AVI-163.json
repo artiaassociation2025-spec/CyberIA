@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les <TT>Cisco IOS</TT> déployés sont  vulnérables dans les cas suivants :  <UL>    <LI>les versions antérieures à la 12.3 avec le <TT>VPDN</TT>    (<SPAN class=\"textit\">Virtual Private Dial-up Network</SPAN>)    activé ;</LI>    <LI>les versions antérieures à la 12.3 avec le <TT>DLSw</TT>    (<SPAN class=\"textit\">Data Link Switching</SPAN>) activé ;</LI>    <LI>certaines versions antérieures à la 12.3 avec le support    IPv6 activé ainsi que l'UDP en IPv4 ;</LI>    <LI>certaines versions antérieures à la 12.3 avec le    <TT>MVPN</TT> (<SPAN class=\"textit\">Multicast Virtual Private    Network</SPAN>) activé ;</LI>    <LI>certaines sous-versions de la 12.2 équipant les    <SPAN class=\"textit\">Cisco Catalyst 6500</SPAN> et <SPAN class=\n    \"textit\">Cisco 7600 router</SPAN>, configurées avec    <TT>OSPF</TT> (<SPAN class=\"textit\">Open Shortest Path    First</SPAN>) et <TT>MPLS VPN</TT> (<SPAN class=\"textit\">Multi    Protocol Label Switching Virtual Private    Networking</SPAN>).</LI>  </UL></p>",
+  "content": "## Description\n\nCisco IOS (Internetwork Operating System) est le système d'exploitation\nde la majorité des routeurs et commutateurs Cisco.\n\n-   PPTP : des vulnérabilités concernant une fuite de mémoire et une\n    mauvaise gestion des blocs décrivant les interfaces permettent un\n    épuisement des ressources entrainant un déni de service.\n-   DLSw : une vulnérabilité affectant le traitement des trames UDP et\n    IP (protocole 91) permet un redémarrage ou un déni de service à\n    distance par épuisement des ressources mémoire.\n-   IPv6 : une vulnérabilité permet à l'aide d'une trame IPv6,\n    spécifiquement créée et ciblant un équipement, de provoquer un déni\n    de service de l'interface ou de l'équipement en fonction des cas.\n-   MVPN : une trame MDT (Multicast Distribution Tree) spécifiquement\n    créée permet de détourner une partie du trafic du réseau virtuel\n    privé.\n-   MPLS VPN : une vulnérabilité permet le blocage des files, des fuites\n    mémoire et le redémarrage de l'équipement.\n\n## Solution\n\nSe référer au bulletin de sécurité Cisco 100893 du 26 mars 2008 pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1151",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1151"
+    },
+    {
+      "name": "CVE-2008-0537",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0537"
+    },
+    {
+      "name": "CVE-2008-1156",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1156"
+    },
+    {
+      "name": "CVE-2008-1153",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1153"
+    },
+    {
+      "name": "CVE-2008-1150",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1150"
+    },
+    {
+      "name": "CVE-2008-1152",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1152"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20080326-queue du 26 mars 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080326-queue.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco 20080326-dlsw du 26 mars 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080326-dlsw.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco 20080326-bundle du 26 mars 2008    :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080326-bundle.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco 20080326-pptp du 26 mars 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080326-pptp.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco 20080326-IPv4IPv6 du 26 mars    2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080326-IPv4IPv6.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco 20080326-mvpn du 26 mars 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080326-mvpn.shtml"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-163",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-03-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Cisco a publié un bulletin de sécurité regroupant cinq bulletins sur des\nvulnérabilités séparées. Elles concernent toutes Cisco IOS et plus\nprécisément PPTP, DLSw, IPv6, MVPN et MPLS VPN.\n",
+  "title": "Multiples vulnérabilités dans Cisco IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 100893 du 26 mars 2008",
+      "url": null
+    }
+  ]
+}

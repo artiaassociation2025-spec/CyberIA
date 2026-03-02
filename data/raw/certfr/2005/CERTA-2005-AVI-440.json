@@ -1,0 +1,98 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "giflib 4.1.3 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "libungif 4.1.3 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes bibliothèques libungif et giflib permettent le traitement des\nfichiers images au format gif.\n\n-   Une vulnérabilité dans la gestion des pointeurs peut être exploitée\n    via un fichier image au format gif afin de provoquer à distance\n    l'arrêt brutal de l'application ;\n-   une vulnérabilité de type débordement de mémoire permet à un\n    utilisateur mal intentionné d'exécuter du code arbitraire à distance\n    au moyen d'un fichier image au format gif malicieusement construit.\n\n## Solution\n\nMettre à jour la bibliothèque libungif en passant à la version 4.1.4\ndisponible à l'adresse suivante :\n\n    http://sourceforge.net/project/showfiles.php?group_id=102202&package_id=109698\n\nMettre à jour la bibliothèque giflib en passant à la version 4.1.4\ndisponible à l'adresse suivante :\n\n    http://sourceforge.net/project/showfiles.php?group_id=102202&package_id=119585\n\n  \n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de libungif pour Fedora Core 3 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/3/"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-214 du 07 novembre 2005 :",
+      "url": "http://lists.ubuntu.com/archives/ubuntu-security-announce/2005-November/000240.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005-828 du 03 novembre    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-828.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:207 du 09 novembre    2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:207"
+    },
+    {
+      "title": "Mise à jour de libungif pour Fedora Core 4 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/4/"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-890 du 09 novembre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-890"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat Bugzilla #17141 :",
+      "url": "https://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=171413"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200511-03 du 04 novembre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200511-03.xml"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-440",
+  "revisions": [
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva MDKSA-2005:207.",
+      "revision_date": "2003-11-10T00:00:00.000000"
+    },
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Ubuntu USN-214.",
+      "revision_date": "2005-11-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-890.",
+      "revision_date": "2005-11-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités affectant les bibliothèques libungif et giflib\npermettent à un utilisateur distant mal intentionné de provoquer un déni\nde service ou d'exécuter du code arbitraire.\n",
+  "title": "Multiples vulnérabilités dans la bibliothèque libungif/giflib",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RedHat Bugzilla #171413",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Versions antérieures à <TT>Exim</TT> 4.44.</P>",
+  "content": "## Description\n\nExim est un logiciel de service de messagerie sous Unix.\n\nL'application Exim présente une vulnérabilité de type dépassement de\nmémoire tampon dans la fonction host_aton(). Cette vulnérabilité permet\nà une personne malveillante d'exécuter du code arbitraire au moyen d'une\nadresse IPv6 malicieusement constituée.\n\nUne seconde vulnérabilité découverte dans la fonction\nspa_base64_to_bits() permet à un utilisateur mal intentionné d'exécuter\ndu code arbitraire à distance, dûe à une faiblesse lors de\nl'authentification SPA (Secure Password Authentication basée sur Windows\nNTLM).\n\nLa dernière vulnérabilité de type dépassement de la mémoire tampon\npermet à un utilisateur mal intentionné d'exécuter du code arbitraire.\nUne personne malveillante peut exploiter la vulnérabilité présente dans\ndns_build_reverse() au moyen d'un paramètre malicieusement construit,\nfournit en argument à la fonction.\n\nExim est le serveur de messagerie par défaut des distributions Debian\nGNU/Linux.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:025 du 15 février    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-025.html"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD pour CVS du 26 janvier 2004 :",
+      "url": "http://www.vuxml.org/openbsd/"
+    },
+    {
+      "title": "Site Internet d'Exim :",
+      "url": "http://www.exim.org"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD cvs :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/mail/exim/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200501-23 du 12 janvier    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200501-23.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-637 du 13 janvier 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-637"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour CVS du 05 janvier 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-635 du 12 janvier 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-635"
+    },
+    {
+      "title": "Note de vulnérabilité #132992 de l'US-CERT du 27 janvier    2005 :",
+      "url": "http://www.kb.cert.org/vuls/id/132992"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-014",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2005-01-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout d'une nouvelle vulnérabilité découverte dans Exim ;",
+      "revision_date": "2005-01-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références à un second bulletin Debian, aux bulletins de sécurité OpenBSD, FreeBSD et NetBSD, et de la note de vulnérabilité de l'US-CERT.",
+      "revision_date": "2005-02-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité RedHat RHSA-2005-025.",
+      "revision_date": "2005-02-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Trois vulnérabilités présentes dans l'application Exim permettent à un\nutilisateur mal intentionné d'exécuter du code arbitraire à distance et\nd'élever ses privilèges.\n",
+  "title": "Multiples vulnérabilités dans Exim",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité d'iDEFENSE",
+      "url": "http://www.idefense.com/application/poi/display?id=179&type=vulnerabilities"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité d'Exim",
+      "url": null
+    }
+  ]
+}

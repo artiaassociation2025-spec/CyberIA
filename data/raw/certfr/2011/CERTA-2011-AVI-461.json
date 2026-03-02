@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>PHP 5.3.x.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent PHP :\n\n-   une mauvaise gestion de pointeur dans la fonction substr_replace\n    permet à un utilisateur malveillant de corrompre la mémoire et au\n    moins de provoquer un déni de service ;\n-   un débordement dans la pile dans la fonction socket_connect permet à\n    un utilisateur malveillant d'exécuter du code arbitraire ;\n-   un défaut de traitement de certaines requêtes POST par la fonction\n    rfc1867_post_handler permet à un utilisateur malveillant d'atteinde\n    n'importe quel fichier du système ;\n-   une erreur dans l'implantation crypt_blowfish provoque des\n    collisions lors des calculs de condensés cryptographiques ;\n-   un dépassement de tampon mémoire est présent dans la fonction crypt.\n\n## Solution\n\nLa version 5.3.7 de PHP résoud ces problèmes mais introduit une\nrégression (dans la fonction crypt()).\n\nLa version 5.3.8 résoud la régression introduite dans PHP 5.3.7.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2202",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2202"
+    },
+    {
+      "name": "CVE-2011-2483",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2483"
+    },
+    {
+      "name": "CVE-2011-1148",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1148"
+    },
+    {
+      "name": "CVE-2011-1938",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1938"
+    }
+  ],
+  "links": [
+    {
+      "title": "Annonce de la version PHP 5.3.8 du 23 août 2011 :",
+      "url": "http://www.php.net/archive/2011.php#id2011-08-23-1"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-461",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-08-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout du correctif de la version 5.3.8 du 23 août 2011.",
+      "revision_date": "2011-08-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent PHP et permettent de contourner la\npolitique de sécurité.\n",
+  "title": "Vulnérabilités dans PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise en garde sur la version PHP 5.3.7 du 22 août 2011",
+      "url": "http://www.php.net/archive/2011.php#id2011-08-22-1"
+    },
+    {
+      "published_at": null,
+      "title": "Annonce de la version 5.3.8 du 23 août 2011",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Annonce de la version PHP 5.3.7 du 18 août 2011",
+      "url": "http://www.php.net/archive/2011.php#id2011-08-18-1"
+    }
+  ]
+}

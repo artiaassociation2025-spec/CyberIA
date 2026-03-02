@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions d'Ethereal  comprises entre les versions 0.8.15 et 0.10.4 (incluses).</p>",
+  "content": "## Description\n\nEthereal est un renifleur réseau. Il permet l'analyse de données depuis\nle réseau ou à partir d'un fichier.  \nUn utilisateur mal intentionné, composant judicieusement un fichier\ndestiné à être lu par Ethereal ou injectant un paquet malicieusement\nconstruit sur le réseau, peut exploiter une de ces vulnérabilités afin\nde réaliser un déni de service ou exécuter à distance du code arbitraire\nsur la plate-forme utilisant une version vulnérable d'Ethereal.\n\n## Contournement provisoire\n\nDans l'attente de l'application du correctif, désactiver les protocoles\nsuivants : iSNS, SMB et SNMP.\n\n## Solution\n\nInstaller la version 0.10.5 d'Ethereal.  \nEthereal est téléchargeable à l'adresse suivante :\n\n    http://www.ethereal.com/download.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ethereal enpa-sa-00015 du 06 juillet    2004 :",
+      "url": "http://www.ethereal.com/appnotes/enpa-sa-00015.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:067 du 09 juillet    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:067"
+    },
+    {
+      "title": "Site Internet d'Ethereal :",
+      "url": "http://www.ethereal.com"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD ethereal :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/net/ethereal/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:378 du 05 août 2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-378.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200407-08 du 09 juillet    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200407-08.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-528 du 17 juillet 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-528"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour Ethereal du 11 juillet    2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-228",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité NetBSD.",
+      "revision_date": "2004-07-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo, Mandrake et FreeBSD et ajout des références CVE.",
+      "revision_date": "2004-07-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian.",
+      "revision_date": "2004-07-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat.",
+      "revision_date": "2004-08-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Trois vulnérabilités dans Ethereal permettent à un utilisateur mal\nintentionné de créer un déni de service ou d'exécuter du code arbitraire\nsur une plate-forme utilisant une version vulnérable d'Ethereal.\n",
+  "title": "Vulnérabilités dans Ethereal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ethereal enpa-sa-00015 du 06 juillet 2004",
+      "url": null
+    }
+  ]
+}

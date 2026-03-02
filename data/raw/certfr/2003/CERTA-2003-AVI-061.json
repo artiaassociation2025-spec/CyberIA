@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Versions de Netpbm antérieures ou  égales à 10.14.</p>",
+  "content": "## Description\n\nNetpbm est un paquetage comprenant une bibliothèque et des outils\nutilisés pour la manipulation d'images de différents formats.\n\n  \n\nDe multiples vulnérabilités de type débordement de mémoire sont\nprésentes dans le paquetage Netpbm.\n\nAu moyen d'une image habilement constituée, un utilisateur mal\nintentionné peut exploiter ces vulnérabilités à travers une application\nutilisant ce paquetage afin d'exécuter du code arbitraire ou réaliser un\ndéni de service.\n\n## Solution\n\nAppliquer le correctif selon l'éditeur :\n\n-   Bulletin de sécurité DSA-263 \"netpbm-free - math overflow errors\" de\n    Debian :\n\n        http://www.debian.org/security/2003/dsa-263\n\n-   Bulletin de sécurité MDKSA-2003:036 \"netpbm\" de Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:036\n\n-   Bulletin de sécurité RHSA-2003:060 de Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2003-060.html\n\n-   Bulletin de sécurité RHSA-2003:061 de Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2003-061.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Document \"Arithmetic overflows in Netpbm\" sur le site de    Netpbm :",
+      "url": "http://netpbm.sourceforge.net/overflow.html"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-061",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de sécurité de Red Hat.",
+      "revision_date": "2003-04-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans le paquetage\nNetpbm.\n",
+  "title": "Multiples vulnérabilités dans le paquetage Netpbm",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DSA-263 de Debian",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MDKSA-2003:036 de Mandrake",
+      "url": null
+    }
+  ]
+}

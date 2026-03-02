@@ -1,0 +1,79 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions d'OpenSSL antérieures à 0.9.7k et 0.9.8c.</P>",
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans OpenSSL. Elle permettrait à une\npersonne malveillante de construire une signature PKCS \\#1 v1.5 à partir\nd'une clé RSA utilisant un exposant 3. La vérification de la clef ne\nserait pas effectuée de manière correcte par OpenSSL au moment de la\nsignature.\n\nUne manière usuelle de créer ce genre de clé nécessite la commande\nsuivante : openssl genrsa -3 taille_clé \\| tee ma_signature.PEM. La\nsignature s'obtient par la commande openssl rsautl -sign.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4339",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4339"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité OpenBSD du 08 septembre 2006 :",
+      "url": "http://www.openbsd.org/errata.html"
+    },
+    {
+      "title": "Mise à jour Ubuntu USN-339-1 du 05 septembre 2006 :",
+      "url": "http://www.ubuntu.com/usn/usn-339-1"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1173 du 09 septembre 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1173"
+    },
+    {
+      "title": "Mise à jour Redhat RHSA-2006:0661-8 du 06 septembre 2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0661.html"
+    },
+    {
+      "title": "Site pour le téléchargement des dernières mises à jour    OpenSSL :",
+      "url": "http://www.openssl.org/source/"
+    },
+    {
+      "title": "Mise à jour FreeBSD SA-06:19.openssl du 06 septembre 2006 :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-06:19.openssl.asc"
+    },
+    {
+      "title": "Mise à jour Mandriva MDKSA-2006:161 du 06 septembre 2006 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:161"
+    },
+    {
+      "title": "Annonce OpenSSL du 05 Septembre 2006 :",
+      "url": "http://www.openssl.org/news/secadv_20060905.txt"
+    },
+    {
+      "title": "Mise à jour Gentoo GLSA-200609-05 du 07 septembre 2006 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200609-05.xml"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-384",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-09-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux mises à jour FreeBSD, Mandriva, Gentoo et Redhat.",
+      "revision_date": "2006-09-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence aux bulletins de sécurité Debian et OpenBSD.",
+      "revision_date": "2006-09-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans OpenSSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenSSL du 05 septembre 2006",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les versions d'Avast! antérieures à 4.7.700.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans les produits de sécurité\nAvast! Antivirus. Ils ne manipuleraient pas correctement des fichiers\ncompressés de format CAB (pour Cabinet) ou SIS (Symbian Installation\nSystem), pouvant provoquer un débordement de la pile. Une personne\nmalveillante pourrait ainsi construire des documents spécialement conçus\n; lorsque ceux-ci seront analysés par l'outil de sécurité, des commandes\narbitraires pourraient ainsi être exécutées sur le système vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-2846",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2846"
+    },
+    {
+      "name": "CVE-2007-2845",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2845"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité nruns SA-2007.008 du 23 mai 2007 :",
+      "url": "http://www.nruns.com/parsing-engines-advisories.php"
+    },
+    {
+      "title": "Archive de Neohapsis publié le 24 mai 2007 :",
+      "url": "http://archives.neohapsis.com/archives/fulldisclosure/2007-05/0448.html"
+    },
+    {
+      "title": "Site officiel d'Avast! :",
+      "url": "http://www.avast.com"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-235",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-05-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités dans Avast! Antivirus",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonces de vulnérabilités nruns AG du 23 mai 2007",
+      "url": null
+    }
+  ]
+}

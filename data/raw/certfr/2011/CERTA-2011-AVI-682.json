@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>AST-2011-013 concerne :  <UL>    <LI>Asterisk Open Source 1.6.2.x toutes versions ;</LI>    <LI>Asterisk Open Source 1.8.x toutes versions.</LI>  </UL>  <P>AST-2011-014 concerne :</P>  <UL>    <LI>Asterisk Open Source toutes versions.</LI>  </UL></p>",
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans Asterisk.\n\nLa première, AST-2011-013, permet à une personne malintentionée\nd'énumérer les noms d'utilisateur. Cette vulnérabilité est causée par\nune mauvaise configuration du NAT.\n\nLa seconde, AST-2011-014, permet à un utilisateur malintentionné de\ncauser un déni de service à distance, lorsque l'option automon est\nactivée dans le fichier features.conf, grâce à l'envoi d'une suite de\npaquets SIP.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-4598",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4598"
+    },
+    {
+      "name": "CVE-2011-4597",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4597"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-682",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-12-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités, permettant à un utilisateur malintentionné\nd'effectuer un déni de service à distance et de porter atteinte à la\nconfidentialité de certaines données, sont présentes dans <span\nclass=\"textit\">Asterisk</span>.\n",
+  "title": "Vulnérabilités dans Asterisk",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Asterisk AST-2011-014 du 03 novembre 2011",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Asterisk AST-2011-013",
+      "url": "http://downloads.asterisk.org/pub/security/AST-2011-013.html"
+    }
+  ]
+}

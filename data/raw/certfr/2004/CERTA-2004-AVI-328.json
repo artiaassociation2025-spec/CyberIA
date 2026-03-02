@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions de sendmail antérieures à 8.12.3-.71 avec la distribution Debian stable (woody) ;",
+      "product": {
+        "name": "sendmail",
+        "vendor": {
+          "name": "Sendmail",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les versions de sendmail antérieures à 8.13.1-.13 avec la distribution Debian unstable (sid).",
+      "product": {
+        "name": "sendmail",
+        "vendor": {
+          "name": "Sendmail",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSASL (Simple Authentication and Security Layer) est un mécanisme\npermettant d'ajouter des fonctionnalités d'authentification à des\nprotocoles réseau.\n\nL'installation du packetage `sasl-bin`, pour intégrer SASL dans le\nserveur de messagerie sendmail, emploie un compte possèdant un mot de\npasse par défaut. Cette vulnérabilité peut permettre à un utilisateur\nmal intentionné d'employer le serveur de messagerie comme relais ouvert\nafin d'envoyer des méls non sollicités.\n\n## Solution\n\nAppliquer le correctif fourni par l'éditeur (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-328",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans Sendmail avec SASL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DSA-554-1 de Debian",
+      "url": "http://www.debian.org/security/2004/dsa-554"
+    }
+  ]
+}

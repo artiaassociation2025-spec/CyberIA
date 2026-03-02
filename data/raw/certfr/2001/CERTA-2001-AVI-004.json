@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes versions de SunOS ou Solaris inférieures à Solaris  8.</P>",
+  "content": "## Description\n\nLa commande arp appartient au groupe bin et possède le bit SetGID. De\nplus cet outil possède une vulnérabilité permettant d'effectuer un\ndébordement de mémoire.\n\nUn utilisateur mal intentionné peut utiliser cette vulnérabilité dans le\nbut d'obtenir un accès à un shell, ou bien d'exécuter du code avec les\nprivilèges de bin ou même de root.\n\n## Solution\n\nAppliquer le correctif de sun Microsystems selon la version du système,\nà l'adresse :\n\n    http://sunsolve.sun.com/pub-cgi/show.pl?target=patches/patch-access\n\n.\n\n-   SunOS 5.7 : 109709-01\n-   SunOS 5.7_x86 : 109710-01\n-   SunOS 5.6 : 109719-01\n-   SunOS 5.6_x86 : 109720-01\n-   SunOS 5.5.1 : 109721-01\n-   SunOS 5.5.1_x86 : 109722-01\n-   SunOS 5.5 : 109707-01\n-   SunOS 5.5_x86 : 109708-01\n-   SunOS 5.4 : 109723-01\n-   SunOS 5.4_x86 : 109724-01\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité #00200 de Sun Microsystems :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doctype=coll&doc=secbull/200&type=0&nav=sec.sba"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-004",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-01-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès root en local"
+    },
+    {
+      "description": "Exécution de code arbitraire avec privilèges"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "La commande ARP est un outil permettant de manipuler les tables\nd'adressage des cartes <span class=\"textit\">ethernet</span>. Une\nvulnérabilité de cet utilitaire permet à un utilisateur mal intentionné\nd'exécuter du code ou d'obtenir un <span class=\"textit\">shell</span>\nroot.\n",
+  "title": "Vulnérabilité dans ARP sous SunOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de Sun Microsystems",
+      "url": null
+    }
+  ]
+}

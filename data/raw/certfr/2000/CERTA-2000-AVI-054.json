@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Versions CISCO PIX 5.1.x jusqu'à 5.1(2) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Version CISCO PIX 5.2(1).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Versions CISCO PIX 5.0.x jusqu'à 5.0(3) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Toutes versions de CISCO PIX jusqu'à 4.4(5) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne fonctionnalité « mailguard » du garde barrière CISCO PIX permet de\nlimiter l'utilisation des commandes SMTP « Simple Mail Transfert\nProtocol ». Cette limitation a pour but d'empêcher les utilisateurs\ndistants de recueillir, en utilisant des commandes SMTP, des\ninformations comme par exemple, les utilisateurs du système.\n\nUne vulnérabilité de « mailguard » permet à un utilisateur distant mal\nintentionné de contourner ces limitations afin de pouvoir utiliser\ntoutes les commandes SMTP. Un programme permettant d'exécuter ce\ncontournement a été diffusé sur Internet.\n\n## Solution\n\nCorrectifs à appliquer suivant les versions de PIX :\n\n-   Toutes versions de CISCO PIX jusqu'à 4.4(5) : Correctif 4.4(6) ;\n-   Versions CISCO PIX 5.0.x jusqu'à 5.0(3) : Correctif 5.1(3) ;\n-   Versions CISCO PIX 5.1.x jusqu'à 5.1(2) : Correctif 5.1(3) ;\n-   Version CISCO PIX 5.2(1) : Correctif 5.2(2).\n\nCes correctifs sont disponibles sur le site CISCO :\n\n    http://www.cisco.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité CISCO :",
+      "url": "http://www.cisco.com/warp/public/707/PIXfirewallSMTPfilter-pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-054",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-09-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement des règles de filtrage"
+    }
+  ],
+  "summary": "Un utilisateur distant mal intentionné peut contourner les règles de\nfiltrage d'un garde barrière CISCO PIX afin de recueillir des\ninformations par le biais de commandes SMTP.\n",
+  "title": "Vulnérabilité dans le garde barrière PIX de CISCO",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Cisco",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bugtraq",
+      "url": null
+    }
+  ]
+}

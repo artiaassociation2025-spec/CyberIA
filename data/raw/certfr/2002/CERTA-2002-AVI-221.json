@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows NT 4.0 et NT 4.0 Terminal Server Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Millennium Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 98 et 98 Second Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa première vulnérabilité concerne la commande d'aide au format HTML.\nElle comporte un contrôle ActiveX dont l'une des fonctions présente une\nvulnérabilité de type débordement de mémoire.\n\nEn exploitant cette vulnérabilité, un utilisateur mal intentionné peut\nexécuter du code avec les droits de l'utilisateur de la session en\ncours.  \n\nLa seconde vulnérabilité concerne le traitement des fichiers de type\n.chm. En envoyant un courrier électronique habilement construit au\nformat HTML, un utilisateur mal intentionné peut exécuter du code avec\nles droits du destinataire.\n\n## Solution\n\nAppliquer le correctif distribué par Microsoft (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-221",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités de la fonction d'aide sous Windows permettent à un\nutilisateur mal intentionné d'obtenir les privilèges de l'utilisateur de\nla session en cours.\n",
+  "title": "Vulnérabilités de la fonction d'aide sous Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Microsoft MS02-055",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms02-055.asp"
+    }
+  ]
+}

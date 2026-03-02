@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Spectrum Power 7 versions antérieures à V23Q3",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Siemens",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "SIMATIC PCS neo (Administration Console) V4.0 et V4.0 Update 1 sans le correctif de sécurité Security Patch 01",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Siemens",
+          "scada": true
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-38558",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-38558"
+    },
+    {
+      "name": "CVE-2023-38557",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-38557"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0749",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-09-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans <span\nclass=\"textit\">les produits Siemens</span>. Elles permettent à un\nattaquant de provoquer un contournement de la politique de sécurité, une\natteinte à la confidentialité des données et une élévation de\nprivilèges.\n",
+  "title": "Multiples vulnérabilités dans les produits Siemens",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Siemens SSA-646240 du 14 septembre 2023",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-357182.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Siemens SSA-357182 du 14 septembre 2023",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-646240.html"
+    }
+  ]
+}

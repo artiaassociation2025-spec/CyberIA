@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Dovecot versions 2.0.12 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Dovecot",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Dovecot versions 1.2.16 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Dovecot",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité relative à la gestion des en-têtes de courriels est\nprésente dans Dovecot. Elle permet à un utilisateur distant\nmalintentionné de provoquer un arrêt inopiné du serveur ou de corrompre\nun fichier de boîte de courriels.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1929",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1929"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 2252 du 02 juin 2011 :",
+      "url": "http://www.debian.org/security/2011/dsa-2252"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2011:101 du 26 mai 2011    :",
+      "url": "http://www.mandriva.com/fr/support/security/advisories?name=MDVSA-2011:101"
+    },
+    {
+      "title": "Bulletins de sécurité Fedora FEDORA-2011-7258 et 7268 du 19    mai 2011 :",
+      "url": "https://www.redhat.com/archives/fedora-packages-announce/2011-May/060815.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2011:1187-1 du 18 août    2011 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2010-1187.html"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SR:2011:010 du 13 mai 2011 :",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2011-05/msg00008.html"
+    },
+    {
+      "title": "Liste des changements apportés à la version 2.0.13 de    Dovecot :",
+      "url": "http://dovecot.org/pipermail/dovecot//2011-May/059085.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-1143-1 du 01 juin 2011 :",
+      "url": "http://www.ubuntu.com/usn/usn-1143-1"
+    },
+    {
+      "title": "Bulletins de sécurité Fedora FEDORA-2011-7258 et 7268 du 19    mai 2011 :",
+      "url": "https://www.redhat.com/archives/fedora-packages-announce/2011-May/060825.html"
+    },
+    {
+      "title": "Liste des changements apportés à la version 1.2.17 de    Dovecot :",
+      "url": "http://dovecot.org/pipermail/dovecot//2011-May/059086.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-316",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-05-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins Debian, Fedora, Mandriva, RedHat, Suse et Ubuntu.",
+      "revision_date": "2011-08-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le serveur de messagerie Dovecot permet à un\nutilisateur distant malintentionné de provoquer un déni de service ou de\nporter atteinte à l'intégrité des données.\n",
+  "title": "Vulnérabilité dans Dovecot",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Listes des changements apportés aux versions 1.2.17 et 2.0.13 de Dovecot",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows 2003 avec ous sans Service Pack 1,",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "produits Avaya utilisant Microsoft Windows.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 2000 Service Pack 4,",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows XP Service Pack 1 et Service Pack 2,",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe gestionnaire de connexion réseau est un composant du système\nd'exploitation permettant de contrôler les connexions réseau du système,\ntelles que celles du dossier « Connexions réseau et accès à distance ».\n\nUn bogue dans une bibliothèque peut être utilisé pour bloquer le\ncomposant.\n\nSur les versions vulnérables à distance avec le compte Invité activé, ce\ndernier peut être utilisé par quiconque pour réaliser le déni de\nservice.\n\n## Contournement provisoire\n\nFiltrer les ports RPC en particulier 135, 137, 138 et 445 en udp et 135,\n139, 445 et 593 en tcp voire les ports 80 et 443 tcp sur RPC sur HTTP\nest présent.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention de\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Avaya ASA-2005-214 du 11 octobre 2005    :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2005-214.pdf"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-406",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-10-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service par un utilisateur local"
+    },
+    {
+      "description": "Éventuel déni de service distant par un utilisateur authentifié"
+    }
+  ],
+  "summary": "Le gestionnaire de connexion réseau (« Network Connection Manager ») est\nvulnérable à une attaque en déni de service lancée en local et\néventuellement, selon la version de <span class=\"textit\">Windows</span>,\nà distance par un utilisateur authentifié.\n",
+  "title": "Vulnérabilité de Microsoft Network Connection Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS05-045",
+      "url": "http://www.microsoft.com/france/technet/securite/ms05-045.mspx"
+    }
+  ]
+}

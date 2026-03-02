@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "TYPO3 version 4.4.8 et antérieures ;",
+      "product": {
+        "name": "Typo3",
+        "vendor": {
+          "name": "Typo3",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "TYPO3 version 4.3.11 et antérieures ;",
+      "product": {
+        "name": "Typo3",
+        "vendor": {
+          "name": "Typo3",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "TYPO3 version 4.5.3 et antérieures.",
+      "product": {
+        "name": "Typo3",
+        "vendor": {
+          "name": "Typo3",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans TYPO3 :\n\n-   plusieurs injections de code indirecte à distance sont possibles ;\n-   un utilisateur s'authentifiant avec des identifiants erronés recevra\n    des entêtes HTTP différents selon qu'il ait fourni un nom\n    d'utilisateur correct ou non ;\n-   un utilisateur peut contourner le délai d'attente imposé aprés avoir\n    fourni des identifiants incorrects ;\n-   la fonctionnalité getText peut être utilisée pour récupérer des\n    données arbitraires depuis la base de données TYPO3 ;\n-   une vulnérablité liée à l'utilisation de la fonction Unserialize()\n    permet d'effacer arbitrairement les fichiers auxquels le serveur Web\n    a accès.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité TYPO3 TYPO3-CORE-SA-2011-001 du 27    juillet 2011 :",
+      "url": "http://typo3.org/teams/security/security-bulletins/typo3-core/typo3-core-sa-2011-001/"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-432",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-08-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans TYPO3 permettent, entre autres,\nd'effectuer de l'injection de code indirecte à distance ou de porter\natteinte à la confidentialité et à l'intégrité des données.\n",
+  "title": "Multiples vulnérabilités dans TYPO3",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité TYPO3 TYPO3-CORE-SA-2011-001 du 27 juillet 2011",
+      "url": null
+    }
+  ]
+}

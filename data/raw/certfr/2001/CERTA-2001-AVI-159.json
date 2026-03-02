@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>OpenBSD, FreeBSD, toute distribution Linux et tout système  utilisant OpenSSH dans une version inférieure à la 3.0.2.</P>",
+  "content": "## Description\n\nLe démon sshd peut invoquer login pour toute connexion interactive, si\nla directive UseLogin est positionnée à « yes » dans son fichier de\nconfiguration (usuellement /etc/sshd_config). Par défaut, cette option\nn'est pas activée mais elle est cependant couramment utilisée.\n\nUn utilisateur mal intentionné peut alors spécifier les variables\nd'environnement utilisées par login et ainsi exécuter du code arbitraire\naprès une authentification par clé publique.\n\n## Contournement provisoire\n\nMettre la directive UseLogin à « no » si l'usage du système ne le\nrequiert pas. Sinon, désactiver temporairement l'authentification par\nclé publique jusqu'à la mise à jour du système.\n\n## Solution\n\n-   Télécharger et compiler la dernière version d'OpenSSH depuis le site\n    officiel :\n\n        http://www.openssh.org\n\n-   Télécharger et installer le port/paquetage correspondant à la\n    distribution lorsqu'il sera disponible.\n    -   Linux Red Hat :\n\n            http://www.redhat.com/support/errata/RHSA-2001-161.html\n\n    -   Linux Debian :\n\n            http://www.debian.org/security/2001/dsa-091\n\n    -   SuSE Linux :\n\n            http://www.suse.com/de/support/security/2001_044_openssh_txt.txt\n\n    -   FreeBSD :\n\n            ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-01%3A63.openssh.asc\n\n    -   OpenBSD :\n\n            http://archives.neohapsis.com/archives/openbsd/2001-12/0261.html\n\n    -   IBM AIX (utilisateurs enregistrés) :\n\n            http://www6.software.ibm.com/aixtbx/aixtbx-p\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis BugTraq",
+      "url": "http://www.securityfocus.com/bid/3614"
+    },
+    {
+      "title": "Documentation du démon sshd",
+      "url": "http://www.openbsd.org/cgi-bin/man.cgi?query=sshd"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-159",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-12-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges d'un utilisateur légitime"
+    }
+  ],
+  "summary": "Si la directive <span class=\"textit\">UseLogin</span> a la valeur « yes\n», un utilisateur mal intentionné peut exécuter du code arbitraire avec\nles privilèges du démon <span class=\"textit\">sshd</span>, soit\ngénéralement <span class=\"textit\">root</span>.\n",
+  "title": "Risque de compromission locale avec OpenSSH",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport de vulnérabilité VU#157447 du CERT/CC Liste de diffusion Bugtraq",
+      "url": "http://www.kb.cert.org/vuls/id/157447"
+    }
+  ]
+}

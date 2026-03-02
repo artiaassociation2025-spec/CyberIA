@@ -1,0 +1,92 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "tout système utilisant OpenSSH dans une version antérieure à la 3.6.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenSSH",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "tout programme utilisant les kits de développement ``SSH IPSEC Express'' et ``SSH Certificate/TLS'' de la société SSH communications Security ;",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "tout programme utilisant la bibliothèque Crypto++ ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tout système utilisant les fonctions de la bibliothèque openssl jusqu'aux versions 0.9.7a et 0.9.6i (en particulier le module mod_ssl du serveur web Apache et l'application Stunnel) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDes travaux de recherche sur les implémentations des protocoles SSL/TLS\nont démontré de nouvelles sources de vulnérabilité :\n\n-   En ouvrant de très nombreuses sessions avec serveur et en utilisant\n    des contenus chiffrés habilement choisis, il est possible d'obtenir\n    le chiffrement/déchiffrement d'un texte arbitraire par la clé privée\n    RSA du serveur. Cela peut alors permettre de déchiffrer une session\n    interceptée ou d'usurper l'identité du serveur.\n-   Moyennant une certaine proximité, il est possible de déterminer la\n    clé privée d'un serveur en mesurant ses temps de réponse. La plupart\n    des implémentations matérielles et la bibliothèque NSS du navigateur\n    Mozilla ne semblent pas vulnérables.\n\n## Solution\n\n-   Mettre à jour les sources de la bibliothèque OpenSSL :\n\n        http://www.openssl.org/news/secadv_20030317.txt\n\n        http://www.openssl.org/news/secadv_20030319.txt\n\n-   Mettre à jour la bibliothèque Crypt++ en version 5.1 au moins :\n\n        http://www.eskimo.com/~weidai/cryptlib.html\n\n-   Mettre à jour les programmes/modules suivants :\n    -   Stunnel :\n\n            http://marc.theaimsgroup.com/?l=stunnel-users&m=104827610907579&w=2\n\n    -   mod_ssl pour serveur web Apache :\n\n            http://marc.theaimsgroup.com/?l=apache-modssl&m=10480002921649&w=2\n\n    -   OpenSSH :\n\n            http://www.openssh.com\n\n-   Appliquer le correctif du vendeur :\n    -   OpenBSD :\n\n            http://www.openbsd.com/errata.html\n\n    -   FreeBSD :\n\n            ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-03:06.openssl.asc\n\n    -   NetBSD :\n\n            ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2003-007.txt.asc\n\n    -   MacOSX :\n\n            http://docs.info.apple.com/article.html?artnum=120199\n\n    -   IBM \\`\\`AIX Toolbox for Linux'' OpenSSL et mod_ssl :\n\n            http://www6.software.ibm.com/dl/aixtbx/aixtbx-p\n\n    -   OpenPKG :\n\n            http://www.openpkg.org/security/OpenPKG-2003.026-openssl.html\n\n    -   SCO OpenLinux :\n\n            ftp://ftp.sco.com/pub/security/OpenLinux/CSSA-2003-014.0.txt\n\n    -   Gentoo Linux :\n\n            http://forums.gentoo.org/viewtopic.php?t=43709\n\n    -   Trustix Secure Linux :\n\n            http://www.trustix.net/errata/misc/2003/TSL-2003-0010-openssl.asc.txt\n\n    -   Engarde Secure Linux :\n\n            http://www.linuxsecurity.com/advisories/engarde_advisory-3009.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "``Remote Timing Attacks are Practical'' par D. Brumley        et D. Boneh :",
+      "url": "http://crypto.stanford.edu/~dabo/papers/ssl-timing.pdf"
+    },
+    {
+      "title": "Attaque sur le chiffrement RSA :       ``Attacking RSA-based Sessions in SSL/TLS'' par V.        Klima, O. Pokorny et T. Rosa :          \n  Référence CVE CAN-2003-0131 :",
+      "url": "http://eprint.iacr.org/2003/052/"
+    },
+    {
+      "title": "``Attacking RSA-based Sessions in SSL/TLS'' par V.        Klima, O. Pokorny et T. Rosa :",
+      "url": "http://eprint.iacr.org/2003/052/"
+    },
+    {
+      "title": "Réponse de la société SSH    Communications Security au CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/AAMN-5KR27C"
+    },
+    {
+      "title": "Attaque sur les temps de calcul :       ``Remote Timing Attacks are Practical'' par D. Brumley        et D. Boneh :          \n  Référence CVE CAN-2003-0147 :",
+      "url": "http://crypto.stanford.edu/~dabo/papers/ssl-timing.pdf"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-057",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2003-03-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout des systèmes AIX et NetBSD, des bibliothèques de <SPAN class=\"textit\">SSH Communications Security</SPAN> et <SPAN class=\"textit\">Crypto++</SPAN>, et des produits <SPAN class=\"textit\">Stunnel</SPAN>, <SPAN class= \"textit\">OpenSSH</SPAN> et <SPAN class= \"textit\">mod_ssl</SPAN>.",
+      "revision_date": "2003-04-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des sessions"
+    }
+  ],
+  "summary": "Deux failles, présentes dans certaines implémentations des protocoles\nSSL/TLS, permettent à un utilisateur mal intentionné soit de récupérer\nla clé secrète d'un serveur, soit le secret partagé d'une session\nclient/serveur.\n",
+  "title": "Failles dans des implémentations de SSL/TLS",
+  "vendor_advisories": []
+}

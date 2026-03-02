@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Routeurs Cisco de la famille 600 : 627,  633, 673, 675, 675E, 677, 677i et 678.  <P>Ces modèles sont vulnérables s'ils utilisent une des révisions  CBOS suivantes: 2.0.1, 2.1.0, 2.1.0a, 2.2.0, 2.2.1, 2.2.1a, 2.3,  2.3.2, 2.3.5, 2.3.7, 2.3.8, 2.3.9, 2.4.1, 2.4.2, 2.4.2ap.</P></p>",
+  "content": "## Description\n\nQuand un routeur est accédé par telnet ou HTTP via de multiples\nconnexions, le routeur se met dans un état dans lequel il n'achemine\nplus aucun trafic et ne répond plus aux tentatives de configuration.\nSeul un redémarrage de l'équipement permet de le rendre de nouveau\nopérationnel.\n\nDe plus, le service de configuration web (HTTP) est autorisé par défaut\net une erreur de CBOS ne permet pas de le désactiver même si dans la\nconfiguration le service est désactivé explicitement.\n\nUn utilisateur mal intentionné peut utiliser ces vulnérabilités afin de\nréaliser à distance un déni de service sur ces routeurs. Il faut\nsouligner que les vers tels que Code Red qui exploitent des\nvulnérabilités liées à des services accessibles via le port 80 (HTTP)\npeuvent entrainer aussi un déni de service sur ces équipements (voir\nCERTA-2001-ALE-008 : Propagation du ver \"Code Red\").\n\n## Contournement provisoire\n\n#### 5.0.0.1\n\nDans son avis de sécurité (voir \"Documentation\"), Cisco conseille\nd'utiliser un port différent du port 80 pour l'utilitaire de\nconfiguration Web afin d'empêcher les dénis de service dus aux vers: set\nweb port xx où xx est un numéro de port \\> 1024.\n\n#### 5.0.0.2\n\nUne autre solution consiste à désactiver les utilitaires de\nconfiguration à distance au moyen de filtres:\n\nset filter 0 on deny incoming all 0.0.0.0 0.0.0.0 \\<ip-routeur\\>\n255.255.255.255 protocol TCP srcport 0-65535 destport 23-23\n\nset filter 1 on deny incoming all 0.0.0.0 0.0.0.0 \\<ip-routeur\\>\n255.255.255.255 protocol TCP srcport 0-65535 destport 80-80\n\nA noter que dans ce cas, seule une console reliée au port série\npermettra de configurer le routeur. Consultez la documentation Cisco\npour plus de renseignements sur l'utilisation des filtres.\n\n## Solution\n\nCes vulnérabilités sont corrigées dans les révisions 2.4.2b et 2.4.3 de\nCBOS.\n\nContactez votre support Cisco pour l'obtention de ces mises-à-jour.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis Cisco \"CBOS web-based configuration  utility vulnerability\":",
+      "url": "http://www.cisco.com/warp/public/707/cisco-cbos-webserver-pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-086",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-08-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "L'exploitation de ces vulnérabilités permet de réaliser un déni de service"
+    }
+  ],
+  "summary": "CBOS est le \"Cisco Broadband Operating System\", système d'exploitation\nutilisé dans les routeurs de la famille 600. Des vulnérabilités dans les\nutilitaires de configuration accessibles via telnet ou via HTTP\npermettent à un utilisateur mal intentionné de réaliser un déni de\nservice sur les routeurs.\n",
+  "title": "Multiples vulnérabilités dans Cisco CBOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis Cisco \"CBOS web-based configuration utility vulnerability\"",
+      "url": null
+    }
+  ]
+}

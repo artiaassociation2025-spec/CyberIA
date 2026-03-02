@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Mailman version 2.1.9rc1 et  antérieures.</p>",
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans Mailman :\n\n-   La première vulnérabilité est de type Injection de code indirecte\n    (Cross Site Scripting). Elle peut être exploitée par une personne\n    mal intentionnée afin d'injecter du code dans une ou plusieurs pages\n    du site vulnérable.\n-   La seconde vulnérabilité concerne la fonction Utils.py. Elle permet\n    à un utilisateur distant d'injecter des messages arbitraires dans\n    les journaux d'événements.\n\n## Solution\n\nLa version 2.1.9 de Mailman corrige les vulnérabilités. Se référer au\nbulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf.\nsection Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3636",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3636"
+    },
+    {
+      "name": "CVE-2006-4624",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4624"
+    }
+  ],
+  "links": [
+    {
+      "title": "Annonce Mailman du 12 septembre 2006 :",
+      "url": "http://mail.python.org/pipermail/mailman-announce/2006-september/000087.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1188 du 04 octobre 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1188"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0600 du 06 septembre    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0600.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:165 du 18    septembre 2006 :",
+      "url": "http://frontal2.mandriva.com/security/advisories?name=MDKSA-2006:165"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-426",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans Mailman permettent à un utilisateur\ndistant d'injecter du code dans une ou plusieurs pages du site\nvulnérable ainsi que de modifier les journaux d'événements.\n",
+  "title": "Multiples Vulnérabilités dans Mailman",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian du 04 octobre 2006",
+      "url": null
+    }
+  ]
+}

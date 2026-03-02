@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Novell SUSE Linux Open Enterprise Server.</P>",
+  "content": "## Description\n\nEnterprise Server Remote Manager est une solution d'administration à\ndistance utilisant le protocole HTTP. Une faille dans l'interprétation\ndes entêtes HTTP par le service, permet un débordement de tampon dans la\npile et donc éventuellement l'exécution de code arbitraire.\n\n## Contournement provisoire\n\nRestreindre l'accès à des adresses IP de confiance à l'aide d'un\npare-feu en coupure (ports par défaut 8008/tcp et 8009/tcp).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2006:002 du 13 janvier    2006 :",
+      "url": "http://www.novell.com/linux/security/advisories/2006_02_novellnrm.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-037",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-01-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Un utilisateur distant mal intentionné peut envoyer au service une\nrequête HTTP volontairement mal formée qui pourrait permettre\nl'exécution de code arbitraire.\n",
+  "title": "Vulnérabilité dans le produit Enterprise Server Remote Manager de Novell",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDefense",
+      "url": "http://www.idefense.com/application/poi/display?id=371"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IBM HTTP Server.</p>",
+  "content": "## Description\n\nUne première vulnérabilité est présente dans le module mod_imap. Un\ndéfaut de filtrage des données entrées permet à un utilisateur\nmalintentionné de réaliser de l'injection de code indirecte.\n\nUne deuxième vulnérabilité est présente dans le traitement de certaines\nerreurs HTTP (code HTTP 4xx). Un défaut de filtrage des données entrées\npermet à un utilisateur malintentionné de réaliser de l'injection de\ncode indirecte.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5000",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5000"
+    },
+    {
+      "name": "CVE-2007-6203",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6203"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg1PK58024 du 20 décembre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1PK58024"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg1PK57952 du 20 décembre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1PK57952"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-560",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte (cross site scripting)"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans IBM HTTP Server permettent à un utilisateur\nmalintentionné de réaliser de l'injection de code indirecte.\n",
+  "title": "Vulnérabilités de serveur HTTP d'IBM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CVE-2007-5000",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5000"
+    },
+    {
+      "published_at": null,
+      "title": "CVE-2007-6203",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6203"
+    }
+  ]
+}

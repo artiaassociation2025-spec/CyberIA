@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows NT Server 4.0 Terminal Server Edition SP6.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT Server 4.0 SP6a ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe protocole DHCP est le protocole qui permet d'allouer dynamiquement\nune adresse IP sur un réseau local.\n\nUne vulnérabilité sur le service DHCP ermet à un utilisateur mal\nintentionné, via l'envoi d'un message DHCP malicieusement construit vers\nun serveur DHCP, de réaliser un déni de service ou d'exécuter du code\narbitraire à distance sur le système vulnérable.  \n\nLe service DHCP n'est pas activé par défaut sur les systèmes\nvulnérables.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-393",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-12-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le service DHCP (Dynamic Host\nConfiguration Protocol) permet à un utilisateur mal intentionné de\nréaliser un déni de service ou d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans le service DHCP de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS04-042",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS04-042.mspx"
+    }
+  ]
+}

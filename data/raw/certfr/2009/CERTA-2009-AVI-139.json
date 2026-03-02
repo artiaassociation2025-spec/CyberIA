@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions de Wireshark antérieures à la 1.0.7.",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans l'outil d'analyse\nréseau Wireshark. Elles concernent en particulier l'interprétation et la\nmanipulation de trames via les modules d'analyse suivants :\n\n-   PROFINET ;\n-   LDAP ;\n-   CPHAP (Check Point High-Availability Protocol).\n\nUne personne malveillante peut exploiter l'une de ces vulnérabilités en\nconstruisant des trames adaptées puis en les injectant dans le réseau.\nL'exploitation perturbe alors le fonctionnement de l'application de\ncapture.\n\nL'ouverture de fichiers au format Tektronix (.rf5) peut également être\nproblématique.\n\n## Solution\n\nSe référer au bulletin de sécurité wnpa-sec-2009-02 de Wireshark pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1268",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1268"
+    },
+    {
+      "name": "CVE-2009-1269",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1269"
+    },
+    {
+      "name": "CVE-2009-1267",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1267"
+    },
+    {
+      "name": "CVE-2009-1210",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1210"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Wireshark wnpa-sec-2009-02 du 06 avril    2009 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2009-02.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1785 du 01 mai 2009 :",
+      "url": "http://www.debian.org/security/2009/dsa-1785"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-139",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-04-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian.",
+      "revision_date": "2009-05-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans l'outil d'analyse\nréseau Wireshark. L'exploitation de ces dernières via des trames\nspécialement construites peut perturber le fonctionnement de\nl'application.\n",
+  "title": "Vulnérabilités dans Wireshark",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Wireshark wnpa-sec-2009-02 du 06 avril 2009",
+      "url": null
+    }
+  ]
+}

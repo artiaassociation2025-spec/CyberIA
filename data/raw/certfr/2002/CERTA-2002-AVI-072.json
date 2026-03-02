@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows NT 4.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Professional.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nMUP (Multiple UNC Provider) est un service Windows qui permet de\nlocaliser des ressources réseau qui sont identifiées par UNC (Uniform\nNaming Convention), c'est-à-dire de la forme `\\\\serveur\\om-de-partage`.\n\nUne vulnérabilité du service MUP permet à un utilisateur local mal\nintentionné d'exécuter du code arbitraire avec les privilèges du compte\nSYSTEM.\n\nDans certains cas, l'exploitation de cette vulnérabilité provoquera un\nbloquage ou un redémarrage du serveur.\n\n## Solution\n\nAppliquer le correctif en fonction de votre système :\n\n-   Pour Windows NT 4.0 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=37630\n\n-   Pour Windows NT 4.0 Terminal Server Edition :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=37652\n\n-   Pour Windows 2000 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=37555\n\n-   Pour Windows XP :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=37583\n\n-   Pour Windows XP 64-bit Edition :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=37672\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-072",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-04-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité du service MUP (Multiple UNC Provider) peut permettre\nà un utilisateur local mal intentionné de bloquer le système ou\nd'exécuter du code arbitraire avec les privilèges du compte SYSTEM.\n",
+  "title": "Vulnérabilité du service MUP sous Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS02-017",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-017.asp"
+    }
+  ]
+}

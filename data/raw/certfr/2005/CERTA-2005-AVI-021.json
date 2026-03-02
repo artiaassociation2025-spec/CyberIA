@@ -1,0 +1,44 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système Unix utilisant le serveur de fax <SPAN class=\n  \"textit\">HylaFAX</SPAN> version 4 dont les sources sont  antérieures ou égales à la révision 4.2.0.</P>",
+  "content": "## Description\n\nLe fichier de configuration host.hfaxd permet de spécifier les hôtes et\nou utilisateurs autorisés à utiliser le service. Certaines entrées,\ncouramment présentes par défaut, peuvent être incorrectement\ninterprétées comme un nom d'utilisateur au lieu d'un nom d'hôte et donc\nêtre utilisées pour fournir un accès à un utilisateur mal intentionné.\n\n## Contournement provisoire\n\nFiltrer les adresses IP autorisées à se connecter à l'aide d'un pare-feu\nen coupure (ports 444/tcp, 4457/tcp et 4459/tcp par défaut).\n\n## Solution\n\nUtiliser les sources de HylaFAX en version 4.2.1 au moins ou se référer\nau bulletin de sécurité de l'éditeur.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-634 du 11 janvier 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-634"
+    },
+    {
+      "title": "Site officiel de HylaFAX :",
+      "url": "http://www.hylafax.org"
+    },
+    {
+      "title": "Bulletin de sécurité Secunia 13812 du 12 janvier 2005 :",
+      "url": "http://secunia.com/advisories/13812/"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200501-21 du 11 janvier    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200501-21.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2005:006 du 12 janvier    2005 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2005:006"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-021",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-01-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "<span class=\"textit\">HylaFAX</span> fournit un service permettant\nl'envoi et la réception de fax pour les utilisateurs autorisés à se\nconnecter au serveur. Une mauvaise gestion des restrictions d'accès\npermet à un utilisateur mal intentionné d'user de ce service à son\nprofit.\n",
+  "title": "Vulnérabilité dans la configuration du serveur de fax HylaFAX",
+  "vendor_advisories": []
+}

@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Cisco Pix version 6.3 et 7.0.</p>",
+  "content": "## Description\n\nUn utilisateur mal intentionné peut réaliser un déni de service via\nl'utilisation d'un paquet TCP-SYN malicieusement construit ayant une\nsomme de contrôle invalide.\n\nCe déni de service, d'une durée limitée liée à la configuration du PIX,\nest restreint aux paquets ayant les mêmes adresses IP, ports sources et\ndestinations que le paquet malicieusement construit.\n\n## Contournement provisoire\n\nIl n'existe pour le moment aucun correctif à cette vulnérabilité,\ncependant CISCO a proposé plusieurs solutions permettant de contourner\nle problème :\n\n-   activer le mode « TCP-intercept » ;\n-   réduire le temps de mise à l'écart associé aux nouvelles connexions\n    bloquées.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de US/CERT 853540 :",
+      "url": "http://www.kb.cert.org/vuls/id/853540"
+    },
+    {
+      "title": "CICSO Bugid CSCsc16014 :",
+      "url": "http://www.cisco.com/pcgi-bin/Support/Bugtool/onebug.pl?bugid=CSCsc16014"
+    },
+    {
+      "title": "CISCO Bugid CSCsc14915 :",
+      "url": "http://www.cisco.com/pcgi-bin/Support/Bugtool/onebug.pl?bugid=CSCsc14915"
+    },
+    {
+      "title": "Information sur le Forum de discussion « Full-Disclosure »",
+      "url": "http://lists.grok.org.uk/pipermail/full-disclosure/2005-November/038983.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-470",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente sur le pare-feu PIX de CISCO permet à un\nutilisateur mal intentionné de réaliser un déni de service via des\npaquets malcieusement construits.\n",
+  "title": "Vulnérabilité du pare-feu PIX de CISCO",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Forum de discussion Full-disclosure",
+      "url": null
+    }
+  ]
+}

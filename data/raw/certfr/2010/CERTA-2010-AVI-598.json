@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows 7 pour les systèmes 32 et 64 bits ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2008 R2 pour les systèmes X64 et Itanium.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité, causée par la manière dont Windows BranchCache charge\nles bibliothèques externes, permet à un utilisateur distant malveillant\nd'exécuter du code arbitraire à distance. Cette vulnérabilité peut être\ndéclenchée si un utilisateur ouvre un fichier .eml, .rss ou wpost situé\ndans le même dossier réseau qu'un fichier de bibliothèque spécialement\nconçu. L'utilisateur doit ouvrir le fichier depuis un système de\nfichiers distant ou un partage WebDAV.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3966",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3966"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-598",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans Windows 7 et Windows Server 2008 permet\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS10-095 du 14 décembre 2010",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-095.mspx"
+    }
+  ]
+}

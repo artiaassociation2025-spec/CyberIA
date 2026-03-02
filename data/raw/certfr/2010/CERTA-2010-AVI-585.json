@@ -1,0 +1,203 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Seamonkey 2.0.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Thunderbird 3.0.x et 3.1.x ;",
+      "product": {
+        "name": "Thunderbird",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Firefox 3.5.x et 3.6.x ;",
+      "product": {
+        "name": "Firefox",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités présentes dans les produits Mozilla ont été\ncorrigées :\n\n-   des erreurs dans le moteur du navigateur provoquent des corruptions\n    de la mémoire. Certaines permettraient d'exécuter du code\n    arbitraire ;\n-   sur les plateformes Windows, un débordement de mémoire quand\n    document.write est appelé permet de provoquer un arrêt inopiné ou\n    d'exécuter du code arbitraire ;\n-   l'utilisation de windows.open dans certaines conditions permet\n    d'utiliser les droits de chrome ;\n-   des objets HTML dans un arbre XUL sont utilisables pour provoquer un\n    arrêt inopiné ou pour exécuter du code arbitraire ;\n-   des vulnérabilités sont exploitables au moyen de fontes de\n    caractères ;\n-   le script Java LiveConnect permet, dans certaines circonstances, de\n    contourner la politique de sécurité ;\n-   des utilisations de pointeurs après libération de la mémoire\n    correspondante existent ;\n-   des tableaux JavaScript permettent de corrompre la mémoire ;\n-   les programmes en Javascript peuvent être exécutés avec des\n    privilèges non prévus ;\n-   les pages d'erreurs réseau ou liées aux certificats peuvent être\n    utilisées par des sites malveillants pour tromper l'utilisateur sur\n    l'identité du site avec lequel il pense être connecté ;\n-   des jeux de caractères, hébreu, farsi et arabe, permettent de\n    réaliser des injections de code indirectes.\n\n## Solution\n\nLes versions 3.6.13 et 3.5.16 de Firefox, 3.1.7 et 3.0.11 de Thunderbird\net 2.0.11 de SeaMonkey remédient à ces problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3768",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3768"
+    },
+    {
+      "name": "CVE-2010-3773",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3773"
+    },
+    {
+      "name": "CVE-2010-3778",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3778"
+    },
+    {
+      "name": "CVE-2010-3767",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3767"
+    },
+    {
+      "name": "CVE-2010-3769",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3769"
+    },
+    {
+      "name": "CVE-2010-3772",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3772"
+    },
+    {
+      "name": "CVE-2010-3766",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3766"
+    },
+    {
+      "name": "CVE-2010-3771",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3771"
+    },
+    {
+      "name": "CVE-2010-3770",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3770"
+    },
+    {
+      "name": "CVE-2010-3775",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3775"
+    },
+    {
+      "name": "CVE-2010-3776",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3776"
+    },
+    {
+      "name": "CVE-2010-3777",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3777"
+    },
+    {
+      "name": "CVE-2010-3774",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3774"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurité de la fondation Mozilla MFSA2010-74 à    MFSA2010-84 du 09 décembre 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-83.html"
+    },
+    {
+      "title": "Bulletins de sécurité de la fondation Mozilla MFSA2010-74 à    MFSA2010-84 du 09 décembre 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-82.html"
+    },
+    {
+      "title": "Bulletins de sécurité de la fondation Mozilla MFSA2010-74 à    MFSA2010-84 du 09 décembre 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-84.html"
+    },
+    {
+      "title": "Bulletins de sécurité de la fondation Mozilla MFSA2010-74 à    MFSA2010-84 du 09 décembre 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-77.html"
+    },
+    {
+      "title": "Bulletins de sécurité Fedora FEDORA-2010-18773 et    FEDORA-2010-18775 du 09 décembre 2010 (Mozilla Firefox) :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-December/052035.html"
+    },
+    {
+      "title": "Bulletins de sécurité Fedora FEDORA-2010-18890 et    FEDORA-2010-18920 du 15 décembre 2010 (Mozilla    Seamonkey) :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-December/052504.html"
+    },
+    {
+      "title": "Bulletins de sécurité Fedora FEDORA-2010-18773 et    FEDORA-2010-18775 du 09 décembre 2010 (Mozilla Firefox) :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-December/052029.html"
+    },
+    {
+      "title": "Bulletins de sécurité de la fondation Mozilla MFSA2010-74 à    MFSA2010-84 du 09 décembre 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-76.html"
+    },
+    {
+      "title": "Bulletins de sécurité de la fondation Mozilla MFSA2010-74 à    MFSA2010-84 du 09 décembre 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-75.html"
+    },
+    {
+      "title": "Bulletins de sécurité de la fondation Mozilla MFSA2010-74 à    MFSA2010-84 du 09 décembre 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-79.html"
+    },
+    {
+      "title": "Bulletins de sécurité de la fondation Mozilla MFSA2010-74 à    MFSA2010-84 du 09 décembre 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-78.html"
+    },
+    {
+      "title": "Bulletins de sécurité Fedora FEDORA-2010-18773 et    FEDORA-2010-18775 du 09 décembre 2010 (Mozilla Firefox) :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-December/052021.html"
+    },
+    {
+      "title": "Bulletins de sécurité Fedora FEDORA-2010-18890 et    FEDORA-2010-18920 du 15 décembre 2010 (Mozilla    Seamonkey) :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-December/052502.html"
+    },
+    {
+      "title": "Bulletins de sécurité de la fondation Mozilla MFSA2010-74 à    MFSA2010-84 du 09 décembre 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-81.html"
+    },
+    {
+      "title": "Bulletins de sécurité Fedora FEDORA-2010-18777 et    FEDORA-2010-18778 du 09 décembre 2010 (Mozilla    Thunderbird) :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-December/052220.html"
+    },
+    {
+      "title": "Bulletins de sécurité Fedora FEDORA-2010-18773 et    FEDORA-2010-18775 du 09 décembre 2010 (Mozilla Firefox) :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-December/052023.html"
+    },
+    {
+      "title": "Bulletins de sécurité de la fondation Mozilla MFSA2010-74 à    MFSA2010-84 du 09 décembre 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-74.html"
+    },
+    {
+      "title": "Bulletins de sécurité de la fondation Mozilla MFSA2010-74 à    MFSA2010-84 du 09 décembre 2010 :",
+      "url": "http://www.mozilla.org/security/announce/2010/mfsa2010-80.html"
+    },
+    {
+      "title": "Bulletins de sécurité Fedora FEDORA-2010-18777 et    FEDORA-2010-18778 du 09 décembre 2010 (Mozilla    Thunderbird) :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-December/052110.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-585",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins Fedora.",
+      "revision_date": "2010-12-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités sont présentes dans les produits Mozilla et\ncertaines permettent à un utilisateur malveillant d'exécuter du code\narbitraire sur le système vulnérable.\n",
+  "title": "Vulnérabilités dans les produits Mozilla",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité de la fondation Mozilla MFSA2010-74 à MFSA2010-84",
+      "url": null
+    }
+  ]
+}

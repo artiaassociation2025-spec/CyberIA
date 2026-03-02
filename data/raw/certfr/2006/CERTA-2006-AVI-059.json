@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "libpng versions 1.0.17 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "libpng versions 1.2.7 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur dans la fonction png_set_strip_alpha() de la bibliothèque de\nfonctions libpng permet à un utilisateur distant mal intentionné de\nréaliser un débordement de mémoire par le biais d'une image de type PNG\n(Portable Network Graphics) malicieusement construite. Il peut ainsi\nréaliser un déni de service sur l'application utilisant cette fonction\nou potentiellement exécuter du code arbitraire.\n\n## Solution\n\nLes versions 1.0.18 et 1.2.8 corrigent le problème :\n\n    http://www.libpng.org/pub/png/libpng.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de libpng :",
+      "url": "http://www.libpng.org/pub/png/libpng.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0205 du 13 février    2006 :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2006-0205.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-059",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-02-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat.",
+      "revision_date": "2006-03-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la bibliothèque de fonctions libpng permet à un\nutilisateur distant mal intentionné de réaliser un déni de service ou\npotentiellement d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité dans la bibliothèque libpng",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de mise à jour de sécurité sur le site de libpng",
+      "url": null
+    }
+  ]
+}

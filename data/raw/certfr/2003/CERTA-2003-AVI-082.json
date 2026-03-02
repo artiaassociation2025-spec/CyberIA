@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco VPN 3002 Hardware Client.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "La série des commutateurs Cisco VPN 3000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   L'utilisation d'un tunnel IPSEC avec TCP permet dans certains cas\n    d'accéder à des machines d'un réseau local lorsqu'elles utilisent le\n    même port de communication que celui utilisé par le tunnel.\n-   Une vulnérabilité présente dans le service SSH permet le redémarrage\n    du commutateur lors de l'envoi de paquets malicieusement construits.\n-   L'envoi de paquets malicieux ICMP sur l'une des interfaces du\n    commutateur permet d'effectuer un déni de service ou d'en dégrader\n    les performances.\n\n## Solution\n\nAppliquer les correctifs fournis par CISCO :\n\n    http://www.cisco.com/univercd/cc/td/doc/product/vpn/vpn3000/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité CISCO : \"Cisco VPN 3000 Concentrator  Vulnerabilities\"",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20030507-vpn3k.shtml"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-082",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-05-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Trois vulnérabilités présentes dans la série des commutateurs Cisco VPN\n3000 permettent à un utilisateur mal intentionné d'effectuer un déni de\nservice sur le commutateur ou de contourner la politique de sécurité.\n",
+  "title": "Vulnérabilités dans la série des commutateurs CISCO VPN 3000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO : \"Cisco VPN 3000 Concentrator Vulnerabilities\"",
+      "url": null
+    }
+  ]
+}

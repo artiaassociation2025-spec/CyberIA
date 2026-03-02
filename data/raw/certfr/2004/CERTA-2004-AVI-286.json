@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de MIT Kerberos 5  antérieures à la version krb5-1.3.5.</p>",
+  "content": "## Description\n\nMIT Kerberos est un protocole d'authentification.  \nPlusieurs vulnérabilités dans MIT Kerberos 5 ont été découvertes :\n\n-   Plusieurs vulnérabilités (CAN-2004-0642, CAN-2004-0643 et\n    CAN-2004-0772) concernent des débordements de mémoire dans la mise\n    en oeuvre du KDC (Key Distribution Center) ;\n-   plusieurs vulnérabilités (CAN-2004-0644) concernent des dénis de\n    service dans le décodeur ASN.1 inclus dans MIT Kerberos 5.\n\nCes vulnérabilités permettent à un utilisateur mal intentionné de\nréaliser un déni de service ou d'exécuter du code arbitraire à distance\nsur la plate-forme vulnérable.\n\n## Solution\n\nMettre à jour MIT Kerberos 5 en version krb5-1.3.5.  \nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité #57631 de Sun :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert/57631"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200409-09 du 06 septembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200409-09.xml"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:350 du 31 août 2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-350.html"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD mit-krb5 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/security/mit-krb5/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:088 du 31 août    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:088"
+    },
+    {
+      "title": "Bulletin de sécurité MIT krb5 2004-002 :",
+      "url": "http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2004-002-dblfree.txt"
+    },
+    {
+      "title": "Bulletins de sécurité FreeBSD pour krb5 du 31 août 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-543 du 31 août 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-543"
+    },
+    {
+      "title": "Bulletin de sécurité MIT krb5 2004-003 :",
+      "url": "http://web.mit.edu/kerberos/advisories/MITKRB5-SA-2004-003-asn1.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco #61720 du 31 août 2004 :",
+      "url": "http://www.cisco.com/en/US/products/products_security_advisory09186a00802b3cf9.shtml"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-286",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Cisco.",
+      "revision_date": "2004-09-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2004-09-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence à la mise à jour de sécurité NetBSD.",
+      "revision_date": "2004-09-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans MIT Kerberos 5 permettent à un utilisateur\nmal intentionné de réaliser un déni de service ou d'excécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilités de MIT Kerberos 5",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité MIT krb5 Security Advisory 2004-002 et 2004-003",
+      "url": null
+    }
+  ]
+}

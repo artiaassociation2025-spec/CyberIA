@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>ncpfs</TT> pour GNU/Linux, versions  2.2.5 et versions antérieures.",
+  "content": "## Description\n\nncpfs est un pilote pour le système de fichiers réseau supportant le\nprotocole NCP (NetWare Core Protocol).  \nUne vulnérabilité de type débordement de mémoire présente dans le\nprogramme ncplogin permet à un utilisateur mal intentionné d'exécuter du\ncode arbitraire à distance sur la plate-forme vulnérable (CVE\nCAN-2005-0014).  \nUne seconde vulnérabilité dans le fichier source nwclient.c permet à un\nutilisateur mal intentionné d'élever ses privilèges (CVE CAN-2005-0013).\n\n## Solution\n\nMettre à jour ncpfs en version 2.2.6 ou toute version supérieure.  \nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de ncpfs :",
+      "url": "ftp://platan.vc.cvut.cz/pub/linux/ncpfs/"
+    },
+    {
+      "title": "Liste des changements dans la version 2.2.6 de    ncpfs :",
+      "url": "ftp://platan.vc.cvut.cz/pub/linux/ncpfs/Changes-2.2.6"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-665 du 04 février 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-665"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2005:028 du 01 février    2005 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2005:028"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-040",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-01-31T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandrake MDKSA-2005:028.",
+      "revision_date": "2005-02-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-665.",
+      "revision_date": "2005-02-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans ncpfs permettent à un utilisateur mal\nintentionné d'élever ses privilèges ou d'exécuter du code arbitraire à\ndistance sur la plate-forme vulnérable.\n",
+  "title": "Vulnérabilité de ncpfs",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA 200501-44",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200501-44.xml"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Eudora 5.1 et les versions précédentes sous Microsoft  Windows.</P>  <P>Des expériences ont été effectuées sur Mac OS 9.x, mais elles  n'ont pas permis de mettre en évidence cette vulnérabilité. Sous  Mac OS X, Eudora est en cours de développement, il est donc  impossible de vérifier la possibilité de l'exploitation de cette  vulnérabilité actuellement.</P>  <P>Ceci n'exclut pas la possibilité d'utiliser une variante de  cette vulnérabilité à l'encontre du logiciel sous Mac OS.</P>",
+  "content": "## Description\n\nEudora est un logiciel de messagerie compatible avec le protocole SMTP.\nLes messages reçus sont rangés dans des boîtes aux lettres (un fichier\npar boîte aux lettres), et toutes les pièces jointes sont placées dans\nun même répertoire (appelé Attach sous Windows et Attachment Folder sous\nMac OS).\n\nIl existe une vulnérabilité dans la gestion des balises servant à gérer\nles pièces jointes sous Eudora.\n\nUn utilisateur mal intentionné peut obtenir n'importe quel fichier\nprésent sur le système de sa victime si elle utilise le logiciel de\nmessagerie Eudora en amenant cette dernière à renvoyer le message qu'il\na habilement construit.\n\nIl faut pour celà que l'attaquant connaisse l'emplacement sur le système\ndu fichier qu'il désire obtenir, et qu'il pousse sa victime à lui\nrenvoyer (fonction forward) son message.\n\n## Contournement provisoire\n\nEn plus de la vigilance quotidienne concernant la messagerie, tous les\nutilisateurs du logiciel de messagerie Eudora doivent surveiller le\ncontenu des messages qu'ils renvoient afin de voir s'il y a eu insertion\nd'une pièce jointe non désirée à leur insu.\n\nIl n'existe pas de correctif à ce jour.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-099",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-05-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations sur le système"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité du logiciel de messagerie Eudora permet à un\nutilisateur mal intentionné d'obtenir n'importe quel fichier présent sur\nle système de sa victime.\n",
+  "title": "Vulnérabilité du logiciel de messagerie Eudora 5.1 et versions antérieures",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Interne",
+      "url": null
+    }
+  ]
+}

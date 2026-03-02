@@ -1,0 +1,122 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BIND versions 9.4.x antérieures à 9.4.3-P4 ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND versions 9.0.x ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND versions 9.3.x ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND versions 9.1.x ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND versions 9.2.x ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND versions 9.5.x antérieures à 9.5.2-P1 ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND versions 9.6.x antérieures à 9.6.1-P2.",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe logiciel BIND avec DNSSEC activé ne sauvegarde pas correctement\ncertains enregistrements dans son cache. Ce dysfonctionnement apparait\nlorsque le client DNS effectue des requêtes DNSSEC (DO) sans\nvérification (CD).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-4022",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-4022"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sun du 24 novembre 2009 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-273169-1"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD du 06 janvier 2010 :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-10:01.bind.asc"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-515",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2009-11-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Sun ;",
+      "revision_date": "2009-11-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité FreeBSD.",
+      "revision_date": "2010-01-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le logiciel BIND avec DNSSEC permet la corruption\ndu cache DNS.\n",
+  "title": "Vulnérabilité dans BIND avec DNSSEC",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de l'ISC du 23 novembre 2009",
+      "url": "https://www.isc.org/node/504"
+    }
+  ]
+}

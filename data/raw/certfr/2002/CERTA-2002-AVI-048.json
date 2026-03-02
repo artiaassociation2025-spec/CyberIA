@@ -1,0 +1,138 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "XTRADIUS 1.1-pre1 et précédentes;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GnuRADIUS versions 0.95 et précédentes;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RADIUS ( anciennement Lucent RADIUS ) versions 2.1 et précédentes;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RADIUSClient versions 0.3.1 et précédentes;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeRADIUS versions 0.3 et précédentes;",
+      "product": {
+        "name": "FreeRADIUS",
+        "vendor": {
+          "name": "FreeRadius",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ICRADIUS versions 0.18.1 et précédentes;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Ascend RADIUS versions 1.16 et précédentes;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "YARD RADIUS 1.0.19 et précédentes.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cistron RADIUS versions 1.6.5 et précédentes;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Livingston RADIUS versions 2.1 et précédentes;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe protocole RADIUS est utilisé pour l'identification et\nl'authentification de clients distants. Ce protocole est décrit dans la\nRFC 2138. Deux vulnérabilités ont été mises en évidence dans\nl'implémentation de certains serveurs RADIUS:\n\n-   Un individu mal intentionné peut effectuer à distance un débordement\n    de mémoire et exécuter du code arbitraire. Cette vulnérabilité n'est\n    exploitable que si l'attaquant connait la clé secrète partagée entre\n    le client et le serveur.\n-   L'envoi de paquets mal formés à destination du serveur peut causer\n    un deni de service.\n\n## Solution\n\nSe référer à l'avis CA-2002-06 du CERT/CC (cf. Documentation) pour\nobtenir la liste des systèmes affectés et les correctifs disponibles.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité CA-2002-06 \"Vulnerabilities in Various  Implementations of the RADIUS Protocol\" du CERT/CC:",
+      "url": "http://www.cert.org/advisories/CA-2002-06.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-048",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-03-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "RADIUS ( Remote Authentification Dial In User Service ) est un protocole\nutilisé pour l'identification et l'authentification de clients distants.\nDes vulnérabilités ont été découvertes dans certaines implémentations de\nce protocole.\n",
+  "title": "Multiples implémentations du protocole RADIUS vulnérables",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2002-06 du CERT/CC",
+      "url": null
+    }
+  ]
+}

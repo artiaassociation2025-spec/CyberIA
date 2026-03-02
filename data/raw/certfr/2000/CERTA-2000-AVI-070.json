@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Windows NT 4.0 Terminal Server</P>",
+  "content": "## Description\n\nSous Windows NT 4.0 Terminal Server, la procédure de connexion ne\nvérifie pas correctement certaines variables d'environnement transmises\npar le client. Un utilisateur mal intentionné peut fabriquer une requête\nprovoquant un débordement de pile et exécuter du code arbitraire sur la\nmachine cible.\n\nCette vulnérabilité permet d'ajouter, de modifier ou de changer les\ndonnées sur le disque de la machine cible ainsi que la prise de contrôle\ndu système avec les privilèges administrateur.  \n  \n\nNota : Il n'est pas nécessaire de réussir une authentification pour\nmettre en oeuvre cette vulnérabilité.\n\n## Contournement provisoire\n\nPar défaut NT 4.0 Terminal Server ouvre le port tcp 3389.\n\nFiltrer ce port au niveau du garde barrière, afin d'éviter une attaque\nprovenant d'internet.\n\n## Solution\n\nCorrectif :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=25565\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-070",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-11-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Compromission des données"
+    }
+  ],
+  "summary": "NT 4.0 Terminal Server est un serveur de terminal permettant à un poste\nclient distant de disposer d'une machine virtuelle NT.\n\nUn utilisateur mal intentionné peut provoquer à distance un débordement\nde pile sur un système Windows NT 4.0 Terminal Server, afin d'exécuter\ndu code arbitraire.\n",
+  "title": "Vulnérabilité sous Microsoft Windows NT4.0 Terminal Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS00-087.ASP"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "WebSphere Application Server versions 8.5.x et 9.0.x sans le correctif de sécurité PH67137",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "WebSphere Application Server Liberty avec la fonctionnalité servlet-3.0, servlet-3.1, servlet-4.0, servlet-5.0 ou servlet-6.0 sans le correctif de sécurité PH67132",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "L'éditeur indique que les versions correctives suivantes seront mises à disposition ultérieurement : \n- WebSphere Application Server 9.0.5.26 (troisième trimestre 2025)\n- WebSphere Application Server 8.5.5.29 (premier trimestre 2026)\n- WebSphere Application Server Liberty 25.0.0.9 (troisième trimestre 2025)",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-48976",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-48976"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0701",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-08-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans IBM WebSphere. Elle permet à un attaquant de provoquer un déni de service à distance.",
+  "title": "Vulnérabilité dans IBM WebSphere",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-08-13",
+      "title": "Bulletin de sécurité IBM 7242088",
+      "url": "https://www.ibm.com/support/pages/node/7242088"
+    }
+  ]
+}

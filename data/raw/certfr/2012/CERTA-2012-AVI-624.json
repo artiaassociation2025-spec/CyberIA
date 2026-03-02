@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Tivoli Federated Identity Manager Business Gateway versions 6.1.1, 6.2.0, 6.2.1 et 6.2.2",
+      "product": {
+        "name": "Tivoli",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Tivoli Federated Identity Manager versions 6.1.1, 6.2.0, 6.2.1 et 6.2.2",
+      "product": {
+        "name": "Tivoli",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-3315",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-3315"
+    },
+    {
+      "name": "CVE-2012-3313",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-3313"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2012-AVI-624",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-11-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été corrigées dans <span class=\"textit\">IBM\nTivoli Federated Identity Manager</span>. L'une d'entre elles concerne\nl'implémentation du protocole <span class=\"textit\">OpenID</span> dans le\nproduit. Un attaquant peut modifier les attributs d'une assertion car\nles signatures ne sont pas vérifiées.\n",
+  "title": "Multiples vulnérabilités dans IBM Tivoli Federated Identity Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg21615744 du 30 octobre 2012",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21615744"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg21615748 du 30 octobre 2012",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21615748"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg21615770 du 30 octobre 2012",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21615770"
+    }
+  ]
+}

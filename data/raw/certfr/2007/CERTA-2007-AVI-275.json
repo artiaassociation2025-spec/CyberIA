@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Ingres 2006 version 9.0.4 ;</LI>    <LI>Ingres r3 ;</LI>    <LI>Ingres 2.6 ;</LI>    <LI>Ingres 2.5.</LI>  </UL>  <P>Les versions vulnérables d'<SPAN class=\"textit\">Ingres</SPAN>  sont intégrées dans les produits suivants :</P>  <UL>    <LI>Advantage Data Transformer r2.2 ;</LI>    <LI>AllFusion Enterprise Workbench r1.1, 1.1 SP1, r7, r7.1    ;</LI>    <LI>AllFusion Harvest Change Manager r7, r7.1 ;</LI>    <LI>BrightStor ARCserve Backup v9 (Linux seulement), r11.1,    r11.5 (Unix, Linux et Mainframe Linux) ;</LI>    <LI>BrightStor ARCserve Backup for Laptops and Desktops r11.5    ;</LI>    <LI>BrightStor Enterprise Backup (Unix seulement) t10.5 ;</LI>    <LI>BrightStor Storage Command Center r11.5 ;</LI>    <LI>BrightStor Storage Resource Manager r11.5 ;</LI>    <LI>CleverPath Aio Business Rules Expert r10.1 ;</LI>    <LI>CleverPath Predictive Analysis Server r3 ;</LI>    <LI>DocServer 1.1 ;</LI>    <LI>eTrust Admin v8, v8.1, r8.1 SP1, r8.1 SP2 ;</LI>    <LI>eTrust Audit r8 SP2 ;</LI>    <LI>eTrust Directory r8.1 ;</LI>    <LI>eTrust IAM Suite r8.0 ;</LI>    <LI>eTrust IAM Toolkit r8.0, r8.1 ;</LI>    <LI>eTrust Identity Manager r8.1 ;</LI>    <LI>eTrust Network Forensics r8.1 ;</LI>    <LI>eTrust Secure Content Manager r8 ;</LI>    <LI>eTrust Single Sign-On r7, r8, r8.1 ;</LI>    <LI>eTrust Web Access Control 1.0 ;</LI>    <LI>Unicenter Advanced Systems Management r11 ;</LI>    <LI>Unicenter Asset Intelligence r11 ;</LI>    <LI>Unicenter Asset Portfolio Management r11 r2.1, r11.3 ;</LI>    <LI>Unicenter CCS r11 ;</LI>    <LI>Unicenter Database Command Center r11.1 ;</LI>    <LI>Unicenter Desktop and Server Management r11 ;</LI>    <LI>Unicenter Desktop Management Suite r11 ;</LI>    <LI>Unicenter Enterprise Job Manager r1 SP3, r1 SP4 ;</LI>    <LI>Unicenter Job Management Option r11 ;</LI>    <LI>Unicenter Lightweight Portal 2 ;</LI>    <LI>Unicenter Management Portal r3.1.1 ;</LI>    <LI>Unicenter Network and Systems Management r3.0, r11 ;</LI>    <LI>Unicenter Network and Systems Management - Tiered - Multi    Platform r3.0 0305, r3.1 0403, r11.0 ;</LI>    <LI>Unicenter Patch Management r11 ;</LI>    <LI>Unicenter Remote Control 6, r11 ;</LI>    <LI>Unicenter Service Accounting r11, r11.1 ;</LI>    <LI>Unicenter Service Assure r2.2, r11, r11.1 ;</LI>    <LI>Unicenter Service Catalog r11, r11.1 ;</LI>    <LI>Unicenter Service Delivery r11.0, r11.1 ;</LI>    <LI>Unicenter Service Intelligence r11 ;</LI>    <LI>Unicenter Service Metric Analysis r3.0.2, r3.5, r11, r11.1    ;</LI>    <LI>Unicenter ServicePlus Service Desk 5.5 SP3, 6.0, 6.0 SP1,    r11, r11.1, r11.2 ;</LI>    <LI>Unicenter Software Delivery r11 ;</LI>    <LI>Unicenter TNG 2.4, 2.4.2, 2.4.2J ;</LI>    <LI>Unicenter Workload Control Center r1 SP3, r1 SP4 ;</LI>    <LI>Unicenter Web Services Distributed Management 3.11, 3.50    ;</LI>    <LI>Wily SOA Manager 7.1.</LI>  </UL>",
+  "content": "## Description\n\nSept vulnérabilités affectant la base de données Ingres ont été rendues\npubliques. Plusieurs de ces vulnérabilités permettent l'exécution de\ncode arbitraire à distance, sans authentification préalable.\nL'exploitation d'une de ces vulnérabilités se fait par l'intermédiaire\nde paquets malformés envoyés aux services iigcc (port 10916/tcp) et\niigcd (port 10923/tcp).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3338",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3338"
+    },
+    {
+      "name": "CVE-2007-3334",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3334"
+    },
+    {
+      "name": "CVE-2007-3337",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3337"
+    },
+    {
+      "name": "CVE-2007-3336",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3336"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-275",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-06-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout des produits affectés intégrant une version vulnérable d'Ingres, ajout des références CVE et d'un bulletin de sécurité Computer Associates.",
+      "revision_date": "2007-06-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités affectant la base de données <span\nclass=\"textit\">Ingres</span> permettent l'exécution de code arbitraire à\ndistance.\n",
+  "title": "Multiples vulnérabilités dans Ingres",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Computer Associates du 21 juin 2007",
+      "url": "http://www.ca.com/securityadvisor/newsinfo/collateral.aspx?cid=145778"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>PCRE, version 7.5 et versions  précédentes.</p>",
+  "content": "## Description\n\nPCRE est une bibliothèque utilisant la même syntaxe et la même\nsémantique que Perl pour traiter les expressions régulières.\n\nUn défaut de vérification de borne dans PCRE permet de réaliser un\ndébordement de mémoire (buffer overflow). Cette vulnérabilité\npermettrait à un utilisateur malveillant de provoquer un déni de service\nà distance ou de compromettre une application utilisant PCRE.\n\n## Solution\n\nLa version 7.6 résoud ce problème. Se référer au bulletin de sécurité de\nl'éditeur pour l'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0674",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0674"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de bogue Redhat 431660 du 06 février 2008 :",
+      "url": "https://bugzilla.redhat.com/show_.cgi?id=431660"
+    },
+    {
+      "title": "Notes de version PCRE du 28 janvier 2008 :",
+      "url": "http://pcre.org/changelog.txt"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-084",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité de PCRE permettrait à un utilisateur malveillant de\nprovoquer un déni de service à distance ou de compromettre une\napplication utilisant PCRE.\n",
+  "title": "Vulnérabilité de PCRE",
+  "vendor_advisories": []
+}

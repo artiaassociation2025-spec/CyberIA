@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Commutateurs CISCO IOS.</P>",
+  "content": "## Description\n\n## 4.1 Vulnérabilités dans les communautés SNMP\n\n### 4.1.1 Première vulnérabilité\n\nLe standard ILMI (Interim Local Management Interface) permet de gérer\nles interfaces ATM des équipements d'interconnexion. Un utilisateur mal\nintentionné peut, en utilisant le nom de communauté ILMI, avoir accès à\nla MIB (Management Information Base) en lecture, voire en écriture pour\ncertaines données. Un grand nombre de requêtes lecture-écriture peut\négalement entraîner un déni de service.  \n  \n\nCette vulnérabilité affecte les systèmes IOS 11.x et 12.0.\n\n### 4.1.2 Deuxième vulnérabilité\n\nUn utilisateur mal intentionné peut, par le biais d'une vulnérabilité\ndans le séquencement des commandes pour la configuration du service\nSNMP, créer un nom de communauté non désiré afin d'accéder en lecture à\ncertaines données.  \n  \n\nCette vulnérabilité affecte les systèmes IOS 12.x.\n\n### 4.1.3 Troisième vulnérabilité\n\nUne vulnérabilité de la fonction «informs» concernant le partage\nd'informations permet, par le biais de la communauté créée pour\nl'échange d'informations, d'interroger la MIB locale.  \n  \n\nCette vulnérabilité affecte les systèmes IOS 12.x.\n\n### 4.1.4 Quatrième vulnérabilité\n\nUn utilisateur mal intentionné peut, en listant la MIB View-Based Access\nControl, obtenir le nom d'une communauté ayant les droits\nlecture-écriture.  \n  \n\nCette vulnérabilité affecte les systèmes IOS 12.x.\n\n### 4.1.5 Cinquième vulnérabilité\n\nUne vulnérabilité à été découverte dans un nom de communauté ayant les\ndroits lecture-écriture assurant l'administration de modem «câble».  \n  \n\nCette vulnérabilité affecte les systèmes IOS 12.x.\n\n## 4.2 Vulnérabilité du protocole TCP\n\nUn utilisateur distant mal intentionné peut, par le biais d'une\nvulnérabilité de l'ISN (Gestion du numéro de séquence initial), prévoir\nles valeurs qui vont être utilisées par le système et effectuer des\nusurpations d'adresses IP (spoofing)\n\n## Solution\n\nLes différents correctifs, en fonction des versions d'IOS, sont\ndisponibles sur le site CISCO :\n\n    http://www.cisco.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Vulnérabilités concernant les communautés SNMP :",
+      "url": "http://www.cisco.com/warp/public/707/ios-snmp-ilmi-vuln-pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-026",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-03-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès aux informations du système"
+    },
+    {
+      "description": "Risques d'usurpation d'adresses ip"
+    },
+    {
+      "description": "Contournement des règles de sécurité"
+    }
+  ],
+  "summary": "De nombreuses vulnérabilités ont été découvertes dans les commutateurs\nCISCO IOS.\n\nCinq vulnérabilités concernent les communautés SNMP (Simple Network\nManagement Protocol) et une autre vulnérabilité concerne le protocole\nTCP.\n",
+  "title": "Vulnérabilités dans les commutateurs CISCO IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis Cisco",
+      "url": null
+    }
+  ]
+}

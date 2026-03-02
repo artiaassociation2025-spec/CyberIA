@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows XP SP 2.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité, de type débordement de mémoire tampon, a été\nidentifiée dans le service d'Acquisition d'Image Windows (WIA) (ou\nWindows Image Acquisition) de Microsoft Windows. Ce service démarre\nmanuellement. Il sert d'interface entre les applications logicielles\n(Adobe Photoshop par exemple) et les matériels multimédia, tels que les\nappareils photo numériques, les scanners, ou les webcams.\n\nUne personne malveillante, disposant d'une session sur la machine\nvulnérable, peut lancer une application exploitant cette vulnérabilité,\nafin d'élever ses privilèges à ceux de l'administrateur. Il serait\négalement possible d'exploiter cette vulnérabilité par le biais d'un\nCheval de Troie.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0210",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0210"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-080",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-02-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de l'Acquisition d'Image Windows (WIA)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-007 du 13 février 2007",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-007.mspx"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Tomcat versions 11.0.x antérieures à 11.0.10",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tomcat versions 10.1.x antérieures à 10.1.44",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tomcat versions 9.0.x antérieures à 9.0.108",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-48989",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-48989"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0694",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-08-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Apache Tomcat. Elle permet à un attaquant de provoquer un déni de service à distance.",
+  "title": "Vulnérabilité dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-08-07",
+      "title": "Bulletin de sécurité Apache Tomcat Apache_Tomcat_10.1.44",
+      "url": "https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.44"
+    },
+    {
+      "published_at": "2025-08-06",
+      "title": "Bulletin de sécurité Apache Tomcat Apache_Tomcat_9.0.108",
+      "url": "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.108"
+    },
+    {
+      "published_at": "2025-08-06",
+      "title": "Bulletin de sécurité Apache Tomcat Apache_Tomcat_11.0.10",
+      "url": "https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.10"
+    }
+  ]
+}

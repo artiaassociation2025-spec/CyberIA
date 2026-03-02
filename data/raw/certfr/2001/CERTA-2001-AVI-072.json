@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Versions de SunOs vulnérables :  <UL>    <LI>SunOs 5.8, SunOs 5.8_x86</LI>    <LI>SunOs 5.7, SunOs 5.7_x86</LI>    <LI>SunOs 5.6, SunOs 5.6_x86</LI>    <LI>SunOs 5.5.1, SunOs 5.5.1_x86</LI>    <LI>SunOs 5.5, SunOs 5.5_x86</LI>    <LI>SunOs 5.4, SunOs 5.4_x86</LI>  </UL>&nbsp;<BR>  <P>Selon Sun Microsystems, les versions suivantes ne sont pas  affectées :</P>  <UL>    <LI>SunOs 5.8 01/01*, SunOs 5.8_x86 01/01* et toutes les    mise-à-jour postérieures.</LI>    <LI>SunOs 5.8 , SunOs 5.8_x86 avec toutes les mise-à-jour de    maintenance (Maintenance Update MU) 3 et postérieures.</LI>  </UL></p>",
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire dans le service ypbind\npermet l'exécution de code arbitraire avec les privilèges root.\nL'exploitation de cette vulnérabilité peut se faire à distance ou\nlocalement.\n\nNote : la commande unix rpcinfo -p localhost indique si le service\nypbind est enregistré au niveau du portmapper de votre machine (c'est à\ndire si il tourne).\n\n## Solution\n\nLes correctifs sont disponibles sur le site de Sun Microsystems:\n\n    http://sunsolve.sun.com/securitypatch\n\n.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-072",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-07-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Obtention du privilèges root à distance"
+    }
+  ],
+  "summary": "Le service ypbind est utilisé sur toutes les machines (clients et\nserveurs) utilisant le service NIS. Une vulnérabilité ypbind permet à un\nutilisateur mal intentionné d'exécuter du code arbitraire avec les\nprivilèges root.\n",
+  "title": "Vulnérabilité dans ypbind sous SunOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité #00203 de Sun Microsystems",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doctype=coll&doc=secbull/203&type=0&nav=sec.ba"
+    }
+  ]
+}

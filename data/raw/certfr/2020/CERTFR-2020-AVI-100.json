@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Data Center Network Manager (DCNM) versions antérieures à 11.3(1)",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2020-3114",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3114"
+    },
+    {
+      "name": "CVE-2020-3112",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3112"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2020-AVI-100",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2020-02-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Cisco Data Center\nNetwork Manager. Elles permettent à un attaquant de provoquer une\nélévation de privilèges et une injection de requêtes illégitimes par\nrebond (CSRF).\n",
+  "title": "Multiples vulnérabilités dans Cisco Data Center Network Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-20200219-dcnm-csrf du 20 février 2020",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20200219-dcnm-csrf"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-20200219-dcnm-priv-esc du 20 février 2020",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20200219-dcnm-priv-esc"
+    }
+  ]
+}

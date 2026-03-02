@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions suivantes de Solaris sont vulnérables :</P>  <UL>    <LI>Solaris 2.5.1 sur architecture Intel et Sparc ;</LI>    <LI>Solaris 2.7 sur Intel et Sparc ;</LI>    <LI>Solaris 7 sur Intel et Sparc.</LI>  </UL>",
+  "content": "## Description\n\nAUTH_DES est une méthode d'authentification utilisée par certains\nservices RPC (Remote Procedure Call).\n\nUn utilisateur mal intentionné peut augmenter ses privilèges au moyen de\ncertaines requêtes habilement construites sous RPC si AUTH_DES est\nactivé.\n\n## Contournement provisoire\n\nDésactiver les services RPC quand ceux-ci ne sont pas nécessaires.\n\n## Solution\n\nConsulter le bulletin de sécurité \\#46944 de Sun (voir le paragraphe\nDocumentation) pour connaître la disponibilité des correctifs\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité #46944 de Sun :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F46944"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-282",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges en local ou à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de RPC sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin d'alerte #46944 de Sun",
+      "url": null
+    }
+  ]
+}

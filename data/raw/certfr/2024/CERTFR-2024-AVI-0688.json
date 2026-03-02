@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Grafana versions 11.1.x antérieures à 11.1.4",
+      "product": {
+        "name": "Grafana",
+        "vendor": {
+          "name": "Grafana Labs",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Grafana versions 11.0.x antérieures à 11.0.3",
+      "product": {
+        "name": "Grafana",
+        "vendor": {
+          "name": "Grafana Labs",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Grafana versions 10.4.x antérieures à 10.4.7",
+      "product": {
+        "name": "Grafana",
+        "vendor": {
+          "name": "Grafana Labs",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2024-6837",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-6837"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0688",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-08-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Grafana. Elle permet à un attaquant de provoquer une injection de code indirecte à distance (XSS).",
+  "title": "Vulnérabilité dans Grafana",
+  "vendor_advisories": [
+    {
+      "published_at": "2024-08-14",
+      "title": "Bulletin de sécurité Grafana cve-2024-6837",
+      "url": "https://grafana.com/blog/2024/08/14/grafana-security-release-medium-severity-security-fix-for-cve-2024-6837/"
+    }
+  ]
+}

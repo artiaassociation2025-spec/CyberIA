@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>bzip2, version 1.0.5 et versions précédentes.</P>  <P>Les logiciels utilisant le code vulnérable sont concernés  (liste non exhaustive)&nbsp;:</P>  <UL>    <LI>Clamav, version 0.96.2 et versions précédentes ;</LI>    <LI>FreeBSD, branches 6, 7 et8.</LI>  </UL>",
+  "content": "## Description\n\nUn débordement d'entier dans la fonction de décompression est\nexploitable par un utilisateur malveillant pour provoquer un déni de\nservice à distance par la soumission d'un fichier compressé spécialement\nconçu.\n\nLa possibilité d'exécuter du code arbitraire à distance est suspectée,\nmais non démontrée.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0405",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0405"
+    }
+  ],
+  "links": [
+    {
+      "title": "Changements dans la version ClamAV 0.96.3 du 20 septembre    2010 :",
+      "url": "http://git.clamav.net/gitweb?p=clamav-devel.git;a=blob_plain;f=ChangeLog;hb=clamav-0.96.3"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-986-3 du 20 septembre 2010    :",
+      "url": "http://www.ubuntu.com/usn/usn-986-3"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-986-1 du 20 septembre 2010    :",
+      "url": "http://www.ubuntu.com/usn/usn-986-1"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2010:0703-1 du 20    septembre 2010 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2010-0703.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-986-2 du 20 septembre 2010    :",
+      "url": "http://www.ubuntu.com/usn/usn-986-2"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-2112-1 du 20 septembre 2010    :",
+      "url": "http://www.debian.org/security/2010/dsa-2112"
+    },
+    {
+      "title": "Bulletin de sécurité Sun du 26 novembre 2010 :",
+      "url": "http://blogs.sun.com/security/entry/cve_2010_0405_integer_overflow"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD-SA-10:08 du 20 septembre 2010    :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-10:08.bzip2.asc"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SA:2010:018 du 06 octobre    2010 :",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2010-10/msg00000.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-449",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-09-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins des distibutions Debian, RedHat, Sun, Suse et Ubuntu.",
+      "revision_date": "2010-11-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans bzip2 permet à un utilisateur malveillant de\nprovoquer un déni de service à distance.\n",
+  "title": "Vulnérabilité dans bzip2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce du projet bzip du 20 septembre 2010",
+      "url": "http://www.bzip.org/index.html"
+    }
+  ]
+}

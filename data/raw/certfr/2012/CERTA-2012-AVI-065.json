@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">JBoss Operations Network</SPAN> versions  2.4.1 et inférieures.</P>",
+  "content": "## Description\n\nUne mise à jour de JBoss Operations Network corrige de multiples\nvulnérabilités. Les vulnérabilités associées à un numéro CVE sont les\nsuivantes :\n\n-   CVE-2012-0052 et CVE-2012-0062 : ces vulnérabilités permettent à un\n    utilisateur distant malintentionné de détourner la session d'un\n    agent approuvé et de voler son jeton de sécurité. Ceci permettra à\n    l'attaquant de récupérer des informations sensibles à propos du\n    serveur sur lequel l'agent s'exécute ;\n-   CVE-2011-4858 : cette vulnérabilité permet à un attaquant\n    d'effectuer un déni de service à distance sur le serveur JBoss Web ;\n-   CVE-2011-3206 : cette vulnérabilité concerne de multiples failles\n    XSS dans l'interface d'administration de JBoss Operations Network ;\n-   CVE-2011-4573 : cette vulnérabilité concerne une vérification qui\n    n'est pas effectuée correctement par JBoss Operations Network\n    lorsqu'un utilisateur tente de supprimer une mise à jour de\n    configuration de plugin (plug-in configuration update).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-4858",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4858"
+    },
+    {
+      "name": "CVE-2011-4573",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4573"
+    },
+    {
+      "name": "CVE-2011-3206",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3206"
+    },
+    {
+      "name": "CVE-2012-0052",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0052"
+    },
+    {
+      "name": "CVE-2012-0062",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0062"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2012:0089 du 08 février    2012 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2012-0089.html"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-065",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-02-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans <span\nclass=\"textit\">JBoss Operations Network</span>.\n",
+  "title": "Multiples vulnérabilités dans JBoss Operations Network",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité REDHAT RHSA-2012:0089-1 du 01 février 2012",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows XP ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT 4.0 Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT 4.0, Terminal Server Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nNetBIOS (Network Basic Input/Output) est un protocole réseau qui peut\nfonctionner au dessus du protocole TCP : NetBT (NetBIOS over TCP). NBNS\n(NetBT Name Service) est un service permettant la résolution de noms\nNetBIOS (équivalent au service DNS pour le protocole TCP). Dans\ncertaines conditions, une réponse NBNS peut contenir des données issues\nde la mémoire, en plus de la réponse légitime.\n\n## Solution\n\nAppliquer le correctif proposé par Microsoft.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-144",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-09-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le système de résolution de noms du protocole\nréseau NetBIOS permet à un utilisateur mal intentionné d'avoir accès à\ndes informations résidant dans la mémoire de la machine victime.\n",
+  "title": "Vulnérabilité de NetBIOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Microsoft MS03-034",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS03-034.asp"
+    }
+  ]
+}

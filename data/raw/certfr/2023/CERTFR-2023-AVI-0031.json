@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM QRadar SIEM version 7.4",
+      "product": {
+        "name": "QRadar",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM QRadar SIEM version 7.5",
+      "product": {
+        "name": "QRadar",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs définitifs qui seront publiés prochainement (cf. section\nDocumentation).\n\n## Contournement provisoire\n\n-   Restreindre l'accès direct en SSH aux seuls administrateurs de la\n    solution. La gestion des hôtes doit être réalisée via la console\n    QRadar.\n-   Appliquer la procédure proposée par l'éditeur pour le renouvellement\n    des clés sur les seules machines en ayant besoin.\n",
+  "cves": [
+    {
+      "name": "CVE-2023-22875",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-22875"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0031",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-01-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans IBM QRadar. Elle permet à un\nattaquant de provoquer une atteinte à l'intégrité des données et une\natteinte à la confidentialité des données.\n",
+  "title": "Vulnérabilité dans IBM QRadar",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM 6855643 du 16 janvier 2023",
+      "url": "https://www.ibm.com/support/pages/node/6855643"
+    }
+  ]
+}

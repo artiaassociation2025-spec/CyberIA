@@ -1,0 +1,131 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows Vista x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows XP x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows XP Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Vista x64 Edition Service Pack 1.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows XP Service Pack 3 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Vista Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows XP x64 Edition Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Vista ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans la mise en œuvre de la pile\nBluetooth par Windows. Sous certaines conditions, le système\nd'exploitation ne gérerait pas correctement la réception de multiples\ntrames SDP (Service Discovery Protocol). Ce protocole permet entre\nautres de déterminer la liste et les caractéristiques des services\nBluetooth offerts par l'appareil distant.\n\nLa vulnérabilité peut être exploitée par une personne malveillante à\ndistance pour exécuter du code arbitraire sur le système vulnérable. Le\nsystème doit a fortiori disposer d'une interface Bluetooth active.\n\n## Solution\n\nSe référer au bulletin de sécurité MS08-030 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1453",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1453"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bloc-notes Microsoft, commentaires sur la mise à jour    MS08-030 :",
+      "url": "http://blogs.microsoft.com/swi/archive/2008/06/10/ms08-030-all-bark-and-no-bite-the-case-of-the-bluetooth-update.aspx"
+    },
+    {
+      "title": "Présentation du protocole SDP (Service Discovery Protocol)    :",
+      "url": "http://www.palowireless.com/infotooth/tutorial/sdp.asp"
+    },
+    {
+      "title": "Documentation officielle SDP sur le site SIG Bluetooth :",
+      "url": "http://www.bluetooth.org"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-303",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-06-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans la mise en œuvre de la pile\nBluetooth par Windows. Elle peut être exploitée par une personne\nmalveillante à distance, via Bluetooth, pour exécuter du code arbitraire\nsur le système vulnérable.\n",
+  "title": "Vulnérabilité de la pile Bluetooth Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS08-030 du 10 juin 2008",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-030.mspx"
+    }
+  ]
+}

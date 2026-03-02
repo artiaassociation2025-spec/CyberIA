@@ -1,0 +1,95 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Word 98 pour Mac.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Word 2000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Word 97 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Word 98 (version Japonaise) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Word 2001 pour Mac ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Word 2002 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLors de l'ouverture d'un document, un mécanisme de détection inclu dans\nMicrosoft Word vérifie la présence de macros. Une vulnérabilité permet à\nun utilisateur mal intentionné de composer un document contournant cette\nprotection.\n\nSi ce document est ouvert sur une machine cible, les macros présentes\ndans ce document seront exécutées sans informer l'utilisateur de leur\nprésence. Les macros ainsi exécutées auront les mêmes droits que\nl'utilisateur de la machine et pourront également désactiver les\nvérifications ultérieures de présence de macros pour tous les documents.\n\nCette vulnérabilité peut être exploitée pour créer de nouveaux virus.\n\n## Solution\n\nAppliquer le correctif disponible sur le site Microsoft :\n\n-   Microsoft Word 2002 :\n\n        http://office.microsoft.com/downloads/2002/wrd1001.aspx\n\n-   Microsoft Word 2000 :\n\n        http://office.microsoft.com/downloads/2000/wd2kmsec.aspx\n\n-   Microsoft Word 97 :\n\n        http://office.microsoft.com/downloads/9798/wd97mcrs.aspx\n\n-   Microsoft Word 2001 pour Mac :\n\n        http://www.microsoft.com/mac/download/office2001/wordmacro.asp\n\n-   Microsoft Word 98 pour Mac :\n\n        http://www.microsoft.com/mac/download/office2001/wordmacro98.asp\n\n-   Microsoft Word 98 (Version Japonaise) :\n\n    Ce correctif n'est actuellement pas disponible sur le site\n    Microsoft.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-034.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-065",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-06-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement des mécanismes de sécurité"
+    }
+  ],
+  "summary": "Un document Word judicieusement composé peut contourner la vérification\nde Microsoft Word concernant la présence de macros dans le but de les\nexécuter sans message d'avertissement.\n",
+  "title": "Vulnérabilité dans la gestion des macros dans Microsoft Word",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-034",
+      "url": null
+    }
+  ]
+}

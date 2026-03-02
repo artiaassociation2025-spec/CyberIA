@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Commutateurs CISCO Catalyst :</P>  <UL>    <LI>série 6000 ;</LI>    <LI>série 5000 ;</LI>    <LI>série 4000 ;</LI>    <LI>2948G ;</LI>    <LI>2900.</LI>  </UL>",
+  "content": "## Description\n\nUn débordement de mémoire dans telnet sous CatOs (système d'exploitation\ndes Catalyst) permet à un utilisateur mal intentionné de redémarrer à\ndistance le commutateur.\n\n## Contournement provisoire\n\n-   Filtrer le port 23/TCP (telnet) sur le garde barrière afin d'éviter\n    une attaque provenant de l'extérieur.\n-   S'il n'est pas nécessaire, supprimer l'accès distant au commutateur\n    par telnet.\n-   Si cela est possible, supprimer l'adresse IP du commutateur ainsi\n    que toute forme d'administration distante de ce dernier.\n\n## Solution\n\nAppliquer le correctif comme indiqué dans le bulletin de sécurité de\nCISCO :\n\n    http://www.cisco.com/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le bulletin de sécurité de CISCO :",
+      "url": "http://www.cisco.com/warp/public/707/catos-telrcv-vuln-pub.shtml"
+    },
+    {
+      "title": "L'avis du CERTA faisait référence à l'avis de sécurité du    CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2001-21.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-017",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-01-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le service telnet de ces commutateurs permet à un\nutilisateur mal intentionné de les redémarrer à volonté.\n",
+  "title": "Vulnérabilité de <TT>telnet</TT> sur les commutateurs Catalyst CISCO",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de CISCO",
+      "url": null
+    }
+  ]
+}

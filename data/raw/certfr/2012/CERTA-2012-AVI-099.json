@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Samba versions 3.4.0 et antérieures. Les applications qui  intègrent cette version sont également vulnérables.</P>",
+  "content": "## Description\n\nUne erreur dans une routine de validation d'une entrée présente dans le\ndémon smbd permet à un utilisateur malveillant d'exécuter du code\narbitraire à distance au moyen d'un paquet spécialement conçu.\n\nLes versions affectées ne sont plus supportées par l'éditeur au mieux\ndepuis le mois d'août 2011. Cet avis est publié car cette version est\ntoujours utilisée au sein de plusieurs produits. Le CERTA conseille de\nmigrer vers une version plus récente et supportée par l'éditeur. La\nversion stable actuelle est la 3.6.3.\n\n## Solution\n\nMigrer dès que possible vers une version supportée par l'éditeur. Se\nréférer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-0870",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0870"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2012:0332 du 23 février    2012 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2012-0332.html"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-099",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-02-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le démon <span class=\"textit\">smbd</span> permet\nà un attaquant distant d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Samba du 23 février 2012",
+      "url": "http://www.samba.org/samba/security/CVE-2012-0870"
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>PostgreSQL 7.4.5-r1 et versions antérieures.</P>",
+  "content": "## Description\n\nPostgreSQL est un outil de base de données Open Source. Une\nvulnérabilité présente dans le script make_oidjoins_check permet à un\nutilisateur mal intentionné, ayant un accès local au système, de forcer\nla modification de fichiers avec les droits d'un autre utilisateur au\nmoyen de liens symboliques habilement constitués.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation)\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Annonce de sécurité PostgreSQL du 23 octobre 2004 :",
+      "url": "http://www.postgresql.org/news/234.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour postgresql-contrib du 06    novembre 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-577 du 29 octobre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-577"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2004:489 du 20 décembre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-489.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:149 du 13 décembre    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:149"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200410-16 du 18 octobre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200410-16.xml"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-352",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-10-21T00:00:00.000000"
+    },
+    {
+      "description": "Mention de la réference CVE et de l'annonce PostgreSQL. Ajout références aux bulletins de sécurité de Debian, Mandrake et FreeBSD.",
+      "revision_date": "2004-12-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Red Hat.",
+      "revision_date": "2004-12-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité découverte dans PostgreSQL permet à un utilisateur\nlocal, mal intentionné, de porter atteinte à l'intégrité des données\nprésentes sur le système.\n",
+  "title": "Vulnérabilité dans PostgreSQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA-200410-16 du 18 octobre 2004",
+      "url": null
+    }
+  ]
+}

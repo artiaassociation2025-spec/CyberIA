@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Vim 6.x.</P>",
+  "content": "## Description\n\nL'application vim est un éditeur de texte, présent dans de nombreuses\ndistributions de Linux et Unix. Les scripts tcltags et vimspell.sh\nutilisés par vim sont vulnérables à une attaque qui permet l'écrasement\nde fichiers via le suivi des liens symboliques. A l'aide de liens\nhabilement constitués, un utilisateur mal intentionné, ayant un accès\nlocal au système, peut forcer la modification de fichiers avec les\ndroits de la victime.\n\n## Solution\n\nSe référer au bulletin de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctifs de sécurité pour Fedora Core 3 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/3/"
+    },
+    {
+      "title": "Correctifs de sécurité pour Fedora Core 2 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/2/"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD vim-share :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/editors/vim-share/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:036 du 15 février    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-036.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:122 du 18 février    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-122.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-068",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-02-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat.",
+      "revision_date": "2005-02-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat.",
+      "revision_date": "2005-02-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité NetBSD.",
+      "revision_date": "2005-03-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation des privilèges"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le binaire vim permet à un utilisateur local mal\nintentionné d'élever ses privilèges et de porter atteinte à l'intégrité\ndes données présentes sur le système vulnérable.\n",
+  "title": "Vulnérabilité dans vim",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Mandrake MDKSA-2005:029",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2005:029"
+    }
+  ]
+}

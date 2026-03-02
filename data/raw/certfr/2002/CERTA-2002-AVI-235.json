@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Les systèmes AIX 4.3.x et 5.1.x d'IBM ;</LI>    <LI>les systèmes HP-UX suivants :      <UL>        <LI>HP-UX 10.20 ;</LI>        <LI>HP-UX 11.0 ;</LI>        <LI>HP-UX 11.11 ;</LI>        <LI>HP-UX 11.22 ;</LI>      </UL>    </LI>    <LI>les systèmes HP Tru64 suivants :      <UL>        <LI>Tru64 Unix 5.1A ;</LI>        <LI>Tru64 Unix 5.1 ;</LI>        <LI>Tru64 Unix 5.0A ;</LI>        <LI>Tru64 Unix 4.0G ;</LI>        <LI>Tru64 Unix 4.0F.</LI>      </UL>    </LI>    <LI>les versions suivantes de Solaris pour Sparc et pour Intel    :      <UL>        <LI>Solaris 2.5.1 ;</LI>        <LI>Solaris 2.6 ;</LI>        <LI>Solaris 7 ;</LI>        <LI>Solaris 8 ;</LI>        <LI>Solaris 9 ;</LI>      </UL>    </LI>    <LI>Debian Gnu/Linux 2.2 (Potato) et 3.0 (Woody).</LI>    <LI>Il n'est cependant pas impossible que d'autres systèmes    Unix ou Linux soient affectés.</LI>  </UL>",
+  "content": "## Description\n\nNIS (Network Information Service) est un service sous Unix permettant de\ncentraliser les informations relatives aux comptes des utilisateurs du\nréseau.\n\nypserv est le serveur permettant de rechercher des informations dans la\nbase de données regroupant ces informations.\n\nypxfrd est un outil permettant de faire des transferts de bases de\ndonnées (appelées map).\n\nUn utilisateur local mal intentionné peut, au moyen de liens symboliques\n(astucieusement construits), amener les daemons ypserv et ypxfrd d'un\nserveur NIS à donner l'accès en lecture à des fichiers auxquels il\nn'aurait normalement pas accès.\n\n## Contournement provisoire\n\n-   En attendant l'application des correctifs, désactiver les daemons\n    ypserv et ypxfrd si cela est possible.\n-   Supprimer les daemons ypserv et ypxfrd des systèmes sur lesquels ils\n    ne sont pas utilisés.\n-   Limiter les machines autorisées à utiliser les services NIS\n    (utiliser `/var/yp/securenets sous AIX`).\n\n## Solution\n\nSe référer aux bulletins de sécurité et d'alerte (voir le paragraphe\nDocumentation) de l'éditeur pour connaître la disponibilité des\ncorrectifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RHSA-2002:223-07 de RedHat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-223.html"
+    },
+    {
+      "title": "Bulletin de sécurité d'IBM :",
+      "url": "http://www-1.ibm.com/services/continuity/recover1.nsf/MSS/MSS-OAR-E01-2002.836.1"
+    },
+    {
+      "title": "Bulletin d'alerte #473417 de SUN :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F47903"
+    },
+    {
+      "title": "Note de vulnérabilité VU#538033 du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/538033"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-235",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-17T00:00:00.000000"
+    },
+    {
+      "description": "première révision : ajout des bulletins de sécurité IBM et HP ;",
+      "revision_date": "2002-10-21T00:00:00.000000"
+    },
+    {
+      "description": "seconde révision : ajout du bulletin de sécurité Debian ;",
+      "revision_date": "2002-10-24T00:00:00.000000"
+    },
+    {
+      "description": "troisième révision : ajout du bulletin de sécurité RedHat.",
+      "revision_date": "2002-11-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès en lecture à des données non autorisées"
+    }
+  ],
+  "summary": "Un utilisateur local peut, en utilisant une vulnérabilité des services\nypserv et ypxfrd, lire des fichiers auxquels il n'a normalement pas\naccès.\n",
+  "title": "Vulnérabilité des services <TT>ypserv</TT> et <TT>ypxfrd</TT> sous Unix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #DSA-180-1 de Debian",
+      "url": "http://www.debian.org/security/2002/dsa-180"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de IBM",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Note de vulnérabilité du CERT/CC VU#538033",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin d'alerte de Sun #473417",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RHSA-2002:23-07 de RedHat",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #SRB0051W de Compaq",
+      "url": "http://wwss1pro.compaq.com/support/reference_library/viewdocument.asp?source=SRB0051W.xml&dt=11"
+    }
+  ]
+}

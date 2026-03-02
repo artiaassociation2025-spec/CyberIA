@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système utilisant <SPAN class=\"textit\">Sendmail</SPAN>  dans une version antérieure à la 8.12.10, quel soit son type  (<SPAN class=\"textit\">Unix/Linux</SPAN>, <SPAN class=\n  \"textit\">NT</SPAN>).</P>",
+  "content": "## Description\n\nSendmail contient une vulnérabilité, de type débordement de tampon, dans\nle code d'analyse des adresses (référence CAN-2003-0694). Selon la\nplateforme et le système d'exploitation employé, celle-ci peut être\nutilisée pour exécuter du code localement et/ou à distance.\n\nPar ailleurs, il existe également un bogue dans le code d'analyse des\nrègles (référence CAN-2003-0681), non exploitable dans la configuration\npar défaut.\n\n## Solution\n\nMettre à jour Sendmail.\n\n-   Code source en version 8.12.10 au moins :\n\n        http://www.sendmail.org/8.12.10.html\n\n-   Linux Red Hat :\n\n        https://rhn.redhat.com/errata/RHSA-2003-283.html\n\n-   Mandrake Linux :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:092\n\n-   Debian GNU/Linux :\n\n        http://www.debian.org/security/2003/dsa-384\n\n-   Slackware Linux :\n\n        http://slackware.com/security/viewer.php?l=slackware-security&y=2003&m=slackware-security.452857\n\n-   SuSE Linux :\n\n        http://www.suse.com/de/security/2003_040_sendmail.html\n\n-   Sun :\n    -   Solaris :\n\n            http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F56860\n\n    -   Linux et Cobalt :\n\n            http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F56922\n\n-   SGI Irix :\n\n        ftp://patches.sgi.com/support/free/security/advisories/20030903-01-P.asc\n\n-   HP-UX :\n\n        http://www4.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBUX0309-281\n\n-   IBM AIX :\n\n        http://www-1.ibm.com/services/continuity/recover1.nsf/mss/MSS-OAR-E01-2003.1473.1\n\n-   FreeBSD :\n\n        ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-03:13.sendmail.asc\n\n-   OpenBSD :\n\n        http://openbsd.org/errata.html#sendmail\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2003-25.html"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-153",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2003-09-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de SuSE, Sun, SGI, HP, IBM ;",
+      "revision_date": "2003-10-01T00:00:00.000000"
+    },
+    {
+      "description": "mise à jour pour IBM ;",
+      "revision_date": "2004-01-20T00:00:00.000000"
+    },
+    {
+      "description": "correction du lien IBM.",
+      "revision_date": "2004-01-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Exécution distante de code arbitraire avec les privilèges du service sendmail (généralement root)"
+    }
+  ],
+  "summary": "Deux failles ont été identifiées dans le code de <span\nclass=\"textit\">Sendmail</span> et l'une d'elle peut être exploitée à\ndistance pour obtenir des privilèges élévés.\n",
+  "title": "Vulnérabilités dans le serveur de messagerie Sendmail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2003-25 du CERT/CC",
+      "url": null
+    }
+  ]
+}

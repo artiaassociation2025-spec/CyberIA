@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenSSL versions 0.9.8 à 0.9.8s (experimental « ECCdraft » ciphersuite).",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenSSL version 1.0.0d et antérieures ;",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans OpenSSL :\n\n-   une vulnérabilité dans le processus de vérification de certificats\n    internes au serveur permet la validation d'une liste de révocation\n    de certificats incorrecte. Cette vulnérabilité n'est présente que\n    dans la branche 1.x d'OpenSSL (CVE-2011-3207) ;\n-   une erreur dans la gestion des messages de négociation de session\n    d'OpenSSL server code for ephemeral ECDH ciphersuite permet à une\n    personne distante malintentionnée de provoquer un déni de service\n    (CVE-2011-3210.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-3210",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3210"
+    },
+    {
+      "name": "CVE-2011-3207",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3207"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Fedora FEDORA-2011-12281 du 10    septembre 2011 :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2011-September/065712.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-496",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-09-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout d'une référence au bulletin Fedora.",
+      "revision_date": "2011-09-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans OpenSSL permettent à une personne\nmalintentionnée de contourner la politique de sécurité ou de provoque un\ndéni de service à distance.\n",
+  "title": "Vulnérabilités dans OpenSSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenSSL du 06 septembre 2011",
+      "url": "http://www.openssl.org/news/secadv_20110906.txt"
+    }
+  ]
+}

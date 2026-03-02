@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>mpg123 versions antérieures à la  version 0.59.</p>",
+  "content": "## Description\n\nUn débordement de mémoire est présent dans la fonction chargée du\ntraitement des listes de fichiers audio du lecteur audio mpg123.  \n  \nUn utilisateur mal intentionné peut exploiter cette vulnérabilité, via\ndes listes de fichiers audio malicieusement construites, pour exécuter\ndu code arbitraire sur le système ayant un lecteur vulnérable.\n\n## Contournement provisoire\n\nNe pas utiliser les listes de fichiers audio sur le lecteur mpg123.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD \"mpg123 - playlist processing    buffer overflow vulnerability\" du 03 janvier 2005 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-417",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-12-22T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence au bulletin de sécurité de FreeBSD. Correction erreur typo. dans le titre.",
+      "revision_date": "2005-01-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans mpg123 permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire sur le système utilisant une\nversion vulnérable du lecteur.\n",
+  "title": "Vulnérabilité dans mpg123",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200412-22.xml"
+    }
+  ]
+}

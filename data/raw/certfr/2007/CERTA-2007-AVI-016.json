@@ -1,0 +1,100 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Excel Viewer 2003 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Excel 2000, 2002, 2003 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Works Suite 2004 et 2005 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2004 et v. X pour Mac.",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent Excel :\n\n-   le traitement défectueux des fichiers contenant un enregistrement\n    IMDATA mal formé permet à un utilisateur malveillant d'exécuter un\n    code arbitraire sur le système vulnérable avec les droits de\n    l'utilisateur ;\n-   le traitement défectueux des fichiers contenant un enregistrement\n    COLUMN mal formé permet à un utilisateur malveillant d'exécuter un\n    code arbitraire sur le système vulnérable avec les droits de\n    l'utilisateur ;\n-   le traitement défectueux des fichiers contenant un enregistrement\n    PALETTE mal formé permet à un utilisateur malveillant d'exécuter un\n    code arbitraire sur le système vulnérable avec les droits de\n    l'utilisateur ;\n-   le traitement défectueux des fichiers contenant une chaîne de\n    caratères mal formée permet à un utilisateur malveillant d'exécuter\n    un code arbitraire sur le système vulnérable avec les droits de\n    l'utilisateur ;\n-   le traitement défectueux des fichiers contenant un enregistrement\n    mal formé permet à un utilisateur malveillant d'exécuter un code\n    arbitraire sur le système vulnérable avec les droits de\n    l'utilisateur ;\n\nUn attaquant peut exploiter ces vulnérabilités à distance en expédiant\nun courriel contenant un fichier spécialement conçu ou en incitant\nl'utilisateur à télécharger un tel fichier sur un site web.\n\nSi l'utilisateur qui exécute le logiciel vulnérable est connecté sous\nune session d'administrateur, l'attaquant peut prendre le contrôle total\nde la machine.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0030",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0030"
+    },
+    {
+      "name": "CVE-2007-0029",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0029"
+    },
+    {
+      "name": "CVE-2007-0028",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0028"
+    },
+    {
+      "name": "CVE-2007-0031",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0031"
+    },
+    {
+      "name": "CVE-2007-0027",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0027"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-002 du 09 janvier 2007    :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-002.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS07-002 du 09 janvier 2007    :",
+      "url": "http://www.microsoft.com/france/technet/security/bulletin/MS07-002.mspx"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-016",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités d'<span class=\"textit\">Excel</span> permettent\nà un utilisateur malveillant d'exécuter un code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités de Microsoft Excel",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS07-002",
+      "url": null
+    }
+  ]
+}

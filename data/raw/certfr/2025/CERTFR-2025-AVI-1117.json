@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GLPI versions postérieures ou égales à 9.1.0 et antérieures à 10.0.21",
+      "product": {
+        "name": "GLPI",
+        "vendor": {
+          "name": "GLPI",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-59935",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-59935"
+    },
+    {
+      "name": "CVE-2025-64520",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-64520"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-1117",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-12-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans GLPI. Elles permettent à un attaquant de provoquer une injection de code indirecte à distance (XSS) et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans GLPI",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-12-16",
+      "title": "Bulletin de sécurité GLPI GHSA-j8vv-9f8m-r7jx",
+      "url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-j8vv-9f8m-r7jx"
+    },
+    {
+      "published_at": "2025-12-16",
+      "title": "Bulletin de sécurité GLPI GHSA-62p9-prpq-j62q",
+      "url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-62p9-prpq-j62q"
+    }
+  ]
+}

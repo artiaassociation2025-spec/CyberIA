@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les versions SAP R/3 pour Informix version 700 dont le numéro de mise à jour est inférieur ou égal à 100.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Toutes les versions SAP R/3 pour Informix antérieures à 700 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSAPDBA est une commande d'administration fournie avec les produits SAP\nR/3. Une vulnérabilité a été identifiée pour celle-ci, quand elle est\nassociée à une base de données Informix. Une mauvaise manipulation des\nvariables d'environnement par SAPDBA peut être exploitée par un\nutilisateur local malveillant pour exécuter des commandes arbitraires\navec les droits de l'utilisateur système 'Informix'.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de SAPDBA fournie par SAP Service Marketplace:",
+      "url": "http://websmp201.sap-ag.de"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-208",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans la commande SAPDBA fournie avec\nles produits SAP R/3 fonctionnant pour Informix. Elle permet à un\nutilisateur local d'élever ses privilèges et d'exécuter des commandes\narbitraires.\n",
+  "title": "Vulnérabilité de SAP SAPDBA",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de l'éditeur SAP",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions de <TT>pam-pgsql port</TT> sur FreeBSD  antérieures à la version 0.5.2 sur FreeBSD.</P>  <P>L'usage de <TT>pam-pgsql</TT> peut être associé aux outils  <TT>login</TT> et <TT>sshd</TT>.</P>",
+  "content": "## Description\n\nPAM (Pluggable Authentification Modules) est un système\nd'authentification utilisé sur les systèmes Unix. Ce système modulaire\npermet de développer des applications comme login qui nécessitent une\nauthentification sans avoir à se préoccuper du mécanisme\nd'authentification qui sera mis en œuvre.\n\nUn des modules d'authentification, pam-pgsql repose sur une base de\ndonnées PostgresSQL.\n\nLes versions vulnérables de pam-pgsql permettent à un utilisateur local\nou distant, pouvant mettre en œuvre l'authentification pam-pgsql, de\npouvoir soumettre n'importe quelle requête SQL à la base de données\ncontenant les noms et mots de passe.\n\nLes versions antérieures à 0.3, permettent de surcroît à un utilisateur\nde contourner le mécanisme de vérification des mots de passe.\n\n## Contournement provisoire\n\nDésinstaller pam-pgsql si on ne s'en sert pas.\n\n## Solution\n\nCharger un nouveau squelette du portage de pam-pgsql sur\n\n    http://www.freebsd.org/ports\n\n, utilisez pour reconstruire le portage sur FreeBSD.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-055",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-03-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Manipulation d'une base de données contenants des noms et des mots de passe"
+    }
+  ],
+  "summary": "Une vulnérabilité dans un module d'authentification peut contribuer à\ncontourner les mots de passe.\n",
+  "title": "Contournement de l'autentification pam-pgsql",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis RUS-CERT",
+      "url": "ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-02:14.pam-pgsql.asc"
+    },
+    {
+      "published_at": null,
+      "title": "Avis FreeBSD-SA-02:14",
+      "url": "ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-02:14.pam-pgsql.asc"
+    }
+  ]
+}

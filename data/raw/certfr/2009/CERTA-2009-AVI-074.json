@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenBSD 4.4.",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenBSD 4.3 ;",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité est présente dans le service de routage dynamique\nOpenBGP de OpenBSD. Celle-ci est due à une mauvaise gestion des préfixes\nde certains chemins d'AS (Autonomous System) qui se trouvent corrompus\ninduisant un arrêt inopiné du service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctifs de sécurité OpenBSD pour openbgpd du 18 février    2009 :",
+      "url": "http://openbsd.org/errata44.html#010_bgpd"
+    },
+    {
+      "title": "Correctifs de sécurité OpenBSD pour openbgpd du 18 février    2009 :",
+      "url": "http://openbsd.org/errata43.html#010_bgpd"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-074",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-02-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans OpenBSD permet à un utilisateur distant\nde provoquer un déni de service.\n",
+  "title": "Vulnérabilité dans OpenBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenBSD du 18 février 2009",
+      "url": null
+    }
+  ]
+}

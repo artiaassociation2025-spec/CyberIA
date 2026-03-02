@@ -1,0 +1,110 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMware ESXi 5.5 sans le patch ESXi550-201512102-SG",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESXi 5.0 sans le patch ESXi500-201510102-SG",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESXi 6.0 sans le patch ESXi600-201512102-SG",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Workstation versions antérieures à 11.1.2",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Player versions antérieures à 7.1.2",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESXi 5.1 sans le patch ESXi510-201510102-SG",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Fusion versions antérieures à 7.1.2",
+      "product": {
+        "name": "Fusion",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Contournement provisoire\n\nMettre le logiciel à jour. Si ce n'est pas possible, désactiver l'option\n\"Shared Folders\" (HGFS) permet de neutraliser ce vecteur d'attaque.\n",
+  "cves": [
+    {
+      "name": "CVE-2015-6933",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2015-6933"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité VMWare VMSA-2016-0001 du 07 janvier    2016",
+      "url": "http://www.vmware.com/security/advisories/VMSA-2016-0001.html"
+    }
+  ],
+  "reference": "CERTFR-2016-AVI-005",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2016-01-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été corrigée dans <span\nclass=\"textit\">VMWare</span>. Elle permet à un attaquant de provoquer\nune élévation de privilèges.\n",
+  "title": "Vulnérabilité dans VMWare",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMWare VMSA-2016-0001 du 07 janvier 2016",
+      "url": null
+    }
+  ]
+}

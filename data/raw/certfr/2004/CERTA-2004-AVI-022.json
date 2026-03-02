@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Firewall-1 NG FP3 et versions antérieures avec HTTP Security Server.",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Firewall-1 NG avec Application Intelligence (AI) R55 et R54 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité de type chaîne de format est présente au niveau du\nserveur mandataire (proxy) HTTP du garde-barrière Firewall-1.\n\nAu moyen de requêtes HTTP habilement constituées, un utilisateur distant\nmal intentionné peut exécuter du code arbitraire sur le garde-barrière\nvulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité \"Checkpoint Firewall-1 HTTP Parsing    Format String Vulnerabilities\" d'Internet Security Systems :",
+      "url": "http://xforce.iss.net/xforce/alerts/id/162"
+    },
+    {
+      "title": "Bulletin de sécurité \"Firewall-1 HTTP Security Server    Vulnerability\" de Check Point :      http://www.checkpoint.com/techsupport/alerts/security_server.html",
+      "url": "http://www.checkpoint.com/techsupport/alerts/securityserver.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-022",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-02-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnerabilité présente dans le composant réalisant le filtrage des\nrequêtes HTTP au niveau du garde-barrière Check Point Firewall-1 peut\nêtre exploitée à distance par un utilisateur mal intentionné afin\nd'exécuter du code arbitraire sur la plate-forme vulnérable.\n",
+  "title": "Vulnérabilité du garde-barrière Firewall-1",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité \"Checkpoint Firewall-1 HTTP Parsing Format String Vulnerabilities\" d'ISS",
+      "url": null
+    }
+  ]
+}

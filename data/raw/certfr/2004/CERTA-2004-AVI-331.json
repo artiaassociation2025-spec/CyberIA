@@ -1,0 +1,79 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apple Mac OS X Server v10.3.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple Mac OS X Server v10.2.8.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple Mac OS X v10.3.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple Mac OS X v10.2.8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Le service AFP est un protocole d'Apple qui permet le partage de\n    fichiers :\n    -   Une vulnérabilité présente dans ce service permet à un\n        utilisateur connecté en tant qu'invité d'y réaliser un déni de\n        service. (CVE CAN-2004-0921)\n    -   Une seconde vulnérabilité dans le service AFP permet à un\n        utilisateur connecté en tant qu'invité de porter atteinte à\n        l'intégrité des données du système dûe à une gestion incorrecte\n        des groupes. (CVE CAN-2004-0922)\n\n-   Le service CUPS (Common Unix Printing System) met en œuvre un\n    protocole Internet d'impression (IPP) :\n    -   Une vulnérabilité présente dans ce service permet à une personne\n        malveillante de réaliser un déni de service au moyen d'un paquet\n        UDP malicieusement constitué à destination du port IPP (CVE\n        CAN-2004-0558).\n    -   Une seconde vulnérabilité dans le module d'impression à distance\n        authentifié permet à une personne de porter atteinte à la\n        confidentialité des données du système, en révélant les mots de\n        passe contenus dans le journal des événements du système\n        d'impression. (CVE CAN-2004-0923)\n\n-   L'application NetInfoManager permet de surveiller l'activité des\n    fichiers partagés :\n\n    Une vulnérabilité présente dans l'application NetInfoManager permet\n    à un utilisateur de porter atteinte à l'intégrité des données du\n    système vulnérable. En exploitant cette vulnérabilité, une personne\n    malveillante peut activer le compte root qu'il est ensuite\n    impossible de désactiver au moyen de NetInfoManager. (CVE\n    CAN-2004-0924)\n\n-   L'application Postfix permet le transport de courrier électronique :\n\n    Une vulnérabilité présente dans Postfix lorsque le protocole\n    SMTPD-AUTH est activé, permet à un utilisateur mal intentionné de\n    réaliser un déni de service. (CVE CAN-2004-0925)\n\n-   Le lecteur multimédia Quicktime présente une vulnérabilité de type\n    débordement de mémoire (buffer overflow) lors du décodage d'une\n    image .bmp. Une personne malveillante peut ainsi exécuter un code\n    arbitraire sur la machine vulnérable grâce à un fichier .bmp\n    malicieusement constitué. (CVE CAN-2004-0926)\n\n-   Le service Server Admin offre une interface graphique à\n    l'utilisateur pour configurer et surveiller le réseau et les\n    services Internet :\n\n    une vulnérabilité découverte dans ce service permet à une personne\n    mal intentionnnée de porter atteinte à la confidentialité des\n    données. Server Admin dialogue avec le service Server Communication\n    au moyen du protocole SSL, en utilisant des certificats fournis à\n    titre d'exemple lors de l'installation par défaut des systèmes. (CVE\n    CAN-2004-0927)\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-331",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-10-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans le système d'exploitation Mac\nOS X d'Apple peuvent être exploitées par un utilisateur mal intentionné\nafin de réaliser un déni de service ou d'exécuter du code arbitraire à\ndistance.\n\nL'intégrité et la confidentialité des données présentes sur le système\nvulnérable peuvent être affectées.\n",
+  "title": "Multiples vulnérabilités dans Mac OS X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité d'Apple du 30 septembre 2004",
+      "url": "http://docs.info.apple.com/article.html?artnum=61798"
+    }
+  ]
+}

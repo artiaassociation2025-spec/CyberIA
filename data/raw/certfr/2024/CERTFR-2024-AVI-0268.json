@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SD-WAN (Edge) versions 4.5.x antérieures à 4.5.1+ sans l'application de la procédure KB97391",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SD-WAN (Orchestrator) versions 5.x antérieures à 5.0.1+",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SD-WAN (Edge) versions 5.x antérieures à 5.0.1+ sans l'application de la procédure KB97391",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2024-22248",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-22248"
+    },
+    {
+      "name": "CVE-2024-22247",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-22247"
+    },
+    {
+      "name": "CVE-2024-22246",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-22246"
+    }
+  ],
+  "links": [
+    {
+      "title": "Procédure de correction KB97391",
+      "url": "https://kb.vmware.com/s/article/97391"
+    }
+  ],
+  "reference": "CERTFR-2024-AVI-0268",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-04-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans VMware SD-WAN.\nElles permettent à un attaquant de provoquer une exécution de code\narbitraire à distance et un contournement de la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans VMware SD-WAN",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware VMSA-2024-0008 du 02 avril 2024",
+      "url": "https://www.vmware.com/security/advisories/VMSA-2024-0008.html"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Sophos Anti-Virus version 4.11 ainsi que celles antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sophos",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sophos Anti-Virus version 6.0.5 ainsi que celles antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sophos",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans le produit Sophos\nAnti-Virus. Certaines concernant les fichiers aux formats RAR et CHM ont\ndéjà été abordées dans l'avis du CERTA CERTA-2006-AVI-472 du 02 novembre\n2006. Cependant, deux nouvelles vulnérabilités ont été publiquement\nannoncées :\n\n-   une mauvaise interprétation de certains fichiers d'archivage CPIO\n    permettrait, sous certaines conditions, l'exécution de code\n    arbitraire sur le système possédant une version vulnérable ;\n-   certaines chaînes de caractères dans les fichiers au format SIT\n    (pour Stuffit archives) ne seraient pas correctement manipulées. Un\n    fichier construit de manière malveillante pourrait donc exploiter\n    cette vulnérabilité pour exécuter du code arbitraire sur le système\n    vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-6335",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6335"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis Sophos concernant les vulnérabilités communiquées par    iDefense, mis à jour le 11 décembre 2006 :",
+      "url": "http://www.sophos.com/support/knowledgebase/article/17609.html"
+    },
+    {
+      "title": "Article Sophos concernant les vulnérabilités annoncées par    iDefense et Tipping Point, du 08 décembre 2006 :",
+      "url": "http://www.sophos.com/support/knowledgebase/article/21681.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-541",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-12-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités de Sophos Anti-Virus",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Article Sophos 21681 du 08 décembre 2006",
+      "url": null
+    }
+  ]
+}

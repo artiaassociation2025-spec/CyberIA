@@ -1,0 +1,35 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>La vulnérabilité permettant la  supression des méls est présente dans la version sendmail 8.12.0  et les versions antérieures.  <P>Seule la version 8.12.0 est concernée par l'élévation de  privilèges et la lecture/modification des méls des  utilisateurs.</P></p>",
+  "content": "## Description\n\nUne vulnérabilité dans la routine de traitement des fichiers et des\nparamètres de configuration de sendmail permet à un utilisateur mal\nintentionné d'obtenir des privilèges lui permettant de manipuler les\nfiles d'attente de méls (lecture, supression, modification de messages)\net dans certains cas obtenir les privilèges de l'administrateur (root)\nsur la machine.\n\nCette vulnérabilité n'est présente que dans la version 8.12.0 de\nsendmail.\n\n#### 4.0.0.1\n\nUne autre vulnérabilité, présente dans les version 8.12.0 et\nantérieures, permet à un utilisateur mal intentionné de spécifier des\noptions lors du traitement de la file d'attente des méls (sendmail -q).\nDes options judicieusement choisies permettent de supprimer des méls ou\nde réaliser un déni de service.\n\nLes systèmes n'autorisant pas le parcours de la file d'attente par un\nutilisateur non privilégié (option RestrictQRun) ne sont pas vulnérables\n(cette option n'est pas positionnée par défaut).\n\n## Solution\n\nLa version 8.12.1 de sendmail corrige ces vulnérabilités.\n\nElle est disponible sur le site de sendmail :\n\n    http://www.sendmail.org/8.12.1.html\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-106",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Supression de méls"
+    },
+    {
+      "description": "Lecture, modification des méls"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans sendmail permettent à un\nutilisateur mal intentionné de réaliser une élévation de privilèges ou\nde manipuler les files d'attente de méls.\n",
+  "title": "Multiples vulnérabilités dans Sendmail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Razor : \"Multiple local sendmail vulnerabilities\"",
+      "url": null
+    }
+  ]
+}

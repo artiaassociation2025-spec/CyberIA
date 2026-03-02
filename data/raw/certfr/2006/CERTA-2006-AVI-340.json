@@ -1,0 +1,117 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Explorer 5.01 Service Pack 4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 6 (Service Pack 1 inclus).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été identifiées dans les versions 5.01\net 6 de Microsoft Internet Explorer. Elles pourraient être exploitées\npar une personne malveillante afin d'obtenir des informations\nconfidentielles, ou d'exécuter des commandes arbitraires sur le système\nayant une version du navigateur vulnérable. Parmi celles-ci :\n\n-   une mauvaise manipulation des informations de style d'une page HTML,\n    données par CSS (pour Cascading Style Sheet). Une personne\n    malveillante peut construire une page web HMTL particulière :\n    lorsque un internaute utilisant un navigateur vulnérable parcourt\n    cette page, cela entraîne l'exécution de commandes arbitraires sur\n    son système.\n-   de mauvaises interprétations d'objets COM utilisés par les ActiveX.\n-   une application non correcte des domaines de sécurité lors de\n    l'exécution de scripts (Javascript par exemple). Ceux-ci pourraient,\n    sous certaines conditions, accéder à des ressources locales du\n    système ayant un navigateur vulnérable.\n-   une mauvaise interprétation de pages Web lorsqu'une redirection\n    intervient, et qu'elle pointe vers une page utilisant une technique\n    de compression (gzip par exemple). Ceci peut être utilisé par une\n    personne malveillante pour obtenir des informations confidentielles\n    sur le système ayant un navigateur vulnérable.\n-   une manipulation non correcte de certaines combinaisons de mise en\n    page HTML. Celle-ci ne nécessite pas l'activation de scripts, mais\n    ces derniers favorisent une exploitation fructueuse de la part d'une\n    personne malveillante. Il faut que l'utilisateur visite une page Web\n    construite de façon particulière.\n-   une interprétation non correcte de certains liens ftp. Une personne\n    malveillante peut construire une page particulière utilisant cette\n    vulnérabilité, avec un lien ftp donné. Il pourrait lui-même envoyer\n    des commandes ftp au serveur, et donc contourner la politique de\n    sécurité ou élever ses privilèges.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nLa première version du correctif étant vulnérable (cf alerte du CERTA du\n24 août 2006), l'éditeur à mis à disposition une seconde version du\ncorrectif le 25 août 2006 et recommande d'appliquer ce correctif au plus\nvite.\n\nLa seconde version du correctif étant vulnérable, l'éditeur a mis à\ndisposition une nouvelle version du correctif le 12 septembre 2006, et\nrecommande d'appliquer ce dernier en complément des précédents.\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3637",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3637"
+    },
+    {
+      "name": "CVE-2006-3280",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3280"
+    },
+    {
+      "name": "CVE-2006-3640",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3640"
+    },
+    {
+      "name": "CVE-2006-3638",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3638"
+    },
+    {
+      "name": "CVE-2006-3451",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3451"
+    },
+    {
+      "name": "CVE-2006-3450",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3450"
+    },
+    {
+      "name": "CVE-2004-1166",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2004-1166"
+    },
+    {
+      "name": "CVE-2006-3639",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3639"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-042 du 09 août 2006 :",
+      "url": "http://www.microsoft.com/france/technet/security/Bulletin/MS06-042.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-042 du 09 août 2006 :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-042.mspx"
+    },
+    {
+      "title": "Bulletin d'alerte CERTA-2006-ALE-010 du 24 août 2006 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2006-ALE-010/index.html"
+    },
+    {
+      "title": "Bulletin de sécurité eEye EEYEB-AD20060912 du 12 septembre    2006 :",
+      "url": "http://research.eeye.com/html/advisories/published/AD20060912.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-340",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-09T00:00:00.000000"
+    },
+    {
+      "description": "modification liée à la seconde version du correctif.",
+      "revision_date": "2006-08-25T00:00:00.000000"
+    },
+    {
+      "description": "modification liée à la mise à jour du bulletin MS06-042.",
+      "revision_date": "2006-09-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été identifiées dans les versions 5.01\net 6 de Microsoft Internet Explorer. Celles-ci pourraient être\nexploitées par une personne malveillante afin d'obtenir des informations\nconfidentielles, ou d'exécuter des commandes arbitraires sur le système\nayant une version du navigateur vulnérable.\n",
+  "title": "Multiples vulnérabilités dans Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-042 du 08 août 2006",
+      "url": null
+    }
+  ]
+}

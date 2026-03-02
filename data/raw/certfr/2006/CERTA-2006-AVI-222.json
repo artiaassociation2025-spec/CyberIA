@@ -1,0 +1,88 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions PHP 4.4.2 et antérieures ;",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les versions PHP 5.1.4 et celles antérieures.",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPHP est un langage de programmation pour la création de pages Internet.\nIl peut être configuré en Safe Mode afin de préciser certaines règles de\nsécurité (vérifier l'identifiant UID du propriétaire, restreindre la\nmodification des variables d'environnement, exécuter des programmes,\netc). cURL est un moyen pour se connecter et communiquer avec un\nensemble varié de serveurs (FTP, FTPS, HTTP, HTTPS, TELNET, etc). Il se\nprésente sous la forme d'une bibliothèque nommée libcurl pour PHP.\n\nDes vulnérabilités identifiées dans cURL peuvent être exploitées par un\nutilisateur local malveillant, afin de contourner certaines restrictions\ndéfinies par Safe Mode.\n\n## Solution\n\nSe référer au bulletin de mise à jour de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2563",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2563"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site décrivant Safe Mode pour PHP :",
+      "url": "http://fr2.php.net/features.safe-mode"
+    },
+    {
+      "title": "Mise à jour de la bibliothèque libcurl pour PHP :",
+      "url": "http://cvs.php.net/viewcvs.cgi/php-src/ext/curl/"
+    },
+    {
+      "title": "Site du projet cURL :",
+      "url": "http://curl.haxx.se/"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-320-2 du 26 juillet 2006 :",
+      "url": "http://www.ubuntu.com/usn/usn-320-2"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SA:2006:052 du 21 septembre    2006 :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2006-Sep/0006.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-320-1 du 19 juillet 2006 :",
+      "url": "http://www.ubuntu.com/usn/usn-320-1"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:122 du 13 juillet    2006 :",
+      "url": "http://wwW.mandriva.com/security/advisories?name=MDKSA-2006:122"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-222",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-29T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité SuSE, Ubuntu et Mandriva.",
+      "revision_date": "2006-09-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Des vulnérabilités identifiées dans cURL (les fonctions cURL sont dans\nla bibliothèque libcurl pour PHP) peuvent être exploitées par un\nutilisateur local malveillant, afin de contourner la politique de\nsécurité associée à PHP.\n",
+  "title": "Vulnérabilités de cURL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise à jour du projet cURL",
+      "url": null
+    }
+  ]
+}

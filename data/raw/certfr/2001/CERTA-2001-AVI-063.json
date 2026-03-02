@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft SQL serveur 7.0",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft SQL server 2000 Gold",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPour des raisons de performances, après la déconnexion de la session de\nl'administrateur, certaines données restent dans le cache. Un\nutilisateur authentifié, ayant le droit d'accéder à la base de donnée,\npeut, par le biais d'une requête SQL habilement conçue, réutiliser ces\ndonnées pour exécuter des commandes dans le contexte de sécurité de\nl'administrateur de la base.\n\n## Contournement provisoire\n\nCette vulnérabilité ne pouvant se produire qu'en Mode Mixte, Microsoft\nrecommande de configurer le serveur en Mode Authentifié.\n\n## Solution\n\nAppliquer le correctif Microsoft :\n\n    http://support.microsoft.com/support/kb/articles/Q299/7/17.asp\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-063",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-06-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Compromission de base de données et exécutions de commandes avec les privilèges de l'administrateur de la base"
+    }
+  ],
+  "summary": "Des données de la session administrateur persistantes peuvent être\nréutilisée par un utilisateur mal intentionné.\n",
+  "title": "Vulnérabilité de MS SQL Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

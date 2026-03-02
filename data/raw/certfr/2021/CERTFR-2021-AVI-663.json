@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PostgreSQL set_user versions antérieures à 2.0.1",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-38140",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-38140"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2021-AVI-663",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-08-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans l'extension set_user de\nPostgreSQL. Elle permet à un attaquant de provoquer une élévation de\nprivilèges.\n\nNote : l'extension 'set_user' permet d'autoriser une élévation de\nprivilèges pour un utilisateur donné. La vulnérabilité permet d'altérer\nles privilèges initialement accordés.\n",
+  "title": "Vulnérabilité dans l'extension set_user de PostgreSQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PostgreSQL du 28 août 2021",
+      "url": "https://www.postgresql.org/about/news/set_user-201-released-2279/"
+    }
+  ]
+}

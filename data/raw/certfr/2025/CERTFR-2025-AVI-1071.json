@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache HTTP Server versions antérieures à 2.4.66",
+      "product": {
+        "name": "HTTP Server",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-59775",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-59775"
+    },
+    {
+      "name": "CVE-2025-55753",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-55753"
+    },
+    {
+      "name": "CVE-2025-66200",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-66200"
+    },
+    {
+      "name": "CVE-2025-65082",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-65082"
+    },
+    {
+      "name": "CVE-2025-58098",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-58098"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-1071",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-12-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Non spécifié par l'éditeur"
+    },
+    {
+      "description": "Falsification de requêtes côté serveur (SSRF)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Apache HTTP Server. Certaines d'entre elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données, une falsification de requêtes côté serveur (SSRF) et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans Apache HTTP Server",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-12-04",
+      "title": "Bulletin de sécurité Apache HTTP Server CHANGES_2.4.66",
+      "url": "https://downloads.apache.org/httpd/CHANGES_2.4.66"
+    }
+  ]
+}

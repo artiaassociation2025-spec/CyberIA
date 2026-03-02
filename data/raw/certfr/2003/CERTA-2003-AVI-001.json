@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>La fonction <TT>pdftops</TT> incluse  des logiciels comme <TT>xpdf</TT> et <TT>cups</TT>.</p>",
+  "content": "## Description\n\nLe logiciel utilisé pour afficher des documents au format pdf xpdf et le\ngestionnaire d'impression cups utilisent le filtre pdftops.\n\nCe filtre contient un risque de débordement de mémoire permettant à un\nutilisateur mal intentionné d'exécuter du code arbitraire ou de réaliser\nun déni de service à l'aide d'un document au format pdf malicieusement\nconstruit.\n\n## Solution\n\nAppliquer les mises à jour de vos logiciels (cf section documentation)\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité DSA-222 de Debian :",
+      "url": "http://www.debian.org/security/2003/dsa-222"
+    },
+    {
+      "title": "Correctif de xpdf :",
+      "url": "ftp://ftp.foolabs.com/pub/xpdf/"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2003:037 de Red Hat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-037.html"
+    },
+    {
+      "title": "Bulletin de sécurité DSA-226 de Debian :",
+      "url": "http://www.debian.org/security/2003/dsa-226"
+    },
+    {
+      "title": "Bulletin de sécurité MDKSA-2003:002 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:002"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-001",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-01-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de Mandrake et Debian.",
+      "revision_date": "2003-01-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de Red Hat.",
+      "revision_date": "2003-02-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Exécution de commande arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité présente sur pdftops permet à un utilisateur mal\nintentionné de réaliser un débordement de mémoire.\n",
+  "title": "Vulnérabilité sur pdftops",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CVE : CAN-2002-1384",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité iDefense",
+      "url": "http://www.idefense.com/advisory/12.23.02.txt"
+    }
+  ]
+}

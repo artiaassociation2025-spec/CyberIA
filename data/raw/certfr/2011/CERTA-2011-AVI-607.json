@@ -1,0 +1,88 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Interstage Application Server versions 5.x, 6.x, 7.x, 8.x et 9.x ;",
+      "product": {
+        "name": "HTTP Server",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Interstage Business Application Server versions 8.x ;",
+      "product": {
+        "name": "HTTP Server",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Interstage Job Workload Server versions 8.x ;",
+      "product": {
+        "name": "HTTP Server",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Interstage Studio versions 8.x et 9.x.",
+      "product": {
+        "name": "HTTP Server",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Interstage Apworks versions 6.x et 7.x ;",
+      "product": {
+        "name": "HTTP Server",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été signalées dans Interstage HTTP Server. La\npremière peut être exploitée par un attaquant distant à l'aide d'une\nrequête à distance spécialement conçue, qui provoque une occupation\nimportante du processeur et donc un déni de service. La seconde peut\nêtre exploitée pour atteindre un hôte protégé par le serveur proxy\ninverse (reverse proxy), à l'aide d'une requête à distance spécialement\nconçue.\n\nCes vulnérabilités n'existent que dans certaines configurations du\nserveur (fichier httpd.conf).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour les solutions de\ncontournement (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-3368",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3368"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-607",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-10-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été signalées dans Interstage HTTP Server, qui\npeuvent être exploitées pour créer un déni de service ou contourner la\npolitique de sécurité.\n",
+  "title": "Vulnérabilités dans Fujitsu Interstage HTTP Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Fujitsu 201104eN du 31 octobre 2011",
+      "url": "http://www.fujitsu.com/global/support/software/security/products-f/interstage-201104e.html"
+    }
+  ]
+}

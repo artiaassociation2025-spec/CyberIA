@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>PGP Corporate Desktop 7.1.1 sur Windows 2000 et XP.</P>",
+  "content": "## Description\n\nDans les fonctions de chiffremenent et de déchiffrement d'un fichier, il\nest possible d'exploiter une vulnérabilité de type débordement de\nmémoire en utilisant un nom de fichier trop long.\n\nUn utilisateur mal intentionné peut ainsi chiffrer un message habilement\nconçu et le faire déchiffrer par la victime. Il lui est alors possible\nd'exécuter des commandes sur la machine cible, et de récupérer le mot de\npasse associé à la clé privée de la victime. En effet, le débordement de\nmémoire a lieu juste après le déchiffrement du fichier, et avant\nl'effacement de la mémoire contenant le mot de passe.  \n\n## Solution\n\nAppliquer le correctif publié par NAI (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité 090502-PCRO de Foundstone Labs :",
+      "url": "http://www.foundstone.com/knowledge/randd-advisories-display.html?id=334"
+    },
+    {
+      "title": "Correcitf de NAI :",
+      "url": "http://www.nai.com/naicommon/download/upgrade/patches/patch-pgphotfix.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-204",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-09-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Divulgation du mot de passe associé à la clé privée pgp"
+    }
+  ],
+  "summary": "Une vulnérabilité de PGP de type débordement de mémoire permet à un\nutilisateur mal intentionné d'exécuter du code arbitraire à distance, et\nde récupérer le mot de passe associé à la clé privée de la victime.\n",
+  "title": "Vulnérabilité de PGP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de Foundstone Labs",
+      "url": null
+    }
+  ]
+}

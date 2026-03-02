@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cache Engine 505, 550, ou 570 avec une version de logiciel 2.2.0 ou précédente ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Content Router CR-4430 avec ACNS 4.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Content Engine 507, 560, 590, ou 7320 avec les versions de cache software 2.x, 3.1,4.0.x, ou 4.1.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Content Distribution Manager CDM-4630 ou CDM-4650 avec ACNS 4.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes produits Cache Engine et Content Engine de CISCO possèdent des\nfonctionnalités de cache transparent pour des pages web, ainsi que de\nserveurs mandataires (proxies) supportant de nombreux protocoles. La\nconfiguration par défaut de cette dernière fonctionnalité peut permettre\nà un individu mal intentionné d'effectuer des connexions réseau non\nsollicitées et de masquer son identité.\n\n## Solution\n\nIl est recommandé :\n\n-   soit de désactiver la fonction de serveur mandataire HTTPS si\n    celle-ci n'est pas nécessaire :  \n\n    `https destination-port deny all`  \n\n-   soit de filtrer les requêtes pour les ports autre que HTTPS\n    (443/TCP) :  \n\n    `https destination-port allow 443`  \n    `https destination-port deny all`  \n\nSe référer au bulletin de sécurité CISCO pour obtenir plus\nd'informations (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-103",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-05-16T00:00:00.000000"
+    },
+    {
+      "description": "correction du lien vers le bulletin CISCO.",
+      "revision_date": "2002-05-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Trafic non sollicité"
+    },
+    {
+      "description": "Camouflage d'identité"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut exploiter une vulnérabilité afin de\ncamoufler son identité et d'effectuer des activités illégales.\n",
+  "title": "Vulnérabilité Cisco Cache Engine et Content Engine",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO",
+      "url": "http://www.cisco.com/warp/public/707/transparentcache-tcp-relay-vuln-pub.shtml"
+    }
+  ]
+}

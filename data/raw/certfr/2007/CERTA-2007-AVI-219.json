@@ -1,0 +1,93 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Samba 3.x versions antérieures à 3.0.25.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois vulnérabilités sont présentes dans la version 3 de Samba :\n\n-   la première (CVE-2007-2444), présente dans la fonction de traduction\n    des noms d'utilisateurs du service smbd, permet à un utilisateur\n    connecté et authentifié au service d'élever ses privilèges ;\n-   la seconde (CVE-2007-2446), permet à un utilisateur malveillant\n    connecté et authentifié au service d'exécuter du code arbitraire par\n    le biais d'une requête MS-RPC spécialement conçue ;\n-   la dernière (CVE-2007-2447), dans le cas où l'option username map\n    script est présente dans le fichier de configuration smb.conf de\n    Samba, permet à un utilisateur malveillant connecté et authentifié\n    au service d'exécuter du code arbitraire par le biais d'une requête\n    MS-RPC spécialement conçue lors de la mise à jour du mot de passe\n    d'un utilisateur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-2446",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2446"
+    },
+    {
+      "name": "CVE-2007-2444",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2444"
+    },
+    {
+      "name": "CVE-2007-2447",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2447"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:104 du 14 mai 2007    :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDKSA-2007:104"
+    },
+    {
+      "title": "Bulletin de sécurité Samba CVE-2007-2446 du 14 mai 2007 :",
+      "url": "http://samba.org/samba/security/CVE-2007-2446.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2007:0354 du 14 mai 2007 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0354.html"
+    },
+    {
+      "title": "Bulletin de sécurité Samba CVE-2007-2447 du 14 mai 2007 :",
+      "url": "http://samba.org/samba/security/CVE-2007-2447.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200705-15 du 15 mai 2007 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200705-15.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Samba CVE-2007-2444 du 14 mai 2007 :",
+      "url": "http://samba.org/samba/security/CVE-2007-2444.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1291 du 15 mai 2007 :",
+      "url": "http://www.debian.org/security/2007/dsa-1291"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-460 du 16 mai 2007 :",
+      "url": "http://www.ubuntu.com/usn/usn-460-1"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-219",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-05-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian, Ubuntu et Gentoo.",
+      "revision_date": "2007-05-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiple vulnéribilités présentes dans Samba permettent à un\nutilisateur distant d'exécuter du code arbitraire et d'élever ses\nprivilèges.\n",
+  "title": "Multiples vulnérabilités dans Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Samba du 14 mai 2007",
+      "url": null
+    }
+  ]
+}

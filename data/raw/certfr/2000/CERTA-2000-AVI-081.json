@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft SQL Server Desktop Engine 1.0 et 2000.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft SQL Server 7.0 et 2000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDes procédures Xps (Extended Stored Procedures) peuvent être installées\nsur un serveur Microsoft SQL afin d'apporter une amélioration des\nfonctionnalités.\n\nCes procédures ne vérifiant pas correctement certaines variables\nd'environnement un utilisateur distant peut provoquer un déni de service\nou exécuter du code arbitraire.  \n  \n\nL'exploitation de cette vulnérabilité n'est possible que si\nl'utilisateur mal intentionné posséde une authentification sur le\nserveur ou, dans le cas d'un serveur SQL interfacé avec un site\ninternet, s'il connait exactement l'architecture du serveur.\n\n## Solution\n\nAppliquer le correctif fourni par Microsoft (version US)\n\n    http://support.microsoft.com/support/sql/xp_security.asp\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-092.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-081",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-12-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut provoquer à distance un débordement\nde pile sur un serveur Microsoft SQL afin de créer un déni de service ou\nd'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité sous Microsoft SQL SERVER",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft (MS00-092)",
+      "url": null
+    }
+  ]
+}
