@@ -1,0 +1,108 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Module Drupal Project 4.7.x-1.1 ainsi que les versions antérieures ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Module Drupal Project issue tracking 5.x-0.x-dev antérieur à la version 5.x-0.1-beta ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Module Drupal Project 5.x-0.x-dev antérieur à la version 5.x-0.1-beta.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Module Drupal Project issue tracking 4.7.x-2.1 ainsi que les versions antérieures ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Module Drupal Project issue tracking 4.7.x-1.1 ainsi que les versions antérieures ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Module Drupal Project 4.7.x-2.1 ainsi que les versions antérieures ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDrupal est un système de gestion de contenu CMS (pour Content Management\nSystem fonctionnant avec des modules. Plusieurs vulnérabilités ont été\nidentifiées dans l'un d'eux : le module Project. Celui-ci est utilisé\ndans la gestion des projets de sites Drupal. Il permet de les\nclassifier, de les renommer, et de contrôler le téléchargement des\ndifférentes versions.\n\nLes permissions ne sont pas correctement manipulées par la fonction\nproject_issue_access(). Il serait possible à une personne malveillante\ndistante de récupérer tout fichier à télécharger, y compris ceux à accès\nrestreint.\n\nUne personne malveillante pourrait également exploiter certains champs,\nqui ne seraient pas correctement filtrés, entre autres par la fonction\ncheck_plain(), afin de lancer une attaque d'injection de code indirecte,\nou cross-site scripting.\n\nL'ajout de fichiers liés aux projets ne seraient pas correctement\nmaitrisé, et la politique de sécurité décrite dans le fichier .htaccess\nFileInfo pourrait donc être contournée pour ajouter de nouveaux fichiers\navec n'importe quelle extension, comme .php, afin d'excuter du code sur\nle serveur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Prśentation du module Project de Drupal :",
+      "url": "http://drupal.org/project/project"
+    },
+    {
+      "title": "Bulletin de sécurité Drupal DRUPAL-SA-2007-004 du 23    janvier 2007 :",
+      "url": "http://drupal.org/node/112146"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-054",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités du module Project de Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DRUPAL-SA-2007-004 du 23 janvier 2007",
+      "url": null
+    }
+  ]
+}

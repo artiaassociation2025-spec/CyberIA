@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Lotus Notes/Domino R4.5 serveur et client ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Lotus Notes/Domino R5 serveur et client ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Lotus Notes/Domino R4.6 serveur et client ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Lotus Notes/Domino R6 beta (pre-Gold) serveur et client ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe serveur mandataire Web Retriever de Lotus Notes/Domino est utilisé\npar un utilisateur Notes pour récupérer des pages web via le serveur\nNotes.\n\nSi le Web Retriever reçoit une ligne \"HTTP Status\" du serveur HTTP\ndistant excédant une certaine longueur, le programme s'arrête\ninopinément.\n\nDans le cas où le Web Retriever est lancé sur un serveur, l'arrêt du\nprogramme provoque un déni de service sur le serveur. Dans le cas où le\nprogramme est lancé localement par un client, son arrêt provoque l'arrêt\ndu client Notes.\n\n## Solution\n\nMettre à jour le serveur Domino ou le client Notes. Les versions\nsuivantes ne sont pas vulnérables :\n\n-   Lotus Notes/Domino R6.0 Gold ;\n-   Lotus Notes/Domino R6.0.1 ;\n-   Lotus Notes/Domino R5.0.12.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-047",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité du serveur mandataire Web Retriever de Lotus peut\nentraîner un déni de service.\n",
+  "title": "Vulnérabilité du serveur mandataire Web Retriever de Lotus Notes/Domino",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de Rapid7, Inc.",
+      "url": "http://www.rapid7.com/advisories/R7-0011.html"
+    }
+  ]
+}

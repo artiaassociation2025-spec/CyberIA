@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MGate 5123 Series  sans les derniers correctifs de sécurité",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "EDS-508A Series sans les derniers correctifs de sécurité",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "MGate 5121 Series  sans les derniers correctifs de sécurité",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "MGate 5122 Series  sans les derniers correctifs de sécurité",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-0193",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-0193"
+    },
+    {
+      "name": "CVE-2024-12297",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-12297"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0036",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-01-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Moxa. Certaines d'entre elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données, une injection de code indirecte à distance (XSS) et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans les produits Moxa",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-01-15",
+      "title": "Bulletin de sécurité Moxa mpsa-241407",
+      "url": "https://www.moxa.com/en/support/product-support/security-advisory/mpsa-241407-cve-2024-12297-frontend-authorization-logic-disclosure-vulnerability-in-eds-508a-series"
+    },
+    {
+      "published_at": "2025-01-15",
+      "title": "Bulletin de sécurité Moxa mpsa-247733",
+      "url": "https://www.moxa.com/en/support/product-support/security-advisory/mpsa-247733-cve-2025-0193-stored-cross-site-scripting-(xss)-vulnerability-in-the-mgate-5121-5122-5123-series"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Ethereal versions 0.8.5 à 0.10.11  (incluses).</p>",
+  "content": "## Description\n\nLe logiciel Ethereal permet de capturer des trames réseau et d'effectuer\nde multiples actions sur celles-ci afin de faciliter leur analyse.  \n\nDe multiples vulnérabilités ont été découvertes dans ce logiciel,\npermettant à un utilisateur mal intentionné de causer un déni de service\nou d'exécuter du code arbitraire à distance.  \n\nLe premier problème concerne l'utilisation de la librairie zlib, dont la\nvulnérabilité a été traitée dans l'avis du CERTA : CERTA-2005-AVI-276.  \n\nLes autres vulnérabilités sont induites par le traitement de certains\nprotocoles. Ces vulnérabilités sont de type débordement de mémoire,\nchaîne de format, pointeur nul, et boucle infinie.\n\n## Solution\n\nMettre à jour Ethereal en version 0.10.12 :\n\n    http://www.ethereal.com/download.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD pour ethereal, ethereal-lite,    tethereal et tethereal-lite du 30 juillet 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-tethereal.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour ethereal, ethereal-lite,    tethereal et tethereal-lite du 30 juillet 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-tethereal-lite.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour ethereal, ethereal-lite,    tethereal et tethereal-lite du 30 juillet 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-ethereal.html"
+    },
+    {
+      "title": "Bulletin de sécurité d'Ethereal :",
+      "url": "http://www.ethereal.com/appnotes/enpa-sa-00020.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-853 du 09 octobre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-853"
+    },
+    {
+      "title": "Avis du CERTA concernant la vulnérabilité de zlib    :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2005-AVI-276/index.html"
+    },
+    {
+      "title": "Site Internet d'Ethereal :",
+      "url": "http://www.ethereal.com"
+    },
+    {
+      "title": "Bulletin de sécurité Avaya ASA-2005-185 du 29 août 2005 :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2005-185.pdf"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:131 du 05 août    2000( ;",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:131"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE du 22 août 2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_19_sr.html"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2005-687 du 11 août 2005    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-687.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour ethereal, ethereal-lite,    tethereal et tethereal-lite du 30 juillet 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-ethereal-lite.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200507-27 du 28 juillet    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200507-27.xml"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-284",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-07-28T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2005-08-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité SuSE, Red Hat, Mandriva et Avaya.",
+      "revision_date": "2005-08-31T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian et aux références CVE.",
+      "revision_date": "2005-10-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités dans le logiciel Ethereal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité du logiciel Ethereal",
+      "url": null
+    }
+  ]
+}

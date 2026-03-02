@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows 2000 Advanced Server;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 2000 Server;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 2000 Professional;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 2000 Datacenter Server.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne mauvaise implémentation du contrôle ActiveX Microsoft System Monitor\npermet à un utilisateur mal intentionné de construire habilement une\npage web ou un courrier électronique au format HTML, et d'exécuter du\ncode arbitraire sur la machine de la victime qui le lit.\n\n## Contournement provisoire\n\nDésactiver l'exécution des Contrôles ActiveX de votre navigateur et du\nlogiciel de courrier électronique comme indiqué dans les bulletins\nCERTA-2000-AVI-002, CERTA-2000-ALE-001, CERTA-2000-ALE-002 et\nCERTA-2000-INF-002.\n\n## Solution\n\nAppliquer le correctif de Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=25532\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le bulletin de Sécurité Microsoft et sa FAQ :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-085.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-068",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-11-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Un contrôle ActiveX de Windows 2000 permet à un utilisateur mal\nintentionné d'exécuter du code grâce à un débordement de mémoire dans ce\ncontrôle.\n",
+  "title": "Vulnérabilité dans un contrôle ActiveX de Windows 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

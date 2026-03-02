@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de Fetchmail  antérieures à 5.8.6.</p>",
+  "content": "## Description\n\nFetchmail est un utilitaire unix permettant de récupérer ses mels depuis\nun serveur via les protocoles POP, IMAP...\n\nUn champ TO: trop long inséré dans un message permet à un utilisateur\nmal intentionné de réaliser un débordement de mémoire et éventuellement\nde provoquer l'exécution d'un code arbitraire.\n\nLe code arbitraire sera exécuté avec les privilèges de l'utilisateur se\nservant de la commande fetchmail.\n\n## Solution\n\nLa version 5.8.6 de fetchmail corrige le problème de dépassement de\nmémoire.\n\nCette version est disponible sur le site:\n\n    http://www.tuxedo.org/~esr/fetchmail\n\n  \n  \n\nSe référer aux sites des différents distributeurs pour les mises-à-jour.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-067",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-06-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Obtention du privilèges root à distance"
+    }
+  ],
+  "summary": "Un débordement de mémoire dans la commande Fetchmail permet à un\nutilisateur mal intentionné de provoquer l'exécution de code arbitraire\navec les privilèges de l'utilisateur qui se sert de cette commande.\n",
+  "title": "Vulnérabilité dans fetchmail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Debian DSA-060-1",
+      "url": null
+    }
+  ]
+}

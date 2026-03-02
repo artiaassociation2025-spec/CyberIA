@@ -1,0 +1,28 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de Windows 2000,  indépendamment des correctifs installés sur la machine.</p>",
+  "content": "## Description\n\nPar défaut dans Windows 2000, le répertoire racine (typiquement C:) est\nen accès lecture, écriture et exécution pour le groupe \"Tout le monde\".\nUn utilisateur mal intentionné ayant accès à la machine peut ainsi\ndéposer un cheval de Troie dans le répertoire racine portant le nom d'un\nbinaire légitime de Windows (typiquement cmd.exe). Lors de la recherche\net de l'exécution d'un fichier, et si cette recherche inclut le\nrépertoire racine, un utilisateur peut alors exécuter un cheval de Troie\nà son insu, pensant qu'il s'agit du binaire légitime.\n\n## Solution\n\nMicrosoft ne fournit pas de solution sous forme de correctif mais\nrecommande à l'administrateur d'élaborer un système de permissions du\nrépertoire racine s'inspirant de celles de Windows XP, à savoir :\n\n-   Administrateur : accès illimité (répertoire courant,\n    sous-répertoires et fichiers) ;\n-   créateurs propriétaires : accès illimité (sous-répertoires et\n    fichiers) ;\n-   système : accès illimité (répertoire courant, sous-répertoires et\n    fichiers) ;\n-   tout le monde : accès en lecture et exécution (répertoire courant\n    seulement).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS02-064",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-064.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-238",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution d'un cheval de troie sur la machine"
+    }
+  ],
+  "summary": "Par défaut, le répertoire racine de Windows 2000 est en accès lecture,\nécriture et exécution pour tous les utilisateurs. Cette politique de\nsécurité par défaut du répertoire racine peut permettre à un utilisateur\nmal intentionné d'installer et de faire exécuter un cheval de Troie sur\nla machine, à l'insu de l'utilisateur.\n",
+  "title": "Problème de permissions sous Windows 2000",
+  "vendor_advisories": []
+}

@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Oracle Database Server versions 19.3-19.21, 21.3-21.12 et 23.3 sans les derniers correctifs de sécurité",
+      "product": {
+        "name": "Database Server",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-21432",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-21432"
+    },
+    {
+      "name": "CVE-2024-20903",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20903"
+    },
+    {
+      "name": "CVE-2023-38545",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-38545"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0045",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-01-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Oracle Database\nServer. Elles permettent à un attaquant de provoquer une exécution de\ncode arbitraire à distance, un déni de service à distance et un\ncontournement de la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans Oracle Database Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Oracle cpujan2024verbose du 16 janvier 2024",
+      "url": "https://www.oracle.com/security-alerts/cpujan2024verbose.html#DB"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Oracle cpujan2024 du 16 janvier 2024",
+      "url": "https://www.oracle.com/security-alerts/cpujan2024.html#AppendixDB"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions de la branche 3.x de Sun Java System Web Proxy Server antérieures à 3.6 SP11 ;",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les versions de la branche 4.x de Sun Java System Web Proxy Server antérieures à 4.0.6.",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans l'application Sun Java\nSystem Web Proxy Server. Les entrées passées en paramètres de certains\nservices de l'application, comme View Error Log ou View URL Database, ne\nseraient pas correctement vérifiées.\n\nCes vulnérabilités peuvent être exploitées pour amener l'utilisateur à\nvisualiser dans son navigateur une page malveillante, malgré la\npolitique de sécurité mise en place.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Alerte de Secunia numéro 28186 du 21 décembre 2007 :",
+      "url": "http://secunia.com/advisories/28186/"
+    },
+    {
+      "title": "Note de mise à jour Sun Java System Web Proxy Server pour    la version 4.0.6 :",
+      "url": "http://docs.sun.com/app/docs/doc/820-2499/aeaaa?a=view"
+    },
+    {
+      "title": "Note de mise à jour Sun Java System Web Proxy Server pour    la version 3.6 SP11 en novembre 2007 :",
+      "url": "http://docs.sun.com/source/820-3637-10/relnotes26sp11_unix.html#wp19247"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-563",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans l'application Sun Java\nSystem Web Proxy Server. L'exploitation de ces dernières par une\npersonne malveillante permettrait de contourner la politique de sécurité\nmise en place.\n",
+  "title": "Plusieurs vulnérabilités de Sun Java System Web Proxy Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin SA28186 de Secunia du 21 décembre 2007",
+      "url": null
+    }
+  ]
+}

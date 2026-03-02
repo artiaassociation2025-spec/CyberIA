@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>FreeBSD 6.x.</p>",
+  "content": "## Description\n\nTrois vulnérabilités ont été découvertes dans FreeBSD :\n\n-   la première résulte d'une erreur de gestion de limite de boucle\n    (off-by-one) au niveau de la fonction inet_network(). Cette\n    vulnérabilité peut être exploitée à distance par un utilisateur\n    malintentionné afin d'exécuter du code ;\n-   la seconde est due à une erreur dans la fonction openpty(). Cette\n    vulnérabilité peut être exploitée en local afin d'accéder à des\n    informations confidentielles pour un utilisateur standard ;\n-   enfin, la dernière vulnérabilité est due à une erreur dans le\n    fonction ptsname(). Cette vulnérabilité peut être exploitée en local\n    afin de devenir propriétaire d'un pty à accès restreint.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0216",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0216"
+    },
+    {
+      "name": "CVE-2008-0122",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0122"
+    },
+    {
+      "name": "CVE-2008-0217",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0217"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-08:01.pty du 14 janvier    2008 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-08:01.pty.asc"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-08:02.libc du 14 janvier    2008 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-08:02.libc.asc"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-020",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-01-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités affectent FreeBSD. Ces vulnérabilités\npeuvent être exploitées afin d'exécuter des commandes arbitraires à\ndistance ou accéder à des informations sensibles en local.\n",
+  "title": "Multiples vulnérabilités de FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité FreeBSD du 14 janvier 2008",
+      "url": null
+    }
+  ]
+}

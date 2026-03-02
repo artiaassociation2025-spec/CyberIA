@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>AIX versions 5.1 et 5.2.</p>",
+  "content": "## Description\n\nDes dépassements de tampon présents dans les commandes système putlvcb\net getlvcb, utilisées par les commandes LVM de plus haut niveau,\npermettent à un utilisateur local mal intentionné de réaliser un déni de\nservice et dans certains cas d'exécuter du code arbitraire sur un\nsystème vulnérable.\n\n  \n\nD'autres vulnérabilités présentes dans certaines commandes des\npaquetages bos.rte.console et bos.rte.serv_aid permettent à un\nutilisateur local mal intentionné, via la création de liens symboliques,\nde réaliser une destruction de données.\n\n## Solution\n\nDans l'attente des correctifs disponibles prochainement (cf. avis de\nsécurité IBM), appliquer les correctifs d'urgence disponibles sur le\nsite IBM.\n\n-   Correctif pour la vulnérabilité sur les commandes LVM :\n\n        ftp://aix.software.ibm.com/aix/efixes/security/lvmcmd_efix.tar.Z\n\n-   Correctif pour la vulnérabilité sur les commandes systèmes :\n\n        ftp://aix.software.ibm.com/aix/efixes/security/conscmd_efix.tar.Z\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité MSS-OAR-E01-2004:0543.2 :",
+      "url": "http://www-1.ibm.com/services/continuity/recover1.nsf/mss/MSS-OAR-E01-2004.0543.2"
+    },
+    {
+      "title": "Avis de sécurité MSS-OAR-E01-2004:0544.2 :",
+      "url": "http://www-1.ibm.com/services/continuity/recover1.nsf/mss/MSS-OAR-E01-2004.0544.2"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-154",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-05-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout références CVE.",
+      "revision_date": "2004-06-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Perte de données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans certaines commandes\nsystème et certaines commandes LVM (Logical Volume Manager) permettent à\nun utilisateur mal intentionné de réaliser un déni de service.\n",
+  "title": "Vulnérabilités sur les systèmes IBM AIX 5.1 et 5.2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité IBM",
+      "url": null
+    }
+  ]
+}

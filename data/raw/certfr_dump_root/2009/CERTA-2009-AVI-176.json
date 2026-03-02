@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Adobe Acrobat et Adobe Reader versions 8.1.4 et antérieures ;",
+      "product": {
+        "name": "Acrobat",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Adobe Acrobat et Adobe Reader versions 7.1.1 et antérieures ;",
+      "product": {
+        "name": "Acrobat",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Adobe Acrobat et Adobe Reader versions 9.1 et antérieures.",
+      "product": {
+        "name": "Acrobat",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans Adobe Reader et Adobe Acrobat.\nElles sont relatives à certaines fonctions mises en œuvre dans le\ncontexte du moteur de rendu JavaScript de Adobe Reader et Adobe Acrobat.\nCes failles permettent toutes les deux à un utilisateur malintentionné\ndistant d'exécuter du code arbitraire par le biais d'un pointeur vers un\nfichier PDF construit de façon particulière.\n\nCes vulnérabilités s'appuyant uniquement sur des fonctions Javascript,\nelles ne sont donc pas dépendantes d'une plateforme particulière et\nfonctionnent à la fois sous Microsoft Windows, GNU/Linux, UNIX et MacOS\nX.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1493",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1493"
+    },
+    {
+      "name": "CVE-2009-1492",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1492"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Adobe du 1er mai 2009 :",
+      "url": "http://www.adobe.com/support/security/advisories/apsa09-06.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-176",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-05-07T00:00:00.000000"
+    },
+    {
+      "description": "mise à disposition du correctif par l'éditeur et ajout des références CVE.",
+      "revision_date": "2009-05-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans Adobe Reader et Adobe Acrobat\npermettent à un utilisateur distant d'exécuter du code arbitraire.\n",
+  "title": "Multiples vulnérabilités dans Adobe Reader et Adobe Acrobat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Adobe APSA09-06 du 12 mai 2009",
+      "url": null
+    }
+  ]
+}

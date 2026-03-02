@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "WFTPD Server 3.21 Release 1 et versions antérieures.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "WFTPD Pro Server 3.21 Release 1 et versions antérieures ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nWFTPD est un serveur FTP pour les machines utilisant Windows. Une\nvulnérabilité dans l'interprétation des commandes FTP au format Unix\npeut entraîner un débordement de mémoire et permettre ainsi l'exécution\nde code arbitraire à distance.\n\n## Solution\n\nInstaller la nouvelle version de WFTPD disponible sur le site de\nl'éditeur.\n\n-   WFTPD Pro Server 3.21 Release 2 ;\n-   WFTPD Server 3.21 Release 2.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de l'éditeur :",
+      "url": "http://www.wftpd.com"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-066",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le serveur FTP WFTPD permet à un\nutilisateur distant mal intentionné d'exécuter du code arbitraire sur la\nmachine cible avec les privilèges SYSTEM.\n",
+  "title": "Vulnérabilité dans le serveur WFTPD pour Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Texas Imperial Software",
+      "url": null
+    }
+  ]
+}

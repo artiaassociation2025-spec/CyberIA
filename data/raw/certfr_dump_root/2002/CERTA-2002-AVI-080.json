@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>True64 UNIX versions 4.0f à 5.1a.</p>",
+  "content": "## Description\n\nCompaq a publié un avis de sécurité décrivant plusieurs vulnérabilités\nde CDE (Common Desktop Environment), NFS (Network File System), NIS\n(Network Information Service) et de la bibliothèque libc :\n\n-   CDE : de multiples débordements mémoire dans différentes commandes\n    ou services (dtaction, ttsession, dtprintinfo, dtspcd) permettent à\n    un utilisateur mal intentionné d'obtenir les droits de\n    l'administrateur (root) à distance ;\n-   libc : un débordement de mémoire lié à l'utilisation des variables\n    d'environnement LANG et LOCPATH permet à un utilisateur local mal\n    intentionné d'obtenir les droits de l'administrateur (root) ;\n-   NIS : l'arrêt du processus ypbind est possible sous certaines\n    conditions, entraînant ainsi un déni de service ;\n-   NFS : une attaque par déni de service est possible en inondant le\n    service portmap.\n\n## Solution\n\nInstaller les correctifs mentionnés dans l'avis de Sécurité SSRT-541\n(cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-080",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-04-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités sous TRUE64 UNIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité SSRT-541 de Compaq",
+      "url": "http://ftp.support.compaq.com/patches/.new/html/SSRT-541.shtml"
+    }
+  ]
+}

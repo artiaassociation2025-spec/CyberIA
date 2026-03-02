@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Drupal versions 6.x antérieures à 6.16 ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Drupal versions 5.x antérieures à 5.22.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Drupal :\n\n-   une injection de code indirecte est possible durant l'installation\n    (cette vulnérabilité n'affecte que Drupal 6) ;\n-   la fonction drupal_goto() est censée rediriger les utilisateurs vers\n    une autre page du même site Drupal. Néanmoins, une faiblesse dans\n    cette fonction permet de rediriger les utilisateurs vers un autre\n    site externe, ce qui rend possible des attaques de type hameçonnage\n    (phishing) ;\n-   des attaques de type injection de code indirecte sont possibles via\n    le nom de langue transmis aux modules. Toutefois, l'exploitation de\n    ces vulnérabilités nécessite de disposer de droits suffisants sur la\n    gestion des langues ;\n-   dans certains cas, un utilisateur ayant une session ouverte bloquée\n    peut maintenir cette session.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Drupal SA-CORE-2010-001 du 03 mars    2010 :",
+      "url": "http://drupal.org/node/731710"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-108",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-03-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Drupal</span>\npermettent de réaliser des injections de code indirectes et de\ncontourner la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Drupal SA-CORE-2010-001 du 03 mars 2010",
+      "url": null
+    }
+  ]
+}

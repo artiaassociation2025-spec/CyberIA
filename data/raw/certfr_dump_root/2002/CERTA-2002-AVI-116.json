@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système utilisant BIND 9 dans une version antérieure à la  9.2.1 (versions 4 et 8 non affectées).</P>",
+  "content": "## Description\n\nLorsque certains tests de cohérence échouent sur un message, le serveur\ns'arrête au lieu de simplement rejeter la requête. Des paquets peuvent\ndonc être créés pour déclencher ce comportement et obtenir un déni de\nservice.\n\n## Solution\n\nMettre à jour BIND 9 avec une version au moins égale à la 9.2.1.\n\n-   Sources\n\n        http://www.isc.org/products/BIND/bind9.html\n\n-   Red Hat Linux\n\n        http://rhn.redhat.com/errata/RHSA-2002-105.html\n\n-   Mandrake Linux\n\n        http://www.linux-mandrake.com/en/security/2002/MDKSA-2002-038.php\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis du CERT/CC",
+      "url": "http://www.kb.cert.org/vuls/id/739123"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-116",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni du service dns assuré par bind avec incidences sur tous les protocoles l'utilisant (http, smtp,...)"
+    }
+  ],
+  "summary": "Il est possible de fabriquer un paquet DNS qui, envoyé au serveur,\nprovoquera son arrêt.\n",
+  "title": "Déni de service sur BIND 9",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2002-15 du CERT/CC",
+      "url": null
+    }
+  ]
+}

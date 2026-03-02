@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Module <SPAN class=\"textit\">mod_ssl</SPAN> du serveur HTTP  Apache versions 2.0.35 à 2.0.52 incluses.</P>",
+  "content": "## Description\n\nUne vulnérabilité a été découverte dans la gestion des paramètres des\nsessions SSL.\n\nCette vulnérabilité permet à un utilisateur mal intentionné de\ncontourner la politique de sécurité en se connectant au serveur avec des\nparamètres uniquement autorisés pour la connexion à l'un des serveurs\nvirtuels.  \n\nPour pouvoir exploiter cette vulnérabilité, le serveur doit être\nconfiguré avec la directive SSLCipherSuite.\n\n## Solution\n\nAppliquer les correctifs fournis par l'éditeur (cf. section\nDocumentation).  \n\nLa version 2.0.53-dev corrige cette vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité pour ``VMware ESX Server 2.1.2'' :",
+      "url": "http://www.vmware.com/download/esx/esx212-10921update.html"
+    },
+    {
+      "title": "Site Internet du serveur HTTP Apache :",
+      "url": "http://httpd.apache.org"
+    },
+    {
+      "title": "Bulletin de sécurité d'Apache du 11 octobre 2004 :",
+      "url": "http://www.apacheweek.com/features/security-20"
+    },
+    {
+      "title": "Correctifs fournis par Apache :",
+      "url": "http://nagoya.apache.org/bugzilla/show_bug_cg?id=31505"
+    },
+    {
+      "title": "Mise à jour de sécurité pour ``VMware ESX Server 1.5.2'' :",
+      "url": "http://www.vmware.com/download/esx/esx152-10816update.html"
+    },
+    {
+      "title": "Mise à jour de sécurité pour ``VMware ESX Server 2.0.1'' :",
+      "url": "http://www.vmware.com/download/esx/esx201-11429update.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-343",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-10-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence aux mises à jour de sécurité VMware.",
+      "revision_date": "2005-01-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité du module <span class=\"textit\">mod_ssl</span> du\nserveur HTTP Apache permet à un utilisateur mal intentionné de\ncontourner la politique de sécurité.\n",
+  "title": "Vulnérabilité du module mod_ssl du serveur HTTP Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache du 11 octobre 2004",
+      "url": null
+    }
+  ]
+}

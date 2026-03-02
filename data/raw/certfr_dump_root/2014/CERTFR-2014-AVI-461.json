@@ -1,0 +1,92 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco RV180 VPN Router avec un firmware antérieur au 1.0.4.14",
+      "product": {
+        "name": "Small Business",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco RV120W Wireless-N VPN Firewall avec un firmware antérieur au 1.0.5.9",
+      "product": {
+        "name": "Small Business",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco RV220W Wireless Network Security Firewall",
+      "product": {
+        "name": "Small Business",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco RV180W Wireless-N Multifunction VPN Router avec un firmware antérieur au 1.0.4.14",
+      "product": {
+        "name": "Small Business",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Contournement provisoire\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2014-2178",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2014-2178"
+    },
+    {
+      "name": "CVE-2014-2177",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2014-2177"
+    },
+    {
+      "name": "CVE-2014-2179",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2014-2179"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2014-AVI-461",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2014-11-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans <span\nclass=\"textit\">les produits Cisco Small Business RV Series\nRouters</span>. Certaines d'entre elles permettent à un attaquant de\nprovoquer une exécution de code arbitraire, une atteinte à l'intégrité\ndes données et une élévation de privilèges.\n",
+  "title": "Multiples vulnérabilités dans Cisco Small Business RV Series Routers",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco du 05 novembre 2014",
+      "url": "http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141105-rv"
+    }
+  ]
+}

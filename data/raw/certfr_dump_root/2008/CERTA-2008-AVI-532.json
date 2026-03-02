@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Novell eDirectory 8.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Novell",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent Novell eDirectory :\n\n-   de multiples dépassements de tas ont été découverts ;\n-   une corruption de mémoire à distance est possible via NCP ;\n-   httpstk permet d'effectuer une injection de code indirecte.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-4478",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4478"
+    },
+    {
+      "name": "CVE-2008-4480",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4480"
+    },
+    {
+      "name": "CVE-2008-0925",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0925"
+    },
+    {
+      "name": "CVE-2008-4479",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4479"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Novell #5037180 du 23 octobre 2008 :",
+      "url": "http://support.novell.com/docs/Readmes/InfoDocument/patchbuilder/readme_5037180.html"
+    },
+    {
+      "title": "Bulletin de sécurité Novell #5037181 du 23 octobre 2008 :",
+      "url": "http://support.novell.com/docs/Readmes/InfoDocument/patchbuilder/readme_5037181.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-532",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-10-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Non spécifié par l'éditeur"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans Novell eDirectory\npermettant, entre autres, une injection de code indirecte (<span\nclass=\"textit\">XSS</span>).\n",
+  "title": "Multiples vulnérabilités dans Novell eDirectory",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Novell #5037180 et #5037181 du 23 octobre 2008",
+      "url": null
+    }
+  ]
+}

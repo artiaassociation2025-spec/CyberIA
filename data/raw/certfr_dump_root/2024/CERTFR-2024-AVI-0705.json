@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Enterprise Server versions 7.0.x antérieures à 7.0.11",
+      "product": {
+        "name": "Enterprise Server",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Enterprise Server versions 7.3.xantérieures à 7.3.3",
+      "product": {
+        "name": "Enterprise Server",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Enterprise Server versions 6.0.x antérieures à 6.0.16",
+      "product": {
+        "name": "Enterprise Server",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2024-6384",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-6384"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0705",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-08-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans MongoDB Enterprise Server. Elle permet à un attaquant de provoquer une atteinte à la confidentialité des données et un contournement de la politique de sécurité.",
+  "title": "Vulnérabilité dans MongoDB",
+  "vendor_advisories": [
+    {
+      "published_at": "2024-08-13",
+      "title": "Bulletin de sécurité MongoDB SERVER-93516",
+      "url": "https://jira.mongodb.org/browse/SERVER-93516"
+    }
+  ]
+}

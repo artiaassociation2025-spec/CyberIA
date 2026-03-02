@@ -1,0 +1,93 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IBM DB2 Universal Database 8.x.</p>",
+  "content": "## Description\n\nSix vulnérabilités sont présentes dans DB2 et permettent à un\nutilisateur local ou distant de provoquer un déni de service ou de\ncontourner la politique de sécurité du système :\n\n-   Une erreur dans la mise en œuvre des requêtes SQL (Structured Query\n    Language) contenant des chaînes de caractères constantes permet à un\n    utilisateur local de provoquer un déni de service par le biais d'une\n    requête malicieusement constituée.\n-   Une erreur dans la gestion de certains types de tables de hachage\n    provoquant le dépôt de fichiers de journalisation permet à un\n    utilisateur mal intentionné de remplir le système de fichiers\n    induisant potentiellement un déni de service.\n-   Une erreur dans la gestion des connexions au service db2agents se\n    terminant anormalement peut permettre à un utilisateur mal\n    intentionné distant de consommer toutes les ressources processeur du\n    système vulnérable.\n-   Une erreur dans le système de création d'objets permet à un\n    utilisateur mal intentionné de créer un objet exécutable même s'il\n    ne dispose pas de ce droit.\n-   Une erreur dans la gestion des requêtes contenant plus de 32000\n    éléments dans la liste suivant in ou ayant trait aux tables\n    SYSCAT.TABLES permet à un utilisateur mal intentionné de provoquer\n    un déni de service de l'instance de base courante.\n-   Une erreur dans le service db2jd lors de la connexion de certains\n    clients permet à un utilisateur distant mal intentionné de provoquer\n    un déni de service.\n\n## Solution\n\nLa version 8 FixPak 10 (aussi appelée version 8.2 FixPak 3) corrige ces\nproblèmes :\n\n    http://www-1.ibm.com/support/docview.wss?rs=0&uid=swg24010283\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM IY72588 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IY72588"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY70561 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IY70561"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY70808 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IY70808"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY71587 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IY71587"
+    },
+    {
+      "title": "Liste des bulletins de sécurité IBM DB2 du 18 octobre :       Bulletin de sécurité IBM IY70808 :          \n  Bulletin de sécurité IBM IY70561 :          \n  Bulletin de sécurité IBM IY71587 :          \n  Bulletin de sécurité IBM IY71865 :          \n  Bulletin de sécurité IBM IY70817 :          \n  Bulletin de sécurité IBM IY72588 :          \n  Bulletin de sécurité IBM JR21329 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IY72588"
+    },
+    {
+      "title": "Liste des bulletins de sécurité IBM DB2 du 18 octobre :       Bulletin de sécurité IBM IY70808 :          \n  Bulletin de sécurité IBM IY70561 :          \n  Bulletin de sécurité IBM IY71587 :          \n  Bulletin de sécurité IBM IY71865 :          \n  Bulletin de sécurité IBM IY70817 :          \n  Bulletin de sécurité IBM IY72588 :          \n  Bulletin de sécurité IBM JR21329 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IY71865"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY71865 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IY71865"
+    },
+    {
+      "title": "Liste des bulletins de sécurité IBM DB2 du 18 octobre :       Bulletin de sécurité IBM IY70808 :          \n  Bulletin de sécurité IBM IY70561 :          \n  Bulletin de sécurité IBM IY71587 :          \n  Bulletin de sécurité IBM IY71865 :          \n  Bulletin de sécurité IBM IY70817 :          \n  Bulletin de sécurité IBM IY72588 :          \n  Bulletin de sécurité IBM JR21329 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IY71587"
+    },
+    {
+      "title": "Liste des bulletins de sécurité IBM DB2 du 18 octobre :       Bulletin de sécurité IBM IY70808 :          \n  Bulletin de sécurité IBM IY70561 :          \n  Bulletin de sécurité IBM IY71587 :          \n  Bulletin de sécurité IBM IY71865 :          \n  Bulletin de sécurité IBM IY70817 :          \n  Bulletin de sécurité IBM IY72588 :          \n  Bulletin de sécurité IBM JR21329 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1JR21329"
+    },
+    {
+      "title": "Liste des bulletins de sécurité IBM DB2 du 18 octobre :       Bulletin de sécurité IBM IY70808 :          \n  Bulletin de sécurité IBM IY70561 :          \n  Bulletin de sécurité IBM IY71587 :          \n  Bulletin de sécurité IBM IY71865 :          \n  Bulletin de sécurité IBM IY70817 :          \n  Bulletin de sécurité IBM IY72588 :          \n  Bulletin de sécurité IBM JR21329 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IY70817"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY70817 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IY70817"
+    },
+    {
+      "title": "Bulletin de sécurité IBM JR21329 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1JR21329"
+    },
+    {
+      "title": "Site de IBM DB2 :",
+      "url": "http://www-306.ibm.com/software/data/db2"
+    },
+    {
+      "title": "Liste des bulletins de sécurité IBM DB2 du 18 octobre :       Bulletin de sécurité IBM IY70808 :          \n  Bulletin de sécurité IBM IY70561 :          \n  Bulletin de sécurité IBM IY71587 :          \n  Bulletin de sécurité IBM IY71865 :          \n  Bulletin de sécurité IBM IY70817 :          \n  Bulletin de sécurité IBM IY72588 :          \n  Bulletin de sécurité IBM JR21329 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IY70561"
+    },
+    {
+      "title": "Liste des bulletins de sécurité IBM DB2 du 18 octobre :       Bulletin de sécurité IBM IY70808 :          \n  Bulletin de sécurité IBM IY70561 :          \n  Bulletin de sécurité IBM IY71587 :          \n  Bulletin de sécurité IBM IY71865 :          \n  Bulletin de sécurité IBM IY70817 :          \n  Bulletin de sécurité IBM IY72588 :          \n  Bulletin de sécurité IBM JR21329 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1IY70808"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-413",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-10-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans DB2 permettent à un utilisateur local\nou distant mal intentionné de provoquer un déni de service ou de\ncontourner la politique de sécurité du système vulnérable.\n",
+  "title": "Multiples vulnérabilités dans IBM DB2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité IBM du 18 octobre 2005",
+      "url": null
+    }
+  ]
+}

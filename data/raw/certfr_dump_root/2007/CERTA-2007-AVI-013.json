@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions du navigateur Opera antérieures à la 9.10.</P>",
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans le navigateur Web Opera.\n\nLa première concerne la manipulation par le navigateur des images au\nformat JPG (pour Joint Photographic Experts Group). Il n'interpréterait\npas correctement le marqueur DHT (Define Huffman Table(s)) d'une image,\nservant à la compression (ou décompression) de celle-ci. Un site\ncompromis pourrait donc contenir sur une page une image JPG spécialement\nconstruite. La visite de cette page provoquerait sur le poste du\nvisiteur un mauvais fonctionnement du navigateur, voire une exécution de\ncode arbitraire.\n\nLa seconde concerne la manipulation par le navigateur des images au\nformat SVG (pour Scalable Vector Graphics). Il ne vérifierait pas le\nparamètre passé à la fonction Javavascript createSVGTransformFromMatrix.\nUn site compromis pourrait donc contenir sur une page une image SVG\nspécialement construite. La visite de cette page via un navigateur ayant\nJavascript activé provoquerait sur le poste du visiteur l'exécution de\ncode arbitraire avec les droits de ce dernier.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0126",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0126"
+    },
+    {
+      "name": "CVE-2007-0127",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0127"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Suse SUSE-SA:2007:009 du 15 janvier    2007 :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2007-Jan/0009.html"
+    },
+    {
+      "title": "Documentation concernant le format JPEG en français :",
+      "url": "https://kessel.ordrejedis.net/~neo/mathsIPrInfo.pdf"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200701-08 du 12 janvier    2007 :",
+      "url": "http://security.gentoo.org/glsa-200701-08.xml"
+    },
+    {
+      "title": "Avis de sécurité 457 d'iDefense du 05 janvier 2007 :",
+      "url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=457"
+    },
+    {
+      "title": "Avis de sécurité Opera Software 851 du 05 janvier 2007 :",
+      "url": "http://www.opera.com/support/search/supsearch.dml?index=851"
+    },
+    {
+      "title": "Avis de sécurité 458 d'iDefense du 05 janvier 2007 :",
+      "url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=458"
+    },
+    {
+      "title": "Avis de sécurité Opera Software 852 du 05 janvier 2007 :",
+      "url": "http://www.opera.com/support/search/supsearch.dml?index=852"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-013",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-09T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE, Gentoo et Suse.",
+      "revision_date": "2007-01-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Plusieurs vulnérabilités dans le navigateur Opera",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Opera Software du 05 janvier 2007",
+      "url": null
+    }
+  ]
+}

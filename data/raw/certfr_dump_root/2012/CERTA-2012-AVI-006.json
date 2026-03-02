@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenSSL 1.x versions antérieures à 1.0.0f ;",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenSSL 0.x versions antérieures à 0.9.8s.",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités corrigées dans OpenSSL permettent à une\npersonne malveillante d'exécuter du code arbitraire à distance, de\nprovoquer un déni de service à distance, ou de porter atteinte à la\nconfidentialité des données.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-4619",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4619"
+    },
+    {
+      "name": "CVE-2011-4576",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4576"
+    },
+    {
+      "name": "CVE-2011-4577",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4577"
+    },
+    {
+      "name": "CVE-2011-4108",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4108"
+    },
+    {
+      "name": "CVE-2011-4109",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4109"
+    },
+    {
+      "name": "CVE-2012-0027",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0027"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HP du 19 janvier 2012 :",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c03141193"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-006",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-01-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité HP.",
+      "revision_date": "2012-01-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités corrigées dans OpenSSL permettent\nl'exécution de code arbitraire à distance, un déni de service à\ndistance, ou une atteinte à la confidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans OpenSSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenSSL du 04 janvier 2012",
+      "url": "http://openssl.org/news/secadv_20120104.txt"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Linux-PAM version 0.99.7.0.</P>",
+  "content": "## Description\n\nLinux-PAM (Pluggable Authentication Modules for Linux) comporte une\nvulnérabilité dans la fonction \\_unix_verify_password(). Celle-ci permet\nà un utilisateur local d'acquérir un accès à la machine si le condensé\n(hash) de son mot de passe dans le fichier /etc/shadow ou /etc/passwd\nest construit de façon particulière.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0003",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0003"
+    }
+  ],
+  "links": [
+    {
+      "title": "Note de mise à jour de Linux-PAM version 0.99.7.1    :",
+      "url": "http://www.redhat.com/archives/pam-list/2007-january/msg00017.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-049",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Linux-PAM permet à un utilisateur local de\ncontourner la politique de sécurité du système vulnérable.\n",
+  "title": "Vulnérabilité dans Linux-PAM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de mise à jour de la version 0.99.7.1 de Linux-PAM",
+      "url": null
+    }
+  ]
+}

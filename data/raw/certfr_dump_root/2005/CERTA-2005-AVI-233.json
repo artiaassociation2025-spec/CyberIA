@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous les systèmes <TT>DB2 UDB</TT> (<TT>Universal  Database</TT>) dans leurs révisions (<SPAN class=\"textit\">service  levels</SPAN>) :</P>  <UL>    <LI>de la version 8.1.4 à la version 8.1.9 ;</LI>    <LI>de la version 8.2.0 à la version 8.2.2.</LI>  </UL>",
+  "content": "## Description\n\nUne vulnérabilité dans la base de données DB2 permet dans certains cas\nde contourner la vérification des privilèges. Cette vulnérabilité permet\nà un utilisateur qui détient le privilège SELECT sur une table, mais qui\nne possède par pour autant les privilèges INSERT, UPDATE ou DELETE, de\nnéanmoins insérer, mettre à jour ou détruire des enregistrements dans\ncette table.\n\n## Contournement provisoire\n\nUn contournement provisoire est de révoquer le priviliège SELECT de tous\nles utilisateurs ou de toutes les applications, sauf pour ceux à qui on\na fait confiance au point d'accorder des privilièges supérieurs comme\nALTER, CONTROL, DELETE, UPDATE ou INSERT.\n\n## Solution\n\nLa problème est corrigé dans les DB2 UDB Version 8 FixPaks 6c, 7b, 8a,\n9a ainsi que les versions ultérieures des FixPaks.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "La page décrivant la vulnérabilité chez IBM :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21209727"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-233",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-06-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Perte d'intégrité de la base de données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le système DB2 UDB d'IBM permet à un utilisateur\ndoté uniquement de droits en lecture de modifier le contenu de la base\nde données.\n",
+  "title": "Vulnérabilité dans la base de données DB2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "APAR Number : IY73104",
+      "url": null
+    }
+  ]
+}

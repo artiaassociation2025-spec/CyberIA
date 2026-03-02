@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous les systèmes équipés de Microsoft Internet Explorer et de  composants Microsoft Office 2000 :</P>  <UL>    <LI>Word 2000</LI>    <LI>Excel 2000</LI>    <LI>PowerPoint 2000</LI>    <LI>Acces 2000</LI>    <LI>Photodraw 2000</LI>    <LI>FrontPage 2000</LI>    <LI>Project 2000</LI>    <LI>Outlook 2000</LI>    <LI>Publisher 2000</LI>    <LI>Works 2000 suite</LI>  </UL>",
+  "content": "## Description\n\nUn contrôle ActiveX sous Office 2000 permet d'exécuter différentes\nfonctions dans l'environnement Office (par exemple : ouverture de\nfichiers, modification configuration de Word, Excel, etc.)\n\nDans le contrôle ActiveX, il est inexactement marqué « reconnu sur pour\nl'écriture de scripts (safe for scripting) ». Cette vulnérabilité peut\npermettre à un individu malveillant de désactiver à distance\nl'avertissement d'exécution de macro et d'exécuter du code arbitraire.\nElle peut être exploitée par la visualisation d'un document HTML, dans\nun forum de discussion (newsgroups) ou un mél.\n\n## Solution\n\nIl existe un correctif à l'adresse suivante :\n\n    http://officeupdate.microsoft.com/2000/downloadDetails/Uactlsec.htm\n\nComme il est mentionné dans la note d'information CERTA-2000-INF-002, il\nest préférable de désactiver les contrôles ActiveX dans internet\nExplorer :\n\n1.  Menu outils\n2.  Sous menu Options Internet\n3.  Onglet Sécurité\n4.  Personnaliser le niveau\n5.  Choix Contrôles ActiveX et Plugins\n6.  Tout désactiver.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-002",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-05-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités dans Office 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2000-07 du CERT/CC",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "<PRE><A name=\"tex2html1\" href=\"http://www.cert.org/advisories/ca-2000-07.html\" id=\"tex2html1\">http://www.cert.org/advisories/ca-2000-07.html</A></PRE>",
+      "url": null
+    }
+  ]
+}

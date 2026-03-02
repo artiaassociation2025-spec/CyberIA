@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Toutes les versions de AWStats antérieures à la version 6.3.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nAWStats est un outil d'analyse de fichiers journaux et de génération de\nstatistiques pour les serveurs web, FTP ou mail.  \nUne vulnérabilité dans la validation des paramètres passés au script\nawstats.pl permet à un utilisateur mal intentionné d'exécuter du code\narbitraire à distance avec les droits du serveur web.\n\n## Solution\n\nMettre à jour AWStats en version de développement 6.3 ou désactiver\nl'utilisation de AWStats en attendant la prochaine version stable 6.3\n(cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2005-0116",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0116"
+    },
+    {
+      "name": "CVE-2005-0363",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-0363"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200501-36 du 25 janvier    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200501-36.xml"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD awstats :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/www/awstats/README.html"
+    },
+    {
+      "title": "Fichier de la liste des changements de AWStats :",
+      "url": "http://awstats.sourceforge.net/docs/awstats_changelog.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-682 du 15 février 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-682"
+    },
+    {
+      "title": "Site Internet de AWStats :",
+      "url": "http://awstats.sourceforge.net"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour awstats du 16 février    2005 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-035",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-01-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité NetBSD.",
+      "revision_date": "2005-02-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2005-02-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "",
+  "title": "Vulnérabilité de AWStats",
+  "vendor_advisories": [
+    {
+      "published_at": "2005-01-17",
+      "title": "Bulletin de sécurité iDEFENSE",
+      "url": "http://www.idefense.com/application/poi/display?id=185&type=vulnerabilities"
+    }
+  ]
+}

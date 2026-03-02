@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD 6.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 5.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 5.4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 4.10 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 4.11 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nIPsec est un protocole destiné a transporter des données chiffrées sur\nun réseau IP.\n\nLe protocole IPsec met en œuvre un service anti-rejeu (anti-replay\nservice), destiné à empêcher un utilisateur distant mal intentionné de\nrejouer des paquets.\n\nUne vulnérabilité dans la mise en œuvre fast_ipsec, dans le service\nanti-replay, permet à un utilisateur mal intentionné de rejouer des\npaquets. Cette vulnérabilité est causée par une mauvaise vérification\ndes numéros de séquence utilisés lors d'une connexion.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-06-11 du 22 mars 2006 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-06-11.ipsec.asc"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-125",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-03-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la mise en œuvre du protocole IPsec sous FreeBSD\npermet à un utilisateur distant mal intentionné de contourner la\npolitique de sécurité.\n",
+  "title": "Vulnérabilité dana la mise en œuvre IPsec de FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD du 22 mars 2006",
+      "url": null
+    }
+  ]
+}

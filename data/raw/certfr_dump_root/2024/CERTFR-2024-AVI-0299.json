@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "XenServer 8 sans les derniers correctifs de sécurité",
+      "product": {
+        "name": "XenServer",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Hypervisor versions 8.2 CU1 LTSR sans le correctif de sécurité XS82ECU1062",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-46842",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-46842"
+    },
+    {
+      "name": "CVE-2024-31142",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-31142"
+    },
+    {
+      "name": "CVE-2024-2201",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-2201"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Citrix CTX633151 du 11 avril 2024",
+      "url": "https://support.citrix.com/article/CTX633151/xenserver-and-citrix-hypervisor-security-update-for-cve202346842-cve20242201-and-cve202431142"
+    }
+  ],
+  "reference": "CERTFR-2024-AVI-0299",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-04-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans <span\nclass=\"textit\">les produits Citrix</span>. Elles permettent à un\nattaquant de provoquer une atteinte à la confidentialité des données,\nune atteinte à l'intégrité des données et un déni de service à distance.\n\n \n",
+  "title": "Multiples vulnérabilités dans les produits Citrix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Citrix CTX633151 du 11 avril 2024",
+      "url": null
+    }
+  ]
+}

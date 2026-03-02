@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Toutes les versions 1-alpha ;</LI>    <LI>toutes les versions 1-beta ;</LI>    <LI>toutes les versions 1-rc.</LI>  </UL>  <P>Les versions antérieures à la versions 1-alpha0 ainsi que les  version 1.0 et ultérieures sont non affectées.</P>",
+  "content": "## Description\n\nAIFF (Audio Interchange File Format) est un format de fichier reconnu\npar la bibliothèque xine-lib.\n\nUne vulnérabilité est présente dans la routine de traitement des\nen-têtes de fichiers au format AIFF dans xine. Un utilisateur mal\nintentionné peut provoquer l'exécution de code arbitraire à distance,\npar le biais d'un fichier ou d'un site web habilement constitués.\n\nL'exploitation de cette vulnérabilité ne se limite pas aux fichiers\nAIFF, car le démultiplexeur AIFF peut être utilisé pour traiter des\nfichiers qui ne sont pas au format AIFF.\n\n## Solution\n\nSe référer au site de Xine pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD « libxine - buffer-overflow    vulnerability in aiff support » du 29 décembre 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200501-07 du 06 janvier    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200501-07.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2005:011 du 19 janvier    2005 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2005:011"
+    },
+    {
+      "title": "Site de Xine :",
+      "url": "http://xinehq.de"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-004",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-01-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité Gentoo GLSA-200501-07.",
+      "revision_date": "2005-01-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité Mandrake MDKSA-2005:011.",
+      "revision_date": "2005-01-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le démultiplexeur AIFF de Xine permet l'exécution\nde code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans Xine",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité XSA-2004-7 de Xine",
+      "url": null
+    }
+  ]
+}

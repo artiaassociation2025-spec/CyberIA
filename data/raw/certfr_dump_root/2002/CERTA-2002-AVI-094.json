@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "RealSecure Network Sensor 6.5.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealSecure Network Sensor 6.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealSecure Network Sensor 5.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nRealSecure Network Sensor est un système de détection d'intrusions.\n\nUne vulnérabilité présente dans le traitement de certaines requêtes DHCP\npeut entraîner l'arrêt intempestif de RealSecure Network Sensor.\n\nCette vulnérabilité est exploitable à distance.\n\n## Contournement provisoire\n\nDésactiver les signatures DHCP_ACK, DHCP_Discover et DHCP_Request dans\nla configuration de RealSecure Network Sensor.\n\n## Solution\n\nAppliquer la mise à jour RealSecure X-Press Update 4.3 (se référer à la\nsection documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de ISS :",
+      "url": "http://www.iss.net/"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-094",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-05-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut réaliser un déni de service sur\nRealSecure Network Sensor de ISS (Internet Security Systems) par le\nbiais de paquets malicieusement construits.\n",
+  "title": "Vulnérabilité sur RealSecure Network Sensor",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste de diffusion Bugtraq",
+      "url": null
+    }
+  ]
+}

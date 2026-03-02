@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "QuTS hero versions antérieures à h4.5.4.1771 du 25/08/2021",
+      "product": {
+        "name": "QuTS hero",
+        "vendor": {
+          "name": "Qnap",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "QTS versions antérieures à 4.5.4.1787 du 10/09/2021",
+      "product": {
+        "name": "QTS",
+        "vendor": {
+          "name": "Qnap",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "QuTScloud versions antérieures à c4.5.7.1864",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Qnap",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "QNAP NAS utilisant QVPN Service versions antérieures à 3.0.760 du 17/12/2021",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Qnap",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-38674",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-38674"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-009",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-01-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits QNAP.\nElles permettent à un attaquant de provoquer une exécution de code\narbitraire à distance et une injection de code indirecte à distance\n(XSS).\n",
+  "title": "Multiples vulnérabilités dans les produits QNAP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité QNAP qsa-21-63 du 7 janvier 2022",
+      "url": "https://www.qnap.com/fr-fr/security-advisory/qsa-21-63"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité QNAP qsa-21-61 du 7 janvier 2022",
+      "url": "https://www.qnap.com/fr-fr/security-advisory/qsa-21-61"
+    }
+  ]
+}

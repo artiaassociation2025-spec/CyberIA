@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Explorer version 6.0 pour Windows Server 2003.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer versions 5.01, 5.5 et 6.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Première vulnérabilité (CVE CAN-2003-0352) : Internet Explorer ne\n    contrôle pas correctement le type de données spécifié dans\n    l'attribut data de la balise object ;\n-   seconde vulnérabilité (CVE CAN-2003-0351) : lors de l'accès aux\n    données du cache, il est possible de contourner le cloisonnement mis\n    en place au moyen des zones de sécurité au niveau d'Internet\n    Explorer ;\n-   troisième vulnérabilité (CVE CAN-2003-0350) : le contrôle ActiveX\n    BR549.DLL présente une faille de type débordement de mémoire. Ce\n    contrôle ActiveX est désactivé automatiquement lors de l'application\n    du correctif.\n\n## Solution\n\nAppliquer le correctif de l'éditeur :\n\n    http://www.microsoft.com/technet/security/bulletin/MS03-032.asp\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité \"Internet Explorer Object Data Remote    Execution Vulnerability\" de eEye :",
+      "url": "http://www.eeye.com/html/Research/Advisories/AD20030820.html"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-139",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-08-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Trois vulnérabilités présentes dans Microsoft Internet Explorer peuvent\nêtre exploitées au moyen d'un site web ou d'un message électronique au\nformat HTML habilement constitué et permettre ainsi à un utilisateur mal\nintentionné d'exécuter du code arbitraire sur la plate-forme vulnérable.\n",
+  "title": "Multiples vulnérabilités dans Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS03-032 de Microsoft",
+      "url": null
+    }
+  ]
+}

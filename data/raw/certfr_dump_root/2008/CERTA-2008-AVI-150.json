@@ -1,0 +1,150 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Asterisk Business Edition C.x.x pour les versions antérieures à C.1.6.1 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Open Source 1.4.x pour les versions antérieures à 1.4.18.1 et 1.4.19-rc3 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "s800i (Asterisk Appliance) 1.1.x pour les versions antérieures à 1.1.0.2.",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Open Source 1.6.x pour les versions antérieures à 1.6.0-beta6 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Business Edition B.x.x pour les versions antérieures à B.2.5.1 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Appliance Developer Kit (SVN) pour les versions antérieures à 1.4 revision 109386 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "AsteriskNOW 1.0.x pour les versions antérieures à 1.0.2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Open Source 1.2.x pour les versions antérieures à 1.2.27 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans le gestionnaire de\ntéléphonie sur IP Asterisk :\n\n-   l'application ne manipulerait pas correctement certains contenus\n    RTP, provoquant des écritures dans des zones arbitraires de la\n    mémoire. Ces vulnérabilités peuvent être exploitées par le biais de\n    toute requête SIP avec SDP (Session Description Protocol), comme\n    INVITE.\n-   il serait possible de lancer des appels non authentifiés à cause\n    d'un mauvais contrôle du champs From de l'en-tête SIP par le pilote\n    de canal SIP. Il s'agit du contournement de l'option de\n    configuration allowguest.\n-   le format de journalisation des messages n'est pas interprété\n    correctement via l'interface ast_verbose.\n-   la génération des identifiants de session (manager ID) dans le\n    serveur AsteriskGUI HTTP serait relativement prévisible.\n\nCes vulnérabilités peuvent donc être exploitées afin de perturber le\nservice, lancer des appels à l'insu des utilisateurs ou écrire dans des\nzones de mémoire arbitraires.\n\n## Solution\n\nSe référer aux bulletins du projet Asterisk pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1333",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1333"
+    },
+    {
+      "name": "CVE-2008-1289",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1289"
+    },
+    {
+      "name": "CVE-2008-1390",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1390"
+    },
+    {
+      "name": "CVE-2008-1332",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1332"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité AST-2008-002 du projet Asterisk du 18    mars 2008 :",
+      "url": "http://downloads.digium.com/pub/security/AST-2008-002.html"
+    },
+    {
+      "title": "Bulletin de sécurité AST-2008-003 du projet Asterisk du 18    mars 2008 :",
+      "url": "http://downloads.digium.com/pub/security/AST-2008-003.html"
+    },
+    {
+      "title": "Bulletin de sécurité AST-2008-004 du projet Asterisk du 18    mars 2008 :",
+      "url": "http://downloads.digium.com/pub/security/AST-2008-004.html"
+    },
+    {
+      "title": "Bulletin de sécurité AST-2008-005 du projet Asterisk du 18    mars 2008 :",
+      "url": "http://downloads.digium.com/pub/security/AST-2008-005.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-150",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-03-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans le gestionnaire de\ntéléphonie sur IP Asterisk. Celles-ci peuvent être exploitées afin de\nperturber le service, lancer des appels à l'insu des utilisateurs ou\nécrire dans des zones de mémoire arbitraires.\n",
+  "title": "Multiples vulnérabilités dans Asterisk",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Asterisk publiés le 18 mars 2008",
+      "url": null
+    }
+  ]
+}

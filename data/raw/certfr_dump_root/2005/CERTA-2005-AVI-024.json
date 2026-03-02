@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><TT>Veritas Backup Exec</TT> versions 8.6 et 9.x.</P>",
+  "content": "## Description\n\nVeritas Backup Exec est un serveur de sauvegarde.\n\nUne vulnérabilité a été découverte dans la fonction de réception et de\ntraitement des requêtes d'enregistrement. La requête d'enregistrement\ncontient le nom de machine et le port du client qui veut se connecter.\nEn donnant un nom de machine très long, un utilisateur mal intentionné\nqui se connecte sur le serveur Backup Exec peut exécuter du code\narbitraire à distance avec les droits du service Backup Exec\n(généralement administrateur de domaine).\n\n## Contournement provisoire\n\nFiltrer le port 6101/tcp au niveau des pare-feux.\n\n## Solution\n\nAppliquer le correctif (cf. section Documentation)\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctif pour la version 9.1.4691 :",
+      "url": "http://support.veritas.com/docs/273420"
+    },
+    {
+      "title": "Correctif pour la version 9.0.4454 :",
+      "url": "http://support.veritas.com/docs/274298"
+    },
+    {
+      "title": "Correctif pour la version 8.60.3878 :",
+      "url": "http://support.veritas.com/docs/273850"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-024",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-01-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de Veritas Backup Exec",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité 273419 de Veritas",
+      "url": "http://support.veritas.com/docs/273419"
+    }
+  ]
+}

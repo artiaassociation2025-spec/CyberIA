@@ -1,0 +1,47 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<ul> <li>ShareFile Storage Zones Controller 5.9.0 versions antérieures à 5.9.1</li> <li>ShareFile Storage Zones Controller 5.8.0 versions antérieures à 5.8.1</li> <li>ShareFile Storage Zones Controller 5.7.0 versions antérieures à 5.7.1</li> <li>ShareFile StorageZones Controller 5.6.0 versions antérieures à 5.6.1</li> <li>ShareFile StorageZones Controller 5.5.0 versions antérieures à 5.5.1</li> </ul> <p>La version 5.10.x n'est pas affectée par ces vulnérabilités.</p> ",
+  "content": "## Solution\n\n**Note importante** : L'éditeur précise que l'application des correctifs\nne protège pas une zone de stockage créée avec un Storage Zone\nController vulnérable. L'éditeur a publié un outil de réparation qu'il\nest impératif d'utiliser pour protéger les zones de stockages existantes\n\\[1\\]. Cet outil est à manier avec précaution, aucun retour arrière ne\ndoit être ensuite effectué au risque de perdre la zone de stockage.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2020-8982",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-8982"
+    },
+    {
+      "name": "CVE-2020-7473",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-7473"
+    },
+    {
+      "name": "CVE-2020-8983",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-8983"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2020-AVI-267",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2020-05-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Citrix ShareFile\nStorage Zones Controller. Elles affectent Citrix ShareFile lorsque des\nzones de stockage \"privées\" sont créées. Elles permettent à un attaquant\nde provoquer une atteinte à la confidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans Citrix ShareFile",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "[1] Bulletin de sécurité Citrix CTX269341 du 5 mai 2020",
+      "url": "https://support.citrix.com/article/CTX269341"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Citrix CTX269106 du 5 mai 2020",
+      "url": "https://support.citrix.com/article/CTX269106"
+    }
+  ]
+}

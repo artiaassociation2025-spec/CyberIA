@@ -1,0 +1,141 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Tout système (Unix, Microsoft DOS/Windows) utilisant xpdf versions 2 jusqu'à 3.0 (ou des versions dérivées telles Gnome gpdf ou KDE kpdf) comme lecteur de documents PDF ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "tout système Unix utilisant le service d'impression CUPS (pour les sources jusqu'à la version 1.1.22rc2).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes lecteurs xpdf depuis la version 2.0 jusqu'à la version 3.0\ncomportent plusieurs débordements d'entiers (références CVE\nCAN-2004-0888 et CAN-2004-0889). Ils peuvent alors être utilisés pour\nexécuter du code arbitraire avec les privilèges de l'utilisateur\nconsultant un document PDF volontairement mal construit.\n\nCUPS est un service d'impression disponible sur de nombreux systèmes\nUnix. Il est souvent accessible par le réseau à l'aide du protocole IPP\n(\\`\\`Internet Printing Protocol'') sur le port 631/tcp. Un utilisateur\ndistant mal intentionné peut alors lui soumettre un document PDF\nhabilement construit qui provoquera l'exécution de code avec les\nprivilèges du service (généralement l'utilisateur lp).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD xpdf :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/print/xpdf/README.html"
+    },
+    {
+      "title": "Site Internet de xpdf :",
+      "url": "http://www.foolabs.com/xpdf/"
+    },
+    {
+      "title": "Bulletins de sécurité Mandrake :        xpdf, MDKSA-2004:113 du 21          octobre 2004 :          \n   gpdf, MDKSA-2004:114 du 21          octobre 2004 :          \n   kdegraphics (kpdf), MDKSA-2004:115 du 21 octobre 2004          :          \n  CUPS, MDKSA-2004:116 du 21 octobre 2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:114"
+    },
+    {
+      "title": "Bulletin de sécurité Debian :       CUPS, DSA-573 du 21 octobre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-573"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200410-20 du 21 octobre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200410-20.xml"
+    },
+    {
+      "title": "gpdf, MDKSA-2004:114 du 21          octobre 2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:114"
+    },
+    {
+      "title": "CUPS, MDKSA-2004:116 du 21 octobre 2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:116"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-599 du 25 novembre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-599"
+    },
+    {
+      "title": "Bulletins de sécurité Mandrake :        xpdf, MDKSA-2004:113 du 21          octobre 2004 :          \n   gpdf, MDKSA-2004:114 du 21          octobre 2004 :          \n   kdegraphics (kpdf), MDKSA-2004:115 du 21 octobre 2004          :          \n  CUPS, MDKSA-2004:116 du 21 octobre 2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:113"
+    },
+    {
+      "title": "CUPS, DSA-573 du 21 octobre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-573"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:592 du 27 octobre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-592.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:543 du 22 octobre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-543.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour xpdf du 25 octobre 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Site Internet de CUPS :",
+      "url": "http://www.cups.org"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD pour xpdf du 23 octobre 2004 :",
+      "url": "http://www.vuxml.org/openbsd/"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:066 du 15 février    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-066.html"
+    },
+    {
+      "title": "kdegraphics (kpdf), MDKSA-2004:115 du 21 octobre 2004          :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:115"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SA:2004:039 du 26 octobre    2004 :",
+      "url": "http://www.suse.com/de/security/2004_39_pdftools_cups.html"
+    },
+    {
+      "title": "Bulletins de sécurité Mandrake :        xpdf, MDKSA-2004:113 du 21          octobre 2004 :          \n   gpdf, MDKSA-2004:114 du 21          octobre 2004 :          \n   kdegraphics (kpdf), MDKSA-2004:115 du 21 octobre 2004          :          \n  CUPS, MDKSA-2004:116 du 21 octobre 2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:115"
+    },
+    {
+      "title": "Bulletins de sécurité Mandrake :        xpdf, MDKSA-2004:113 du 21          octobre 2004 :          \n   gpdf, MDKSA-2004:114 du 21          octobre 2004 :          \n   kdegraphics (kpdf), MDKSA-2004:115 du 21 octobre 2004          :          \n  CUPS, MDKSA-2004:116 du 21 octobre 2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:116"
+    },
+    {
+      "title": "xpdf, MDKSA-2004:113 du 21          octobre 2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:113"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-357",
+  "revisions": [
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat RHSA-2005:066.",
+      "revision_date": "2004-02-17T00:00:00.000000"
+    },
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-10-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo, RedHat, SUSE, FreeBSD, OpenBSD et NetBSD.",
+      "revision_date": "2004-11-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian.",
+      "revision_date": "2004-11-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service ; exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs failles ont été identifiées dans <span\nclass=\"textit\">xpdf</span>. Elles permettent à un individu mal\nintentionné, via un document PDF habilement construit, d'exécuter du\ncode arbitraire avec les privilèges de l'utilisateur.\n\nCes failles affectent les produits qui reprennent du code de <span\nclass=\"textit\">xpdf</span>, en particulier les lecteurs <span\nclass=\"textit\">gdf</span>, <span class=\"textit\">kpdf</span> et le\nservice d'impression CUPS (\\`\\`Common Unix Printing System'').\n",
+  "title": "Vulnérabilités du lecteur PDF xpdf et de ses dérivés et du service d'impression CUPS",
+  "vendor_advisories": []
+}

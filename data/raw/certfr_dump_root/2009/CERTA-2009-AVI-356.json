@@ -1,0 +1,35 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Symantec Altiris Deployment  Solution</SPAN> versions 6.9.x.</P>",
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Symantec Altiris\nDeployment Solution :\n\n-   le système d'authentification de DBManager peut être contourné. Un\n    attaquant peut ainsi modifier la base de données ;\n-   l'interface graphique d'Aclient fonctionne avec les privilèges de\n    l'utilisateur connecté. Un utilisateur du groupe Everyone a des\n    droits en écriture sur l'exécutable de cette interface. Il peut donc\n    le remplacer par un autre exécutable, ce qui peut mener à une\n    élévation des privilèges ;\n-   un utilisateur malintentionné contrôlant (ou simulant) un serveur\n    Altiris peut envoyer des commandes à un client lors de la phase qui\n    précède l'authentification ;\n-   un attaquant peut intercepter les fichiers envoyés par le serveur à\n    un client légitime.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2009-AVI-356",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Symantec Altiris\nDeployment Solution</span> permettent, entre autres, d'exécuter du code\narbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans Symantec Altiris Deployment Solution",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symantec SYM09-011 du 26 août 2009",
+      "url": "http://www.symantec.com/business/security_response/securityupdates/detail.jsp?fid=security_advisory&pvid=security_advisory&suid=20090826_00"
+    }
+  ]
+}

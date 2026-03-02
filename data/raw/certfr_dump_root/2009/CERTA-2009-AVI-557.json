@@ -1,0 +1,56 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>OSSIM version 2.1.5-3 et version  précédentes.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent OSSIM (Open Source Security\nInformation Management) :\n\n-   un manque de vérification dans le script repository_attachment.php\n    permet à un utilisateur malveillant de charger à distance un fichier\n    arbitraire à la racine du site et d'exécuter du code PHP ;\n-   un manque de validation de certaines variables permet à un\n    utilisateur malveillant d'exécuter des commandes à distance ;\n-   un manque de vérification dans le script repository_attachment.php\n    permet à un utilisateur malveillant d'injecter ou de modifier des\n    requêtes SQL.\n\n## Solution\n\nLa version 2.1.5-4 remédie à ces problèmes. Se référer au bulletin de\nsécurité de l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-4375",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-4375"
+    },
+    {
+      "name": "CVE-2009-4372",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-4372"
+    },
+    {
+      "name": "CVE-2009-4374",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-4374"
+    },
+    {
+      "name": "CVE-2009-4373",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-4373"
+    }
+  ],
+  "links": [
+    {
+      "title": "Annonce de la version OSSIM 2.1.5-4 du 16 décembre 2009 :",
+      "url": "http://www.alienvault.com/community.php?section=News"
+    },
+    {
+      "title": "Site de téléchargement du projet OSSIM :",
+      "url": "http://www.sourceforge.net/projects/os-sim/"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-557",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-12-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE.",
+      "revision_date": "2009-12-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent OSSIM et permettent à un utilisateur\nmalveillant de contourner la politique de sécurité ou d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilités dans OSSIM",
+  "vendor_advisories": []
+}

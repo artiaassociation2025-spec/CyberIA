@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Wireshark, pour les versions antérieures à 0.99.6.",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans l'outil de capture et\nd'analyse de trafic réseau Wireshark. Ce dernier est la suite du projet\nEthereal achevé en 2006.\n\nLes vulnérabilités sont dues à de mauvaises manipulations de certaines\ntrames, dont :\n\n-   une réponse HTTP particulière utilisant un mauvais encodage ;\n-   un paquet particulier DCP ETSI (ETSI Distribution and Communication\n    Protocol ;\n-   un paquet malformé SSL ;\n-   un paquet malformé MMS ;\n-   un paquet DHCP utilisé avec DOCSIS.\n\nCertains fichiers de capture iSeries peuvent également provoquer une\nerreur à l'ouverture.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3391",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3391"
+    },
+    {
+      "name": "CVE-2007-3393",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3393"
+    },
+    {
+      "name": "CVE-2007-3389",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3389"
+    },
+    {
+      "name": "CVE-2007-3390",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3390"
+    },
+    {
+      "name": "CVE-2007-3392",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3392"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Wireshark du 25 juin 2007 :",
+      "url": "http://www.wireshark.org/security/wnpa-2007-02.html"
+    },
+    {
+      "title": "Notes des modifications apportées à la version 0.99.6 de    Wireshark :",
+      "url": "http://www.wireshark.org/docs/relnotes/wireshark-0.99.6.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:145 du 10 juillet    2007 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:145"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1322 du 27 juin 2007 :",
+      "url": "http://www.debian.org/security/2007/dsa-1322"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SR:2007:015 du 03 août 2007    :",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2007-08/msg00003.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200708-12 du 16 août 2007    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200708-12.xml"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-278",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-06-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo, Mandriva, SuSE et Debian.",
+      "revision_date": "2007-08-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans Wireshark (Ethereal).\nElles permettraient à une personne distante de provoquer une\nperturbation du service sur le système utilisant une version vulnérable.\n",
+  "title": "Vulnérabilités dans Wireshark",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Wireshark wnpa-sec-2007-002 du 25 juin 2007",
+      "url": null
+    }
+  ]
+}

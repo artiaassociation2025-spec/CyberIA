@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BIND versions 9.12.x antérieures à 9.12.2-P1 si \"deny-answer-aliases\" est activé",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND versions 9.11.x antérieures à 9.11.4-P1 si \"deny-answer-aliases\" est activé",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND versions 9.7.x, 9.8.x et 9.9.x antérieures à 9.9.13-P1 si \"deny-answer-aliases\" est activé",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND versions 9.10.x antérieures à 9.10.8-P1 si \"deny-answer-aliases\" est activé",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2018-5740",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2018-5740"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2018-AVI-380",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2018-08-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans BIND . Elle permet à un\nattaquant de provoquer un déni de service à distance.\n",
+  "title": "Vulnérabilité dans BIND",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité BIND CVE-2018-5740 du 08 août 2018",
+      "url": "https://kb.isc.org/article/AA-01639/74/CVE-2018-5740%3A-A-flaw-in-the-deny-answer-aliases-feature-can-cause-an-INSIST-assertion-failure-in-named.html"
+    }
+  ]
+}

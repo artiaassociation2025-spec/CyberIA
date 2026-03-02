@@ -1,0 +1,84 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows Vista Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2008 R2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2008 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 7.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa vulnérabilité est due à un dépassement d'entier (integer overflow)\nd'un compteur dans la pile TCP/IP de Windows. Cette vulnérabilité\npourrait être exploitée par une personne malintentionnée en envoyant un\ngrand nombre de paquets UDP spécialement conçus à destination d'un port\nqui n'est pas en écoute. Le traitement de ces paquets peut conduire à un\ndépassement d'entier d'un compteur de référence, et finalement mener à\nune exécution de code arbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2013",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2013"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS11-083 du 08 novembre 2011    :",
+      "url": "http://technet.microsoft.com/en-us/security/bulletin/MS11-083"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS11-083 du 08 novembre 2011    :",
+      "url": "http://technet.microsoft.com/fr-fr/security/bulletin/MS11-083"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-621",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-11-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la pile TCP/IP de <span\nclass=\"textit\">Windows</span> permet à une personne malintentionnée\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans la pile TCP/IP de Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS-11-083 du 08 novembre 2011",
+      "url": null
+    }
+  ]
+}

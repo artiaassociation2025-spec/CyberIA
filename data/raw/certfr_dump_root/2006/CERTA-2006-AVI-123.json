@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><TT>qmailadmin</TT> versions sources 1.2.8 et 1.2.9.</P>",
+  "content": "## Description\n\nqmailadmin est utilitaire de gestion par interface « web » des domaines\nvirtuels d'un service de messagerie utilisant qmail. Ce programme est\ninvoqué par un serveur « web » hôte.\n\nUn débordement de tampon dans la gestion des informations sur la requête\ntransmises par le serveur peut être utilisée pour exécuter du code\narbitraire avec les privilèges du programme, soit root.\n\n## Contournement provisoire\n\nRestreindre à l'accès à l'interface « web » d'administration à des\nsystèmes de confiance au moyen d'un pare-feu ou de directives dans la\nconfiguration du serveur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation) ou mettre à jour les sources en\nversion 1.2.10 au moins.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site internet de qmailadmin :",
+      "url": "http://www.inter7.com/index.php?page=qmailadmin"
+    },
+    {
+      "title": "Bulletin de sécurité Secunia #19262 du 17 mars 2006 :",
+      "url": "http://secunia.com/advisories/19262/"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-123",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-03-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Un utilisateur distant mal intentionné peut utiliser un lien réticulaire\n(URL) habilement construit pour exécuter du code arbitraire sur le\nsystème hôte du programme qmailadmin avec les droits de\nl'administrateur.\n",
+  "title": "Vulnérabilité dans qmailadmin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Secunia",
+      "url": null
+    }
+  ]
+}

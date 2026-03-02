@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM AIX 5L POWER (version 510).",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM AIX 4.3.0 (version 433) ;",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa fonction tcp_input0() de gestion des paquets TCP entrant et sortant\nne vide pas correctement la mémoire tampon mbuf dans certaines\nconditions.\n\nUn utilisateur mal intentionné peut fabriquer des paquets TCP de façon à\nfaire déborder la mémoire tampon.\n\nCe débordement de mémoire peut conduire à un déni de service ou figer\ncomplètement le système.\n\n## Solution\n\n-   Appliquer le correctif APAR pour AIX 4.3.0 (version 433)\n    conformément au bulletin de sécurité IY 31641 de IBM.\n-   Appliquer le correctif APAR pour AIX 5L POWER (version 510)\n    conformément au bulletin de sécurité IY 31940 de IBM.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-228",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité de la gestion des paquets TCP par le système AIX d'IBM\npermet à un utilisateur mal intentionné d'effectuer un déni de service à\ndistance sur la machine cible.\n",
+  "title": "Vulnérabilité des systèmes AIX de IBM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IY 31940 de IBM",
+      "url": "http://techsupport.services.ibm.com/server/aix.uhuic_getrec?args=DVsteamboat.boulder.ibm.com+DBAIX2+DA7811+STIY31641+USbin"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IY 31641 de IBM",
+      "url": "http://techsupport.services.ibm.com/server/aix.uhuic_getrec?args=DVsteamboat.boulder.ibm.com+DBAIX2+DA10115+STIY31641+USbin"
+    }
+  ]
+}

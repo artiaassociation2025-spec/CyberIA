@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions d'Evolution antérieures à 2.8.2.1 (comprise).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans l'application bureautique\nEvolution, pouvant servir de client de messagerie, de carnet d'adresses\nou de calendrier. Le fichier calendar/gui/e-cal-component-memo-preview.c\nmet en œuvre une fonction nommée write_html() qui ne manipulerait pas\ncorrectement certaines chaînes de caractères.\n\nUne personne malveillante pourrait ainsi, en incitant sa victime à\nouvrir un « memo » spécialement conçu, exécuter du code arbitraire sur\nle système ayant une version vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-1002",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1002"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-442-1 du 26 mars 2007 :",
+      "url": "http://www.ubuntu.com/usn/usn-442-1"
+    },
+    {
+      "title": "Avis de sécurité de Secunia Research 2007-44 du 21 mars    2007 :",
+      "url": "http://secunia.com/secunia_research/2007-44/advisory/"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:070 du 27 mars    2007 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:070"
+    },
+    {
+      "title": "Site du projet Evolution :",
+      "url": "http://www.gnome.org/projects/evolution/"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-145",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-03-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans Evolution",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de Sécunia Research 2007-44 du 21 mars 2007",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "RealSecure 3.2.1 sous Solaris ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealSecure 3.2.1 sous Windows NT.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealSecure 3.2.2 sous Solaris ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nISS RealSecure est un logiciel permettant une surveillance du trafic\nréseau, par le biais d'un agent de réseau, dans le but de découvrir des\nsignatures d'attaques.\n\nUne vulnérabilité sur le traitement des paquets ayant l'indicateur SYN a\nété découverte dans cet agent de réseau entraînant l'arrêt du moteur\nréseau.  \n  \n\nSous Solaris, l'arrêt du moteur est signifié à la console traitant les\ndonnées du moteur et des agents.\n\nSous NT, le moteur se relance juste après avoir été arrêté, provoquant\nainsi 100 % d'activité CPU.\n\n## Contournement provisoire\n\nAucun correctif n'est actuellement disponible auprès de l'éditeur.\nCependant la désactivation de la détection d'attaque par SynFlood et\nIPFrag contourne cette vulnérabilité mais laisse le réseau vulnérable\nsur ce type d'attaque.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-038",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement des détections d'attaques"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le moteur réseau d'ISS RealSecure permet\nd'arrêter l'agent responsable du contrôle des paquets du réseau.\n",
+  "title": "Vulnérabilité sous ISS REAL SECURE",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bugtraq",
+      "url": null
+    }
+  ]
+}

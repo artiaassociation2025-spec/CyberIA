@@ -1,0 +1,31 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système Windows utilisant ``DameWare Mini Remote  Control'' comme service.</P>",
+  "content": "## Description\n\n\\`\\`DameWare Mini Remote Control'' est un utilitaire de prise en\ncontrôle à distance d'un ordinateur Windows fonctionnant en mode client\nou serveur. La vulnérabilité ci-dessus permet d'exécuter du code sur les\nhôtes censés être controlés à distance.\n\n## Contournement provisoire\n\nLimiter l'accès au port d'écoute du service, 6129/tcp, à des adresses IP\nde confiance à l'aide de règles de filtrage.\n\n## Solution\n\nMettre à jour en version 3.73 au moins :\n\n    http://www.dameware.com/download/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis original :",
+      "url": "http://sh0dan.org/files/dwmrcs372.txt"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-214",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-12-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance avec des privilèges élevés"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité, de type débordement de tampon, permet à un\nutilisateur mal intentionné d'exécuter du code arbitraire à distance\nsans authentification.\n",
+  "title": "Vulnérabilité de DameWare Mini Remote Control",
+  "vendor_advisories": []
+}

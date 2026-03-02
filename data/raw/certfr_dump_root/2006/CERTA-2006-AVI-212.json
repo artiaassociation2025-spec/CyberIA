@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions du logiciel matériel (ou <SPAN class=\n  \"textit\">firmware</SPAN>) pour les routeurs Linksys WRT54G  Wireless-G Broadband antérieures à 1.00.9.</P>",
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le logiciel de fonctionnement\n(firmware) des routeurs Linksys WRT54G Wireless-G Broadband. Il\nn'authentifie pas de manière correcte certaines requêtes UPnP (pour\nUniversal Plug & Play) de type AddPortMapping : la validation du champ\nInternalClient de la requête ne se fait pas. Un utilisateur malveillant\npeut profiter de cette vulnérabilité pour configurer le transfert de\nports (ou port forwarding) et diriger le trafic issu d'une machine\nlocale vers une autre machine à l'extérieur du réseau. La politique de\nsécurité est alors contournée.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). Le correctif français n'existe\npas encore. Il est fortement recommandé de désactiver le protocole UPnP\nsi celui-ci n'est pas utilisé. Pour cela, se reporter au manuel de\nl'utilisateur qui indique comment décocher l'option UPnP dans\nl'interface web d'administration.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de mise à jour Linksys du 16 mai 2006 :",
+      "url": "http://www.linksys.com/download/"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-212",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-23T00:00:00.000000"
+    },
+    {
+      "description": "ajout d'un contournement provisoire pour la version française.",
+      "revision_date": "2006-05-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans le logiciel de fonctionnement\ndes routeurs Linksys WRT54G Wireless-G Broadband. Elle peut être\nutilisée par une personne malveillante pour rediriger du trafic à partir\ndu réseau local vers une machine distante, et ainsi contourner la\npolitique de sécurité en vigueur.\n",
+  "title": "Vulnérabilité des routeurs Linksys WRT54G",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise à jour de Linksys du 16 mai 2006",
+      "url": null
+    }
+  ]
+}

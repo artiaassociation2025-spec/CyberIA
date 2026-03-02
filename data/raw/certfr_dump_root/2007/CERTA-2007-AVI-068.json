@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<SPAN class=\"textit\">Samba</SPAN>  3.0.23d et versions antérieurs.",
+  "content": "## Description\n\nLe logiciel Samba est un logiciel libre de partage de ressources qui\nutilise le protocole SMB (Server Message Block).\n\nUn défaut de validation des entrées du l'utilisateur permettrait à une\npersonne malveillante d'exécuter à distance un code arbitraire, dans le\ncontexte de l'utilisateur.\n\nUn défaut de validation d'entrée dans les fonctions gethostbyname() et\ngetipnodebyname() permettrait l'exécution de code arbitraire à distance\nlorsque le service winbind est activé.\n\nUne erreur dans smbd permettrait à un utilisateur authentifié de\nprovoquer une boucle infinie et ainsi un déni de service à distance.\n\n## Solution\n\nLa version 3.0.24 de Samba corrige le problème. Se référer au bulletin\nde sécurité de l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0453",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0453"
+    },
+    {
+      "name": "CVE-2007-0452",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0452"
+    },
+    {
+      "name": "CVE-2007-0454",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0454"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007-034 du 5 février    2007 (CVE-2007-0452, CVE-2007-0454) :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:034"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat (CVE-2007-0452)    RHSA-2007-0060-3 du 15 février 2007 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0060.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1257 du 05 février 2007 :",
+      "url": "http://www.debian.org/security/2007/dsa-1257"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200702-01 du 13 février    2007 (CVE-2007-0452, CVE-2007-0454) :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200702-01.xml"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SA:2007-016 du 15 février 2007 :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2007-Feb/0002.html"
+    },
+    {
+      "title": "Bulletin de sécurité HP-UX du 04 avril 2007 (CVE-2007-0452)    :",
+      "url": "http://itrc.hp.com/service/cki/docDisplay.do?docId=c00943462"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat (CVE-2007-0452)    RHSA-2007-0061-2 du 14 mars 2007 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0061.html"
+    },
+    {
+      "title": "Site du projet Samba :",
+      "url": "http://www.samba.org/"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-419-1 du 6 février 2007    (CVE-2007-0452, CVE-2007-0454) :",
+      "url": "http://www.ubuntu.com/usn/usn-419-1"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-068",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-02-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité de Ubuntu, Mandriva, HP-UX, Gentoo, et SuSE.",
+      "revision_date": "2007-04-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Trois vulnérabilités de <span class=\"textit\">Samba</span> permettent de\nprovoquer un déni de service à distance et l'exécution de code\narbitraire à distance.\n",
+  "title": "Multiples vulnérabilités de Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-1257",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Server 2003 édition entreprise ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 édition standard ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT4.0 Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 édition Datacenter ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT4.0 Server, édition Terminal Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 édition web.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nMicrosoft Windows Licence Logging Service (LLS) est un service\nd'enregistrement des licences pour les serveurs Microsoft.\n\nKostya Kortchinsky du CERT Renater a découvert une vulnérabilité dans le\nservice LLS qui peut être exploitée par un utilisateur mal intentionné\ndu réseau local pour exécuter du code arbitraire sur le système ayant le\nservice vulnérable. La vulnérabilité peut être exploitée par l'envoi\nd'un message malicieusement construit pour réaliser un débordement de\nmémoire sur le service vulnérable.\n\n## Solution\n\nSe référer aux bulletins de sécurité des éditeurs (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2005-AVI-051",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-02-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service depuis un réseau local"
+    },
+    {
+      "description": "Exécution de code arbitraire depuis un réseau local"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le service d'enregistrement des licences\nsous Microsoft Windows permet à un utilisateur mal intentionné de\nréaliser un déni de service ou d'exécuter un code arbitraire sur le\nsystème ayant le service vulnérable activé.\n",
+  "title": "Vunérabilté dans Microsoft Windows Licence Logging Service",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS05-010",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms05-010.mspx"
+    }
+  ]
+}

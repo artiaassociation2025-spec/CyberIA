@@ -1,0 +1,113 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "versions du serveur NetBSD-ftpd antérieures à la version 20040809 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "toutes les versions du serveur lukemftpd.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Versions du serveur tnftpd antérieures à la version 20040810 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe serveur lukemftpd / tnftpd /ftpd (Heimdal) est un serveur FTP pour\nles plates-formes FreeBSD, NetBSD et MacOSX. On le retrouve également\ndans certaines distributions Linux.  \n\nCe serveur n'est pas installé par défaut sur les plates-formes FreeBSD\net NetBSD.  \n\nPlusieurs vulnérabilités ont été découvertes sur le serveur FTP\nlukemftpd / tnftpd / ftpd (Heimdal). Elles permettent à un utilisateur\ndistant d'exécuter du code arbitraire avec les privilèges de\nl'utilisateur root.  \n\nSi le serveur est lancé avec l'option \"-r\", l'attaquant n'obtiendra que\nles droits d'un utilisateur ftp non privilégié.\n\n## Solution\n\nSe référer au bulletin de l'éditeur pour l'obtention des correctifs (cf.\nsection Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-551 du 21 septembre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-551"
+    },
+    {
+      "title": "Bulletin de sécurité Sun #57655 du 15 octobre 2004 :",
+      "url": "http://www.sunsolve.sun.com/search/document.do?assetkey=1-26-57655-1"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD heimdal :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/security/heimdal/README.html"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD tnftpd :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/net/tnftpd/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour tnftpd du 17 août 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité NetBSD pour tnftpd NetBSD-SA2004-009    du 17 août 2004 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2004-009.txt.asc"
+    },
+    {
+      "title": "Bulletin de sécurité Heimdal du 13 septembre 2004 :",
+      "url": "http://www.pdc.kth.se/heimdal/advisory/2004-09-13/"
+    },
+    {
+      "title": "Bulletin de sécurité Apple du 07 septembre 2004 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=61798"
+    },
+    {
+      "title": "Site Internet du projet tnftpd    :",
+      "url": "http://freshmeat.net/projects/tnftpd/"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-272",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-08-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Apple et de la référence CVE.",
+      "revision_date": "2004-09-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Heimdal et à la mise à jour de sécurité du paquetage NetBSD heimdal.",
+      "revision_date": "2004-09-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian.",
+      "revision_date": "2004-09-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Sun #57655 pour ftpd (Heimdal) livré avec Sun Java Desktop System (JDS).",
+      "revision_date": "2004-10-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire avec les droits de l'administrateur root"
+    }
+  ],
+  "summary": "De multiples vulnérabilités du serveur FTP <span\nclass=\"textit\">lukemftpd / tnftpd /ftpd (Heimdal)</span> permettent à un\nutilisateur d'obtenir les droits de l'administrateur <span\nclass=\"textit\">root</span>.\n",
+  "title": "Vulnérabilités du serveur tnftpd",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité NetBSD-SA2004-009 du 17 août 2004",
+      "url": null
+    }
+  ]
+}

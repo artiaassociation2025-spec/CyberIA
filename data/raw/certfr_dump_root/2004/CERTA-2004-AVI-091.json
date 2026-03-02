@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">HP HTTP Server</SPAN> versions 5.0 à 5.92  incluse.</P>",
+  "content": "## Description\n\nHP HTTP Server est un composant de HP Web-enabled Management Software.\n\nPar défaut, l'option «Accès Anonyme» (Anonymous Access) est désactivée\nsur ce logiciel. Si l'option «Accès Anonyme» est activée, un utilisateur\ndistant mal intentionné peut se connecter anonymement sur le serveur de\ncertificats de confiance et compromettre celui-ci.\n\n## Contournement provisoire\n\nDésactiver l'option «Accès Anonyme» si elle est activée.\n\n## Solution\n\nInstaller la version 5.93 de HP HTTP Server.\n\nPour les utilisateurs de Windows, un correctif est disponible sur le\nsite de HP :\n\n    http://h18023.www1.hp.com/support/files/Server/us/download/20197.html\n\nPour les autres plateformes, la version 5.93 de HP HTTP Server sera\nincluse dans les prochaines mises à jour de HP Web-enabled Management\nSoftware.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Pour les clients HP :",
+      "url": "http://itrc.hp.com"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-091",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Compromission de certificats"
+    }
+  ],
+  "summary": "Un utilisateur anonyme distant peut compromettre le serveur de\ncertificats «de confiance».\n",
+  "title": "Compromission possible de certificats sur <SPAN class=\"textit\">HP HTTP Server</SPAN>",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité HP SSRT4679",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>La version 3.1.1.33 de Cisco Secure Desktop (CSD), ainsi que  celles antérieures.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans le produit Cisco\nSecure Desktop. Parmi celles-ci :\n\n-   il y aurait une mauvaise gestion des fichiers lorsque le navigateur\n    Internet qui affiche une page d'accueil s'ouvre après une session\n    SSL VPN. Ceux-ci, pouvant être des fichiers temporaires, un\n    historique, ou des cookies pourraient être récupérés en clair à la\n    fin de la session chiffrée.\n-   le passage d'un bureau sécurisé (Secure Desktop) à un bureau\n    standard (Local Desktop) ne serait pas correctement contrôlé. Une\n    personne pourrait donc contourner l'option de configuration choisie.\n-   les fichiers d'installation de Cisco Secure Desktop n'auraient pas\n    des droits adaptés. Cette vulnérabilité, exploitée par une personne\n    malveillante locale, lui permettrait de contourner la politique de\n    sécurité en élevant ses privilèges.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 72020 du 08 novembre 2006 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20061108-csd.shtml"
+    },
+    {
+      "title": "Avis de sécurité de iDefense Labs du 08 novembre 2006 :",
+      "url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=442"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-484",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans le produit Cisco\nSecure Desktop. Une personne malveillante pourrait exploiter celles-ci,\nafin de récupérer de l'information à l'insu de l'utilisateur, de\ncontourner la politique de sécurité, voire d'acquérir les mêmes droits\nque ceux de l'administrateur.\n",
+  "title": "Multiples vulnérabilités de Cisco Secure Desktop",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco du 08 novembre 2006",
+      "url": null
+    }
+  ]
+}

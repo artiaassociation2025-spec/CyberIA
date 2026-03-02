@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>IVE OS versions 1.x à 5.x.</P>",
+  "content": "## Description\n\nIVE (« Instant Virtual Extranet ») est un système de sécurisation des\nconnexions distantes reposant sur SSL ; ceci permet de créer un tunnel\nen utilisant la couche SSL des navigateurs présents sur les stations\nclientes.\n\nL'utilisation de cette couche nécessite cependant l'utilisation d'un\ngreffon ActiveX au sein d'Internet Explorer qui est automatiquement\ntéléchargé lors de la connexion à un équipement IVE.\n\nHors ce greffon peut être invoqué par n'importe quelle page HTML de\nn'importe quel site web. A l'aide de paramètres habilement construits,\nun site malicieux peut alors exploiter la faille du greffon pour faire\nexécuter du code arbitraire.\n\n## Contournement provisoire\n\nDésactiver l'utilisation des composants ActiveX dans Internet Explorer.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Juniper du 25 avril 2006 :",
+      "url": "http://www.juniper.net/support/security/alerts/PSN-2006-03-013.txt"
+    },
+    {
+      "title": "Bulletin de sécurité eEye AD20060424 du 25 avril 2006 :",
+      "url": "http://www.eeye.com/html/research/advisories/AD20060424.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-174",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-04-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Un contrôle <span class=\"textit\">ActiveX</span> est installé dans le\nnavigateur <span class=\"textit\">Internet Explorer</span> de toute\nstation cliente ayant réalisé une connexion avec un équipement <span\nclass=\"textit\">IVE</span> de <span class=\"textit\">Juniper</span>. Une\nvulnérabilité dans ce greffon peut être exploitée pour exécuter du code\narbitraire avec les privilèges de l'utilisateur du navigateur.\n",
+  "title": "Vulnérabilité du logiciel client IVE de Juniper",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Eeye",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Word 2001 pour Mac.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Word 2000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Word 97 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Word 98 pour Mac ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Word 98 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nThéoriquement, lors de l'ouverture d'un document contenant une macro,\nWord propose à l'utilisateur le choix d'ouvrir le document en prenant en\ncompte ou non cette macro.\n\nLe format RTF (Format de texte enrichi) est couramment utilisé car il\nest reconnu par la plupart des logiciels de traitement de texte. Par\nailleurs il est réputé plus sur que les documents au format DOC car il\nn'est pas censé contenir de macro.\n\nLes modèles types de document sont utilisés par exemple pour prévoir des\nen-têtes et des pieds de page. Ils peuvent être utilisés en relation\navec tout document texte.\n\nUne vulnérabilité de Word permet, si un fichier RTF est associé à un\nmodèle type contenant une macro, d'exécuter cette macro sans demande\npréalable. Car Word ne vérifie lors de l'ouverture que la constitution\ndu document RTF.\n\nCette macro peut être par exemple un virus et peut exécuter n'importe\nquelle tâche sur la machine cible avec les privilèges de l'utilisateur.\n\n## Solution\n\nTélécharger le correctif sur le site Web Microsoft :\n\n-   Correctif pour Microsoft Word 2000 :\n\n        http://office.microsoft.com/downloads/2000/wd2kmsec.aspx\n\n-   Correctif pour Microsoft Word 97 :\n\n        http://office.microsoft.com/downloads/9798/wd97mcrs.aspx\n\n-   Concernant Word 98, 98 et 2001 pour Mac les correctifs ne sont\n    actuellement pas disponibles.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-028.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-056",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-05-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de macros sans fenêtre d'avertissement"
+    }
+  ],
+  "summary": "Une macro insérée dans un modèle de document RTF peut être exécutée par\nWord sans affichage d'une fenêtre avertissant la présence de cette\nmacro.\n",
+  "title": "Vulnérabilité dans Word lors de l'ouverture de documents RTF",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-028",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>MantisBT, version 1.2.3 et versions  antérieures.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent MantisBT :\n\n-   des erreurs dans le programme upgrade_unattended.php permettent de\n    réaliser de l'injection de code indirecte (XSS), de l'inclusion\n    locale de code et d'atteindre sans droit des fichiers ;\n-   quand le paramètre report_stay est à 1 (un), une injection de code\n    indirecte est possible ;\n-   le codage imparfait des adresses IRC permet de réaliser de\n    l'injection de code indirecte.\n\n## Solution\n\nLa version 1.2.4 de MantisBT corrige ces problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-4348",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4348"
+    },
+    {
+      "name": "CVE-2010-4350",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4350"
+    },
+    {
+      "name": "CVE-2010-4349",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4349"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurité Fedora FEDORA-2010-19070 et    FEDORA-2010-19078 du 19 décembre 2010 :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-December/052730.html"
+    },
+    {
+      "title": "Bulletins de sécurité Fedora FEDORA-2010-19070 et    FEDORA-2010-19078 du 19 décembre 2010 :",
+      "url": "http://lists.fedoraproject.org/pipermail/package-announce/2010-December/052721.html"
+    },
+    {
+      "title": "Bulletin de la version 1.2.4 de MantisBT du 15 décembre    2010 :",
+      "url": "http://www.mantisbt.org/bugs/changelog_page.php?project=mantisbt&version=1.2.4"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-612",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins Fedora et aux CVE.",
+      "revision_date": "2011-01-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans MantisBT permettent à un utilisateur\nmalveillant de contouner la politique de sécurité ou de faire de\nl'injection de code indirecte.\n",
+  "title": "Vulnérabilités dans MantisBT",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de la version 1.2.4 de MantisBT du 15 décembre 2010",
+      "url": null
+    }
+  ]
+}

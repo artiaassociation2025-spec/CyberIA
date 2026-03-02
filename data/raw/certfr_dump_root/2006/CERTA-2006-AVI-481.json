@@ -1,0 +1,87 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "toutes versions antérieures à PHP 5.2.0.",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Toutes versions antérieures à PHP 4.4.4 ;",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPHP (pour PHP Hypertext Preprocessor) est un language de script\nlargement utilisé dans la réalisation de pages web dynamiques.\n\nUne vulnérabilité de type débordement de mémoire a été découverte dans\nles fonctions htmlentities() et htmlspecialchars() peut être exploitée\npar un utilisateur distant malintentionné afin d'exécuter du code\narbitraire ou de provoquer un déni de service sur le système vulnérable.\nL'exécution de code n'est possible que si le jeu de caractère UTF-8 est\nselectionné.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-5465",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5465"
+    },
+    {
+      "name": "CVE-2006-5706",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5706"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:196 du 02 novembre    2006 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDKSA-2006:196"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-20006:0730 du 06 novembre    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-20006:0730.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-375-1 du 02 novembre 2006 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-375-1"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1206 du 06 novembre 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1206"
+    },
+    {
+      "title": "Bulletin de sécurité Suse SUSE-SA:2006:067 du 15 novembre    2006 :",
+      "url": "http://www.novell.com/linux/security/advisories/2006_67_php.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-481",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2006-11-09T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence du bulletin de sécurité Suse.",
+      "revision_date": "2006-11-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité découverte dans le language de script PHP permet à un\nutilisateur distant malintentionné d'exécuter du code arbitraire ou de\nprovoquer un déni de service à distance.\n",
+  "title": "Vulnérabilité dans PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:196 du 2 novembre 2006",
+      "url": null
+    }
+  ]
+}

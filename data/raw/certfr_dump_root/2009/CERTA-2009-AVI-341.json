@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IBM WebSphere Application Server 6.x et  7.x.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités dans IBM WebSphere Application Server ont été\npubliées :\n\n-   le composant Security présente un défaut qui permet à un utilisateur\n    malveillant de contourner à distance les restrictions d'accès ;\n-   un problème dans le composant Web Service permet à un utilisateur\n    local de réaliser un déni de service ;\n-   dans certaines configurations, lors de l'utilisation de SPNEGO\n    Single Sign-On, un utilisateur malveillant distant peut contourner\n    l'authentification ;\n-   le composant de migration permet à un utilisateur authentifié\n    distant d'obtenir indûment des informations sensibles ;\n-   un défaut non précisé du composant System Management/Repository\n    permet à un utilisateur malveillant distant de contourner les\n    restrictions d'accès et d'arrêter un service ;\n-   sur un système z/OS, le composant System Management/Repository\n    utilise des droits d'accès permissifs, permettant à un utilisateur\n    malveillant d'obtenir des données sensibles ;\n-   une lecture erronée du paramètre portletServingEnabled permet à un\n    utilisateur malveillant distant de contourner les restrictions\n    d'accès.\n\n## Solution\n\nLes versions 7.0.0.5 et 6.1.0.25 corrigent ces vulnérabilités.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2092",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2092"
+    },
+    {
+      "name": "CVE-2009-2089",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2089"
+    },
+    {
+      "name": "CVE-2009-2090",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2090"
+    },
+    {
+      "name": "CVE-2009-2087",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2087"
+    },
+    {
+      "name": "CVE-2009-2085",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2085"
+    },
+    {
+      "name": "CVE-2009-2088",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2088"
+    },
+    {
+      "name": "CVE-2009-2091",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2091"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg27007951 du 05 août 2009 :",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg27007951"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg27014463 du 27 juillet 2009 :",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg27014463"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-341",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans IBM WebSphere Application Server ont été\npubliées. Certaines permettent à un utilisateur malveillant d'exécuter\ndu code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans IBM WebSphere Application Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg27014463 du 27 juillet 2009 et swg27007951 du 05 août 2009",
+      "url": null
+    }
+  ]
+}

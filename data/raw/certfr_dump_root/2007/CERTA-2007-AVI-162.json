@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Tivoli Business Service Manager 4.1.",
+      "product": {
+        "name": "Tivoli",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSuite à l'installation de Tivoli Business Service Manager et de ses\ncomposants, certains mots de passe d'administration apparaissent en\nclaire dans des fichiers journaux. Un utilisateur malintentionné peut\naccéder à ces fichiers et prendre connaissance de ces mots de passe, il\npourra ainsi élever ses privilèges et contourner la politique de\nsécurité mise en place.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2007-AVI-162",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-04-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans IBM Tivoli Business Service Manager permet à un\nutilisateur malveillant de contourner la politique de sécurité ou\nd'élever ses privilèges.\n",
+  "title": "Vulnérabilité dans IBM Tivoli Business Service Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM IY96572 du 30 mars 2007",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg24015473"
+    }
+  ]
+}

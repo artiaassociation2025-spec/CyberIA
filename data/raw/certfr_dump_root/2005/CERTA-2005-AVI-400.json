@@ -1,0 +1,141 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système utilisant <SPAN class=\"textit\">OpenSSL</SPAN> en  versions sources 0.9.7 jusqu'à 0.9.7g ou 0.9.8 et les betas  antérieures.</P>  <P>Par extension, sont concernés tous les serveurs utilisant  <SPAN class=\"textit\">OpenSSL</SPAN> pour le support de SSL/TLS.  En particulier les versions SSL du serveur web <SPAN class=\n  \"textit\">Apache</SPAN>, des serveurs de courrier <SPAN class=\n  \"textit\">qmail</SPAN>, <SPAN class=\"textit\">postfix</SPAN>,  <SPAN class=\"textit\">Exim</SPAN>, du serveur d'annuaire  <SPAN class=\"textit\">OpenLDAP</SPAN>,...peuvent être  impactés.</P>",
+  "content": "## Description\n\nOpenSSL est une mise en oeuvre « open source » des protocoles Secure\nSockets Layer (SSL) et Transport Layer Security (TLS). OpenSSL est\nlargement utilisé comme bibliothèque pour sécuriser des protocoles\napplicatifs sur l'Internet.\n\nLes versions du protocole SSL usuellement supportée sont v2 et v3,\nsachant que l'on peut assimiler TLS à une version v3.1. Cependant le\nsupport de v2 n'est conservé que pour des raisons de compatibilité\nascendante et n'est plus vraiment justifié de nos jours la v3 datant de\nnovembre 1996. L'usage de SSLv2 est fortement déconseillé étant donné\ndes faiblesses cryptographiques majeures qui ont conduit à l'élaboration\nde la version v3.\n\nL'usage d'un code, développé pour assurer la compatibilité avec des\nproduits tiers, supprime la vérification d'une éventuelle attaque en\nrégression sur la version négociée, lors de l'établissement d'une\nsession SSLv2.\n\nIl est ainsi possible, pour un utilisateur en position d'interception,\nde forcer l'utilisation de SSLv2 entre 2 parties alors que SSLv3 ou TLS\nétaient possibles. Celui-ci pourra alors tenter d'exploiter les\nfaiblesses de SSLv2 pour attenter à la confidentialité de l'échange.\n\n## Contournement provisoire\n\nDésactiver le support de SSLv2 dans toute application utilisant OpenSSL.\n\n## Solution\n\nMettre à jour les sources en versions 0.9.7h ou 0.9.8a au moins, ou se\nréférer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site internet d'OpenSSL :",
+      "url": "http://www.openssl.org"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 888 du 07 novembre 2005        pour OpenSSL :",
+      "url": "http://www.debian.org/security/2005/dsa-888"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 875 du 27 octobre 2005        pour OpenSSL 0.9.4 :",
+      "url": "http://www.debian.org/security/2005/dsa-875"
+    },
+    {
+      "title": "Linux Fedora :       Fedora Core 3 du 31 octobre 2005 :          \n  Fedora Core 4 du 13 octobre 2005 :",
+      "url": "http://marc.theaimsgroup.com/?l=fedora-announce-list&m=11307879729070"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:179 du 11 octobre    2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:179"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-05-21 du 11 octobre 2005 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-05-21.openssl.asc"
+    },
+    {
+      "title": "Debian GNU/Linux :       Bulletin de sécurité Debian DSA 875 du 27 octobre 2005        pour OpenSSL 0.9.4 :          \n  Bulletin de sécurité Debian DSA 881 du 04 novembre 2005        pour OpenSSL 0.9.6 :          \n  Bulletin de sécurité Debian DSA 882 du 04 novembre 2005        pour OpenSSL 0.9.5 :          \n  Bulletin de sécurité Debian DSA 888 du 07 novembre 2005        pour OpenSSL :",
+      "url": "http://www.debian.org/security/2005/dsa-875"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 881 du 04 novembre 2005        pour OpenSSL 0.9.6 :",
+      "url": "http://www.debian.org/security/2005/dsa-881"
+    },
+    {
+      "title": "Debian GNU/Linux :       Bulletin de sécurité Debian DSA 875 du 27 octobre 2005        pour OpenSSL 0.9.4 :          \n  Bulletin de sécurité Debian DSA 881 du 04 novembre 2005        pour OpenSSL 0.9.6 :          \n  Bulletin de sécurité Debian DSA 882 du 04 novembre 2005        pour OpenSSL 0.9.5 :          \n  Bulletin de sécurité Debian DSA 888 du 07 novembre 2005        pour OpenSSL :",
+      "url": "http://www.debian.org/security/2005/dsa-882"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:800 du 11 octobre    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-800.html"
+    },
+    {
+      "title": "Debian GNU/Linux :       Bulletin de sécurité Debian DSA 875 du 27 octobre 2005        pour OpenSSL 0.9.4 :          \n  Bulletin de sécurité Debian DSA 881 du 04 novembre 2005        pour OpenSSL 0.9.6 :          \n  Bulletin de sécurité Debian DSA 882 du 04 novembre 2005        pour OpenSSL 0.9.5 :          \n  Bulletin de sécurité Debian DSA 888 du 07 novembre 2005        pour OpenSSL :",
+      "url": "http://www.debian.org/security/2005/dsa-888"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200510-11 du 12 octobre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200510-11.xml"
+    },
+    {
+      "title": "Debian GNU/Linux :       Bulletin de sécurité Debian DSA 875 du 27 octobre 2005        pour OpenSSL 0.9.4 :          \n  Bulletin de sécurité Debian DSA 881 du 04 novembre 2005        pour OpenSSL 0.9.6 :          \n  Bulletin de sécurité Debian DSA 882 du 04 novembre 2005        pour OpenSSL 0.9.5 :          \n  Bulletin de sécurité Debian DSA 888 du 07 novembre 2005        pour OpenSSL :",
+      "url": "http://www.debian.org/security/2005/dsa-881"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2005:061 du 19 octobre    2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_61_openssl.html"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco du 02 décembre 2005 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-response-20051202-openssl.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 882 du 04 novembre 2005        pour OpenSSL 0.9.5 :",
+      "url": "http://www.debian.org/security/2005/dsa-882"
+    },
+    {
+      "title": "Fedora Core 4 du 13 octobre 2005 :",
+      "url": "http://marc.theaimsgroup.com/?l=fedora-announce-list&m=112931336325090"
+    },
+    {
+      "title": "Fedora Core 3 du 31 octobre 2005 :",
+      "url": "http://marc.theaimsgroup.com/?l=fedora-announce-list&m=11307879729070"
+    },
+    {
+      "title": "Bulletin de sécurité Sun #101974 du 11 octobre 2005 pour    Solaris 10 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-101974-1"
+    },
+    {
+      "title": "Bulletin de sécurité Juniper du 08 décembre 2005 :",
+      "url": "http://www.juniper.net/support/security/alerts/PSN-2005-12-025.txt"
+    },
+    {
+      "title": "Linux Fedora :       Fedora Core 3 du 31 octobre 2005 :          \n  Fedora Core 4 du 13 octobre 2005 :",
+      "url": "http://marc.theaimsgroup.com/?l=fedora-announce-list&m=112931336325090"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-204 du 14 octobre 2005 :",
+      "url": "http://www.ubuntu.com/usn/usn-204-1"
+    },
+    {
+      "title": "Avis de sécurité OpenSSL du 11    octobre 2005 :",
+      "url": "http://www.openssl.org/news/secadv_20051011.txt"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-400",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2005-10-12T00:00:00.000000"
+    },
+    {
+      "description": "ajouts des bulletins Fedora Core 3 et 4, du bulletin SuSE et de 3 avis Debian ;",
+      "revision_date": "2005-11-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian DSA-888 et Ubuntu ;",
+      "revision_date": "2005-11-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence à l'avis de sécurité Cisco.",
+      "revision_date": "2005-12-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence à l'avis de sécurité Juniper.",
+      "revision_date": "2006-01-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Risque d'atteinte à la confidentialité des échanges"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné, ayant la capacité d'intercepter le flux\nTCP, peut conduire une attaque par le milieu visant à faire régresser à\nla version 2 le protocole SSL négocié entre les parties.\n",
+  "title": "Faiblesse dans OpenSSL 0.9.x",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis OpenSSL du 11 octobre 2005",
+      "url": null
+    }
+  ]
+}

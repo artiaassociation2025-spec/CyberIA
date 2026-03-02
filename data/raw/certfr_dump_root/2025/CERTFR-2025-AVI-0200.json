@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Tomcat versions 9.0.x antérieures à 9.0.99",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tomcat versions 11.0.x antérieures à 11.0.3",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tomcat versions 10.1.x antérieures à 10.1.35",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-24813",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-24813"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0200",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-03-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Apache Tomcat. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance, une atteinte à la confidentialité des données et une atteinte à l'intégrité des données.",
+  "title": "Vulnérabilité dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-02-10",
+      "title": "Bulletin de sécurité Apache Tomcat Apache_Tomcat_11.0.3",
+      "url": "https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.3"
+    },
+    {
+      "published_at": "2025-02-10",
+      "title": "Bulletin de sécurité Apache Tomcat Apache_Tomcat_9.0.99",
+      "url": "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.99"
+    },
+    {
+      "published_at": "2025-02-10",
+      "title": "Bulletin de sécurité Apache Tomcat Apache_Tomcat_10.1.35",
+      "url": "https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.35"
+    }
+  ]
+}

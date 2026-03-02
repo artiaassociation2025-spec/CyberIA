@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions de UW-imapd.</P>",
+  "content": "## Description\n\nUW-Imap est le serveur de messagerie IMAP (Internet Message Access\nProtocol) développé par l'université de Washington.\n\nLa vulnérabilité de type débordement de pile est causée par une erreur\ndans la fonction mail_valid_net_parse_work(). Cette vulnérabilité peut\nêtre exploitée par une personne malveillante au moyen d'une boîte mél\nmalicieusement nommée.\n\n## Solution\n\nLa mise à jour de sécurité pour UW-imapd est disponible à l'adresse\nsuivante :\n\n    ftp://ftp.cac.washington.edu/imap/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200510-10 du 11 octobre    2005 :",
+      "url": "http://security.gentoo.org/glsa/glsa-200510-10.xml"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:850 du 06 décembre    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-850.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-861 du 11 octobre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-861"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-383",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-10-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo GLSA 200510-10.",
+      "revision_date": "2005-10-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-861.",
+      "revision_date": "2005-10-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat RHSA-2005:850.",
+      "revision_date": "2005-12-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité découverte dans l'application UW-imapd permet à un\nutilisateur distant mal intentionné de causer un déni de service ou\nd'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité dans UW-imapd",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDEFENSE #313 du 04 octobre 2005",
+      "url": "http://www.idefense.com/application/poi/display?id=313&type=vulnerabilities"
+    }
+  ]
+}

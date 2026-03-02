@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "AIX 5.3 ;",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "AIX 7.1.",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "AIX 6.1 ;",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-0745",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0745"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2012-AVI-251",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-05-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été corrigée dans <span class=\"textit\">IBM\nAIX</span>. Elle concerne l'authentification LDAP et résulte d'une\nerreur dans la fonction « getpwan() », fonction utilisée quand le\nfiltrage étendu des utilisateurs est configuré. Une exploitation réussie\npermet à un utilisateur d'élever ses droits en local.\n",
+  "title": "Vulnérabilité dans IBM AIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM du 03 mai 2012",
+      "url": "http://aix.software.ibm.com/aix/efixes/security/ldapauth_advisory2.asc"
+    }
+  ]
+}

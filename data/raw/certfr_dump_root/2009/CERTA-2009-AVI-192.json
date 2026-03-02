@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenSSL 0.9.x.",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabiliés causées par un manque de contrôle dans le traitement\ndes enregistrements et messages de type DTLS (Datagram Transport Layer\nSecurity), peuvent être exploitées pour réaliser un déni de service par\nconsommation de mémoire excessive.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1387",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1387"
+    },
+    {
+      "name": "CVE-2009-1379",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1379"
+    },
+    {
+      "name": "CVE-2009-1378",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1378"
+    },
+    {
+      "name": "CVE-2009-1386",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1386"
+    },
+    {
+      "name": "CVE-2009-1377",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1377"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-792-1 du 25 juin 2009 :",
+      "url": "https://lists.ubuntu.com/archives/ubuntu-security-announce/2009-June/000923.html"
+    },
+    {
+      "title": "Site Internet de l'éditeur OpenSSL :",
+      "url": "http://www.openssl.org/"
+    },
+    {
+      "title": "Bulletin de sécurité IBM du 29 juin 2009 :",
+      "url": "http://aix.software.ibm.com/aix/efixes/security/ssl_advisory.asc"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-192",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-05-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurités OpenSSL, IBM, Ubuntu et aux CVE.",
+      "revision_date": "2009-06-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités découvertes dans OpenSSL permettent à un utilisateur\ndistant malintentionné de provoquer un déni de service.\n",
+  "title": "Vulnérabilités dans OpenSSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité OpenSSL #1838, #1923, #1930 et #1931",
+      "url": "http://rt.openssl.org/Ticket/Display.html?id=1931"
+    }
+  ]
+}

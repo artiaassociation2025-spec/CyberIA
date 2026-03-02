@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Drupal versions antérieures à la version 6.7.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Drupal versions antérieures à la version 5.13 ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans Drupal :\n\n-   la première vulnérabilité résulte d'un mauvais traitement de\n    certaines requêtes HTML. L'exploitation de cette vulnérabilité\n    permet de réaliser des attaques par injection de requêtes\n    illégitimes par rebond (Cross Site Request Forgery ou CSRF) ;\n-   la seconde vulnérabilité est due à la présence de fichiers résiduels\n    pouvant être utilisés par un attaquant distant.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de mise à jour Drupal numéro SA-2008-073 du 10    décembre 2008 :",
+      "url": "http://drupal.org/node/345441"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-596",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-12-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes dans Drupal. Ces vulnérabilités\npeuvent être exploitées afin de réaliser des attaques par injection de\nrequêtes illégitimes par rebond (<span class=\"textit\">CSRF</span>).\n",
+  "title": "Multiples vulnérabilités dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité numéro SA-2008-073 du 10 décembre 2008",
+      "url": null
+    }
+  ]
+}

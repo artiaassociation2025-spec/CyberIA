@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PHP, versions antérieures à la version  5.3.9",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nPHP présente des vulnérabilités :\n\n-   le système de calcul de condensats pour les formulaires permet de\n    provoquer un déni de service à distance par épuisement des\n    ressources processeur ;\n-   sur les systèmes en 32 bits, le traitement defectueux d'en-têtes\n    EXIF permet à un attaquant de lire des zones de la mémoire pour\n    lesquelles il ne dispose pas des droits ou de provoquer un arrêt\n    inopiné du système.\n\n## Solution\n\nLa version PHP 5.3.9 corrige ces problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-4566",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4566"
+    },
+    {
+      "name": "CVE-2011-4885",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4885"
+    }
+  ],
+  "links": [
+    {
+      "title": "Note de vulnérabilité de l'US-CERT VU#903934 du 30 décembre    2011 :",
+      "url": "http://www.kb.cert.org/vuls/id/903934"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-021",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-01-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de PHP permettent à un attaquant de provoquer\nun déni de service à distance ou de lire indûment des données.\n",
+  "title": "Vulnérabilités dans PHP",
+  "vendor_advisories": [
+    {
+      "published_at": "2012-01-10",
+      "title": "Liste des changements de la version 5.3.9 de PHP",
+      "url": "http://www.php.net/Change-Log5.php"
+    }
+  ]
+}

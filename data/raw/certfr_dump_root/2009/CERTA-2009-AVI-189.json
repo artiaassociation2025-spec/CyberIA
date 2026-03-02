@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Drupal versions 6.11 et antérieures.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Drupal versions 5.17 et antérieures ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans Drupal :\n\n-   la vulnérabilité décrite dans l'avis CERTA-2009-AVI-175 concernant\n    l'utilisation de caractères particuliers en UTF-8 n'était pas\n    suffisamment bien corrigée ;\n-   une faille dans le module taxonomy permet à un utilisateur disposant\n    de droits spécifiques (administer taxonomy) de réaliser des\n    injections de code indirectes.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SA-CORE-2009-006 du 13 mai 2009 :",
+      "url": "http://drupal.org/node/461886"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-189",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-05-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans <span class=\"textit\">Drupal</span> permettent\nde réaliser des injections de code indirectes.\n",
+  "title": "Vulnérabilités dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Drupal SA-CORE-2009-006 du 13 mai 2009",
+      "url": null
+    }
+  ]
+}

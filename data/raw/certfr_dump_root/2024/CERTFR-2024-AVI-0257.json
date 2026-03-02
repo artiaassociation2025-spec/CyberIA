@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Elasticsearch versions 8.x antérieures à 8.13.0",
+      "product": {
+        "name": "Elasticsearch",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Elasticsearch versions 7.x antérieures à 7.17.19",
+      "product": {
+        "name": "Elasticsearch",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2024-23449",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-23449"
+    },
+    {
+      "name": "CVE-2024-23451",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-23451"
+    },
+    {
+      "name": "CVE-2024-23450",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-23450"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0257",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-03-28T00:00:00.000000"
+    },
+    {
+      "description": "Ajout du bulletin de sécurité Elasticsearch security-update-esa-2024-05 du 29 mars 2024.",
+      "revision_date": "2024-03-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Elasticsearch.\nElles permettent à un attaquant de provoquer un déni de service à\ndistance et une atteinte à la confidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans Elasticsearch",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Elasticsearch security-update-esa-2024-05 du 29 mars 2024",
+      "url": "https://discuss.elastic.co/t/elasticsearch-8-11-1-security-update-esa-2024-05/356458"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Elasticsearch security-update-esa-2024-07 du 27 mars 2024",
+      "url": "https://discuss.elastic.co/t/elasticsearch-8-13-0-security-update-esa-2024-07/356315"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Elasticsearch security-update-esa-2024-06 du 27 mars 2024",
+      "url": "https://discuss.elastic.co/t/elasticsearch-8-13-0-7-17-19-security-update-esa-2024-06/356314"
+    }
+  ]
+}

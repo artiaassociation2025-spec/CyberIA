@@ -1,0 +1,87 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "séries NPort 6000 versions antérieures à v2.0",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "séries EDR-G902 versions antérieures à v5.7.21",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "séries EDR-G903 versions antérieures à v5.7.21",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "séries EDR-810 versions antérieures à v5.12.29",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-5627",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-5627"
+    },
+    {
+      "name": "CVE-2023-4452",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-4452"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0901",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-11-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Moxa.\nElles permettent à un attaquant de provoquer un déni de service à\ndistance et un contournement de la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans les produits Moxa",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Moxa MPSA-234880 du 01 novembre 2023",
+      "url": "https://www.moxa.com/en/support/product-support/security-advisory/mpsa-234880-edr-810-g902-g903-series-web-server-buffer-overflow-vulnerability"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Moxa MPSA-232905 du 01 novembre 2023",
+      "url": "https://www.moxa.com/en/support/product-support/security-advisory/mpsa-232905-nport-6000-series-incorrect-implementation-of-authentication-algorithm-vulnerability"
+    }
+  ]
+}

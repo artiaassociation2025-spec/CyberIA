@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows SharePoint Services 3.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Office SharePoint Server 2007.",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCette vulnérabilité permet, via l'exécution de code arbitraire, une\nélévation de privilèges dans SharePoint. Cette vulnérabilité peut\négalement permettre à un attaquant de modifier le cache d'un utilisateur\nen exécutant du code arbitraire et entrainer ainsi une fuite\nd'informations au niveau du poste de travail.\n\n## Solution\n\nSe référer au bulletin de sécurité MS07-059 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-2581",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2581"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-429",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-10-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité de certaines données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilié pourrait permettre à un utilisateur malveillant\nd'effectuer une élévation de privilèges dans SharePoint.\n",
+  "title": "Vulnérabilité dans Windows SharePoint Services 3.0 et Office SharePoint Server 2007",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-059",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-059.mspx"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Solaris versions 2.6 à 9.</p>",
+  "content": "## Description\n\n-   Le bulletin de sécurité \\#50240 décrit une vulnérabilité présente\n    dans le serveur in.ftpd.\n\n    Un utilisateur mal intentionné connecté à un serveur FTP vulnérable\n    peut réaliser un déni de service (\"gel\" du serveur) empêchant\n    celui-ci de répondre aux requêtes des autres clients. Il est à noter\n    que les clients FTP utilisant le mode passive ne sont pas affectés\n    par ce déni de service.\n\n      \n\n-   Une vulnérabilité présente dans le traitement de certains paquets\n    RPC (UDP) entraine une utilisation excessive de la mémoire.\n\n    Cette vulnérabilité permet à un utilisateur mal intentionné de\n    réaliser un déni de service du sytème vulnérable. Le bulletin de\n    sécurité \\#50626 décrit les symptomes d'une telle attaque.\n\n## Solution\n\nAppliquer les correctifs de l'éditeur (se référer à la section\nDocumentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-027",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-02-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux bulletins de sécurité décrivant des vulnérabilités permettant à un\nutilisateur mal intentionné de réaliser un déni de service ont été\npubliés par Sun.\n",
+  "title": "Déni de service sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #50626 de Sun",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F50626"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #50240 de Sun",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F50240"
+    }
+  ]
+}

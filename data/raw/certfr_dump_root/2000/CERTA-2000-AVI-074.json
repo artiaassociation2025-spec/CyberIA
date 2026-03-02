@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows 2000 Server, Service pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 2000 Professionnal, Service pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 2000 Datacenter, Service pack 1.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 2000 Advanced Server, Service pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'authentification utilisé par Windows 2000 est Kerberos, cependant afin\nde garantir une compatibilité entre les clients, serveurs, et\ncontrôleurs de domaine Windows 2000 ainsi que les systèmes fonctionnant\navec Windows NT, l'authentification NTLM (NT Lan Manager) est supportée.\n\nUn utilisateur mal intentionné peut contourner les règles de sécurité\n(verrouillage des comptes après plusieurs tentatives) et attaquer par\nforce brute les comptes utilisateurs afin de découvrir l'identifiant et\nson mot de passe.  \n  \n\nCette vulnérabilité affecte uniquement les systèmes Windows 2000 membres\nd'un domaine mixte.\n\nWindows 2000 Gold n'est pas affecté.\n\n## Solution\n\nCorrectif fourni par Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=25606\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-089.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-074",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-11-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement des règles de sécurité"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut par une attaque de force brute\ntrouver le login (utilisateur - mot de passe) d'une machine sous Windows\n2000, membre d'un domaine mixte (Windows 2000 - WIndows NT).\n",
+  "title": "Vulnérabilité sous Windows 2000 dans l'authentification NTLM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

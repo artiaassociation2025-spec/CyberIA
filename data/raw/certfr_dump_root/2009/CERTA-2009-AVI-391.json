@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Bugzilla 3.2.4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bugzilla 3.0.8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bugzilla 3.4.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois vulnérabilités sont présentes dans Bugzilla :\n\n-   la première concerne un manque de contrôle dans certaines entrées\n    passées au service Bug.search et permet d'injecter des commandes SQL\n    ;\n-   la seconde est relative à un manque de contrôle dans certaines\n    entrées passées au service Bug.create et permet d'injecter des\n    commandes SQL ;\n-   la dernière est relative au mécanisme de gestion des mots de passe\n    des utilisateurs qui, sous certaines conditions, affiche des mots de\n    passe en clair.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nLes versions 3.0.9, 3.2.5 et 3.4.2 corrigent le problème :\n\n    http://www.bugzilla.com/download/\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3165",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3165"
+    },
+    {
+      "name": "CVE-2009-3166",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3166"
+    },
+    {
+      "name": "CVE-2009-3125",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3125"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-1913-1 du 17 octobre 2009 :",
+      "url": "http://www.debian.org/security/2009/dsa-1913"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-391",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-09-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian.",
+      "revision_date": "2009-10-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans <span\nclass=\"textit\">Bugzilla</span> permettent à un utilisateur distant\nmalintentionné de porter atteinte à la confidentialité ou à l'intégrité\ndes données.\n",
+  "title": "Multiples vulnérabilités dans Bugzilla",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Bugzilla du 11 septembre 2009",
+      "url": "http://www.bugzilla.com/security/3.0.8"
+    }
+  ]
+}

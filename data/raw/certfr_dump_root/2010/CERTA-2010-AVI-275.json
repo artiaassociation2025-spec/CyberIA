@@ -1,0 +1,47 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>CUPS 1.x.</p>",
+  "content": "## Description\n\nTrois vulnérabilités dans CUPS ont été corrigées.\n\n-   Une vulnérabilité causée par un manque de contrôle lors d'une\n    allocation de mémoire peut être exploitée afin d'exécuter du code\n    arbitraire ;\n-   une vulnérabilité peut être exploitée au travers de l'interface Web\n    CUPS afin de porter atteinte à la confidentialité des données\n    (CVE-2010-1748) ;\n-   une vulnérabilité permet à un utilisateur malveillant de contourner\n    la politique de sécurité afin de modifier certains paramètres de\n    configuration (CVE-2010-0540).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0540",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0540"
+    },
+    {
+      "name": "CVE-2010-0542",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0542"
+    },
+    {
+      "name": "CVE-2010-1748",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1748"
+    }
+  ],
+  "links": [
+    {
+      "title": "Annonce de mise à jour CUPS du 17 juin 2010 :",
+      "url": "http://cups.org/articles.php?L596"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-275",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-06-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans CUPS permettent à un utilisateur\nmalintentionné de contourner la politique de sécurité, de porter\natteinte à la confidentialité des données ou d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilités dans CUPS",
+  "vendor_advisories": []
+}

@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions antérieures à 6.1.4 Build 1099.</P>",
+  "content": "## Description\n\nWinGate est une passerelle applicative offrant plusieurs services de\ncommunication. Une vulnérabilité a été identifiée dans celle-ci, au\nniveau du service de messagerie IMAP (pour Internet Message Access\nProtocol) servant à rapatrier des courriers électroniques. Il ne\ncontrole pas correctement certaines commandes comme \"CREATE\", \"SELECT\",\n\"DELETE\", \"RENAME\", \"COPY\", \"APPEND\" ou \"LIST\". Un utilisateur\nmalveillant distant peut profiter de cette vulnérabilité pour consulter\nou modifier les courriers d'autres utilisateurs. Il pourrait aussi créer\nou accéder à certains répertoires sur le système vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2917",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2917"
+    }
+  ],
+  "links": [
+    {
+      "title": "Mise à jour WinGate de Qbik du 10 juillet 2006 :",
+      "url": "http://www.wingate.com/download.php"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-280",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-07-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de Qbik WinGate",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour WinGate",
+      "url": null
+    }
+  ]
+}

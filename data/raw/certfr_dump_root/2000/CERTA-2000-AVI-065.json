@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 9x;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Millenium Edition (ME);",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 2000.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows NT;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans la Machine Virtuelle Java de Microsoft Internet\nExplorer 4.x et 5.x permet à un utilisateur mal intentionné, à l'aide\nd'un site web habilement conçu, contenant une appliquette java\nparticulière, d'avoir accès en lecture uniquement à tous les fichiers\nprésents sur le disque dur de la machine cliente. Il peut aussi accéder\nà toutes les données partagées qui sont autorisées pour sa victime dans\nun intranet, en devinant le chemin d'accès qui est de la forme :\n`\\\\machine\\chemin\\fichier`.\n\n## Contournement provisoire\n\nDésactiver les java, javascripts, comme indiqué dans les bulletins\nCERTA-2000-AVI-002, CERTA-2000-ALE-001 et CERTA-2000-ALE-002,\nCERTA-2000-INF-002.\n\nCouper les connections entre l'intranet et les machines ayant accès à\ninternet.\n\n## Solution\n\nUne vulnérabilité précédente permettait d'accéder en lecture aux\nfichiers présents sur le système, en devinant leur chemin d'accès.\nPeut-être aviez-vous déjà appliquer le correctif correspondant au\nbulletin de sécurité Microsoft MS00-011 : (\n\n    http://www.microsoft.com/technet/security/bulletin/ms00-011.asp\n\n)\n\nMais celui-ci ne corrige pas la vulnérabilité décrite dans le document.\nIl faut donc appliquer le nouveau correctif de Microsoft. Il dépend du\nnuméro de construction de la Machine Virtuelle installée sur le système.\n\nCette vulnérabilité est présente dans les Machines Virtuelles Java ayant\nles numéros de construction suivant :\n\n-   2000 à 2447\n-   2752 à 3194\n-   3229 à 3240\n-   3300 à 3318\n\nPour connaître le numéro de construction de la Machine Virtuelle qui est\ninstallée sur le système, taper la commande JVIEW à l'invite de\ncommande.\n\nInstaller la nouvelle version de la Machine Virtuelle, dont le numéro de\nconstruction est 3319 à l'adresse suivante :\n\n    http://www.microsoft.com/java/vm/dl_vm40.htm\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le bulletin de sécurité Microsoft et sa FAQ et l'article  Q277014 de la base de connaissances :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-081.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-065",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-10-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès à des données non autorisées"
+    }
+  ],
+  "summary": "Une vulnérabilité de la machine virtuelle Java de Microsoft Internet\nExplorer sous Windows permet à l'administrateur d'un site web malicieux\nde lire des fichiers auxquels il ne devrait pas avoir accès sur le\ndisque dur et dans l'intranet de sa victime.\n",
+  "title": "Vulnérabilité dans la Machine Virtuelle Java de Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de Sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

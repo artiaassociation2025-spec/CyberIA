@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous systèmes Microsoft Windows.</P>",
+  "content": "## Description\n\nComme ses prédécesseurs, ce virus se recopie dans un répertoire système,\net se propage par mél à destination de tous les contacts présents dans\nle carnet d'adresse d'Outlook.\n\nIl y a plusieurs versions de ce ver, connues sous les noms de\nVBS/Funny-A, Funny-B, FunnyStory, et il pourrait y en avoir d'autres.\nSophos Antivirus et Panda software décrivent une version légèrement\ndifférente, mais la base reste approximativement la même.\n\nL'action principale de ce virus est d'installer un cheval de Troie\n(connu sous le nom de Troj/Hooker-E). Ce dernier, lorsqu'il est exécuté,\nrécupère des données présentes sur le disque dur telles que les noms et\nmots de passes des utilisateurs du système, et d'autres informations de\nconfiguration comme l'adresse IP de la machine, et les envoye à une\nadresse programmée.\n\n## Contournement provisoire\n\nLe virus FunnyStory se présente sous la forme d'un courrier électronique\nintitulé Funny Story.\n\nLa partie active du virus est dans l'attachement qui est, selon les\nversions, un fichier nommé Funny_Story.htm.vbs, ou\nLIFE_ASSURANCE.HTM.vbs. Notons que selon la configuration, on peut voir\nl'attachement sous la forme htm, qui laisse penser que l'attachement est\nanodin.\n\nEnfin, si le cheval de Troie Troj/Hooker-E est installé, il faut le\nsupprimer en détruisant le fichier nommé mstk32.exe présent dans le\nrépertoire système de Windows, et supprimer la clé nommée mstk32 qui se\ntrouve dans la branche\nHKLM/Software/Microsoft/Windows/Current/Version/RunOnce de la base des\nregistres. Cette clé sert à Troj/Hooker-E à s'exécuter à chaque\ndémarrage de la machine.\n\n## Solution\n\nMettre à jour votre anti-virus.\n\nIl faut se méfier des pièces jointes, ne pas les ouvrir, et en avoir\ndésactivé l'ouverture automatique. De plus, votre lecteur de courrier,\ndoit lire les pages web comme du texte uniquement et ne doit pas\nexécuter les contrôles Active X, de même votre navigateur internet,\ncomme indiqué dans les avis notes et alertes : CERTA-2000-AVI-002,\nCERTA-2000-ALE-001 et CERTA-2000-ALE-002, CERTA-2000-INF-002.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis du CERTA :",
+      "url": "http://www.sophos.com/virusinfo/analyses/vbsfunnya.html"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-049",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-09-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Propagation d'un ver de messagerie (saturation du serveur de messagerie). diffusion d'informations confidentielles et de mots de passes"
+    }
+  ],
+  "summary": "Le Virus FunnyStory, est un script en VBS, qui se propage, comme\nbeaucoup d'autres (par exemple Melissa et ILoveYou), via le carnet\nd'adresse du logiciel Outlook. Mais il a la particularité d'installer un\ncheval de Troie qui envoye à une adresse programmée des données\nsensibles lues sur le système.\n",
+  "title": "Virus FunnyStory",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Sophos Antivirus et Panda Software",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Réseau de confiance",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Serveurs web Lotus Domino dont la version est inférieure à  5.0.9 avec SSL activé.</P>",
+  "content": "## Description\n\nUn utilisateur mal intentionné peut, par le biais d'une URL HTTPS (port\n443/TCP) habilement conçue, effectuer un débordement de mémoire du\nserveur web Domino si SSL est activé.\n\nCe débordement de mémoire a pour conséquence de bloquer l'accès au\nserveur. Il faut redémarrer le service nHTTP.\n\n## Contournement provisoire\n\nLe port 443/TCP doit être bloqué par les gardes-barrières afin d'éviter\nd'être attaqué depuis l'extérieur.\n\n## Solution\n\nPasser à la version 5.0.9 de Lotus Domino ou appliquer le correctif SPR#\nMALR4Y6RL8.\n\n    http://www.notes.net\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "La note technique de Lotus :",
+      "url": "http://support.lotus.com/sims2.nsf/4c8e450dbf2e7f1885256b200079fa88"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-166",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-12-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité du serveur web de Lotus Domino associé à SSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "bulletin de sécurité Lotus 190143",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "bulletin de correctif MALR4Y6RL8",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de <TT>pine</TT>  strictement antérieures à la version 4.50.</p>",
+  "content": "## Description\n\npine est un client de messagerie en mode texte. Lors de la réception\nd'un message électronique, pine n'alloue pas assez de mémoire nécessaire\nà l'analyse de l'adresse electronique de l'expéditeur. L'exploitation de\ncette vulnérabilité peut permettre à un utilisateur mal intentionné,\nenvoyant un message électronique dont l'adresse source est habilement\nconstituée, de créer un déni de service sur la machine qui reçoit le\nmessage.\n\n## Contournement provisoire\n\nIl est possible de contourner provisoirement le problème en filtrant les\nentêtes des messages reçus avec un utilitaire de filtrage tel que\nprocmail.\n\n## Solution\n\nMettre à jour le paquetage pine en version 4.50 (cf. section\ndocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité de RedHat Linux : RHSA-2002:270",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-270.html"
+    },
+    {
+      "title": "Avis de sécurité de Linux SuSe : SuSe-SA:2002:046",
+      "url": "http://www.suse.de/de/security/2002_046_pine.html"
+    },
+    {
+      "title": "Avis de sécurité de Mandrake Linux : MDKSA-2002:084",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2002:084"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-256",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout bulletin Mandrake.",
+      "revision_date": "2002-12-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout bulletin RedHat.",
+      "revision_date": "2003-01-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le client de messagerie pine permet à un\nutilisateur mal intentionné de créer un déni de service.\n",
+  "title": "Vulnérabilité du client de messagerie Pine",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Linux SuSe : SuSe-SA:2002:046",
+      "url": null
+    }
+  ]
+}

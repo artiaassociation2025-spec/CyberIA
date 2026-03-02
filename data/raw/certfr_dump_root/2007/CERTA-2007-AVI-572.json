@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Syslog-ng Premium Edition versions antérieures à 2.1.8.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Syslog-ng Open Source Edition versions antérieures à 2.0.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn défaut de contrôle des informations traitées par Syslog-ng permet à\nun utilisateur distant de réaliser un déni de service par le biais d'un\nmessage spécialement construit.\n\n## Solution\n\nLes versions 2.0.6 de Syslog-ng Open Source Edition et 2.1.8 de\nSyslog-ng Premium Edition corrigent le problème. Se référer au site\nofficiel de l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-6437",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6437"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site officiel de Syslog-ng :",
+      "url": "http://www.balabit.com/network-security/syslog-ng/"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-572",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Syslog-ng permet de réaliser un déni de service à\ndistance.\n",
+  "title": "Vulnérabilité dans Syslog-ng",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Référence CVE CVE-2007-6437 du 19 décembre 2007",
+      "url": null
+    }
+  ]
+}

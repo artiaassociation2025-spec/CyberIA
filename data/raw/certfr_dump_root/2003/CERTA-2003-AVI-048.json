@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de <TT>Samba</TT>  des versions 2.0.x à la version 2.2.7a incluse. Pour Debian 3.0  (woody), toutes les versions des paquetages antérieures à la  version 2.2.3a-12.1.</p>",
+  "content": "## Description\n\nSamba est une implémentation du protocole SMB/CIFS (Server Message\nBlock/Common Internet File System). Ce protocole est typiquement utilisé\npour partager des fichiers et des imprimantes avec des machines Windows.\nPlusieurs vulnérabilités dans le démon smbd (Server Message Block\nDaemon) permet à un utilisteur mal intentionné d'exécuter du code\narbitraire à distance.\n\n## Contournement provisoire\n\n-   Editer les fichiers hosts.allow et hosts.deny pour gérer les\n    machines autorisées à utiliser Samba ;\n-   forcer l'écoute du démon seulement sur les interfaces nécessaires ;\n-   filtrer les ports TCP/139 et TCP/445.\n\n## Solution\n\nPour la Debian 3.0 (woody), mettre à jour Samba en version 2.2.3a-12.1.\nSinon, mettre à jour Samba en version 2.2.8.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité RedHat RHSA-2003:095-11 :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2003-095.html"
+    },
+    {
+      "title": "Annonce de la version 2.2.8 par l'equipe Samba :",
+      "url": "http://www.samba.org/samba/whatsnew/samba-2.2.8.html"
+    },
+    {
+      "title": "Avis de sécurité Mandrake MDKSA-2003:032 :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:032"
+    },
+    {
+      "title": "Avis de sécurité SuSE SuSE-SA:2003:016 :",
+      "url": "http://www.suse.de/de/security/2003_016_samba.html"
+    },
+    {
+      "title": "Avis de sécurité Debian DSA-262-1 :",
+      "url": "http://www.debian.org/security/2003/dsa-262"
+    },
+    {
+      "title": "Avis de sécurité SGI Irix :",
+      "url": "http://www.sgi.com/support/security/advisories.html"
+    },
+    {
+      "title": "Avis de sécurité Gentoo GLSA:samba (200303-11) :",
+      "url": "http://www.gentoo.org"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-048",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins RedHat et Gentoo.",
+      "revision_date": "2003-03-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins SuSE et IRIX.",
+      "revision_date": "2003-03-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Samba permettent à un utilisateur mal\nintentionné d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités de Samba",
+  "vendor_advisories": []
+}

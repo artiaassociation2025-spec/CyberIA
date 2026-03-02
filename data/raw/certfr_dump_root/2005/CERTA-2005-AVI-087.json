@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>Cyrus IMAP</TT> Server versions 2.x  antérieures à la version 2.2.11.",
+  "content": "## Description\n\nCyrus IMAP est un serveur de messagerie IMAP (Internet Message Access\nProtocol).\n\nCinq dépassements de tampon sont présents sur ce serveur. L'exploitation\nde ces vulnérabilités permet à un utilisateur mal intentionné de\nréaliser un déni de service ou d'exécuter du code arbitraire sur le\nsystème.  \n  \nL'exploitation de certaines de ces vulnérabilités n'est possible que si\nl'utilisateur mal intentionné est authentifié.\n\n## Solution\n\nSe référer au bulletin de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200502-29 du 24 févier    2005 :",
+      "url": "http://security.gentoo.org/glsa/glsa-200502-29.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2005:051 du 4 mars 2005    :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2005:051"
+    },
+    {
+      "title": "Bulletin de sécurité Suse du 24 février 2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_09_cyrus_imapd.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD du 27 février 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-cyrus-imapd.html"
+    },
+    {
+      "title": "Mise à jour NetBSD du 27 février 2005 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/mail/cyrus-imapd22/README.html"
+    },
+    {
+      "title": "Site internet du serveur Cyrus IMAP :",
+      "url": "http://asg.web.cmu.edu/cyrus/"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-087",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-02-28T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE et du bulletin de sécurité Mandrake.",
+      "revision_date": "2005-03-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs débordements de mémoire sont présents dans le serveur Cyrus\nIMAP. Ces vulnérabilités peuvent être exploitées par un utilisateur mal\nintentionné pour réaliser un déni de service ou exécuter du code\narbitraire sur le système ayant le service vulnérable.\n",
+  "title": "Multiples Vunérabilités dans Cyrus IMAP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de l'université de Carnegie Mellon",
+      "url": "http://asg.web.cmu.edu/archive/message.php?mailbox=archive.info-cyrus&msg=33723"
+    }
+  ]
+}

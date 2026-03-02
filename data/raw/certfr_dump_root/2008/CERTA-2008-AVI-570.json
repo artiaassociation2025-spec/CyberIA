@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>IBM AIX 6.1.x.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités, permettant à une personne malintentionnée\nd'élever ses privilèges, ont été découvertes dans IBM AIX :\n\n-   un dépassement de mémoire tampon est possible dans le programme\n    privilégié ndp lorsque le service netcd est démarré ;\n-   si RBAC (Role Based Access Control) est utilisé et que l'utilisateur\n    dispose de la permission aix.network.config.tcpip, un dépassement de\n    mémoire débouchant sur une élevation de privilèges est possible via\n    la commande autoconf6 ;\n-   la suppression de n'importe quel fichier sur le système est possible\n    via la commande enq si une file d'attente d'impression est définie\n    dans /etc/qconfig ;\n-   la commande crontab permet à un utilisateur disposant du droit\n    aix.system.config.cron d'élever ses privilèges pour l'édition de\n    certains fichiers.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM du 26 novembre 2008 :",
+      "url": "http://aix.software.ibm.com/aix/efixes/security/aix61_advisory.asc"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-570",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-12-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans IBM AIX permettent à une personne\nmalintentionnée d'élever ses privilèges sur le système.\n",
+  "title": "Multiples vulnérabilités dans IBM AIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM AIX du 26 novembre 2008",
+      "url": null
+    }
+  ]
+}

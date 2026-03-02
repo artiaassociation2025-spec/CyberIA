@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système ayant la bibliothèque <TT>libpng2</TT> ou  <TT>libpng3</TT> installée.</P>",
+  "content": "## Description\n\nLa bibliothèque libpng est utilisée par de nombreuse applications (dont\nles navigateurs) pour la manipulation de fichiers image au format png.\n\n  \n\nUn débordement de mémoire dans la gestion de la taille des données ( la\ntaille des données spécifiée dans la section IHDR est inférieure à la\ntaille des données effectivement reçues) permet à un utilisateur mal\nintentionné, composant judicieusement un fichier destiné à être lu par\ncette bibliothèque, d'exécuter du code arbitraire ou d'entraîner un déni\nde service de l'application sur la machine cible.\n\n## Solution\n\nLes versions 1.0.14 et 1.2.14 de la bibliothèque corrigent cette\nvulnérabilité.\n\nConsulter les bulletins de sécurité de votre distributeur pour connaître\nla disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité DSA 140-1 et DSA 140-2 de Debian :",
+      "url": "http://www.debian.org/security"
+    },
+    {
+      "title": "Avis de sécurité RHSA-2002:151 de Red Hat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-151.html"
+    },
+    {
+      "title": "Avis de sécurité MDKSA-2002:049 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-049.php"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-166",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout de l'avis de sécurité DSA 140-2 concernant un débordement de mémoire supplémentaire.",
+      "revision_date": "2002-08-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence à l'avis de sécurité MDKSA-2002:049 de Mandrake.",
+      "revision_date": "2002-08-19T00:00:00.000000"
+    },
+    {
+      "description": "modification de la section Description, mention des versions non vulnérables, ajout de la référence à l'avis de sécurité RHSA-2002:151 de Red Hat.",
+      "revision_date": "2002-08-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans la bibliothèque libpng permet à un\nutilisateur mal intentionné d'exécuter du code arbitraire ou d'entraîner\nun déni de service sur la machine cible.\n",
+  "title": "Vulnérabilité dans la bibliotheque libpng",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DEBIAN",
+      "url": null
+    }
+  ]
+}

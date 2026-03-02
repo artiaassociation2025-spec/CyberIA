@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Unity Connection versions 7.1 et antérieures ;",
+      "product": {
+        "name": "Unity Connection",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unity Connection versions 8.0, 8.5 et 8.6.",
+      "product": {
+        "name": "Unity Connection",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Cisco Unity\nConnection :\n\n-   un utilisateur authentifié disposant de droits Help Desk\n    Administrator peut élever ses privilèges et obtenir un accès complet\n    au système. Seules les versions 7.1 et antérieures de Cisco Unity\n    Connection sont concernées (CVE-2012-0366) ;\n-   en envoyant une séquence spécifique de segments TCP, un attaquant\n    distant peut provoquer l'arrêt inopiné de services du système\n    (CVE-2012-0367).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-0367",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0367"
+    },
+    {
+      "name": "CVE-2012-0366",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0366"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2012-AVI-108",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-03-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Cisco Unity\nConnection</span> permettent de réaliser un déni de service à distance\net une élévation de privilèges.\n",
+  "title": "Multiples vulnérabilités dans Cisco Unity Connection",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20120229-cuc du 29 février 2012",
+      "url": "http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120229-cuc"
+    }
+  ]
+}

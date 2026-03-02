@@ -1,0 +1,122 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenOffice.org versions 2.1.0 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenOffice",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenOffice.org versions 1.0.3.1 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenOffice",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenOffice.org versions 1.1.5 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenOffice",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois vulnérabilités sont présentent dans OpenOffice.org :\n\n-   la première est due au fait que OpenOffice.org embarque dans son\n    code la bibliothèque de fonctions libwpd mettant en œuvre le support\n    des fichiers WordPerfect dans OpenOffice.org. Or, cette bibliothèque\n    de fonction est vulnérable et permet l'exécution de code arbitraire\n    (CERTA-2007-AVI-135) ;\n-   la deuxième vulnérabilité concerne le composant tableur de\n    OpenOffice.org qui comporte une faille de type débordement de\n    mémoire permettant l'exécution de code arbitraire ;\n-   la dernière vulnérabilité est, quant à elle, due à un manque de\n    contrôle des paramètres passés en ligne de commande à\n    OpenOffice.org. Ceci permet à un utilisateur malintentionné\n    d'exécuter du code arbitraire à distance par le biais d'un lien\n    construit de façon particulière.\n\n## Solution\n\nLa version 2.2 corrige les problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0238",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0238"
+    },
+    {
+      "name": "CVE-2007-0002",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0002"
+    },
+    {
+      "name": "CVE-2007-0239",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0239"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis CERTA-2007-AVI-135 du 21 mars 2007 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2007-AVI-135/index.html"
+    },
+    {
+      "title": "Bulletin de sécurité OpenOffice relatif à la référence CVE    CVE-2007-0239 :",
+      "url": "http://www.openoffice.org/security/CVE-2007-0239.html"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SA:2007:023 du 21 mars 2007    :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2007-Mar/0007.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-437-1 du 19 mars 2007 :",
+      "url": "http://www.ubuntu.com/usn/usn-437-1"
+    },
+    {
+      "title": "Bulletin de sécurité OpenOffice relatif à la référence CVE    CVE-2007-0002 :",
+      "url": "http://www.openoffice.org/security/CVE-2007-2.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1268 du 17 mars 2007 :",
+      "url": "http://www.debian.org/security/dsa-1268"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-444-1 du 27 mars 2007 :",
+      "url": "http://www.ubuntu.com/usn/usn-444-1"
+    },
+    {
+      "title": "Bulletin de sécurité OpenOffice relatif à la référence CVE    CVE-2007-0238 :",
+      "url": "http://www.openoffice.org/security/CVE-2007-0238.html"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2007:0033 du 22 mars 2007    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0033.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-136",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-03-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian, Red Hat, Ubuntu.",
+      "revision_date": "2007-03-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout de référence au bulletin de sécurité Ubuntu.",
+      "revision_date": "2007-03-28T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité OpenOffice.",
+      "revision_date": "2007-04-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans OpenOffice.org permettent à\nun utilisateur distant d'exécuter du code arbitraire.\n",
+  "title": "Multiples vulnérabilités dans OpenOffice.org",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-1270 du 20 mars 2007",
+      "url": "http://www.debian.org/security/dsa-1270"
+    }
+  ]
+}

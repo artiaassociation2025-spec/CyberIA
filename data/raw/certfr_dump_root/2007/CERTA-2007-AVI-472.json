@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SonicWALL SSL-VPN 2000 versions antérieures à la version 2.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sonicwall",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SonicWALL SSL-VPN 4000 versions antérieures à la version 2.5.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sonicwall",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SonicWALL SSL-VPN 200 versions antérieures à la version 2.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sonicwall",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans SonicWALL SSL-VPN :\n\n-   Une erreur aux limites a été découverte dans le contrôle ActiveX\n    NetExtender NELaunchCtrl. Cette vulnérabilité peut être exploitée\n    via un site malicieux, exécutant ainsi du code arbitraire sur le\n    poste de l'utilisateur.\n-   L'utilisation de la méthode FileDelete() dans le contrôle ActiveX\n    WebCacheCleaner peut être exploitée afin d'effacer des fichiers\n    arbitraires.\n\n## Solution\n\nInstaller la version de firmware 2.1 pour les SonicWALL SSL-VPN 200 et\nla version 2.5 pour les SonicWALL SSL-VPN 2000 et 4000 (cf.\ndocumentation pour l'adresse de téléchargement).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5603",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5603"
+    }
+  ],
+  "links": [
+    {
+      "title": "Note de vulnérabilité de l'US-CERT VU#298521 du 01 novembre    2007 :",
+      "url": "http://www.kb.cert.org/vuls/id/298521"
+    },
+    {
+      "title": "Téléchargement des mises à jour sur le site de l'éditeur :",
+      "url": "http://www.sonicwall.com/us/643.htm"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-472",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-11-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans SonicWALL SSL-VPN. Ces\nvulnérabilités peuvent être exploitées afin de porter atteinte à\nl'intégrité du système ou d'exécuter du code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités de SonicWALL SSL VPN",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité US-CERT VU#298521 du 01 novembre 2007",
+      "url": null
+    }
+  ]
+}

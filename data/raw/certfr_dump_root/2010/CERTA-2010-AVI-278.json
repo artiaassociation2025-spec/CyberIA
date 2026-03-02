@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Moodle, versions antérieures à la  version 1.8.13 (branche 1.8) et à la version 1.9.9 (branche 1.9).</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans Moodle :\n\n-   quand les identifiants des utilisateurs peuvent comporter des\n    caractères non ASCII, une interface de contrôle d'accès permet\n    l'injection de code indirecte ;\n-   un défaut de filtrage des entrées dans le module de blog permet\n    l'injection de code indirecte ;\n-   un défaut de filtrage des URI VBscript permet à un utilisateur\n    malveillant ayant un compte de réaliser l'injection de code\n    indirecte ;\n-   un défaut de vérification dans un module de quizz permet d'injecter\n    des requêtes illégitimes par rebond et de détruire des données.\n\n## Solution\n\nMigrer en version 1.8.13 ou 1.9.9.\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2229",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2229"
+    },
+    {
+      "name": "CVE-2010-2230",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2230"
+    },
+    {
+      "name": "CVE-2010-2231",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2231"
+    },
+    {
+      "name": "CVE-2010-2228",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2228"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Moodle MSA-10-0011 du 17 juin 2010 :",
+      "url": "http://www.moodle.org/mod/forum/discuss.php?d=152367"
+    },
+    {
+      "title": "Bulletin de sécurité Moodle MSA-10-0012 du 17 juin 2010 :",
+      "url": "http://www.moodle.org/mod/forum/discuss.php?d=152368"
+    },
+    {
+      "title": "Bulletin de sécurité Moodle MSA-10-0013 du 17 juin 2010 :",
+      "url": "http://www.moodle.org/mod/forum/discuss.php?d=152369"
+    },
+    {
+      "title": "Bulletin de sécurité Moodle MSA-10-0010 du 17 juin 2010 :",
+      "url": "http://www.moodle.org/mod/forum/discuss.php?d=152366"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-278",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-06-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE.",
+      "revision_date": "2010-06-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans Moodle permettent de réaliser de\nl'injection de code indirecte, de l'injection de requêtes illégitimes\npar rebond et des atteintes à l'intégrité des données.\n",
+  "title": "Vulnérabilités dans Moodle",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Moodle MSA-10-0010 à 0013 du 17 juin 2010",
+      "url": null
+    }
+  ]
+}

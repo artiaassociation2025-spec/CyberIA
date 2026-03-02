@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>SGI IRIX versions 6.5.25, 6.5.26 et  6.5.27.</p>",
+  "content": "## Description\n\nrpc.mountd est un service permettant le montage depuis un serveur NFS de\nvolumes distants.\n\nbigskip\n\nSelon SGI, deux vulnérabilités sont présentes dans le service rpc.mountd\n:\n\n-   CVE CAN-2005-139 : il est possible de contourner la limition d'accès\n    en lecture ;\n-   CVE CAN-2005-138 : un déni de service est possible lorque les\n    clients anonymes ne possèdent pas de résolution inverse du nom de\n    machine.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SGI 20050601-01-P du 09 juin 2005 :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20050601-01-P.asc"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-199",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-06-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités de rpc.mountd sous SGI IRIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité 20050601-01-P de SGI",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Trend Micro Antivirus 2007 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Trend Micro",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Trend Micro Anti-Spyware (SMB 3.2 SP1, Consumer 3.5, Enterprise 3.0 SP2) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Trend Micro",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Damage Cleanup Services 3.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Trend Micro",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Client / Server / Messaging Security pour SMB 3.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Trend Micro",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Trend Micro PC-cillin Internet Security 2007 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Trend Micro",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans certains produits Trend\nMicro.\n\n1.  les fichiers exécutables compressés par UPX ne seraient pas\n    correctement manipulés par les produits de Trend Micro. Il serait\n    possible d'en construire un de manière particulière, afin de\n    provoquer un débordement de la pile. Cela provoquerait une\n    perturbation du système de balayage de fichiers, voire,\n    éventuellement, une exécution de code arbitraire.\n2.  le fichier (pilote) TmComm.sys ne s'installerait pas avec des droits\n    nécessaires et suffisants. Il offrirait un droit d'écriture pour\n    tous. Une personne malveillante pourrait exploiter cette\n    vulnérabilité afin d'élever ses privilèges sur le système\n    vulnérable.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité IDefense Labs 469 du 07 février 2007 :",
+      "url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=469"
+    },
+    {
+      "title": "Bulletin de sécurité Trend Micro 1034289 du 06 février 2007    :",
+      "url": "http://esupport.trendmicro.com/support/viewxml.do?ContentID=EN-1034289"
+    },
+    {
+      "title": "Bulletin de sécurité Trend Micro 1034432 du 07 février 2007    :",
+      "url": "http://esupport.trendmicro.com/support/viewxml.do?ContentID=EN-1034432"
+    },
+    {
+      "title": "Avis de sécurité IDefense Labs 470 du 07 février 2007 :",
+      "url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=470"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-073",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-02-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été identifiées dans certains produits Trend\nMicro. Elles permettraient à une personne malveillante qui les\nexploiterait, d'élever ses privilèges, de lancer un déni de service ou\nd'exécuter des commandes arbitraire à distance sur le système\nvulnérable.\n",
+  "title": "Vulnérabilités des produits Trend Micro",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Trend Micro du 07 février 2007",
+      "url": null
+    }
+  ]
+}

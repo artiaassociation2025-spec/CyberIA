@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Tous les systèmes mettant en œuvre la pile protocolaire IPv6 du projet KAME.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans la mise en œuvre d'IPv6 par le\nprojet KAME. La pile ne manipulerait pas correctement les trames\nutilisant l'en-tête IPComp dans le fichier ipcomp_input.c. Celui-ci est\ndéfini par le standard RFC 3173 et précise un protocole de compression\nsans perte des données dans un datagramme IP.\n\nL'exploitation de cette vulnérabilité permet à une personne distante\nmalveillante de perturber le fonctionnement du système via un paquet\nspécialement construit.\n\nPlusieurs systèmes s'appuient sur la mise en œuvre du projet KAME.\n\n## Solution\n\nSe référer au bulletins de sécurités des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0177",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0177"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD-SA-08:04.ipsec.asc :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-08:04.ipsec.asc"
+    },
+    {
+      "title": "Standard IETF RFC 3173, \"IP Payload Compression Protocol    (IPComp)\", septembre 2001 :",
+      "url": "http://www.ietf.org/rfc/rfc3173.txt"
+    },
+    {
+      "title": "Aperçu du projet KAME concernant la mise en œuvre IPv6 :",
+      "url": "http://www.kame.net/project-overview.html"
+    },
+    {
+      "title": "Correctif de NetBSD concernant la vulnérabilité    ipcomp_input.c :",
+      "url": "http://cvsweb.netbsd.org/bsdweb.cgi/src/sys/netinet6/ipcomp_input.c?f=u&only_with_tag=netbsd-3-1"
+    },
+    {
+      "title": "Note de vulnérabilité de l'US-CERT VU#110947 du 06 février    2008 :",
+      "url": "http://www.kb.cert.org/vuls/id/110947"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-056",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de FreeBSD.",
+      "revision_date": "2008-02-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans la mise en œuvre d'IPv6 par le\nprojet KAME. L'exploitation de celle-ci permet à une personne distante\nmalveillante de perturber le fonctionnement du système via un paquet\nspécialement construit.\n",
+  "title": "Vulnérabilité dans la pile IPv6 du projet KAME",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de vulnérabilité VU110947 de l'US-CERT du 06 février 2008",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "HP-UX version 10.20, 11.0 pour \"kermit\" ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP-UX version 10.20, 11.0 pour \"rexec\" ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP-UX version 10.20 pour \"ipcs\".",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP-UX version 10.20, 11.0, 11.04 et 11.11 pour \"wall\" ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois bulletins de sécurité concernant des vulnérabilités de type\ndébordement de mémoire présentes dans des commandes sous HP-UX ont été\némis.\n\nL'exploitation de ces vulnérabilités permet à un utilisateur mal\nintentionné de réaliser une élévation de privilèges.\n\n  \nLes commandes vulnérables sont les suivantes :\n\n-   \"rexec\" : permet l'exécution de commandes sur un système distant ;\n-   \"wall\" : permet d'envoyer un message à tous les utilisateurs d'un\n    système ;\n-   \"kermit\" : permet à deux systèmes distants d'échanger des données ;\n-   \"ipcs\" : permet de visualiser l'état des canaux de communication\n    (sémaphores, mémoires partagées, etc.) sur un système.\n\n## Solution\n\nPour l'obtention des correctifs, consulter les bulletins de sécurité de\nl'éditeur :\n\n    http://itrc.hp.com\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-090",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-05-23T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence à la vulnérabilité \"<TT>rexec</TT>\".",
+      "revision_date": "2003-05-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités sous HP-UX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité de Hewlett-Packard",
+      "url": null
+    }
+  ]
+}

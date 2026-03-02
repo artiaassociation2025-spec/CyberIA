@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tous les systèmes avec  <TT>Ethereal</TT> version 0.9.12 et antérieures.</p>",
+  "content": "## Description\n\nEthereal est un renifleur réseau. Il permet l'analyse de données depuis\nle réseau ou à partir d'un fichier.\n\nDe multiples vulnérabilités de type débordement de mémoire sont\nprésentes dans Ethereal.\n\nUn utilisateur mal intentionné, composant judicieusement un fichier\ndestiné à être lu par Ethereal ou injectant un paquet malicieusement\nconstruit sur le réseau, peut exploiter cette vulnérabilité afin\nd'exécuter du code arbitraire ou réaliser un déni de service sur la\nplate-forme utilisant une version vulnérable d'Ethereal.\n\n## Solution\n\nInstaller la version 0.9.13 d'Ethereal :\n\n    http://www.ethereal.com\n\nou appliquer le correctif de l'éditeur :\n\n-   Bulletin de sécurité DSA-324 de Debian :\n\n        http://www.debian.org/security/2003/dsa-324\n\n-   Bulletin de sécurité MDKSA-2003:070 de Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:070\n\n-   Bulletin de sécurité RHSA-2003:203 de Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2003-203.html\n\n-   Bulletin de sécurité RHSA-2003:077-13 de Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2003-077.html\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-100",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-06-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin RHSA-2003:203 de Red Hat.",
+      "revision_date": "2003-07-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin RHSA-2003:077-13 de Red Hat.",
+      "revision_date": "2003-07-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités d'Ethereal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DSA-324 de Debian",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité enpa-sa-00010 d'Ethereal",
+      "url": "http://www.ethereal.com/appnotes/enpa-sa-00010.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MDKSA-2003:070 de Mandrake",
+      "url": null
+    }
+  ]
+}

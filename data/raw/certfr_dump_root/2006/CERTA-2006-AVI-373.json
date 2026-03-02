@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions Ethereal/Wireshark antérieures à 0.99.3.",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nEthereal est un logiciel de capture et d'analyse de trafic réseau. Le\nprojet Ethereal a été interrompu, et son développement se poursuit\nmaintenant sous le nom de Wireshark. Plusieurs vulnérabilités ont été\nidentifiées dans ce dernier :\n\n-   l'interpréteur de données au format protocolaire SCSI (Small\n    Computer System Interface) n'effectuerait pas correctement sa tâche\n    et pourrait être interrompu sous certaines conditions ;\n-   l'interpréteur du protocole DHCP pourrait provoquer une erreur dans\n    la bibliothèque Glib et perturber le système vulnérable, au cours de\n    la manipulation de certaines données ;\n-   la manipulation d'IPsec ESP entraînerait des erreurs lors du\n    déchiffrement de certaines données ;\n-   des données respectant le protocole Q.2931 (utilisé pour la\n    signalisation du RNIS à large bande B-ISDN) seraient manipulées de\n    manière non correcte par l'interpréteur SSCOP. Cette vulnérabilité\n    pourrait entraîner un débordement de mémoire.\n\nCes vulnérabilités peuvent être exploitées par une personne malveillante\ndistante : il lui faut envoyer des paquets spécialement conçus à\ndestination d'un système vulnérable pour provoquer une perturbation du\nservice Wireshark (Ethereal) et d'exécuter des commandes arbitraires.\n\n## Solution\n\nSe référer au bulletin de sécurité du projet Wireshark pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4332",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4332"
+    },
+    {
+      "name": "CVE-2006-4330",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4330"
+    },
+    {
+      "name": "CVE-2006-4333",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4333"
+    },
+    {
+      "name": "CVE-2006-4331",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4331"
+    }
+  ],
+  "links": [
+    {
+      "title": "Mise à jour Wireshark pour la version 0.99.3 :",
+      "url": "http://www.wireshark.org/docs/relnotes/wireshark-0.99.3.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian dsa-1171-1 du 07 septembre 2006    :",
+      "url": "http://www.debian.org/security/2006/dsa-1171"
+    },
+    {
+      "title": "Site du projet Wireshark, succédant à Ethereal :",
+      "url": "http://www.wireshark.org"
+    },
+    {
+      "title": "Bulletin de sécurité Wireshark wnpa-sec-2006-002 du 23 août    2006 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2006-02.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-373",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la mise à jour Debian",
+      "revision_date": "2006-09-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans Wireshark (Ethereal).\nElles permettraient à une personne malveillante distante, de provoquer\nune perturbation du service ou d'exécuter des commandes arbitraires sur\nle système utilisant une version vulnérable.\n",
+  "title": "Multiples vulnérabilités dans Wireshark (Ethereal)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Wireshark wnpa-sec-2006-002 du 23 août 2006",
+      "url": null
+    }
+  ]
+}

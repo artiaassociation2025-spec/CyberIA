@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les équipements de la gamme Alteon ACEdirector (AD) de Nortel  Networks.</P>",
+  "content": "## Description\n\nAlteon ACEdirector (AD) de Nortel Networks est un équipement,\ncommunément appelé commutateur de niveau 7, dont le rôle est de gérer du\ntrafic Web pour plusieurs serveurs (répartition de charge, redirection\nen fonction de l'application ou de l'URL, etc...).\n\nLorsque l'équipement fonctionne en mode «répartition de charge» entre\nles différents serveurs Web, la fonctionalité est normalement\ntransparente pour le client qui ne connait qu'une adresse IP (appelée\nadresse IP virtuelle de l'équipement).\n\nCependant, une vulnérabilité dans la gestion des fermeture de session\nTCP d'Alteon ACEdirector permet d'être en communication directe avec un\nserveur et de connaître ainsi son adresse IP.\n\n## Solution\n\nNortel Networks distribue des mises à jour du système d'exploitation ne\npermettant plus l'exploitation de cette vulnérabilité :\n\n-   WebOS 8.3.24.5 pour les versions 8.3.x ;\n-   WebOS 9.0.41.5 pour les versions 9.x ;\n-   WebOS 10.0.25.1 pour les versions 10.x\n\nDes correctifs sont en cours d'élaboration pour les versions 8.0 et 8.1.\nAucun correctif n'est en revanche prévu pour des versions plus anciennes\nde WebOS.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Archive de securityfocus (Bugtraq) :",
+      "url": "http://online.securityfocus.com/bid/3964"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-060",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-03-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation de données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans les équipements Alteon ACEdirector (AD) permet la\ndivulgation de l'adresse IP réelle des serveurs Web gérés par ces\néquipements.\n",
+  "title": "Vulnérabilité dans le commutateur Alteon ACEdirector (AD) de Nortel Networks",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Base de vulnérabilités BugTraq",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Perl 5.8.7 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Perl 5.9.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur de type chaîne de format présente dans une fonction de\nl'interpréteur de commandes Perl permet à un utilisateur distant mal\nintentionné de provoquer l'arrêt inopiné de cet interpréteur et par\nextension l'arrêt de l'application qui l'utilise. Cette vulnérabilité\npeut être exploitée par le biais d'une chaîne de caractères\nmalicieusement construite passée en paramètre à l'application\nvulnérable.\n\n## Solution\n\nSe référer au bulletin de l'éditeur pour l'obtention de correctifs (cf.\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-943 du 16 janvier 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-943"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:881 du 20 décembre    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-881.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200512-01 du 07 décembre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200512-01.xml"
+    },
+    {
+      "title": "Site de Perl :",
+      "url": "http://www.perl.org"
+    },
+    {
+      "title": "Bulletin de sécurité de l'US-CERT VU#946969 :",
+      "url": "http://www.kb.cert.org/vuls/id/946969"
+    },
+    {
+      "title": "Bulletin de sécurité Sun Solaris #102192 du 28 février 2006    :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-102192-1"
+    },
+    {
+      "title": "Bulletin de sécurité de l'US-CERT VU#948385 :",
+      "url": "http://www.kb.cert.org/vuls/id/948385"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:225 du 08 décembre    2005 :",
+      "url": "http://frontal2.mandriva.com/security/advisories?name=MDKSA-2005:225"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:880 du 20 décembre    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-880.html"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SA:2005:071 du 20 décembre    2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_71_perl.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu #USN-222-1 :      http://www.ubuntulinux.org/support/documentation/usn/usn-222-1",
+      "url": "http://www.ubuntulinux.org/support/documentation/usn/usn-221-1"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-486",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-12-09T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva MDKSA-2005:225.",
+      "revision_date": "2005-12-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité SUSE SUSE-SA:2005:071, RedHat RHSA-2005:880 et RedHat RHSA-2005:881.",
+      "revision_date": "2005-12-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-943.",
+      "revision_date": "2006-01-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Solaris.",
+      "revision_date": "2006-03-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans Perl permet à un utilisateur distant de\nprovoquer un déni de service.\n",
+  "title": "Vulnérabilité de Perl",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité de l'US-CERT VU#948385 et VU#946969",
+      "url": null
+    }
+  ]
+}

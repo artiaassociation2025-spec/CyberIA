@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les produits 3Com TippingPoint IPS ayant une version TOS 2.1.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les produits 3Com TippingPoint IPS ayant une version TOS 2.2.x antérieure à 2.2.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les produits 3Com TippingPoint IPS ayant une version TOS 2.5.x antérieure à 2.5.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le système d'exploitation TOS\nintégré aux solutions de sécurité 3Com TippingPoint IPS. Le service de\ndétection ne fonctionnerait pas correctement sous certaines conditions\nde fragmentation des trames réseau (IP). L'exploitation de cette\nvulnérabilité permet ainsi à une personne malveillante distante de\ncontourner les politiques de filtrage et de détection mises en place.\n\n## Solution\n\nSe référer à l'alerte de sécurité l'éditeur 3Com pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3711",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3711"
+    }
+  ],
+  "links": [
+    {
+      "title": "Alerte 3Com 3COM-07-002 du 10 juillet 2007, « TippinPoint    IPS Filter Bypass Vulnerability » :",
+      "url": "http://www.3com.com/securityalert/alerts/3COM-07-002.html"
+    },
+    {
+      "title": "Avis de sécurité Cybsec du 04 juillet 2007 :",
+      "url": "http://www.cybsec.com/vuln/CYBSEC-Security_Pre-Advisory_3Com_TippingPoint_IPS_Detection_Bypass_2.pdf"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-298",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence CVE associée.",
+      "revision_date": "2007-07-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans le système d'exploitation TOS\nintégré aux solutions de sécurité 3Com TippingPoint IPS. Un\nfragmentation de paquets particulière permettrait de contourner la\npolitique de détection mise en place.\n",
+  "title": "Vulnérabilité dans 3Com TippingPoint IPS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Alerte de sécurité 3COM-07-002 du 10 juillet 2007",
+      "url": null
+    }
+  ]
+}

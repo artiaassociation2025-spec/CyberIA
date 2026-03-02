@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Firepower Threat Defense (FTD) sans les derniers correctifs de sécurité, se référer au bulletin de sécurité de l'éditeur pour les versions vulnérables (cf. section Documentation)",
+      "product": {
+        "name": "Firepower Threat Defense",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Adaptive Security Appliance (ASA) sans les derniers correctifs de sécurité, se référer au bulletin de sécurité de l'éditeur pour les versions vulnérables (cf. section Documentation)",
+      "product": {
+        "name": "Adaptive Security Appliance",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2024-20353",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20353"
+    },
+    {
+      "name": "CVE-2024-20359",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20359"
+    },
+    {
+      "name": "CVE-2024-20358",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-20358"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0347",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-04-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans <span\nclass=\"textit\">les produits Cisco</span>. Elles permettent à un\nattaquant de provoquer une exécution de code arbitraire et un déni de\nservice à distance.\n\nCisco indique que les vulnérabilités CVE-2024-20353 et CVE-2024-20359\nsont activement exploitées dans le cadre d'attaques ciblées.\n",
+  "title": "Multiples vulnérabilités dans les produits Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": "2024-04-24",
+      "title": "Bulletin de sécurité Cisco cisco-sa-asaftd-cmd-inj-ZJV8Wysm",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-cmd-inj-ZJV8Wysm"
+    },
+    {
+      "published_at": "2024-04-24",
+      "title": "Bulletin de sécurité Cisco cisco-sa-asaftd-persist-rce-FLsNXF4h",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-persist-rce-FLsNXF4h"
+    },
+    {
+      "published_at": "2024-04-24",
+      "title": "Bulletin de sécurité Cisco cisco-sa-asaftd-websrvs-dos-X8gNucD2",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-asaftd-websrvs-dos-X8gNucD2"
+    }
+  ]
+}

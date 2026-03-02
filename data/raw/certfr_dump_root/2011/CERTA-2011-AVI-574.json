@@ -1,0 +1,87 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "équipements Cisco série 5500 Adaptive Security Appliances ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "équipements Cisco Catalyst série 6500 ASA Service Module.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne première vulnérabilité dans le système d'inspection de paquets du\nprotocole MSN IM permet à un attaquant de réaliser un déni de service\nlorsque celui-ci dirige du trafic spécialement conçu au travers de\nl'équipement vulnérable. L'équipement doit avoir activé l'inspection des\npaquets MSN IM (CVE-2011-3304).\n\nUne vulnérabilité dans l'implémentation du protocole TACACS+ (Terminal\nAccess Controller Access-Control System Plus) permet à un attaquant\ndistant de contourner les règles de contrôle d'accès gérées par ce\nprotocole (CVE-2011-3298).\n\nQuatre vulnérabilités dans le système d'inspection des paquets du\nprotocole SunRPC permettent à une personne malintentionnée de provoquer\nl'arrêt de l'appareil à distance au moyen de messages spécialement\nconstruits (CVE-2011-3299, CVE-2011-3300, CVE-2011-3301 et\nCVE-2011-3302).\n\nEnfin, une vulnérabilité dans le système d'inspection de paquets du\nprotocole ILS permet à un attaquant de réaliser un déni de service\nlorsque celui-ci dirige du trafic spécialement conçu au travers de\nl'équipement vulnérable. L'équipement doit avoir activé l'inspection des\npaquets ILS (CVE-2011-3303).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-3302",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3302"
+    },
+    {
+      "name": "CVE-2011-3304",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3304"
+    },
+    {
+      "name": "CVE-2011-3299",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3299"
+    },
+    {
+      "name": "CVE-2011-3301",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3301"
+    },
+    {
+      "name": "CVE-2011-3303",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3303"
+    },
+    {
+      "name": "CVE-2011-3298",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3298"
+    },
+    {
+      "name": "CVE-2011-3300",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3300"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20111005-asa du 18 octobre 2011    :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20111005-asa.shtml"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-574",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-10-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités permettant à un attaquant distant, soit de\nforcer l'équipement Cisco vulnérable à redémarrer, soit de contourner\ndes politiques de sécurité ont été corrigées.\n",
+  "title": "Multiples vulnérabilités dans Cisco Adaptive Security Appliances",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20111005-asa du 05 octobre 2011",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Informix Client SDK 2.90 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Informix Dynamic Server 10.00 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Informix Connect 2.90.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité liée à une mauvaise gestion des privilèges dans les\nscripts d'installation d'IBM Informix permet à un utilisateur local\nmalintentionné d'exécuter du code arbitraire avec les privilèges de\nl'utilisateur installant l'application.\n\nUne seconde vulnérabilité découverte dans la gestion des fichiers\ntemporaires dans /tmp/ peut être exploitée au moyen d'un lien symbolique\nafin de compromettre l'intégrité des données du système.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de l'éditeur IBM :",
+      "url": "http://www.inm.com/fr/"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-473",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans IBM Informix permettent à un utilisateur local\nmalintentionné d'exécuter du code avec les privilèges d'un autre\nutilisateur ou de compromettre l'intégrité des données présentes sur le\nsystème.\n",
+  "title": "Vulnérabilité dans IBM Informix Dynamic Server (IDS)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM #1247438 du 30 octobre 2006",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21247438"
+    }
+  ]
+}

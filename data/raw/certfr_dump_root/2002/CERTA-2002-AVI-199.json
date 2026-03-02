@@ -1,0 +1,35 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Concentrateurs Cisco VPN 3000 et clients VPN 3002.</P>",
+  "content": "## Description\n\nLes concentrateurs Cisco VPN 3000 servent à établir des Réseaux Privés\nVirtuels pour des communications chiffrées et authentifiées.\n\nLe numéro des vulnérabilités ci-dessous correspond à l'identification\nCisco :\n\n-   CSCdt56514 : une vulnérabilté du processus d'authentification permet\n    un accès non autorisé au réseau protégé par le concentrateur Cisco\n    VPN 3000 ;\n-   CSCdu15622 : une URL habilement construite envoyée à l'interface\n    HTML du VPN 3000 peut provoquer un déni de service ;\n-   CSCdu35577 : les bannières de plusieurs applications donnent des\n    d'informations qui ne devraient pas être révélées ;\n-   CSCdu82823 : le démon telnet est vulnérable à un débordement de\n    mémoire ,\n-   CSCdv66718 : le client natif PPTP de Windows peut provoquer le\n    redémarrage du concentrateur ;\n-   CSCdv88230 et CSCdw22408 : les mots de passe des utilisateurs\n    peuvent être vus en clair via une page HTML ;\n-   CSCdw50657 : les mots de passe des certificats peuvent être vus en\n    clair via une page HTML ;\n-   CSCdx07754 : une vulnérabilité du filtre XML permet un accès non\n    autorisé au réseau protégé par le concentrateur ;\n-   CSCdx24622 : l'accès à certaines pages HTML est autorisé sans\n    authentification préalable ;\n-   CSCdx24632 : une vulnérabilité de l'interface HTML permet de\n    provoquer un déni de service ;\n-   CSCdx39981 : une vulnérabilité dans le traitement de la chaîne de\n    caractères correspondant au nom d'utilisateur peut provoquer un déni\n    de service ;\n-   CSCdx54675 : une mauvaise gestion des tunnels IPSec peut provoquer\n    la coupure d'une connexion établie ;\n-   CSCdy38035 : une vulnérabilité dans le traitement des paquets ISAKMP\n    peut provoquer un déni de service.\n\n## Contournement provisoire\n\nCertaines vulnérabiltés peuvent être contournées en n'autorisant l'accès\nà l'interface HTML que depuis une source sûre.\n\nSe reporter à l'avis Cisco pour plus de détails.\n\n## Solution\n\nLes versions du firmware 3.5.5 et 3.6.1 corrigent ces vulnérabilités.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-199",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-09-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Divulgation d'informations sensibles (y compris des mots de passe)"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabiltés ont été découvertes sur les concentrateurs\nCisco VPN 3000.\n",
+  "title": "Multiples vulnérabilités des concentrateurs Cisco VPN 3000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Cisco",
+      "url": "http://www.cisco.com/warp/public/707/vpn3K-multiple-vuln-pub.shtml"
+    }
+  ]
+}

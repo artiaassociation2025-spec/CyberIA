@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows NT 4.0 Server, Terminal Server Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT 4.0 Server, Entreprise Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT 4.0 Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe protocole PPTP (Point to Point Tunneling Protocol) permet d'effectuer\nle transfert d'informations de manière chiffrée. Une vulnérabilité\ndécouverte dans ce protocole rend possible la surchage du système par le\nbiais de paquets PPTP spécifiques. Il est alors nécessaire de redémarrer\nle serveur.  \n  \n\nNota : Aucune connexion PPTP valide, de l'utilisateur, n'est nécessaire\npour exploiter cette vulnérabilité.\n\n## Solution\n\nAppliquer le correctif (version US) disponible sur le site Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=27836\n\n  \n  \n\nLe correctif pour Windows NT 4.0 Server Terminal Server Edition n'est\npas disponible actuellement.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-009.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-018",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-02-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut créer un déni de service sur un\nserveur NT 4.0 en envoyant des paquets PPTP astucieusement formés.\n",
+  "title": "Vulnérabilité sous Windows NT 4 dans le protocole PPTP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft (MS01-009)",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système utilisant <TT>SquirrelMail</TT> en version  antérieure à la 1.4.6.</P>",
+  "content": "## Description\n\nSquirrelMail est un service de messagerie (support IMAP et SMTP)\naccessible au travers d'une interface « Web ». Il est codé en utilisant\nle langage de script PHP.\n\nUne mauvaise validation des entrées permet d'inclure des fichiers\nspécifiés par l'utilisateur. Cela induit donc un risque d'atteinte à la\nconfidentialité des données.\n\n## Solution\n\nMettre à jour les sources en version 1.4.6 au moins. Se référer au\nbulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf.\nsection Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2842",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2842"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2006-0547 du 03    juillet 2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0547.html"
+    },
+    {
+      "title": "Bulletin de sécurité SquirrelMail du 01 juin 2006    :",
+      "url": "http://www.squirrelmail.org/security/issue/2006-06-01"
+    },
+    {
+      "title": "Site internet de SquirrelMail :",
+      "url": "http://www.squirrelmail.org"
+    },
+    {
+      "title": "Bulletin de sécurité SGI 20060703-01-P du 31 juillet 2006 :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20060703-01-U.asc"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-229",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-06-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence CVE et du bulletin de sécurité Red Hat.",
+      "revision_date": "2006-07-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SGI.",
+      "revision_date": "2006-08-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Un utilisateur distant mal intentionné peut accéder au contenu des\nfichiers du système hôte à l'aide d'une adresse réticulaire (« URL »)\nhabilement construite.\n",
+  "title": "Vulnérabilité dans SquirrelMail",
+  "vendor_advisories": []
+}

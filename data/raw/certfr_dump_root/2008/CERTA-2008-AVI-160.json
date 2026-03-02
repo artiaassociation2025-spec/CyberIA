@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<SPAN class=\"textit\">Firefox</SPAN>,  version 2.0.0.12 et antérieures.",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent le navigateur Firefox.\n\nUne erreur dans la gestion du protocole jar permet à un utilisateur\nmalveillant d'ouvrir des connexions vers des ports arbitraires de la\nmachine vulnérable.\n\nUne erreur de gestion de certificats permet de divulguer des\ninformations sensibles à un serveur malveillant.\n\nDes erreurs dans le moteur d'affichage et dans l'interpréteur de\nJavascript permettent de provoquer des corruptions de mémoire. Ces\ncorruptions sont exploitables pour exécuter indûment du code à distance.\n\nDiverses erreurs permettent de :\n\n-   provoquer des injections de code indirectes (cross-site scripting) ;\n-   contourner des protections contre les attaques de type cross-site\n    request forgery ;\n-   d'exécuter du code Javascript avec élévation de privilèges ;\n-   tromper l'utilisateur pour capturer ses identifiants et mots de\n    passe.\n\n## Solution\n\nLa version 2.0.0.13 remédie à ces vulnérabilités.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1234",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1234"
+    },
+    {
+      "name": "CVE-2008-1235",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1235"
+    },
+    {
+      "name": "CVE-2008-1238",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1238"
+    },
+    {
+      "name": "CVE-2007-4879",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4879"
+    },
+    {
+      "name": "CVE-2008-1195",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1195"
+    },
+    {
+      "name": "CVE-2008-1241",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1241"
+    },
+    {
+      "name": "CVE-2008-1233",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1233"
+    },
+    {
+      "name": "CVE-2008-1237",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1237"
+    },
+    {
+      "name": "CVE-2008-1236",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1236"
+    },
+    {
+      "name": "CVE-2008-1240",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1240"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de la fondation Mozilla du 25 mars 2008 :",
+      "url": "http://www.mozilla.org/projects/security/known-vulnerabilities.html#firefox2.0.0.13"
+    },
+    {
+      "title": "Bulletin Ubuntu USN-592-1 du 26 mars 2008 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-592-1"
+    },
+    {
+      "title": "Bulletin Red Hat RHSA-2008:0207-6 du 26 mars 2008 :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2008-0207.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-160",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-03-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins de sécurité Ubuntu et Red Hat.",
+      "revision_date": "2008-03-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent le navigateur <span\nclass=\"textit\">Firefox</span>. Leur exploitation permet à un utilisateur\nmalveillant de contourner la politique de sécurité et en particulier\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans Firefox",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Mozilla du 25 mars 2008",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Office Publisher 2003 SP2 dans Microsoft Office 2003 Service Pack 2.",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office Publisher 2002 dans Microsoft Office XP Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office Publisher 2000 dans Microsoft Office 2000 Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDes vulnérabilités ont été identifiées dans l'application Microsoft\nOffice Publisher. Parmi celles-ci :\n\n-   les données de l'application ne seraient pas correctement vérifiées\n    lors du chargement de fichiers Publisher en mémoire. Une personne\n    pourrait exploiter cette vulnérabilité au moyen d'un fichier .pub\n    spécialement construit afin d'exécuter des commandes malveillantes\n    sur le système lors de son ouverture ;\n-   les valeurs d'index mémoire ne seraient pas correctement validées.\n    Une personne pourrait également exploiter cette vulnérabilité au\n    moyen d'un fichier .pub spécialement construit.\n\n## Solution\n\nSe référer au bulletin de sécurité MS08-012 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0104",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0104"
+    },
+    {
+      "name": "CVE-2008-0102",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0102"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2008-AVI-075",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Des vulnérabilités ont été identifiées dans l'application Microsoft\nOffice Publisher. L'exploitation de ces dernières peut entraîner dans\ncertaines conditions l'exécution de code arbitraire sur le système\nvulnérable.\n",
+  "title": "Vulnérabilités dans Microsoft Office Publisher",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS08-012 du 12 février 2008",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-012.mspx"
+    }
+  ]
+}

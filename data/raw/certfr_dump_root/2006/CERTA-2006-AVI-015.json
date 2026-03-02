@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>auth_ldap</TT> versions 1.6.0 et  antérieures.",
+  "content": "## Description\n\nauth_ldap permet la mise en œuvre dans Apache de l'authentification à\npartir d'un annuaire LDAP (Lightweight Directory Access). Un manque de\ncontrôle du nom d'utilisateur (username) fourni lors de\nl'authentification permet à un utilisateur distant mal intentionné\nd'exécuter du code arbitraire par le biais d'un nom d'utilisateur\nmalicieusement constitué.\n\n## Solution\n\nLa version 1.6.1 de auth_ldap corrige le problème :\n\n    http://www.rudedog.org/auth_ldap/auth_ldap-1.6.1.tar.gz\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0150",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0150"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-952 du 23 janvier 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-952"
+    },
+    {
+      "title": "Liste des changements apportés dans la version 1.6.1 :",
+      "url": "http://www.rudedog.org/auth_ldap/Changes.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:017 du 19 janvier    2006 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories,name=MDKSA-2006:017"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0179 du 10 janvier    2006",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0179.html"
+    },
+    {
+      "title": "Site de l'éditeur :",
+      "url": "http://www.rudedog.org/auth_ldap"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-015",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-01-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva et à la référence CVE.",
+      "revision_date": "2006-01-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité RedHat et Debian.",
+      "revision_date": "2006-01-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le module pour Apache auth_ldap permet à un\nutilisateur mal intentionné d'éxecuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans auth_ldap pour Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés dans la version 1.6.1 du 09 janvier 2006",
+      "url": null
+    }
+  ]
+}

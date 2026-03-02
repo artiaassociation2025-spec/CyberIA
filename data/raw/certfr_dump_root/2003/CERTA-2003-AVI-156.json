@@ -1,0 +1,105 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système utilisant <SPAN class=\"textit\">OpenSSL</SPAN>  pour implémenter les protocoles de session SSL et TLS. En  particulier le module <SPAN class=\"textit\">mod_ssl</SPAN>  d'<SPAN class=\"textit\">Apache</SPAN> ou les implémentations TLS  des serveurs de messagerie <SPAN class=\"textit\">Sendmail</SPAN>,  <SPAN class=\"textit\">Postfix</SPAN>, <SPAN class=\n  \"textit\">Qmail</SPAN>,... et les services POP ou IMAP sécurisés  par <SPAN class=\"textit\">Stunnel</SPAN> sont impactés.</P>",
+  "content": "## Description\n\nLes certificats, utilisés par les protocoles SSL/TLS, sont des\nstructures codées à l'aide d'un langage standard, ASN.1 (Abstract Syntax\nNotation One). Lors du traitement de données ne respectant\nvolontairement pas les règles de ce langage, le décodeur peut mal gérer\nl'information reçue.\n\nTrois vulnérabilités associées ont été découvertes dans OpenSSL :\n\n-   l'usage d'une balise ASN.1 peu usitée peut provoquer un accès\n    mémoire incohérent engendrant un déni de service (références\n    CAN-2003-0543 et CAN-2003-0544) ;\n-   une clé publique invalide peut arrêter inopinément le décodeur\n    lorsqu'il lui est spécifié d'ignorer les erreurs (configuration\n    employée en test et non en production) ;\n-   des structures ASN.1 rejetées comme invalides provoquent de\n    mauvaises gestions de la mémoire qui pourraient être exploitées pour\n    exécuter du code arbitraire à distance (référence CAN-2003-0545).\n\nPar ailleurs, un mauvais respect des spécifications SSLv3 et TLS fait\nqu'un serveur utilisant OpenSSL accepte les certificats client\nlorsqu'ils ne sont pourtant pas sollicités. Cela offre l'opportunité\nd'exploiter les failles décrites ci-dessus.\n\n## Solution\n\nMettre à jour OpenSSL.\n\n-   Code source d'OpenSSL en versions 0.9.6l ou 0.9.7c au moins :\n\n        http://www.openssl.org\n\n-   Linux Red Hat :\n\n        https://rhn.redhat.com/errata/RHSA-2003-290.html\n\n        https://rhn.redhat.com/errata/RHSA-2003-291.html\n\n        https://rhn.redhat.com/errata/RHSA-2003-292.html\n\n        https://rhn.redhat.com/errata/RHSA-2003-293.html\n\n-   Mandrake Linux :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:098\n\n-   Slackware Linux :\n\n        http://slackware.com/security/viewer.php?l=slackware-security&y=2003&m=slackware-security.464492\n\n-   SuSE Linux :\n\n        http://www.suse.com/de/security/2003_043_openssl.html\n\n-   Debian GNU/Linux :\n\n        http://www.debian.org/security/2003/dsa-393\n\n-   Apple MacOS X :\n\n        http://docs.info.apple.com/article.html?artnum=61798\n\n-   OpenBSD :\n\n        http://www.openbsd.com/errata.html#asn1\n\n-   FreeBSD :\n\n        ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-03:18.openssl.asc\n\n-   NetBSD :\n    -   OpenSSL versions 0.9.7 :\n\n            ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2003-017.txt.asc\n\n    -   OpenSSL versions 0.9.6 :\n\n            ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2004-003.txt.asc\n\n-   SGI Irix :\n\n        ftp://patches.sgi.com/support/free/security/advisories/20030904-01-P.asc\n\n-   HP-UX :\n    -   Serveur web Apache :\n\n            http://www4.itrc.hp.com/service/cki/docDisplay?docId=HPSBUX0310-284\n\n            http://www4.itrc.hp.com/service/cki/docDisplay?docId=HPSBUX0310-285\n\n    -   \\`\\`AAA Server'' :\n\n            http://www4.itrc.hp.com/service/cki/docDisplay?docId=HPSBUX0310-286\n\n    -   \\`\\`HP WBEM Services'' :\n\n            http://www4.itrc.hp.com/service/cki/docDisplay?docId=HPSBUX0310-288\n\n-   Cisco :\n\n        http://www.cisco.com/warp/public/707/cisco-sa-20030930-ssl.shtml\n\n-   Stunnel :\n\n        http://www.stunnel.org\n\n-   Nortel Networks \\`\\`Alteon Switched Firewall'', \\`\\`Alteon iSD - SSL\n    Accelerator'', CallPilot, Contivity, \\`\\`Succesion Communication\n    Server 2000 - Compact'' et \\`\\`Preside Service Provisioning'' :\n\n    Contacter le revendeur.\n\n-   Sun Linux et Cobalt :\n\n        http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert/57100\n\n-   SunPlex (Sun Cluster) :\n\n        http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert/57475\n\n-   Sun Java System Web Server et Java System Application Server :\n\n        http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert/57498\n\n-   Novell eDirectory :\n\n        http://support.novell.com/cgi-bin/search/searchtid.cgi?/2967568.htm\n\n-   Check Point :\n\n    Contacter le revendeur.\n\n-   Oracle9i database et application server, Oracle HTTP Server :\n\n        http://otn.oracle.com/deploy/security/pdf/2003alert62.pdf\n\n-   VMWare GSX et ESX Server :\n\n        http://www.wmware.com/support/kb/enduser/std_adp.php?p_faqid=1165\n\n-   SSH Secure Shell :\n\n        http://www.ssh.com/company/newsroom/article/476\n\n-   SSH Sentinel :\n\n        http://www.ssh.com/company/newsroom/article/477\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité du CERT/CC du 1er octobre 2003 :",
+      "url": "http://www.cert.org/advisories/CA-2003-26.html"
+    },
+    {
+      "title": "Avis de sécurité OpenSSL :",
+      "url": "http://www.openssl.org/news/secadv_20031104.txt"
+    },
+    {
+      "title": "Suivi des vulnérabilités OpenSSL du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/380864"
+    },
+    {
+      "title": "Avis de sécurité 006489/TLS du NISCC :",
+      "url": "http://www.uniras.gov.uk/vuls/2003/006489/tls.htm"
+    },
+    {
+      "title": "Suivi des vulnérabilités des autres implémentations SSL/TLS    du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/104280"
+    },
+    {
+      "title": "Avis de sécurité OpenSSL :",
+      "url": "http://www.openssl.org/news/secadv_20030930.txt"
+    },
+    {
+      "title": "Suivi des vulnérabilités OpenSSL du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/255484"
+    },
+    {
+      "title": "Suivi des vulnérabilités OpenSSL du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/686224"
+    },
+    {
+      "title": "Suivi des vulnérabilités OpenSSL du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/935264"
+    },
+    {
+      "title": "Avis de sécurité 006489/OpenSSL du NISCC :",
+      "url": "http://www.uniras.gov.uk/vuls/2003/006489/openssl.htm"
+    },
+    {
+      "title": "Suivi des vulnérabilités OpenSSL du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/732952"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-156",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2003-09-30T00:00:00.000000"
+    },
+    {
+      "description": "correction du lien Cisco, ajout du mauvais respect la spécification de la norme par <SPAN class= \"textit\">OpenSSL</SPAN>, ajout de Mandrake, Slackware, SGI, <SPAN class=\"textit\">Stunnel</SPAN>, ajout de nouvelles notes de vulnérabilité du CERT/CC ;",
+      "revision_date": "2003-10-01T00:00:00.000000"
+    },
+    {
+      "description": "ajouts de l'avis de sécurité du CERT/CC, d'<SPAN class= \"textit\">Apache</SPAN> sous HP-UX, de SuSE et Debian ;",
+      "revision_date": "2003-10-03T00:00:00.000000"
+    },
+    {
+      "description": "ajouts d'autres produits HP, d'OpenBSD, FreeBSD et NetBSD, mise à jour du lien Apple et introduction de Nortel Networks ;",
+      "revision_date": "2003-10-13T00:00:00.000000"
+    },
+    {
+      "description": "Nouvel avis OpenSSL, mise à jour en 0.9.6l, référence CVE CAN-2003-0851, ajouts de Sun, Novell, Check Point, Oracle et VMWare ;",
+      "revision_date": "2003-12-16T00:00:00.000000"
+    },
+    {
+      "description": "ajouts des références aux bulletins relatifs à SunPlex (Sun Cluster), Sentinel et Secure Shell de SSH ;",
+      "revision_date": "2004-01-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout d'un nouvel avis NetBSD pour les versions 0.9.6 d'OpenSSL ;",
+      "revision_date": "2004-02-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout des Java Servers de Sun.",
+      "revision_date": "2004-03-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut transmettre un certificat\nvolontairement mal formé qui entraînera un déni de service ou\nl'exécution de code arbitraire sur l'hôte destinataire.\n",
+  "title": "Failles dans des implémentations de SSL/TLS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité du NISCC",
+      "url": null
+    }
+  ]
+}

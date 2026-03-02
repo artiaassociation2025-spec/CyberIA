@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous les systèmes IRIX ayant l'outil InPerson installé.</P>",
+  "content": "## Description\n\nInPerson est un logiciel de visioconférence proposé par défaut lors de\nl'installation du système IRIX sur une station ou un serveur Silicon\nGraphix.\n\nUn mauvais paramétrage par défaut des permissions de la commande inpview\npermet à un utilisateur mal intentionné d'exécuter un shell avec les\nprivilèges de root et, par conséquent, de prendre possession de la\nmachine.\n\n## Solution\n\nOn peut savoir si InPerson (toutes les versions de InPerson sont\nvulnérables) est installé en demandant au système sa version de la façon\nsuivante :\n\nEn tant que root, taper la commande suivante :\n\nversions -b InPerson\n\nLe numéro de la version apparaît à la fin de la description affichée.\n\nSi le logiciel InPerson est installé, et si vous ne l'utilisez pas, il\nfaut le supprimer à l'aide de la commande suivante :\n\nversions remove InPerson\n\nSi vous utilisez InPerson sur cette station, il faut supprimer le bit\nSUID de la commande inpview en exécutant la commande suivante :\n\nchmod u-s /usr/lib/InPerson/inpview\n\nVous pouvez en plus restreindre l'accès au logiciel à un seul groupe\nd'utilisateurs qui a accès localement à la station pour utiliser le\nlogiciel, et que vous aurez créé sur la machine, grâce à la commande\nchgroup.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-075",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-11-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès root en local"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, en utilisant une vulnérabilité de\nInPerson, obtenir les privilèges root.\n\nL'exploitation de cette vulnérabilité a largement été diffusée sur\ninternet.\n",
+  "title": "Vulnérabilité du logiciel InPerson sous IRIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "FAQ de SGI IRIX",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "BugTraq",
+      "url": null
+    }
+  ]
+}

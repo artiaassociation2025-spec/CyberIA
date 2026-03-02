@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Drupal 4.7.x.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Drupal 4.6.x ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités découvertes dans Drupal permettent à un\nutilisateur malintentionné de provoquer un déni de service à distance ou\nde réaliser des attaques de types Cross Site Scripting.\n\nUn utilisateur malveillant peut exploiter ces vulnérabilités afin\nd'inclure du code arbitraire sur le serveur. Ce code sera exécuté dans\nle contexte du navigateur Internet de l'utilisateur accèdant au serveur\nvulnérable.\n\n## Solution\n\nAppliquer les mises à jour de sécurité Drupal en passant à la version\n4.6.11 ou 4.7.5 disponibles à l'adresse suivante :\n\n    http://drupal.org/project/Drupal+project\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-6646",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6646"
+    },
+    {
+      "name": "CVE-2006-6647",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6647"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site Internet Drupal :",
+      "url": "http://drupal.org/"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-011",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Attaques de type cross site scripting"
+    },
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Drupal sa-2007-002 du 05 janvier 2007",
+      "url": "http://drupal.org/files/sa-2007-002/advisory.txt"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Drupal sa-2007-001 du 05 janvier 2007",
+      "url": "http://drupal.org/files/sa-2007-001/advisory.txt"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Samba 3.0.x à 3.3.12.  <P>Les versions 3.4.0 et suivantes de Samba ne sont pas  concernées.</P></p>",
+  "content": "## Description\n\nUne erreur est présente dans le traitement du chaînage des paquets SMB1\npar le serveur Samba. Un défaut de validation des données de\nl'utilisateur provoque une corruption de la mémoire. Cette vulnérabilité\npermet à un utilisateur malveillant non authentifié de provoquer un déni\nde service à distance, voire d'exécuter du code arbitraire à distance.\n\n## Solution\n\nLa version 3.3.13 de Samba remédie à ce problème.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2063",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2063"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-2061-1 du 16 juin 2010 :",
+      "url": "http://www.debian.org/security/2010/dsa-2061"
+    },
+    {
+      "title": "Bulletin de sécurité Redhat RHSA-2010:0488-1 du 16 juin    2010 :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2010-0488.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2010:119 du 17 juin    2010 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDVSA-2010:119"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-951-1 du 16 juin 2010 :",
+      "url": "http://www.ubuntu.com/usn/usn-951-1"
+    },
+    {
+      "title": "Bulletin de sécurité HP c02627925 du 24 novembre 2010 :",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=0c02627925"
+    },
+    {
+      "title": "Bulletin de sécurité Apple HT4312 du 07 octobre 2010 :",
+      "url": "http://support.apple.com/kb/HT4312"
+    },
+    {
+      "title": "Bulletin de sécurité Suse SUSE-SR:2010:014 du 02 août 2010    :",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2010-08/msg00001.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-266",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-06-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins des distributions.",
+      "revision_date": "2010-11-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une erreur de traitement de SMB1 par le serveur Samba permet à un\nutilisateur malveillant de provoquer un déni de service à distance et\npermettrait d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité du projet Samba du 16 juin 2010",
+      "url": "http://www.samba.org/samba/security/CVE-2010-2063.html"
+    }
+  ]
+}

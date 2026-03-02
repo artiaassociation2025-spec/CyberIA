@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>FreeType versions 2.4.1 et antérieures.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans la bibliothèque de\nfonctions FreeType :\n\n-   la première (CVE-2010-1797) est relative au support des polices de\n    caractères de type Compact Font Format (CFF) ;\n-   la seconde (CVE-2010-2805) concerne le traitement des polices de\n    type Adobe Type 1 Mac (LWFN) ;\n-   la troisième (CVE-2010-2806) est due à une erreur dans le traitement\n    des polices de type T42 ;\n-   la quatrième (CVE-2010-2807) est relative à la mise en œuvre de la\n    macro-commande BOUNDS incluse dans certaines polices ;\n-   la dernière (CVE-2010-2808) est liée à une erreur dans une fonction\n    (FT_Stream_EnterFrame()) utilisée dans le traitement de certaines\n    polices.\n\nToutes ces vulnérabilités permettent à un utilisateur distant\nmalintentionné de provoquer un déni de service ou d'exécuter du code\narbitraire.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-1797",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1797"
+    },
+    {
+      "name": "CVE-2010-2808",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2808"
+    },
+    {
+      "name": "CVE-2010-2805",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2805"
+    },
+    {
+      "name": "CVE-2010-2806",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2806"
+    },
+    {
+      "name": "CVE-2010-2807",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2807"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2010:0607 du 05 août 2010    :      https://rhn.redhat.com/errata/RHSA-2010-0607.html",
+      "url": "http://rhn.redhat.com/errata/RHSA-2010-0607.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-972-1 du 17 août 2010 :",
+      "url": "https://www.ubuntu.com/usn/usn-972-1"
+    },
+    {
+      "title": "Liste des changements apportés à la version 2.4.2 de    FreeType :",
+      "url": "http://freetype.sourceforge.net/index2.html#release-freetype-2.4.2"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-359",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-08-09T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin Ubuntu.",
+      "revision_date": "2010-08-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans <span\nclass=\"textit\">FreeType</span> permettent à un utilisateur distant\nmalintentionné de provoquer un déni de service ou d'exécuter du code\narbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans FreeType",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés à la version 2.4.2 de FreeType",
+      "url": null
+    }
+  ]
+}

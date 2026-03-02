@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenBSD 3.4 et versions antérieures ;",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenBSD-current du 17 mars 2004 et versions antérieures.",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nisakmpd est un service de gestion des clefs IKE. isakmpd gère notamment\nles associations de sécurité (SA ou Security Associations) pour du\ntrafic réseau chiffré et/ou authentifié (IPSEC).\n\n  \nAu moyen de paquets habilement constitués, un utilisateur mal\nintentionné peut réaliser un déni de service par arrêt intempestif du\nservice ou consommation excessive des ressources du systèmes (mémoire,\nCPU).\n\n## Solution\n\nPour OpenBSD version 3.4, appliquer le correctif disponible à cette\nadresse :\n\n    ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.4/common/015_isakmpd2.patch\n\nPour OpenBSD version 3.3, appliquer le correctif disponible à cette\nadresse :\n\n    ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.3/common/020_isakmpd2.patch\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité OpenBSD #015 du 17 mars 2004 :",
+      "url": "http://www.openbsd.org/errata.html#isakmpd2"
+    },
+    {
+      "title": "Avis de sécurité FreeBSD du 31 mars 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD isakmpd :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/vulnerabilities"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-100",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de sécurité FreeBSD et NetBSD.",
+      "revision_date": "2004-05-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans le service isakmpd peuvent\nêtre exploitées par un utilisateur mal intentionné afin de réaliser un\ndéni de service sur la plate-forme vulnérable.\n",
+  "title": "Multiples vulnérabilités de isakmpd sous OpenBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité R7-0018 de Rapid7",
+      "url": "http://www.rapid7.com/advisories/R7-0018.html"
+    }
+  ]
+}

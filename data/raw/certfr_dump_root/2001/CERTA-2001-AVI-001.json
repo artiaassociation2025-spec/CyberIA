@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Vulnérabilité Lotus Domino 5.0 à 5.0.6 indépendante de la  plate-forme.</P>",
+  "content": "## Description\n\nUn utilisateur mal intentionné peut, par le biais d'une URL mal formée,\naccéder en lecture à tous les fichiers se situant sur le volume\ncontenant les données du serveur web de Lotus Domino.\n\nLe serveur HTTP de Domino a les privilèges du groupe d'utilisateurs\nSystème (ou system), si ce volume est celui sur lequel est installé le\nsystème d'exploitation, l'intrus peut accéder à tous les fichiers\nsystèmes.\n\n## Contournement provisoire\n\n-   Les données d'un serveur doivent toujours se situer sur un autre\n    volume que le système en lui même.\n\n-   Le CERT-IST recommande d'effectuer une redirection de lien pour un\n    élément de l'URL permettant l'accès à ces données non autorisées. Il\n    s'agit de rediriger tout ce qui contient la chaîne de caractères\n    /../.\n\n    Pour cela :\n\n    -   Ouvrir le client d'administration du serveur,\n    -   sélectionner le serveur à administrer,\n    -   dans l'onglet Configuration, section Serveur, Document serveur\n        courant,\n    -   cliquer sur le bouton web...,\n    -   sélectionner Créer mappage/redirection d'URL,\n    -   dans le document de redirection d'URL, onglet Général,\n        Sélectionner URL --\\> Redirection d'URL,\n    -   dans l'onglet mappage, dans le champ chemin d'URL entrante,\n        entrer : \\*/../\\* et dans celui nommé chaîne de redirection\n        d'URL, taper http://nom du serveur/homepage.nsf ou homepage.nsf\n        est le nom de la page sur laquelle rediriger une tentative\n        d'accès non-autorisé,\n    -   enregistrer le document et relancer la tâche HTTP (tell HTTP\n        restart).\n\nNota : Pour supprimer cette redirection, il faut ouvrir le client\nd'administration, sélectionner le serveur à administrer, et dans\nl'onglet configuration, section web, configuration de serveur web,\nsupprimer d'un clic droit sur la règle de redirection, puis relancer le\nservice HTTP.\n\n## Solution\n\nAppliquer le Correctif de Lotus dès qu'il paraît sur la liste des\ncorrectifs dont l'URL est indiquée dans la section Documentation.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-001",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-01-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès à des données non-autorisées"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité de Lotus Domino 5 permet à un utilisateur mal\nintentionné d'avoir accès à distance en lecture à des fichiers qui ne\nlui sont pas normalement autorisés.\n",
+  "title": "Vulnérabilité de Lotus Domino 5",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Lotus",
+      "url": "http://www.notes.net/r5fixlist.nsf/SPRViewTemplate?OpenForm"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apple QuickTime, pour les versions antérieures à 7.4.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans Apple QuickTime. Elles\nconcernent les fichiers multimédia au format vidéo Sorenson 3 et les\nimages PICT, ainsi que la manipulation des informations Macintosh\nResource d'un fichier vidéo ou l'analyse des atomes de description\nd'images (IDSC).\n\nCes vulnérabilités peuvent être exploitées par le biais de fichiers\nmultimédia spécialement construits. La lecture de ceux-ci pourrait alors\npermettre d'exécuter du code arbitraire sur le système ayant une version\nde QuickTime vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité Apple 307301 pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0033",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0033"
+    },
+    {
+      "name": "CVE-2008-0032",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0032"
+    },
+    {
+      "name": "CVE-2008-0036",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0036"
+    },
+    {
+      "name": "CVE-2007-0031",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0031"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Apple 307301-fr du 15 janvier 2008 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=307301-fr"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-025",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-01-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans Apple QuickTime. Elles\npermettraient, exploitées par le biais de fichiers multimédia\nspécialement construits, d'exécuter des commandes arbitraires sur le\nsystème ayant un lecteur vulnérable.\n",
+  "title": "Vulnérabilités dans Apple QuickTime",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apple 307301 du 15 janvier 2008",
+      "url": null
+    }
+  ]
+}

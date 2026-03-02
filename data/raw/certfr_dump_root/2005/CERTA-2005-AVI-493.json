@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Macromedia ColdFusion MX 6.1 avec JRun.",
+      "product": {
+        "name": "ColdFusion",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Macromedia ColdFusion MX 6.0 ;",
+      "product": {
+        "name": "ColdFusion",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Macromedia ColdFusion MX 6.1 ;",
+      "product": {
+        "name": "ColdFusion",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Une vulnérabilité dans la fonction Sandbox Security, sur un système\n    mettant en œuvre le serveur d'application ColdFusion avec JRun 4 de\n    Macromedia, peut être exploitée par une personne mal intentionnée\n    afin contourner la politique de sécurité et porter atteinte à la\n    confidentialité des données ;\n-   une vulnérabilité dans le traitement du sujet d'un message\n    électronique peut être exploitée pour contourner la politique de\n    sécurité afin de joindre à ce message des fichiers arbitraires ;\n-   une vulnérabilité dans la fonction CFOBJECT/CreateObject(Java) peut\n    être exploitée au moyen de classes Java malicieusement construites\n    afin de contourner la politique de sécurité ;\n-   une vulnérabilité permet à un développeur mal intentionné de prendre\n    connaissance du hash des mots de passe, au moyen d'un appel API\n    (Application Programming Interface) malicieux.\n\n## Contournement provisoire\n\nPour les versions de ColdFusion MX 6.0 mettre à jour en passant à la\nversion :\n\n-   ColdFusion MX 6.1 ;\n\nPour les versions de ColdFusion MX 6.1, appliquer le correctif\ndisponible à l'adresse suivante :\n\n    http://download.macromedia.com/pub/security/mpsb05-12.zip\n\n## Solution\n\nAppliquer la mise à jour de sécurité en passant à la version 7.0.1 de\nColdFusion MX, disponible à l'adresse suivante :\n\n    http://www.macromedia.com/support/coldfusion/downloads_updates.html#mx7\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Macromedia MPSB05-14 du 15 décembre    2005 :",
+      "url": "http://www.macromedia.com/devnet/security/security_zone/mpsb05-14.html"
+    },
+    {
+      "title": "Bulletin de sécurité Macromedia MPSB05-12 du 15 décembre    2005 :",
+      "url": "http://www.macromedia.com/devnet/security/security_zone/mpsb05-12.html"
+    },
+    {
+      "title": "Mise à jour de sécurité ColdFusion MX 7.0.1 :",
+      "url": "http://www.macromedia.com/support/coldfusion/downloads_updates.html#mx7"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-493",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-12-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De nombreuses vulnérabilités dans le serveur d'application ColdFusion\npermettent à un utilisateur distant mal intentionné de contourner la\npolitique de sécurité ou de porter atteinte à la confidentialité des\ndonnées.\n",
+  "title": "Multiples vulnérabilités dans ColdFusion de Macromedia",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Macromedia MPSB05-14 du 15 décembre 2005",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Macromedia MPSB05-12 du 15 décembre 2005",
+      "url": null
+    }
+  ]
+}

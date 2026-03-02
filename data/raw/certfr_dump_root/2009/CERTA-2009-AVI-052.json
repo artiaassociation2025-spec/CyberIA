@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "AREVA e-terrahabitat version 5.7 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCinq vulnérabilités ont été découvertes dans le système de gestion\nd'énergie e-terraplatform d'AREVA :\n\n-   la première permet d'exécuter du code arbitraire à distance via un\n    dépassement de mémoire ;\n-   trois autres vulnérabilités présentes au niveau des applications\n    WebFGServer et NETIO permettent de réaliser un déni de service à\n    distance ;\n-   la dernière vulnérabilité située au niveau de l'application\n    WebFGServer permet à un utilisateur malveillant d'élever ses\n    privilèges.\n\n## Solution\n\nContacter le support de l'application afin d'obtenir la mise à jour\ne-terrahabitat_560_P20081030_SEC.patch.\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0210",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0210"
+    },
+    {
+      "name": "CVE-2009-0211",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0211"
+    },
+    {
+      "name": "CVE-2009-0212",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0212"
+    },
+    {
+      "name": "CVE-2009-0214",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0214"
+    },
+    {
+      "name": "CVE-2009-0213",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0213"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site de l'éditeur :",
+      "url": "http://www.areva.com"
+    },
+    {
+      "title": "Note de vulnérabilité de l'US-CERT VU#337569 du 05 février    2009 :",
+      "url": "http://www.kb.cert.org/vuls/id/337569"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-052",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-02-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans le système de\ngestion d'énergie e-terraplatform d'AREVA. L'exploitation de ces\nvulnérabilités permet de réaliser, entre autre, une exécution de code\narbitraire à distance ou un déni de service à distance.\n",
+  "title": "Multiples vulnérabilités du système SCADA e-terrahabitat d'AREVA",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de l'US-CERT numéro VU#337569 du 05 février 2009",
+      "url": null
+    }
+  ]
+}

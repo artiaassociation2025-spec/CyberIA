@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows NT 4.0 Terminal Server Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Advanced Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Datacenter Server.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe serveur de terminal permet de déporter un environnement sur une\nmachine distante. Ce service utilise le port 3389/TCP.\n\nUn utilisateur distant mal intentionné peut, par le biais de requêtes\nRDP (Remote Data Protocol) astucieusement composées, provoquer une fuite\nde mémoire sur la machine offrant ce service. Un nombre important de ces\nrequêtes peut obliger un redémarrage du serveur.\n\n## Contournement provisoire\n\nBloquer le port 3389/TCP au niveau du garde barrière afin d'empêcher\nl'exécution de cette vulnérabilité depuis l'Internet.\n\n## Solution\n\nTélécharger le correctif disponible sur le site Microsoft :\n\n-   Microsoft Windows NT 4.0 Terminal Server Edition :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=31615\n\n-   Microsoft Windows 2000 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=30195\n\n-   Microsoft Windows 2000 Datacenter Server :\n\n    Concernant Microsoft Windows 2000 Datacenter Server, Microsoft\n    préconise de prendre contact avec le fournisseur du serveur afin de\n    connaître les solutions à apporter.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-040.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-082",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-07-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le serveur Terminal permet à un\nutilisateur distant mal intentionné d'épuiser les ressources de la\nmachine cible.\n",
+  "title": "Vulnérabilité dans le serveur Terminal sous Windows NT et 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-040",
+      "url": null
+    }
+  ]
+}

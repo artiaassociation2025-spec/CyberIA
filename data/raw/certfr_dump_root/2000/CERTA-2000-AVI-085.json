@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Windows NT 4.0 et Windows 2000.</P>",
+  "content": "## Description\n\nDes vulnérabilités de la base de registres de Windows NT 4.0\npermettaient à un utilisateur mal intentionné, ayant accès localement à\nla machine, d'obtenir les clés de chiffrement des autres utilisateurs\nayant eu accès précédemment à cette machine et d'exécuter du code\narbitraire avec les privilèges de l'utilisateur Système. Ces\nvulnérabilités liées à des permissions insuffisantes de plusieurs clés\nde la base des registre, avaient été traitées par Microsoft dans les\nbulletins MS99-025, MS00-008 et MS00-024.\n\n-   La clé\n    `HKLM\\SOFTWARE\\Microsoft\\Windows    NT\\CurrentVersion\\AeDebug`\n\n    (HKLM=HKEY_LOCAL_MACHINE) qui est utilisée par l'administrateur pour\n    spécifier un débogueur distant qui sert à faire établir un\n    diagnostic par la machine distante en cas d'arrêt brutal et inopiné\n    de la machine locale. Des permissions laxistes sur cette clé\n    permettent à n'importe quel utilisateur mal intentionné de faire\n    lancer un autre programme de son choix à la place du débogueur. Il\n    lui suffit de provoquer un arrêt inopiné sur la machine à\n    compromettre pour exécuter son code avec les privilèges système.\n\n-   La\n    clé`HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\User    Shell Folders`\n    fournit des informations sur l'emplacement de multiples répertoires\n    partagés par tous les utilisateurs sur une machine.\n\n    Parmi les clés filles de celle-ci, l'une d'entre elles spécifie un\n    répertoire de démarrage commun (common startup folder). Cette clé\n    possède des permissions trop simples, permettant à un utilisateur\n    mal intentionné de changer le répertoire destination, de façon à ce\n    que du code malicieux soit exécuté lors de l'ouverture de la session\n    suivante.\n\n-   Les clés `HKLM\\SOFTWARE\\Microsoft\\DataFactory` et\n\n    `HKLM\\SYSTEM\\CurrentControlSet\\Services\\W3SVC\\Parameters\\ADCLaunch`\n    déterminent les paramètres de sécurité pour les services de base de\n    données. Leurs valeurs pouvant être changées par n'importe quel\n    utilisateur ayant ouvert une session localement, les mesures de\n    sécurité peuvent être désactivées.\n\n-   La clé `HKLM\\SOFTWARE\\Microsoft\\Cryptography\\Offload` est une clé\n    utilisée par une fonction du module CryptoAPI appelé lors de\n    hachages ou de chiffrements de données par les services de\n    chiffrements.\n\nD'autres vulnérabilités de la base de registres de Windows NT 4.0 et\nWindows 2000 permettent à un utilisateur mal intentionné d'exécuter du\ncode avec des privilèges de Système ou de prendre le contrôle du\nsystème.\n\n-   La clé `HKLM\\SYSTEM\\CurrentControlSet\\Services\\SNMP\\Parameters` de\n    la base de registres de Windows NT 4.0 et Windows 2000 est visible\n    et modifiable par toute personne ayant accès à la machine. Cette clé\n    permet à un utilisateur mal intentionné d'obtenir des informations\n    sur la communauté SNMP (cf. RFC 1157) à laquelle appartient sa\n    machine, et d'ajouter des communautés SNMP auxquelles il appartient\n    et ayant des privilèges d'administration. Pour windows NT, cette\n    vulnérabilité est exploitable à distance, alors qu'elle ne l'est pas\n    (par défaut) sous windows 2000.\n\n-   La clé `HKLM\\SOFTWARE\\Microsoft\\RAS` de la base de registres de\n    Windows NT 4.0 permet aux administrateurs d'utiliser un produit\n    tiers comme extension du service d'accès à distance. RAS et ses\n    extensions fonctionnent avec les privilèges du groupe Système. Cette\n    clé est visible et modifiable par un utilisateur sans privilèges\n    sous Windows NT 4.0 uniquement, ce qui permet à un utilisateur mal\n    intentionné d'ajouter un produit de sa conception comme extension de\n    RAS.\n\n    Son programme, considéré alors comme une extension de RAS,\n    s'exécutera avec les privilèges de Système.\n\n    Nota : Pour que ce programme puisse être associé à RAS, il faut que\n    l'utilisateur malicieux installe une bibliothèque partagée (DLL)\n    dont les points d'entrées correspondent à ceux d'un outil\n    d'administration de RAS légitime.\n\n-   La clé `HKLM\\SOFTWARE\\Microsoft\\Transaction    Server\\Packages` de\n    la base de registres de Windows NT 4.0, et les autres clés de son\n    arborescence, permettent de créer et de gérer des modules de\n    transaction de MTS. Les modules sont des ensembles de logiciels\n    intervenant ensemble, en fonction de certains évènements, dans le\n    déroulement d'une transaction. (début, fin, succès, échec...).\n\n    Un utilisateur mal intentionné ayant un accès local à la machine\n    peut, en modifiant ces clés, remplacer un module de transaction par\n    un de sa confection, détournant ainsi les transactions de ce serveur\n    à son avantage.\n\nSNMP, RAS et MTS ne sont pas installés par défaut sous Windows NT ou\nWindows 2000.\n\n## Recommandation\n\nUn serveur, ne doit autoriser à ouvrir une session locale à aucun autre\nutilisateur que celui qui l'administre.\n\n## Solution\n\nAppliquer le correctif Microsoft :\n\n-   Pour Windows 2000 (Seule la vulnérabilité de SNMP est concernée) :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=24500\n\n-   Pour Windows NT, le correctif couvre toutes les vulnérabilités\n    énumérées ci-dessus :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=24501\n\nOu bien exécuter à la main les changements de permissions dans la base\nde registres à l'aide de l'outils regedt32.exe :\n\nLe tableau récapitulatif suivant (cf. table [2](#tab:correction)) résume\nles permissions qui doivent êtres appliquées à chaque clé de la base de\nregistres.\n\n<div markdown=\"1\" align=\"center\">\n\nPermissions des clés de la base de registres\n\n<table data-border=\"1\" data-cellpadding=\"3\">\n<colgroup>\n<col style=\"width: 33%\" />\n<col style=\"width: 33%\" />\n<col style=\"width: 33%\" />\n</colgroup>\n<thead>\n<tr class=\"header\" data-valign=\"baseline\">\n<th style=\"text-align: left;\">Branche</th>\n<th style=\"text-align: left;\" data-valign=\"top\" width=\"227\">Clé</th>\n<th style=\"text-align: left;\" data-valign=\"top\"\nwidth=\"142\">Permissions<br />\n</th>\n</tr>\n</thead>\n<tbody>\n<tr class=\"odd\" data-valign=\"baseline\">\n<th style=\"text-align: left;\"><code>HKLM\\SOFTWARE</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\"\nwidth=\"227\"><code>Microsoft\\Windows        NT\\CurrentVersion\\</code><code>AeDebug</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\" width=\"142\"><dl>\n<dt><strong>Utilisateurs authentifiés</strong></dt>\n<dd>\n: lecture seule ;\n</dd>\n<dt><strong>Administrateurs</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Système</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Créateur Propriétaire</strong></dt>\n<dd>\n: Contrôle total.\n</dd>\n</dl></th>\n</tr>\n<tr class=\"even\" data-valign=\"baseline\">\n<th style=\"text-align: left;\"><code>HKLM\\SOFTWARE</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\"\nwidth=\"227\"><code>Microsoft\\Windows\\CurrentVersion</code><code>\\Explorer\\User        Shell Folders</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\" width=\"142\"><dl>\n<dt><strong>Utilisateurs authentifiés</strong></dt>\n<dd>\n: lecture seule ;\n</dd>\n<dt><strong>Administrateurs</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Système</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Créateur Propriétaire</strong></dt>\n<dd>\n: Contrôle total.\n</dd>\n</dl></th>\n</tr>\n<tr class=\"odd\" data-valign=\"baseline\">\n<th style=\"text-align: left;\"><code>HKLM\\SOFTWARE</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\"\nwidth=\"227\"><code>Microsoft\\DataFactory</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\" width=\"142\"><dl>\n<dt><strong>Utilisateurs authentifiés</strong></dt>\n<dd>\n: lecture seule ;\n</dd>\n<dt><strong>Administrateurs</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Système</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Créateur Propriétaire</strong></dt>\n<dd>\n: Contrôle total.\n</dd>\n</dl></th>\n</tr>\n<tr class=\"even\" data-valign=\"baseline\">\n<th style=\"text-align: left;\"><code>HKLM\\SYSTEM</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\"\nwidth=\"227\"><code>CurrentControlSet\\Services\\W3SVC\\</code><code>Parameters\\ADCLaunch</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\" width=\"142\"><dl>\n<dt><strong>Utilisateurs authentifiés</strong></dt>\n<dd>\n: lecture seule ;\n</dd>\n<dt><strong>Administrateurs</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Système</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Créateur Propriétaire</strong></dt>\n<dd>\n: Contrôle total.\n</dd>\n</dl></th>\n</tr>\n<tr class=\"odd\" data-valign=\"baseline\">\n<th style=\"text-align: left;\"><code>HKLM\\SYSTEM</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\"\nwidth=\"227\"><code>CurrentControlSet\\Control\\</code><code>SecurePipeServers\\winreg</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\" width=\"142\"><dl>\n<dt><strong>Administrateurs</strong></dt>\n<dd>\n: sauvegarde complète ;\n</dd>\n<dt><strong>Operateurs de serveur</strong></dt>\n<dd>\n: lecture seule.\n</dd>\n</dl></th>\n</tr>\n<tr class=\"even\" data-valign=\"baseline\">\n<th style=\"text-align: left;\"><code>HKLM\\SOFTWARE</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\"\nwidth=\"227\"><code>Microsoft\\Cryptography\\Offload</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\" width=\"142\"><dl>\n<dt><strong>Utilisateurs authentifiés</strong></dt>\n<dd>\n: lecture seule ;\n</dd>\n<dt><strong>Administrateurs</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Système</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Créateur Propriétaire</strong></dt>\n<dd>\n: Contrôle total.\n</dd>\n</dl></th>\n</tr>\n<tr class=\"odd\" data-valign=\"baseline\">\n<th style=\"text-align: left;\"><code>HKLM\\SOFTWARE</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\"\nwidth=\"227\"><code>Microsoft\\Transaction Server\\Packages</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\" width=\"142\"><dl>\n<dt><strong>Administrateurs</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Système</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Créateur Propriétaire</strong></dt>\n<dd>\n: Contrôle total.\n</dd>\n</dl></th>\n</tr>\n<tr class=\"even\" data-valign=\"baseline\">\n<th style=\"text-align: left;\"><code>HKLM\\SOFTWARE</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\"\nwidth=\"227\"><code>Microsoft\\RAS</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\" width=\"142\"><dl>\n<dt><strong>Administrateurs</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Système</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Créateur Propriétaire</strong></dt>\n<dd>\n: Contrôle total.\n</dd>\n</dl></th>\n</tr>\n<tr class=\"odd\" data-valign=\"baseline\">\n<th style=\"text-align: left;\"><code>HKLM\\SYSTEM</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\"\nwidth=\"227\"><code>CurrentControlSet\\Services\\SNMP\\</code><code>Parameters\\ValidCommunities</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\" width=\"142\"><dl>\n<dt><strong>Administrateurs</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Système</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Créateur Propriétaire</strong></dt>\n<dd>\n: Contrôle total.\n</dd>\n</dl></th>\n</tr>\n<tr class=\"even\" data-valign=\"baseline\">\n<th style=\"text-align: left;\"><code>HKLM\\SYSTEM</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\"\nwidth=\"227\"><code>CurrentControlSet\\Services\\SNMP\\</code><code>Parameters\\PermittedManagers</code></th>\n<th style=\"text-align: left;\" data-valign=\"top\" width=\"142\"><dl>\n<dt><strong>Administrateurs</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Système</strong></dt>\n<dd>\n: Contrôle total ;\n</dd>\n<dt><strong>Créateur Propriétaire</strong></dt>\n<dd>\n: Contrôle total.\n</dd>\n</dl></th>\n</tr>\n<tr class=\"odd\" data-valign=\"baseline\">\n<th style=\"text-align: left;\"> </th>\n<th style=\"text-align: left;\" data-valign=\"top\" width=\"227\"> </th>\n<th style=\"text-align: left;\" data-valign=\"top\" width=\"142\"> </th>\n</tr>\n</tbody>\n</table>\n\n</div>\n\nNota : Les permissions de la clé\n`HKLM\\SYSTEM\\CurrentControlSet\\Control\\SecurePipeServers\\winreg`, qui\nest utilisée dans l'accès à distance de la base de registres, sont aussi\nà modifier.\n\nCe tableau peut aussi permettre de vérifier que le correctif Microsoft à\nbien effectué ces changements.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de Sécurité Microsoft MS00-095 et sa FAQ :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-095.asp"
+    },
+    {
+      "title": "Bulletin de Sécurité Microsoft MS00-024 et sa FAQ :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-024.asp"
+    },
+    {
+      "title": "Bulletin de Sécurité Microsoft MS00-096 et sa FAQ :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-096.asp"
+    },
+    {
+      "title": "Bulletin de Sécurité Microsoft MS00-095 et sa FAQ :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-095.asp"
+    },
+    {
+      "title": "Bulletin de Sécurité Microsoft MS00-024 et sa FAQ :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-024.asp"
+    },
+    {
+      "title": "l'article de Microsoft concernant les restrictions sur    l'accès à distance à une base de registres :",
+      "url": "http://support.microsoft.com/support/kb/articles/Q153/1/83.asp"
+    },
+    {
+      "title": "Bulletin de Sécurité Microsoft MS99-025 (1999) et sa FAQ :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq99-025.asp"
+    },
+    {
+      "title": "Bulletin de Sécurité Microsoft MS00-096 et sa FAQ :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-096.asp"
+    },
+    {
+      "title": "Bulletin de Sécurité Microsoft MS99-025 (1999) et sa FAQ :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms99-025.asp"
+    },
+    {
+      "title": "Bulletin de Sécurité Microsoft MS00-008 et sa FAQ :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-008.asp"
+    },
+    {
+      "title": "Bulletin de Sécurité Microsoft MS00-008 et sa FAQ :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-008.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-085",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-12-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Compromission de machine"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Prise de contrôle à distance"
+    },
+    {
+      "description": "Augmentation des privilèges"
+    }
+  ],
+  "summary": "Des permissions par défaut inadéquates de certaines clés de la base de\nregistres de Windows NT et 2000, permettent à un utilisateur malicieux\nde prendre le contrôle de services tels que la gestion de SNMP (<span\nclass=\"textit\">Simple Network Management Protocol</span> = gestion et\nobservation des fonctionnalités réseau d'une machine), RAS (<span\nclass=\"textit\">Remote Access Server</span> = Service d'accès au réseau à\ndistance) et la gestion des modules de MTS (<span\nclass=\"textit\">Microsoft Transaction Server</span> = service de gestion\ndes transaction).\n",
+  "title": "Vulnérabilités des bases de registres de Windows NT et 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

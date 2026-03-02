@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Clean Access versions 3.3.0 à 3.3.9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Clean Access versions 3.5.0 à 3.5.3.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Clean Access versions 3.4.0 à 3.4.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCisco Clean Access est une solution logicielle permettant de gérer les\naccès des machines au réseau local. Elle comprend une API (Application\nProgram Interface) donnant accès à différentes fonctionnalités.\n\nUn manque de contrôle dans l'utilisation de ces fonctionnalités permet à\nun utilisateur mal intentionné du réseau local, par le biais d'un script\nmalicieusement construit, de provoquer un déni de service en ajoutant\nune machine cible dans la liste des machines à rejeter. Elle permet\négalement de contourner la politique de sécurité en ajoutant une machine\narbitraire dans la liste des machines de confiance. Elle permet enfin\nd'atteindre à la confidentialité des données disponibles dans la\nconfiguration de Cisco Clean Access.\n\n## Solution\n\nSe référer au bulletin de sécurité Cisco pour appliquer le correctif\napproprié (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 66147 du 22 août 2005 :      http://www.cisco.com/warp/public/707/cisco-sn-20050822-cca.shtml",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20050822-cca.shtml"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-317",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-08-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Cisco #66147.",
+      "revision_date": "2005-08-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Cisco Clean Access permet à un utilisateur mal\nintentionné du réseau local de provoquer un déni de service, de\ncontourner la politique de sécurité ou de porter atteinte à la\nconfidentialité des données.\n",
+  "title": "Vulnérabilité dans Cisco Clean Access",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 66068 du 17 août 2005",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20050817-cca.shtml"
+    }
+  ]
+}

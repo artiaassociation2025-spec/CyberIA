@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Joomla! 1.5.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'une des vulnérabilités, causée par un manque de vérification sur\ncertains fichiers, permet à une personne malveillante de porter atteinte\nà la confidentialité des données.\n\nLa seconde vulnérabilité, présente dans l'éditeur TinyMCE inclus dans le\nCMS Joomla!, permet à un individu, non authentifié, de déposer des\nfichiers arbitraires sur le serveur. Les fichiers ainsi téléchargé\npeuvent servir à contrôler le système (cf. CERTA-2009-ACT-002 dans la\nsection Documentation).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Annonces de sécurité Joomla! #301 et #302 du 22 juillet    2009 :",
+      "url": "http://developer.joomla.org/security/news/302-20090722-core-missing-jexec-check.html"
+    },
+    {
+      "title": "Bulletin d'actualité CERTA-2009-ACT-002 du 09 janvier 2009,    «Une compromission discrète» :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2009-ACT-002/CERTA-2009-ACT-002.html"
+    },
+    {
+      "title": "Annonces de sécurité Joomla! #301 et #302 du 22 juillet    2009 :",
+      "url": "http://developer.joomla.org/security/news/301-20090722-core-file-upload.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-289",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-07-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités découvertes dans le gestionnaire de contenu Joomla!\npermettent à un utilisateur distant malintentionné de contourner la\npolitique de sécurité et ainsi porter atteinte à l'intégrité et la\nconfidentialité des données.\n",
+  "title": "Vulnérabilités dans Joomla!",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonces de sécurité Joomla! du 22 juillet 2009",
+      "url": null
+    }
+  ]
+}

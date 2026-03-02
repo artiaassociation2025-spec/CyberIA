@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Système d'exploitation IRIX versions 6.2 à 6.5.8 de Silicon Graphics (SGI).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Versions 5.2 à 6.0.1 d'IRIX ayant reçue le patch 1020, version 6.1 d'IRIX ayant reçue le patch 1010.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCette vulnérabilité a été introduite par les correctifs publiés (patchs\n1010 et 1020) suite à l'avis du CERT/CC CA-95.14 qui concernait déjà des\nproblèmes de variables d'environnement telnet. Cette correction a été\nreconduite dans les nouvelles versions du système d'exploitation.\n\nLes versions 5.2 à 6.1 non patchées ne sont donc pas vulnérables à ce\nproblème, mais le sont cependant à ceux de l'avis du CERT/CC.\n\n## Contournement provisoire\n\nIl s'agit de désactiver le service telnet sur la machine.\n\nMode opératoire :\n\n-   se connecter en tant qu'administrateur root,\n-   éditer le fichier de configuration d'inetd \\`\\`/etc/inetd.conf'' :\n    commenter la ligne telnet stream tcp nowait root /usr/etc/telnetd\n    telnetd\n-   forcer inetd à relire son fichier de configuration : /etc/killall\n    -HUP inetd,\n-   détruire les connections telnet en cours : /etc/killall telnetd.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SGI 20000801-01-A",
+      "url": "ftp://sgigate.sgi.com/security/20000801-01-A"
+    },
+    {
+      "title": "Copie du message BugTraq",
+      "url": "http://msgs.securepoint.com/cgi-bin/get/bugtraq0008/152.html"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-029",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Exécution de code arbitraire permettant à un utilisateur distant l'accès avec les privilèges root"
+    }
+  ],
+  "summary": "Le démon <span class=\"textit\">telnetd</span> ne vérifie pas correctement\ncertaines variables d'environnement transmises par le client. Un\nutilisateur mal intentionné peut fabriquer une requête provoquant un\ndébordement de pile et exécuter du code arbitraire sur la machine avec\nles privilèges de <span class=\"textit\">root</span>.\n\nUne exploitation de cette vulnérabilité a été publiée sur Internet.\n",
+  "title": "Faille dans le démon telnetd sous IRIX de SGI",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité SGI 20000801-01-A du 1/08/2000",
+      "url": null
+    }
+  ]
+}

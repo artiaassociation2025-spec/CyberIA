@@ -1,0 +1,35 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Internet Explorer versions 5.01, 5.5 et 6.0.</P>",
+  "content": "## Description\n\n-   Un débordement de mémoire présent dans le contrôle ActiveX\n    `Legacy Text Formatting` permet à un utilisateur mal intentionné\n    d'obtenir les privilèges de l'administrateur et d'exécuter du code\n    arbitraire à distance ;  \n-   une vulnérabilité dans la manière dont Internet Explorer gère une\n    directive HTML affichant des données XML permet à un utilisateur mal\n    intentionné d'avoir accès à des documents de type XML sur un système\n    distant ;  \n-   une vulnérabilité dans la façon dont Internet Explorer représente\n    l'origine d'un fichier dans la boîte de dialogue de téléchargement\n    permet de faire télécharger des fichiers considérés comme provenant\n    d'une source de confiance ;  \n-   une vulnérabilité de type Cross Domain Verification permet à un\n    utilisateur mal intentionné d'accéder à des données à travers\n    différents domaines.\n\n## Solution\n\nAppliquer le correctif disponible sur le site de Microsoft (cf.\nDocumentation).  \n\nCe correctif est cumulatif et inclut les corrections documentées dans\nles avis `CERTA-2002-AVI-128` et `CERTA-2002-AVI-101`.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-187",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Accès à des données non sollicité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités sont présentes dans le navigateur de Microsoft.\n",
+  "title": "Multiples vulnérabilités dans Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft #MS02-047",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-047.asp"
+    }
+  ]
+}

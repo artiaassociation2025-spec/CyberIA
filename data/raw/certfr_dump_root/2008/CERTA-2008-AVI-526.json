@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "libspf2 versions 1.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire a été découverte dans\nla fonction SPF_dns_resolv_lookup() présente dans le fichier source\nSpf_dns_resolv.c. Cette vulnérabilité peut être exploitée au moyen d'une\nréponse DNS (Domain Name System) spécialement construite pour provoquer\nun déni de service ou exécuter du code arbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2469",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2469"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2008-AVI-526",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-10-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la bibliothèque libspf2 permet à un utilisateur\nmalintentionné de provoquer un déni de service ou d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilité dans la bibliothèque libspf2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-1659 du 23 octobre 2008",
+      "url": "http://www.debian.org/security/2008/dsa-1659"
+    }
+  ]
+}

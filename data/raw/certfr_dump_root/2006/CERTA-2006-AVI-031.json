@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système Unix utilisant le serveur de fax <TT>HylaFAX</TT>  version 4 dont les sources sont antérieures ou égales à la  révision 4.2.3.</P>",
+  "content": "## Description\n\nLorsque le service d'authentification modulaire PAM est inactif\nn'importe quel mot de passe valide l'authentification. Dans ce cas, un\nutilisateur distant quelconque peut accéder au service (CAN-2005-3538).\n\nUn script ne validant pas les entrées utilisateur, peut donc être\ndétourné pour exécuter des commandes arbitraires (CAN-2005-3539).\n\n## Contournement provisoire\n\nFiltrer les adresses IP autorisées à se connecter à l'aide d'un pare-feu\nen coupure (ports 444/tcp, 4457/tcp et 4459/tcp par défaut).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200601-03 du 06 janvier    2006 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200601-03.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:015 du 16 janvier    2006 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDKSA-2006:015"
+    },
+    {
+      "title": "Site officiel de HylaFAX :",
+      "url": "http://www.hylafax.org/"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 933 du 09 janvier 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-933"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-031",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-01-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "HylaFAX fournit un service permettant l'envoi et la réception de fax\npour les utilisateurs autorisés à se connecter au serveur.\n\nDeux vulnérabilités combinées permettent à un utilisateur distant non\nauthentifié d'exécuter du code arbitraire avec les privilèges du\nservice.\n",
+  "title": "Vulnérabilité du serveur de fax HylaFAX",
+  "vendor_advisories": []
+}

@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MS SQL Server 2000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MSDE 2000.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Database Consistency Checkers (DBCCs) est un ensemble d'utilitaires\n    exécutables en ligne de commande intégrés à SQL Server 2000\n    permettant d'assurer la maintenance ou d'effectuer diverses\n    opérations sur un serveur SQL Server. Une vulnérabilité de type\n    débordement de mémoire présente dans DBCCs permet à un individu mal\n    intentionné d'exécuter du code arbitraire à distance dans le\n    contexte d'exécution du service SQL Server ou bien de prendre le\n    contrôle de la base de données.\n-   Une vulnérabilité d'injection SQL présente dans deux procédures\n    stockées, utilisées pour la réplication des bases de données permet,\n    dans certains cas, à un individu mal intentionné d'exécuter du code\n    arbitraire à distance.\n\n## Solution\n\nAppliquer le correctif cumulatif fourni par Microsoft (cf.\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft #MS02-038 :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-038.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-156",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-07-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Prise de contrôle de la base SQL"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes dans MS SQL Server 2000 et MSDE\n2000.\n",
+  "title": "Vulnérabilités dans MS SQL Server 2000 et MSDE 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #MS02-038 de Microsoft",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>OpenLDAP 2.3.25 ainsi que les versions antérieures.</P>",
+  "content": "## Description\n\nDes vulnérabilités ont été identifiées dans l'application OpenLDAP\nquimet en œuvre le protocole LDAP (Lightweight Directory Access\nProtocol). Ce protocole sert à gérer des annuaires de bases\nd'informations sur le réseau, comme par exemple des coordonnées de\npersonnes.\n\nSuivant ce protocole, le DN (pour Distinguished Name) représente le nom\nd'une entrée sous la forme du chemin d'accès à celle-ci, depuis le\nsommet d'un arbre relationnel (un peu comme un chemin ou path sous\nUnix).\n\nL'une des vulnérabilités permettrait à un utilisateur malveillant, ayant\nun accès selfwrite sur un attribut, de lui ajouter ou de supprimer non\npas son DN, mais un DN quelconque.\n\n## Solution\n\nSe référer à la mise à jour du projet OpenLDAP pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour 2.3.27 du 19 août 2006 du projet OpenLDAP :",
+      "url": "http://http://www.openldap.org/software/download/"
+    },
+    {
+      "title": "Site du projet OpenLDAP :",
+      "url": "http://www.openldap.org"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-383",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-09-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités dans OpenLDAP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour du projet OpenLDAP",
+      "url": null
+    }
+  ]
+}

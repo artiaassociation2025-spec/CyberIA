@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>MySQL versions 4.0.20 et antérieures.</p>",
+  "content": "## Description\n\n`mysqlhotcopy` est un script écrit en PERL utilisant la commande `cp` ou\n`scp` afin d'effectuer des sauvegardes de tables ou de bases MySQL.\n\nIl utilise des fichiers temporaires dont les noms sont prédictibles.\nCette vulnérabilité peut être exploitée par un utilisateur local mal\nintentionné afin de corrompre n'importe quel fichier du système.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200409-02 du 01 septembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200409-02.xml"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat du 20 octobre 2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-597.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat du 20 octobre 2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-569.html"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD pour mysql-server du 20 août    2004 :",
+      "url": "http://www.vuxml.org/openbsd/"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-283",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-08-31T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité OpenBSD.",
+      "revision_date": "2004-09-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2004-09-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat.",
+      "revision_date": "2004-10-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans MySQL permettant à un individu\nmal intentionné de réécrire sur des fichiers existants ou d'en créer de\nnouveaux sur le système affecté.\n",
+  "title": "Vulnérabilité dans MySQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DSA-540 de Debian",
+      "url": "http://www.debian.org/security/2004/dsa-540"
+    }
+  ]
+}

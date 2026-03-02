@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système fonctionnant sous Cisco IOS XR et configuré avec  MPLS est affecté. Cette propriété est vérifiable sur le système  Cisco par la commande <TT>show mpls interfaces</TT>, qui révèle  les interfaces MPLS actives. Cisco IOS XR est installé dans  certains produits CRS-1 et les séries 120000.</P>",
+  "content": "## Description\n\nTrois vulnérabilités existent dans l'implémentation MPLS du système\nd'exploitation Cisco XR, utilisé en particulier dans les routeurs de\ntype Cisco CRS-1 ou dans la série 12000. MPLS (pour Multi Protocol Label\nSwitching) est un protocole de transport de données, fonctionnant au\nniveau de la couche de liaison du modèle OSI, et conçu pour encapsuler\net véhiculer différents formats de paquets (Ethernet, Token Ring, ATM,\nFrame Relay, etc) au moyen de labels. Dans le cas où le système CISCO\nIOS XR est configuré avec MPLS, il est possible pour un utilisateur\nmalveillant d'envoyer des paquets MPLS malformés. Ces derniers forcent\nle processus NetIO à redémarrer. Après plusieurs itérations, la carte\nréseau elle-même se relance, provoquant un déni de service pour les\npaquets devant être traîtés à ce moment-là.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 69923 du 19 avril 2006 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20060419-xr.shtml"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-167",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-04-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Trois vulnérabilités dans l'implémentation MPLS du système\nd'exploitation Cisco IOS XR peuvent permettre à un utilisateur\nmalveillant de provoquer un déni de service au niveau du routeur ciblé.\n",
+  "title": "Plusieurs vulnérabilités dans Cisco IOS XR",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de l'éditeur Cisco",
+      "url": null
+    }
+  ]
+}

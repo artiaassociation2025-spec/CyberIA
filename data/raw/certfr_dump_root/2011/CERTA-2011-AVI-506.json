@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>MantisBT 1.2.x.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent le gestionnaire de bogues MantisBT :\n\n-   le défaut de validation des entrées dans plusieurs scripts PHP\n    permet à un utilisateur malveillant de réaliser des injections de\n    code indirectes à distance (XSS) ;\n-   le défaut de validation des entrées dans plusieurs scripts PHP\n    permet à un utilisateur malveillant de parcourir l'arborescence du\n    système de fichiers et d'inclure des fichiers (LFI ou local file\n    inclusion).\n\n## Solution\n\nLa version 1.2.8 de MantisBT corrige ces vulnérabilités.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-3356",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3356"
+    },
+    {
+      "name": "CVE-2011-3357",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3357"
+    },
+    {
+      "name": "CVE-2011-3358",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3358"
+    },
+    {
+      "name": "CVE-2011-3578",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3578"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 2308 du 12 septembre 2011 :",
+      "url": "http://www.debian.org/security/2011/dsa-2308"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-506",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-09-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout de références CVE.",
+      "revision_date": "2011-09-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent MantisBT et permettent en particulier\nde l'injection de code.\n",
+  "title": "Vulnérabilités dans MantisBT",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de la version 1.2.8 de MantisBT du 6 septembre 2011",
+      "url": "http://www.mantisbt.org/"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Word 2004 dans la suite bureautique Microsoft Office 2004 pour Mac ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Word 2003 dans la suite bureautique Microsoft Office 2003 Service Pack 1 ou 2 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Word v.X dans la suite bureautique Microsoft Office v.X pour Mac ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Word 2002 dans la suite bureautique Microsoft Office XP Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Suite Microsoft Works 2006 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Suite Microsoft Works 2005 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Visionneuse Microsoft Office Word 2003 (Viewer).",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Suite Microsoft Works 2004 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Word 2000 dans la suite bureautique Microsoft Office 2000 Service Pack 3;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans l'application\nMicrosoft Word, fournie dans la suite bureautique Microsoft Office ou\ndans Microsoft Works. Parmi celles-ci :\n\n-   Microsoft Word ne manipulerait pas convenablement certaines chaînes\n    de caractères incluses dans les documents.\n-   Microsoft Word ne traiterait pas de manière correcte certains\n    documents de type publipostage (ou mail merge). Ce type permet\n    notamment d'imprimer des documents contenant différentes coordonnées\n    de personnes sous un format donné.\n\nUne personne malveillante pourrait exploiter l'une de ces vulnérabilités\nen construisant un document Word particulier. Lorsque celui-ci est\nouvert sur une machine ayant une version de Word vulnérable, il\nexécuterait du code arbitraire, et permettrait donc de prendre le\ncontrôle de la machine.\n\n## Solution\n\nSe référer au bulletin de sécurité MS06-060 de l'éditeur Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3647",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3647"
+    },
+    {
+      "name": "CVE-2006-4534",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4534"
+    },
+    {
+      "name": "CVE-2006-4693",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4693"
+    },
+    {
+      "name": "CVE-2006-3651",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3651"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2006-AVI-440",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans l'application\nMicrosoft Word, fournie dans la suite bureautique Microsoft Office ou\ndans Microsoft Works.\n\nUne personne malveillante pourrait exploiter l'une d'elles en\nconstruisant un document Word particulier. Lorsque celui-ci est ouvert\nsur une machine ayant une version de Word vulnérable, il exécuterait du\ncode arbitraire, et permettrait donc de prendre le contrôle de la\nmachine.\n",
+  "title": "Multiples vulnérabilités dans Microsoft Word",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-060 du 10 octobre 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-060.mspx"
+    }
+  ]
+}

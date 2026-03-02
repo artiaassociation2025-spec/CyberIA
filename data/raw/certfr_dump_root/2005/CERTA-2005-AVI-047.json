@@ -1,0 +1,115 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco IPVC-3520-GW-4B ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IPVC-3520-GW-2B ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IPVC-3525-GW-1P ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IPVC-3520-GW-2V ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IPVC-3510-MCU ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IPVC-3520-GW-2B2V ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IPVC-3530-VTA.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IPVC-3520-GW-4V ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSelon Cisco, des noms de communauté SNMP non modifiables sont présents\ndans les équipements de visio-conférence cités ci-dessus.\n\nVia le biais de requêtes SNMP, il est alors possible pour un utilisateur\ndistant mal intentionné de créer de nouvelles sessions ou même re-router\ndes sessions existantes sur les équipements vulnérables.\n\n## Contournement provisoire\n\nFilter le trafic SNMP (port 161/UDP et 162/UDP) vers ces équipements.\n\n## Solution\n\nSe référer au bulletin de sécurité du constructeur pour l'obtention des\ncorrectifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco \"Default SNMP  community strings in Cisco IP/VC products\" du 2 février 2005 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20050202-ipvc.shtml"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-047",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-02-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Prise de contrôle à distance de l'équipement"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité des équipements IP/VC de Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Cisco",
+      "url": null
+    }
+  ]
+}

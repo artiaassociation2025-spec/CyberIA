@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "KOffice versions 1.6.0 et précedentes.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nKOffice est une suite bureautique pour KDE. La vulnérabilité provient\nd'un débordement d'entier dans la fonction KLaola::readBigBlockDepot()\nlors de l'ouverture d'un document au format PowerPoint contenant un\nen-tête malformé.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de KOffice version 1.6.1 :",
+      "url": "http://www.koffice.org/download"
+    },
+    {
+      "title": "Bulletin de sécurité KOffice :",
+      "url": "http://www.koffice.org/announements/changelog-1.6.1.php"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-518",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-12-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité découverte dans KOffice permet à un utilisateur mal\nintentionné de provoquer un déni de serice à distance sur un système\nvulnérable.\n",
+  "title": "Vulérabilité dans KOffice",
+  "vendor_advisories": []
+}

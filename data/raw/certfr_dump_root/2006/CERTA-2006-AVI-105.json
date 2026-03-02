@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ssh2-nox11 versions strictement inférieures à la version 3.2.9.1_5",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ssh2 versions strictement inférieures à la version 3.2.9.1_5",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été découverte dans le serveur SFTP. Cette\nvulnérabilité peut être exploitée par un utilisateur mal intentionné\nayant les droits d'accès SSH/SFTP à la machine afin d'exécuter des\ncommandes arbitraires à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0705",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0705"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité du port FreeBSD de pkg-ssh2-nox11 du    04 mars 2006 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-ssh2-nox11.html"
+    },
+    {
+      "title": "Bulletin de sécurité du port FreeBSD de pkg-ssh2 du 04 mars    2006 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-ssh2.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-105",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-03-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de SSH.com SFTP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour FreeBSD",
+      "url": null
+    }
+  ]
+}

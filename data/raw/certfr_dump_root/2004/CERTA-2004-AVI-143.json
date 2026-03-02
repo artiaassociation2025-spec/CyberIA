@@ -1,0 +1,141 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "CISCO IOS Firewall ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SGI IRIX.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "tous les pare-feux NetScreen possèdant une version de ScreenOS antérieure à 5.0R6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetBSD 1.5.x et 2.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "tous les routeurs Juniper série M, T et E ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Toutes les versions de CISCO IOS ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "tous les pare-feux CheckPoint Firewall-1 antérieurs à la version R55 HFA-03 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTCP (Transport Control Protocol) est un protocole réseau assurant le\nservice de transport en mode connecté. Il est définit par la RFC 793 de\nl'IETF (Internet Engineering Task Force) et les extensions concernant la\nhaute disponibilité par la RFC 1323.\n\nUne vulnérabilité dans sa mise en œuvre permet à un individu mal\nintentionné d'effectuer un déni de service sur les connexions TCP\npréalablement établies par l'envoi de paquets TCP judicieusement formés.\n\n## Solution\n\nAppliquer le correctif suivant le système utilisé :\n\n-   Avis de sécurité Checkpoint :\n\n        http://www.checkpoint.com/techsupport/alerts/tcp_dos.html\n\n-   Avis de sécurité CISCO :\n\n        http://www.cisco.com/warp/public/707/cisco-sa-20040420-tcp-ios.shtml\n\n        http://www.cisco.com/warp/public/707/cisco-sa-20040420-tcp-nonios.shtml\n\n-   Avis de sécurité \\#20040403-01-A de SGI :\n\n        ftp://patches.sgi.com/support/free/security/advisories/20040403-01-A.asc\n\n-   Alerte de sécurité Juniper :\n\n        http://www.juniper.net/support/alert.html\n\n-   Avis de sécurité NetBSD-SA2004-006 de NetBSD :\n\n        ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2004-006.txt.asc\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin #236929 du NISCC :",
+      "url": "http://www.uniras.gov.uk/vuls/2004/236929/index.htm"
+    },
+    {
+      "title": "RFC 793 Transmission Control Protocol :",
+      "url": "http://www.ietf.org/rfc/rfc793.txt"
+    },
+    {
+      "title": "Bulletin de sécurité HP HPSBTU01077 \"HP Tru64 UNIX TCP    stack remote denial of service (DoS)\" du 22 décembre 2004 :",
+      "url": "http://www5.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBTU01077"
+    },
+    {
+      "title": "RFC 1323 TCP Extensions for High Performance :",
+      "url": "http://www.ietf.org/rfc/rfc1323.txt"
+    },
+    {
+      "title": "Avis de sécurité FreeBSD du 23 avril mai 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Avis de sécurité Novell (Netware 5.x et Netware 6.x) :",
+      "url": "http://support.novell.com/cgi-bin/search/searchtid.cgi?/10092941.htm"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-143",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-04-26T00:00:00.000000"
+    },
+    {
+      "description": "retrait de l'avis SUN.",
+      "revision_date": "2004-04-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2004-05-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout de l'avis de sécurité Novell.",
+      "revision_date": "2004-05-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité HP HPSBTU01077 pour Tru64 UNIX .",
+      "revision_date": "2005-01-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une faiblesse dans la mise en œuvre du protocole TCP (Transport Control\nProtocol) a été découverte.\n",
+  "title": "Vulnérabilité dans le protocole TCP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis #236929 du NISCC",
+      "url": null
+    }
+  ]
+}

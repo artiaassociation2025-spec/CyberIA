@@ -1,0 +1,92 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMware Fusion Pro / Fusion (Fusion) sur MacOS versions antérieures à 11.5.2",
+      "product": {
+        "name": "Fusion",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Horizon Client for Windows versions antérieures à 5.4.0",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Horizon Client for Mac versions antérieures à 5.4.0",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Workstation Pro / Player (Workstation) sur Windows versions antérieures à 15.5.2",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Remote Console for Mac (VMRC for Mac) versions antérieures à 11.0.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2020-3951",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3951"
+    },
+    {
+      "name": "CVE-2020-3950",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-3950"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2020-AVI-156",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2020-03-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans plusieurs produits\nVMware. Elles permettent à un attaquant de provoquer un déni de service\net une élévation de privilèges.\n\nLe CERT-FR a pris connaissance de l'existence de codes d'exploitation,\npour l'environnement MacOS, permettant une élévation de privilèges pour\nexécuter un code arbitraire avec les droits de l'utilisateur root.\n",
+  "title": "Multiples vulnérabilités dans les produits VMware",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware VMSA-2020-0005 du 17 mars 2020",
+      "url": "https://www.vmware.com/security/advisories/VMSA-2020-0005.html"
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache Tomcat versions 8.x antérieures à 8.5.55",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat versions 7.x antérieures à 7.0.104",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat versions 9.x antérieures à 9.0.35",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2020-9484",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-9484"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2020-AVI-315",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2020-05-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Apache Tomcat. Elle permet à un\nattaquant de provoquer une exécution de code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache 8 du 11 mai 2020",
+      "url": "https://tomcat.apache.org/security-8.html#Fixed_in_Apache_Tomcat_8.5.55"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache 9 du 11 mai 2020",
+      "url": "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.35"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache 7 du 16 mai 2020",
+      "url": "https://tomcat.apache.org/security-7.html#Fixed_in_Apache_Tomcat_7.0.104"
+    }
+  ]
+}

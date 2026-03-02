@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les utilisateurs du système de fichiers JFS2 sur AIX 5.2 avec  des <SPAN class=\"textit\">kernel filesets</SPAN> (<TT>bos.mp</TT>,  <TT>bos.mp64</TT>, <TT>bos.up</TT>) entre les niveaux 5.2.0.50 et  5.2.0.54 inclus.</P>",
+  "content": "## Description\n\nSur les machines utilisant le système de fichiers JFS2, l'effacement\nd'un fichier dont les entrées/sorties ne sont pas terminées (parce que,\npar exemple, il y a eu récemment une écriture dans le fichier) et\nsimultanément une écriture dans un autre fichier peuvent amener dans un\ncas de figure où des données du fichier effacé sont écrites dans le\nfichier en cours d'écriture.\n\n## Solution\n\nAppliquer le correctif décrit dans l'avis de sécurité d'IBM.\n\nAttention ! Ce correctif a un effet de bord notable sur la lecture des\nsystèmes de fichiers. Cet effet de bord peut compromettre le bon\nfonctionnement de certaines applications comme la sauvegarde backup ou\nTSM.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité IBM :",
+      "url": "http://www-1.ibm.com/support/docview.ws?uid=isg1IY70032"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-300",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-08-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité AIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis IBM : IY70032",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis IBM : APAR IY70225",
+      "url": null
+    }
+  ]
+}

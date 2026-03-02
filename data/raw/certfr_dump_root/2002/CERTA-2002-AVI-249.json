@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft Data Access Component 2.1 ;</LI>    <LI>Microsoft Data Access Component 2.5 ;</LI>    <LI>Microsoft Data Access Component 2.6 ;</LI>    <LI>Internet Explorer 5.01 ;</LI>    <LI>Internet Explorer 5.5 ;</LI>    <LI>Internet Explorer 6.0.</LI>  </UL>  <P><TT>Nota</TT> :</P>  <UL>    <LI>Remote Data Services (<TT>RDS</TT>) n'est pas activé par    défaut lors de l'installation d'Internet Information Server    (IIS).      <P>Mais les serveurs IIS qui utilisent une version affectée      de Microsoft Data Access Component <TT>MDAC</TT> et ayant      activé <TT>RDS</TT> sont vulnérables.</P>    </LI>    <LI><TT>MDAC</TT> est installé et <TT>RDS</TT> activé par    défaut sur les clients Internet Explorer. Actuellement, il    n'est pas possible de le désactiver.</LI>    <LI>Sous Windows XP, la version 2.7 de <TT>MDAC</TT> est    installée. Cette vulnérabilité n'affecte donc pas les systèmes    sous Windows XP.</LI>    <LI>Selon Microsoft les outils <TT>URLScan</TT> ne devraient    pas permettre l'exécution de code arbitraire mais il est    possible de bloquer le système à distance au moyen de la    vulnérabilité décrite dans cet avis.</LI>  </UL>",
+  "content": "## Description\n\nMDAC (Microsoft Data Access Components) fournit des fonctions pour\nexploiter des bases de données, comme connecter plusieurs bases de\ndonnées entre elles, ou renvoyer des réponses à un client, etc.\n\nRDS (Remote Data Services) est un des composants de MDAC qui permet à un\nclient d'accéder à des bases de données à travers une interface web.\n\nLes navigateurs Internet Explorer possèdent un client MDAC installé avec\nle client RDS activé par défaut.\n\nLa fonction nommée RDS Data Stub permet d'interpréter des requêtes HTML\net de les transformer en requêtes RDS pour les transmettre à une base de\ndonnées.\n\nUne vulnérabilité de RDS Data Stub permet à un utilisateur mal\nintentionné d'effectuer une attaque de type débordement de mémoire à\ndistance.\n\nIl peut ainsi exécuter du code arbitraire à distance au moyen d'une\nrequête RDS effectuée à travers une URL astucieusement construite et\ndirigée vers un serveur web possédant MDAC avec RDS activé.\n\nLa même attaque peut être effectuée contre un client Internet Explorer\nen incluant une réponse HTTP habilement construite dans une page web ou\ndans un message au format HTML.\n\nURLScan est un outil du paquetage IISLockdown (servant à renforcer la\nsécurité des serveurs web IIS) de Microsoft qui permet de journaliser\net/ou de bloquer les attaques par le biais d'URL habilement construites.\nLes URL passent dans un filtre ASCII avant d'être transférées et\ntraitées par le serveur web.\n\nPar conséquent il est impossible d'exécuter un binaire au moyen de cette\nattaque au travers des filtres d'URLScan.\n\nCependant elle aura pour conséquence un déni de service en bloquant la\nmachine victime.\n\n## Solution\n\nConsulter le bulletin de sécurité MS02-065 de Microsoft (voir paragraphe\ndocumentation) pour connaître la disponibilité des correctifs à\nappliquer.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-249",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-11-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service uniquement sur les outils urlscan"
+    }
+  ],
+  "summary": "Il est possible d'exécuter du code arbitraire à distance en effectuant\nune requête RDS utilisée par les composants MDAC installés sur une\nmachine cible.\n",
+  "title": "Vulnérabilité des composants <TT>MDAC</TT> sous Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS02-065 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-065.asp"
+    }
+  ]
+}

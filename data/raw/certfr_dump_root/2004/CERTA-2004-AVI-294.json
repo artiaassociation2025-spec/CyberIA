@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>lha version 1.14 et versions  antérieures.</p>",
+  "content": "## Description\n\nlha est un utilitaire d'archivage et de compression pour les archives au\nformat LHarc. Plusieurs vulnérabilités ont été découvertes :\n\n-   Une vulnérabilité de type débordement de mémoire dans le traitement\n    des archives au format LHarc (CAN-2004-0769) ;\n-   plusieurs vulnérabilités de type débordement de mémoire dans\n    l'analyse des arguments passés en ligne de commande (CAN-2004-0694\n    et CAN-2004-0771) ;\n-   une vulnérabilité de type débordement de mémoire dans\n    l'interprétation des noms de répertoire (CAN-2004-0745).\n\nCes vulnérabilités permettent à un utilisateur mal intentionné, à l'aide\nd'une archive LHarc, d'un répertoire ou d'une ligne de commande\nhabilement constituée, de créer un déni de service ou d'exécuter du code\narbitraire à distance sur la machine victime.\n\n## Solution\n\nSe référer à la section Documentation pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200409-13 du 08 septembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200409-13.xml"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour lha du 23 septembre 2004    :",
+      "url": "http://www.vuxml.org/freebsd"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:323 du 01 septembre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-323.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-294",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2004-09-09T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2004-09-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans lha permettent à un utilisateur mal\nintentionné de créer un déni de service ou d'exécuter du code arbitraire\nà distance.\n",
+  "title": "Vulnérabilité de lha",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RedHat RHSA-2004:323 du 01 septembre 2004",
+      "url": null
+    }
+  ]
+}

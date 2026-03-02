@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Ipswitch Imail versions 8.13 et antérieures.</P>",
+  "content": "## Description\n\nLe serveur Ipswitch Imail est un serveur de messagerie inclus dans\nIpswitch Collaboration Suite (ICS).\n\nPlusieurs vulnérabilités ont été découvertes dans Ipswitch Imail :\n\n-   une vulnérabilité affecte le traitement des paramètres passés à la\n    commande SELECT du serveur IMAP d'Ipswitch Imail. En envoyant des\n    paramètres de 260 octets environ, il est possible de provoquer un\n    arrêt brutal du serveur IMAP (référence CVE CAN-2005-1254) ;\n-   une vulnérabilité de type « traversée de répertoires » dans le\n    serveur Web Calendaring d'Ipswitch Imail permet d'accéder en lecture\n    à tous les fichiers du système (référence CVE CAN-2005-1252) ;\n-   deux vulnérabilités affectent la commande LOGIN du serveur IMAP\n    d'Ipswitch Imail. En fournissant un nom d'utilisateur de 2000 octets\n    environ ou débutant avec un caractère spécial, un utilisateur mal\n    intentionné peut exécuter du code arbitraire à distance (référence\n    CVE CAN-2005-1255) ;\n-   une vulnérabilité affecte la commande STATUS du serveur IMAP\n    d'Ipswitch Imail. En fournissant un long nom de boîte aux lettres en\n    paramètre de la commande STATUS, un utilisateur mal intentionné\n    préalablement authentifié peut exécuter du code arbitraire à\n    distance (référence CVE CAN-2005-1256) ;\n-   une vulnérabilité est présente dans le traitement des commandes\n    LSUB. Un utilisateur mal intentionné peut réaliser un déni de\n    service sur le serveur IMAP d'Ipswitch Imail en envoyant une longue\n    chaîne de caractères NULL à la directive LSUB (référence CVE\n    CAN-2005-1249).\n\n## Solution\n\nAppliquer le correctif de l'éditeur (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité iDEFENSE du 24 mai 2005 « Ipswitch    IMail STATUS Remote Buffer Overflow Vulnerability » :",
+      "url": "http://www.idefense.com/application/poi/display?id=244&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité iDEFENSE du 24 mai 2005 « Ipswitch    IMail IMAP SELECT Command DoS Vulnerability » :",
+      "url": "http://www.idefense.com/application/poi/display?id=241&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité iDEFENSE du 24 mai 2005 « Ipswitch    IMail IMAP LOGIN Remote Buffer Overflow Vulnerabilities » :",
+      "url": "http://www.idefense.com/application/poi/display?id=243&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité d'Ipswitch du 23 mai 2005 :",
+      "url": "http://www.ipswitch.com/support/imail/releases/imail_professional/im82hf2.html"
+    },
+    {
+      "title": "Bulletin de sécurité iDEFENSE du 24 mai 2005 « Ipswitch    IMail Web Calendaring Arbitrary File Read Vulnerability » :",
+      "url": "http://www.idefense.com/application/poi/display?id=242&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité iDEFENSE du 24 mai 2005 « Ipswitch    IMail IMAP LSUB DoS Vulnerability » :",
+      "url": "http://www.idefense.com/application/poi/display?id=245&type=vulnerabilities"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-185",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-05-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités découvertes dans Ipswitch Imail permettent\nd'exécuter du code arbitraire à distance, de réaliser un déni de\nservice, ou de lire n'importe quel fichier sur le serveur.\n",
+  "title": "Multiples vulnérabilités de Ipswitch Imail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité iDEFENSE du 24 mai 2005",
+      "url": null
+    }
+  ]
+}

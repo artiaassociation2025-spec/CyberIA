@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Moodle versions 1.8.x antérieures à 1.8.11 ;",
+      "product": {
+        "name": "Moodle",
+        "vendor": {
+          "name": "Moodle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Moodle versions 1.9.x antérieures à 1.9.7.",
+      "product": {
+        "name": "Moodle",
+        "vendor": {
+          "name": "Moodle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Moodle. La plupart\nd'entre elles concernent la protection des identifiants de connexion et\npeuvent être exploitées afin de se connecter en tant que\nd'administrateur. D'autres vulnérabilités permettent de réaliser des\ninjections SQL ou des injections de requêtes illégitimes par rebond\n(attaques de type CSRF).\n\n## Solution\n\nMettre Moodle à jour en version 1.8.11 ou 1.9.7 (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Téléchargement des versions 1.8.11 et 1.9.7 de Moodle :",
+      "url": "http://download.moodle.org/"
+    },
+    {
+      "title": "Bulletins de sécurité Moodle MSA-09-022 à MSA-09-031 du 02    décembre 2009 :",
+      "url": "http://moodle.org/security/"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-545",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-12-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Accès non autorisé"
+    },
+    {
+      "description": "Injection SQL"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Moodle</span>\npermettent notamment de se connecter en tant qu'administrateur.\n",
+  "title": "Multiples vulnérabilités dans Moodle",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Moodle MSA-09-022 à MSA-09-031 du 02 décembre 2009",
+      "url": null
+    }
+  ]
+}

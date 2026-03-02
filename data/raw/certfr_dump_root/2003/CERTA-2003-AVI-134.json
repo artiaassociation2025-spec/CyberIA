@@ -1,0 +1,95 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD 5.0, FreeBSD 4.8 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Versions de Mac OS X antérieures à 10.2.6.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenBSD 3.3 et versions antérieures ;",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetBSD 1.6.1 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire est présente dans la\nfonction realpath() de la bibliothèque standard C (libc) sur différents\nsystèmes d'exploitation de souche BSD (FreeBSD, NetBSD, OpenBSD, Mac OS\nX).\n\nCette vulnérabilité peut être exploitée au travers d'applications\nutilisant cette fonction, comme le service ftp (ftpd), pour réaliser une\nexécution de code arbitraire pouvant entraîner une élévation de\nprivilèges ou un déni de service.\n\n## Solution\n\nAppliquer le correctif de l'éditeur :\n\n-   Bulletin de sécurité FreeBSD-SA-03-08 de FreeBSD :\n\n        ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-03:08.realpath.asc\n\n-   Bulletin de sécurité NetBSD-SA2003-011 de NetBSD :\n\n        ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2003-011.txt.asc\n\n-   Bulletin de sécurité d'OpenBSD :\n\n        http://www.openbsd.org/errata.html#realpath\n\n-   Bulletin de sécurité d'Apple pour Mac OS X Server :\n\n        http://docs.info.apple.com/article.html?artnum=120238\n\n-   Bulletin de sécurité d'Apple pour Mac OS X Client :\n\n        http://docs.info.apple.com/article.html?artnum=120239\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-134",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-08-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de sécurité d'Apple pour Mac OS X.",
+      "revision_date": "2003-08-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de la fonction realpath pour les systèmes BSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité d'OpenBSD",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité 2003-011 de NetBSD",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Note VU#743092 du CERT/CC",
+      "url": "http://www.kb.cert.org/vuls/id/743092"
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité FreeBSD-SA-03:08 de FreeBSD",
+      "url": null
+    }
+  ]
+}

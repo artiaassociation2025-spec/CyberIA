@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Grafana versions 8.4.x antérieures à 8.4.10",
+      "product": {
+        "name": "Grafana",
+        "vendor": {
+          "name": "Grafana Labs",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Grafana versions 9.0.x antérieures à 9.0.3",
+      "product": {
+        "name": "Grafana",
+        "vendor": {
+          "name": "Grafana Labs",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Grafana versions 5.3.x à 8.3.x antérieures à 8.3.10",
+      "product": {
+        "name": "Grafana",
+        "vendor": {
+          "name": "Grafana Labs",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Grafana versions 8.5.x antérieures à 8.5.9",
+      "product": {
+        "name": "Grafana",
+        "vendor": {
+          "name": "Grafana Labs",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-31107",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-31107"
+    },
+    {
+      "name": "CVE-2022-31097",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-31097"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-649",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-07-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Grafana. Elles\npermettent à un attaquant de provoquer un contournement de la politique\nde sécurité, une élévation de privilèges et une injection de code\nindirecte à distance (XSS).\n",
+  "title": "Multiples vulnérabilités dans Grafana",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Grafana GHSA-mx47-6497-3fv2 du 15 juillet 2022",
+      "url": "https://github.com/grafana/grafana/security/advisories/GHSA-mx47-6497-3fv2"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Grafana GHSA-vw7q-p2qg-4m5f du 15 juillet 2022",
+      "url": "https://github.com/grafana/grafana/security/advisories/GHSA-vw7q-p2qg-4m5f"
+    }
+  ]
+}

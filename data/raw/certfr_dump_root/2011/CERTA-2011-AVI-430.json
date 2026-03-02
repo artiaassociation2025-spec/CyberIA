@@ -1,0 +1,110 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Bugzilla version 4.0.x antérieures à la version 4.0.2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bugzilla version 3.4.x antérieures à la version 3.4.12 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bugzilla version 4.1.x antérieures à la version 4.1.3.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bugzilla version 3.6.x antérieures à la version 3.6.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été corrigées dans Bugzilla dont :\n\n-   une mauvaise validation de certains éléments permet de mener des\n    attaques par injection de code indirecte ;\n-   Il est possible de déterminer l'existence d'éléments confidentiels\n    lors de la création ou de la mise à jour de bugs ;\n-   Une mauvaise gestion de fichiers temporaires peut être exploitées\n    par des utilisateurs locaux pour porter atteinte à la\n    confidentialité des données.\n\nSe référer au bulletin de l'éditeur pour plus de détails sur les\nvulnérabilités corrigées et les versions affectées par ces\nvulnérabilités.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nLes versions 3.4.12, 3.6.6, 4.0.2 et 4.1.3 corrigent ces vulnérabilités.\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2381",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2381"
+    },
+    {
+      "name": "CVE-2011-2976",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2976"
+    },
+    {
+      "name": "CVE-2011-2977",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2977"
+    },
+    {
+      "name": "CVE-2011-2979",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2979"
+    },
+    {
+      "name": "CVE-2011-2978",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2978"
+    },
+    {
+      "name": "CVE-2011-2380",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2380"
+    },
+    {
+      "name": "CVE-2011-2379",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2379"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Bugzilla du 04 août 2011 :",
+      "url": "http://www.bugzilla.org/security/3.4.11/"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-430",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-08-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été corrigées dans Bugzilla.\n",
+  "title": "Multiples vulnérabilités dans Bugzilla",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Bugzilla du 4 aout 2011",
+      "url": null
+    }
+  ]
+}

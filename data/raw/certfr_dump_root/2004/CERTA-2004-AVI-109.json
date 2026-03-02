@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Versions 5.02 et antérieures.</p>",
+  "content": "## Description\n\nLe logiciel Winamp permet de lire des fichiers audios et vidéos de\ndifférents formats.\n\n  \n\nUne erreur de type débordement de mémoire est présente dans l'extension\npermettant de lire les fichiers au format Fasttracker 2. Un utilisateur\nmal intentionné peut, en mettant à disposition des fichiers habilement\nconstitués, exploiter cette faille sur les plate-formes utilisant une\nversion de Winamp vulnérable pour lire ces fichiers malicieux.\n\n## Contournement provisoire\n\nIl est possible d'invalider l'utilisation de l'extension Fasttracker 2\nen le dé-sélectionnant de la liste des formats supportés\n(Options-\\>Preferences-\\>Plug-ins-\\>Input-\\>Nullsoft Module Decoder).\n\n## Solution\n\nLa version 5.03 de Winamp corrige cette vulnérabilité :  \n\n    http://www.winamp.com/player\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Annonce de la disponibilité de la version 5.03 :",
+      "url": "http://www.winamp.com/player/version_history.php"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-109",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-04-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Un débordement de mémoire permettant l'exécution de code arbitraire à\ndistance est présent dans Winamp.\n",
+  "title": "Vulnérabilité de Winamp",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #NISR05042004 de NGSSoftware",
+      "url": "http://www.ngssoftware.com/advisories/winampheap.txt"
+    }
+  ]
+}

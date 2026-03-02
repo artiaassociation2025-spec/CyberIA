@@ -1,0 +1,79 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PowerDNS Recursor versions antérieures à 3.6.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Unbound DNS",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BIND9 version 9.0.x jusqu'à 9.8.x, 9.9.0 jusqu'à 9.9.6 et 9.10.0 jusqu'à 9.10.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Contournement provisoire\n\nSe référer au bulletin de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2014-8602",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2014-8602"
+    },
+    {
+      "name": "CVE-2014-8601",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2014-8601"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2014-AVI-512",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2014-12-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans plusieurs produits\nDNS. Elles permettent à un attaquant de provoquer un déni de service à\ndistance.\n",
+  "title": "Multiples vulnérabilités dans plusieurs produits DNS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ISC du 08 décembre 2014",
+      "url": "https://kb.isc.org/article/AA-01216"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité unbound du 08 décembre 2014",
+      "url": "https://unbound.net/downloads/CVE-2014-8602.txt"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PowerDNS du 08 décembre 2014",
+      "url": "http://blog.powerdns.com/2014/12/08/powerdns-security-notification-2014-02/"
+    }
+  ]
+}

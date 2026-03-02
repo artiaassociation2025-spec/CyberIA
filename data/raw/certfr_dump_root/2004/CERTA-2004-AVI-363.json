@@ -1,0 +1,31 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tout système Linux utilisant le  gestionnaire de volumes logiques LVM («Logical Volume Manager»).</p>",
+  "content": "## Description\n\nUn script additionnel est disponible dans LVM pour créer un disque\nvirtuel d'amorce («initrd») intégrant les fonctions LVM pour le noyau.\nCe script ne vérifie pas correctement certains fichiers temporaires, ce\nqui peut être utilisé pour écraser des fichiers systèmes légitimes.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-583-1 du 03 novembre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-583"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-363",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-11-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Corruption de fichiers"
+    }
+  ],
+  "summary": "Une vulnérabilité dans un script du paquetage LVM permet à un\nutilisateur local mal intentionné d'écraser des fichiers arbitraires.\n",
+  "title": "Faille dans le gestionnaire de volumes Linux LVM",
+  "vendor_advisories": []
+}

@@ -1,0 +1,31 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système hébergeant un serveur CVS en version 1.11.9 et  antérieures.</P>",
+  "content": "## Description\n\nCVS est un système client/serveur de contrôle de versions. Il est en\nparticulier utilisé pour gérer les sources des logiciels en\ndéveloppement. Un utilisateur mal intentionné peut envoyer des requêtes\nmalicieuses qui seront mal interprétées par le serveur qui tentera alors\nde créer des fichiers en dehors de son arborescence.\n\n## Contournement provisoire\n\nLes droits de la racine ne permettent usuellement pas au compte\nutilisateur du serveur CVS de créer des fichiers. Vérifier que c'est le\ncas et éventuellement modifier les droits.\n\n## Solution\n\nMettre à jour.\n\n-   Sources en version 1.11.10 au moins :\n\n        http://ccvs.cvshome.org/servlets/ProjectDownloadList\n\n-   Mandrake Linux :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:112\n\n-   Slackware Linux :\n\n        http://www.slackware.com/lists/archive/viewer.php?l=slackware-security&y=2003&m=slackware-security.402538\n\n-   Gentoo :\n\n        http://www.securityfocus.com/advisories/6161\n\n-   Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2004-003.html\n\n-   Debian :\n\n        http://www.debian.org/security/2004/dsa-422\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-216",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-12-22T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence aux bulletins de sécurité de Gentoo et Red Hat.",
+      "revision_date": "2004-01-13T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence au bulletin de sécurité de Debian.",
+      "revision_date": "2004-01-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Créations de répertoires et fichiers arbitraires"
+    }
+  ],
+  "summary": "Il est possible de demander au serveur CVS de tenter de créer des\nrépertoires et éventuellement des fichiers dans la racine du système\nhôte.\n",
+  "title": "Faille dans le serveur CVS",
+  "vendor_advisories": []
+}

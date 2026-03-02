@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco AnyConnect Secure Mobility Client pour Microft Windows, versions antérieures à 2.3.254 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco AnyConnect Secure Mobility Client pour Linux et MacOS X, toutes versions majeures autres que 2.5.x et 3.0.x ainsi que les versions 2.5.x antérieures à 2.5.3041 et 3.0.x antérieures à 3.0.629.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans Cisco AnyConnect Secure Mobility\nClient.\n\nLa première (CVE-2011-2041) permet à un utilisateur malintentionné\nd'élever ses privilèges. Cette vulnérabilité ne touche que les versions\nde Cisco AnyConnect Secure Mobility Client destinées à Windows.\n\nLa seconde (CVE-2011-2039 et CVE-2011-2040) permet à un utilisateur\nmalintentionné d'exécuter du code arbitraire à distance. Cette faille\nprovient d'un manque de vérification du programme téléchargé lors du\ndéploiement distant de Cisco AnyConnect Secure Mobility Client. Un\nattaquant pourrait ainsi contrefaire la page de déploiement de\nl'application et amener un utilisateur à télécharger un programme\nmalveillant qui sera exécuté par l'assistant de déploiement. Les\nversions de Cisco AnyConnect Secure Mobility Client pour Windows\nsupérieures à 2.3.185 ne sont pas affectées par cette vulnérabilité.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2040",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2040"
+    },
+    {
+      "name": "CVE-2011-2041",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2041"
+    },
+    {
+      "name": "CVE-2011-2039",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2039"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-329",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-06-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités permettant une exécution de code à distance\nainsi qu'une élévation de privilèges ont été découvertes dans <span\nclass=\"textit\">Cisco AnyConnect Secure Mobility Client</span>.\n",
+  "title": "Vulnérabilités dans Cisco AnyConnect Secure Mobility Client",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20110601-ac du 01 juin 2011",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20110601-ac.shtml"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>Rsync</TT> 2.5.6 et versions  antérieures.",
+  "content": "## Description\n\nrsync est un utilitaire qui permet de synchroniser des fichiers entre\nplusieurs machines.\n\nUne vulnérabilité de type débordement de mémoire présente dans rsync en\nmode serveur peut être exploitée à distance par un utilisateur mal\nintentionné afin d'exécuter du code arbitraire sur le serveur\nvulnérable.\n\n## Contournement provisoire\n\nPour se protéger contre une attaque venant de l'extérieur, il est\nrecommandé de filtrer le port 873/tcp sur les pare-feux.\n\n## Solution\n\nInstaller la version 2.5.7 de rsync.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de rsync :",
+      "url": "http://rsync.samba.org"
+    },
+    {
+      "title": "Bulletin de sécurité GLSA 200312-03 de Gentoo :",
+      "url": "http://www.securityfocus.com/advisories/6142"
+    },
+    {
+      "title": "Correctifs de sécurité de Sun pour les produits Sun Cobalt    Qube 3, RaQ 4 et RaQ 550 :",
+      "url": "http://ftp.cobalt.sun.com/pub/packages/"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE-SA:2003:50 de SuSE :",
+      "url": "http://www.suse.com/de/security/2003_50_rsync.html"
+    },
+    {
+      "title": "Bulletin de sécurité MDKSA-2003:111 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:111"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2003:388 de Red Hat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-388.html"
+    },
+    {
+      "title": "Bulletin de sécurité DSA-404 de Debian :",
+      "url": "http://www.debian.org/security/2003/dsa-404"
+    },
+    {
+      "title": "Correctifs de sécurité de Sun pour les produits Sun Cobalt    RaQ XTR :",
+      "url": "http://ftp.cobalt.sun.com/pub/packages/raqxtr/eng/RaQXTR-All-Security-1.0.1-16675.pkg"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-206",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-12-04T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence CVE et références aux bulletins de sécurité de Mandrake, Debian, SuSE, Red Hat et Gentoo.",
+      "revision_date": "2003-12-05T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de la référence aux correctifs de sécurité de Sun pour les Sun Cobalt Qube3, RaQ 4 et RaQ 550.",
+      "revision_date": "2004-02-17T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de la référence au correctif de Sun pour Sun Cobalt RaQ XTR.",
+      "revision_date": "2004-03-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de rsync",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité rsync du 4 décembre 2003",
+      "url": null
+    }
+  ]
+}

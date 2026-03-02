@@ -1,0 +1,26 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système Unix utilisant Postfix, versions 1.1.12 et  antérieures, comme serveur de messagerie.</P>  <P>Les versions courantes 2.x ne sont pas affectées.</P>",
+  "content": "## Description\n\nLe code analysant les champs d'adresse («RCPT TO», «MAIL FROM» ou\n«Errors-To») peut être détourné au profit d'un utilisateur distant\nmalveillant :\n\n-   pour les versions 1.1.9 à 1.1.12 et antérieures à 1.1.9 avec\n    l'option «append_dot_mydomain» désactivée (activée par défaut), le\n    service peut être suspendu jusqu'à l'effacement du ou des messages\n    par l'administrateur ;\n-   pour les versions 1.1.11 et antérieures, le serveur peut tenter de\n    se connecter à une adresse et un port arbitraire.\n\n## Solution\n\n-   Mettre à jour à partir des sources en version 1.1.13 au moins ou 2.x\n    :\n\n        http://www.postfix.org\n\n-   Debian Linux\n\n        http://www.debian.org/security/2003/dsa-363\n\n-   Linux Mandrake\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:081\n\n-   Red Hat Linux\n\n        http://www.redhat.com/support/errata/RHSA-2003-251.html\n\n-   SuSE Linux\n\n        http://www.suse.de/de/security/2003_033_postfix.html\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-135",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-08-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Balayage de ports par rebond («bounce scanning»)"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Il est possible pour un utilisateur distant mal intentionné de\ntransmettre des messages volontairement mal rédigés qui permettent :\n\n-   de suspendre le service de messagerie (référence CVE CAN-2003-540) ;\n-   de tester tout port d'une adresse quelconque (éventuel contournement\n    de la protection du réseau local par un pare-feu) ou d'utiliser le\n    serveur comme agent d'un réseau de déni de service réparti\n    (référence CVE CAN-2003-0468).\n",
+  "title": "Vulnérabilités du serveur de messagerie Postfix",
+  "vendor_advisories": []
+}

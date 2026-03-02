@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tous les systèmes avec  <TT>Ethereal</TT> version 0.9.5 et versions antérieures.</p>",
+  "content": "## Description\n\nEthereal est un reniffleur réseau. Il permet l'analyse de données\ndirectement depuis le réseau ou depuis un fichier.\n\nUn débordement de mémoire dans la gestion du protocole de routage ISIS\npermet à un utilisateur mal intentionné, composant judicieusement un\nfichier destiné à être lu par Ethereal ou injectant un paquet\nmalicieusement construit sur le réseau, d'exécuter du code arbitraire et\nd'entraîner un déni de service de l'application sur la machine cible.\n\n## Contournement provisoire\n\nDesélectionner le protocole ISIS de la liste des protocoles supportés\npar Ethereal.\n\n## Solution\n\nTélécharger la nouvelle version de Ethereal 0.9.6 (Consultez la section\ndocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité de Ethereal - Docid ensa-sa-00006",
+      "url": "http://www.ethereal.com/appnotes/enpa-sa-00006.html"
+    },
+    {
+      "title": "Téléchargement de Ethereal",
+      "url": "http://www.ethereal.com/download.html"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2002:169 de RedHat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-169.html"
+    },
+    {
+      "title": "Bulletin de sécurité DSA-162 de Debian :",
+      "url": "http://www.debian.org/security/2002/dsa-162"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-189",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-23T00:00:00.000000"
+    },
+    {
+      "description": "Ajouts des bulletins de sécurité de Debian et RedHat.",
+      "revision_date": "2002-09-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans l'utilitaire réseau Ethereal permet à un\nutilisateur mal intentionné d'exécuter du code arbitraire et d'entraîner\nun déni de service sur la machine cible.\n",
+  "title": "Vulnérabilité dans Ethereal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Ethereal - Docid enpa-sa-00006",
+      "url": null
+    }
+  ]
+}

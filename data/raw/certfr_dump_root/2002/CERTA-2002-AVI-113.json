@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Information Server 4 et 5.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "JRUN 3.1 et 3.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nJRUN est un serveur applicatif utilisé dans les serveurs Web les plus\ncourants (Apache, IIS). Un débordement de mémoire présent dans un filtre\nISAPI installé avec JRUN peut permettre à un individu mal intentionné\nd'exécuter du code arbitraire à distance avec les privilèges `SYSTEM`.\n\n## Solution\n\nAppliquer le correctif de Macromédia selon la version affectée :\n\n-   windows (version Anglaise) :\n\n    JRUN 3.1 :\n\n        http://download.allaire.com/publicdl/en/jrun/jrun-31-win-upgrade-us_26414.exe\n\n      \n    JRUN 3.0 :\n\n        http://download.allaire.com/publicdl/en/jrun/jr30sp2_25232.exe\n\n      \n\n-   windows (version Japonaise):\n\n    JRUN 3.1 :\n\n        http://download.allaire.com/publicdl/jp/jrun/jrun-31-win-upgrade-ja_30681.exe\n\n      \n    JRUN 3.0 :\n\n        http://download.allaire.com/publicdl/jp/jrun/jr30sp2_29543.exe\n\n      \n\n-   windows (version Française) :\n\n    JRUN 3.1 :\n\n        http://download.allaire.com/publicdl/fr/jrun/jrun-31-win-upgrade-fr_30681.exe\n\n      \n    JRUN 3.0 :\n\n        http://download.allaire.com/publicdl/fr/jrun/jr30sp2_29543.exe\n\n      \n\nSe référer à l'avis de Macromédia pour plus d'informations (cf.\nDocumentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-113",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-05-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans le serveur d'application JRUN.\n",
+  "title": "Vulnérabilité dans JRUN 3.0 et 3.1",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #MPSB02-02 de Macromédia",
+      "url": "http://www.macromedia.com/security"
+    }
+  ]
+}

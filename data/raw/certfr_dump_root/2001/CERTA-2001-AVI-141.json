@@ -1,0 +1,44 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Serveurs Lotus Domino 5.x.</P>",
+  "content": "## Description\n\nTrois vulnérabilités différentes permettent d'obtenir des informations\nnon autorisées sur des serveurs Lotus Domino 5.x :\n\n1.  Il est possible à un utilisateur sans privilège d'accéder à distance\n    à l'un des fichiers servant à l'administration distante du serveur\n    (Web Administrator template file), webadmin.ntf.\n2.  Lotus Domino possède une fonctionnalité appelée Navigateur par\n    Défaut (`$DefaultNav`) permettant à un utilisateur de naviguer dans\n    toute la base de données. Cette fonctionnalité ne devrait pas être\n    accessible par des utilisateurs non autorisés. Un utilisateur mal\n    intentionné peut accéder à des données non autorisées par le biais\n    d'une URL habilement construite. Une première solution de\n    contournement au moyen d'une redirection des URL\n    `*/*.nsf/$DefaultNav*` avait été suggérée par Lotus. Mais elle n'est\n    pas suffisante car elle peut être contournée.\n3.  Il est possible de présenter une base de données et ses documents\n    sous la forme de vues. Des ACL (Access Control List correctement\n    paramétrées permettent d'appliquer des permissions à certaines vues\n    de façon à en empêcher l'accès à des utilisateurs spécifiés.\n    Cependant, il est possible de contourner ces ACL par le biais d'une\n    URL habilement construite utilisant une autre vue ayant des\n    contrôles d'accès plus laxistes, pour visualiser un document non\n    autorisé.\n\n## Contournement provisoire\n\n1.  Pour la vulnérabilité de webadmin.ntf, Lotus recommande d'utiliser\n    le client Domino Designer afin de modifier les ACL qui sont\n    appliquées à ce fichier. Si nécessaire, changer le niveau de\n    sécurité par défaut à No Access.\n2.  Pour la vulnérabilité concernant l'accès à la base de données\n    complète par un utilisateur sans privilège, Lotus recommande de\n    modifier les permissions document par document afin que les\n    documents ne soient pas accessibles par des utilisateurs non\n    autorisés.\n3.  Pour la vulnérabilité concernant l'accès aux données par le biais de\n    vues détournées, Lotus recommande d'appliquer des permissions\n    spécifiques à chaque document au moyen de son champ lecture.\n\n## Solution\n\n1.  La version 5.0.9 de Domino corrige les permissions d'accès par\n    défaut au fichier webadmin.ntf.\n\n    Attention ! Si l'administrateur crée lui-même des fichiers\n    permettant d'administrer à distance des bases de données, il doit y\n    appliquer les ACL nécessaires pour que ceux-ci ne soient pas\n    utilisables par un utilisateur sans privilège (de la même façon que\n    l'on applique des permissions particulières aux scripts cgi d'un\n    serveur web).\n\n2.  La version 5.0.10 corrige les permissions et supprime l'accès à la\n    base de données par le biais de la fonctionalité de Navigateur par\n    Défaut.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis 189425 :",
+      "url": "http://support.lotus.com/sims2.nsf/0/7ee0d1a8ec05c3bb85256afc005ae0ea"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-141",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-11-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Lecture de données et exécution de programmes non autorisés"
+    }
+  ],
+  "summary": "En construisant habilement les URL dans un navigateur internet, il est\npossible d'obtenir un certain nombre d'informations concernant un\nserveur Domino et ses bases de données.\n",
+  "title": "Vulnérabilités de Lotus domino Server 5.x",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Lotus 189428",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Lotus 189425",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Lotus 189429",
+      "url": null
+    }
+  ]
+}

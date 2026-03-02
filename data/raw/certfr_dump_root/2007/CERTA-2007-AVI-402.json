@@ -1,0 +1,141 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Serveur <SPAN class=\n  \"textit\">Apache</SPAN> versions 2.2.x et 2.0.x.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent le serveur web Apache :\n\n-   une erreur dans la fonction recall_headers du module mod_mem_cache\n    permet à un utilisateur malintentionné d'accéder à des informations\n    qui peuvent être sensibles ;\n-   une erreur dans le module mod_cache se traduit par l'arrêt inopiné\n    (crash) d'un processus fils lors du traitement de certaines\n    requêtes. Cette erreur permet à un utilisateur malintentionné de\n    provoquer un déni de service à distance ;\n-   le serveur HTTP ne vérifie pas qu'un processus est un processus fils\n    Apache avant de lui envoyer un signal. Cette absence de vérification\n    permet à un utilisateur local malintentionné, dans certaines\n    conditions, de provoquer un déni de service ;\n-   une erreur dans le module mod_proxy est exploitable par un\n    utilisateur malintentionné pour provoquer, dans certaines\n    circonstances, un déni de service à distance ;\n-   une erreur dans le module mod_status permet à un utilisateur\n    malintentionné de réaliser de l'injection de code indirecte (cross\n    site scripting) si la page d'état du serveur est publique et si le\n    paramètre ExtendedStatus est activé.\n\n## Solution\n\nLes versions 2.2.6 et 2.0.61 corrigent ces problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3847",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3847"
+    },
+    {
+      "name": "CVE-2007-5752",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5752"
+    },
+    {
+      "name": "CVE-2007-1862",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1862"
+    },
+    {
+      "name": "CVE-2007-3304",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3304"
+    },
+    {
+      "name": "CVE-2007-1863",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1863"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Avaya du 17 août 2007 :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2007-353.htm"
+    },
+    {
+      "title": "Bulletins de sécurité IBM du 04 septembre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1PK49295"
+    },
+    {
+      "title": "Bulletins de sécurité IBM du 04 septembre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1PK50469"
+    },
+    {
+      "title": "Bulletins de sécurité IBM du 04 septembre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1PK49355"
+    },
+    {
+      "title": "Bulletins de sécurité IBM du 04 septembre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1PK52702"
+    },
+    {
+      "title": "Bulletin de sécurité Avaya du 17 août 2007 :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2007-351.htm"
+    },
+    {
+      "title": "Bulletin de sécurité Avaya du 17 août 2007 :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2007-363.htm"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2007:0533 du 26 juin 2007    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0533.html"
+    },
+    {
+      "title": "Bulletin de sécurité HP-UX HPSBUX02262 SSRT071447 du 08    octobre 2007 :",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c01178795"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-499-1 du 16 août 2007 :",
+      "url": "http://www.ubuntu.com/usn/usn-499-1"
+    },
+    {
+      "title": "Bulletins de sécurité IBM du 04 septembre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1PK50467"
+    },
+    {
+      "title": "Bulletins de version Apache du 07 septembre 2007 :",
+      "url": "http://httpd.apache.org/security/vulnerabilities_20.html"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2007:0534 du 26 juin 2007    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0534.html"
+    },
+    {
+      "title": "Bulletins de version Apache du 07 septembre 2007 :",
+      "url": "http://httpd.apache.org/security/vulnerabilities_22.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:140 du 04 juillet    2007 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:140"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200711-06 du 07 novembre    2007 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200711-06.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2007:0556 du 26 juin 2007    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0556.html"
+    },
+    {
+      "title": "Bulletins de sécurité IBM du 04 septembre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg1PK53984"
+    },
+    {
+      "title": "Bulletin de sécurité HP-UX HPSBUX02273 SSRT071476 du 12    octobre 2007 :",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c01182588"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2007:0662 du 13 juillet    2007 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0662.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-402",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-09-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2007-11-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités du serveur web <span\nclass=\"textit\">Apache</span> permettent à un utilisateur malintentionné\nde provoquer un déni de service à distance, de réaliser de l'injection\nde code indirecte et d'accéder à des informations sensibles.\n",
+  "title": "Multiples vulnérabilités de Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de version Apache",
+      "url": null
+    }
+  ]
+}

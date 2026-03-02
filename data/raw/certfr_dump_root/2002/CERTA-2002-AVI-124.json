@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous les serveurs Microsoft Internet Information Server 4.0  (Windows NT) et 5.0 (Windows 2000).</P>",
+  "content": "## Description\n\nISAPI (Internet Services Application Programming Interface) est une\ntechnologie permettant aux développeurs de site web de fournir des\nservices plus ou moins élaborés par le biais d'une interface web.\n\nL'extension ISAPI HTR est le prédécesseur des extensions ASP (Active\nServer Pages) permettant de gérer les mots de passe des utilisateurs de\nWindows NT à distance au moyen d'une interface web IIS.\n\nCette extension était installée par défaut sous IIS 2.0, et peut encore\nêtre installée sur les serveurs IIS 4.0 à 5.1 de façon à maintenir une\ncompatibilité ascendante.\n\nLe mécanisme de transfert des données engendrées par les scripts HTR est\nvulnérable aux débordements de mémoire.\n\nUn utilisateur mal intentionné peut ainsi exécuter du code arbitraire à\ndistance sur un serveur web IIS utilisant l'extension ISAPI HTR.\n\nLe code sera exécuté dans le contexte de sécurité du compte\nIWAM_Nom_de_machine qui ne possède normalement pas de privilèges\nparticuliers.\n\n## Contournement provisoire\n\nDans la mesure du possible désactiver les extensions HTR et leur\npréférer les extensions ASP.\n\n## Solution\n\nConsulter le bulletin de sécurité MS02-028 de Microsoft (Voir paragraphe\nDocumentation) pour connaître la disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-124",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut exécuter du code arbitraire à\ndistance sur un serveur IIS 4.0 ou 5.0 grâce à un débordement de mémoire\ndans la gestion des scripts HTR.\n",
+  "title": "Vulnérabilité de Microsoft Internet Information Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS02-028 de Microsoft",
+      "url": "HTTP://www.microsoft.com/technet/security/bulletin/MS02-028.ASP"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ModSecurity versions antérieures à 2.5.9.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nIl existe plusieurs vulnérabilités du module ModSecurity d'Apache :\n\n-   la première vulnérabilité est présente dans la gestion des contenus\n    multipartie ;\n-   la seconde vulnérabilité concerne la gestion des requêtes lorsque la\n    protection contre l'injection de code indirecte des fichiers au\n    format PDF (PDF XSS) est activée.\n\nUn individu malintentionné peut réaliser un déni de service à distance\ndu module ModSecurity, voire même d'Apache, en exploitant l'une de ces\nvulnérabilités par le biais d'une requête spécifiquement conçue.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Liste des changements apportés à la version 2.5.9 du 11    mars 2009 :",
+      "url": "http://sourceforge.net/project/shownotes.php?release_id=667542&group_id=68846"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-096",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-03-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités du module ModSecurity permettent de réaliser un\ndéni de service à distance.\n",
+  "title": "Multiples vulnérabilités de ModSecurity",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés à la version 2.5.9 du 11 mars 2009",
+      "url": null
+    }
+  ]
+}

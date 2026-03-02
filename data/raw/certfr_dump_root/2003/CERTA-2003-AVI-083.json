@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft BizTalk Server 2000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft BizTalk Server 2002.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nMicrosoft BizTalk Server est un produit destiné aux entreprises qui\nsouhaitent intégrer diverses applications et partenaires dans leur\ntraitement d'informations.\n\nDeux vulnérabilités ont été découvertes sur ce produit.  \n\nLa première vulnérabilité ne concerne que la version Microsoft BizTalk\nServer 2002. Il est possible d'échanger avec BizTalk Server 2002 des\ndocuments au format HTML. Une vulnérabilité de type débordement de\nmémoire a été découverte dans le composant chargé de recevoir les\ndocuments HTTP, et permet à un utilisateur mal intentionné d'exécuter du\ncode arbitraire sur le serveur BizTalk.\n\nLe transfert de documents au format HTTP n'est pas mis en place par\ndéfaut, et doit être explicitement demandé durant l'installation. De\nplus, le code sera exécuté avec les droits du serveur IIS. Si ce dernier\nest installé sous un compte d'utilisateur, les permissions seront\nlimitées à celle de l'utilisateur.  \n\nLa deuxième vulnérabilité concerne les versions 2000 et 2002 du serveur\nBizTalk. BizTalk Server permet aux administrateurs d'organiser des\ndocuments via une interface web (DTA - Document Tracking and\nAdministration). Dans certaines pages de cette interface, il est\npossible d'injecter du code SQL qui sera exécuté sur le serveur.\n\nLes utilisateurs par défaut de l'interface DTA ne sont pas des\nutilisateurs SQL privilégiés. En effet, pour pouvoir utiliser cette\ninterface, il suffit à un utilisateur de faire partie du groupe BizTalk\nServer Report Users.\n\n## Solution\n\nAppliquer le correctif fourni par Microsoft (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-083",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-05-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code SQL"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes dans le serveur Microsoft\nBizTalk.\n",
+  "title": "Vulnérabilités du serveur Microsoft BizTalk",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Microsoft MS03-016",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS03-016.asp"
+    }
+  ]
+}

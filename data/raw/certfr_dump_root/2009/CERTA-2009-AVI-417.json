@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM AIX 5.3.x ;",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM AIX 6.1.x.",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans NFSv4 d'IBM AIX :\n\n-   une erreur dans la gestion de données de connexion permet à un\n    utilisateur local d'accéder à des partages réseau sans autorisation\n    ;\n-   une vulnérabilité dans nfs_portmon permet d'accéder à des partages\n    réseau protégés par nfs_portmon sans autorisation.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2009-AVI-417",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-10-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans IBM AIX permettent à une personne\nmalintentionnée de contourner la politique de sécurité.\n",
+  "title": "Vulnérabilités dans IBM AIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM AIX du 29 septembre 2009",
+      "url": "http://aix.software.ibm.com/aix/efixes/security/nfs4_advisory.asc"
+    }
+  ]
+}

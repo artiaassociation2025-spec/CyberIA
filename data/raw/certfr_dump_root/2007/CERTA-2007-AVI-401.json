@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<SPAN class=\"textit\">Wordpress</SPAN>  version 2.x et MU 1.x.",
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans Wordpress :\n\n-   un défaut de gestion du filtrage des entrées en HTML permet à un\n    utilisateur malintentionné de poster dans un blog Wordpress du code\n    HTML quelconque et des scripts. Ce défaut permet la réalisation\n    d'injection de code indirecte ;\n-   le filtrage des entrées qui servent à la construction de requêtes\n    SQL est imparfait. Cette vulnérabilité permet à un utilisateur\n    malveillant de modifier les requêtes SQL et de contourner la\n    politique de sécurité.\n\n## Solution\n\nLes versions 2.2.3 et MU 1.2.5a de Wordpress corrigent ces deux\nproblèmes. Se référer au bulletin de sécurité de l'éditeur pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Page de téléchargement de Wordpress :",
+      "url": "http://wordpress.org/download/"
+    },
+    {
+      "title": "ticket Wordpress 4720 :",
+      "url": "http://trac.wordpress.org/ticket/4720"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-401",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-09-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans <span class=\"textit\">Wordpress</span>\npermettent à un utilisateur malveillant de réaliser de l'injection de\ncode indirecte et d'injecter des requêtes SQL.\n",
+  "title": "Multiples vulnérabilités de Wordpress",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Ticket Wordpress 4720",
+      "url": null
+    }
+  ]
+}

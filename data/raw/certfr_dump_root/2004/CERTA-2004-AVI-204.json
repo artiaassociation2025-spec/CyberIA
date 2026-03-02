@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>ISC DHCP versions 3.0.1rc12 et  3.0.1rc13.</p>",
+  "content": "## Description\n\nDHCP (Dynamic Host Configuration Protocol) est un protocole\nclient-serveur décrit dans le RFC 2131. Le serveur fournit dynamiquement\ndes adresses IP et autres paramètres de configuration réseau à des\nmachines clientes.\n\n  \nPlusieurs vulnérabilités de type débordement de mémoire sont présentes\ndans le serveur ISC DHCP. Au moyen de paquets malicieusement constitués,\nun utilisateur mal intentionné peut exploiter ces vulnérabilités afin\nd'exécuter du code arbitraire sur la plate-forme vulnérable ou réaliser\nun déni de service par arrêt brutal du serveur.\n\n## Solution\n\nLa version 3.0.1rc14, disponible sur le site d'ISC, corrige cette\nvulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Référence CVE CAN-2004-0461 :",
+      "url": "https://www.cve.org/CVERecord?id=CAN-2004-0461"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour isc-dhcp3-server du 25    juin 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE-SA:2004:0019 de SuSE du 22 juin    2004 :",
+      "url": "http://www.suse.com/de/security/2004_19_dhcp_server.html"
+    },
+    {
+      "title": "Avis de sécurité TA04-174A de l'US-CERT :",
+      "url": "http://www.us-cert.gov/cas/techalerts/TA04-174A.html"
+    },
+    {
+      "title": "Référence CVE CAN-2004-0460 :",
+      "url": "https://www.cve.org/CVERecord?id=CAN-2004-0460"
+    },
+    {
+      "title": "Internet Software Consortium (ISC) :",
+      "url": "http://www.isc.org/sw/dhcp"
+    },
+    {
+      "title": "Bulletin de sécurité MDKSA-2004:061 de Mandrake du 22 juin    2004 :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:061"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-204",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-06-23T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de SuSE.",
+      "revision_date": "2004-06-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de FreeBSD.",
+      "revision_date": "2004-06-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans le serveur ISC DHCP peuvent\nêtre exploitées, à distance, par un utilisateur mal intentionné afin\nd'exécuter du code arbitraire sur la plate-forme vulnérable.\n",
+  "title": "Multiples vulnérabilités du service ISC DHCP",
+  "vendor_advisories": []
+}

@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Call Manager version 4.1 et versions antérieures à la 4.1(3)SR2;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Call Manager version 3.2 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Call Manager version 3.3 et versions antérieures à la 3.3(5)SR1a ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Call Manager version 4.0 et versions antérieures à la 4.0(2a)SR2c ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois vulnérabilités ont été découvertes dans le logiciel Cisco Call\nManager :\n\n-   La première résulte d'une erreur au niveau de la gestion des\n    connections à destination du port 2000/TCP. Elle peut être exploitée\n    par un utilisateur mal intentionné afin d'utiliser la mémoire de\n    manière abusive et donc provoquer un déni de service.\n-   La deuxième résulte d'une erreur dans la gestion des connexions à\n    destination des ports 2001/TCP, 2002/TCP et 7727/TCP. Cette\n    vulnérabilité peut être exploitée par des utilisateurs mal\n    intentionnés afin de provoquer le redémarrage de l'équipement\n    vulnérable.\n-   La troisième résulte d'une erreur présente au niveau de l'interface\n    CCMAdmin et peut être exploitée par un utilisateur mal intentionné\n    dans le but d'élever ses privilèges (obtention du droit de création,\n    suppression, modification de la configuration des périphériques).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID XXXXX du 18 janvier 2006 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20060118-ccmpe.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco ID XXXXX du 18 janvier 2006 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20060118-ccmdos.shtml"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-041",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-01-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Trois vulnérabilités ont été identifiées dans le Cisco Call Manager.\nL'exploitation réussie d'une de ces deux vulnérabilités permet de\nréaliser un déni de service à distance ou une élévation de privilège en\nlocal.\n",
+  "title": "Multiples vulnérabilités dans Cisco Call Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Cisco numéros 68791 et 68792",
+      "url": null
+    }
+  ]
+}

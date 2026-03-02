@@ -1,0 +1,47 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Windows 95 et Windows 98 seconde édition équipés du protocole  IPX</P>",
+  "content": "## Description\n\nIPX est un protocole de communication réseau développé par Novell. Comme\ndans le protocole TCP/IP, la notion de diffusion (broadcast) existe sous\nIPX. Une adresse de diffusion est une adresse faisant référence à tout\nle réseau. Lorsqu'elle est utilisée comme adresse de destination d'un\npaquet, le paquet est envoyé à tout le réseau.\n\nUne erreur dans la façon de traiter les paquets « Ping » IPX a été\ndécouverte dans l'implémentation de ce protocole sous Windows 9x.\n\nUne machine vulnérable qui reçoit un paquet IPX ping ayant pour adresse\nsource l'adresse de diffusion du réseau, va envoyer une réponse à tout\nle réseau au lieu de rejeter le paquet.\n\nDe plus si l'émetteur de ce paquet utilise une adresse de diffusion\ncomme destination, toutes les machines vulnérables renverront une\nréponse à tout le réseau. Ceci aura pour conséquence de générer un\ntrafic dont l'importance sera proportionnelle au nombre de machines\nvulnérables sur le réseau.\n\nEn conséquence, on peut observer pendant quelques secondes une surcharge\nbrutale du trafic sur le réseau.\n\nEnfin, une machine qui reçoit un paquet de réponse à un ping IPX qu'elle\na elle-même émis (car elle se situe dans l'adresse de diffusion), tente\nde le traiter, ce qui peut engendrer un blocage du système. Il faut\nredémarrer la machine.\n\nNota : La plupart des routeurs filtrent le protocole IPX, ce qui rend\nles attaques provenant de l'extérieur d'un réseau, et donc d'internet,\nmoins probables.\n\nIPX n'est pas installé par défaut sous Windows 98\n\n## Solution\n\nAppliquer les correctifs concernant le protocole IPX pour les système\nWindows 95 et Windows 98 (version US) :\n\n-   Pour Windows 98 :\n\n        http://download.microsoft.com/download/win98/Update/8982/W98/EN-US/265334USA8.EXE\n\n-   Pour Windows 95 :\n\n        http://download.microsoft.com/download/win95/Update/8982/W95/EN-US/265334US5.EXE\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "FAQ concernant le bulletin MS00-054 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-054.asp"
+    },
+    {
+      "title": "Bulletin de sécurité de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-054.asp"
+    },
+    {
+      "title": "Article Q269523 de la Base de Connaissances de Microsoft    concernant le bulletin MS00-054",
+      "url": "http://www.microsoft.com/technet/support/kb.asp?ID=265334"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-025",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Congestion de réseau, déni de service"
+    }
+  ],
+  "summary": "Le protocole IPX de Windows 95 et Windows 98 traite les paquets dont la\nsource est une adresse de diffusion (<span\nclass=\"textit\">broadcast</span>)au lieu de les ignorer. Un correctif a\nété mis au point pour corriger cette erreur.\n",
+  "title": "Vulnérabilité de Windows 9x avec le protocole IPX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de Sécurité Microsoft",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis du CERT IST",
+      "url": null
+    }
+  ]
+}

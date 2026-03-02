@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>GNU mailutils version 0.6 et versions  antérieures.</p>",
+  "content": "## Description\n\nGNU mailutils est un ensemble d'utilitaires relatifs au courrier\nélectronique. Parmi ces utilitaires, on peut citer le serveur IMAP\nimap4d.  \nUne vulnérabilité de type débordement de mémoire dans le serveur imap4d\nlors du traitement de requêtes IMAP SEARCH permet à un utilisateur\nauthentifié mal intentionné d'exécuter du code arbitraire à distance sur\nla plate-forme vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de GNU mailutils :",
+      "url": "http://www.gnu.org/software/mailutils/mailutils.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo 200509-10 / mailutils du 17    septembre 2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200509-10.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-841 du 04 octobre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-841"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-350",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-09-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-841 et de la référence CVE CAN-2005-2878.",
+      "revision_date": "2005-10-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance par un utilisateur authentifié"
+    }
+  ],
+  "summary": "Une vulnérabilité dans GNU mailutils permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire à distance sur la plate-forme\nvulnérable.\n",
+  "title": "Vulnérabilité de GNU mailutils",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDEFENSE Security Advisory 09.09.05",
+      "url": "http://www.idefense.com/application/poi/display?id=303&type=vulnerabilities"
+    }
+  ]
+}

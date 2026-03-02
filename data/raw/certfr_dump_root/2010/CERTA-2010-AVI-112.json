@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Version du serveur HTTP <TT>Apache</TT>  2.2.0 à 2.2.14.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités dans les modules mod_isapi, mod_headers et\nmod_proxy_ajp permettent à un utilisateur malveillant de provoquer un\ndéni de service ou d'exécuter du code à distance.\n\n## Solution\n\nInstaller la version 2.2.15 d'Apache HTTP serveur. La version 2.2.15\nintégre la version à jour de la librairie OpenSSL 0.9.8m et corrige\nainsi la vulnérabilité CVE-2009-3555.\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0434",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0434"
+    },
+    {
+      "name": "CVE-2010-0425",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0425"
+    },
+    {
+      "name": "CVE-2009-3555",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3555"
+    },
+    {
+      "name": "CVE-2010-0408",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0408"
+    }
+  ],
+  "links": [
+    {
+      "title": "Vulnérabilités du serveur HTTP APACHE 2.2 :",
+      "url": "http://httpd.apache.org/security/vulnerabilities_22.html"
+    },
+    {
+      "title": "Annonce de la version 2.2.15 du serveur APACHE :",
+      "url": "http://www.apache.org/dist/httpd/Announcement2.2.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2010:0168-1 du 25 mars    2010 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2010-0168.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-908-1 du 10 mars 2010 :",
+      "url": "http://www.ubuntu.com/usn/USN-908-1"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-112",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-03-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité RedHat et Ubuntu.",
+      "revision_date": "2010-03-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Des vulnérabilités multiples dans les versions du serveur Apache de la\nbranche 2.2.0, antérieures à la version 2.2.15 permettent à un\nutilisateur malveillant d'exécuter du code à distance, ou de provoquer\nun déni de service.\n",
+  "title": "Multiples vulnérabilités du serveur HTTP Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise en ligne de la version 2.2.15 du serveur HTTP Apache",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions d'<SPAN class=\"textit\">Analog</SPAN>  antérieures à la version 5.22.</P>",
+  "content": "## Description\n\nAnalog est un logiciel utilisé pour le traitement et l'analyse de logs\nd'un serveur HTTP. Il produit un rapport au format HTML.\n\nSi un utilisateur mal intentionné envoie au serveur HTTP des requêtes\ncontenant des chaînes de caractères, ces chaînes seront alors\nretranscrites dans les logs du serveur, puis dans le rapport Analog.\n\nEn choississant judicieusement les chaînes à insérer (code Javascript\npar exemple), un utilisateur mal intentionné peut alors faire exécuter\nce code par le navigateur de toute personne consultant le rapport créé\npar Analog.\n\n## Solution\n\nMettre à jour Analog en installant la version 5.22.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Note d'information du CERTA sur le cross-site scripting :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2002-INF-001/index.html"
+    },
+    {
+      "title": "Avis de sécurity Analog :",
+      "url": "http://www.analog.cx/security4.html"
+    },
+    {
+      "title": "Avis de sécurité Debian DSA 125-1 :",
+      "url": "http://www.debian.org/security/2002/dsa-125"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-065",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-03-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Récupération d'informations"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Vol de cookies"
+    }
+  ],
+  "summary": "<span class=\"textit\">Analog</span> est vulnérable à une attaque de type\n« <span class=\"textit\">cross-site scripting</span> ».\n",
+  "title": "Vulnérabilité du logiciel Analog",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de Sécurité Debian DSA 125-1",
+      "url": null
+    }
+  ]
+}

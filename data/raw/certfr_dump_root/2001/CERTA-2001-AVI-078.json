@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Windows 2000.</P>",
+  "content": "## Description\n\nSMTP est le protocole utilisé par les serveurs de courrier. Lorsque le\nservice SMTP est installé sous Windows 2000, le serveur virtuel SMTP par\ndéfaut est activé.\n\nSous Windows 2000, il est possible d'utiliser des options de sécurité au\nniveau d'un serveur virtuel SMTP. Un de ces paramètres permet de\nspécifier le type d'authentification utilisé pour les messages entrant.\n\nUn utilisateur mal intentionné peut, lors de l'authentification au\nserveur virtuel SMTP, contourner les mécanismes de vérification et\ns'enregistrer comme un utilisateur connu. Il a alors la possibilité\nd'expédier et de recevoir des méls en utilisant le nom de domaine de la\nmachine cible.\n\nCette vulnérabilité peut être utilisée notamment pour diffuser du\ncourrier non sollicité tout en usurpant le point d'origine du courrier.\n\nNota :\n\n-   Cette vulnérabilité n'affecte pas Microsoft Exchange.\n-   Les serveurs appartenant à un domaine Windows ne sont pas impactés\n    par cette vulnérabilité.\n\n## Contournement provisoire\n\nSi ce service n'est pas nécessaire sur une machine Windows 2000, il\nconvient de le stopper.\n\n-   Dans le menu Démarrer, pointer sur Programmes, puis sur Outils\n    d'administration et cliquer ensuite sur Services de composants ;\n-   Dans l'arborescence de la console, selectionner Services (locaux) ;\n-   Dans le volet de détails, cliquer avec le bouton droit sur Simple\n    Mail Transfert Protocol, puis cliquer sur Arrêter.\n\n## Solution\n\nTélécharger le correctif sur le site Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=31181\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-037.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-078",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-07-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Risque de diffusion de courrier non sollicité"
+    },
+    {
+      "description": "Usurpation d'identité"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le protocole d'identification SMTP sous\nWindows 2000 permet à un utilisateur mal intentionné de s'identifier\nauprès du serveur de courrier comme un utilisateur connu.\n",
+  "title": "Vulnérabilité de l'identification SMTP sous Windows 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-037",
+      "url": null
+    }
+  ]
+}

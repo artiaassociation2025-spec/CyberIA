@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Django versions 1.1.x inférieures à 1.1.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Django versions 1.2.x inférieures à 1.2.4.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne mise à jour de Django corrige deux vulnérabilités. La première\npermet à une personne malveillante connaissant bien le modèle utilisé\npar l'application, d'obtenir des informations confidentielles. La\nseconde permet à un attaquant d'épuiser les ressources du serveur en lui\nenvoyant des requêtes de changement de mots de passe spécialement\nconçues.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-4534",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4534"
+    },
+    {
+      "name": "CVE-2010-4535",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4535"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-1040-1 du 07 janvier 2011 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-1040-1"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-635",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-28T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références au bulletin Ubuntu et aux CVE.",
+      "revision_date": "2011-01-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités, l'une permettant un déni de service et l'autre\nd'obtenir des informations confidentielles, ont été corrigées dans <span\nclass=\"textit\">Django</span>.\n",
+  "title": "Vulnérabilités dans Django",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Django du 22 décembre 2010",
+      "url": "http://www.djangoproject.com/weblog/2010/dec/22/security"
+    }
+  ]
+}

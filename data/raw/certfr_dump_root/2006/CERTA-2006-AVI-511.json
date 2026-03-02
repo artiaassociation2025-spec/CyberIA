@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "CA Personal Firewall 2007 9.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDes erreurs affectent les pilotes KmxStart.sys et KmxFw.sys du pare-feu\npersonnel de CA. Ces erreurs peuvent être utilisées par un utilisateur\nlocal pour modifier des fonctions de retour (callbacks) via des\nprimitives IOCTL privilégiées. L'utilisateur malveillant peut alors\nexécuter un code arbitraire dans l'espace noyau (kernel mode).\n\n  \n  \n\nLes vulnérabilités sont avérées pour les versions suivantes des pilotes\n:\n\n-   KmxStart.sys 6.5.4.10\n-   KmxFw.sys 6.5.4.31\n\n## Contournement provisoire\n\nRestreindre aux utilisateurs autorisés l'accès aux systèmes vulnérables.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Secunia SA22972 du 17 novembre 2006 :",
+      "url": "http://secunia.com/advisories/22972/"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-511",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Des erreurs dans des pilotes du pare-feu permettent à un utilisateur\nlocal d'élever ses privilèges.\n",
+  "title": "Vulnérabilité de CA personal Firewall",
+  "vendor_advisories": []
+}

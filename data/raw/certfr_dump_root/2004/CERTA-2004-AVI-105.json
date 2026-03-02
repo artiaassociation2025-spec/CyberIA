@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>FreeBSD 5.2-RELEASE et versions  antérieures.</p>",
+  "content": "## Description\n\nLa fonction setsockopt() permet de manipuler les options associées à une\nsocket.\n\nUne vulnérabilité présente dans la gestion des options pour une socket\nIPv6 peut être exploitée par un utilisateur local mal intentionné afin\nde provoquer un déni de service par arrêt brutal du système. Il serait\négalement possible d'exploiter cette vulnérabilité afin de lire\ncertaines portions de la mémoire du noyau.\n\n## Contournement provisoire\n\nDésactiver la prise en compte du protocole IPv6 au niveau du noyau (pour\nplus d'informations se référer au bulletin de sécurité de l'éditeur).\n\n## Solution\n\nAppliquer les correctifs (se référer au bulletin de sécurité de\nl'éditeur).\n\nLa version 5.2.1-RELEASE-p4 corrige cette vulnérabilite.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD-SA-04:06.ipv6 de FreeBSD :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-04:06.ipv6.asc"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-105",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la fonction setsockopt() peut être exploitée par\nun utilisateur local mal intentionné afin de provoquer un déni de\nservice ou accéder à des données du noyau.\n",
+  "title": "Vulnérabilité de la fonction setsockopt() sous FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD-SA-04-06.ipv6 de FreeBSD",
+      "url": null
+    }
+  ]
+}

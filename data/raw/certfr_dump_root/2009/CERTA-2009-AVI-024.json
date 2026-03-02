@@ -1,0 +1,100 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "TYPO3 versions 4.2.0 à 4.2.3.",
+      "product": {
+        "name": "Typo3",
+        "vendor": {
+          "name": "Typo3",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "TYPO3 versions 4.0.0 à 4.0.9 ;",
+      "product": {
+        "name": "Typo3",
+        "vendor": {
+          "name": "Typo3",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "TYPO3 versions 4.1.0 à 4.1.7 ;",
+      "product": {
+        "name": "Typo3",
+        "vendor": {
+          "name": "Typo3",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans TYPO3 :\n\n-   la clé de chiffrement utilisée par TYPO3 a une faible entropie ;\n-   les jetons de session ne sont pas correctement invalidés et peuvent\n    être rejoués ;\n-   le moteur de recherche indexée ne filtre pas correctement les\n    paramètres, ce qui permet une exécution de commandes arbitraires à\n    distance. Par ailleurs, le nom et le contenu des fichiers à indexer\n    ne sont pas non plus correctement filtrés, ce qui permet de réaliser\n    des attaques de type cross-site scripting ;\n-   des attaques de type cross-site scripting sont possibles via les\n    composants ADOdb et Workspace.\n\n## Solution\n\nMettre à jour TYPO3 en version 4.0.10, 4.1.8 ou 4.2.4. L'application des\nmises à jour ne suffit pas à corriger toutes les vulnérabilités, il est\négalement nécessaire de créer une nouvelle clé de chiffrement. Cette\nprocédure est décrite dans le bulletin de sécurité de l'éditeur (voir\nsection Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0257",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0257"
+    },
+    {
+      "name": "CVE-2009-0255",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0255"
+    },
+    {
+      "name": "CVE-2009-0256",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0256"
+    },
+    {
+      "name": "CVE-2009-0258",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0258"
+    }
+  ],
+  "links": [
+    {
+      "title": "Référence CVE CVE-2009-0258 :",
+      "url": "http://cve.mitre.org/cgi-bin/cvename.cge?name=CVE-2009-258"
+    },
+    {
+      "title": "Référence CVE CVE-2009-0257 :",
+      "url": "http://cve.mitre.org/cgi-bin/cvename.cge?name=CVE-2009-257"
+    },
+    {
+      "title": "Référence CVE CVE-2009-0255 :",
+      "url": "http://cve.mitre.org/cgi-bin/cvename.cge?name=CVE-2009-255"
+    },
+    {
+      "title": "Référence CVE CVE-2009-0256 :",
+      "url": "http://cve.mitre.org/cgi-bin/cvename.cge?name=CVE-2009-256"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-024",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-01-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injections de code indirectes"
+    },
+    {
+      "description": "Exécution de commandes arbitraires à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">TYPO3</span>\npermettent une exécution de commandes arbitraires à distance, diverses\ninjections de code indirectes ou un contournement de la politique de\nsécurité.\n",
+  "title": "Multiples vulnérabilités dans TYPO3",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité TYPO3-SA-2009-001",
+      "url": "http://typo3.org/teams/security/security-bulletins/typo3-sa-2009-001/"
+    }
+  ]
+}

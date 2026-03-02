@@ -1,0 +1,106 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Office XP Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Visio 2002 Viewer ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office 2003 Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "2007 Microsoft Office System Service Pack 1 et 2 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office Vision Viewer Service Pack 2 et versions antérieures.",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office Visio 2003 Viewer ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités dans Microsoft Active Template Library (ATL)\nActiveX controls pour Microsoft Office permettent à une personne\ndistante d'exécuter du code arbitraire :\n\n-   une erreur dans l'en-tête de Microsoft ATL permet d'exécuter du code\n    arbitraire à distance via l'appel VariantClear (CVE-2009-0901);\n-   une erreur dans l'en-tête de Microsoft ATL permet d'exécuter du code\n    arbitraire à distance via l'instantiation d'un objet issu d'un flux\n    de données (CVE-2009-2493) ;\n-   une erreur dans Microsoft ATL permet de lire une chaîne de\n    caractères sans le caractère NULL de fin. Il est ainsi possible de\n    lire des données supplémentaires présentes en mémoire.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0901",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0901"
+    },
+    {
+      "name": "CVE-2009-2493",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2493"
+    },
+    {
+      "name": "CVE-2009-2495",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2495"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-440",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-10-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Microsoft Active Template Library (ATL)\nActiveX controls pour Microsoft Office permettent à une personne\nmalintentionnée d'exécuter du code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans Microsoft ATL ActiveX controls pour Microsoft Office",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS09-060 du 13 octobre 2009",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-060.mspx"
+    }
+  ]
+}

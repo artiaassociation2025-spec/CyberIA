@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>ClamAV, versions inférieures à 0.95.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent ClamAV :\n\n-   une erreur dans le traitement des archives au format RAR permet à un\n    utilisateur malveillant d'éviter l'analyse de l'archive ;\n-   une erreur dans le traitement des archives au format TAR permet à un\n    utilisateur malveillant de provoquer une boucle infinie ;\n-   une erreur dans le traitement des exécutables au format PE permet de\n    provoquer un arrêt inopiné (crash), en provoquant une division par\n    zéro.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1241",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1241"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurité du projet ClamAV :",
+      "url": "https://wwws.clamav.net/bugzilla/show_bug.cgi?id=1335"
+    },
+    {
+      "title": "Bulletins de sécurité du projet ClamAV :",
+      "url": "https://wwws.clamav.net/bugzilla/show_bug.cgi?id=1462"
+    },
+    {
+      "title": "Bulletins de sécurité du projet ClamAV :",
+      "url": "https://wwws.clamav.net/bugzilla/show_bug.cgi?id=1467"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-131",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-04-08T00:00:00.000000"
+    },
+    {
+      "description": "corrections d'adresses.",
+      "revision_date": "2009-04-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de ClamAV permettent à un utilisateur\nmalveillant de contourner la politique de sécurité ou de provoquer un\ndéni de service.\n",
+  "title": "Vulnérabilités de ClamAV",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ubuntu USN-754-1 du 07 avril 2009",
+      "url": "http://lists.ubuntu.com/archives/ubuntu-security-announce/2009-April/000880.html"
+    }
+  ]
+}

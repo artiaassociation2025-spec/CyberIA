@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Django 1.1.x versions inférieures à 1.1.4.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Django 1.2.x versions inférieures à 1.2.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa première vulnérabilité corrigée permet de contourner la protection\nanti-injection de requêtes illégitimes par rebond. Une faille dans la\ngestion des noms de fichiers téléchargés vers le serveur permet à une\npersonne malveillante de réaliser une injection de code indirecte à\ndistance. Enfin, sur les systèmes Windows un attaquant capable de\nrejouer des connexions au serveur ou de contourner les mécanismes\nd'authentification peut afficher des fichiers arbitraires, à cause d'un\nproblème dans l'utilisation des caractères de séparation du système de\nfichiers.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0696",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0696"
+    },
+    {
+      "name": "CVE-2011-0698",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0698"
+    },
+    {
+      "name": "CVE-2011-0697",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0697"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-2163-1 du 14 février 2011 :",
+      "url": "http://www.debian.org/security/2011/dsa-2163"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-086",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-02-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin Debian et des références CVE.",
+      "revision_date": "2011-02-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été corrigées dans Django. Celles-ci\npermettent de contourner la politique de sécurité, de réaliser une\ninjection de code indirecte à distance et porter atteinte à la\nconfidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans Django",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Django du 8 février 2011",
+      "url": "http://www.djangoproject.com/weblog/2011/feb/08/security/"
+    }
+  ]
+}

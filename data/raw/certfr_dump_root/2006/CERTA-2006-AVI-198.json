@@ -1,0 +1,88 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "RealVNC Personal Edition, pour la version 4.2.2 et celles antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealVNC Free Edition, pour la version 4.1.1 et celles antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealVNC Enterprise Edition, pour la version 4.2.2 et celles antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nRealVNC est un logiciel de gestion de machines à distance (VNC, pour\nVirutal Network Computing). Il permet à un serveur d'interagir avec ses\nclients afin de les administrer. Une vulnérabilité a été identifiée dans\nla manière dont les mots de passe sont gérés lors de la phase\nd'authentification. Un utilisateur malveillant peut envoyer une requête\nparticulière, tirant bénéfice de cette vulnérabilité, pour contourner la\nphase d'authentification et accéder à la machine distante. Il peut alors\ny effectuer toutes les tâches d'administration offertes par RealVNC.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD du 18 mai 2006 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-vnc.html"
+    },
+    {
+      "title": "Bulletin de mise à jour de l'éditeur RealVNC :",
+      "url": "http://www.realvnc.com/upgrade.html"
+    },
+    {
+      "title": "Bulletin de sécurité de RealVNC Personal Edition :",
+      "url": "http://www.realvnc.com/products/personal/4.2/release-notes.html"
+    },
+    {
+      "title": "Bulletin de sécurité de RealVNC Free Edition :",
+      "url": "http://www.realvnc.com/products/free/4.1/release-notes.html"
+    },
+    {
+      "title": "Bulletin de sécurité de RealVNC Enterprise Edition :",
+      "url": "http://www.realvnc.com/products/enterprise/4.2/release-notes.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-198",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2006-05-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité identifiée dans plusieurs versions de RealVNC permet à\nun utilisateur malveillant, sans s'authentifier, d'accéder à un système\nvulnérable ainsi qu'aux droits administratifs offerts par RealVNC.\n",
+  "title": "Multiples vulnérabilités de RealVNC",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de l'éditeur",
+      "url": null
+    }
+  ]
+}

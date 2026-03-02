@@ -1,0 +1,110 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Ruby on Rails 3.0.x.",
+      "product": {
+        "name": "Ruby on Rails",
+        "vendor": {
+          "name": "Ruby on Rails",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Ruby on Rails 2.3.x ;",
+      "product": {
+        "name": "Ruby on Rails",
+        "vendor": {
+          "name": "Ruby on Rails",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités présentes dans le produit Ruby on Rails ont\nété corrigées. Ces vulnérabilités permettent notamment :\n\n-   le rendu de vues de données normalement inaccessibles à\n    l'utilisateur ;\n-   l'injection de code dans les requêtes SQL ;\n-   l'injection de code javascript dans les réponses HTML ;\n-   l'envoi de chaînes Unicode malformées dans les réponses HTML.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nNote : une mise à jour pour la version 3.1 RC est également disponible.\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2930",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2930"
+    },
+    {
+      "name": "CVE-2011-2932",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2932"
+    },
+    {
+      "name": "CVE-2011-2929",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2929"
+    },
+    {
+      "name": "CVE-2011-3186",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3186"
+    },
+    {
+      "name": "CVE-2011-2931",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2931"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 2301-1 du 5 septembre 2011    :",
+      "url": "http://www.debian.org/security/2011/dsa-2301"
+    },
+    {
+      "title": "Bulletin de sécurité Fedora FEDORA-2011-11567 du 7    septembre 2011 :",
+      "url": "http://lists.fedoraproject.org/pipemail/package-announce/2011-Septembre/065137.html"
+    },
+    {
+      "title": "Annonce de publication Ruby on Rails 2.3.14 :",
+      "url": "http://weblog.rubyonrails.org/2011/8/16/ann-rails-2-3-14"
+    },
+    {
+      "title": "Secunia Advisory SA45648 :",
+      "url": "http://secunia.com/advisories/45648/"
+    },
+    {
+      "title": "Annonce de publication Ruby on Rails 3.0.10 :",
+      "url": "http://weblog.rubyonrails.org/2011/8/16/ann-rails-3-0-10"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-459",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-08-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE.",
+      "revision_date": "2011-08-23T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins Debian et Fedora.",
+      "revision_date": "2011-09-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout d'une référence CVE.",
+      "revision_date": "2011-09-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans le produit <span\nclass=\"textit\">Ruby on Rails</span> ont été corrigées. Elles permettent\nle contournement de la politique de sécurité, l'injection de code SQL et\nl'injection de code HTML dans une réponse.\n",
+  "title": "Multiples vulnérabilités dans Ruby on Rails",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonces de mises à jour de sécurité de Ruby on Rails du 16 août 2011",
+      "url": null
+    }
+  ]
+}

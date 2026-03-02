@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IPSwitch WS_FTP Server 6.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IPSwitch WS_FTP Logging Server version 7.5.29.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée concernant le démon du serveur de\njournalisation IPSwitch WS_FTP. Ce dernier est activé par défaut et\nreste en écoute sur le port 5151/UDP. Les communications entre IPSwitch\nWS_FTP et le démon se font suivant un protocole dédié. Cependant, le\ndémon ne validerait pas correctement certaines trames associées.\n\nUne personne malveillante pourrait exploiter cette propriété en émettant\ndes paquets spécialement construits à destination du système vulnérable\n, afin de perturber la précédure de journalisation.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3823",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3823"
+    }
+  ],
+  "links": [
+    {
+      "title": "Annonce VDA Labs publiée le 17 juillet 2007 :",
+      "url": "http://www.vdalabs.com/tools/ipswitch.html"
+    },
+    {
+      "title": "Site d'accueil IPSwitch WS_FTP Server :",
+      "url": "http://www.ipswitch/products/ws_ftp-server/index.asp"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-312",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans IPSwitch WS_FTP Logging Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de sécurité de VDA Labs le 17 juillet 2007",
+      "url": null
+    }
+  ]
+}

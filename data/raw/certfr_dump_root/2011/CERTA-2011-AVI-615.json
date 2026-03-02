@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Squid</SPAN> version 3.1 non patchée.</P>",
+  "content": "## Description\n\nUne erreur de segmentation a lieu lors d'une libération mémoire lorsque\nSquid tente de résoudre une requête DNS où un enregistrement de type\nCNAME pointe sur un autre enregistrement de type CNAME qui pointe sur un\nenregistrement de type A vide. Une personne malintentionnée peut envoyer\nune requête spécifique à un proxy Squid, provoquant cette erreur pour\nmener une attaque par déni de service à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-4096",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4096"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-615",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-11-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le proxy <span class=\"textit\">Squid</span> permet\nde mener une attaque par déni de service à distance.\n",
+  "title": "Vulnérabilité dans Squid",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis Bugzilla - Bug 3237",
+      "url": "http://bugs.squid-cache.org/show_bug.cgi?id=3237"
+    }
+  ]
+}

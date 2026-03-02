@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>BestPractical RT (Request Tracker)  2.0.x, 3.6.x, 3.8.x, 4.0.0rcx.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent BestPractical RT :\n\n-   quand l'option CustomFieldValuesSources est activée, un utilisateur\n    malveillant peut réaliser des injections de requêtes illégitime par\n    rebond ;\n-   des injections de requêtes SQL sont possibles ;\n-   l'interface de recherche permet d'obtenir des informations\n    sensibles, comme des mots de passe ;\n-   un utilisateur malveillant peut lire n'importe quel fichier du\n    serveur par le biais d'une requête HTTP spécialement formée ;\n-   plusieurs vulnérabilités (XSS) permettent à un utilisateur\n    malveillant de réaliser de l'injection de code indirecte ;\n-   il est possible de transmettre les informations de connexion des\n    utilisateurs sur un serveur externe, de manière illégitime.\n\n## Solution\n\nLes versions 3.6.11, 3.8.10 et 4.0.0rc8 de BestPractical RT corrigent\nces problèmes.\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1690",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1690"
+    },
+    {
+      "name": "CVE-2011-1685",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1685"
+    },
+    {
+      "name": "CVE-2011-1686",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1686"
+    },
+    {
+      "name": "CVE-2011-1687",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1687"
+    },
+    {
+      "name": "CVE-2011-1689",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1689"
+    },
+    {
+      "name": "CVE-2011-1688",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1688"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-258",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-04-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent BestPractical RT permettant des\ninjections de code et la lecture sans droit de données sensibles.\n",
+  "title": "Vulnérabilités dans BestPractical RT",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité BestPractical du 14 avril 2011",
+      "url": "http://lists.bestpractical.com/pipermail/rt-announce/2011-April/000189.html"
+    }
+  ]
+}

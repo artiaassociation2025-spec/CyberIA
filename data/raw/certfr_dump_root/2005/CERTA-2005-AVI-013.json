@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "poppassd_ceti 1.0 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "poppassd_pam 1.0 et vesions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\npoppassd_pam est une bibliothèque utilisée pour modifier les mots de\npasses des serveurs POP.\n\nUne vulnérabilité découverte dans la bibliothèque poppassd_pam permet à\nutilisateur distant mal intentionné de changer le mot de passe de\nn'importe quel utilisateur du système vulnérable, y compris le mot de\npasse du compte root (administrateur). Cette vulnérabilité est causée\npar une mauvaise vérification de l'ancien mot de passe.\n\n## Solution\n\nSe réferer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200501-22 du 11 janvier    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200501-22.xml"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-013",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-01-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de poppassd_pam",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA-200501-22 du 11 janvier 2005",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Oracle 8i.",
+      "product": {
+        "name": "Database Server",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Oracle 9i Release 1 et 2 ;",
+      "product": {
+        "name": "Database Server",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire a été découverte dans\nl'exécutable EXTPROC d'Oracle Database. Un utilisateur authentifié à la\nbase et possédant les privilèges `CREATE LIBRARY` ou\n`CREATE ANY LIBRARY` peut exploiter cette vulnérabilité afin d'exécuter\ndu code arbitraire sur le serveur.\n\n## Solution\n\nAppliquer le correctif fourni par Oracle suivant la version affectée\n(cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-122",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans l'exécutable EXTPROC d'Oracle\nDatabase.\n",
+  "title": "Vulnérabilité dans EXTPROC d'Oracle Database Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Alerte de sécurité #57 d'Oracle",
+      "url": "http://otn.oracle.com/deploy/security/pdf/2003alert57.pdf"
+    }
+  ]
+}

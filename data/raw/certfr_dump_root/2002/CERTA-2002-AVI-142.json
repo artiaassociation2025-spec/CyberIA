@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Versions de <TT>squid</TT> 2.4.6 et  antérieures.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités présentes dans la gestion du protocole gopher\net une vulnérabilité dans l'analyse grammaticale (parsing) des\nrépertoires ftp permettent à un utilisateur mal intentionné d'exécuter\ndu code arbitraire à distance avec les privilèges de l'utilisateur\nsquid.\n\nUne vulnérabilité présente dans la recherche des adresses IP dans les\nconnexions ftp et une vulnérabilité présente sur les informations\nd'authentification des utilisateurs permettent à un utilisateur mal\nintentionné de voler les informations de sessions des utilisateurs\nauthentifiés.\n\nUne autre vulnérabilité de type « débordement de mémoire » présente dans\nl'authentification MSNT sur les plateformes Windows/NT permet à un\nutilisateur mal intentionné d'exécuter du code arbitraire avec les\nprivilèges de l'utilisateur squid.\n\n## Solution\n\nInstaller le correctif ou la nouvelle version 2.4.7 de squid\ncorrespondant à votre système (se référer à la section documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité SQUID-2002:3 de squid :",
+      "url": "http://www.squid-cache.org/Advisories/SQUID-2002_3.txt"
+    },
+    {
+      "title": "Avis de sécurité MDKSA-2002:044 de mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-044.php"
+    },
+    {
+      "title": "Version 2.4.STABLE7 :",
+      "url": "http://www.squid-cache.org/Versions/v2/2.4/diff-2.4.STABLE7-src.tar.gz"
+    },
+    {
+      "title": "Avis de sécurité RHSA-2002:051-16 de redhat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-051.html"
+    },
+    {
+      "title": "Avis de sécurité SuSE-SA:2002:025 de suze :",
+      "url": "http://www.suse.com/de/support/security/2002_025_squid_txt.html"
+    },
+    {
+      "title": "Mise à jour de la version 2.4.6 :",
+      "url": "http://www.squid-cache.org/Versions/v2/2.4/diff-2.4.STABLE6-2.4.STABLE7.gz"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-142",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2002-07-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins redhat, mandrake et suze.",
+      "revision_date": "2002-07-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans le proxy squid permettent,\nsous certaines conditions, à un utilisateur mal intentionné d'exécuter\ndu code arbitraire à distance, de réaliser un déni de service ou encore\nde voler des informations sur la machine cible.\n",
+  "title": "Vulnérabilité sur Squid",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité SQUID-2002:3 de Squid",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de  <TT>netfilter</TT> inclus dans les noyaux Linux 2.6.</p>",
+  "content": "## Description\n\nnetfilter est le système de manipulation de paquets (filtrage,\ntraduction d'adresses...) pour les noyaux Linux de la série 2.4 et\n2.6.  \nUne vulnérabilité dans netfilter pour les noyaux Linux de la série 2.6\npermet à un utilisateur mal intentionné de réaliser un déni de service\nsur la machine victime (consommation de toute la CPU).\n\n## Contournement provisoire\n\nPour les noyaux Linux 2.6, ne pas utiliser l'option de filtrage TCP de\nnetfilter -tcp-option.\n\n## Solution\n\nSe référer à la section Documentation pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200407-12 du 14 juillet    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200407-12.xml"
+    },
+    {
+      "title": "Site Internet de netfilter :",
+      "url": "http://www.netfilter.org"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-224",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2004-07-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de netfilter dans les noyaux Linux 2.6",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité netfilter du 30 juin 2004",
+      "url": "http://www.netfilter.org/security/2004-06-30-2.6-tcpoption.html"
+    }
+  ]
+}

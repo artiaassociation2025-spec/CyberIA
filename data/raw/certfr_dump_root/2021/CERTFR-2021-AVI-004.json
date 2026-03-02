@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Bibliothèque cryptographique Bouncy Castle versions 1.65 et 1.66",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2020-28052",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-28052"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2021-AVI-004",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-01-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans la bibliothèque\ncryptographique Bouncy Castle. Elle permet à un attaquant de provoquer\nun contournement de la politique de sécurité. Une erreur de\nprogrammation, introduite dans les versions 1.65 et 1.66 de la\nbibliothèque, permet de tromper la méthode de vérification d'un mot de\npasse *OpenBSDBCrypt.checkPassword()* et faire valider un mot de passe\ndifférent du mot de passe légitime en quelques tentatives.\n",
+  "title": "Vulnérabilité dans Bouncy Castle",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Bouncy Castle du 01 novembre 2020",
+      "url": "https://www.bouncycastle.org/releasenotes.html"
+    }
+  ]
+}

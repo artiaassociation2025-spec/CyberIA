@@ -1,0 +1,117 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système d'exploitation utilisant un noyau Linux.</P>",
+  "content": "## Description\n\n## 4.1 Vulnérabilité du système de fichiers Samba\n\nRéférences CVE CAN-2004-0883 et CAN-2004-0949.\n\nIl est possible, pour un utilisateur mal intentionné contrôlant un\nserveur Samba, de provoquer un déni de service sur la station cliente\nsous Linux. Il n'est pas établit que l'exécution de code arbitraire à\ndistance ou localement soit impossible.\n\n## 4.2 Déni de service local sur les «sockets» Unix\n\nRéférence CVE-CAN-2004-1016.\n\nUn utilisateur local mal intentionné peut transmettre des données\nvolontairement mal formées qui seront mal interprétées et bloqueront le\nnoyau.\n\n## 4.3 Atteinte à la confidentialité des variables d'environnement\n\nRéférence CVE CAN-2004-1058.\n\nLes variables d'environnement peuvent être utilisées pour passer des\ninformations sensibles à un processus. C'est pourquoi leur consultation\nà travers le pseudo-système de fichier proc est restreinte. Cependant\nleur contenu est parfois visible dans la ligne de commande donc la\nlecture est plus permissive.\n\n## 4.4 Exécution locale de code arbitraire avec les «sockets» Unix\n\nRéférences CVE-CAN-2004-1068 et CVE-CAN-2004-1069.\n\nDes conditions de concurrence peuvent être utilisées pour :\n\n-   modifier une portion arbitraire de la mémoire du noyau et ainsi\n    élever les privilèges d'un utilisateur local (CVE-CAN-2004-1068) ;\n-   provoquer un déni de service (CVE-CAN-2004-1069).\n\n## 4.5 Déni de service local avec un exécutable «a.out»\n\nRéférence CVE-CAN-2004-1074.\n\n«a.out» est l'ancien format des exécutables sous Linux. Il a depuis été\nremplacé par le format ELF. Cependant la compatibilité avec ce format\nest souvent incluse dans le noyau. L'exécution d'un binaire de ce type,\nvolontairement mal formé, peut provoquer un déni de service du noyau.\n\n## 4.6 Mauvaise gestion du protocole IGMP\n\nRéférences CVE-CAN-2004-1137.\n\nIGMP («Internet Group Management») est un protocole IP utilisé pour\noffrir des communications «multicast». Il est en particulier utilisé par\ndes applications de videoconférence ou de gestion dynamique du routage.\n\nIl est possible pour un utilisateur local mal intentionné d'exécuter un\nprogramme qui provoquera un déni de service voire une elévation de\nprivilèges.\n\nPar ailleurs, si une application écoute sur une «socket multicast», il\nest possible, sous certaines conditions, de bloquer l'exécution du\nnoyau.\n\n## 4.7 Débordements de tampon dans le code des AMD 64 bits\n\nRéférence CVE-CAN-2004-1151.\n\n## 4.8 Déni de service local dans la gestion des options IP et des terminaux virtuels\n\nDeux fonctions du noyau gérant mal les débordements d'entier ont été\nidentifiées. Elles peuvent être détournées pour provoquer un déni de\nservice du noyau par un utilisateur local exécutant du code malicieux.\n\n## 4.9 Débordement de mémoire dans la gestion des appels systèmes 32 bits sur plates-formes x86-64\n\nRéférence CVE-CAN-2004-1144.\n\nLa vulnérabilité est présente dans le noyau 2.4 uniquement et pour les\nplates-formes x86-64.\n\nLa version 2.4.29-pre3 corrige cette vulnérabilité.\n\n## 4.10 Déni de service local avec un exécutable «elf» pour les noyaux 2.4.x\n\nRéférence CVE-CAN-2004-1234.\n\n«elf» est le format des exécutables sous Linux. Au moyen d'un fichier\nhabilement constitué, un utilisateur mal intentionné peut provoquer un\ndéni de service par arrêt brutal du système.\n\nLa version 2.4.28-rc4 corrige cette vulnérabilité.\n\n## Solution\n\nLes noyaux «vanilla» jusqu'aux versions 2.6.9 et 2.4.28 sont vulnérables\nà au moins l'une des failles décrites ci-dessus ; utiliser une version\nen développement ou se référer aux bulletins de sécurité des éditeurs\npour l'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Secunia SA13493 du 17 décembre 2004 :",
+      "url": "http://secunia.com/advisories/13493/"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2004:042 du 01 décembre    2004 (CAN-2004-0883, CAN-2004-949 et CAN-2004-1074) :",
+      "url": "http://www.novell.com/linux/security/advisories/2004_42_kernel.html"
+    },
+    {
+      "title": "Bulletin de sécurité Secunia SA13469 du 15 décembre 2004 :",
+      "url": "http://secunia.com/advisories/13469/"
+    },
+    {
+      "title": "Bulletin de sécurité Secunia SA13232 du 18 novembre 2004 :",
+      "url": "http://secunia.com/advisories/13232/"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:549 du 02 décembre    2004 (CAN-2004-0883, CAN-2004-949 et CAN-2004-1068) :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-549.html"
+    },
+    {
+      "title": "Bulletin de sécurité Isec Security Research du 14 décembre    2004 :",
+      "url": "http://isec.pl/vulnerabilities/isec-0018-igmp.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Avaya ASA-2005-006 (CAN-2004-0883,    CAN-2004-0949, CAN-2004-1016, CAN-2004-1017, CAN-2004-1068,    CAN-2004-1137, CAN-2004-1234) :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2005-006_RHSA-2004-549RHSA-2004-505RHSA-2004-689.pdf"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:043 du 18 janvier    2005 (CAN-2004-1016) :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-043.html"
+    },
+    {
+      "title": "Message \"[PATCH] [CAN-2004-1144] Fix int 0x80 hole in 2.4    x86-64 linux kernels\" :",
+      "url": "http://www.ussg.iu.edu/hypermail/linux/kernel/0412.2/1364.html"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2004:044 du 21 décembre    2004 (CAN-2004-1016, CAN-2004-1068, CAN-2004-1137 et    CAN-2004-1151) :",
+      "url": "http://www.novell.com/linux/security/advisories/2004_44_kernel.html"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2004:046 du 22 décembre    2004 (CAN-2004-1144) :",
+      "url": "http://www.novell.com/linux/security/advisories/2004_46_kernel.html"
+    },
+    {
+      "title": "Bulletin de sécurité Isec Security Research du 14 décembre    2004 :",
+      "url": "http://isec.pl/vulnerabilities/isec-0019-scm.txt"
+    },
+    {
+      "title": "Correctifs inclus dans la version 2.4.28-rc4 du noyau :",
+      "url": "http://www.kernel.org/pub/linux/kernel/v2.4/Changelog-2.4.28"
+    },
+    {
+      "title": "Bulletin de sécurité eMatters du 17 novembre 2004 :",
+      "url": "http://security.e-matters.de/advisories/142004.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:689 du 23 décembre    2004 : (CAN-2004-0565, CAN-2004-1016, CAN-2004-1017,    CAN-2004-1037, CAN-2004-1144 et CAN-2004-1234) :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-689.html"
+    },
+    {
+      "title": "Bulletin de sécurité Secunia SA13410 du 09 décembre 2004 :",
+      "url": "http://secunia.com/advisories/13410/"
+    },
+    {
+      "title": "Bulletin de sécurité #72 du Georgi Guninski :",
+      "url": "http://www.guninski.com/where_do_you_want_billg_to_go_today_2.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-409",
+  "revisions": [
+    {
+      "description": "ajout référence au bulletin de sécurité RedHat RHSA-2004:689. Ajout référence CVE CAN-2004-1234.",
+      "revision_date": "2004-01-04T00:00:00.000000"
+    },
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-12-20T00:00:00.000000"
+    },
+    {
+      "description": "deuxième mise-à-jour : ajout référence CVE CAN-2004-1144 et bulletin de sécurité SUSE associé.",
+      "revision_date": "2004-12-23T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité Avaya ASA-2005-006.",
+      "revision_date": "2005-01-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité RedHat RHSA-2005:043.",
+      "revision_date": "2005-01-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités, décrites ci-dessous, affectent les noyaux\nLinux des séries 2.4 et/ou 2.6.\n",
+  "title": "Nombreuses failles du noyau Linux",
+  "vendor_advisories": []
+}

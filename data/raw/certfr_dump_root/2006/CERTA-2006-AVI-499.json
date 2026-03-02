@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows XP Service Pack 2.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le service Station de Travail\n(ou Workstation Service) de Microsoft Windows. Ce service permet de\ncréer et maintenir des connexions des clients Windows vers des serveurs\ndistants. Un tampon ne serait pas correctement vérifié. L'exploitation\nde cette vulnérabilité pourrait provoquer un débordement de mémoire, et\npermettrait, à une personne maveillante distante, de prendre le contrôle\ncomplet du système vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité MS06-070 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4691",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4691"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2006-AVI-499",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans le service Station de Travail\n(ou <span class=\"textit\">Workstation Service</span>) de Microsoft\nWindows. Une personne malveillante, qui exploiterait celle-ci, pourrait,\nsous certaines conditions, exécuter des commandes arbitraires à distance\nsur le système vulnérable.\n",
+  "title": "Vulnérabilité du service Station de Travail de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-070 du 14 novembre 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-070.mspx"
+    }
+  ]
+}

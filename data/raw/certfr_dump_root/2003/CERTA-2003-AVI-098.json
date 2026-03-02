@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "HP Tru64 UNIX versions V4.0f, V4.0g, V5.1, V5.1A, V5.1B.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP-UX versions 10.20, 11.0, 11.04, 11.11, 11.22.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCDE (Common Desktop Environment) est une interface graphique utilisée\nnotamment sur les plate-formes HP-UX et HP Tru64 UNIX.\n\nSelon HP plusieurs composants de CDE sont vulnérables :\n\n-   libDtHelp\n-   libDtSvc\n-   dtprintinfo\n-   dtsession\n-   dtterm\n-   dtappgather\n\nL'exploitation de vulnérabilités présentes dans ces composants permet à\nun utilisateur mal intentionné de réaliser une élévation de privilèges.\n\n## Solution\n\nPour l'obtention des correctifs consulter les bulletins de sécurité de\nl'éditeur (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HPSBUX0305-263 \"SSRT2373, SSRT2374,    SSRT3484 SSRT2405 SSRT2415 Potential Security Vulnerabilities    in CDE\" de Hewlett-Packard",
+      "url": "http://itrc.hp.com"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-098",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-06-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités de CDE sur les plate-formes HP Tru64 UNIX et HP-UX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Vulnerabilities\" de Hewlett-Packard",
+      "url": "http://welcome.hp.com/country/us/eng/support.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SRB00081W \"HP Tru64 UNIX, HP-UX Potential CDE Security",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité HPSBUX0305-263 \"SSRT2373, SSRT2374, SSRT3484 SSRT2405",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "SSRT2415 Potential Security Vulnerabilities in CDE\" de Hewlett-Packard",
+      "url": null
+    }
+  ]
+}

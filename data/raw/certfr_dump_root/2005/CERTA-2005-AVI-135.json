@@ -1,0 +1,135 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2003 Server (x86 et Itanium) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 3 et Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 98, 98 Second Edition (SE) et Millenium Edition (ME) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 1 et Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les produits Cisco suivants non basés sur Cisco IOS : Cisco CRS-1, Cisco PIX Security Appliance, Cisco IP Phones, Cisco Catalyst 6608 Voice Gateway et Cisco 6000 FXS Analog Interface Module, Cisco 11000 et 11500 Content Service Switches, Global Site Selector, Cisco ONS products, Cisco MDS 9000 Series Multilayer Switches, VPN 5000 concentrator ;",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP 64-Bit Edition Version 2003 (Itanium) et Service Pack 1 (Itanium) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Solaris 7, 8, 9 et 10 pour les plates-formes x86 et SPARC.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "tous les produits Cisco basés sur Cisco IOS (toutes versions) avec PMTUD activé ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe protocole ICMP (Internet Control Message Protocol) est un protocole\nqui permet de gérer des informations de contrôle relatives aux machines\nconnectées.  \nTrois types d'attaques utilisant des paquets ICMP malicieusement\nconstruits permettent à un utilisateur mal intentionné de réaliser des\ndénis de service sur la plate-forme vulnérable : arrêt à distance d'une\nconnexion TCP, diminution à distance des performances d'une connexion\nTCP ou consommation excessive des ressouces processeur et mémoire.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité NISCC 532967/NISCC/ICMP du 12 avril    2005 :",
+      "url": "http://www.niscc.gov.uk/niscc/docs/al-20050412-00308.html"
+    },
+    {
+      "title": "Bulletin de sécurité de l'US-CERT VU#222750 :",
+      "url": "http://www.kb.cert.org/vuls/id/222750"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco #64520 du 12 avril 2005 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20050412-icmp.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Sun #57746 du 12 avril 2005 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-57746-1"
+    },
+    {
+      "title": "Papier expliquant les attaques ICMP sur le site Internet de    l'IETF :",
+      "url": "http://www.ietf.org/internet-drafts/draft-gont-tcpm-icmp-attacks-03.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS05-019 du 12 avril 2005 :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms05-019.mspx"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-135",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-04-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans le traitement des paquets ICMP permettent\nà un utilisateur mal intentionné de réaliser un déni de service sur la\nplate-forme vulnérable.\n",
+  "title": "Vulnérabilités dans le traitement des paquets ICMP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité NISCC du 12 avril 2005",
+      "url": null
+    }
+  ]
+}

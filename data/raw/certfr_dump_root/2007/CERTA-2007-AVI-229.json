@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>mod_jk</TT>, versions 1.2.22 et  antérieures.  <P>Ce composant est livré avec <SPAN class=\n  \"textit\">Tomcat</SPAN>, versions :</P>  <UL>    <LI>4.0.1 à 4.0.6 ;</LI>    <LI>5.0.0 à 5.0.30 ;</LI>    <LI>5.5.0 à 5.5.23.</LI>  </UL>",
+  "content": "## Description\n\nUne mauvaise gestion du codage des deux points (« .. ») est exploitable\npar un utilisateur malveillant pour utiliser des ressources auxquelles\nil ne devrait pas accéder.\n\n## Solution\n\nLa version 1.2.23 de mod_jk corrige le problème. Se référer au bulletin\nde sécurité de l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n\nLe correctif peut induire des incompatibilités avec le composant\nmod_rewrite.\n",
+  "cves": [
+    {
+      "name": "CVE-2007-1860",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1860"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de version Tomcat du 18 mai 2007 :",
+      "url": "http://tomcat.apache.org/connectors-doc/news/20070301.html#20070518.1"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-229",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-05-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité de mod_jk permet à un utilisateur malveillant de\ncontourner la politique de sécurité.\n",
+  "title": "Vulnérabilité dans Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de version de Tomcat du 18 mai 2007",
+      "url": null
+    }
+  ]
+}

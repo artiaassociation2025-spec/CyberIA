@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "J2SE 5.0 ayant une mise à jour antérieure à Update 12 ;",
+      "product": {
+        "name": "runtime",
+        "vendor": {
+          "name": "Symfony",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "JDK et JRE 5.0 ayant une mise à jour antérieure à Update 10 ;",
+      "product": {
+        "name": "runtime",
+        "vendor": {
+          "name": "Symfony",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SDK et JRE antérieurs à 1.4.2_15 ;",
+      "product": {
+        "name": "runtime",
+        "vendor": {
+          "name": "Symfony",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "J2SE antérieur à la version actuelle 1.4.2.",
+      "product": {
+        "name": "runtime",
+        "vendor": {
+          "name": "Symfony",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans l'environnement Java JRE (Java\nRuntime Environment). Par exemple, une personne malveillante pourrait,\npar le biais d'une applet spécialement construite, exécuter du code\narbitraire sur la machine de l'utilisateur chargeant ce code. L'applet\néleverait ses privilèges à ceux de l'utilisateur connecté, pouvant ainsi\nécrire et lire des fichiers.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Sun Java distribuant les mises à jour :",
+      "url": "http://java.sun.com/"
+    },
+    {
+      "title": "Bulletin de sécurité Sun #103024 du 15 août 2007 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-103024-1"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-366",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-08-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans l'environnement Java JRE (<span\nclass=\"textit\">Java Runtime Environment</span>). L'exploitation de cette\ndernière permettrait à une personne malveillante, par le biais d'une\napplet, d'exécuter du code arbitraire sur la machine vulnérable, avec\nles droits de l'utilisateur.\n",
+  "title": "Vulnérabilité de Sun Java Runtime Environment (JRE)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Document Sun 103024 du 15 août 2007",
+      "url": null
+    }
+  ]
+}

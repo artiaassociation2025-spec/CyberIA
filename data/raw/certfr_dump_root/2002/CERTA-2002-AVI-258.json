@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Sybase Adaptive Server versions 12.0 et  12.5.</p>",
+  "content": "## Description\n\nSybase Adaptive Server est un gestionnaire de bases de données.\nPlusieurs débordements de pile sont présents sur les fonctions et les\nprocédures stockées étendues (ESP).\n\nLa première vulnérabilité concerne la procédure stockée étendue\nxp_freedll, chargée de libérer une bibliothèque DLL chargée par une\nautre procèdure. Le nom de la bibliothèque à libérer est utilisé comme\nparamètre d'entrée dans la procédure xp_freedll.\n\nLa seconde vulnérabilité concerne la fonction DBCC CHECK_VERIFY. Cette\nfonction est utilisée pour verifier le résultat de la fonction DBCC\nCHECKSTORAGE chargée de rapporter les erreurs constatées durant le\ncontrôle des bases de données. Le nom de la base de données à vérifier\nest utilisé comme paramètre d'entrée de la fonction DBCC CHECK_VERIFY.\n\nLa dernière vulnérabilité concerne la fonction DROP DATABASE qui permet\nde supprimer une base de données sur le serveur. Le nom de la base de\ndonnées à supprimer est utilisé comme paramètre d'entrée dans la\nfonction DROP DATABASE.\n\nL'absence de vérification de la longueur des noms utilisés comme\nparamètre pour les fonctions et la procédure ci-dessus permet à un\nutilisateur mal intentionné d'exécuter un code arbitraire.\n\nCes trois vulnérabilités ne sont exploitables que localement.\n\n## Solution\n\nAppliquer les correctifs diponibles sur le site de l'éditeur (voir\nsection documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité d'Application Security Inc. sur DROP    DATABASE",
+      "url": "http://www.appsecinc.com/resources/alerts/sybase/02-0002.html"
+    },
+    {
+      "title": "Avis de sécurité d'Application Security Inc. sur DBCC    CHECK_VERIFY",
+      "url": "http://www.appsecinc.com/resources/alerts/sybase/02-0001.html"
+    },
+    {
+      "title": "Avis de sécurité d'Application Security Inc. sur xp_freedll",
+      "url": "http://www.appsecinc.com/resources/alerts/sybase/02-0003.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-258",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs débordements de pile présents sur Sybase Adaptive Server\npermettent à un utilisateur mal intentionné d'exécuter du code\narbitraire ou de réaliser un déni de service à distance.\n",
+  "title": "Vulnérabilités sur Sybase Adaptive Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste de diffusion Bugtraq",
+      "url": null
+    }
+  ]
+}

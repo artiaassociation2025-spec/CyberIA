@@ -1,0 +1,33 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Adobe Acrobat Reader version 5.1 pour les systèmes Microsoft  Windows.</P>",
+  "content": "## Description\n\nLe lecteur Adobe Acrobat Reader peut être utilisé pour visualiser des\ndocuments au format PDF. Il peut être également utilisé avec les\ndocuments au format XFDF (XML Forms Data Format).  \n\nLorsqu'un document au format XFDF est traité par Acrobat Reader, la\nfonction sprintf() est appelée de manière non sûre, et présente une\nvulnérabilité de type débordement de mémoire.  \n\nUn utilisateur mal intentionné peut exploiter cette vulnérabilité à\nl'aide d'un document au format XFDF malicieusement construit pour\nexécuter du code arbitraire sur la machine victime.\n\n## Solution\n\nLa version 6.0 d'Adobe Acrobat Reader corrige cette vulnérabilité.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-065",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-04T00:00:00.000000"
+    },
+    {
+      "description": "première révision : seuls les systèmes Windows sont vulnérables.",
+      "revision_date": "2004-03-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité du produit Adobe Acrobat Reader permet à un\nutilisateur mal intentionné d'exécuter du code arbitraire par le biais\nd'un fichier <span class=\"textit\">.xfdf</span>.\n",
+  "title": "Vulnérabilité d'Adobe Acrobat Reader",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de NGSSoftware",
+      "url": "http://www.nextgenss.com/advisories/adobexfdf.txt"
+    }
+  ]
+}

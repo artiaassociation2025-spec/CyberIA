@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Les versions de Policy Daemon antérieures à 1.81.</LI>  </UL>  <P>Sous Debian, le module postfix-policyd a été corrigé dans la  version 1.80-2.1etch1 (distribution <TT>Etch</TT>) et dans la  version 1.80-2.2 (dans la distribution instable  <TT>Sid</TT>).</P>",
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le module anti-pourriel pour\npostfix, postfix-policyd, ou Policy Daemon. Il ne vérifierait pas\ncorrectement la longueur des commandes SMTP entrantes au niveau de la\nfonction w_read() de socket.c, ce qui permettrait à une personne\nmalveillante d'exploiter par ce biais du code arbitraire sur le système.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3791",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3791"
+    }
+  ],
+  "links": [
+    {
+      "title": "Annonce de la version 1.81 de Policyd :",
+      "url": "http://sourceforge.net/project/shownotes.php?release_id=522366"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1361 du 29 août 2007 :",
+      "url": "http://www.debian.org/security/2007/dsa-1361"
+    },
+    {
+      "title": "Projet Policyd (Policy Daemon) pour Postfix :",
+      "url": "http://www.policyd.org/changelog.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-387",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-09-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans le module anti-pourriel pour\npostfix, postfix-policyd, ou Policy Daemon. Il ne vérifierait pas\ncorrectement les commandes SMTP entrantes, ce qui permettrait à une\npersonne malveillante d'exploiter par ce biais du code arbitraire sur le\nsystème.\n",
+  "title": "Vulnérabilité de Policyd pour Postfix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise à jour Debian DSA-1361-1 du 29 août 2007",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Note de mise à jour du projet Policy Daemon",
+      "url": null
+    }
+  ]
+}

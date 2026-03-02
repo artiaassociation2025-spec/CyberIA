@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les plateformes et toutes les versions pour la  vulnérabilité sur le débordement de variable dans le tas.</P>  <P>Le problème affecte les versions de SKYPE pour Windows dont  les versions sont comprises entre 1.1.*.0 et 1.4.*.83 incluses  pour la vulnérabilité sur les VCARDs et les URIs.</P>",
+  "content": "## Description\n\nSKYPE est un logiciel de téléphonie sur IP. Deux vulnérabilités\naffectent ce logiciel.\n\nUn première vulnérabilité est liée à la gestion des URI et de\nl'importation des VCARDs. Un utilisateur mal intentionné peut construire\ndes URLS astucieusement formées dans le but de produire un débordement\nde variable pouvant conduire à l'exécution de code arbitraire.\n\nUne seconde vulnérabilité qui met en œuvre un débordement de variable\ndans le tas permet de produire un arrêt brutal du logiciel (déni de\nservice). Cette vulnérabilité est accessible à un utilisateur distant\nqui peut envoyer un flux réseau astucieusement construit.\n\n## Contournement provisoire\n\nPar nature, ce type d'application se prète au mal au filtrage sur des\npare-feus (voir note CERTA-2001-INF-003).\n\n## Solution\n\nAppliquer les correctifs du vendeur.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "note d'information du CERTA :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2001-INF-003"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-423",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-10-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution à distance de commandes arbitraires"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités Skype",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis SKYPE-SB/2005-003",
+      "url": "http://www.skype.com/security/skype-sb-2005-03.html"
+    },
+    {
+      "published_at": null,
+      "title": "Avis SKYPE-SB/2005-002",
+      "url": "http://www.skype.com/security/skype-sb-2005-03.html"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Novell GroupWise WebAccess 6.0 utilisant un serveur web apache 1.3.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Novell",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Novell GroupWise WebAccess 6.5 utilisant un serveur web apache 1.3.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Novell",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn problème de configuration dans le fichier GWAPACHE.CONF, utilisé par\nle serveur web Apache 1.3.x en environnement NetWare, permet à un\nutilisateur mal intentionné d'obtenir un accès privilégié sur un serveur\nNovell GroupWise WebAccess.\n\nLes plate-formes utilisant un autre serveur web ou un serveur web apache\ndifférent d'apache 1.3.x pour NetWare ne sont pas affectés par ce\nproblème.\n\n## Contournement provisoire\n\nAjouter les options suivantes à la fin de la section \\<Directory\n\"/\"\\>...\\</Directory\\> :  \nOrder deny,allow  \ndeny from all  \n\n## Solution\n\nMettre à jour Novell GroupWise 6.5 SP2 à l'aide du fichier FWA652E.exe\ndisponible sur le site de Novell (cf. section documentation) ou\nappliquer le contournement provisoire pour la version 6.0 de Novell\nGroupWise.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Support Novell :",
+      "url": "http://support.novell.com/filefinder"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-089",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité liée à un problème de configuration du serveur web\napache 1.3.x peut permettre à un utilisateur mal intentionné d'obtenir\nun accès privilegié sur un serveur vulnérable.\n",
+  "title": "Vulnérabilité sur Novell GroupWise WebAccess",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Novell 10091330",
+      "url": "http://support.novell.com/cgi-bin/search/searchtid.cgi?/10091330.htm"
+    }
+  ]
+}

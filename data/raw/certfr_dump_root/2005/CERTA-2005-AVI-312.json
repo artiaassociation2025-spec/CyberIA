@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "HP Tru64 UNIX 5.1B-2/PK4.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP Tru64 UNIX 5.1B-3;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur dans la mise en œuvre de l'ESP (Encapsulating Security\nPayload) en mode tunnel de IPsec sur les systèmes HP Tru64 permet à un\nutilisateur distant mal intentionné de porter atteinte à la\nconfidentialité des données en modifiant malicieusement le paquet cible\nafin d'obtenir un message d'erreur ICMP (Internet Control Message\nProtocol) contenant une partie du contenu du paquet initial en clair.\n\nRemarque: L'IPsec en mode tunnel ESP doit être configuré sans protection\nd'intégrité pour que l'utilisation de cette vulnérabilité soit\nexploitable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HP HP SSRT5957 du 9 août 2005 :",
+      "url": "http://itrc.hp.com/service/cki/docDisplay.do?docId=HPSBTU01217"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-312",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-08-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans l'implémentation de IPsec sur HP Tru64 permet à\nun utilisateur distant mal intentionné de porter atteinte à la\nconfidentialité de données.\n",
+  "title": "Vulnérabilité dans l'implémentation de IPsec sur HP Tru64",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité HP SSRT5957 du 9 août 2005",
+      "url": null
+    }
+  ]
+}

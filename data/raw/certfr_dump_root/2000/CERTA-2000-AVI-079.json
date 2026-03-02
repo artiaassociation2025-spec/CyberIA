@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>La vulnérabilité concerne des clients Netscape de version  inférieure ou égale à 4.75, elle est connue sous FreeBSD et  RedHat Linux mais peut exister sous d'autres systèmes (toute  distribution Linux en particulier).</P>",
+  "content": "## Description\n\nUne vulnérabilité de l'analyseur syntaxique HTML de Netscape versions\n4.75 et inférieures, permet à un utilisateur mal intentionné d'arrêter\nle client qui visiterait son site, voire même, de lui faire exécuter du\ncode arbitraire, en amenant sa victime à visiter une page web habilement\nconçue.\n\n## Solution\n\n-   Pour Red Hat Linux, installer la version 4.76 de Netscape.\n    -   6.0 sur i386:\n\n            ftp://updates.redhat.com/6.0/i386/netscape-common-4.76-0.6.2.i386.rpm\n\n            ftp://updates.redhat.com/6.0/i386/netscape-communicator-4.76-0.6.2.i386.rpm\n\n            ftp://updates.redhat.com/6.0/i386/netscape-navigator-4.76-0.6.2.i386.rpm\n\n        Sources:\n\n            ftp://updates.redhat.com/6.0/SRPMS/netscape-4.76-0.6.2.src.rpm\n\n    -   6.1 sur i386:\n\n            ftp://updates.redhat.com/6.1/i386/netscape-common-4.76-0.6.2.i386.rpm\n\n            ftp://updates.redhat.com/6.1/i386/netscape-communicator-4.76-0.6.2.i386.rpm\n\n            ftp://updates.redhat.com/6.1/i386/netscape-navigator-4.76-0.6.2.i386.rpm\n\n        Sources:\n\n            ftp://updates.redhat.com/6.1/SRPMS/netscape-4.76-0.6.2.src.rpm\n\n    -   6.2 pour alpha :\n\n            ftp://updates.redhat.com/6.2/alpha/netscape-common-4.76-0.6.2.alpha.rpm\n\n            ftp://updates.redhat.com/6.2/alpha/netscape-communicator-4.76-0.6.2.alpha.rpm\n\n            ftp://updates.redhat.com/6.2/alpha/netscape-navigator-4.76-0.6.2.alpha.rpm\n\n    -   6.2 pour i386:\n\n            ftp://updates.redhat.com/6.2/i386/netscape-common-4.76-0.6.2.i386.rpm\n\n            ftp://updates.redhat.com/6.2/i386/netscape-communicator-4.76-0.6.2.i386.rpm\n\n            ftp://updates.redhat.com/6.2/i386/netscape-navigator-4.76-0.6.2.i386.rpm\n\n        Sources:\n\n            ftp://updates.redhat.com/6.2/SRPMS/netscape-alpha-4.76-0.6.2.src.rpm\n\n            ftp://updates.redhat.com/6.2/SRPMS/netscape-4.76-0.6.2.src.rpm\n\n    -   7.0 pour alpha :\n\n            ftp://updates.redhat.com/7.0/alpha/netscape-common-4.76-1.alpha.rpm\n\n            ftp://updates.redhat.com/7.0/alpha/netscape-communicator-4.76-1.alpha.rpm\n\n            ftp://updates.redhat.com/7.0/alpha/netscape-navigator-4.76-1.alpha.rpm\n\n    -   7.0 pour i386:\n\n            ftp://updates.redhat.com/7.0/i386/netscape-common-4.76-1.i386.rpm\n\n            ftp://updates.redhat.com/7.0/i386/netscape-communicator-4.76-1.i386.rpm\n\n            ftp://updates.redhat.com/7.0/i386/netscape-navigator-4.76-1.i386.rpm\n\n        Sources:\n\n            ftp://updates.redhat.com/7.0/SRPMS/netscape-alpha-4.76-1.src.rpm\n\n            ftp://updates.redhat.com/7.0/SRPMS/netscape-4.76-1.src.rpm\n-   Pour FreeBSD, après avoir supprimé le module de portage, installer\n    le correctif selon le numéro de version de FreeBSD (3 pour la\n    version 3.5, 4 pour 4.2 ou 5 pour 5.0) :\n    -   Pour i386 (selon la version) :\n\n            ftp://ftp.freebsd.org/pub/FreeBSD/ports/i386/packages-3-stable/www/\n\n            ftp://ftp.freebsd.org/pub/FreeBSD/ports/i386/packages-4-stable/www/\n\n            ftp://ftp.freebsd.org/pub/FreeBSD/ports/i386/packages-5-current/www/\n\n    -   Pour alpha (selon la version):\n\n            ftp://ftp.freebsd.org/pub/FreeBSD/ports/i386/packages-4-stable/www/\n\n            ftp://ftp.freebsd.org/pub/FreeBSD/ports/i386/packages-5-stable/www/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "L'avis de sécurité FreeBSD :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/advisories/FreeBSD-SA-00:66.netscape.asc"
+    },
+    {
+      "title": "L'avis de sécurité de RedHat :",
+      "url": "http://www.redhat.com/support/errata/RHSA-2000-109.html"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-079",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-12-01T00:00:00.000000"
+    },
+    {
+      "description": "première révision : correction d'un lien.",
+      "revision_date": "2002-03-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un débordement de mémoire permet à l'administrateur d'un site malicieux\nd'arrêter à distance un client Netscape ou d'exécuter du code arbitraire\nsur la machine du client qui le visite.\n",
+  "title": "Vulnérabilité de Netscape sous Unix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RedHat",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité FreeBSD",
+      "url": null
+    }
+  ]
+}

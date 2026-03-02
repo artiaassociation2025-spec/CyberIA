@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions de Tor antérieures à 0.1.1.20.</P>",
+  "content": "## Description\n\nTor est un réseau de tunnels virtuels permettant de garantir une\ncertaine anonymité au cours de la navigation sur Internet. Chaque\nutilisateur participe à sa construction. Plusieurs vulnérabilités ont\nété identifiées dans les versions de Tor antérieures à 0.1.1.20. Parmi\ncelles-ci :\n\n-   les chaînes de caractères venant du réseau ne sont pas correctement\n    vérifiées. Un utilisateur malveillant peut altérer l'intégrité des\n    journaux avant qu'ils ne soient affichés.\n-   les options de pare-feu ne sont pas scrupuleusement respectées. La\n    politique de sécurité peut alors être contournée.\n-   des attaques de type débordement de mémoire sont possibles quand des\n    éléments sont ajoutés dans la liste courante (ou smartlist).\n-   les clés de chiffrement ne sont pas renouvelées lorsque\n    l'utilisateur change son adresse IP.\n-   il est possible de deviner le choix des noeuds internes à partir\n    d'attaques statistiques, connaissant les chemins (ou circuits) ayant\n    des noeuds de sortie.\n-   il n'est pas possible de choisir, voire d'imposer, une liste de\n    noeuds d'entrée. Ceci favorise alors les attaques de proximité\n    issues de noeuds inconnus.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0414",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0414"
+    }
+  ],
+  "links": [
+    {
+      "title": "Détails sur la mise à jour de sécurité de la version 1.1.20    de Tor :",
+      "url": "http://tor.eff.org/cvs/tor/ChangeLog"
+    },
+    {
+      "title": "Mise à jour de Tor :",
+      "url": "http://tor.eff.org/download.html.fr"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-218",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans Tor. Elles peuvent\npermettre à un utilisateur d'effectuer des actions malveillantes, comme\nla modification du processus de journalisation, un déni de service, ou\nencore la récupéreration d'informations sensibles.\n",
+  "title": "Multiples vulnérabilités dans Tor",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour Tor du 23 mai 2006",
+      "url": null
+    }
+  ]
+}

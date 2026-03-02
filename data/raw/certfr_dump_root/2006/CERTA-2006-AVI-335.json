@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Drupal version 4.6.8 et antérieures ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Drupal version 4.7.2 et antérieures.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn manque de contrôle des paramètres passés au module user.module de\nDrupal permet à un utilisateur distant d'injecter indirectement du\nscript ou du code HTML dans les pages visualisées par un utilisateur de\nl'application Drupal vulnérable.\n\n## Solution\n\nLes versions 4.6.9 et 4.7.3 corrigent le problème :\n\n    http://www.drupal.org/node/76748\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité drupal  DRUPAL-SA-2006-011 du 2 août 2006 :",
+      "url": "http://www.drupal.org/node/76748"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-335",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Cross-site scripting"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Drupal permet à un utilisateur distant de\nconduire une attaque de type cross-site scripting.\n",
+  "title": "Vulnérabilité dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Drupal DRUPAL-SA-2006-011 du 2 août 2006",
+      "url": null
+    }
+  ]
+}

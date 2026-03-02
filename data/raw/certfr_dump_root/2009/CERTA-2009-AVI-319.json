@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Zope 3.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Zope 2.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans Zope Object Database (ZODB)\n:\n\n-   une exécution de code arbitraire Python est possible dans les\n    serveurs de stockage ZODB ZEO (CVE-2009-0668) ;\n-   un contournement du système d'authentification est possible dans les\n    serveurs de stockage ZODB ZEO (CVE-2009-0669).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0669",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0669"
+    },
+    {
+      "name": "CVE-2009-0668",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0668"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-319",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans Zope Object Database (<span\nclass=\"textit\">ZODB</span>) permettent à une personne malintentionnée de\ncontourner la politique de sécurité et d'exécuter du code arbitraire à\ndistance.\n",
+  "title": "Vulnérabilités dans Zope",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Zope 002220 du 06 août 2009",
+      "url": "http://mail.zope.org/pipermail/zope-annouce/2009-August/002220.html"
+    }
+  ]
+}

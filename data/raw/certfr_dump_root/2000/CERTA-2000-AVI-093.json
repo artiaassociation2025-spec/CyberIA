@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Information Server 4.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Information Server 5.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes extensions FrontPage (FPSE) sont installées par défaut sur les\nversions 4.0 et 5.0 d'Internet Information Server. Ces extensions sont\ncensées faciliter le développement et la gestion d'un site sous IIS.\n\nPar le biais d'une vulnérablité présente dans la gestion des formulaires\nWeb, un utilisateur mal intentionné peut provoquer un déni de service,\nobligeant un redémarrage du serveur par l'administrateur sur la version\n4.0, et un redémarrage automatique sur la version 5.0.  \n  \n\nUn site ne possédant pas de formulaire dans son arborescence est\négalement vulnérable si les extensions FrontPage ont été installées.\n\n## Contournement provisoire\n\nDésactiver les extensions FrontPage.\n\n## Solution\n\nTélécharger le correctif correspondant à la version d'IIS (Version\nUS).  \n  \n\nMicrosoft IIS version 4.0 :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=26704\n\n  \n  \n\nMicrosoft IIS version 5.0 :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=26277\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS00-100.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-093",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-12-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur distant mal intentionné peut, par le biais de formulaires\nhabilement renseignés, entraîner un déni de service sur un serveur IIS.\n",
+  "title": "Vulnérabilité sous Microsoft IIS (Extensions FrontPage)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft (MS00-100)",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Wireshark 1.2.x.",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Wireshark 0.10.x ;",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Wireshark 1.0.x ;",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans Wireshark :\n\n-   La première (CVE-2009-2560), n'affectant pas les versions\n    supérieures à 1.2.0, concerne l'analyseur de protocole RADIUS ;\n-   la seconde (CVE-2009-3549), n'affectant que la branche 1.2.x, est\n    relative à l'analyseur de protocole Paltalk ;\n-   la troisième (CVE-2009-3550) concerne l'analyseur de protocole\n    DCERPC/NT ;\n-   la dernière (CVE-2009-3551), n'affectant que la branche 1.2.x, est\n    relative à l'analyseur de protocole SMB.\n\nToutes ces vulnérabilités permettent à un utilisateur distant\nmalintentionné de provoquer un déni de service de l'application\nvulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3549",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3549"
+    },
+    {
+      "name": "CVE-2009-3550",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3550"
+    },
+    {
+      "name": "CVE-2009-2560",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2560"
+    },
+    {
+      "name": "CVE-2009-3551",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3551"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurités Wireshark wnpa-sec-2009-07 et    wnpa-sec-2009-08 du 26 octobre 2009 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2009-08.html"
+    },
+    {
+      "title": "Bulletins de sécurités Wireshark wnpa-sec-2009-07 et    wnpa-sec-2009-08 du 26 octobre 2009 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2009-07.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-463",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-10-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans Wireshark permettent à un\nutilisateur distant malintentionné de provoquer un déni de service.\n",
+  "title": "Multiples vulnérabilités dans Wireshark",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Wireshark wnpa-sec-2009-07 et wnpa-sec-2009-08 du 26 octobre 2009",
+      "url": null
+    }
+  ]
+}

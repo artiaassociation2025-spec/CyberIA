@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>TurboLinux, Linux RedHat, Mandrake et Connectiva, OpenBSD  (Caldera) et FreeBSD, AIX, SunOS et Solaris, et tout autre  système unix ou linux utilisant mgetty 1.1.21, 1.1.20 ou 1.1.19  développé par Goert Doering installé par défaut ou installé et  activé par l'administrateur.</P>",
+  "content": "## Description\n\nfaxrunqd est l'outil d'envoie de fax de l'utilitaire mgetty. Celui-ci\nest installé par défaut sur la plupart des Linux ou Unix. Un utilisateur\nmal intentionné peut détruire des fichiers pour lesquels il n'a pas les\ndroits en écriture à l'aide de faxrunqd en utilisant un lien.\n\nCette vulnérabilité pourait être utilisée, par exemple, pour détruire\ndes fichiers importants, risquant ainsi de compromettre le bon\nfonctionnement du système ou des documents de travail.\n\n## Contournement provisoire\n\nDésactiver faxrunqd, et éventuellement le supprimer s'il n'est pas\nutilisé sur la machine concernée.\n\n## Solution\n\nAppliquer les correctifs en fonction du système concerné :\n\n-   Pour Caldera, selon les types et les versions :\n    -   ftp://ftp.calderasystems.com/pub/updates/OpenLinux/2.3/current/RPMS/mgetty-1.1.22_Aug17-2OL.i386.rpm\n\n    -   ftp://ftp.calderasystems.com/pub/updates/OpenLinux/2.3/current/SRPMS/mgetty-1.1.22_Aug17-2OL.src.rpm\n\n    -   ftp://ftp.calderasystems.com/pub/updates/eServer/2.3/current/RPMS/mgetty-1.1.22_Aug17-2S.i386.rpm\n\n    -   ftp://ftp.calderasystems.com/pub/updates/eServer/2.3/current/SRPMS/SRPMS/mgetty-1.1.22_Aug17-2S.src.rpm\n\n-   Pour FreeBSD :\n\n        http://www.FreeBSD.org/cgi/cvsweb.cgi/ports/comms/mgetty%2bsendfax/Makefile\n\n-   Pour Connectiva, selon les versions et le type de machine :\n    -   ftp://atualizacoes.conectiva.com.br/4.0/SRPMS/mgetty-1.1.22-1cl.src.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.0/i386/mgetty-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.0/i386/mgetty-sendfax-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.0/i386/mgetty-viewfax-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.0/i386/mgetty-voice-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.0es/SRPMS/mgetty-1.1.22-1cl.src.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.0es/i386/mgetty-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.0es/i386/mgetty-sendfax-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.0es/i386/mgetty-viewfax-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.0es/i386/mgetty-voice-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.1/SRPMS/mgetty-1.1.22-1cl.src.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.1/i386/mgetty-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.1/i386/mgetty-sendfax-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.1/i386/mgetty-viewfax-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.1/i386/mgetty-voice-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.2/SRPMS/mgetty-1.1.22-1cl.src.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.2/i386/mgetty-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.2/i386/mgetty-sendfax-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.2/i386/mgetty-viewfax-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/4.2/i386/mgetty-voice-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/5.0/SRPMS/mgetty-1.1.22-1cl.src.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/5.0/i386/mgetty-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/5.0/i386/mgetty-sendfax-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/5.0/i386/mgetty-viewfax-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/5.0/i386/mgetty-voice-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/5.1/SRPMS/mgetty-1.1.22-1cl.src.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/5.1/i386/mgetty-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/5.1/i386/mgetty-sendfax-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/5.1/i386/mgetty-viewfax-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/5.1/i386/mgetty-voice-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/ferramentas/ecommerce/SRPMS/mgetty-1.1.22-1cl.src.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/ferramentas/ecommerce/i386/mgetty-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/ferramentas/ecommerce/i386/mgetty-sendfax-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/ferramentas/ecommerce/i386/mgetty-viewfax-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/ferramentas/ecommerce/i386/mgetty-voice-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/ferramentas/graficas/SRPMS/mgetty-1.1.22-1cl.src.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/ferramentas/graficas/i386/mgetty-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/ferramentas/graficas/i386/mgetty-sendfax-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/ferramentas/graficas/i386/mgetty-viewfax-1.1.22-1cl.i386.rpm\n\n    -   ftp://atualizacoes.conectiva.com.br/ferramentas/graficas/i386/mgetty-voice-1.1.22-1cl.i386.rpm\n\n-   Mandrake selon les versions :\n\n    Sur les sites FTP mirroirs de la liste :\n\n        http://www.linux-mandrake.com/en/ftp.php3\n\n    ,dans les répertoires dont le chemin varie selon la version :\n\n    -   6.0/RPMS/mgetty-1.1.22-2mdk.i586.rpm\n    -   6.0/RPMS/mgetty-contrib-1.1.22-2mdk.i586.rpm\n    -   6.0/RPMS/mgetty-sendfax-1.1.22-2mdk.i586.rpm\n    -   6.0/RPMS/mgetty-viewfax-1.1.22-2mdk.i586.rpm\n    -   6.0/RPMS/mgetty-voice-1.1.22-2mdk.i586.rpm\n    -   6.0/SRPMS/mgetty-1.1.22-2mdk.src.rpm\n    -   6.1/RPMS/mgetty-1.1.22-2mdk.i586.rpm\n    -   6.1/RPMS/mgetty-contrib-1.1.22-2mdk.i586.rpm\n    -   6.1/RPMS/mgetty-sendfax-1.1.22-2mdk.i586.rpm\n    -   6.1/RPMS/mgetty-viewfax-1.1.22-2mdk.i586.rpm\n    -   6.1/RPMS/mgetty-voice-1.1.22-2mdk.i586.rpm\n    -   6.1/SRPMS/mgetty-1.1.22-2mdk.src.rpm\n    -   7.0/RPMS/mgetty-1.1.22-2mdk.i586.rpm\n    -   7.0/RPMS/mgetty-contrib-1.1.22-2mdk.i586.rpm\n    -   7.0/RPMS/mgetty-sendfax-1.1.22-2mdk.i586.rpm\n    -   7.0/RPMS/mgetty-viewfax-1.1.22-2mdk.i586.rpm\n    -   7.0/RPMS/mgetty-voice-1.1.22-2mdk.i586.rpm\n    -   7.0/SRPMS/mgetty-1.1.22-2mdk.src.rpm\n    -   7.1/RPMS/mgetty-1.1.22-2mdk.i586.rpm\n    -   7.1/RPMS/mgetty-contrib-1.1.22-2mdk.i586.rpm\n    -   7.1/RPMS/mgetty-sendfax-1.1.22-2mdk.i586.rpm\n    -   7.1/RPMS/mgetty-viewfax-1.1.22-2mdk.i586.rpm\n    -   7.1/RPMS/mgetty-voice-1.1.22-2mdk.i586.rpm\n    -   7.1/SRPMS/mgetty-1.1.22-2mdk.src.rpm\n\n-   Pour savoir s'il existe une mise à jour de mgetty pour les autres\n    systèmes contacter les éditeurs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité de Caldera :",
+      "url": "http://www.calderasystems.com/support/security/advisories/CSSA-200-029.0.txt"
+    },
+    {
+      "title": "Avis de sécurité de Mandrake :",
+      "url": "http://www.linux-mandrake.com/en/fupdate.php3"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-043",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-09-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Ecrasement de fichiers, modification de la configuration"
+    }
+  ],
+  "summary": "Un utilitaire de gestion de Fax est installé par défaut sur la plupart\ndes versions de Linux ou Unix. Celle-ci possède une vulnérabilité\npermettant à un utilisateur local d'écraser des fichiers auxquels il n'a\nnormalement pas accès en écriture.\n",
+  "title": "Vulnérabilité dans mgetty sous Unix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis du CERT IST",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Exploit vérifié par le CERTA",
+      "url": null
+    }
+  ]
+}

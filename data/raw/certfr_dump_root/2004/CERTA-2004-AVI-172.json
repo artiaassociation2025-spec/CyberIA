@@ -1,0 +1,33 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Irix 6.5.24</p>",
+  "content": "## Description\n\nLe service rpc.mountd est le service RPC (Remote Procedure Call) chargé\ndu montage des partitions NFS (Network File System). Une vulnérabilité\nprésente dans le traitement des requêtes RPC permet à un utilisateur mal\nintentionné, via l'envoi de requêtes RPC malicieusement construites, de\nréaliser un déni de service sur le service rpc.mountd en entraînant\ncelui-ci dans une boucle infinie.\n\n## Solution\n\nMettre à jour votre système ou appliquer le correctif disponible sur le\nsite de SGI (cf. section documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-172",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-05-21T00:00:00.000000"
+    },
+    {
+      "description": "correction de la référence CVE.",
+      "revision_date": "2004-05-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente sur le service rpc.mountd sur Irix 6.5.24\npermet à un utilisateur mal intentionné de réaliser un déni de service\nsur le service vulnérable.\n",
+  "title": "Vulnérabilité sur rpc.mountd sur Irix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité SGI",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20040503-01-P.asc"
+    }
+  ]
+}

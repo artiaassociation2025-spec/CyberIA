@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>AIX version 5.3</p>",
+  "content": "## Description\n\nLa bibliothèque libodm est utilisée par des applications AIX, aux droits\nsouvent élévés, pour accéder aux informations système. Lors de\nl'utilisation de cette bibliothèque par une application, un utilisateur\nmalveillant peut modifier une variable d'environnement pour provoquer un\ndépassement de mémoire et exécuter du code arbitraire dans le contexte\nde l'application.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM IY97632 du 21 juin 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY97632"
+    },
+    {
+      "title": "Bulletin de sécurité iDefense du 9 juillet 2007 :",
+      "url": "http://labs.idefense.com/intelligence/vulnerabilities/display.php?id=552"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-305",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "La bibliothèque libodm de AIX est vulnérable à un dépassement de mémoire\nlors du traitement d'une variable d'environnement.\n",
+  "title": "Vulnérabilité dans AIX d'IBM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité d'IBM IY97632 du 21 juin 2007",
+      "url": null
+    }
+  ]
+}

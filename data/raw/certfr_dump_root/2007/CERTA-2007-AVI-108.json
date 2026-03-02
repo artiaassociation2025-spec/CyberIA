@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Tomcat 4.1.34 ;",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tomcat JK Web Server Connector 1.2.19 ;",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tomcat JK Web Server Connector 1.2.20 ;",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tomcat 5.5.20.",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne mauvaise gestion des adresses réticulaires (URL) dans la\nbibliothèque mod_jk.so permettrait à un utilisateur distant\nmalintentionné d'exécuter du code arbitraire ou de réaliser un déni de\nservice par le biais d'une adresse réticulaire spécialement conçue.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0774",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0774"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200703-16 du 16 mars 2007    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200703-16.xml"
+    },
+    {
+      "title": "Liste des changements apportés à la version 1.2.21 d'Apache    Tomcat Connector :",
+      "url": "http://tomcat.apache.org/connectors-doc/miscellaneous/changelog.html"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco 20080130 du 30 janvier 2008 :",
+      "url": "http://www.cisco.com/en/US/products/products_security_advisory09186a0080093f040.shtml#@"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-108",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-03-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2007-03-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Cisco.",
+      "revision_date": "2008-02-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans Tomcat JK Web Server Connector\npermettrait à un utilisateur distant de réaliser un déni de service ou\nd'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés à la version 1.2.21 d'Apache Tomcat Connector",
+      "url": null
+    }
+  ]
+}

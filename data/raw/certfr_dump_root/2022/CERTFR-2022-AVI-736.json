@@ -1,0 +1,96 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Zimbra versions 8.8.15 sans le dernier correctif de sécurité \"Patch 33\"",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Zimbra versions 9.0.0 sans le dernier correctif de sécurité \"Patch 26\"",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-24407",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-24407"
+    },
+    {
+      "name": "CVE-2022-37043",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-37043"
+    },
+    {
+      "name": "CVE-2022-2068",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-2068"
+    },
+    {
+      "name": "CVE-2022-37044",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-37044"
+    },
+    {
+      "name": "CVE-2022-37042",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-37042"
+    },
+    {
+      "name": "CVE-2022-37041",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-37041"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-736",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-08-11T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de plusieurs identifiants CVE.",
+      "revision_date": "2022-08-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Zimbra. Elles\npermettent à un attaquant de provoquer une exécution de code arbitraire\nà distance, une atteinte à l'intégrité des données et une atteinte à la\nconfidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans Zimbra",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Zimbra 8.8.15 du 10 août 2022",
+      "url": "https://wiki.zimbra.com/index.php/Zimbra_Releases/8.8.15/P33"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Zimbra 9.0.0 du 10 août 2022",
+      "url": "https://wiki.zimbra.com/index.php/Zimbra_Releases/9.0.0/P26"
+    }
+  ]
+}

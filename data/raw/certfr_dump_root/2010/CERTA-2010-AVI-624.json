@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MyBB version 1.6.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MyBB versions 1.4.x inférieures à 1.4.14.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCertains paramètres ne sont pas correctement traités par les scripts PHP\neditpost.php, member.php et newreply.php dans MyBB et permettent à un\nutilisateur malveillant de réaliser une injection de code indirect à\ndistance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2010-AVI-624",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été corrigées qui permettaient de l'injection de\ncode indirecte à distance.\n",
+  "title": "Vulnérabilités dans MyBB",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MyBB du 15 décembre 2010",
+      "url": "http://blog.mybb.com/2010/12/15/mybb-1-6-1-release-1-4-14-update/"
+    }
+  ]
+}

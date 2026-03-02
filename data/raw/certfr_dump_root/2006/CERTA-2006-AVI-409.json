@@ -1,0 +1,92 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Computer Associates eTrust Audit version r8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Computer Associates eTrust Audit version 1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Computer Associates eTrust Security Command Center version 1.0.",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Computer Associates eTrust Security Command Center version r8 SP1 CR1 ;",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Computer Associates eTrust Security Command Center version r8 ;",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Computer Associates eTrust Security Command Center version r8 SP1 CR2 ;",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa première vulnérabilité provient d'une erreur dans le script\nePPIServlet qui gère incorrectement des paramètres mal formés. Cette\nvulnérabilité permet à des agresseurs d'obtenir des informations\nrelatives à l'arborescence du système cible (chemin vers le répertoire\nd'installation).\n\nLa seconde vulnérabilité provient d'une erreur dans le script\neSMPAuditServlet qui valide incorrectement des paramètres. Cette\nvulnérabilité permet à des agresseurs de lire ou de détruirte des\nfichiers arbitraires.\n\nLa troisième vulnérabilité se trouve au niveau du système de gestion des\nalertes qui est accessible sans authentification préalable. Cette\nvulnérabilité permet à des agresseurs d'envoyer de fausses alertes.\n\n## Contournement provisoire\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de CA :",
+      "url": "http://supportconnectw.ca.com/public/etrust/eTrust_scc/downloads/eTrustscc_updates.asp"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-409",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-09-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans des composants de Computer Associates\npermettent à des agresseurs de contourner des règles de sécurité et\nd'accéder à des données sensibles.\n",
+  "title": "Vulnérabilités dans CA",
+  "vendor_advisories": []
+}

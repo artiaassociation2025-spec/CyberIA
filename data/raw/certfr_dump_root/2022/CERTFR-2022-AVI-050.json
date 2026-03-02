@@ -1,0 +1,93 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Java VM versions 12.1.0.2, 12.2.0.1, 19c et 21c",
+      "product": {
+        "name": "Database Server",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Core RDBMS versions 12.2.0.1 et 19c",
+      "product": {
+        "name": "Database Server",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Oracle Application Express (Prism) versions antérieures à 21.1.4",
+      "product": {
+        "name": "Database Server",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Oracle Application Express (CKEditor) versions antérieures à 21.1.4",
+      "product": {
+        "name": "Database Server",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-21247",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-21247"
+    },
+    {
+      "name": "CVE-2021-32723",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-32723"
+    },
+    {
+      "name": "CVE-2021-37695",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-37695"
+    },
+    {
+      "name": "CVE-2022-21393",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-21393"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-050",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-01-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Oracle Database\nServer. Elles permettent à un attaquant de provoquer un déni de service,\nun contournement de la politique de sécurité et une atteinte à la\nconfidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans Oracle Database Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Oracle cpujan2022 du 18 janvier 2022",
+      "url": "https://www.oracle.com/security-alerts/cpujan2022.html#AppendixDB"
+    }
+  ]
+}

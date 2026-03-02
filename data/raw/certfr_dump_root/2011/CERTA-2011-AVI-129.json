@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Libpango versions 1.28.3 et précédentes.</P>",
+  "content": "## Description\n\nDeux vulnérabilités affectent libpango. La première (CVE-2011-0020)\npermet à un attaquant de réaliser un déni de service en provoquant\nl'arrêt brutal d'une application utilisant cette bibliothèque à l'aide\nd'un fichier de police de caractères spécialement conçu. Le débordement\nde tampon sur le tas est à l'origine de l'arrêt, et pourrait être\nexploité pour exécuter du code à distance. La seconde (CVE-2011-0064)\npermet à une personne malveillante de provoquer l'arrêt brutal d'une\napplication via un déréférencement de pointeur NULL, en lui passant des\nparamètres spécialement conçus. L'exécution de code arbitraire à\ndistance est également possible.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0020",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0020"
+    },
+    {
+      "name": "CVE-2011-0064",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0064"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 2178 du 02 mars 2011 :",
+      "url": "http://www.debian.org/security/2011/dsa-2178"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2011:0309 du 03 mars 2011    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2011-0309.html"
+    },
+    {
+      "title": "Rapport de bug Debian n°610792 du 24 janvier 2011 :",
+      "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=610792"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-1082-1 du 02 mars 2011 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-1082-1"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2011:0180 du 27 janvier    2011 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2011-0180.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-129",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-03-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été corrigées dans la bibliothèque libpango.\nElles peuvent être exploitées pour réaliser un déni de service à\ndistance, et dans certains cas exécuter du code à distance.\n",
+  "title": "Vulnérabilités dans libpango",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport de bug Ubuntu n°696616 du 02 mars 2011",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Rapport de bug Gnome n°639882 du 18 janvier 2011",
+      "url": "http://bugzilla.gnome.org/show_bug.cgi?id=639882"
+    }
+  ]
+}

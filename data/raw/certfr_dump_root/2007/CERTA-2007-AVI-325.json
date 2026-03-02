@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "toutes les versions inférieures à 4.5 HF1 de Citrix Access Gateway Advanced Edition.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix Access Gateway versions 4.5.4 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans les produits Citrix Access\nGateway :\n\n-   la première est relative à la façon dont sont stockées les\n    informations des clients et permettrait à un utilisateur local\n    malintentionné d'accéder à la session d'un utilisateur légitime\n    arbitraire ;\n-   la seconde concerne une erreur de type débordement de mémoire dans\n    certaines bibliothèques de fonctions et permettrait d'exécuter du\n    code arbitraire à distance ;\n-   la troisième, non précisée par l'éditeur, permettrait à une personne\n    malintentionnée de rediriger sa victime vers un site arbitraire ;\n-   la dernière vulnŕabilité concerne la console d'administration qui\n    serait vulnérable à des attaques de type « cross-site request\n    forgery » permettant la modification de la configuration d'un\n    périphérique.\n\n## Contournement provisoire\n\n## Solution\n\nLa version 4.5.5 de Citrix Access Gateway et la version 4.5 HF1 de\nCitrix Access Gateway Advanced Edition corrigent le problème :\n\n-   http://support.citrix.com/article/CTX114028\n\n-   http://support.citrix.com/article/CTX112803\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletins de sécurité Citrix du 19  juillet 2007 :    \n   http://support.citrix.com/article/CTX113815\n   http://support.citrix.com/article/CTX113816\n   http://support.citrix.com/article/CTX113817",
+      "url": "http://support.citrix.com/article/CTX113814"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-325",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans les produits Citrix Access Gateway\npermettent à un utilisateur distant d'exécuter du code arbitraire, de\ncontourner la politique de sécurité du système ou de porter atteinte à\nla confidentialité des données des utilisateurs.\n",
+  "title": "Multiples vulnérabilités dans Citrix Access Gateway",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Citrix du 19 juillet 2007",
+      "url": null
+    }
+  ]
+}

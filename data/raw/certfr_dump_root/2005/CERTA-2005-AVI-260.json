@@ -1,0 +1,28 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IBM AIX versions 5.1, 5.2 et 5.3.</p>",
+  "content": "## Contournement provisoire\n\nDans l'attente de l'application du correctif de l'éditeur, il convient\nde vérifier la nécessité de laisser actif ce service.  \nEn complément, il convient aussi de ne pas autoriser la connexion d'un\nutilisateur en mode anonyme. Enfin, il est conseillé de spécifier\nl'étendue des ports éphémères.\n\n## Solution\n\nSuivre les directives de l'éditeur.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité d'IBM du 6 juillet 2005 :",
+      "url": "ftp://aix.software.ibm.com/aix/efixes/security/ftpd_ifix.tar.Z"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-260",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-07-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "La vulnérabilité provient du serveur ftp (le démon ftpd) permettant à un\nutilisateur malveillant d'utiliser les ports dits éphémères lors d'un\néchange de fichiers entre deux machines distantes. Cette action pourrait\nconduire à un déni de service ou à une perte de fonctionalité.\n",
+  "title": "Vulnérabilités dans IBM AIX ftpd",
+  "vendor_advisories": []
+}

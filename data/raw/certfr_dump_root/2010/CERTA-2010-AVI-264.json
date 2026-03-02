@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Apache versions 2.2.0, 2.2.2 à 2.2.6,  2.2.8, 2.2.9 à 2.2.15, 2.3.4-alpha, et 2.3.5-alpha.</p>",
+  "content": "## Description\n\nLa première vulnérabilité se situe dans le module mod_proxy_http\nd'Apache. Elle résulte d'une erreur dans la gestion des timeout et\npermet d'envoyer une réponse à un utilisateur qui ne devrait normalement\npas la recevoir. La deuxième vulnérabilité se situe dans les modules\nmod_cache et mod_dav. Une personne malveillante peut provoquer un déni\nde service à distance par le biais d'une requête spécialement conçue.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2068",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2068"
+    },
+    {
+      "name": "CVE-2010-1452",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1452"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM SE44398 du 30 juillet 2010 :",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=nas2f3abe5f92565651d86257770003c7447"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-264",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-06-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout des informations concernant la vulnérabilité du déni de service et du CVE associé.",
+      "revision_date": "2010-07-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité IBM.",
+      "revision_date": "2010-08-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Apache. Elles\npermettent à une personne malveillante de porter atteinte à la\nconfidentialité des données ou d'effectuer un déni de service à\ndistance.\n",
+  "title": "Multiples vulnérabilités dans Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache du 11 juin 2010, mis à jour le 25 juillet 2010",
+      "url": null
+    }
+  ]
+}

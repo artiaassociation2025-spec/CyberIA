@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "bibliothèque OwnCloud oauth2 versions antérieures à 0.6.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Owncloud",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OwnCloud core versions 10.6.0 et ultérieures, antérieures à 10.13.1",
+      "product": {
+        "name": "Core",
+        "vendor": {
+          "name": "Owncloud",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "bibliothèque OwnCloud graphapi 0.2.x antérieures à 0.2.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Owncloud",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "bibliothèque OwnCloud graphapi 0.3.x antérieures à 0.3.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Owncloud",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\n<span style=\"color: #ff0000;\">Attention :</span> L'éditeur préconise de\nréaliser plusieurs actions correctrices, notamment de renouveler les\nmots de passe des différents comptes administrateurs et comptes\ntechniques utilisés par le service OwnCloud.\n",
+  "cves": [
+    {
+      "name": "CVE-2023-49104",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-49104"
+    },
+    {
+      "name": "CVE-2023-49105",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-49105"
+    },
+    {
+      "name": "CVE-2023-49103",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-49103"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0970",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-11-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans <span\nclass=\"textit\">les produits OwnCloud</span>. Elles permettent à un\nattaquant de provoquer une atteinte à la confidentialité des données,\nune atteinte à l'intégrité des données et un contournement de la\npolitique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans les produits OwnCloud",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OwnCloud 2 du 21 novembre 2023",
+      "url": "https://owncloud.com/security-advisories/webdav-api-authentication-bypass-using-pre-signed-urls/"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OwnCloud 3 du 21 novembre 2023",
+      "url": "https://owncloud.com/security-advisories/disclosure-of-sensitive-credentials-and-configuration-in-containerized-deployments/"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OwnCloud 1 du 21 novembre 2023",
+      "url": "https://owncloud.com/security-advisories/subdomain-validation-bypass/"
+    }
+  ]
+}

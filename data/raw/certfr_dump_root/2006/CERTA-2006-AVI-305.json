@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de <TT>Cisco  CS-MARS</TT> strictement antérieures à la version 4.2.1.</p>",
+  "content": "## Description\n\nCisco CS-MARS (Cisco Security Monitoring, Analysis and Response System)\nest un outil de supervision et de sécurisation de réseau.  \nTrois vulnérabilités sont présentes dans Cisco CS-MARS :\n\n-   CS-MARS comprend une base de données Oracle accessible via des\n    comptes dont les mots de passe par défaut sont connus et triviaux.\n    Un utilisateur mal intentionné peut donc utiliser ces comptes pour\n    obtenir les informations contenues dans la base.\n-   CS-MARS comprend également l'application web JBoss. Une erreur dans\n    cette application permet à un utilisateur distant mal intentionné\n    d'exécuter du code arbitraire par le biais d'une requête HTTP\n    construite de façon particulière.\n-   Une erreur dans la ligne de commande CLI de CS-MARS permet à un\n    utilisateur local authentifié d'élever ses privilèges et d'exécuter\n    des commandes du super-utilisateur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 70728 du 20 juillet 2006 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20060719-mars.shtml"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-305",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-07-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance et en local"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieures vulnérabilités présentes dans Cisco CS-MARS permettent à un\nutilisateur mal intentionné d'exécuter du code arbitraire, de porter\natteinte à la confidentialité des données ou d'élever ses privilèges.\n",
+  "title": "Multiples vulnérabilités dans Cisco CS-MARS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco #70728 du 19 juillet 2006",
+      "url": null
+    }
+  ]
+}

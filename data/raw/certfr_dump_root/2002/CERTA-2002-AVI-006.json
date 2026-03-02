@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Version de sudo antérieure à la version  1.6.4.</p>",
+  "content": "## Description\n\nsudo utilise le logiciel de messagerie avec les privilèges du compte\nroot et des variables d'environnement non sûres.\n\nEn forçant l'envoi de journaux de connexions par méls, un utilisateur\nmal intentionné peut exploiter cette vulnérabilité pour réaliser une\nélévation de privilèges.\n\nCette vulnérabilité n'est exploitable qu'en local.\n\n## Contournement provisoire\n\nRetirer le setuserid bit du fichier sudo dans le répertoire /usr/bin/ en\nattendant d'appliquer les correctifs.\n\n## Solution\n\nInstaller la versions 1.6.4 disponible sur le site\nhttp://www.sudo.ws/sudo\n\nDes mises à jour sont également disponibles sous forme de paquetages\npour les distributions Linux (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité SuSE-SA:2002:002 de SuSE :",
+      "url": "http://www.suse.com/us/support/security"
+    },
+    {
+      "title": "Avis de sécurité MDKSA-2002:003 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-003.php"
+    },
+    {
+      "title": "Avis de sécurité DSA-101 de Debian :",
+      "url": "http://www.debian.org/security/2002/dsa-101"
+    },
+    {
+      "title": "Avis de sécurité RHSA-2002:011 de RedHat :",
+      "url": "http://www.redhat.com/support/errata/RHSA-2002-011.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-006",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-01-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "sudo est un utilitaire qui permet d'accorder des droits d'administration\nà des utilisateurs non privilégiés du système.\n\nUne vulnérabilité présente dans sudo permet à un utilisateur mal\nintentionné de prendre les droits du super-utilisateur sur la machine.\n",
+  "title": "Vulnérabilité dans Sudo",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité SuSE:2002:002",
+      "url": null
+    }
+  ]
+}

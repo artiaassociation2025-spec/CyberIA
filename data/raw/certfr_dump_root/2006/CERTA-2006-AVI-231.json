@@ -1,0 +1,88 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MySQL versions 5.0.21 et antérieures.",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MySQL versions 4.1.19 et antérieures ;",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été découverte dans le traitement de certaines\nrequêtes SQL par le serveur MySQL. L'exploitation de cette vulnérabilité\npermet, sous certaines conditions, l'injection de commandes SQL.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). Pour la branche 5.1.x, cette\nvulnérabilité sera corrigée dans la version 5.1.11.\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2753",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2753"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité MySQL 5.1.11 :",
+      "url": "http://dev.mysql.com/doc/refman/5.1/en/news-5-1-11.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200606-13 du 11 juin 2006    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200606-13.xml"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0544 du 09 juin 2006    :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2006-0544.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1092 du 08 juin 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1092"
+    },
+    {
+      "title": "Bulletin de sécurité MySQL 4.1.20 :",
+      "url": "http://dev.mysql.com/doc/refman/4.1/en/news-4-1-20.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:097 du 08 juin    2006 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDKSA-2006:097"
+    },
+    {
+      "title": "Bulletin de sécurité MySQL 5.0.22 :",
+      "url": "http://dev.mysql.com/doc/connector/j/en/news-5-0-22.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-231",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-06-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité RedHat, Debian et Gentoo.",
+      "revision_date": "2006-06-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans MySQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité MySQL du 24 mai 2006",
+      "url": null
+    }
+  ]
+}

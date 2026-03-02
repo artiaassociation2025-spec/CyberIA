@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Server 2003 (Service Pack 1, Edition x64, Itanium).",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 1 et Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Professionnel Edition x64 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans l'explorateur de Microsoft\nWindows, quand celui-ci manipule des données issues du contrôle ActiveX\nWebViewFolderIcon, servant à l'affichage en mode Web.\n\nUne personne malveillante pourrait construire une page Web particulière,\net inciter un utilisateur à la visiter, que ce soit par son navigateur\nInternet Explorer, ou sous le format d'un courrier électronique en HTML.\nIl aurait alors le moyen d'exécuter des commandes arbitraires à distance\nsur le système vulnérable de l'utilisateur.\n\nLe CERTA rappelle à cet égard qu'il est fortement recommandé de\ndésactiver l'ActiveX par défaut sur une machine.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3730",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3730"
+    }
+  ],
+  "links": [
+    {
+      "title": "Alerte technique de l'US-CERT TA06-270A du 27 septembre    2006 :",
+      "url": "http://www.us-cert.gov/cas/techalerts/TA06-270A.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-437",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans la gestion ActiveX par l'Explorateur Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-057 du 10 octobre 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-057.mspx"
+    }
+  ]
+}

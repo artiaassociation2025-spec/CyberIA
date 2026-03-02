@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Windows NT et Windows 2000.</P>",
+  "content": "## Description\n\nLes ressources partagées d'un domaine Windows peuvent être accessibles\ndepuis un autre.\n\nLorsqu'un utilisateur d'un domaine Windows désire accèder à une\nressource partagée présente dans un autre domaine, les informations le\nconcernant sont passées au domaine destination sous la forme d'une liste\nde SID (Security IDentifiers). Ce sont ces informations qui\ndétermineront si l'accès lui est autorisé.\n\nMalheureusement, il est possible d'usurper les SID d'un autre\nutilisateur et d'obtenir ainsi ses privilèges sur le domaine distant.\n\nPour cela, il est nécessaire d'avoir les droits d'administration du\ndomaine d'origine.\n\n## Solution\n\nAppliquer le correctif de microsoft :\n\n-   Pour Windwos NT Enterprise Server :\n\n        http://www.microsoft.com/ntserver/ntsdownloads/critical/q299444/\n\n-   Pour Windows 2000 Server :\n\n        hittp://www.microsoft.com/windows2000/downloads/critical/q311401/\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-018",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-01-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Augmentation des privilèges"
+    },
+    {
+      "description": "Contournement des règles de sécurité"
+    }
+  ],
+  "summary": "Il est possible d'obtenir les privilèges de l'administrateur d'un\ndomaine Windows NT/2000 sur les ressources partagées de ce dernier.\n",
+  "title": "Mauvaise gestion de l'appartenance à un domaine lors de l'authentification par SID sous Windows NT/2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS02-001",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-001.sap"
+    }
+  ]
+}

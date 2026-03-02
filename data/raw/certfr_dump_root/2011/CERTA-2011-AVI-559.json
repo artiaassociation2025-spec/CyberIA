@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft Host Integration Server 2004 Service Pack 1    ;</LI>    <LI>Microsoft Host Integration Server 2006 Service Pack 1    ;</LI>    <LI>Microsoft Host Integration Server 2009 ;</LI>    <LI>Microsoft Host Integration Server 2010.</LI>  </UL>  <P>/bin/bash: line 1: :wq: command not found</P>  <P>Deux vulnérabilités corrigées dans <SPAN class=\n  \"textit\">Microsoft Host Integration Server</SPAN> permettent à un  attaquant de réaliser un déni de service au moyen de paquets TCP  ou UDP spécialement conçus.</P>",
+  "content": "## Description\n\nUn utilisateur malveillant non authentifié peut provoquer un déni de\nservice sur les programmes snabase.exe, snaserver.exe, snalink.exe et\nmngagent.exe en générant du traffic spécialement conçu sur les ports TCP\n1477 et 1478, ou UDP 1478. Le déni de service est causé, soit par une\nboucle infinie (CVE-2011-2007), soit par un accès à de la mémoire non\nallouée (CVE-2011-2008).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2007",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2007"
+    },
+    {
+      "name": "CVE-2011-2008",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2008"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-559",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-10-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités dans Microsoft Host Integration Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS11-082 du 12 octobre 2011",
+      "url": "http://technet.microsoft.com/en-us/security/bulletin/MS11-082"
+    }
+  ]
+}

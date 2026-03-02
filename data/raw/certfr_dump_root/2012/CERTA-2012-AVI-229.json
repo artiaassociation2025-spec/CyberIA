@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "versions antérieures à Asterisk Open Source 10.3.1 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Versions antérieures à Asterisk Open Source 1.6.2.24 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "versions antérieures à Asterisk Open Source 1.8.11.1 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "versions antérieures à Asterisk Business Edition C.3.7.4.",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-2416",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-2416"
+    },
+    {
+      "name": "CVE-2012-2414",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-2414"
+    },
+    {
+      "name": "CVE-2012-2415",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-2415"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2012-AVI-229",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-04-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Trois vulnérabilités ont été corrigées dans <span\nclass=\"textit\">Asterisk</span>. La première permet à un utilisateur\nauthentifié sur <span class=\"textit\">Asterisk Manager</span> de\ncontourner des contrôles de sécurité pour exécuter des commandes\narbitraires. La seconde affecte le processus de gestion des événements\nKEYPAD_BUTTON_MESSAGE en queue dans <span class=\"textit\">Skinny</span>,\nla vulnérabilité est de type « débordement de tampon dans le tas »\n(<span class=\"textit\">Heap Overflow</span>). L'exploitation ne peut être\nfaite que par des utilisateurs déjà authentifiés. La dernière\nvulnérabilité concerne un « déni de service à distance » sur le module\nSIP lors de l'envoi d'une requête SIP UPDATE (dans une fenêtre de temps\nparticulière).\n",
+  "title": "Multiples vulnérabilités dans Asterisk",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Asterisk AST-2012-006 du 23 avril 2012",
+      "url": "http://downloads.asterisk.org/pub/security/AST-2012-006.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Asterisk AST-2012-005 du 23 avril 2012",
+      "url": "http://downloads.asterisk.org/pub/security/AST-2012-005.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Asterisk AST-2012-004 du 23 avril 2012",
+      "url": "http://downloads.asterisk.org/pub/security/AST-2012-004.html"
+    }
+  ]
+}

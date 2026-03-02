@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Cisco TelePresence Software</SPAN>  version TE 4.1.0.</P>",
+  "content": "## Description\n\nUn compte d'administration (root) a été découvert dans Cisco\nTelePresence Software en version TE 4.1.0, inclus dans le matériel Cisco\nIP Video Phone E20. En théorie, ce compte devrait être désactivé, mais\nsi le matériel a utilisé une version antérieure de Cisco TelePresence\nSoftware avant le déploiement d'une mise-à-jour, alors il est possible\nqu'une erreur ait maintenu le compte root actif. Ce dernier est\naccessible via SSH avec un mot de passe par défaut.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-4659",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4659"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20120118-te du 18 janvier 2012 :",
+      "url": "http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120118-te"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-035",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-01-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès d'administration à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans <span class=\"textit\">Cisco IP Video Phone\nE20</span> permet d'obtenir un accès d'administration à distance.\n",
+  "title": "Vulnérabilité dans Cisco IP Video Phone E20",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-sa-20120118-te du 18 janvier 2012",
+      "url": null
+    }
+  ]
+}

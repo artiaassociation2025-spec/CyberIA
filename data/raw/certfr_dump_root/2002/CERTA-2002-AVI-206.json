@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de <TT>mhonarc</TT>  antérieures à la version 2.5.12.</p>",
+  "content": "## Description\n\nmhonarc est un utilitaire qui permet la conversion de fichiers de type\nmessage électronique au format HTML. En utilisant un message\nélectronique contenant du HTML malicieusement construit, un utilisateur\nmal intentionné peut réaliser une usurpation d'identité et un vol de\n\"cookies\".\n\n## Contournement provisoire\n\nDeux contournements provisoires sont possibles :\n\n-   Spécifier à mhonarc un fichier de ressources permettant l'exclusion\n    des messages de type HTML. Les types MIME concernés sont : text/html\n    et text/x-html. Pour ce faire, lancer mhonarc avec l'option -rcfile\n    \\<fichier.rc\\>, où \\<fichier.rc\\> comprend les instructions\n    suivantes :\n\n                <MIMEExcs>\n                text/html\n                text/x-html\n                </MIMEExcs>\n\n-   Spécifier à mhonarc un fichier de ressources permettant le\n    traitement des messages de type HTML en les traitant comme du texte.\n    Pour ce faire, lancer mhonarc avec l'option -rcfile \\<fichier.rc\\>,\n    où \\<fichier.rc\\> comprend les instructions suivantes :\n\n                <MIMEFilters>\n                text/html; m2h_text_plain::filter; mhtxtplain.pl\n                text/x-html; m2h_text_plain::filter; mhtxtplain.pl\n                </MIMEFilters>\n\n## Solution\n\nInstaller la version 2.5.12.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Debian DSA 163-1 :",
+      "url": "http://www.debian.org/security/2002/dsa-163"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-206",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-09-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    },
+    {
+      "description": "Vol de cookies"
+    }
+  ],
+  "summary": "Une vulnérabilité dans mhonarc de type \"cross site scripting\" permet à\nun utilisateur mal intentionné de procéder à une usurpation d'identité.\n",
+  "title": "Vulnérabilité de mhonarc",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Debian DSA-163-1",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>PGP versions 5.5.x à 6.5.3</P>",
+  "content": "## Description\n\nLa fonctionnalité ADK permet d'ajouter une seconde clé de chiffrement\ndans le certificat de la clé publique d'un utilisateur.\n\nToutes les données chiffrées avec la clé primaire sont aussi chiffrées\navec la seconde clé (ADK). Cette fonctionnalité permet, par exemple, de\nrajouter systématiquement dans les certificats des différentes personnes\nd'une entreprise, la clé de l'entreprise.\n\nLa fonctionnalité ADK est prévue uniquement dans le cas où l'utilisateur\nautorise l'ajout d'une clé ADK dans son certificat. Malheureusement, du\nfait d'une mauvaise implémentation dans la vérification du certificat,\nun utilisateur malveillant peut ajouter sans l'accord de l'utilisateur\nune clé ADK dans son certificat.  \n  \n\nPlusieurs conditions doivent être réunies afin d'exploiter cette\nvulnérabilité :\n\n-   L'expéditeur doit avoir une version de PGP vulnérable (GnuPGP-1.0.1\n    n'est pas vulnérable) ;\n-   L'expéditeur doit chiffrer avec un certificat modifié ;\n-   L'expéditeur doit valider la boite de dialogue lui indiquant la\n    présence d'une clé ADK ;\n-   L'expéditeur doit posséder le certificat modifié dans son fichier de\n    clés publiques local ;\n-   Le certificat modifié doit être signé par une autorité dans laquelle\n    l'expéditeur à confiance ;\n-   Les données chiffrées doivent être interceptées par l'utilisateur\n    malveillant.\n\nComme le propriétaire de la clé ADK est clairement cité comme\ndestinataire du message chiffré, il est de ce fait facilement\nidentifiable.\n\n## Solution\n\nCorrectif PGP :\n\n    http://www.pgp.com/other/advisories/adk-product-info-center.asp\n\n  \n  \n\nUne nouvelle version de PGP (6.5.8) corrigeant cette vulnérabilité est\ndisponible depuis le 25 Août 2000 :\n\n    http://www.pgpi.org\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2000-18.html"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-040",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Perte de confidentialité des données"
+    },
+    {
+      "description": "Compromission des informations"
+    }
+  ],
+  "summary": "La possibilité d'ajouter une clé supplémentaire de déchiffrement (ADK :\nAdditional Decryption Keys) dans le certificat d'une clé publique a été\nintroduite avec la version 5.5 de PGP\n\nLe chiffrement des données par les versions 5.5.x jusqu'à 6.5.3 de PGP,\net utilisant un certificat modifié, génère un texte chiffré avec la clé\nADK.\n\nL'utilisateur malveillant qui a modifié un certificat peut, sous\ncertaines conditions, obtenir le texte clair correspondant.\n\nPGP ne détecte pas ce type de certificat modifié du fait d'une erreur\ndans son implémentation.\n",
+  "title": "Vulnérabilité sous PGP 5.5.x à 6.5.3",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2000-18 du CERT/CC",
+      "url": null
+    }
+  ]
+}

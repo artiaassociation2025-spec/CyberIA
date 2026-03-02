@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Adobe Reader et Acrobat 9.x à partir de la version 9.2 pour les systèmes UNIX.",
+      "product": {
+        "name": "Acrobat",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Adobe Reader et Acrobat 9.x à partir de la version 9.2 et 8.x à partir de la version 8.1.7, pour les systèmes Windows et Macintosh ;",
+      "product": {
+        "name": "Acrobat",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités permettent à un utilisateur malveillant d'exécuter\ndu code arbitraire :\n\n-   une corruption de la mémoire affecte uniquement les versions 9.x\n    d'Adobe Reader et d'Acrobat ;\n-   une autre corruption de la mémoire n'affecte qu'Adobe Reader.\n\nL'exploitation de ces vulnérabilités peut se faire à distance par\nl'intermédiaire des greffons dans les navigateurs.\n\n## Solution\n\nLa version 9.4.1 des deux logiciels remédie à ces problèmes.\n\nLe correctif pour Acrobat sur Unix sera publié le 30 novembre 2010.\n\nLe correctif pour la version 8 sera publié ultérieurement.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3654",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3654"
+    },
+    {
+      "name": "CVE-2010-4091",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4091"
+    }
+  ],
+  "links": [
+    {
+      "title": "Document du CERTA CERTA-2010-ALE-020 du 17 novembre 2010 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2010-ALE-020/index.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-551",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-11-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans Adobe Reader et Acrobat permettent à un\nutilisateur malveillant d'exécuter du code arbitraire. Leur exploitation\npeut se faire à distance par l'intermédiaire des greffons dans les\nnavigateurs.\n",
+  "title": "Vulnérabilités dans Adobe Reader et Acrobat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Adobe apsb10-28 du 16 novembre 2010",
+      "url": "http://www.adobe.com/support/security/bulletins/apsb10-28.html"
+    }
+  ]
+}

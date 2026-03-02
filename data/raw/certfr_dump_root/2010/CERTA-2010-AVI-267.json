@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ISC DHCP Server versions antérieures à la 4.1.1-P1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC DHCP Server versions antérieures à la 4.0.2-P1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans le traitement des requêtes DHCP contenant un\nparamètre client ID de taille zéro par ISC DHCP Server permet de\nprovoquer un déni de service à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2156",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2156"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-267",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-06-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans ISC DHCP Server permet à une personne\nmalintentionnée de provoquer de déni de service à distance.\n",
+  "title": "Vulnérabilité dans ISC DHCP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ISC CVE-2010-2156 du 01 juin 2010",
+      "url": "http://www.isc.org/software/dhcp/advisories/cve-2010-2156"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Linux Caldera",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Debian 2.2 (Potato)",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cette liste n'est pas exhaustive, contactez votre éditeur Linux pour savoir si votre version peut-être vulnérable.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RedHat 5.2, 6.0, 6.1, 6.2, 7.0",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Linux Conectiva",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Linux-Mandrake 7.2",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Une vulnérabilité concerne le module PHP 3.0.17 sous Linux RedHat.\n\n    Elle permet à un utilisateur mal intentionné d'arrêter le service\n    web de sa victime, à l'aide d'une requête de formulaire habilement\n    construite.\n\n-   Le cumul de PHP et MySQL dans le même paquetage implique un cumul de\n    vulnérabilités :\n\n    1.  Plusieurs vulnérabilités de MySQL 3.23.31 permettent à un\n        utilisateur mal intentionné d'effectuer un dépassement de\n        mémoire sur le serveur, d'obtenir les informations de\n        protections des données (mots de passe hachés). De plus les\n        fonctions de journalisation ne fonctionnent pas correctement.\n\n    2.  Une autre concerne tous les module PHP4 de la version 4.0.0 à\n        4.0.4 sous RedHat également.\n\n        Il s'agit d'une erreur qui s'est glissée lors du développement\n        du correctif concernant MySQL 3.23.31.\n\n    Il faut donc appliquer le correctif de PHP après celui de MySQL.\n\n-   Sous Linux-Mandrake, deux problèmes de sécurité sont à corriger :\n    -   Un utilisateur mal intentionné peut outrepasser les directives\n        associées à un répertoire en falsifiant une requête HTTP.\n    -   Il est aussi possible de mettre le « moteur PHP » en fonction ou\n        hors fonction à distance. Ce qui permet d'obtenir les sources de\n        n'importe quelle page web PHP même située sur un site virtuel\n        hébergé par le serveur vulnérable.\n\n## Solution\n\nAppliquer les correctifs de l'éditeur :\n\n-   Linux Mandrake\n\n        http://www.linux-mandrake.com/en/security/2001/MDKSA-2001-014-1.php3\n\n-   Debian 2.2 (Potato)\n\n        http://www.debian.org/security/2001/dsa-013\n\n-   Linux Conectiva\n\n        http://www.distro.conectiva.com.br/actualizacoes/?id=a&anuncio=000375\n\n-   RedHat\n\n        http://www.red-hat.com/mailing-lists/redhat-announce-http://www.securityfocus.com/bid/2205list/msg00218.html\n\n        http://www.red-hat.com/mailing-lists/redhat-announce-list/msg00217.html\n\n-   Linux Caldera\n\n        http://www.calderasystems.com/support/security/advisories/CSSA-2001-0060.txt\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Documentation Security-Focus",
+      "url": "http://www.securityfocus.com/bid/2205"
+    },
+    {
+      "title": "Documentation Mandrake :",
+      "url": "http://www.linux-mandrake.com/en/security/2001/mdk72-updates.php3"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-011",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-01-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Accès en lecture à des données non-autorisées"
+    }
+  ],
+  "summary": "Le module PHP version 3.0.17 et 4.0.0 à 4.0.4 d'apache contient de\nmultiples vulnérabilités, certaines étant liées à MySQL d'autres non,\ndans différentes éditions de Linux..\n",
+  "title": "Vulnérabilités de MySQL 3.23.31 et du module PHP d'apache sous Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité RedHat et Mandrake",
+      "url": null
+    }
+  ]
+}

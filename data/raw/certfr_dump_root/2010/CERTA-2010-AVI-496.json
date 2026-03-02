@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows Server 2008 R2 64 bits ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2008 R2 pour systèmes Itanium.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité existe dans la gestion des clusters de disques\npartagés sous Windows Server 2008 R2. Cette vulnérabilité s'applique\nuniquement au cluster de disques de basculement. Lors de l'ajout d'un\ndisque, le gestionnaire du cluster de basculement met des autorisations\npar défauts pouvant permettre, à un utilisateur malintentionné, de\nporter atteinte à l'intégrité et à la confidentialité des données.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). La mise à jour proposée par\nMicrosoft corrige la façon dont sont définies les permissions par\ndéfaut, mais pas les permissions existantes sur les clusters de disques\npartagés. Les administrateurs devront donc vérifier les permissions sur\nles clusters de disques existants une fois la mise à jour appliquée.\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3223",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3223"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-496",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-10-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le partage de <span class=\"textit\">cluster</span>\nde disques, sous Windows Server 2008 R2, peut être utilisée par un\nutilisateur malintentionné pour porter atteinte à l'intégrité et à la\nconfidentialité des données.\n",
+  "title": "Vulnérabilité dans le partage de cluster de disques sous Windows Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS10-086 du 12 octobre 2010",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-086.mspx"
+    }
+  ]
+}

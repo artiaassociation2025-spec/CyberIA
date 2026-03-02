@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Ports FreeBSD de FreeRadius versions 0.8.0 à 1.0.0.",
+      "product": {
+        "name": "FreeRADIUS",
+        "vendor": {
+          "name": "FreeRadius",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeRadius versions 1.x antérieures à la version 1.0.1 ;",
+      "product": {
+        "name": "FreeRADIUS",
+        "vendor": {
+          "name": "FreeRadius",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeRadius 0.x ;",
+      "product": {
+        "name": "FreeRADIUS",
+        "vendor": {
+          "name": "FreeRadius",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans le serveur\nd'authentification FreeRadius. Ces vulnérabilités permettent à un\nutilisateur mal intentionné de réaliser un déni de service du serveur\nd'authentification.\n\n## Solution\n\n-   Installer les sources de la version corrigée de FreeRadius :\n\n        ftp://ftp.freeradius.org/pub/radius/freeradius-1.0.1.tar.gz\n\n-   Mettre à jour le port ou le paquetage FreeBSD.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Secunia :",
+      "url": "http://secunia.com/advisories/12570/"
+    },
+    {
+      "title": "Note de vulnérabilité de l'US-CERT :",
+      "url": "http://www.kb.cert.org/vuls/id/541574"
+    },
+    {
+      "title": "Note de vulnérabilité FreeBSD du 13 octobre 2004 :",
+      "url": "http://www.vuxml.org/freebsd/20dfd134-1d39-11d9-9be9-000c6e8f12e.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-323",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2004-09-21T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de la note FreeBSD et des avis de Secunia et de l'US-CERT.",
+      "revision_date": "2004-10-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités sous FreeRadius",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeRadius",
+      "url": "http://www.freeradius.org/security.html"
+    }
+  ]
+}

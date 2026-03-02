@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD 6.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 7.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité est présente dans la gestion du changement de contexte\nentre espace utilisateur et espace noyau sur les systèmes FreeBSD pour\narchitecture amd64. Cette faille permet à un utilisateur local\nd'exécuter du code arbitraire dans le contexte du noyau en provoquant\nvolontairement un certain type d'erreur système de façon particulière.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3890",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3890"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-08:07.amd64 du 03 septembre    2008 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-08:07.amd64.asc"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-439",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-09-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérablité présente dans le noyau de FreeBSD permet à un\nutilisateur local d'exécuter du code arbitraire et d'élever ses\nprivilèges.\n",
+  "title": "Vulnérabilité du noyau FreeBSD pour plateforme amd64",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD FreeBSD-SA-08:07.amd64",
+      "url": null
+    }
+  ]
+}

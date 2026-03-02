@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions de NFS Utils antérieures ou égales à la  version 1.0.3.</P>",
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire à été découverte dans\nla fonction de journalisation `xlog` utilisée par le démon `mountd`. Un\nutilisateur mal intentionné peut exploiter cette vulnérabilité afin\nd'exécuter du code arbitraire à distance ou d'effectuer un déni de\nservice à l'aide de requêtes RPC malicieusement formées.\n\n## Solution\n\nAppliquer le correctif suivant l'éditeur (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-109",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-15T00:00:00.000000"
+    },
+    {
+      "description": "rectification du numero de la version vulnerable.",
+      "revision_date": "2003-07-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin Mandrake.",
+      "revision_date": "2003-07-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans le démon `mountd` de NFS Utils.\n",
+  "title": "Vulnérabilité dans nfs-utils",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #RHSA-2003:206-01 de RedHat",
+      "url": "http://www.redhat.com/support/errata/RHSA-2003-206.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #DSA 349-1 de Debian",
+      "url": null
+    }
+  ]
+}

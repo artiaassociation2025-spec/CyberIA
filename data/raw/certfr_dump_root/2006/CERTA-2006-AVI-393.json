@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>CISCO IOS version 12.x et versions  inférieures disposant du VTP (VLAN Trunking Protocol)</p>",
+  "content": "## Description\n\nTrois vulnérabilités ont été découvertes dans le module VTP de CISCO IOS\n:\n\n-   la première peut être exploitée par l'envoi de paquets malformés,\n    afin de provoquer un déni de service ;\n-   la deuxième est due à une faille de type débordement d'espace\n    mémoire, et peut être exploitée par un utilisateur mal intentionné\n    afin d'exécuter du code arbitraire à distance sur l'équipement\n    vulnérable ;\n-   la troisième vulnérabilité est présente au niveau de la validation\n    des numéros de révision, ce qui pourrait être exploitée pour\n    empêcher la mise à jour de l'équipement vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 71306 du :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sr-20060913-vtp.shtml"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-393",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-09-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités, permettant l'exécution de code arbitraire à\ndistance et/ou de provoquer un déni de service, ont été découvertes dans\nle module VTP (VLAN Trunking Protocol)\n",
+  "title": "Multiples vulnérabilités dans CISCO IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO du 13 septembre 2006",
+      "url": null
+    }
+  ]
+}

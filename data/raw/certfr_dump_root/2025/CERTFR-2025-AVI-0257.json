@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mail Server versions antérieures à 1.7.6-10676 pour DSM 7.1",
+      "product": {
+        "name": "Mail Server",
+        "vendor": {
+          "name": "Synology",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mail Server versions antérieures à 1.7.6-20676 pour DSM 7.2",
+      "product": {
+        "name": "Mail Server",
+        "vendor": {
+          "name": "Synology",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-2848",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-2848"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0257",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-03-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Synology Mail Server. Elle permet à un attaquant de provoquer une atteinte à la confidentialité des données, une atteinte à l'intégrité des données et un contournement de la politique de sécurité.",
+  "title": "Vulnérabilité dans Synology Mail Server",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-03-27",
+      "title": "Bulletin de sécurité Synology Synology_SA_25_05",
+      "url": "https://www.synology.com/fr-fr/security/advisory/Synology_SA_25_05"
+    }
+  ]
+}

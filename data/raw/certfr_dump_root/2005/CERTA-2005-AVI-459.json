@@ -1,0 +1,79 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Check Point Express CI R57,",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Check Point",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VPN-1 Pro NGX R60,",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Check Point",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Firewall-1 GX 3.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Check Point",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VPN-1/Firewall-1 NG AI R54, R55, R55W, R55P,",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Check Point",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nIKE est un protocole utilisé pour la négotiation des associations de\nsécurité pour IPsec. Une erreur dans le code de vpnd le rend vulnérable\nà une attaque en déni de service.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité de l'UNIRAS 273756/NISCC/ISAKMP du 14    novembre 2005 :",
+      "url": "http://www.uniras.gov.uk/niscc/docs/br-20051114-01013.html"
+    },
+    {
+      "title": "Bulletin de sécurité CheckPoint sk31316 du 16 novembre 2005    :      http://secureknowledge.us.checkpoint.com/SecureKnowledge/login.do?id=sk31316",
+      "url": "http://secureknowledge.us.checkpoint.com/SecureKnowledge/viewSolutionDocument.do?id=sk31316"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-459",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service distant"
+    }
+  ],
+  "summary": "Un utilisateur distant mal intentionné peut initier une négociation IKE\nvolontairement mal formée qui va provoquer l'arrêt du service concerné,\nvpnd.\n",
+  "title": "Vulnérabilité du service vpnd de VPN-1/Firewall-1",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité 273756/NISCC/ISAKMP de l'UNIRAS",
+      "url": null
+    }
+  ]
+}

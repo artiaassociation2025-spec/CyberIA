@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions de Windows 2000.</P>",
+  "content": "## Description\n\n-   Les deux premières vulnérabilités proviennent d'un problème dans la\n    gestion des sessions telnet.\n\n    L'ouverture d'une session telnet crée un « tube nommé » (FIFO) dont\n    le nom est prévisible et utilisable par n'importe quel programme qui\n    lui est associé.\n\n    Le service telnet fonctionne avec les privilèges de Local System et\n    utilise ce tube sans plus de vérifications dans ce contexte de\n    sécurité.\n\n    Un utilisateur mal intentionné ayant le droit d'exécuter du code sur\n    le serveur peut développer un programme qui crée un tel tube nommé\n    afin que le service telnet l'utilise lors de la prochaine session\n    telnet, ou bien un programme auquel il associe le tube nommé qui\n    sera créé lors de la prochaine ouverture de session telnet.\n\n    Dans les deux cas, l'utilisateur mal intentionné exécute son\n    programme dans le contexte de sécurité de Local System.\n\n-   Les quatre suivantes permettent d'empêcher le service telnet de\n    fonctionner correctement.\n    -   Un utilisateur mal intentionné peut, en créant un nombre\n        suffisant de sessions inactives, empêcher le service d'arrêter\n        ce type de session quelqu'en soit le propriétaire.\n    -   Il est aussi possible, en démarrant puis arrêtant successivement\n        et rapidement suffisamment de sessions, d'empêcher le service de\n        traiter les sessions effectives.\n    -   Un utilisateur mal intentionné peut aussi créer une « violation\n        d'accès » en envoyant une commande de logon habilement\n        construite.\n    -   Enfin, un appel système ayant pour effet d'arrêter une session\n        telnet peut être effectué avec les privilèges d'un utilisateur\n        normal.\n\n-   Un utilisateur mal intentionné peut facilement détecter la présence\n    d'un compte invité s'il est activé, en se connectant au serveur\n    Windows 2000 comme un utilisateur de domaine au lieu de s'identifier\n    comme un utilisateur local.\n\n## Contournement provisoire\n\n-   Afin d'éviter une élévation de privilèges via la vulnérabilité du «\n    tube nommé », ainsi que le déni de service par l'appel système\n    particulier, il faut interdire tout utilisateur d'exécuter du code\n    sur tous les serveur.\n-   Désactiver le compte invité dont le mot de passe par défaut est\n    facile à connaître.\n\n## Solution\n\nAppliquer le correctif de Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=30508\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms01-031.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-060",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-06-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités du service telnet sous Windows 2000 permettent à un\nutilisateur mal intentionné d'élever ses privilèges.\n\nQuatre autres vulnérabilités permettent d'effectuer un déni de service.\n\nEnfin la dernière vulnérabilité permet à un utilisateur mal intentionné\nd'obtenir d'un serveur des informations auxquelles il n'a normalement\npas le droit d'accéder.\n",
+  "title": "Multiples vulnérabilités du service telnet sous Windows 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de Sécurité Microsoft MS01-031",
+      "url": null
+    }
+  ]
+}

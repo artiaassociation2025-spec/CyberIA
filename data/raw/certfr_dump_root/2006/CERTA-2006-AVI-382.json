@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Webmin versions antérieures à 1.296 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Usermin versions antérieures à 1.226.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans le traitement des adresses réticulaires (URL)\npermet de réaliser des attaques de type cross-site scripting ou\nd'afficher le code source de certains scripts perl ou CGI.\n\n## Solution\n\nMettre à jour en version 1.296 (Webmin) et 1.226 (Usermin). Il s'agit\npour le moment de versions de développement (voir Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4542",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4542"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-1199 du 23 octobre 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1199"
+    },
+    {
+      "title": "Versions de développement 1.296 de Webmin et 1.226 de    Usermin :",
+      "url": "http://download.webmin.com/devel/tarballs/"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-382",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2006-09-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin Debian et de la référence CVE.",
+      "revision_date": "2006-10-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Cross-site scripting"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans Webmin et Usermin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Webmin",
+      "url": "http://www.webmin.com/security.html"
+    }
+  ]
+}

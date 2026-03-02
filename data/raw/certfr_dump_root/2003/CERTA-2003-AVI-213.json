@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Cisco ACNS versions 4.2.10 et antérieures ;</LI>    <LI>Cisco ACNS versions 5.0.4 et antérieures.</LI>  </UL>  <P>Les produits affectés sont les suivants :</P>  <UL>    <LI>Content Routers séries 4400 ;</LI>    <LI>Content Distribution Manager séries 4600 ;</LI>    <LI>Content Engine séries 500 et 7300 ;</LI>    <LI>Content Engine Module for Cisco Routers séries 2600, 3600    et 3700.</LI>  </UL>",
+  "content": "## Description\n\nUne vulnérabilité dans le module d'authentification du logiciel Cisco\nACNS permet à un utilisateur mal intentionné d'arrêter le système ou de\nprendre à distance le contrôle du système, en entrant un mot de passe\nparticulièrement long.\n\n## Contournement provisoire\n\nDésactiver l'interface graphique du serveur (GUI) : no gui-server enable\n\n## Solution\n\nSe référer au bulletin de sécurité du constructeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de Cisco :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20031210-ACNS-auth.shtml"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-213",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-12-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le module d'authentification du logiciel Cisco\nACNS (Application and Content Networking System) permet à un utilisateur\nmal intentionné de réaliser un déni de service ou d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilité de Cisco ACNS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco",
+      "url": null
+    }
+  ]
+}

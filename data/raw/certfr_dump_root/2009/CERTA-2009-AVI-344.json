@@ -1,0 +1,47 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Cisco IOS XR avec gestion du routage  BGP activée.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent le traitement BGP de Cisco IOS XR :\n\n-   le traitement défectueux d'un message BGP anormalement long de mise\n    à jour de routage provoque un arrêt inopiné du processus BGP. Ce\n    défaut permet à un utilisateur malveillant de provoquer un déni de\n    service à distance ;\n-   le traitement défectueux d'un message BGP de mise à jour de routage\n    malformé provoque un arrêt de la négociation BGP. Ce défaut permet à\n    un utilisateur malveillant de provoquer un déni de service à\n    distance ;\n-   le traitement défectueux d'un message BGP de mise à jour de routage\n    avec un nombre élevé d'AS provoque un arrêt inopiné du processus\n    BGP. Ce défaut permet à un utilisateur malveillant de provoquer un\n    déni de service à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2056",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2056"
+    },
+    {
+      "name": "CVE-2009-1154",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1154"
+    },
+    {
+      "name": "CVE-2009-2055",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2055"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20090818-bgp du 18 août 2009 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20090818-bgp.shtml"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-344",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent le traitement BGP de Cisco IOS XR et\npermettent à un utilisateur malveillant de provoquer un déni de service\nà distance.\n",
+  "title": "Vulnérabilités de Cisco IOS XR",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisci-sa-20090818-bgp du 18 août 2009",
+      "url": null
+    }
+  ]
+}

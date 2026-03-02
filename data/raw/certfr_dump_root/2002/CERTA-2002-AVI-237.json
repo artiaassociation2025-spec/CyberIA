@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions suivantes de Solaris pour Sparc et Intel sont  vulnérables :</P>  <UL>    <LI>Solaris 2.6 ;</LI>    <LI>Solaris 7 ;</LI>    <LI>Solaris 8.</LI>  </UL>",
+  "content": "## Description\n\nUn utilisateur mal intentionné peut engendrer un déni de service en\nenvoyant massivement des paquets TCP ACK (Acknowledge) sur la machine\nvictime.\n\nCelle-ci emploiera trop de ressources lors du traitement de la réponse à\nces paquets (réponse par des paquets TCP reset (RST)) pouvant entraîner\nun gel de la machine.\n\n## Contournement provisoire\n\nInstaller un firewall à états sur le système ou en amont du réseau à\nprotéger.\n\n## Solution\n\nConsulter le bulletin de sécurité du système concerné (voir paragraphe\nDocumentation) afin de connaître la disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-237",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service (consommation des ressources)"
+    }
+  ],
+  "summary": "Il est possible de consommer toutes les ressources du système à distance\ngrâce à l'envoi massif de paquets TCP sur la machine cible.\n",
+  "title": "Vulnérabilité de la pile TCP sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #48209 de Sun",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F48209"
+    }
+  ]
+}

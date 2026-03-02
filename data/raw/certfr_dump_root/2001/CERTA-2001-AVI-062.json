@@ -1,0 +1,35 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de xinetd  antérieures à 2.1.8.9pre15.  <P>Distributions RedHat 7.0 et RedHat 7.1.</P></p>",
+  "content": "## Description\n\nLe service xinetd (eXtended InterNET services Daemon) est le successeur\ndu service inetd.\n\nCe service contôle le démarrage d'autres services (ftpd, telnetd ...).\n\n## 4.1 Débordement mémoire dans xinetd.\n\nXinetd permet d'enregistrer, après l'interrogation du service identd de\nla machine distante, l'identité de l'utilisateur accédant aux différents\nservices.\n\nUn utilisateur mal intentionné peut utiliser sur sa machine un service\nidentd forgeant une réponse qui provoquera un débordement mémoire sur le\nservice xinetd distant .\n\nSi aucune exploitation de cette vulnérabilité n'a été publiée en vue de\nl'obtention du privilège root à distance, l'occurence d'un débordement\nmémoire peut toutefois entraîner l'arrêt intempestif du service xinetd,\nempêchant de ce fait le démarrage des services gérés par ce dernier.\n\n## 4.2 Mauvais positionnement des droits d'accès par défaut.\n\nDans les distributions Redhat 7.0 et 7.1, xinetd utilise le masque par\ndéfaut umask 0.\n\nLes services démarrés par xinetd et qui ne positionnent pas eux-même les\ndroits d'accès aux fichiers créés, vont créer des fichiers avec les\ndroits de lecture et d'écriture pour tout le monde.\n\n## Solution\n\nTélécharger le correctif disponible sur le site de RedHat :\n\n-   ftp://updates.redhat.com/7.0/en/os/SRPMS/xinetd-2.1.8.9pre15-2.src.rpm\n\n-   ftp://updates.redhat.com/7.1/en/os/SRPMS/xinetd-2.1.8.9pre15-2.src.rpm\n\nCe paquetage contient la nouvelle version d'xinetd (version Xinetd\n2.1.8.9pre15) et corrige aussi le problème lié au positionnement des\ndroits d'accès par défaut.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-062",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-06-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Obtention du privilèges root à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Compromission de données"
+    }
+  ],
+  "summary": "Un débordement de mémoire dans le serveur xinetd permet à un utilisateur\nmal intentionné de provoquer un déni de service (arrêt brutal du\nprocessus) voire d'exécuter du code à distance.\n\nEn outre, dans le paquetage d'installation de la distribution RedHat\n(Redhat 7.0 et RedHat 7.1), un mauvais positionnement des droits d'accès\npar défaut peut entraîner, dans certains cas, la possibilité de lire ou\nde modifier des fichiers générés par les services démarrés au moyen de\nxinetd.\n",
+  "title": "Vulnérabilité de Xinetd",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité RHSA-2001:075-05",
+      "url": null
+    }
+  ]
+}

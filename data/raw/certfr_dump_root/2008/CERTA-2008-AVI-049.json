@@ -1,0 +1,87 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SAP GUI pour Windows 7.00 n'ayant pas le niveau de correctif 6.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SAP GUI pour Windows 6.20 n'ayant pas le niveau de correctif 72 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Le programme SAP SAPSprint dont les versions sont antérieures à 1018 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SAP GUI pour Windows 6.40 n'ayant pas le niveau de correctif 30 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "SAP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans le démon SAPlpd dédié\nà l'impression et mis en œuvre dans des produits SAP comme SAP GUI pour\nWindows, ou SAPSprint.\n\nElles concernent de mauvaises implémentations liées aux fonctions\nmemcpy, sprintf ou strcpy.\n\nL'exploitation de certaines d'entre elles permettent à une personne\nmalveillante distante d'exécuter du code arbitraire sur le système\nvulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0620",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0620"
+    },
+    {
+      "name": "CVE-2008-0621",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0621"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site de mise à jour SAP :",
+      "url": "http://www.sap.com/index.epx"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-049",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans le démon SAPlpd dédié\nà l'impression et mis en œuvre dans des produits SAP. L'exploitation de\ncertaines d'entre elles permettent à une personne malveillante distante\nd'exécuter du code arbitraire sur le système vulnérable.\n",
+  "title": "Vulnérabilité dans des produits SAP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de suivi SAP 1138934",
+      "url": null
+    }
+  ]
+}

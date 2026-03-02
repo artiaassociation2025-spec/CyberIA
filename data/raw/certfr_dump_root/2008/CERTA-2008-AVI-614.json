@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD 6.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 6.4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 7.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn manque de contrôle sur certains paramètres utilisés dans la mise en\nœuvre de ressources réseau (sockets) est présent dans le noyau du\nsystème d'exploitation FreeBSD. Cette vulnérabilité permet à un\nutilisateur local malintentionné d'exécuter du code arbitraire dans le\ncontexte du noyau. Ce faisant, il lui est possible d'élever ses\nprivilèges.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-08-13 du 23 décembre 2008 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-08-13.protosw.asc"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-614",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-12-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le noyau de FreeBSD permet à un\nutilisateur local malintentionné d'élever ses privilèges et d'exécuter\ndu code arbitraire.\n",
+  "title": "Vulnérabilité du noyau FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD-SA-08:13.protosw.asc",
+      "url": null
+    }
+  ]
+}

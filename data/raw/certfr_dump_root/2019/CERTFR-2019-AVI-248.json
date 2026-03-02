@@ -1,0 +1,87 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "TelePresence VCS configuré pour mobile et accès distant avec le service IM&P versions X8.1 à X12.5.2",
+      "product": {
+        "name": "TelePresence VCS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Expressway configuré pour mobile et accès distant avec le service IM&P versions X8.1 à X12.5.2",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Industrial Network Director versions antérieures à 1.6.0",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Service Unified Communications Manager IM&P",
+      "product": {
+        "name": "Unified Communications Manager",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2019-1861",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-1861"
+    },
+    {
+      "name": "CVE-2019-1845",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-1845"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2019-AVI-248",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2019-06-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Cisco.\nElles permettent à un attaquant de provoquer une exécution de code\narbitraire à distance et un déni de service à distance.\n",
+  "title": "Multiples vulnérabilités dans les produits Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-20190605-cucm-imp-dos du 05 juin 2019",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190605-cucm-imp-dos"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco cisco-sa-20190605-ind-rce du 05 juin 2019",
+      "url": "https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190605-ind-rce"
+    }
+  ]
+}

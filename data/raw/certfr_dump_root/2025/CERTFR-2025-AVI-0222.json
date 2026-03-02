@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Server versions 7.x antérieures à 7.0.16",
+      "product": {
+        "name": "Server",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Server versions 8.x antérieures à 8.0.1",
+      "product": {
+        "name": "Server",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "libbson versions antérieures à 1.27.5",
+      "product": {
+        "name": "libbson",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-0755",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-0755"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0222",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-03-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans MongoDB C Driver. Elle permet à un attaquant de provoquer un déni de service.",
+  "title": "Vulnérabilité dans MongoDB C Driver",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-03-18",
+      "title": "Bulletin de sécurité MongoDB SERVER-94461",
+      "url": "https://jira.mongodb.org/browse/SERVER-94461"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "iPlanet WebServer 4.1 SP9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Netscape Enterprise Server 3.6.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "iPlanet WebServer 6.0 SP2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité sur la fonction de recherche iPlanet Search (inactive\npar défaut) permet à un utilisateur mal intentionné d'exécuter du code\narbitraire avec les privilèges de l'utilisateur propriétaire du\nprocessus. Cette vulnérabilité, qui ne concerne pas Netscape Entreprise\nServer, est exploitable à distance par l'envoi de données trop\nimportante à la variable NS-rel-doc-name.\n\nUne seconde vulnérabilité sur la variable NS-query-pat permet à un\nutilisateur mal intentionné, par le biais de requêtes spécifiques,\nd'accéder à des informations protégées du système.\n\n## Contournement provisoire\n\nDésactiver la fonction de recherche iPlanet Search.\n\n## Solution\n\nInstaller le correctif correspondant à votre serveur web (cf section\ndocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctif disponible sur le site de sun à l'adresse",
+      "url": "http://wwws.sun.com/software/download/inter_econ.html#webs"
+    },
+    {
+      "title": "iPlanet Webserver 6.0 SP3 disponible sur",
+      "url": "http://docs.iplanet.com/docs/manuals/enterprise/60sp3/rn60sp3.html"
+    },
+    {
+      "title": "iPlanet Webserver 4.1 SP10 disponible sur",
+      "url": "http://docs.iplanet.com/docs/manuals/enterprise/41/rn41sp10.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-146",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-07-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Divulgation de données"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes sur iPlanet Webserver, dont une sur\nNetscape Enterprise, permettent à un utilisateur mal intentionné\nd'accéder à des données protégées du système ou d'exécuter du code\narbitraire avec les privilèges de l'utilisateur exécutant l'application.\n",
+  "title": "Vulnérabilités sur iPlanet Webserver",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité NGSSoftware",
+      "url": "http://www.ngssoftware.com/advisories/sun-iws.txt"
+    }
+  ]
+}

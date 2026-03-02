@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Scrollkeeper versions 3.0 à 3.11.</p>",
+  "content": "## Description\n\nScrollkeeper est une application permettant de gérer la documentation\nd'un système. Scrollkeeper est utilisée depuis des applications telles\nle navigateur khelpcenter (aide en ligne sous KDE) ou nautilus\n(gestionnaire de fichiers sous GNOME 1.4).\n\n  \nL'exécutable /usr/bin/scrollkeepr-get-cl crée des fichiers temporaires\navec des noms prédictibles. Sous certaines conditions, un utilisateur\nmal intentionné peut exploiter cette vulnérabilité pour corrompre\nn'importe quel fichier du système. Cette vulnérabilité ne peut être\nexploitée que par un utilisateur possédant un compte local.\n\n## Solution\n\nDes mises à jour sont disponibles sous forme de paquetages pour les\ndistributions Linux (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Projet scrollkeeper :",
+      "url": "http://sourceforge.net/projects/scrollkeeper"
+    },
+    {
+      "title": "Bulletin de sécurité DSA-160 de Debian :",
+      "url": "http://www.debian.org/security/2002/dsa-160"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-200",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-09-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Corruption de fichiers"
+    }
+  ],
+  "summary": "En exploitant une vulnérabilité présente dans l'application\nscrollkeeper, un utilisateur local peut corrompre n'importe quel fichier\ndu système.\n",
+  "title": "Vulnérabilité de scrollkeeper",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RHSA-2002:186 de Red Hat",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-166.html"
+    }
+  ]
+}

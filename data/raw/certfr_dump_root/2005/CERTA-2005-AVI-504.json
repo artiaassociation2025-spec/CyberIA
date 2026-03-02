@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système Unix utilisant le service <TT>racoon</TT>, inclus  dans les <TT>ipsec-tools</TT> dans une version source antérieure  à 0.6.3.</P>",
+  "content": "## Description\n\nipsec-tools est une solution IPsec pour système d'exploitation Unix.\n\nUne faille dans le gestionnaire racoon des associations de sécurité peut\nêtre exploitée pour provoquer un déni de service lorsque la négociation\nen mode agressif est configurée.\n\n## Solution\n\nMettre à jour les sources en version 0.6.3 au moins ou se référer au\nbulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf.\nsection Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA-965 du 6 février 2006",
+      "url": "http://www.debian.org/security/security/2006/dsa-965"
+    },
+    {
+      "title": "Site internet des ipsec-tools :",
+      "url": "http://ipsec-tools.sourceforge.net"
+    },
+    {
+      "title": "Alerte de l'UNIRAS Id:20051114-01013 du 14 novembre 2005 :",
+      "url": "http://www.uniras.gov.uk/niscc/docs/br-20051114-01013.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:020 du 25 janvier    2006 :",
+      "url": "http://frontal2.mandriva.com/security/advisories?name=MDKSA-2006:020"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200512-04 du 12 décembre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200512-04.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-221-1 du 01 décembre 2005 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-221-1"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2005:070 du 20 décembre    2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_70_ipsec.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-504",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-12-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva.",
+      "revision_date": "2006-01-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian.",
+      "revision_date": "2006-02-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut envoyer des paquets volontairement\nmal formés au service racoon pour provoquer son arrêt et empêcher ainsi\nl'établissement de toute nouvelle connexion.\n",
+  "title": "Vulnérabilité du paquetage ipsec-tools",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité 273756/NISCC/ISAKMP de l'UNIRAS",
+      "url": null
+    }
+  ]
+}

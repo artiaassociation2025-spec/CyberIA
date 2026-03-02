@@ -1,0 +1,33 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>mod_ssl</TT> versions 2.x  antérieures à la version 2.8.4.",
+  "content": "## Description\n\nmod_ssl est un module pour le serveur web apache destiné à assurer les\nfonctions de cryptographie de ce serveur.\n\nUne vulnérabilité présente sur ce module permet à un utilisateur mal\nintentionné d'accèder à des pages Internet non autorisées. Cette\nvulnérabilité est due à un problème dans la vérification des certificats\nclient.\n\n## Contournement provisoire\n\nMettre à jour le module avec la version 2.8.24.\n\n## Solution\n\n-   Site Internet de mod_ssl :\n\n        http://www.modssl.org/\n\n-   Mise à jour de mod_ssl :\n\n        http://www.modssl.org/source/mod_ssl-2.8.24-1.3.33.tar.gz\n\n-   Bulletin de sécurité SUSE SuSE-SA:2005:051 du 12 septembre 2005 :\n\n        http://www.novell.com/linux/security/advisories/2005_51_apache2.html\n\n-   Debian Linux :\n    -   Bulletin de sécurité Debian DSA-805 du 08 septembre 2005\n        (apache2) :\n\n            http://www.debian.org/security/2005/dsa-805\n\n    -   Bulletin de sécurité Debian DSA-807 du 12 septembre 2005\n        (libapache-mod-ssl) :\n\n            http://www.debian.org/security/2005/dsa-807\n\n-   Bulletin de sécurité Mandriva MDKSA-2005:161 du 08 septembre 2005 :\n\n        http://www.mandriva.com/security/advisories?name=MDKSA-2005:161\n\n-   Bulletins de sécurité Red Hat Linux RHSA-2005-773 du 15 septembre\n    2005 :\n\n        http://rhn.redhat.com/errata/RHSA-2005-773.html\n\n-   Bulletin de sécurité Gentoo GLSA-200509-12 du 19 septembre 2005 :\n\n        http://www.gentoo.org/security/en/glsa/glsa-200509-12.xml\n\n-   Référence CVE CAN-2005-2700 :\n\n        https://www.cve.org/CVERecord?id=CAN-2005-2700\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2005-AVI-331",
+  "revisions": [
+    {
+      "description": "version initiale :",
+      "revision_date": "2005-09-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins de sécurité SuSE, RedHat, Mandriva, Gentoo, Debian et de la référence CVE.",
+      "revision_date": "2005-09-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement des règles de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans mod_ssl",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Site Internet de mod_ssl",
+      "url": null
+    }
+  ]
+}

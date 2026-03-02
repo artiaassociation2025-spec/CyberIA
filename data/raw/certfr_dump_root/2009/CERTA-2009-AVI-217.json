@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Microsoft Windows, toutes versions.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent le gestionnaire de files d'impression\nde Microsoft Windows (Print Spooler) :\n\n-   CVE-2009-0228 : une erreur de type débordement de zone mémoire est\n    exploitable par un utilisateur malveillant, non authentifié, pour\n    exécuter du code arbitraire sur l'ordinateur vulnérable ;\n-   CVE-2009-0229 : un défaut permet à un utilisateur malveillant, local\n    et authentifié, sans devoir disposer de droits adminsitrateur, de\n    lire ou d'imprimer tout fichier sur le système vulnérable ;\n-   CVE-2009-0230 : un défaut dans la gestion des droits permet à un\n    utilisateur malveillant, authentifié, d'élever ses privilèges puis\n    de prendre le contrôle de l'ordinateur vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0229",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0229"
+    },
+    {
+      "name": "CVE-2009-0228",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0228"
+    },
+    {
+      "name": "CVE-2009-0230",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0230"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-217",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-06-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent le gestionnaire de files d'impression\nde Microsoft Windows permettant à un utilisateur malveillant d'exécuter\ndu code arbitraire à distance, d'accéder à des informations sensibles ou\nd'élever ses privilèges.\n",
+  "title": "Vulnérabilités dans le gestionnaire de files d'impression de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS09-022 du 09 juin 2009",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-022.mspx"
+    }
+  ]
+}

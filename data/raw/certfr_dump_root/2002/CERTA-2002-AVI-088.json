@@ -1,0 +1,56 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Sudo versions 1.6.5 et antérieures.</P>",
+  "content": "## Description\n\nLa commande sudo permet de donner les droits de l'administrateur root à\ncertains utilisateurs du système pour exécuter certaines commandes\nparticulières.\n\nIl est possible d'exécuter la commande sudo avec l'option -p, pour\nspécifier le prompt de mot passe devant être affiché. En choisissant\nhabilement le paramètre de cette option, un utilisateur local mal\nintentionné peut provoquer un débordement de mémoire qui peut être\nexploité pour exécuter du code arbitraire avec les droits de\nl'administrateur.\n\n## Contournement provisoire\n\nRetirer le bit suid de la commande /usr/bin/sudo.\n\n## Solution\n\nInstaller la version 1.6.6 disponible sur le site de Sudo, ou appliquer\nle correctif de votre éditeur.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2002:028 :",
+      "url": "http://www.linux-mandrake.com/en/security/"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2002:072-07 :",
+      "url": "http://www.redhat.com/apps/support/errata/"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-128-1 :",
+      "url": "http://www.debian.org/security/"
+    },
+    {
+      "title": "Site de Sudo :",
+      "url": "http://www.sudo.ws"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-088",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-04-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut exploiter une vulnérabilité de la\ncommande <span class=\"textit\">sudo</span> pour obtenir les droits de\nl'administrateur <span class=\"textit\">root</span>.\n",
+  "title": "Vulnérabilité de sudo",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Mandrake MDKSA-2002:028",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Red Hat RHSA-2002:072-07",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Debian DSA-128-1",
+      "url": null
+    }
+  ]
+}

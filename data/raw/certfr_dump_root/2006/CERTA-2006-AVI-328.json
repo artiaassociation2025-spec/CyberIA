@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>GnuPG / gpg version 1.4.4 et versions antérieures.</P>",
+  "content": "## Description\n\nUne vulnérabilité causée par une erreur dans le traitement des messages\nfournis en entrée permet de réaliser un déni de service en consommant\nles ressources du processeur ou en causant l'arrêt brutal de\nl'application. Cette vulnérabilité a été découverte dans le fichier\nparse_packet.c. Elle peut être exploitée par un utilisateur mal\nintentionné au moyen d'un message contenant des chaînes extrêmement\nlongues.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3746",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3746"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 1141 du 04 août 2006:",
+      "url": "http://www.debian.org/security/2006/dsa-1141"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0615 du 02 août 2006    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0615.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1140 du 03 août 2006:",
+      "url": "http://www.debian.org/security/2006/dsa-1140"
+    },
+    {
+      "title": "Bulletinde sécurité Mandriva MDKSA-2006:141",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:141"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-332-1 du 03 août 2006 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-332-1"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-328",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2006-08-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Mandriva.",
+      "revision_date": "2006-08-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans GnuPG permet à un utilisateur distant de\nprovoquer un déni de service à distance.\n",
+  "title": "Vulnérabilité dans GnuPG",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-1140 du 03 août 2006",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Systèmes Unix suivants :</P>  <UL>    <LI>OpenBSD jusqu'à 3.2 ;</LI>    <LI>SuSE Linux jusqu'à 7.3 ;</LI>    <LI>Debian Linux versions 2.2 et 3.0 ;</LI>    <LI>Mandrake Linux jusqu'à 8.2.</LI>  </UL>",
+  "content": "## Description\n\nUn débordement de mémoire dans le programme lprm (suppression d'un\ntravail d'impression dans la file d'attente) permet d'injecter du code\narbitraire qui sera alors exécuté avec des privilèges élevés, le binaire\nayant les droits root ou daemon.\n\n## Contournement provisoire\n\nSupprimer les droits \\`\\`suid'' de la commande lprm en l'absence de\ncorrectif (son usage sera alors restreint).\n\n## Solution\n\nAppliquer le correctif de l'éditeur :\n\n-   OpenBSD :\n\n        http://www.openbsd.org/errata.html\n\n-   SuSE Linux :\n\n        http://www.suse.com/de/security/2003_014_lprold.html\n\n-   Debian Linux :\n\n        http://www.debian.org/security/2003/dsa-267\n\n-   Mandrake Linux :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:059\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-046",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la distribution Debian et de la référence CVE.",
+      "revision_date": "2003-03-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la distribution Mandrake.",
+      "revision_date": "2003-05-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une faille dans la commande <span class=\"textit\">lprm</span> permet à un\nutilisateur local d'obtenir les droits avec lesquels s'éxécute la\ncommande (<span class=\"textit\">root</span> ou utilisateur privilégié\n<span class=\"textit\">daemon</span>).\n",
+  "title": "Faille dans le système d'impression lpr",
+  "vendor_advisories": []
+}

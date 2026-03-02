@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><TT>Internet Explorer</TT>, <TT>Outlook</TT> et <TT>Outlook  Express</TT> avec le greffon <TT>I-Nav</TT> de  <TT>Verisign</TT>.</P>",
+  "content": "## Description\n\nI-Nav est un contrôle ActiveX rajoutant le support des noms de domaines\ninternationaux (IDN - « Internationalized Domain Names »). Ceci permet\nd'avoir des noms de domaines qui ne sont plus limités à l'ASCII 7 bits\nmais utilisant divers alphabets, et en particulier les caractères\naccentués dans le cas du français. Verisign a développé un greffon pour\najouter le support IDN à Internet Explorer, Outlook et Outlook Express.\nUne absence de vérification dans une fonction du contrôle permet de\nfaire exécuter du code arbitraire, dans le cas où l'utilisateur mal\nintentionné a réussit à emmener sa victime sur son site malveillant.\n\n## Solution\n\nSe référer au site de l'éditeur pour l'obtention d'une version corrigée\n(cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2273",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2273"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site internet de i-Nav :",
+      "url": "http://www.idnnow.com"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-202",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-05-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une mauvaise validation dans le contrôle ActiveX I-Nav permet à un\nutilisateur mal intentionné de faire exécuter du code arbitraire aux\nvisiteurs d'un site web sous son contrôle.\n",
+  "title": "Vulnérabilité du contrôle ActiveX I-Nav de Verisign",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Zero Day Initiative",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-06-014.html"
+    }
+  ]
+}

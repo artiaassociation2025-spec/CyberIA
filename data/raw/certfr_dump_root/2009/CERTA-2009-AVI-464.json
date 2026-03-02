@@ -1,0 +1,167 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMware ESX version 3.5 sans les mises à jour ESX350-200910401-SG et ESX350-200901401-SG;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESXi version 4.0 sans la mise à jour ESXi400-200909401-BG ;",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESX version 2.5.5 sans la mise à jour numéro 15;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESXi version 3.5 sans les mises à jour ESXe350-200910401-l-SG et ESXe350-200901401-l-SG;",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESX version 4.0 sans la mise à jour ESX400-200909401-BG;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Player version 2.5.2 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ACE version 2.5.2 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESX version 3.0.3 sans les mises à jour ESX303-200910401-SG et ESX350-200901401-SG;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Fusion version 2.0.5 et versions antérieures ;",
+      "product": {
+        "name": "Fusion",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Server version 1.0.9 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Workstation version 6.5.2 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware Server version 2.0.1 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans les produits VMware :\n\n-   la première est due à une mauvaise gestion des exceptions et permet\n    à un utilisateur malintentionné d'élever ses privilèges ;\n-   la seconde consiste en une vulnérabilité de type directory traversal\n    et permet à un utilisateur malintentionné d'accéder à des fichiers\n    stockés sur la machine hôte.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3733",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3733"
+    },
+    {
+      "name": "CVE-2009-2267",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2267"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité VMware numéro VMSA-2009-0015 du 27    octobre 2009 :",
+      "url": "http://www.vmware.com/security/advisories/VMSA-2009-0015.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-464",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-10-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités permettant d'accéder à des informations sensibles et\nd'augmenter ses privilèges ont été découvertes dans VMware.\n",
+  "title": "Multiples vulnérabilités des produits VMware",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware VMSA-2009-0015 du 27 octobre 2009",
+      "url": null
+    }
+  ]
+}

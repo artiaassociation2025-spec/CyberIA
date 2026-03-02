@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft Office 2003 Service Pack 1 et Service Pack 2    ;</LI>    <LI>Microsoft Office XP Service Pack 3 ;</LI>    <LI>Microsoft Office 2000 Service Pack 3 ;</LI>    <LI>Microsoft Project 2002 ;</LI>    <LI>Microsoft Project 2000 ;</LI>    <LI>Microsoft Works Suites : 2004, 2005 et 2006.</LI>  </UL>  <P>Les visionneuses Microsoft Office, ainsi que Microsoft Office  2004 et Microsoft Office v. X pour MacOS ne sont pas  concernées.</P>",
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans Microsoft Office. Elles\nconcernent le filtrage de certains fichiers :\n\n-   la première vise le format PNG. Microsoft Office ne vérifie pas\n    correctement l'allocation de l'espace mémoire. Une personne\n    malveillante peut donc construire un fichier .PNG mal formé\n    exploitant cette vulnérabilité, dans le but d'exécuter des commandes\n    arbitraires sur le système vulnérable, quand l'utilisateur ouvrira\n    ce fichier via Microsoft Office.\n-   la seconde vise le format GIF. Microsoft Office ne vérifie pas\n    correctement l'allocation de l'espace mémoire lorsqu'il ouvre un\n    fichier GIF. Un utilisateur malveillant peut construire un fichier\n    spécial contenant une chaîne de caractères mal formée, afin\n    d'exécuter du code arbitraire sur le système affecté.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0033",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0033"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-039 du 11 juillet 2006    :",
+      "url": "http://www.microsoft.com/france/technet/security/Bulletin/MS06-039.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-039 du 11 juillet 2006    :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-039.mspx"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-284",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-07-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités de certains filtres de Microsoft Office",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Microsoft du 11 juillet 2006",
+      "url": null
+    }
+  ]
+}

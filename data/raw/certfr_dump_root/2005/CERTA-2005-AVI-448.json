@@ -1,0 +1,110 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VERITAS Storage Foundation Cluster File System 4.0 pour AIX, Linux et Solaris ;",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VERITAS Storage Foundation pour Sybase 4.0 pour Solaris ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VERITAS Cluster Server 2.2 pour Linux (toutes versions), 3.5 pour Solaris, HP-UX, AIX (toutes versions), 4.0 pour Solaris, AIX, Linux (toutes versions).",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VERITAS Storage Foundation pour Oracle Real Application Clusters 3.5 pour Solaris, 4.0 pour AIX, Linux et Solaris ;",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VERITAS Storage Foundation pour Oracle 3.0 pour AIX, 3.5 pour Solaris, 4.0 pour Solaris et AIX ;",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VERITAS Storage Foundation pour DB2 1.0 pour AIX, 4.0 pour AIX et Solaris ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VERITAS Storage Foundation pour UNIX 2.2 pour Linux et VMWare ESX, 3.4 pour AIX, 3.5 pour HP-UX et Solaris, 4.0 pour AIX, Linux et Solaris ;",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VERITAS SANPoint Control Quickstart 3.5 pour Solaris ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire a été découverte dans\nVERTITAS Cluster Server, faisant partie de VERITAS Storage Foundation.\nCette vulnérabilité correspond à une erreur dans la prise en compte de\nla variable d'environnement VCSI18N_LANG par des commandes de type ha.  \nL'exploitation de cette vulnérabilité permet à un utilisateur mal\nintentionné d'élever ses privilèges pour obtenir ceux du\nsuper-utilisateur root.\n\n## Solution\n\nSe reporter au bulletin de l'éditeur pour l'obtention des correctifs\n(cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2005-AVI-448",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de VERITAS Cluster Server pour UNIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symantec SYM05-023 du 08 novembre 2005",
+      "url": "http://seer.support.veritas.com/docs/279870.htm"
+    }
+  ]
+}

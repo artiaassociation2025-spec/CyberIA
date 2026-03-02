@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">UltraVNC</SPAN>, version 1.0.2 et  1.0.4RC.</P>",
+  "content": "## Description\n\nUltraVNC est un logiciel qui permet d'utiliser un ordinateur distant.\n\nDes fonctions dans vncviewer/FileTransfer.cpp présentent plusieurs\ndéfauts de vérification de longueur de données. Ces défauts sont\nexploitables par un utilisateur malveillant pour exécuter sur le système\nvulnérable un code arbitraire à distance. Pour que cette exploitation de\nvulnérabilité réussisse, le système vulnérable doit exécuter vncviewer\nen écoute (listening mode).\n\nL'exploitation au travers du greffon DSM est également possible si\nl'utilisateur malveillant connaît la clé de chiffrement utilisée par\nvncviewer.\n\nLe module UltraVNC Server ne serait pas vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de téléchargement UltraVNC :",
+      "url": "http://www.uvnc.com/"
+    },
+    {
+      "title": "Bulletin UltraVNC du 08 février 2008 :",
+      "url": "http://forum.ultravnc.info/viewtopic.php?p=45150"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-070",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Des vulnérabilités dans le module <span class=\"textit\">vncviewer</span>\ndu logiciel <span class=\"textit\">UltraVNC</span> permettent à un\nutilisateur malveillant d'exécuter du code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans UltraVNC",
+  "vendor_advisories": []
+}

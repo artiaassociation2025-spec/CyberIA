@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Mailman versions 2.0.11 et antérieures.</p>",
+  "content": "## Description\n\nMailman est un logiciel permettant de gérer des listes de diffusion.\n\n  \nLe script CGI ml-name ne filtre pas correctement les données reçues.\n\nUn utilisateur mal intentionné peut exploiter cette vulnérabilité afin\nd'exécuter des scripts sur un poste client accédant à l'application\nmailman vulnérable au travers de son navigateur (vulnérabilité de type\ncross-site scripting). Il est alors possible de récupérer les données\nd'authentification du poste client ou de lire les données transmises au\nsite vulnérable par l'utilisateur.\n\n## Solution\n\nLa version 2.0.12 de mailman corrige cette vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité DSA-147 de Debian :",
+      "url": "http://www.debian.org/security/2002/dsa-147"
+    },
+    {
+      "title": "Message \"Released Mailman 2.0.12\" sur la liste de diffusion    Mailman-Developper :",
+      "url": "http://python.org/msg03563.html"
+    },
+    {
+      "title": "Note d'information CERTA-2002-INF-001 du CERTA :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2002-INF-001/index.html"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2002:176 de RedHat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-176.html"
+    },
+    {
+      "title": "Site de mailman :",
+      "url": "http://www.gnu.org/software/mailman"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-197",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Perte de confidentialité des données"
+    },
+    {
+      "description": "Usurpation d'identité"
+    }
+  ],
+  "summary": "Une vulnérabilité de type cross-site scripting est présente dans un des\nscripts CGI de mailman.\n",
+  "title": "Vulnérabilité de mailman",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DSA-147 de Debian.",
+      "url": null
+    }
+  ]
+}

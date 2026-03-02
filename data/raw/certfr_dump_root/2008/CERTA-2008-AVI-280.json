@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Mambo</SPAN> versions 4.6.3 et  antérieures.</P>",
+  "content": "## Description\n\nTrois vulnérabilités ont été découvertes dans Mambo :\n\n-   une injection de code SQL est possible via les paramètres articleid\n    et mcname du fichier index.php. L'exploitation de cette\n    vulnérabilité n'est possible que si la fonctionnalité\n    magic_quotes_gpc est désactivée dans le fichier de configuration de\n    PHP ;\n-   les entêtes HTTP des réponses envoyées par le serveur peuvent être\n    manipulées ;\n-   des attaques de type cross-site scripting sont possibles dans\n    MOStlyCE (versions 3.0 et antérieures). La versions 4.6.4 de Mambo\n    inclut MOStlyCE version 3.05.\n\n## Solution\n\nMettre Mambo à jour en version 4.6.4 (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2497",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2497"
+    },
+    {
+      "name": "CVE-2008-2498",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2498"
+    }
+  ],
+  "links": [
+    {
+      "title": "Référence CVE-2008-2498 :",
+      "url": "http://nvd.nist.gov/nvd.cfm?cvename=CVE-2008-2498"
+    },
+    {
+      "title": "Référence CVE-2008-2497 :",
+      "url": "http://nvd.nist.gov/nvd.cfm?cvename=CVE-2008-2497"
+    },
+    {
+      "title": "Site de téléchargement de Mambo    version 4.6.4 :",
+      "url": "http://mambo-code.org/gf/project/mambo/frs/"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-280",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-05-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injections de code indirectes ( cross-site scripting )"
+    },
+    {
+      "description": "Injection de code SQL"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectant <span class=\"textit\">Mambo</span>\npermettent de réaliser diverses injections.\n",
+  "title": "Vulnérabilités dans Mambo",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de la version 4.6.4 de Mambo du 24 mai 2008",
+      "url": "http://forum.mambo-foundation.org/showthread.php?t=11799"
+    }
+  ]
+}

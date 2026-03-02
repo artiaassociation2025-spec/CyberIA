@@ -1,0 +1,23 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Mac OS X versions 10.01 à 10.04 et 10.1.</P>",
+  "content": "## Description\n\nLors d'une session, un utilisateur mal intentionné peut, par une\nsuccession d'actions à la console (ouverture et fermeture de certaines\napplications), obtenir les privilèges de root. Cela est dû à une erreur\ndans la gestion des applications ayant le drapeau setuid root\npositionné.\n\nUn scénario décrivant ces différentes étapes a été publié sur\nl'Internet.\n\n## Contournement provisoire\n\nUne première solution consiste à terminer les sessions et à protéger\nl'accès physique à la machine. En effet, il est nécessaire d'avoir un\naccès à la console pour exploiter cette vulnérabilité.\n\nIl est également possible de limiter l'exécution des programmes ayant le\ndrapeau setuid root positionné.  \nPour identifier de telles applications, utiliser la commande suivante :\n\n    find / -perm -4000 -user root -print\n\nVoici celles installées par défaut sur le système qui permettent\nd'exploiter cette vulnérabilité :\n\n-   /Applications/Utilities/Disk Utility.app/Contents/MacOS/Disk Utility\n-   /Applications/Utilities/NetInfo Manager.app/Contents/MacOS/Net Info\n    Manager\n-   /Applications/Utilities/Print\n    Center.app/Contents/MacOS/PrintingReset  \n\nPour limiter à l'utilisateur root l'exécution de ces applications, il\nfaut utiliser les commandes suivantes :\n\n    chmod go-x '/Applications/Utilities/Disk Utility.app/Contents/MacOS/Disk Utility'\n    chmod go-x '/Applications/Utilities/NetInfo Manager.app/Contents/MacOS/NetInfo Manager'\n    chmod go-x '/Applications/Utilities/Print Center.app/Contents/MacOS/PrintReset'\n\nPour limiter l'exécution de ces applications au groupe des\nadministrateurs, il faut remplacer dans les lignes précédentes chmod\ngo-x par chmod o-x.\n\n## Solution\n\nAppliquer le correctif Apple par Software Update (menu Pomme/Control\nPanels/Software Update) ou le télécharger sur le site d'Apple :\n\n    http://docs.info.apple.com/article.html?artnum=120069\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-127",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, à partir d'un accès à la console,\nobtenir les privilèges de l'administrateur <span\nclass=\"textit\">root</span>.\n",
+  "title": "Vulnérabilité sous Mac OS X",
+  "vendor_advisories": []
+}

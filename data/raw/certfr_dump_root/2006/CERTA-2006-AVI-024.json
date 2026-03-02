@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PostgreSQL pour Windows versions 8.1.1 et antérieures ;",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PostgreSQL pour Windows versions 8.0.5 et antérieures.",
+      "product": {
+        "name": "PostgreSQL",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur dans la mise en œuvre de la gestion de nombreuses connexions\nconcurrentes à la base de données dans PostgreSQL permet à un\nutilisateur distant mal intentionné de provoquer un déni de service par\nle biais d'un grand nombre de connexions simultanées sur le service\nvulnérable.\n\n## Solution\n\nLes versions 8.1.2 pour la branche 8.1 et 8.0.6 pour la branche 8.0\ncorrigent le problème :\n\n    http://www.postgresql.org/ftp/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de PostgreSQL :",
+      "url": "http://www.postgresql.org"
+    },
+    {
+      "title": "Liste des changements inclus dans les versions 8.1.2 et    8.0.6 de PostgreSQL :",
+      "url": "http://www.postgresql.org/about/news.456"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-024",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-01-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Un vulnérabilité présente dans PostgreSQL pour Windows permet à un\nutilisateur distant mal intentionné de provoquer un déni de service.\n",
+  "title": "Vulnérabilité de PostgreSQL pour Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements inclus dans les versions 8.1.2 et 8.0.6 de PostgreSQL",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Office 2000 Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Professional Edition x64, Service Pack 2 compris ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office XP Service Pack 3.",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 Service Pack 1 et 2, y compris les versions pour systèmes x64 et Itanium ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Service Pack 2 et 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans les convertisseurs de\ntexte WordPad et Office. Le traitement de certains documents Word 6.0,\nWord97, Windows Write et WordPerfect n'est pas effectué correctement.\nCertains fichiers spécialement conçus peuvent ainsi corrompre la mémoire\nou provoquer un dépassement de la pile.\n\nSous certaines conditions, l'ouverture de ces fichiers provoquera\nl'exécution de code arbitraire sur le système vulnérable.\n\nL'un des correctifs empêche dorénavant WordPad d'ouvrir les fichiers\nWord 6.0 et Windows Write.\n\nCertaines de ces vulnérabilités ont fait l'objet de l'alerte\nCERTA-2008-ALE-015 publiée le 10 décembre 2008.\n\n## Solution\n\nSe référer au bulletin de sécurité MS09-010 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0235",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0235"
+    },
+    {
+      "name": "CVE-2008-4841",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4841"
+    },
+    {
+      "name": "CVE-2009-0087",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0087"
+    },
+    {
+      "name": "CVE-2009-0088",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0088"
+    }
+  ],
+  "links": [
+    {
+      "title": "Alerte du CERTA CERTA-2008-ALE-015 publiée le 10 décembre    2008 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2008-ALE-015/"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-140",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-04-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans les convertisseurs de\ntexte WordPad et Office. Elles peuvent être exploitées à distance par le\nbiais de documents spécialement conçus afin de faire exécuter du code\narbitraire sur le système vulnérable à leur ouverture.\n",
+  "title": "Vulnérabilités dans les convertisseurs de texte WordPad et Office",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS09-010 du 14 avril 2009",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-010.mspx"
+    }
+  ]
+}

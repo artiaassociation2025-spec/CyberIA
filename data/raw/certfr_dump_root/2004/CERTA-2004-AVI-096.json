@@ -1,0 +1,173 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "RealSecure Network 7.0, XPU 22.11 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BlackICE Agent for Server 3.6 ecf et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Proventia M Series XPU 1.9 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Proventia G Series XPU 22.11 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Proventia A Series XPU 22.11 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealSecure Desktop 3.6 ecf et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealSecure Desktop 7.0 ebl et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealSecure Sentry 3.6 ecf et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealSecure Server Sensor 6.5 for Windows SR 3.10 et versions antérieures ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealSecure Guard 3.6 ecf et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "RealSecure Server Sensor 7.0 XPU 22.11 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BlackICE Server Protection 3.6 ccf et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BlackICE PC Protection 3.6 ccf et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe composant PAM (Protocol Analysis Module) facilite la reconnaissance\ndes protocoles réseau. Les paquets ayant comme port source le port\n4000/udp seront considérés comme étant des réponses d'un serveur ICQ v5.\nUne vulnérabilité dans la routine de traitement du protocole ICQ du\ncomposant PAM dans les produits ISS cités (voir Systèmes affectés)\npermet à un utilisateur mal intentionné d'exécuter de code arbitraire à\ndistance avec les droits SYSTEM sur les agents RealSecure/BlackICE.\n\n## Contournement provisoire\n\nFiltrer le port source 4000/UDP au niveau du pare-feu.\n\n## Solution\n\nAppliquer le correctif d'ISS :\n\n    http://www.iss.net/download\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Alerte id 166 d'ISS :",
+      "url": "http://xforce.iss.net/xforce/alerts/id/166"
+    },
+    {
+      "title": "Avis CERTA-2004-AVI-053 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2004-AVI-053/"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-096",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-19T00:00:00.000000"
+    },
+    {
+      "description": "précisions sur le contournement provisoire.",
+      "revision_date": "2004-03-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le composant PAM (Protocol Analysis Module) lors\ndu traitement des réponses des serveurs ICQ permet l'exécution de code\narbitraire à distance.\n",
+  "title": "Vulnérabilité des produits Proventia, BlackICE et RealSecure d'ISS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis AD20040318 d'Eeye",
+      "url": "http://www.eeye.com/html/Research/Advisories/AD20040318.html"
+    }
+  ]
+}

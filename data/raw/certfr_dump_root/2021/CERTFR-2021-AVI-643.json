@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "WebSphere Application Server Liberty avec le SDK IBM Java version 8 antérieures à R6 FP35",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "WebSphere Application Server 9.0 avec le SDK IBM Java version 8 antérieures à R6 FP35",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "WebSphere Application Server 8.5.x.x sans le dernier correctif",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-2341",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-2341"
+    },
+    {
+      "name": "CVE-2021-2432",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-2432"
+    },
+    {
+      "name": "CVE-2021-2369",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-2369"
+    },
+    {
+      "name": "CVE-2021-2388",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-2388"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2021-AVI-643",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-08-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans IBM WebSphere\nApplication Server. Certaines d'entre elles permettent à un attaquant de\nprovoquer une exécution de code arbitraire à distance, un déni de\nservice et une atteinte à l'intégrité des données.\n",
+  "title": "Multiples vulnérabilités dans IBM WebSphere Application Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM 6482283 du 18 août 2021",
+      "url": "https://www.ibm.com/support/pages/node/6482283"
+    }
+  ]
+}

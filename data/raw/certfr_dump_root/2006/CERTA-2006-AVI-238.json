@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft Windows Media Player version 10 sur les    plates-formes Microsoft Windows Server 2003 SP1 et x64 Edition,    Microsoft Windows XP SP1, SP2 et x64 Edition ;</LI>    <LI>Microsoft Windows Media Player version 9 sur les    plates-formes Microsoft Windows Server 2003, Microsoft Windows    XP SP2 et SP1 et Microsoft Windows 200 SP4 ;</LI>    <LI>Microsoft Windows Media Player versions 7.1 sur les    plates-formes Microsoft Windows 2000 SP4 ;</LI>  </UL>  <P>Microsoft Windows Media Player version 6.4 n'est pas affecté  par cette vulnérabilité.<BR>  Les plate-formes Microsoft Windows Server 2003, avec ou sans SP1,  sur processeur Itanium ne sont pas affectées par cette  vulnérabilité.</P>",
+  "content": "## Description\n\nPNG (Portable Network Graphics) est un format d'image utilisé par\nplusieurs applications Windows telles la messagerie instantanée (MSN\nmessenger) ou l'outil Windows Media Player. Une vulnérabilité dans la\ngestion des fichiers au format png par Microsoft Windows Media Player\npermet à un utilisateur mal intentionné de réaliser un déni de service\nou d'exécuter du code arbitraire sur la machine vulnérable.\nL'exploitation peut se faire au moyen d'un fichier WMZ malicieusement\nconstitué qui peut être envoyé par message électronique ou hébergé sur\nun site Internet.\n\n## Contournement provisoire\n\nUn certain nombre de contournements provisoires sont listés dans le\nbulletin de sécurité Microsoft.\n\n-   Deux d'entre eux impliquent la modification de la base de registre\n    Microsoft Windows. Il est très important de tester un tel\n    contournement provisoire avant la mise en production ;\n-   désenregistrer la bibliothèque partagée Wmp.dll ;\n-   désassocier les extensions WMZ à l'aide de Microsoft Windows\n    Explorer.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0025",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0025"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2006-AVI-238",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-06-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de Microsoft Windows Media Player",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-024 du 13 juin 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-024.mspx"
+    }
+  ]
+}

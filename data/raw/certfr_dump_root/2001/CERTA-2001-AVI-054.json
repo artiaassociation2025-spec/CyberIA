@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>SGI IRIX 6.5.5 à 6.5.8.</P>",
+  "content": "## Description\n\nESP (Embedded Support Partner) est un outil de maintenance à distance\ninclus dans le système d'exploitation IRIX. Il est installé par défaut\nsur les versions 6.5.5 et supérieures.\n\nIl est possible d'effectuer à distance un débordement de mémoire du\ndaemon rpc.espd pouvant conduire à une compromission de root.\n\n## Contournement provisoire\n\n-   Supprimer le service rpc.espd s'il n'est pas utilisé.\n-   Rendre non exécutable le service rpc.espd en attendant d'appliquer\n    le correctif ou la nouvelle version. Ce contournement est d'ailleurs\n    la seule solution pour les versions 6.5.5 et 6.5.6 qui ne sont plus\n    maintenues par SGI.\n    1.  /bin/chmod -x /usr/etc/rpc.espd\n\n    2.  relancer les services avec la commande :\n\n        /etc/killal -HUP inetd\n\n## Solution\n\n-   Pour les versions 6.5.7 et 6.5.8 de SGI, appliquer le correctif de\n    SGI N˚ 4123 :\n\n        ftp://patches.sgi.com/support/free/security/patches\n\n-   La version 2.0 de ESP n'est pas vulnérable, elle est installée par\n    défaut sur la version 6.5.9 d'IRIX.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "L'avis de sécurité de SGI :",
+      "url": "http://patches.sgi.com/support/free/security/advisories/20010501-01-P"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-054",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-05-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès root à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité du service rpc.espd permet à un utilisateur mal\nintentionné d'effectuer un débordement de mémoire à distance et\nd'acquérir les privilèges de root.\n",
+  "title": "Vulnérabilité de ESP sous SGI IRIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SGI",
+      "url": null
+    }
+  ]
+}

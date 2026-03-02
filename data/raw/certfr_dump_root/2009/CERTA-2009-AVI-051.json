@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco 4400 Series Wireless LAN Controllers (WLC) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Catalyst 6500 Series et 7600 Series Wireless LAN Module (MiSM) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Catalyst 3750 Series Integrated Wireless LAN Controllers.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans les éléments\nd'interfaces sans-fil Cisco Wireless LAN Controllers (WLC). Ces éléments\napportent au système des fonctions nécessaires au fonctionnement du\nréseau sans-fil et à sa sécurité.\n\nLes vulnérabilités peuvent être exploitées via des trames spécialement\nconstruites émises dans les airs. Il est alors possible pour une\npersonne malveillante distante de perturber le système, voire de le\nforcer à redémarrer. Sous certaines conditions, l'exploitation peut\négalement conduire, selon Cisco, à une élévation de privilèges (pour les\nWLC de version 4.2.173.0).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20090204-wlc du 04 février 2009    :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20090204-wlc.shtml"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-051",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-02-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans les éléments\nd'interfaces sans-fil Cisco Wireless LAN Controllers (WLC).\nL'exploitation de ces dernières peut provoquer l'interruption du service\nsans-fil ou le redémarrage de l'équipement. Une élévation de privilèges\nserait possible sous certaines conditions.\n",
+  "title": "Multiples vulnérabilités dans les Cisco Wireless LAN Controllers",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 108336 du 04 février 2009",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,977 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Contrail Networking versions antérieures à R22.3",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Juniper Networks",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Paragon Active Assurance (anciennement Netrounds) versions antérieures à 3.1.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Juniper Networks",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Junos Space versions antérieures à 22.2R1",
+      "product": {
+        "name": "Junos Space",
+        "vendor": {
+          "name": "Juniper Networks",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Junos OS Evolved versions antérieures à 20.4R3-S4-EVO, 21.2R2-EVO, 21.3R2-EVO, 21.4R1-EVO, 21.3R3-EVO, 21.4R2-EVO, 22.1R2-EVO, 22.2R1-EVO, 20.4R3-S3-EVO, 21.1R2-EVO, 21.2R1-EVO, 20.4R3-S4-EVO, 21.3R3-EVO, 21.4R2-EVO, 22.1R2-EVO, 22.2R1-EVO, 20.4R3-S4-EVO, 21.4R3-EVO, 22.1R2-EVO, 22.2R1-EVO, 21.4R3-EVO, 22.1R1-S2-EVO, 22.1R3-EVO, 22.2R2-EVO, 22.3R1-EVO, 20.4R3-S5-EVO, 21.1R3-EVO, 21.2R2-S1-EVO, 21.2R3-EVO, 21.3R2-EVO, 21.4R1-EVO, 21.4R1-S2-EVO, 21.4R2-S1-EVO, 21.4R3-EVO, 22.1R2-EVO, 22.2R1-EVO, 20.4R3-S1-EVO, 21.2R3-EVO, 21.3R2-EVO, 21.4R1-EVO, 20.4R3-S3-EVO, 21.2R3-EVO, 21.3R2-EVO, 21.4R1-S1-EVO, 21.4R2-EVO, 22.1R1-EVO, 20.4R3-S1-EVO, 21.2R1-S2-EVO, 21.2R3-EVO, 21.3R2-EVO, 21.4R1-EVO, 20.4R3-S5-EVO, 21.1R3-S2-EVO, 21.2R3-S1-EVO, 21.3R3-S2-EVO, 21.4R2-EVO, 22.1R2-EVO, 22.2R2-EVO, 22.3R1-EVO, 20.4R3-S4-EVO, 21.1R3-S2-EVO, 21.2R3-EVO, 21.3R2-EVO, 21.4R1-EVO, 20.2R3-S3-EVO, 20.4R3-S1-EVO, 21.3R2-EVO, 21.4R1-EVO, 21.1R3-S2-EVO, 21.2R3-S2-EVO, 21.3R3-EVO, 21.4R1-S1-EVO, 21.4R2-EVO et 22.1R1-EVO",
+      "product": {
+        "name": "Junos OS Evolved",
+        "vendor": {
+          "name": "Juniper Networks",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Contrail Networking versions antérieures à 2011.L5",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Juniper Networks",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Steel Belted Radius Carrier Edition versions antérieures à 8.6.0R16",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Juniper Networks",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Junos OS versions antérieures à 19.2R3-S6, 20.2R3-S4, 20.3R3-S3, 20.4R3-S4, 21.1R2, 21.2R2, 21.3R2, 21.4R1, 19.1R3-S9, 19.2R3-S6, 19.3R3-S7, 19.4R2-S7, 19.4R3-S9, 20.2R3-S5, 20.3R3-S4, 20.4R3-S4, 21.1R3-S1, 21.2R3, 21.3R2, 21.4R1-S2, 21.4R2, 22.1R1, 19.4R2-S6, 19.4R3-S7, 20.1R3-S3, 20.2R3-S4, 20.3R3-S3, 20.4R3-S2, 21.1R3, 21.2R3, 21.3R1-S2, 21.3R2, 21.4R1, 19.1R3-S9, 19.2R3-S5, 19.3R3-S3, 19.4R3-S9, 20.1R3, 20.2R3-S1, 20.3R3, 20.4R3, 21.1R2, 21.2R1, 15.1R7-S11, 18.4R2-S10, 18.4R3-S10, 19.1R3-S8, 19.2R3-S4, 19.3R3-S5, 19.4R2-S6, 19.4R3-S7, 20.1R3-S3, 20.2R3-S3, 20.3R3-S2, 20.4R3-S4, 21.1R3, 21.2R3-S3, 21.3R3-S1, 21.4R1, 15.1R7-S13, 19.1R3-S9, 19.2R3-S6, 19.3R3-S6, 19.4R2-S7, 19.4R3-S8, 20.2R3-S5, 20.3R3-S5, 20.4R3-S2, 21.1R3, 21.2R3, 21.3R2, 21.4R1, 18.4R2-S10, 18.4R3-S10, 19.1R3-S7, 19.2R1-S8, 19.2R3-S4, 19.4R3-S8, 20.2R3-S3, 20.3R3-S2, 20.4R3, 21.1R2, 21.2R1, 19.4R2-S8, 19.4R3-S9, 20.2R3-S5, 20.3R3-S5, 20.4R3-S4, 21.1R3-S3, 21.2R3-S2, 21.3R3-S1, 21.4R2-S1, 21.4R3, 22.1R1-S2, 22.1R3, 22.2R1-S1, 22.2R2, 22.3R1, 21.3R3-S2, 21.4R2-S2, 21.4R3, 22.1R1-S2, 22.1R3, 22.2R2, 22.3R1, 21.2R3-S1, 21.3R2-S2, 21.3R3, 21.4R2-S1, 21.4R3, 22.1R1-S1, 22.1R2, 22.2R1, 21.4R1-S2, 21.4R2-S1, 21.4R3, 22.1R2, 22.2R1, 21.4R1-S2, 21.4R2, 22.1R1-S1, 22.1R2, 22.2R1, 17.3R3-S12, 17.4R2-S13, 17.4R3-S5, 18.1R3-S13, 18.2R3-S8, 18.3R3-S5, 18.4R1-S8, 18.4R2-S6, 18.4R3-S6, 19.1R3-S4, 19.2R1-S7, 19.2R3-S1, 19.3R2-S6, 19.3R3-S1, 19.4R1-S4, 19.4R2-S4, 19.4R3-S1, 20.1R2, 20.2R2-S3, 20.2R3, 20.3R2, 20.4R1, 21.1R3-S2, 21.2R3-S1, 21.3R3, 21.4R2, 22.1R2, 22.2R1, 20.2R3-S5, 20.3R3-S4, 20.4R3-S3, 21.1R3-S2, 21.2R3-S1, 21.3R3, 21.4R1-S2, 21.4R2, 22.1R1-S1, 22.1R2, 22.2R1, 18.4R3-S11, 19.1R3-S9, 19.2R1-S9, 19.2R3-S5, 19.3R3-S6, 19.4R2-S7, 19.4R3-S8, 20.1R3-S4, 20.2R3-S4, 20.3R3-S4, 20.4R3-S3, 21.1R3-S1, 21.2R3, 21.3R2, 21.4R2, 22.1R1, 19.2R3-S5, 19.3R3-S5, 19.4R2-S6, 19.4R3-S8, 20.2R3-S4, 20.3R3-S3, 20.4R3-S3, 21.1R3-S1, 21.2R3, 21.3R2, 21.4R1-S1, 21.4R2, 22.1R1, 19.4R3-S9, 20.2R3-S5, 20.3R3-S2, 20.4R3-S1, 21.1R3, 21.2R1-S2, 21.2R2-S1, 21.2R3, 21.3R2, 21.4R1, 21.4R1-S2, 21.4R2, 22.1R1, 19.2R3-S6, 19.4R2-S8, 19.4R3-S9, 20.2R3-S5, 20.3R3-S5, 20.4R3-S4, 21.1R3-S2, 21.2R3-S1, 21.3R3-S2, 21.4R2, 22.1R2, 22.3R1, 18.4R2-S9, 18.4R3-S11, 19.1R3-S8, 19.3R3-S5, 19.4R2-S6, 19.4R3-S6, 20.2R3-S3, 20.3R3-S2, 20.4R3-S1, 21.1R3-S3, 21.2R2-S1, 21.2R3, 21.3R1, 19.1R3-S9, 19.2R3-S6, 19.3R3-S7, 19.4R3-S9, 20.1R3-S5, 20.2R3-S5, 20.3R3-S5, 20.4R3-S4, 21.1R3-S2, 21.3R3, 21.4R3, 22.1R2, 22.2R1, 19.4R3-S8, 20.1R3-S2, 20.2R3-S3, 20.3R3-S2, 20.4R3-S1, 21.1R3, 21.2R1-S2, 21.2R3, 21.3R2, 21.4R1, 20.4R3-S4, 21.1R3-S2, 21.2R3-S2, 21.3R2-S2, 21.3R3, 21.4R1-S2, 21.4R2, 21.4R3, 22.1R1-S1, 22.1R2 et 22.2R1",
+      "product": {
+        "name": "Junos OS",
+        "vendor": {
+          "name": "Juniper Networks",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Session Smart Router versions antérieures à 5.4.7",
+      "product": {
+        "name": "Session Smart Router",
+        "vendor": {
+          "name": "Juniper Networks",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Session Smart Router versions 5.5.x antérieures à 5.5.3",
+      "product": {
+        "name": "Session Smart Router",
+        "vendor": {
+          "name": "Juniper Networks",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Paragon Active Assurance (anciennement Netrounds) versions 3.2.x antérieures à 3.2.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Juniper Networks",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-1343",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-1343"
+    },
+    {
+      "name": "CVE-2022-22243",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22243"
+    },
+    {
+      "name": "CVE-2022-1473",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-1473"
+    },
+    {
+      "name": "CVE-2020-25710",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-25710"
+    },
+    {
+      "name": "CVE-2021-45960",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-45960"
+    },
+    {
+      "name": "CVE-2022-24407",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-24407"
+    },
+    {
+      "name": "CVE-2021-35586",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-35586"
+    },
+    {
+      "name": "CVE-2022-22238",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22238"
+    },
+    {
+      "name": "CVE-2022-22249",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22249"
+    },
+    {
+      "name": "CVE-2021-35550",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-35550"
+    },
+    {
+      "name": "CVE-2022-22227",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22227"
+    },
+    {
+      "name": "CVE-2016-0701",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2016-0701"
+    },
+    {
+      "name": "CVE-2021-25220",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-25220"
+    },
+    {
+      "name": "CVE-2021-35567",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-35567"
+    },
+    {
+      "name": "CVE-2021-31535",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-31535"
+    },
+    {
+      "name": "CVE-2021-42574",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-42574"
+    },
+    {
+      "name": "CVE-2020-27777",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-27777"
+    },
+    {
+      "name": "CVE-2022-22208",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22208"
+    },
+    {
+      "name": "CVE-2022-1292",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-1292"
+    },
+    {
+      "name": "CVE-2017-5929",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2017-5929"
+    },
+    {
+      "name": "CVE-2022-22218",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22218"
+    },
+    {
+      "name": "CVE-2021-20271",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-20271"
+    },
+    {
+      "name": "CVE-2022-22823",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22823"
+    },
+    {
+      "name": "CVE-2022-22201",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22201"
+    },
+    {
+      "name": "CVE-2020-0466",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-0466"
+    },
+    {
+      "name": "CVE-2021-42771",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-42771"
+    },
+    {
+      "name": "CVE-2021-29154",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-29154"
+    },
+    {
+      "name": "CVE-2018-20532",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2018-20532"
+    },
+    {
+      "name": "CVE-2022-22246",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22246"
+    },
+    {
+      "name": "CVE-2007-6755",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6755"
+    },
+    {
+      "name": "CVE-2020-29661",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-29661"
+    },
+    {
+      "name": "CVE-2022-22250",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22250"
+    },
+    {
+      "name": "CVE-2022-22192",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22192"
+    },
+    {
+      "name": "CVE-2019-12735",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-12735"
+    },
+    {
+      "name": "CVE-2022-22239",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22239"
+    },
+    {
+      "name": "CVE-2022-25315",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-25315"
+    },
+    {
+      "name": "CVE-2022-22822",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22822"
+    },
+    {
+      "name": "CVE-2022-22241",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22241"
+    },
+    {
+      "name": "CVE-2020-25212",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-25212"
+    },
+    {
+      "name": "CVE-2019-2435",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-2435"
+    },
+    {
+      "name": "CVE-2021-27363",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-27363"
+    },
+    {
+      "name": "CVE-2022-22226",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22226"
+    },
+    {
+      "name": "CVE-2015-9262",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2015-9262"
+    },
+    {
+      "name": "CVE-2021-4160",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-4160"
+    },
+    {
+      "name": "CVE-2020-24394",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-24394"
+    },
+    {
+      "name": "CVE-2021-35559",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-35559"
+    },
+    {
+      "name": "CVE-2021-3573",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-3573"
+    },
+    {
+      "name": "CVE-2019-19532",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-19532"
+    },
+    {
+      "name": "CVE-2020-14314",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-14314"
+    },
+    {
+      "name": "CVE-2021-27364",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-27364"
+    },
+    {
+      "name": "CVE-2021-35565",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-35565"
+    },
+    {
+      "name": "CVE-2022-22229",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22229"
+    },
+    {
+      "name": "CVE-2018-20534",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2018-20534"
+    },
+    {
+      "name": "CVE-2016-4658",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2016-4658"
+    },
+    {
+      "name": "CVE-2021-35603",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-35603"
+    },
+    {
+      "name": "CVE-2021-28165",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-28165"
+    },
+    {
+      "name": "CVE-2022-23852",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-23852"
+    },
+    {
+      "name": "CVE-2022-22225",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22225"
+    },
+    {
+      "name": "CVE-2020-12364",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-12364"
+    },
+    {
+      "name": "CVE-2022-22825",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22825"
+    },
+    {
+      "name": "CVE-2021-3711",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-3711"
+    },
+    {
+      "name": "CVE-2022-22245",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22245"
+    },
+    {
+      "name": "CVE-2022-25314",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-25314"
+    },
+    {
+      "name": "CVE-2022-0330",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-0330"
+    },
+    {
+      "name": "CVE-2022-23990",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-23990"
+    },
+    {
+      "name": "CVE-2019-1543",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-1543"
+    },
+    {
+      "name": "CVE-2018-10689",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2018-10689"
+    },
+    {
+      "name": "CVE-2016-2124",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2016-2124"
+    },
+    {
+      "name": "CVE-2021-27365",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-27365"
+    },
+    {
+      "name": "CVE-2020-8648",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-8648"
+    },
+    {
+      "name": "CVE-2022-25235",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-25235"
+    },
+    {
+      "name": "CVE-2020-27170",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-27170"
+    },
+    {
+      "name": "CVE-2020-25705",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-25705"
+    },
+    {
+      "name": "CVE-2018-25032",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2018-25032"
+    },
+    {
+      "name": "CVE-2022-0847",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-0847"
+    },
+    {
+      "name": "CVE-2020-14385",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-14385"
+    },
+    {
+      "name": "CVE-2022-22232",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22232"
+    },
+    {
+      "name": "CVE-2019-18282",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-18282"
+    },
+    {
+      "name": "CVE-2020-12321",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-12321"
+    },
+    {
+      "name": "CVE-2022-22240",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22240"
+    },
+    {
+      "name": "CVE-2021-46143",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-46143"
+    },
+    {
+      "name": "CVE-2019-20811",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-20811"
+    },
+    {
+      "name": "CVE-2020-12363",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-12363"
+    },
+    {
+      "name": "CVE-2021-43527",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-43527"
+    },
+    {
+      "name": "CVE-2022-22942",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22942"
+    },
+    {
+      "name": "CVE-2021-3656",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-3656"
+    },
+    {
+      "name": "CVE-2021-35588",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-35588"
+    },
+    {
+      "name": "CVE-2022-22234",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22234"
+    },
+    {
+      "name": "CVE-2022-22242",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22242"
+    },
+    {
+      "name": "CVE-2022-1271",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-1271"
+    },
+    {
+      "name": "CVE-2021-22543",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-22543"
+    },
+    {
+      "name": "CVE-2022-22251",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22251"
+    },
+    {
+      "name": "CVE-2008-5161",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-5161"
+    },
+    {
+      "name": "CVE-2022-22244",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22244"
+    },
+    {
+      "name": "CVE-2019-20934",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-20934"
+    },
+    {
+      "name": "CVE-2021-29650",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-29650"
+    },
+    {
+      "name": "CVE-2021-3715",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-3715"
+    },
+    {
+      "name": "CVE-2022-22233",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22233"
+    },
+    {
+      "name": "CVE-2021-4155",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-4155"
+    },
+    {
+      "name": "CVE-2021-45417",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-45417"
+    },
+    {
+      "name": "CVE-2020-10769",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-10769"
+    },
+    {
+      "name": "CVE-2018-20533",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2018-20533"
+    },
+    {
+      "name": "CVE-2021-3564",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-3564"
+    },
+    {
+      "name": "CVE-2020-25656",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-25656"
+    },
+    {
+      "name": "CVE-2021-3752",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-3752"
+    },
+    {
+      "name": "CVE-2022-22224",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22224"
+    },
+    {
+      "name": "CVE-2021-20265",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-20265"
+    },
+    {
+      "name": "CVE-2021-3177",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-3177"
+    },
+    {
+      "name": "CVE-2020-25211",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-25211"
+    },
+    {
+      "name": "CVE-2022-0492",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-0492"
+    },
+    {
+      "name": "CVE-2022-22827",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22827"
+    },
+    {
+      "name": "CVE-2022-22247",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22247"
+    },
+    {
+      "name": "CVE-2020-12362",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-12362"
+    },
+    {
+      "name": "CVE-2019-0205",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-0205"
+    },
+    {
+      "name": "CVE-2021-22555",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-22555"
+    },
+    {
+      "name": "CVE-2021-3347",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-3347"
+    },
+    {
+      "name": "CVE-2022-25236",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-25236"
+    },
+    {
+      "name": "CVE-2022-0778",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-0778"
+    },
+    {
+      "name": "CVE-2021-37576",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-37576"
+    },
+    {
+      "name": "CVE-2021-35578",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-35578"
+    },
+    {
+      "name": "CVE-2020-28374",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-28374"
+    },
+    {
+      "name": "CVE-2021-0920",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-0920"
+    },
+    {
+      "name": "CVE-2022-22199",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22199"
+    },
+    {
+      "name": "CVE-2021-42550",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-42550"
+    },
+    {
+      "name": "CVE-2021-3712",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-3712"
+    },
+    {
+      "name": "CVE-2022-22236",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22236"
+    },
+    {
+      "name": "CVE-2020-7053",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-7053"
+    },
+    {
+      "name": "CVE-2022-22248",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22248"
+    },
+    {
+      "name": "CVE-2019-9518",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-9518"
+    },
+    {
+      "name": "CVE-2022-22220",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22220"
+    },
+    {
+      "name": "CVE-2021-32399",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-32399"
+    },
+    {
+      "name": "CVE-2021-35564",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-35564"
+    },
+    {
+      "name": "CVE-2022-22826",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22826"
+    },
+    {
+      "name": "CVE-2022-22228",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22228"
+    },
+    {
+      "name": "CVE-2021-23840",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-23840"
+    },
+    {
+      "name": "CVE-2020-14351",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-14351"
+    },
+    {
+      "name": "CVE-2020-25709",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-25709"
+    },
+    {
+      "name": "CVE-2022-1434",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-1434"
+    },
+    {
+      "name": "CVE-2020-25643",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-25643"
+    },
+    {
+      "name": "CVE-2022-22223",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22223"
+    },
+    {
+      "name": "CVE-2020-25645",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-25645"
+    },
+    {
+      "name": "CVE-2021-35556",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-35556"
+    },
+    {
+      "name": "CVE-2020-25717",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-25717"
+    },
+    {
+      "name": "CVE-2021-3765",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-3765"
+    },
+    {
+      "name": "CVE-2021-41617",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-41617"
+    },
+    {
+      "name": "CVE-2021-4034",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-4034"
+    },
+    {
+      "name": "CVE-2022-24903",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-24903"
+    },
+    {
+      "name": "CVE-2022-22824",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22824"
+    },
+    {
+      "name": "CVE-2019-1551",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-1551"
+    },
+    {
+      "name": "CVE-2019-2684",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2019-2684"
+    },
+    {
+      "name": "CVE-2021-0543",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-0543"
+    },
+    {
+      "name": "CVE-2021-3653",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-3653"
+    },
+    {
+      "name": "CVE-2022-22231",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22231"
+    },
+    {
+      "name": "CVE-2021-35561",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-35561"
+    },
+    {
+      "name": "CVE-2022-22235",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22235"
+    },
+    {
+      "name": "CVE-2020-0427",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-0427"
+    },
+    {
+      "name": "CVE-2020-28469",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-28469"
+    },
+    {
+      "name": "CVE-2022-22211",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22211"
+    },
+    {
+      "name": "CVE-2020-0465",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-0465"
+    },
+    {
+      "name": "CVE-2022-22230",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22230"
+    },
+    {
+      "name": "CVE-2022-22237",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-22237"
+    },
+    {
+      "name": "CVE-2021-37750",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-37750"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-916",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-10-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits\nJuniper. Certaines d'entre elles permettent à un attaquant de provoquer\nune exécution de code arbitraire à distance, un déni de service à\ndistance et un contournement de la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans les produits Juniper",
+  "vendor_advisories": [
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69906",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-MX-Series-An-FPC-crash-might-be-seen-due-to-mac-moves-within-the-same-bridge-domain-CVE-2022-22249"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69885",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-SRX-Series-If-UTM-Enhanced-Content-Filtering-and-AntiVirus-are-enabled-and-specific-traffic-is-processed-the-PFE-will-crash-CVE-2022-22231"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69888",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-SRX-Series-Cache-poisoning-vulnerability-in-BIND-used-by-DNS-Proxy-CVE-2021-25220"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69886",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-SRX-Series-If-Unified-Threat-Management-UTM-Enhanced-Content-Filtering-CF-is-enabled-and-specific-traffic-is-processed-the-PFE-will-crash-CVE-2022-22232"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69899",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-Multiple-vulnerabilities-in-J-Web"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69881",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-SBR-Carrier-Multiple-Vulnerabilities-resolved-in-version-8-6-0R16-64-bit-Solaris-and-Linux-editions"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69894",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-and-Junos-OS-Evolved-The-rpd-process-will-crash-when-a-malformed-incoming-RESV-message-is-processed-CVE-2022-22238"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69898",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-and-Junos-OS-Evolved-RPD-core-upon-receipt-of-a-specific-EVPN-route-by-a-BGP-route-reflector-in-an-EVPN-environment-CVE-2022-22199"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69895",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-Evolved-The-ssh-CLI-command-always-runs-as-root-which-can-lead-to-privilege-escalation-CVE-2022-22239"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69908",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-cSRX-Series-Storing-Passwords-in-a-Recoverable-Format-and-software-permissions-issues-allows-a-local-attacker-to-elevate-privileges-CVE-2022-22251"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69874",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-and-Junos-OS-Evolved-PPMD-goes-into-infinite-loop-upon-receipt-of-malformed-OSPF-TLV-CVE-2022-22224"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69902",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-and-Junos-OS-Evolved-Due-to-a-race-condition-the-rpd-process-can-crash-upon-receipt-of-a-BGP-update-message-containing-flow-spec-route-CVE-2022-22220"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69879",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-and-Junos-OS-Evolved-An-rpd-crash-can-occur-due-to-memory-corruption-caused-by-flapping-BGP-sessions-CVE-2022-22208"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69890",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-EX2300-and-EX3400-Series-One-of-more-SFPs-might-become-unavailable-when-the-system-is-very-busy-CVE-2022-22234"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69875",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-and-Junos-OS-Evolved-In-a-BGP-multipath-scenario-when-one-of-the-contributing-routes-is-flapping-often-and-rapidly-rpd-may-crash-CVE-2022-22225"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69915",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-Evolved-PTX-Series-An-attacker-can-cause-a-kernel-panic-by-sending-a-malformed-TCP-packet-to-the-device-CVE-2022-22192"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69878",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-Evolved-ACX7000-Series-Specific-IPv6-transit-traffic-gets-exceptioned-to-the-routing-engine-which-will-cause-increased-CPU-utilization-CVE-2022-22227"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69907",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-and-Junos-OS-Evolved-An-FPC-might-crash-and-reload-if-the-EVPN-MAC-entry-is-move-from-local-to-remote-CVE-2022-22250"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69891",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-SRX-Series-A-flowd-core-will-be-observed-when-malformed-GPRS-traffic-is-processed-CVE-2022-22235"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69882",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-Space-Multiple-vulnerabilities-resolved-in-22-2R1-release"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69876",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-EX4300-MP-EX4600-QFX5000-Series-In-VxLAN-scenarios-specific-packets-processed-cause-a-memory-leak-leading-to-a-PFE-crash-CVE-2022-22226"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69892",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-SRX-Series-and-MX-Series-When-specific-valid-SIP-packets-are-received-the-PFE-will-crash-CVE-2022-22236"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69889",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Session-Smart-Router-Multiple-vulnerabilities-resolved"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69887",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-and-Junos-OS-Evolved-In-an-SR-to-LDP-interworking-scenario-with-SRMS-when-a-specific-low-privileged-command-is-issued-on-an-ABR-rpd-will-crash-CVE-2022-22233"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69903",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Contrail-Networking-Multiple-Vulnerabilities-have-been-resolved-in-Contrail-Networking-R22-3"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69900",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-SRX5000-Series-with-SPC3-SRX4000-Series-and-vSRX-When-PowerMode-IPsec-is-configured-the-PFE-will-crash-upon-receipt-of-a-malformed-ESP-packet-CVE-2022-22201"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69884",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-and-Junos-OS-Evolved-RPD-crash-upon-receipt-of-specific-OSPFv3-LSAs-CVE-2022-22230"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69901",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-SRX-Series-Upon-processing-of-a-genuine-packet-the-pkid-process-will-crash-during-CMPv2-auto-re-enrollment-CVE-2022-22218"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69905",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-Evolved-Incorrect-file-permissions-can-allow-low-privileged-user-to-cause-another-user-to-execute-arbitrary-commands-CVE-2022-22248"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69893",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-Peers-not-configured-for-TCP-AO-can-establish-a-BGP-or-LDP-session-even-if-authentication-is-configured-locally-CVE-2022-22237"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69904",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-Evolved-Kernel-processing-of-unvalidated-TCP-segments-could-lead-to-a-Denial-of-Service-DoS-CVE-2022-22247"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69880",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-On-IPv6-OAM-SRv6-network-enabled-devices-an-attacker-sending-a-specific-genuine-packet-to-an-IPv6-address-configured-on-the-device-may-cause-a-RPD-memory-leak-leading-to-an-RPD-core-CVE-2022-22228"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69873",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-QFX10000-Series-In-IP-MPLS-PHP-node-scenarios-upon-receipt-of-certain-crafted-packets-multiple-interfaces-in-LAG-configurations-may-detach-CVE-2022-22223"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69896",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-and-Junos-OS-Evolved-An-rpd-memory-leak-might-be-observed-while-running-a-specific-cli-command-in-a-RIB-sharding-scenario-CVE-2022-22240"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69897",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Contrail-Networking-Multiple-Vulnerabilities-have-been-resolved-in-Contrail-Networking-release-2011-L5"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69916",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Junos-OS-Evolved-PTX-Series-Multiple-FPCs-become-unreachable-due-to-continuous-polling-of-specific-SNMP-OID-CVE-2022-22211"
+    },
+    {
+      "published_at": "2022-10-12",
+      "title": "Bulletin de sécurité Juniper JSA69883",
+      "url": "https://supportportal.juniper.net/s/article/2022-10-Security-Bulletin-Paragon-Active-Assurance-Formerly-Netrounds-Stored-Cross-site-Scripting-XSS-vulnerability-in-web-administration-CVE-2022-22229"
+    }
+  ]
+}

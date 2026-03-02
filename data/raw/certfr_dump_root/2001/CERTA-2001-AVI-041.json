@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Explorer versions 5.01 et 5.5.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nOutlook et Outlook express utilisent des composants d'Internet Explorer\nafin d'assurer la lecture des méls au format HTML. Internet Explorer\ndétermine en fonction du type MIME du fichier l'application à activer\npour en assurer la lecture (exemple : fichier texte, vidéo, audio,\netc...).\n\nUne vulnérabilité d'Internet Explorer dans l'interprétation de l'entête\nMIME permet à un utilisateur mal intentionnéd'exécuter du code\narbitraire avec les privilèges du destinataire du message.\n\nSous Outlook, il existe un « volet de prévisualisation » qui permet de\nvoir le message dès qu'il est sélectionné. Il est activé par défaut dans\nla configuration d'outlook.\n\nIl est également possible d'insérer ce type de code dans une page HTML\nhabilement conçue afin de le faire exécuter par le navigateur.\n\n## Contournement provisoire\n\nDans l'impossibilité d'appliquer le correctif immédiatement (absence de\nla personne ayant les permissions adéquates sur la système par exemple),\nutiliser le moyen temporaire suivant :\n\nIl est possible de bloquer le téléchargement automatique de fichiers\ndans les paramètres d'Internet Explorer :\n\n-   Menu : Outils ;\n-   sélectoionner : Options Internet ;\n-   onglet : sécurité ;\n-   choix : Personnaliser le niveau ;\n-   désactiver : Téléchargement de fichiers.\n\n## Solution\n\n-   Appliquer le correctif de Microsoft :\n\n        http://www.microsoft.com/windows/ie/download/critical/Q290108/default.asp\n\n-   Le Service Pack 2 d'Internet Explorer 5.5 ou 5.01 corrige cette\n    vulnérabilité entre-autres :\n\n        http://www.microsoft.com/windows/ie/downloads/archive/default.asp\n\n-   Installer Internet Explorer 6 :\n\n        http://www.microsoft.com/windows/ie/downloads/ie6/default.asp\n\nNota : Pour prendre connaissance de la version d'Internet Explorer et\ndes correctif ou Service Packs qui y ont été appliqués, procédez comme\nsuit :\n\n1.  Démarrer le navigateur Internet Explorer ;\n\n2.  menu : «?» (A propos) ;\n\n3.  sélectionner : A propos d'Internet Explorer ;\n\n4.  le champ : Versions des mises à jour (ou Updates Versions permet de\n    connaitre les correctifs et Service Packs qui ont été appliqués.\n\n    La figure [1](#fig:ie501) montre une version d'Internet Explorer\n    5.01 sans aucun correctif appliqué. La figure [2](#fig:ie55) montre\n    une version de Internet Explorer 5.5 corrigée avec le Service Pack 2\n    (indiqué par : ;SP2;)\n\n<div markdown=\"1\" align=\"center\">\n\n<table>\n<caption><strong>Figure 1:</strong> Internet Explorer 5.01 non\ncorrigé</caption>\n<colgroup>\n<col style=\"width: 100%\" />\n</colgroup>\n<tbody>\n<tr class=\"odd\">\n<td><div data-align=\"center\">\n<img src=\"/uploads/ie500-7.png\" data-align=\"bottom\" data-border=\"0\"\nwidth=\"359\" height=\"315\" alt=\"Image ie500\" />\n</div></td>\n</tr>\n</tbody>\n</table>\n\n**Figure 1:** Internet Explorer 5.01 non corrigé\n\n</div>\n\n<div markdown=\"1\" align=\"center\">\n\n<table>\n<caption><strong>Figure 2:</strong> Internet Explorer 5.5\ncorrigé</caption>\n<colgroup>\n<col style=\"width: 100%\" />\n</colgroup>\n<tbody>\n<tr class=\"odd\">\n<td><div data-align=\"center\">\n<img src=\"/uploads/ie55-7.png\" data-align=\"bottom\" data-border=\"0\"\nwidth=\"359\" height=\"315\" alt=\"Image ie55\" />\n</div></td>\n</tr>\n</tbody>\n</table>\n\n**Figure 2:** Internet Explorer 5.5 corrigé\n\n</div>\n\nAttention :le champ nommé « version: » indique la version du navigateur.\nMais pour la version 5.01 d'internet explorer, ce champ commencera par\n5.00. Les huits autres chiffres correspondent au correctifs appliqués\nainsi qu'aux Service Packs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité MS01-020 de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-020.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-041",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-03-30T00:00:00.000000"
+    },
+    {
+      "description": "seconde version : propagation intensive des vers utilisant cette vulnérabilité.",
+      "revision_date": "2002-07-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Propagation de ver et de virus"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut envoyer par mél ou disposer sur un\nsite web une page HTML habilement conçue dans le but d'exécuter du code\narbitraire sur la machine cible.\n",
+  "title": "Vulnérabilité dans Internet Explorer 5.01 et 5.5",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft (MS01-020)",
+      "url": null
+    }
+  ]
+}

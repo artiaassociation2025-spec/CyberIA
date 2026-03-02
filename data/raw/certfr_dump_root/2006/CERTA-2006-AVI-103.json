@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>GnuPG versions 1.4.2.1 et antérieures.</P>",
+  "content": "## Description\n\nGnuPG présente une erreur dans la mise en œuvre du contrôle de la\nvalidité d'une signature accompagnant un document. Elle permet à un\nutilisateur d'insérer des données arbitraires dans un document signé\n(typiquement du texte supplémentaire dans un message) sans que GnuPG\ndétecte une erreur d'intégrité.\n\n## Solution\n\nLa version 1.4.2.2 de GnuPG corrige le problème :\n\n    http://www.gnupg.org/download/\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0049",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0049"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD pour GnuPG du 10 mars 2006 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-gnupg.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0266 du 15 mars 2006    :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2006-0266.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 993 du 10 mars 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-993"
+    },
+    {
+      "title": "Site de GnuPG :",
+      "url": "http://www.gnupg.org"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200603-08 du 10 mars 2006    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200603-08.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:055 du 13 mars    2006 :",
+      "url": "http://frontal2.mandriva.com/security/advisories?name=MDKSA-2006:055"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-264-1 du 13 mars 2006 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-264-1"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-103",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-03-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo et Mandriva, corrections références Debian et FreeBSD.",
+      "revision_date": "2006-03-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat.",
+      "revision_date": "2006-03-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans GnuPG permet à un utilisateur de porter atteinte\nà l'intégrité des données.\n",
+  "title": "Vulnérabilité dans GnuPG",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité GnuPG du 9 mars 2006",
+      "url": "http://lists.gnupg.org/pipermail/gnupg-announce/2006q1/000216.hmtl"
+    }
+  ]
+}

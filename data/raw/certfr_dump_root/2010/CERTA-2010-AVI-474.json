@@ -1,0 +1,98 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "TYPO3 versions 4.2.x antérieures à 4.2.15 ;",
+      "product": {
+        "name": "Typo3",
+        "vendor": {
+          "name": "Typo3",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "TYPO3 versions 4.3.x antérieures à 4.3.7 ;",
+      "product": {
+        "name": "Typo3",
+        "vendor": {
+          "name": "Typo3",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "TYPO3 versions 4.4.x antérieures à 4.4.4.",
+      "product": {
+        "name": "Typo3",
+        "vendor": {
+          "name": "Typo3",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans TYPO3 :\n\n-   une faille permet le contournement du mécanisme jumpUrl, dont la\n    fonctionnalité est de vérifier les droits d'accès à des pages ou des\n    fichiers. L'exploitation de cette vulnérabilité permet de lire tout\n    fichier auquel le compte ayant lancé le serveur Web a accès ;\n-   une injection de code indirecte est possible via le backend de\n    TYPO3. Il est néanmoins nécessaire de disposer d'un compte autorisé\n    à se connecter au backend pour pouvoir exploiter cette vulnérabilité\n    ;\n-   une faille dans le gestionnaire d'extensions permet de lire les\n    fichiers auxquels le serveur Web a accès. Il est nécessaire de\n    disposer d'un compte d'administrateur pour pouvoir exploiter cette\n    vulnérabilité ;\n-   la tâche be_user_creation permet de créer des utilisateurs qui sont\n    membres de groupes arbitraires et par ce biais, d'élever les\n    privilèges. L'exploitation de cette vulnérabilité requiert des\n    droits de création d'utilisateurs dans le centre de tâches ;\n-   un problème dans la fonction PHP filter_var() permet la réalisation\n    d'un déni de service à distance lorsque la fonction\n    t3lib_div::validEMail() est utilisée ;\n-   une injection de code indirecte est possible via la fonction\n    RemoveXSS.\n\n## Solution\n\nMettre à jour TYPO3 en version 4.2.15, 4.3.7 ou 4.4.4.\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3710",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3710"
+    },
+    {
+      "name": "CVE-2010-3715",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3715"
+    },
+    {
+      "name": "CVE-2010-3716",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3716"
+    },
+    {
+      "name": "CVE-2010-4068",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4068"
+    },
+    {
+      "name": "CVE-2010-3717",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3717"
+    },
+    {
+      "name": "CVE-2010-3714",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3714"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-474",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-10-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE.",
+      "revision_date": "2010-10-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">TYPO3</span>\npermettent un déni de service à distance, la lecture de certains\nfichiers du système, une élévation de privilèges et une injection de\ncode indirecte à distance.\n",
+  "title": "Multiples vulnérabilités dans TYPO3",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité TYPO3-SA-2010-020 du 06 octobre 2010",
+      "url": "http://typo3.org/teams/security/security-bulletins/typo3-sa-2010-020/"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Certified Asterisk versions antérieures à 11.6-cert17 et 13.13-cert5",
+      "product": {
+        "name": "Certified Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Open Source versions antérieures à 11.25.2, 13.17.1 et 14.6.1",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2017-14099",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2017-14099"
+    },
+    {
+      "name": "CVE-2017-14100",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2017-14100"
+    },
+    {
+      "name": "CVE-2017-14098",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2017-14098"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2017-AVI-281",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2017-09-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans <span\nclass=\"textit\">Asterisk</span>. Elles permettent à un attaquant de\nprovoquer une exécution de code arbitraire, un déni de service à\ndistance et une atteinte à la confidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans Asterisk",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Asterisk AST-2017-006 du 31 août 2017",
+      "url": "https://downloads.asterisk.org/pub/security/AST-2017-006.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Asterisk AST-2017-007 du 31 août 2017",
+      "url": "https://downloads.asterisk.org/pub/security/AST-2017-007.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Asterisk AST-2017-005 du 31 août 2017",
+      "url": "https://downloads.asterisk.org/pub/security/AST-2017-005.html"
+    }
+  ]
+}

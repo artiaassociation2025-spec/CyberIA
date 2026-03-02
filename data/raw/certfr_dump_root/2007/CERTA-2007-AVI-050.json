@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Toutes les versions de CISCO IOS Software (9.x, 10.x, 11.x et 12.x).",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans le système\nd'exploitation Cisco IOS. Elles touchent les couches protocolaires TCP,\nIPv4 et IPv6 :\n\n-   la couche TCP ne manipulerait pas correctement les numéros de\n    séquence et les valeurs acquittées ; une personne malveillante\n    pourrait envoyer plusieurs paquets exploitant cette vulnérabilité,\n    afin de provoquer un déni de service ;\n-   la couche IPv4 ne manipulerait pas correctement le champ IP option.\n    Une personne malveillante pourrait ainsi envoyer un paquet avec une\n    en-tête IP contenant un champ mal conçu et une autre en-tête\n    particulière ICMP, PIMv2, PGM ou URD afin d'exécuter du code\n    arbitraire à distance ;\n-   la couche IPv6 ne manipulerait pas correctement des options de\n    routage par la source (Type 0 Routing Headers), pouvant conduire à\n    un dysfonctionnement du système vulnérable.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0481",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0481"
+    },
+    {
+      "name": "CVE-2007-0480",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0480"
+    },
+    {
+      "name": "CVE-2007-0479",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0479"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 72372 du 24 janvier 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070124-IOS-IPv6.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco ID 81734 du 24 janvier 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070124-crafted-ip-option.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco ID 72318 du 24 janvier 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070124-crafted-tcp.shtml"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-050",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE et modification des risques.",
+      "revision_date": "2007-01-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités de certaines couches protocolaires dans Cisco IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Cisco du 24 janvier 2007",
+      "url": null
+    }
+  ]
+}

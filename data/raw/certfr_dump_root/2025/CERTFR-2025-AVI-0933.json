@@ -1,0 +1,89 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Tomcat versions 11.0.x antérieures à 11.0.12",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tomcat versions 10.1.x antérieures à 10.1.47",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tomcat versions 9.0.x antérieures à 9.0.110",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-55752",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-55752"
+    },
+    {
+      "name": "CVE-2025-55754",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-55754"
+    },
+    {
+      "name": "CVE-2025-61795",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-61795"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0933",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-10-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Apache Tomcat. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-10-07",
+      "title": "Bulletin de sécurité Apache Tomcat Apache_Tomcat_11.0.12",
+      "url": "https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.12"
+    },
+    {
+      "published_at": "2025-10-06",
+      "title": "Bulletin de sécurité Apache Tomcat Apache_Tomcat_9.0.110",
+      "url": "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.110"
+    },
+    {
+      "published_at": "2025-10-07",
+      "title": "Bulletin de sécurité Apache Tomcat Apache_Tomcat_10.1.47",
+      "url": "https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.47"
+    }
+  ]
+}

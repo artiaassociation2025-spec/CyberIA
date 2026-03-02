@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>wv</TT> versions 0.7.4, 0.7.5,  0.7.6 et 1.0.0.",
+  "content": "## Description\n\nLa bibliothèque wv permet la lecture des documents au format Microsoft\nWord sous les environnements UNIX.  \nUne vulnérabilité de type débordement de tampon permet à un utilisateur\nmal intentionné, via un fichier malicieusement construit et destiné à\nêtre lu par wv, d'exécuter du code arbitraire sur la plate-forme\nvulnérable. Ceci n'est possible que dans le mode HTML view.\n\n## Contournement provisoire\n\n-   Ne pas lire de fichiers non surs avec wvHtml ou des applications\n    utilisant la bibliothèque wv ;\n-   Lors de la lecture d'un fichier non sur avec wvHtml ou une\n    application utilisant la bibliothèque wv, s'assurer que le mode HTML\n    view est désactivé.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:077 du 29 juillet    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:077"
+    },
+    {
+      "title": "Bulletin de sécurité iDEFENSE du 09 juillet 2004 :",
+      "url": "http://www.idefense.com/application/poi/display?id=115&type=vulnerabilities"
+    },
+    {
+      "title": "Site Internet de la bibliothèque wv (projet    wvWare) :",
+      "url": "http://wvware.sourceforge.net"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-243",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandrake.",
+      "revision_date": "2004-07-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la bibliothèque wv permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire sur la plate-forme vulnérable.\n",
+  "title": "Vulnérabilité de la bibliothèque wv",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA 200407-11",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200407-11.xml"
+    }
+  ]
+}

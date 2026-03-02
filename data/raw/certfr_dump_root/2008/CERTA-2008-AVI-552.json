@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Solaris 10.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans le service in.dhcpd de Sun\nSolaris. La première est de type débordement de mémoire quant à la\nseconde, elle n'est pas détaillée par l'éditeur.\n\nToutes deux permettent à un utilisateur distant malintentionné de\nprovoquer un déni de service ou, potentiellement, d'exécuter du code\narbitraire.\n\nCompte tenu de la nature du protocole DHCP, l'attaquant devra, sans\ndoute, se situer sur le même sous-réseau que la machine vulnérable pour\nréaliser l'exploitation.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5365",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5365"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sun Solaris #243806 du 07 novembre    2008 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-243806-1"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-552",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-11-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans le serveur DHCP de Sun Solaris\npermettent à un utilisateur distant malintentionné de provoquer un déni\nde service ou d'exécuter du code arbitraire.\n",
+  "title": "Multiples vulnérabilités du serveur DHCP de Sun Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sun #243806 du 07 novembre 2008",
+      "url": null
+    }
+  ]
+}

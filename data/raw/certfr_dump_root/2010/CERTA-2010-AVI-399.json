@@ -1,0 +1,100 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "MySQL version 5.5.4 et versions antérieures ;",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MySQL version 5.1.48 et versions antérieures ;",
+      "product": {
+        "name": "MySQL",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent MySQL :\n\n-   une erreur de la vérification des droits d'accès permet à un\n    utilisateur malveillant de désinstaller un greffon à distance ;\n-   une erreur de vérification de droits d'accès permet à un utilisateur\n    malveillant authentifié disposant de certains droits sur une table\n    de lire ou de modifier les autres tables présentes sur le serveur ;\n-   une déficience dans la gestion des paquets réseau permet à un\n    utilisateur malveillant d'épuiser les ressources du serveur à\n    distance ;\n-   un défaut de vérification des bornes dans un argument qui est un nom\n    de table permet à un utilisateur malveillant authentifié d'exécuter\n    du code arbitraire à distance ;\n-   un utilisateur malveillant authentifié disposant de certains\n    privilèges peut provoquer un déni de service ou déplacer des\n    répertoires de données à distance.\n\n## Solution\n\nLes versions 5.1.49, 5.1.50 et 5.5.5 de MySQL remédient à ces problèmes.\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-1621",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1621"
+    },
+    {
+      "name": "CVE-2010-1849",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1849"
+    },
+    {
+      "name": "CVE-2010-1850",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1850"
+    },
+    {
+      "name": "CVE-2010-1848",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1848"
+    },
+    {
+      "name": "CVE-2010-2008",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2008"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de la version 5.5.5 de MySQL du 06 juillet 2010 :",
+      "url": "http://dev.mysql.com/doc/refman/5.5/en/news-5-5-5.html"
+    },
+    {
+      "title": "Bulletin de la version 5.1.49 de MySQL du 09 juillet 2010 :",
+      "url": "http://dev.mysql.com/doc/refman/5.1/en/news-5-1-49.html"
+    },
+    {
+      "title": "Bulletin de la version 5.1.50 de MySQL du 03 août 2010 :",
+      "url": "http://dev.mysql.com/doc/refman/5.1/en/news-5-1-50.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-399",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-08-24T00:00:00.000000"
+    },
+    {
+      "description": "rectification des liens vers les bulletins de l'éditeur.",
+      "revision_date": "2010-08-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De nombreuses vulnérabilités présentes dans MySQL ont été corrigées. Les\nplus importantes permettent à un utilisateur malveillant d'exécuter du\ncode arbitraire à distance.\n",
+  "title": "Vulnérabilités dans MySQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de version MySQL",
+      "url": null
+    }
+  ]
+}

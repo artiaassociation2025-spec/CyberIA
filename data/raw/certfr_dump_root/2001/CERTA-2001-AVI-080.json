@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Services pour Unix, version 2.0</P>",
+  "content": "## Description\n\nLes services pour Unix peuvent être installés sur Windows NT ou Windows\n2000 afin de faciliter l'intégration des machines Windows dans les\nenvironnements Unix.\n\n-   Première vulnérabilité :\n\n    Le système de fichiers de réseau NFS est un protocole, défini par la\n    RFC1094, permettant l'accès distant aux fichiers partagés.\n\n    Une vulnérabilité dans la mise en œuvre NFS sous SFU 2.0 (Services\n    For Unix) permet à un utilisateur mal intentionné, par le biais de\n    requêtes astucieusement composées, de provoquer une fuite de mémoire\n    entraînant un épuisement des ressources de la machine cible. Cette\n    vulnérabilité peut obliger l'administrateur à effectuer un\n    redémarrage de la machine.\n\n-   Seconde vulnérabilité :\n\n    Une vulnérabilité présente dans le service Telnet du SFU, entraîne\n    également une fuite de mémoire pouvant conduire à un épuisement des\n    ressources du système de la machine cible.\n\n    Nota : Cette vulnérabilité n'affectait pas le serveur Telnet de\n    Windows NT4 ou Windows 2000 mais uniquement de SFU.\n\n## Solution\n\nTélécharger les correctifs sur le site Microsoft :\n\n-   Première vulnérabilité (NS) :\n    -   Windows NT 4 :\n\n            http://www.microsoft.com/Downloads/Release.asp?ReleaseID=31600\n\n    -   Windows 2000 :\n\n            http://www.microsoft.com/Downloads/Release.asp?ReleaseID=31592\n-   Seconde vulnérabilité (Telnet) :\n    -   Windows NT 4 :\n\n            http://www.microsoft.com/Downloads/Release.asp?ReleaseID=31601\n\n    -   Windows 2000 :\n\n            http://www.microsoft.com/Downloads/Release.asp?ReleaseID=31595\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-080",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-07-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux composants des services pour Unix 2.0 (NFS et Telnet) sont affectés\npar une vulnérabilité permettant à un utilisateur mal intentionné\nd'entraîner un déni de service sur la machine qui offre ces services.\n",
+  "title": "Vulnérabilité dans Microsoft Services pour Unix 2.0",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-039",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms01-039.asp"
+    }
+  ]
+}

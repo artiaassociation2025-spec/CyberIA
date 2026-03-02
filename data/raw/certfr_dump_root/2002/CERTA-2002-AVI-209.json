@@ -1,0 +1,36 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>HP Tru64 Unix versions 5.1a, 5.1, 5.0a, 4.0g et 4.0f.<BR></P>  <P>Nota : les anciennes versions de Tru64/OSF1 (versions 3.x)  sont susceptibles de présenter des vulnérabilités, mais ne sont  plus maintenues par l'éditeur. Il est recommandé de mettre à jour  ces systèmes à la version Tru64 Unix 5.1.</P>",
+  "content": "## Description\n\n-   Vulnérabilité SSRT2229\n\n    Un utilisateur mal intentionné peut exploiter une vulnérabilité de\n    la commande usr/sbin/ping pour effectuer une attaque de type déni de\n    service sur le système.\n\n    Cette vulnérabilité n'est exploitable qu'en local.  \n\n-   Vulnérabilté SSRT2275\n\n    Plusieurs commandes présentent des vulnérabilités de type\n    débordement de mémoire, qui peuvent être exploitées pour obtenir les\n    droits de l'administratreur root.\n\n    Ces vulnérabilités peuvent être exploitées , suivant les commandes,\n    soit en local soit à distance.\n\n## Solution\n\nAppliquer le correctif correspondant à la version de votre système (cf.\nsection Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-209",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-09-17T00:00:00.000000"
+    },
+    {
+      "description": "première révision : ajout d'une note concernant les anciennes versions de Tru64/OSF1.",
+      "revision_date": "2002-09-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Des vulnérabilités présentes sur le système HP Tru64 Unix permettent à\nun utilisateur mal intentionné de réaliser un déni de service ou\nd'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilités sur HP Tru64 Unix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité HP SSRT2229 et SSRT2275",
+      "url": "http://wwss1pro.compaq.com/support/reference_library/viewdocument.asp?source=SRB0039W.xml&dt=11"
+    }
+  ]
+}

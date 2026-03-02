@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Joomla! versions 1.7.2 et antérieures dans la branche 1.7 et 1.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Joomla! versions 1.5.24 et antérieures dans la branche 1.5.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans Joomla! :\n\n-   un mauvais filtrage permet de réaliser une injection de code\n    indirecte dans le backend (branches 1.6 et 1.7) ;\n-   une faiblesse dans la génération de l'aléa lors de la\n    réinitialisation d'un mot de passe permet de le modifier (branches\n    1.5, 1.6 et 1.7).\n\n## Solution\n\nLes versions 1.5.25 et 1.7.3 corrigent ces vulnérabilités.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2011-AVI-640",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-11-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Accès à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans <span class=\"textit\">Joomla!</span> permettent\nde réaliser une injection de code indirecte à distance et de modifier le\nmot de passe d'un utilisateur.\n",
+  "title": "Vulnérabilités dans Joomla!",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Joomla! du 14 novembre 2011",
+      "url": "http://developer.joomla.org/security/news/375-20111103-core-password-change"
+    }
+  ]
+}

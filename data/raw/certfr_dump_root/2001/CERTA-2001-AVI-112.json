@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous les serveurs NIS sous Solaris 2.6, 7 ou 8 et dont le  <SPAN class=\"textit\">daemon</SPAN> <TT>rpc.yppasswdd</TT> est en  fonction.</P>",
+  "content": "## Description\n\nNIS (Network Information Service) est un service sous Unix permettant de\ncentraliser les informations relatives aux comptes des utilisateurs du\nréseau.\n\nyppasswd permet aux utilisateurs de changer leur mot de passe.\n\nUn utilisateur distant mal intentionné peut exécuter du code arbitraire\nau moyen d'un débordement de mémoire du daemon rpc.yppasswdd.\n\nCette attaque arrête le daemon rpc.yppasswdd ce qui empêche, par\nconséquent, les utilisateurs de changer de mot de passe.\n\n## Contournement provisoire\n\nArrêter le daemon rpc.yppasswdd. Ceci aura pour conséquence d'empêcher\nles utilisateurs de changer de mot de passe.\n\n## Solution\n\nTélécharger et appliquer le correctif selon le système :\n\n-   Solaris 2.6 pour SPARC : 106303-03\n-   Solaris 7 pour SPARC : 111590-02\n-   Solaris 8 pour SPARC : 111596-02\n-   Solaris 2.6 pour architecture x86 : 106304-03\n-   Solaris 7 pour architecture x86 : 111591-02\n-   Solaris 8 pour architecture x86 : 111597-02\n\n```{=html}\n<!-- -->\n```\n    http://sunsolve.sun.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de Vulnérabilité VU#327281 du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/327281"
+    },
+    {
+      "title": "Bulletin d'alerte de SUN numéro 27486 :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=salert%2F27486"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-112",
+  "revisions": [
+    {
+      "description": "seconde version : Inversion des correctifs SPARC et x386 dans le paragraphe solution.",
+      "revision_date": "2001-10-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Un débordement de mémoire du <span class=\"textit\">daemon</span>\nrpc.yppasswdd permet à un utilisateur mal intentionné d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilité de yppasswd",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de Vulnérabilité du CERT/CC",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin d'alerte SUN numéro 27486",
+      "url": null
+    }
+  ]
+}

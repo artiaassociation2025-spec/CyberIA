@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions de WinZip antérieures à WinZip 10.0 Build 7245 (y compris la Pre Build 7245).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans WinZip. Ce dernier, au cours de\nson installation, créée un contrôle ActiveX sur le système :\nWZFILEVIEW.FileViewCtrl.61 (CLSID :\nA09AE68F-B14D-43ED-B713-BA413F034904). Celui-ci contiendrait plusieurs\nfonctions qui ne seraient pas correctement sécurisées. Cependant, ce\ncontrôle ActiveX est marqué \"sain pour l'exécution\" (Safe for\nscripting), ce qui indique à Internet Explorer par exemple que cet\nActiveX peut être utilisé si une page Web visitée le demande. Nous\nrappelons à cet égard qu'il est fortement recommandé de désactiver les\nActiveX au niveau du navigateur Internet Explorer. Cette vulnérabilité\npeut aussi être exploitée localement afin d'élever ses privilèges à ceux\nde l'administrateur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-5198",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5198"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité ZDI-06-040 de TippingPoint    ZeroDayInitiative du14 novembre 2006 :",
+      "url": "http://www.zerodayinitiative.com/advisories/ZDI-06-040.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-504",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans WinZip. Elle pourrait être\nexploitée localement ou à distance pour permettre l'exécution de code\narbitraire sur la machine ayant une version vulnérable.\n",
+  "title": "Vulnérabilité de WinZip",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de mise à jour WinZip du 14 novembre 2006",
+      "url": "http://www.winzip.com/wz7245.htm"
+    }
+  ]
+}

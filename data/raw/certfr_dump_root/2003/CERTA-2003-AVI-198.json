@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>OpenBSD 3.4 et versions antérieures.</p>",
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire est présente dans le\nmodule compat_ibcs2 du noyau OpenBSD.\n\nAu moyen d'un fichier COFF habilement constitué, un utilisateur mal\nintentionné peut exploiter cette vulnérabilité afin d'obtenir les\nprivilèges du super-utilisateur root ou réaliser un déni de service par\narrêt brutal du système.\n\nDe plus, deux primitives système (sysctl et semop/semctl) présentant une\nvulnérabilité (mauvais contrôle des paramètres en entrée pouvant\nentraîner un débordement de mémoire) ont fait l'objet d'un correctif.\n\n  \nL'ensemble de ces vulnérabilités n'est pas exploitable à distance.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité relatif à compat_ibcs2 :",
+      "url": "http://www.openbsd.org/errata.html#ibcs2"
+    },
+    {
+      "title": "Correctif relatif à semop/semctl :",
+      "url": "http://www.openbsd.org/errata.html#sem"
+    },
+    {
+      "title": "Correctif relatif à sysctl :",
+      "url": "http://www.openbsd.org/errata.html#uvm"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-198",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-11-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités du noyau OpenBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité d'OpenBSD",
+      "url": null
+    }
+  ]
+}

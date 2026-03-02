@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<ul> <li>Citrix StoreFront versions 2308.x antérieures à 2308.1</li> <li>Citrix StoreFront versions antérieures à 2311</li> <li>Citrix StoreFront versions 1912 LSTR antérieures à 1912 LTSR CU8 hotfix 3.22.8001.2</li> <li>Citrix StoreFront versions 2203 LSTR antérieures à 2203 LTSR CU4 Update 1</li> <li>Citrix Virtual Apps and Desktops versions antérieures à 2311</li> <li>Citrix Virtual Apps and Desktops versions 1912 LTSR antérieures à 1912 LTSR CU8 hotfix 19.12.8100.4</li> <li>Citrix Virtual Apps and Desktops versions 2203 LSTR antérieures à 2203 LTSR CU4</li> <li>NetScaler ADC et NetScaler Gateway versions 14.1.x versions antérieures à 14.1-12.35</li> <li>NetScaler ADC et NetScaler Gateway versions 13.1.x versions antérieures à 13.1-51.15</li> <li>NetScaler ADC et NetScaler Gateway versions 13.0.x versions antérieures à 13.0-92.21</li> <li>NetScaler ADC versions 13.1.x-FIPS versions antérieures à 13.1-37.176</li> <li>NetScaler ADC versions 12.1.x-FIPS versions antérieures à 12.1-55.302</li> <li>NetScaler ADC versions 12.1.x-NDcPP versions antérieures à 12.1-55.302</li> </ul> <p>L’éditeur précise que les produits NetScaler ADC and NetScaler Gateway en versions 12.1 sont en fin de vie (<em>EOL</em>) et ne bénéficient plus de mises à jour de sécurité.</p> ",
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-6548",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-6548"
+    },
+    {
+      "name": "CVE-2023-5914",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-5914"
+    },
+    {
+      "name": "CVE-2023-6184",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-6184"
+    },
+    {
+      "name": "CVE-2023-6549",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-6549"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0039",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-01-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits\nCitrix. Elles permettent à un attaquant de provoquer une exécution de\ncode arbitraire à distance, un déni de service à distance et une\ninjection de code indirecte à distance (XSS).\n",
+  "title": "Multiples vulnérabilités dans les produits Citrix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Citrix CTX584986 du 16 janvier 2024",
+      "url": "https://support.citrix.com/article/CTX584986/netscaler-adc-and-netscaler-gateway-security-bulletin-for-cve20236548-and-cve20236549"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Citrix CTX583759 du 16 janvier 2024",
+      "url": "https://support.citrix.com/article/CTX583759/citrix-storefront-security-bulletin-for-cve20235914"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Citrix CTX583930 du 16 janvier 2024",
+      "url": "https://support.citrix.com/article/CTX583930/citrix-session-recording-security-bulletin-for-cve20236184"
+    }
+  ]
+}

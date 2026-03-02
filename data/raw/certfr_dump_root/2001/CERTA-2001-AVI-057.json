@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tous les équipements Cisco utilisant  les versions 12.1(2)T et 12.1(3)T de Cisco IOS.  <P>Pour connaitre la version de Cisco IOS utilisée par un  équipement, se connecter sur ce dernier et taper la commande  suivante: <TT>show version</TT></P></p>",
+  "content": "## Description\n\nUne tentative de connexion sur des ports TCP entraine un erreur mémoire\nqui provoquera le redémarrage du logiciel lors de la prochaine\nutilisation d'une commande accédant au fichier de configuration comme\npar exemple show running-config ou write memory.\n\nLes plages de ports TCP concernées sont:\n\n-   ports 3100 à 3999\n-   ports 5100 à 5999\n-   ports 7100 à 7999\n-   ports 10100 à 10999\n\nSelon Cisco: « Cisco IOS ne peut être configuré pour supporter un\nservice utilisant ces ports et ne peut être configuré pour accepter des\nconnexions sur ces ports mais des tentatives de connexion provoquent une\ncorruption de la mémoire qui pourra entrainer un rechargement du\nlogiciel » .\n\n## Contournement provisoire\n\nIl n'y a pas de solution de contournement provisoire.\n\nIl est toutefois possible de protéger les équipements Cisco d'une\nattaque venant de l'extérieur au moyen d'un équipement (par exemple un\npare-feu ) filtrant les ports TCP concernés.\n\n## Solution\n\nTélécharger une mise-à-jour du logiciel IOS sur le site de Cisco :\n\n    http://www.cisco.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis Cisco \"IOS Reload after Scanning Vulnerability\" :",
+      "url": "http://www.cisco.com/warp/public/707/ios-tcp-scanner-reload-pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-057",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-05-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Une exploitation de cette vulnérabilité permet de réaliser un déni de service"
+    }
+  ],
+  "summary": "Une tentative de connexion sur certaines plages de ports TCP entraine\nune erreur mémoire dans les équipements utilisant les versions 12.1(2)T\net 12.1(3)T de Cisco IOS. Cette erreur entraine le redémarrage (reload)\ndu logiciel.\n",
+  "title": "Vulnérabilité dans IOS version 12.1(2)T et 12.1(3)T",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis Cisco : \"IOS Reload after Scanning Vulnerability\"",
+      "url": null
+    }
+  ]
+}

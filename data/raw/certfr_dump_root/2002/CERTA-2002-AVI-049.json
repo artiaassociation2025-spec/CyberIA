@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Versions du module mod_ssl antérieures à la version 2.8.7-1.3.23;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "versions de Apache-ssl antérieures à la version 1.3.22-1.47.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSSL permet l'utilisation de connexions sécurisées sur des serveurs web\n(https://) ou autres serveurs sécurisés (ftps://).\n\nUne vulnérabilité de type « débordement de mémoire » à été découverte\ndans le mécanisme de gestion de cache de sessions.\n\nCette vulnérabilité permet à un utilisateur mal intentionné de réaliser\nl'exécution de code arbitraire à distance.\n\n## Contournement provisoire\n\nDésactiver le paramètre -DSSL dans le script httpd en attendant\nd'appliquer les correctifs.\n\n## Solution\n\nInstaller les correctifs disponibles sur\n\n    http://www.apache-ssl.org/\n\net sur\n\n    http://www.modssl.org/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité ESA-20020301-005 de EnGarde Secure Linux      /",
+      "url": "http://www.engardelinux.org"
+    },
+    {
+      "title": "Message de Ed Moyle sur la liste de diffusion BugTraq",
+      "url": "http://online.securityfocus.com/archive/1/258646"
+    },
+    {
+      "title": "Avis de sécurité Apache-SSL",
+      "url": "http://www.apache-ssl.org/advisory-20020301.txt"
+    },
+    {
+      "title": "Avis de sécurité 2002-0034 de Trustix Secure Linux",
+      "url": "http://www.trustix.net/pub/Trustix/updates/"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-049",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-03-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité de type « débordement de mémoire » présente dans le\nmodule mod_ssl et apache-ssl permet à un utilisateur mal intentionné\nl'exécution de code arbitraire à distance.\n",
+  "title": "Vulnérabilité SSL sous Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste de diffusion Bugtraq",
+      "url": null
+    }
+  ]
+}

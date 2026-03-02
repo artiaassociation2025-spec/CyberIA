@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">CA Total Defense</SPAN> version r12.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans CA Total Defense :\n\n-   un mauvais filtrage des paramètres de certaines requêtes permet\n    d'effectuer diverses injections SQL (CVE-2011-1653) ;\n-   les paramètres utilisés lors d'un dépôt de fichier ne sont pas\n    correctement filtrés, ce qui peut mener à une exécution de code\n    arbitraire à distance (CVE-2011-1654) ;\n-   certaines informations sensibles ne sont pas correctement protégées,\n    ce qui permet la récupération d'identifiants de connexion\n    (CVE-2011-1655).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1653",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1653"
+    },
+    {
+      "name": "CVE-2011-1654",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1654"
+    },
+    {
+      "name": "CVE-2011-1655",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1655"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-229",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-04-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Injection SQL"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Des vulnérabilités dans <span class=\"textit\">CA Total Defense</span>\npermettent l'exécution de code arbitraire à distance ainsi que des\ninjections SQL.\n",
+  "title": "Vulnérabilités dans CA Total Defense",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CA20110413-01 du 13 avril 2011",
+      "url": "https://support.ca.com/irj/portal/anonymous/phpsupcontent?contentID=CD065CEC-AFE2-4D9D-8E0B-BE7F6E345866"
+    }
+  ]
+}

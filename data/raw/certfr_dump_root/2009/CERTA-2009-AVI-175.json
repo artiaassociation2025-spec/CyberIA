@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Drupal versions 5.16 et antérieures ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Drupal versions 6.10 et antérieures.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans Drupal :\n\n-   des injections de code indirectes sont possibles par l'intermédiaire\n    de caractères UTF-8 pouvant être interprétés en UTF-7 ;\n-   par l'intermédiaire d'un lien spécifiquement constitué, les données\n    saisies dans un formulaire peuvent être transmises à un site tiers.\n    Ce site peut ensuite réaliser des injections de requêtes illégitimes\n    par rebond.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Drupal SA-CORE-2009-005 du 29 avril    2009 :",
+      "url": "http://drupal.org/node/449078"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-175",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-05-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans <span class=\"textit\">Drupal</span> permettent\nde réaliser des injections de code indirectes et des injections de\nrequêtes illégitimes par rebond.\n",
+  "title": "Vulnérabilités dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Drupal SA-CORE-2009-005 du 29 avril 2009",
+      "url": null
+    }
+  ]
+}

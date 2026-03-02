@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SUN Solaris 2.6 et 7 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mandrake 8.0 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLors de l'installation certains gestionnaires d'affichage X11 utilisant\nle protocole XDMCP (X Display Manager Control Protocol) sont configurés\npar défaut afin de permettre des connexions distantes depuis n'importe\nquel autre client. Lors de cette demande de connexion, la liste des\nutilisateurs autorisés à ouvrir une session est divulguée.\n\n## Contournement provisoire\n\n-   Filtrer le port du protocole XDMCP ( UDP/177) en n'acceptant que les\n    connexions par des utilisateurs autorisés.\n\n-   Désactiver les connexions distantes si elles ne sont pas utilisées\n    dans le fichier de configuration ''Xaccess''\n\n    `#* #any host can get a login window`\n\n    `#* CHOOSER BROADCAST #any indirect host can get a      chooser`\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2002:025",
+      "url": "http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-025.php"
+    },
+    {
+      "title": "Note du CERT/CC VU#634847",
+      "url": "http://kb.cert.org/vuls/id/634847"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-059",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-03-21T00:00:00.000000"
+    },
+    {
+      "description": "première révision : ajout de l'avis Mandrake MDKSA-2002:025.",
+      "revision_date": "2002-03-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations"
+    }
+  ],
+  "summary": "Une vulnérabilité a été trouvée dans la configuration par défaut des\ngestionnaire d'affichage X11 implémentant XDCMP.\n",
+  "title": "Vulnérabilité sur les gestionnaires d'affichage X11 utilisant le protocole XDMCP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note VU#634847 du CERT/CC -",
+      "url": null
+    }
+  ]
+}

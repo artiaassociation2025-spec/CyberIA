@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les systèmes Linux utilisant les  versions de noyau suivantes:  <UL>    <LI>pour la série 2.2.x, les versions 2.2.19 et antérieures    sont vulnérables ;</LI>    <LI>pour la série 2.4.x, les versions 2.4.11 et antérieures    sont vulnérables ;</LI>  </UL></p>",
+  "content": "## Description\n\nEn créant des liens symboliques soigneusement choisis, un utilisateur\nmal intentionné peut réaliser un déni de service sur le système local.\nCe déni de service est dû à la consommation excessive de la ressource\nCPU.\n\nLa deuxième vulnérabilité concerne une faille dans le code de l'appel\nsystème ptrace. En exploitant cette vulnérabilité, un utilisateur mal\nintentionné peut obtenir les privilèges de l'administrateur root sur le\nsystème vulnérable.\n\n## Solution\n\nMettre à jour le noyau linux à partir des sources:\n\n-   pour la série 2.2.x, le patch pre-2.2.20-11 corrige le problème. Il\n    peut être téléchargé depuis l'adresse suivante:\n\n        ftp://ftp.kernel.org/pub/linux/kernel/people/alan/linux-2.2/2.2.20pre/\n\n-   pour la série 2.4.x, il est conseillé d'installer le noyau 2.4.12\n    minimum. Ce noyau est disponible à l'adresse suivante:\n\n        ftp://ftp.kernel.org/pub/linux/kernel/v2.4/\n\nCertains éditeurs de distribution Linux diffusent également des\npaquetages réalisant une mise-à-jour du noyau (cf section\nDocumentation). Pour plus de renseignements concernant les correctifs,\ncontactez votre éditeur.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-124",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-23T00:00:00.000000"
+    },
+    {
+      "description": "ajout documentation pour les distributions SuSE et Mandrake.",
+      "revision_date": "2001-10-29T00:00:00.000000"
+    },
+    {
+      "description": "mise-à-jour des références aux avis de la distribution Mandrake.",
+      "revision_date": "2001-11-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités concernant les noyaux linux de la série 2.2.x et\n2.4.x ont été publiées sur l'Internet.\n\nCes vulnérabilités ne sont exploitables qu'en local.\n",
+  "title": "Vulnérabilités dans le noyau linux (2.2.x et 2.4.x)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité RedHat RHSA-2001:129-10",
+      "url": null
+    }
+  ]
+}

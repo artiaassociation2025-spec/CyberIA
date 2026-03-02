@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2000 Datacenter Server;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT Server version 4.0;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Advanced Server;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe DNS (Domain Name System) est un mécanisme utilisé pour la résolution\nde nom de machines (exemple : www.certa.ssi.gouv.fr) en adresse IP et\nvice-versa.\n\nUn utilisateur mal intentionné peut configurer un serveur hostile pour\nrenvoyer des informations erronées à des serveurs DNS vulnérables. Ces\ninformations erronées permettront alors de substituer une adresse\nillégitime à une adresse légitime.\n\nPar ce biais, il est ainsi possible de provoquer un déni de service en\nrenvoyant une erreur ou de rediriger le trafic vers un site hostile à\nl'insu de l'utilisateur. Le site hostile peut alors intercepter,\nmodifier ou falsifier des informations.\n\n## Solution\n\nUn article de la base de connaissances Microsoft indique le paramétrage\npermettant de prévenir la corruption du cache DNS :\n\n    http://support.microsoft.com/support/kb/articles/Q241/3/52.ASP\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-096",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-09-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un mauvais paramétrage par défaut des serveurs DNS sous Windows NT et\nWindows 2000 permet à un utilisateur mal intentionné de corrompre le\ncache des serveurs DNS au moyen d'informations erronées renvoyées par un\nserveur DNS hostile.\n",
+  "title": "Serveurs DNS Microsoft : corruption de cache possible.",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note d'incident IN-2001-11 du CERT/CC",
+      "url": "http://www.cert.org/incident_notes/IN-2001-11.html"
+    }
+  ]
+}

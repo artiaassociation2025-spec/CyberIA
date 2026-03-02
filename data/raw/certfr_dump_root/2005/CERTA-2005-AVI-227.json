@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Cacti 0.8.6d et versions antérieures.</p>",
+  "content": "## Description\n\nCacti propose une interface web à l'outil RRDTool basée sur le langage\nde scripts PHP.\n\nDe multiples vulnérabilités sont présentes dans Cacti :\n\n-   une vulnérabilité de type injection de commandes SQL peut être\n    exploitée par un utilisateur distant mal intentionné afin de\n    réaliser des requêtes SQL arbitraires sur la base de données ;\n-   une vulnérabilité dans les scripts config_settings.php et\n    yop_graph_header.php peuvent être exploitées par un utilisateur\n    distant mal intentionné afin d'exécuter du code arbitraire sur le\n    serveur web vulnérable.\n\n## Contournement provisoire\n\nPositionner la variable register_globals à Off afin de prévenir\nl'injection de code arbitraire.\n\nDans l'attente de l'application des correctifs, restreindre l'accès au\nserveur web.\n\n## Solution\n\nLa version 0.8.6e de Cacti corrige ces vulnérabilités.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200506-20 du 22 juin 2005    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200506-20.xml"
+    },
+    {
+      "title": "Bulletin de sécurité #267 d'iDEFENSE du 22 juin 2005 :",
+      "url": "http://www.idefense.com/application/poi/display?id=267"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD du 21 juin 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-cacti.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-764 du 21 juillet 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-764"
+    },
+    {
+      "title": "Bulletin de sécurité #266 d'iDEFENSE du 22 juin 2005 :",
+      "url": "http://www.idefense.com/application/poi/display?id=266"
+    },
+    {
+      "title": "Bulletin de sécurité #265 d'iDEFENSE du 22 juin 2005 :",
+      "url": "http://www.idefense.com/application/poi/display?id=265"
+    },
+    {
+      "title": "Annonce de la sortie de la version 0.8.6e :",
+      "url": "http://www.cacti.net/release_notes_0_8_6e.php"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-227",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-06-23T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-764.",
+      "revision_date": "2005-07-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités de Cacti",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDEFENSE du 22 juin 2005",
+      "url": null
+    }
+  ]
+}

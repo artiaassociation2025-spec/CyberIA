@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>gzip 1.x.</P>",
+  "content": "## Description\n\nTrois vulnérabilités de type débordement de mémoire ont été découvertes\ndans les fonctions make_table() et build_tree(). Ces vulnérabilités\npeuvent être exploitées au moyen d'une archive compressée au format gzip\nafin de provoquer un déni de service et/ou d'exécuter du code\narbitraire.\n\nUne dernière vulnérabilité de type NULL pointer dans la fonction\nhuft_build() permet à une personne malveillante de provoquer un déni de\nservice à distance au moyen d'une archive compressée spécialement\ncontruite.\n\n## Solution\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4334",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4334"
+    },
+    {
+      "name": "CVE-2006-4335",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4335"
+    },
+    {
+      "name": "CVE-2006-4336",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4336"
+    },
+    {
+      "name": "CVE-2006-4337",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4337"
+    },
+    {
+      "name": "CVE-2006-4338",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4338"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200609-13 du 23 septembre    2006 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200609-13.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-349-1 du 19 septembre 2006    :",
+      "url": "http://www.ubuntulinux.org/usn/usn-349-1"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1181 du 19 septembre 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1181"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SA:2006:056 du 26 septembre    2006 :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2006-Sep/0010.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD FreeBSD-SA-06:24.gzip du 19    septembre 2006 :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-06:21.gzip.asc"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:167 du 20    septembre 2006 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDKSA-2006:167"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0667 du 19 septembre    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0667.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-413",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-09-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités découvertes dans gzip permettent à un\nutilisateur distant mal intentionné d'exécuter du code arbitraire ou de\nprovoquer un déni de service.\n",
+  "title": "Multiples vulnérabilités dans gzip",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA-200609-13 du 23 septembre 2006",
+      "url": null
+    }
+  ]
+}

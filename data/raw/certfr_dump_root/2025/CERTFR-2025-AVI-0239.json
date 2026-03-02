@@ -1,0 +1,97 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Azure Kubernetes Service versions antérieures à 1.11.5",
+      "product": {
+        "name": "Azure",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Azure Kubernetes Service versions 1.12.x antérieures à 1.12.1",
+      "product": {
+        "name": "Azure",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "Microsoft indique que les vulnérabilités CVE-2025-1974 et CVE-2025-1097 n'affectent pas Azure Kubernetes Service.",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-1097",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-1097"
+    },
+    {
+      "name": "CVE-2025-24514",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-24514"
+    },
+    {
+      "name": "CVE-2025-24513",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-24513"
+    },
+    {
+      "name": "CVE-2025-1974",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-1974"
+    },
+    {
+      "name": "CVE-2025-1098",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-1098"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0239",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-03-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Non spécifié par l'éditeur"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Microsoft Azure Kubernetes Service. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une atteinte à la confidentialité des données et un problème de sécurité non spécifié par l'éditeur.",
+  "title": "Multiples vulnérabilités dans Microsoft Azure Kubernetes Service",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-03-24",
+      "title": "Bulletin de sécurité Microsoft Azure CVE-2025-24513",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-24513"
+    },
+    {
+      "published_at": "2025-03-24",
+      "title": "Bulletin de sécurité Microsoft Azure CVE-2025-1098",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-1098"
+    },
+    {
+      "published_at": "2025-03-24",
+      "title": "Bulletin de sécurité Microsoft Azure CVE-2025-1974",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-1974"
+    },
+    {
+      "published_at": "2025-03-24",
+      "title": "Bulletin de sécurité Microsoft Azure CVE-2025-1097",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-1097"
+    },
+    {
+      "published_at": "2025-03-24",
+      "title": "Bulletin de sécurité Microsoft Azure CVE-2025-24514",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-24514"
+    }
+  ]
+}

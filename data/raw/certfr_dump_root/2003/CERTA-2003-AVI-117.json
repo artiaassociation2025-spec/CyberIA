@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft SQL Server 7.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft SQL Server 2000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft SQL Server 2000 Desktop Engine (MSDE 2000) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft SQL Server 2000 Desktop Engine (Windows).",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Data Engine (MSDE) 1.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Microsoft SQL Server utilise des tubes nommés spécifiques pour la\n    gestion des connexions au serveur. Une erreur dans le mécanisme de\n    gestion utilisé pour ces tubes permet à un utilisateur local non\n    autorisé d'obtenir un accès au serveur en prenant possession d'un\n    tube nommé utilisé pour la connexion d'un utilisateur licite ;\n-   l'envoi d'un paquet malicieusement formé à un tube nommé spécifique\n    permet à un utilisateur mal intentionné d'effectuer un déni de\n    service ou bien d'exécuter du code arbitraire sur le serveur ;\n-   une faille de type débordement de mémoire présente dans l'une des\n    fonctions du serveur permet à un utilisateur local d'exécuter du\n    code arbitraire sur la machine.\n\n## Solution\n\nAppliquer le correctif cumulatif fourni par Microsoft (cf.\nDocumentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-117",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Trois vulnérabilités ont été découvertes dans MS SQL Server.\n",
+  "title": "Vulnérabilités dans MS-SQL Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #MS03-031 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/MS03-031.asp"
+    }
+  ]
+}

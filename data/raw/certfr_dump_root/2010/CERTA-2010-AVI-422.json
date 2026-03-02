@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les produits suivants sont affectés par  ces vulnérabilités :  <UL>    <LI><SPAN class=\"textit\">Cisco Wireless LAN Controller</SPAN>    série 2000 ;</LI>    <LI><SPAN class=\"textit\">Cisco Wireless LAN Controller</SPAN>    série 2100 ;</LI>    <LI><SPAN class=\"textit\">Cisco Wireless LAN Controller</SPAN>    série 4100 ;</LI>    <LI><SPAN class=\"textit\">Cisco Wireless LAN Controller</SPAN>    série 4400 ;</LI>    <LI><SPAN class=\"textit\">Cisco Wireless LAN Controller</SPAN>    série 5500 ;</LI>    <LI><SPAN class=\"textit\">Cisco Wireless Services Modules</SPAN>    ;</LI>    <LI><SPAN class=\"textit\">Cisco Wireless LAN Controller    Modules</SPAN> pour <SPAN class=\"textit\">Integrated Services    Routers</SPAN> ;</LI>    <LI><SPAN class=\"textit\">Cisco Catalyst 3750G Integrated    Wireless LAN Controller</SPAN>.</LI>  </UL></p>",
+  "content": "## Description\n\nPlusieurs types de vulnérabilités ont été découvertes :\n\n-   Un paquet Internet Key Exchange forgé par un attaquant à destination\n    d'un WLC Cisco peut provoquer un déni de service. Ce protocole est\n    activé par défaut sur ces produits et ne peut pas être désactivé.\n    Les versions 3.2 et supérieures du logiciel sont affectées (cf.\n    CVE-2010-0574).\n-   Un attaquant authentifié peut créer une série de paquets HTTP pour\n    obliger l'appareil à redémarrer. La répétition de cette attaque\n    provoque un déni de service (cf. CVE-2010-2841). Les versions 4.2 et\n    supérieures des logiciels sont affectées.\n-   Il est possible à un attaquant authentifié sur l'appareil de\n    contourner ses droits en lecture seule afin de modifier la\n    configuration (cf. CVE-2010-2842, CVE-2010-2843 et CVE-2010-3033).\n-   Un attaquant non authentifié peut contourner certaines listes de\n    contrôle d'accès à travers deux vulnérabilités (cf. CVE-2010-0575 et\n    CVE-2010-3034). Une des deux vulnérabilités affecte les versions 4.1\n    et suivantes, l'autre les versions 6.0.x.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0575",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0575"
+    },
+    {
+      "name": "CVE-2010-2843",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2843"
+    },
+    {
+      "name": "CVE-2010-2842",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2842"
+    },
+    {
+      "name": "CVE-2010-0574",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0574"
+    },
+    {
+      "name": "CVE-2010-2841",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2841"
+    },
+    {
+      "name": "CVE-2010-3124",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3124"
+    },
+    {
+      "name": "CVE-2010-3034",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3034"
+    },
+    {
+      "name": "CVE-2010-3033",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3033"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco cisco-sa-20100908-wlc du 08    septembre 2010:",
+      "url": "http://cisco.com/warp/public/707/cisco-sa-20100908-wlc.shtml"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-422",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-09-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités affectent la famille des produits <span\nclass=\"textit\">Cisco Wireless LAN Controller</span>, nommés ci-après\n<span class=\"textit\">WLC</span>.\n",
+  "title": "Multiples vulnérabilités dans les produits Cisco Wireless LAN",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-sa-20100908-wlc du 08 septembre 2010",
+      "url": null
+    }
+  ]
+}

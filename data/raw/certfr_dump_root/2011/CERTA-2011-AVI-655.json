@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Dovecot versions 2.0.15 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Dovecot",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDans le cadre de l'utilisation d'un serveur Dovecot interconnecté à un\nserveur proxy au moyen d'une connexion SSL/TLS, le Common Name défini\ndans le certificat du serveur proxy n'est pas correctement vérifié.\nCette vulnérabilité permet à un utilisateur malintentionné d'effectuer\nune attaque de type Man-in-the-middle sur la liaison SSL/TLS entre le\nserveur Dovecot et le serveur proxy.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). La version 2.0.16 corrige le\nproblème.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Liste des changements apportés à la version 2.0.16 de    Dovecot :",
+      "url": "http://www.dovecot.org/list/dovecot-news/2011-November/000200.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-655",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-11-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le serveur de messagerie Dovecot permet à un\nutilisateur malintentionné d'effectuer une attaque de type <span\nclass=\"textit\">Man in the middle</span>.\n",
+  "title": "Vulnérabilité dans Dovecot",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés à la version 2.0.16 de Dovecot",
+      "url": null
+    }
+  ]
+}

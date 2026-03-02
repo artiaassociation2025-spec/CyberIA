@@ -1,0 +1,113 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft .NET Framework 3.5 Service Pack 1 ;",
+      "product": {
+        "name": ".Net",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft .NET Framework 2.0 Service Pack 2 ;",
+      "product": {
+        "name": ".Net",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft .NET Framework 4.",
+      "product": {
+        "name": ".Net",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft .NET Framework 1.0 Service Pack 3 ;",
+      "product": {
+        "name": ".Net",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft .NET Framework 1.1 Service Pack 1 ;",
+      "product": {
+        "name": ".Net",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft .NET Framework 3.5.1 ;",
+      "product": {
+        "name": ".Net",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nQuatre vulnérabilités ont été corrigées dans ASP.Net.\n\nLeur exploitation réussie conduit à:\n\n-   l'élévation de privilège à distance via l'usurpation d'un compte\n    existant d'un site reposant sur l'authentification par formulaire ;\n-   un déni de service par épuisement des resources processeur du\n    serveur ;\n-   une redirection de l'utilisateur vers un site arbitraire lors de\n    l'authentification par formulaire sur un site web.\n\nLes détails techniques de l'attaque par déni de service ont été publiées\net peuvent conduire rapidement au développement d'outils exploitant\ncette vulnérabilité. Des informations complémentaires sont fournies sur\ncette technique d'attaque dans le bulletin d'actualité\nCERTA-2011-ACT-052 (cf. section Documentation).\n\n## Contournement provisoire\n\nLe bulletin de l'éditeur suggère plusieurs contournements provisoires.\nLe CERTA recommande une revue détaillée de ces contournements avant\ntoute mise en production. En effet, il s'agit parfois de désactiver les\nmécanismes d'authentification mis en place sur la plateforme (pour les\nvulnérabilités d'usurpation d'identité) ou encore de restreindre la\nlongueur des requêtes acceptées par le serveur. Ces contournements\npeuvent être contre-productifs en termes de sécurité et de\ndisponibilité. Dans tous les cas, le CERTA recommande l'installation des\ncorrectifs proposés par l'éditeur lorsqu'ils sont disponibles.\n\nL'article KB318785 de la base de connaissance Microsoft documente les\nmoyens de déterminer les versions du Microsoft Framework .NET (cf.\nsection Documentation)\n\n## Solution\n\nNote: Toutes les versions du Microsoft Framework .NET sont affectées.\nPlusieurs versions du composant peuvent cohabiter sur un même poste et\ndoivent donc individuellement être mises à jour.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin d'actualité du CERTA du 30 décembre 2011 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2011-ACT-052"
+    },
+    {
+      "title": "Article de la base de connaissance Microsoft KB318785 :",
+      "url": "http://support.microsoft.com/kb/318785"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS11-100 du 29 décembre 2011    :",
+      "url": "http://technet.microsoft.com/en-us/security/bulletin/MS11-100"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS11-100 du 29 décembre 2011    :",
+      "url": "http://technet.microsoft.com/fr-fr/security/bulletin/MS11-100"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-727",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-12-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    },
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Microsoft a publié un bulletin de sécurité adressant 4 vulnérabilités\ndans le <span class=\"textit\">Microsoft Framework .NET</span>. Les plus\nsévères de ces vulnérabilités permettent l'élévation de privilège et le\ndéni de service à distance pour les applications <span\nclass=\"textit\">ASP.Net</span>.\n",
+  "title": "Vulnérabilités dans l'implémentation ASP.Net du Microsoft .NET Framework",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité MS11-100",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Solaris versions 6, 7 et 8 (plate-forme  sparc et x86) utilisant Sun Solstice Enterprise Agent.</p>",
+  "content": "## Description\n\nLes tests effectués par l'université finlandaise d'Oulu ont mis en\névidence la présence de vulnérabilités dans les routines de décodage et\nde traitement des messages SNMP dans de nombreuses implémentations (se\nréférer au bulletin d'alerte CERTA-2002-ALE-004 du CERTA).\n\nUne vulnérabilité de l'agent SNMP, snmpdx, permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire avec les privilèges de\nl'administrateur root. Cette vulnérabilité, de type débordement de\nmémoire, est exploitable à distance.\n\n## Contournement provisoire\n\n-   Ne démarrer le service SNMP via le script /etc/rc3.d/S76snmpdx que\n    si celui-ci est nécessaire ;\n-   utiliser les capacités de filtrage (Access Control List) de l'agent\n    SNMP ;\n-   ne pas utiliser les noms de communautés positionnés lors de\n    l'installation par défaut ;\n-   filtrer les ports 161/udp et 162/udp utilisés par le protocole SNMP\n    V1 au niveau du garde-barrière afin d'empêcher l'exploitation de ces\n    vulnérabilités depuis l'Internet.\n\n## Solution\n\nSe référer au bulletin de sécurité de SUN (cf. section Documentation)\npour la disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Documentation \"Solstice Enterprise Agents\" :",
+      "url": "http://www.sun.com/software/entagents/docs.html"
+    },
+    {
+      "title": "Bulletin de Sécurité #00215 \"snmpdx\" disponible à l'adresse    suivante :",
+      "url": "http://sunsolve.sun.com/pub-cgi/secBulletin.pl/"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-031",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut utiliser une vulnérabilité de\nl'agent SNMP (Sun Solstice Entreprise Master Agent) sous Solaris pour\nexécuter du code arbitraire à distance avec les privilèges de\nl'administrateur root.\n",
+  "title": "Vulnérabilité de l'agent SNMP sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #00215 de Sun",
+      "url": null
+    }
+  ]
+}

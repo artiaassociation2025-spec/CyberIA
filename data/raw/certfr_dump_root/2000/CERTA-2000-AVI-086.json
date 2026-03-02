@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Catalyst 6000 - version logicielle 5.3(1)CSX à 5.5(4) et 5.5(4.a).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Catalyst 4000 et 5000 - version logicielle 4.5(2) à 5.5(4) et 5.5(4.a) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn utilisateur mal intentionné, effectuant une série rapide de fausses\nauthentifications telnet, peut provoquer un déni de service obligeant le\nredémarrage du commutateur.\n\nNota : Tous les types d'authentification telnet ( Kerberos ) sont\nconcernés par cette vulnérabilité.\n\n## Contournement provisoire\n\nInstaller une liste de contrôle d'accès sur le commutateur :\n\nset ip permit enable telnet\n\nset ip permit \\<addr\\> \\[mask\\]  \n  \n\nDésactiver la gestion de commande à distance.\n\n## Solution\n\nAppliquer le correctif fourni par CISCO :\n\n    http://www.cisco.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité CISCO :",
+      "url": "http://www.cisco.com/warp/public/707/catalyst-memleak-pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-086",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-12-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans les commutateurs CISCO Catalyst 4000, 5000 et 6000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CISCO",
+      "url": null
+    }
+  ]
+}

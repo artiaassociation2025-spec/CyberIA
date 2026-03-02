@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">WebCalendar</SPAN> versions 1.0.3 et  antérieures.</P>",
+  "content": "## Description\n\nUne vulnérabilité dans le traitement du paramètre includedir permet\nd'importer sur le serveur un fichier de configuration depuis un site\nexterne. L'exploitation de cette vulnérabilité nécessite le\npositionnement de la variable register_globals à On dans le fichier\nphp.ini.\n\n## Contournement provisoire\n\nPositionner la variable register_globals à Off dans le fichier php.ini.\n\n## Solution\n\nInstaller la version 1.0.4.\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2762",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2762"
+    }
+  ],
+  "links": [
+    {
+      "title": "Version 1.0.4 de WebCalendar :",
+      "url": "http://www.k5n.us/webcalendar.php?topic=Download"
+    },
+    {
+      "title": "Révision 1.539.2.60 de WebCalendar :",
+      "url": "http://webcalendar.cvs.sourceforge.net/webcalendar/webcalendar/ChangeLog?revision=1.539.2.60&view=markup"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1096 du 13 juin 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1096"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-259",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-06-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans WebCalendar",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Révision 1.539.2.60 dans le CVS de WebCalendar",
+      "url": null
+    }
+  ]
+}

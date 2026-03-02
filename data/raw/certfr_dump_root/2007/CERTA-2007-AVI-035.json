@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Squid versions 2.6.STABLE6 et antérieures.",
+      "product": {
+        "name": "Squid",
+        "vendor": {
+          "name": "Squid",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa première vulnérabilité permet à une personne malveillante de réaliser\nun déni de service en utilisant une requête FTP spécialement conçue.\n\nUne seconde vulnérabilité se trouve dans la fonction aclMatchExternal et\npermet à un utilisateur malintentionné de réaliser un déni de service\npar le biais d'un débordement de la file d'attente external_acl.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0248",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0248"
+    },
+    {
+      "name": "CVE-2007-0247",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0247"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:026 du 23 janvier    2007 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:026"
+    },
+    {
+      "title": "Bulletin de sécurité Suse SUSE-SA:2007:012 du 23 janvier    2007 :",
+      "url": "http://www.novell.com/linux/security/advisories/2007_12_squid.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-414-1 du 24 janvier 2007 :",
+      "url": "http://www.ubuntu.com/usn/usn-414-1"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-035",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité de Suse, Mandriva et Ubuntu.",
+      "revision_date": "2007-01-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans Squid permettent de réaliser un déni\nde service.\n",
+  "title": "Vulnérabilités de Squid",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Journaux des changements de Squid 2.6.STABLE7",
+      "url": "http://www.squid-cache.org/Versions/v2/2.6/squid-2.6.STABLE7-RELEASENOTES.html"
+    }
+  ]
+}

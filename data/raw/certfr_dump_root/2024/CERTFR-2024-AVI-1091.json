@@ -1,0 +1,94 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Tomcat versions 10.1.x antérieures à 10.1.34",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tomcat versions 11.0.x antérieures à 11.0.2",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tomcat versions 9.0.x antérieures à 9.0.98",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2024-54677",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-54677"
+    },
+    {
+      "name": "CVE-2024-56337",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-56337"
+    },
+    {
+      "name": "CVE-2024-50379",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-50379"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-1091",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-12-18T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de la version vulnérable 11.0.2",
+      "revision_date": "2024-12-20T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de la vulnérabilité CVE-2024-56337",
+      "revision_date": "2024-12-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Apache Tomcat. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et un déni de service à distance.",
+  "title": "Multiples vulnérabilités dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": "2024-12-09",
+      "title": "Bulletin de sécurité Apache Tomcat Apache_Tomcat_10.1.34",
+      "url": "https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.34"
+    },
+    {
+      "published_at": "2024-12-09",
+      "title": "Bulletin de sécurité Apache Tomcat Apache_Tomcat_9.0.98",
+      "url": "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.98"
+    },
+    {
+      "published_at": "2024-12-09",
+      "title": "Bulletin de sécurité Apache Apache_Tomcat_11.0.2",
+      "url": "https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.2"
+    }
+  ]
+}

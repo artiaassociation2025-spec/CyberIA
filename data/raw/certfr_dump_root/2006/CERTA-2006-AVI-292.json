@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tous les routeurs Cisco avec une  version IOS antérieure à la version 3.3.0 build 31.</p>",
+  "content": "## Description\n\nL'application CWRS est une application graphique destinée à configurer\nles routeurs Cisco series 800 et Cisco SOHO. Cette application est\nappelée à partir du serveur web CISCO IOS HTTP.  \n  \nUne vulnérabilité sur l'authentification par défaut (login / mot de\npasse) sur le logiciel CWRS peut être exploitée par un utilisateur mal\nintentionné pour exécuter des commandes arbitraires avec les privilèges\nde niveau 15 (les privilèges de niveau 15 étant les plus hauts\nprivilèges sur un produit géré par Cisco IOS).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 20060712-crws du 12 juillet    2006 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20060712-crws.shtml"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-292",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-07-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité sur l'application Cisco Router Web Setup (CWRS) peut\nêtre exploitée par un utilisateur mal intentionné pour exécuter du code\narbitraire sur un routeur ayant la configuration par défaut du routeur\net la version vulnérable de l'IOS.\n",
+  "title": "Vulnérabilité sur Cisco Router Web Setup (CWRS)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO",
+      "url": null
+    }
+  ]
+}

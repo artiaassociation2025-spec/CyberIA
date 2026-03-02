@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>FreeBSD versions 4.3 à 4.8 incluses.</P>  <P>Les versions 5.x ne sont pas vulnérables.</P>",
+  "content": "## Description\n\nLa fonction \"readv\" lit le contenu d'un descripteur de fichier et place\nles données dans des mémoires tampons.  \n\nUne première vulnérabilité permet à un utilisateur mal intentionné de\nprovoquer l'arrêt brutal du serveur en appelant la fonction \"readv\" un\ngrand nombre de fois, puis en fermant le descripteur de fichier.  \n\nUne seconde vulnérabilité permet à un utilisateur d'obtenir les droits\nen lecture ou en écriture sur un fichier du système. En effet, un\ndescripteur de fichier peut pointer vers une zone de mémoire non allouée\ntout en restant valide. Si un fichier est alors créé dans cette zone de\nmémoire, un utilisateur peut obtenir un accès en lecture ou en écriture\nau fichier nouvellement créé.\n\n## Solution\n\nAppliquer le correctif disponible sur le site de FreeBSD (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-162",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-10-10T00:00:00.000000"
+    },
+    {
+      "description": "première modification : correction du lien de l'avis de Pine Digital.",
+      "revision_date": "2003-10-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités de la fonction \"<span class=\"textit\">readv</span>\"\npermettent à un utilisateur local mal intentionné de provoquer un déni\nde service ou d'obtenir les droits en lecture et en écriture sur des\nfichiers du système.\n",
+  "title": "Vulnérabilités dans la fonction \"readv\" sous FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité FreeBSD SA-03:16",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de Pine Digital PINE-CERT-20030901",
+      "url": "http://www.pine.nl/press/pine-cert-20030901.txt"
+    }
+  ]
+}

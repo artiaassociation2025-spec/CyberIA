@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tout système se basant sur OpenSSL pour  mettre en oeuvre les protocoles de session SSL et TLS.  <P>Se référer aux différents bulletins de sécurité (cf. section  Solution) pour obtenir la liste des systèmes vulnérables.</P></p>",
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans le code gérant la phase\nd'établissement des sessions SSL/TLS.\n\nA l'aide de trames habilement constituées, un utilisateur mal\nintentionné peut exploiter ces vulnérabilités afin de provoquer l'arrêt\nbrutal d'un service réseau vulnérable.\n\n  \n\nUn correctif de sécurité ajouté à la version 0.9.6d d'OpenSSL a\nintroduit une troisième vulnérabilité (référence CAN-2004-0081).\n\nL'exploitation de cette vulnérabilité entraîne un déni de service par\nconsommation excessive des ressources de la machine.\n\n## Solution\n\n-   Les versions 0.9.7d et 0.9.6m d'OpenSSL corrigent ces vulnérabilités\n    :\n\n        http://www.openssl.org\n\n-   Bulletin de sécurité RHSA-2004:120 de Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2004-120.html\n\n-   Bulletin de sécurité RHSA-2004:121 de Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2004-121.html\n\n-   Bulletin de sécurité RHSA-2004:139 de Red Hat :\n\n        http://rhn.redhat.com/errata/RHSA-2004-139.html\n\n-   Bulletin de sécurité DSA-465 de Debian :\n\n        http://www.debian.org/security/2004/dsa-465\n\n-   Bulletin de sécurité MDKSA-2004:023 de Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:023\n\n-   Bulletin de sécurité SuSE-SA:2004:007 de SuSE :\n\n        http://www.suse.com/de/security/2004_07_openssl.html\n\n-   Bulletin de sécurité GLSA 200403-03 de Gentoo :\n\n        http://www.securityfocus.com/advisories/6460\n\n-   Bulletin de sécurité \\#57524 de Sun :\n\n        http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F57524\n\n-   Bulletin de sécurité FreeBSD-SA-04:05 de FreeBSD :\n\n        ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-04:05.openssl.asc\n\n-   Correctif pour OpenBSD du 17 mars 2004 :\n\n        http://www.openbsd.org/errata.html#openssl\n\n-   Bulletin de sécurité \"Cisco OpenSSL implementation vulnerability\" de\n    Cisco :\n\n        http://www.cisco.com/warp/public/707/cisco-sa-20040317-openssl.shtml\n\n-   Bulletin de sécurité \\#58466 de NetScreen :\n\n        http://www.netscreen.com/services/security/alerts/adv58466-signed.txt\n\n-   Bulletin de sécurité \"OpenSSL Vulnerability\" de Check Point :\n\n        http://www.checkpoint.com/techsupport/alerts/openssl.html\n\n-   Bulletin de sécurité NetBSD NetBSD-SA2004-005 :\n\n        ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2004-005.txt.asc\n\n-   Bulletin de sécurité HPSBUX01019 pour HP-UX :\n\n        http://www.securityfocus.com/advisories/6623\n\n-   Bulletin de sécurité HPSBMA01037 pour les agents de supervision HP\n    WBEM :\n\n        http://www.securityfocus.com/advisories/6674\n\n-   Mise à jour de sécurité MacOS X :\n\n        http://www.certa.ssi.gouv.fr/site/CERTA-2004-AVI-111/index.html\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-095",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de NetScreen.",
+      "revision_date": "2004-03-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Check Point.",
+      "revision_date": "2004-03-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de NetBSD.",
+      "revision_date": "2004-04-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Hewlett-Packard.",
+      "revision_date": "2004-04-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout références au bulletin de sécurité de Hewlett-Packard pour les agents de supervision HP WEBM et à l'avis du CERTA relatif au correctif de sécurité MacOS X.",
+      "revision_date": "2004-05-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "A l'aide de trames habilement constituées, un utilisateur mal\nintentionné peut réaliser un déni de service par arrêt brutal d'un\nservice réseau vulnérable.\n",
+  "title": "Multiples vulnérabilités d'OpenSSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité d'OpenSSL du 17 mars 2004",
+      "url": "http://www.openssl.org/news/secadv_20040317.txt"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité 224012 du NISCC",
+      "url": "http://www.uniras.gov.uk/vuls/2004/224012"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Serveur Microsoft SQL 2000.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Serveur Microsoft SQL 7.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Première vulnérabilité :\n\n    Un utilisateur distant mal intentionné peut, par le biais d'un\n    débordement de mémoire dans la gestion des requêtes, exécuter du\n    code sur la machine cible avec les droits du serveur.\n\n-   Seconde vulnérabilité :\n\n    L'environnement d'exécution des programmes C « runtime C »\n    fonctionnant sous Windows 2000, XP et NT 4.0 contient une\n    vulnérabilité de type « format string ».\n\n    Un utilisateur distant mal intentionné peut, par le biais de cette\n    vulnérabilité, créer un déni de service sur le serveur SQL.\n\n## Solution\n\nTélécharger le correctif sur le site Microsoft :\n\n-   SQL Server 7.0 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=35066\n\n-   SQL Server 2000 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=35067\n\n-   Environnement d'exécution des programmes C « runtime C » :\n    -   Windows NT 4.0 et 2000 :\n\n            http://www.microsoft.com/Downloads/Release.asp?ReleaseID=33500\n\n    -   Windows XP :\n\n            http://www.microsoft.com/Downloads/Release.asp?ReleaseID=35023\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-060.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-167",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-12-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans le serveur Microsoft SQL permettent à\nun utilisateur distant mal intentionné d'exécuter du code arbitraire ou\nd'entraîner un deni de service sur la machine cible.\n",
+  "title": "Vulnérabilités dans le serveur SQL Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-060",
+      "url": null
+    }
+  ]
+}

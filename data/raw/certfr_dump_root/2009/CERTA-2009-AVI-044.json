@@ -1,0 +1,105 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Novell GroupWise versions 6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Novell",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Novell GroupWise versions 8.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Novell",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Novell GroupWise versions 7.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Novell",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCinq vulnérabilités ont été découvertes dans les différentes versions de\nNovell GroupWise :\n\n-   la première vulnérabilité est due à un mauvais contrôle des valeurs\n    passées aux paramètres Userid et Library.queryText. L'exploitation\n    de cette vulnérabilité permet d'effectuer des attaques par injection\n    de code indirecte ;\n-   la deuxième vulnérabilité est due à un mauvais contrôle du HTML\n    contenu dans les mails. Cette vulnérabilité peut être exploitée afin\n    d'effectuer des attaques par injection de code indirecte ;\n-   la troisième vulnérabilité est consécutive à un manque de contrôle\n    des actions permises à l'utilisateur. Cette vulnérabilité peut être\n    exploitée afin de contourner la politique de sécurité mise en place\n    ;\n-   la quatrième vulnérabilité résulte d'un mauvais traitement des\n    requêtes de type POST. Cette vulnérabilité peut être exploitée afin\n    de contourner la politique de sécurité mise en place ;\n-   la dernière vulnérabilité résulte d'une erreur de type off-by-one\n    dans le traitement de certaines requêtes HTTP. L'exploitation de\n    cette vulnérabilité permet d'exécuter du code arbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0272",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0272"
+    },
+    {
+      "name": "CVE-2009-0274",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0274"
+    },
+    {
+      "name": "CVE-2009-0273",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0273"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de mise à jour Novell GroupWise :",
+      "url": "http://www.novell.com/support/viewContent.do?externalId=7002322"
+    },
+    {
+      "title": "Bulletins de mise à jour Novell GroupWise :",
+      "url": "http://www.novell.com/support/viewContent.do?externalId=7002320"
+    },
+    {
+      "title": "Bulletins de mise à jour Novell GroupWise :",
+      "url": "http://www.novell.com/support/viewContent.do?externalId=7002319"
+    },
+    {
+      "title": "Bulletins de mise à jour Novell GroupWise :",
+      "url": "http://www.novell.com/support/viewContent.do?externalId=7002502"
+    },
+    {
+      "title": "Bulletins de mise à jour Novell GroupWise :",
+      "url": "http://www.novell.com/support/viewContent.do?externalId=7002321"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-044",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-02-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les différentes\nversions de Novell GroupWise. L'exploitation de ces vulnérabilités\npermet d'effectuer diverses actions malveillantes, dont l'exécution de\ncode arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans Novell GroupWise",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Novell du 02 février 2009",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Novell du 30 janvier 2009",
+      "url": null
+    }
+  ]
+}

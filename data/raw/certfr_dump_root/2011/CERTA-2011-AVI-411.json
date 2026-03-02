@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>phpMyAdmin 3.4.x et 3.3.x.</p>",
+  "content": "## Description\n\nQuatre vulnérabilités de phpMyAdmin ont été corrigées :\n\n-   un défaut dans le script d'affichage des tables permet de réaliser\n    de l'injection de code indirecte (XSS) ;\n-   dans certaines configurations, une transformation de type MIME\n    permet de réaliser de l'injection de code locale (LFI) ;\n-   une vulnérabilité permet de réaliser de l'injection de code locale\n    (LFI). Cette exploitation requiert une authentification préalable ;\n-   des variables PHP, parmi lesquelels la variable SESSION, peuvent\n    être manipulées.\n\n## Solution\n\nLes versions 3.3.10.3 et 3.4.3.2 de phpMyAdmin corrigent ces problèmes.\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2642",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2642"
+    },
+    {
+      "name": "CVE-2011-2643",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2643"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurité phpMyAdmin PMASA-2011-9 à    PMASA-2011-12 du 23 juillet 2011 :",
+      "url": "http://www.phpmyadmin.net/home_page/security/PMASA-2011-12.php"
+    },
+    {
+      "title": "Bulletins de sécurité phpMyAdmin PMASA-2011-9 à    PMASA-2011-12 du 23 juillet 2011 :",
+      "url": "http://www.phpmyadmin.net/home_page/security/PMASA-2011-9.php"
+    },
+    {
+      "title": "Bulletins de sécurité phpMyAdmin PMASA-2011-9 à    PMASA-2011-12 du 23 juillet 2011 :",
+      "url": "http://www.phpmyadmin.net/home_page/security/PMASA-2011-11.php"
+    },
+    {
+      "title": "Bulletins de sécurité phpMyAdmin PMASA-2011-9 à    PMASA-2011-12 du 23 juillet 2011 :",
+      "url": "http://www.phpmyadmin.net/home_page/security/PMASA-2011-10.php"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-411",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-07-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent phpMyAdmin. Certaines permettent\nd'exécuter à distance du code sur le serveur vulnérable.\n",
+  "title": "Vulnérabilités dans phpMyAdmin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité phpMyAdmin PMASA-2011-9 à PMASA-2011-12 du 23 juillet 2011",
+      "url": null
+    }
+  ]
+}

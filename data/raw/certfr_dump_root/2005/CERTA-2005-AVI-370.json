@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>AIX versions 5.2 et 5.3.</p>",
+  "content": "## Description\n\nUne vulnérabilité de l'utilitaire AIX getconf a été découverte. Celle-ci\npermet à un utilisateur mal intentionné d'obtenir les privilèges de\nl'administeur (root).\n\n## Contournement provisoire\n\nModifier les droits de getconf en enlevant le bit suid comme suit :\n\n<div markdown=\"1\" align=\"center\">\n\n</div>\n\n       # chmod 555 /usr/bin/getconf\n\n<div markdown=\"1\" align=\"center\">\n\n</div>\n\nLe fait de modifier ce bit peut avoir des répercutions sur le système.\nIl conviendra donc d'exécuter cette commande en tant que super\nadministrateur (root).\n\nIl conviendra de même de vérifier que la modification a bien été prise\nen compte :\n\n<div markdown=\"1\" align=\"center\">\n\n</div>\n\n       # ls -la /usr/bin/getconf\n       - -r-xr-xr-x 1 root bin 23430 Oct 03 2005 /usr/bin/getconf\n\n<div markdown=\"1\" align=\"center\">\n\n</div>\n\n## Solution\n\nMettre à jour la version d'AIX comme indiqué sur le site de l'éditeur.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de l'éditeur :",
+      "url": "http://www-1.ibm.com/"
+    },
+    {
+      "title": "Bulletin de sécurité et mises à jour :",
+      "url": "http://www-1.ibm.com/servers/eserver/support/pseries/aixfixes.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-370",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-10-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation des privilèges locaux"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de l'utilitaire AIX getconf",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM AIX",
+      "url": null
+    }
+  ]
+}

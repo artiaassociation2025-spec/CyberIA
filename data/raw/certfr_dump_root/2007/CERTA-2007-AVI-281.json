@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Wordpress MU (multi-user) versions 1.2.2 et antérieures.",
+      "product": {
+        "name": "WordPress",
+        "vendor": {
+          "name": "WordPress",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Wordpress versions 2.2 et antérieures ;",
+      "product": {
+        "name": "WordPress",
+        "vendor": {
+          "name": "WordPress",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nWordpress est une platerforme de publication web écrite en langage PHP.\n\nWordpress est touché par une vulnérabilité qui permet à un utilisateur\nmalveillant de contourner la politique de sécurité en téléchargeant un\nfichier sur le serveur hébergeant l'application. Il peut ensuite le\nrappeler directement et ainsi le faire interpréter par le serveur Web.\n\n## Solution\n\nUtiliser la version Wordpress 2.2.1 ou Wordpress MU 1.2.3. Se référer au\nbulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf.\nsection Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Annonce de publication de Wordpress 2.2.1 du 22 juin 2007 :",
+      "url": "http://www.wordpress-fr.net/2007/06/22/sortie-de-wordpress-221/"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-281",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-06-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "<span class=\"textit\">Wordpress</span> est touché par une vulnérabilité\nqui permet de contourner la politique de sécurité et d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilité dans Wordpress",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Secunia SA25794 du 26 juin 2007",
+      "url": "http://secunia.com/advisories/25794/"
+    }
+  ]
+}

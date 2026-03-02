@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>OpenBSD 3.5 et versions antérieures.</p>",
+  "content": "## Description\n\nisakmpd est un service basé sur le protocole IKE. isakmpd sert notamment\nà la négociation et à la gestion des associations de sécurité (SA ou\nSecurity Associations) pour du trafic réseau chiffré et/ou authentifié\n(IPSEC).\n\nAu moyen de paquets habilement constitués, un utilisateur non autorisé\npeut supprimer une association de sécurité (SA) et réaliser ainsi un\ndéni de service par destruction du tunnel IPSEC.\n\n## Solution\n\nPour OpenBSD version 3.5, appliquer le correctif disponible à cette\nadresse :\n\n    ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.5/common/012_isakmpd.patch\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité OpenBSD #012 du 10  juin 2004 :",
+      "url": "http://www.openbsd.org/errata.html#isakmpd"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-196",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-06-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Déni de service pour isakmpd",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité d'OpenBSD du 10 juin 2004",
+      "url": null
+    }
+  ]
+}

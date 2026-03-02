@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Certains paquets de mises à jour OpenSSH distribués pour Red  Hat Desktop et Red Hat Enterprise.</P>",
+  "content": "## Description\n\nCertains serveurs concernant la distribution de paquets pour Red Hat\nauraient été compromis. Il est possible que certaines mises à jour, en\nparticulier concernant OpenSSH, ne soient pas correctes. Aucune\ninformation sur la date de compromission n'est à ce jour connue.\n\nRed Hat publie avec une nouvelle signature les paquets OpenSSH qui\ncorrigent la vulnérabilité CVE-2007-4752 décrite dans l'avis\nCERTA-2007-AVI-497.\n\nUn script est également fourni afin de tester sur les systèmes les\nversions installées. Il indique, en s'appuyant sur une liste noire de\nsignatures pas nécessairement exhaustive, si des versions frauduleuses\nsont présentes.\n\n## Solution\n\nSe référer au bulletin de sécurité RHSA-2008-0855 de Red Hat pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3844",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3844"
+    },
+    {
+      "name": "CVE-2007-4752",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4752"
+    }
+  ],
+  "links": [
+    {
+      "title": "Script de test fourni par Red Hat :",
+      "url": "http://www.redhat.com/security/data/openssh-blacklist.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2008:0855 du 22 août 2008    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2008-0855.html"
+    },
+    {
+      "title": "Avis de sécurité CERTA-2007-AVI-497 du 14 novembre 2007 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2007-AVI-497/"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-428",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-08-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout du CVE spécifique pour l'incident.",
+      "revision_date": "2008-08-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités dans des mises à jour d'OpenSSH sous Red Hat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce de sécurité Red Hat RHSA-2008:0855-6 du 22 août 2008",
+      "url": null
+    }
+  ]
+}

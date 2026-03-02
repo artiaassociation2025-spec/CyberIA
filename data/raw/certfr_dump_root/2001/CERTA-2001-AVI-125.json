@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Oracle<SPAN class=\"textit\">9i</SPAN>AS Web Cache 2.0.0.1</P>",
+  "content": "## Description\n\nUn utilisateur mal intentionné peut arrêter à distance le service web\npar le biais d'une requête HTTP extrêmement longue.\n\nSi l'URL est habilement conçue, elle permettra d'exécuter du code\narbitraire sur certaines plate-formes.\n\n## Solution\n\nTélécharger et appliquer le correctif selon la plate-forme :\n\n-   Pour Windows NT ou 2000 : 2044682 ;\n-   pour Sun Sparc Solaris : 2042106 ;\n-   pour HP-UX : 2043908 ;\n-   pour Linux : 2043924 ;\n-   pour Compaq Tru64 Unix : 2043921 ;\n-   pour AIX : 2043917.\n\n```{=html}\n<!-- -->\n```\n    http://metalink.oracle.com\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-125",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance sur certaines plate-formes"
+    }
+  ],
+  "summary": "Il est possible d'arrêter le service web à distance, voire d'exécuter du\ncode selon la plate-forme victime de l'attaque.\n",
+  "title": "Débordement de mémoire de Oracle 9iAS Web Cache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin d'alerte Oracle",
+      "url": "http://otn.oracle.com/deploy/security/pdf/webcache.pdf"
+    }
+  ]
+}

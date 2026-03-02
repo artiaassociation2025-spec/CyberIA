@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "la version 2.0.4 ainsi que toutes celles antérieures à 2.3.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenOffice",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été identifiées dans l'application\nbureautique OpenOffice. Elles concernent l'interprétation de fichiers au\nformat TIFF. Il serait possible de tromper la taille de la mémoire à\nattribuer, et provoquer ainsi un débordement d'entier et de la pile.\n\nUne personne pourrait exploiter l'une de ces vulnérabilités au moyen\nd'un fichier spécialement construit. Son ouverture par OpenOffice\npermettrait ainsi d'exécuter du code arbitraire sur le système ayant une\nversion vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-2834",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2834"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité 593 d'iDefense du 17 septembre 2007 :",
+      "url": "http://labs.idefense.com/intelligence/vulnerabilities/display?id=593"
+    },
+    {
+      "title": "Annonce de sécurité publiée sur le site du projet    OpenOffice le 18 septembre 2007 :",
+      "url": "http://www.openoffice.org/security/cves/CVE-2007-2834.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2007:0848 du 18 septembre    2007 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0848.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-405",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-09-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été identifiées dans l'application\nbureautique OpenOffice. Elles concernent l'interprétation de fichiers au\nformat TIFF. L'exploitation de ces dernières permettraient à une\npersonne malveillante d'exécuter du code arbitraire sur le système ayant\nune version vulnérable.\n",
+  "title": "Vulnérabilités multiples d'OpenOffice",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDefense 593 du 17 septembre 2007",
+      "url": null
+    }
+  ]
+}

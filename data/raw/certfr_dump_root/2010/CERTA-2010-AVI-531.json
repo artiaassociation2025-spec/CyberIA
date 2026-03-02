@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>ProFTPD versions 1.3.0 à 1.3.3b.</p>",
+  "content": "## Description\n\nDeux vulnérabilités ont été corrigées dans ProFTPD.\n\nLa première provient d'un débordement de pile lorsque l'utilisateur\nenvoie au serveur une chaîne d'échappement spécifique. Lorsqu'elle est\nréussie, cette attaque permet l'exécution de code arbitraire à distance.\n\nLa seconde vulnérabilité se situe dans le module mod_site_misc. Si une\npersonne malintentionnée a des droits d'accès en écriture à un\nrépertoire, elle peut ensuite modifier des fichiers et des répertoires\nauxquels elle n'aurait théoriquement pas accès.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3867",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3867"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-531",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-11-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités affectent <span class=\"textit\">ProFTPD</span>.\nL'exploitation réussie de celles-ci permet, entre autre, l'exécution de\ncode arbitraire à distance.\n",
+  "title": "Vulnérabilités dans ProFTPD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ProFTPD du 29 octobre 2010",
+      "url": "http://www.proftpd.org/docs/NEWS-1.3.3c"
+    }
+  ]
+}

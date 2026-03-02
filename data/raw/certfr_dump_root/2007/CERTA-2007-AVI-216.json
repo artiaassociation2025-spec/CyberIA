@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco IOS versions 11.x ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS versions 12.x ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité est présente dans le serveur FTP (File Transfer\nProtocol) mis en œuvre par le système d'exploitation IOS des équipements\nCisco. Celle-ci permet à un utilisateur distant de provoquer un déni de\nservice ou d'avoir un accès complet (lecture et écriture) au système de\nfichiers de l'IOS vulnérable. Il peut ainsi lire ou modifier la\nconfiguration ou les mots de passe de l'équipement.\n\n## Remarque:\n\nLe serveur FTP est désactivé par défaut sur les IOS.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 90782 du 09 mai 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070509-iosftp.shtml"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-216",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-05-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le système d'exploitation des équipements Cisco\n(IOS) permet à un utilisateur distant de provoquer un déni de service ou\nde porter atteinte à l'intgrité des données du système vulnérable.\n",
+  "title": "Vulnérabilité dans les produits Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco #90782 du 09 mai 2007",
+      "url": null
+    }
+  ]
+}

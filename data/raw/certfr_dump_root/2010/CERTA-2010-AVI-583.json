@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMware ESX 3.x Console OS (COS).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESX 4.x Console OS (COS) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs logiciels vulnérables inclus dans VMware ESX Console OS ont\nété mis à jour par l'éditeur :\n\n-   Samba est mis à jour pour corriger une vulnérabilité permettant à un\n    utilisateur malveillant distant de provoquer un déni de service et\n    potentiellement de l'exécution de code arbitraire (CVE-2010-3069) ;\n-   bzip2 est mis à jour pour corriger une vulnérabilité permettant à un\n    attaquant d'exécuter du code arbitraire à l'aide d'un fichier\n    spécialement conçu (CVE-2010-0405) ;\n-   OpenSSL est mis à jour pour corriger plusieurs vulnérabilités\n    permettant de contourner la politique de sécurité (CVE-2009-0590,\n    CVE-2009-2409 et CVE-2009-355).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3555",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3555"
+    },
+    {
+      "name": "CVE-2010-0405",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0405"
+    },
+    {
+      "name": "CVE-2009-0590",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0590"
+    },
+    {
+      "name": "CVE-2010-3069",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3069"
+    },
+    {
+      "name": "CVE-2009-2409",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2409"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité VMware VMSA-2010-0019 du 07 décembre    2010 :",
+      "url": "http://www.vmware.com/security/advisories/VMSA-2010-0019.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-583",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités affectant différents logiciels inclus dans\nVMware ESX Console OS ont été corrigées.\n",
+  "title": "Multiples vulnérabilités dans VMware ESX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité VMware VMSA-2010-0019 du 07 décembre 2010",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Trillian 0.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Trillian Pro 1.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Trillian 0.71 à 0.74F.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Trillian Pro 2.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrillian est un logiciel de messagerie instantanée assez répandu sous\nWindows.\n\nLa première vulnérabilité est présente dans la gestion du protocole\nAIM/Oscar : un débordement de mémoire présent dans l'allocation de la\nmémoire pour les paquets DirectIM permet à un utilisateur mal\nintentionné de réaliser un déni de service ou l'exécution d'un code\narbitraire sur le système vulnérable.  \n  \nLa seconde vulnérabilité est présente dans l'analyse d'un paquet YMSG :\nun nom de clef malicieusement construit peut entraîner l'exécution de\ncode arbirtaire. L'exploitation de cette vulnérabilité nécessite la\npossibilité de conduire une attaque de type « homme du milieu ».\n\n## Solution\n\nMettre à jour ou réinstaller la version 0.74G de Trillian ou la version\n2.011 de Trillian Pro (cf section documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité de Ematters :",
+      "url": "http://security.e-matters.de/advisories/022004.html"
+    },
+    {
+      "title": "Les correctifs et nouvelles versions sont disponibles à    cette adresse :",
+      "url": "http://www.trillian.cc/downloads/"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-048",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-02-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes sur le logiciel de messagerie\ninstantanée qui permettent à un utilisateur mal intentionné de réaliser\nun déni de service ou d'exécuter du code arbitraire, via un paquet\nmalicieusement construit, sur le système vulnérable.\n",
+  "title": "Vulnérabilités sur Trillian",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Ematters O22004",
+      "url": null
+    }
+  ]
+}

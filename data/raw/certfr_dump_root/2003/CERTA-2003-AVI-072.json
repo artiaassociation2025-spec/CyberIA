@@ -1,0 +1,114 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions antérieures à Samba 2.2.8a et Samba-TNG 0.3.2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Samba version 2.0.10 et toutes les versions précèdentes.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSamba est un logiciel libre, open source, utilisé pour fournir une\nimplémentation du protocole SMB sur les serveurs Unix.\n\nUn débordement de mémoire présent sur la fonction trans2.c utilisée par\nle démon smbd permet à un utilisateur mal intentionné de réaliser un\ndéni de service ou d'exécuter du code arbitraire à distance.\n\nUn outil disponible sur l'Internet permet d'exploiter facilement cette\nvulnérabilité.\n\n## Solution\n\nMettre à jour le serveur samba (cf. section documentation).  \nUtiliser la dernière version de Samba : Samba 2.2.8a et Samba-TNG\n0.3.2.  \nUne mise à jour est disponible pour les versions 2.0.x.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RHSA-2003:138 de Red Hat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-138.html"
+    },
+    {
+      "title": "Avis de sécurité MDKSA-2003:044 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/"
+    },
+    {
+      "title": "Site pour le téléchargement des mises à jour et des    nouvelles versions :",
+      "url": "http://ftp.easynet.be/samba/ftp/"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD-SN-03:01 de FreeBSD :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SN-03%3A01.asc"
+    },
+    {
+      "title": "Avis de sécurité DSA-280-1 de Debian :",
+      "url": "http://www.debian.org/security/2003/dsa-280"
+    },
+    {
+      "title": "Annonce Apple Mac OS X 10.2.5 :",
+      "url": "http://archives:archives@lists.apple.com/mhonarc/security-announce/msg00028.html"
+    },
+    {
+      "title": "Bulletin de sécurité #53581 de Sun :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F53581"
+    },
+    {
+      "title": "Avis de sécurité SUSE-SA:2003:025 de SuSE :",
+      "url": "http://www.suse.com/de/security/2003_025_samba.html"
+    },
+    {
+      "title": "Bulletin de sécurité HPSBUX0304-254 de HP :",
+      "url": "http://itrc.hp.com"
+    },
+    {
+      "title": "Bulletin de sécurité 20030403-01-P de SGI :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20030403-01-P"
+    },
+    {
+      "title": "Bulletin de sécurité RHSA-2003:137 de Red Hat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-137.html"
+    },
+    {
+      "title": "Avis de sécurité OpenPKG-SA-2003.028 de OpenPKG :",
+      "url": "http://www.openpkg.org/security/OpenPKG-SA-2003.028-samba.html"
+    },
+    {
+      "title": "Site internet du logiciel Samba :",
+      "url": "http://www.samba.org"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-072",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-04-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout des avis de sécurité : Mandrake, Debian, SuSE, OpenPKG.",
+      "revision_date": "2003-04-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout des avis de sécurité Red Hat, SUN, SGI, HP, FreeBSD, Apple. Ajout référence CVE.",
+      "revision_date": "2003-05-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un débordement de pile sur le serveur Samba permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire à distance avec les privilèges\ndu super utilisateur root.\n",
+  "title": "Vulnérabilité sur Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste de diffusion Bugtraq",
+      "url": null
+    }
+  ]
+}

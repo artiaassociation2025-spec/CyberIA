@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Bugzilla 3.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bugzilla 2.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bugzilla 4.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été corrigées dans Bugzilla. La première est due\nà un mauvais contrôle des caractères contenus dans une adresse de\nmessagerie lors de la création d'un compte. Un attaquant peut ainsi\nutiliser des caractères utf8 semblables à des caractéres ASCII pour\nusurper l'adresse d'un autre compte. La seconde vulnérabilité est due à\nun mauvais contrôle de certaines entrées et peut être utilisée pour\nfaire de l'injection de requêtes illégitime par rebond.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-0448",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0448"
+    },
+    {
+      "name": "CVE-2012-0440",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0440"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2012-AVI-053",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-02-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été corrigées dans Bugzilla. Elles peuvent être\nutilisées par une personne distante malintentionnée pour réaliser de\nl'injection de requêtes illégitime par rebond (CSRF) et pour contourner\nla politique de sécurité.\n",
+  "title": "Vulnérabilités dans Bugzilla",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Bugzilla du 31 janvier 2012",
+      "url": "http://bugzilla.org/security/3.4.13"
+    }
+  ]
+}

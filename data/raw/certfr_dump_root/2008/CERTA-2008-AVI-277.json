@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<SPAN class=\"textit\">OpenSSL</SPAN>,  version 0.9.8g et versions antérieures.",
+  "content": "## Description\n\nLa première vulnérabilité concerne les versions du logiciel OpenSSL\ncompilées en utilisant, pour les noms de serveurs TLS, des extensions\nqui ne sont pas les extensions par défaut. Par le biais d'un paquet\nconçu à cet effet, un utilisateur malveillant peut provoquer un arrêt\ninopiné (crash) du programme.\n\nLa deuxième vulnérabilité est relative à la négociation en début de\nsession TLS. Si un client se connecte avec certaines options\ncryptographiques sur un serveur malveillant, ce dernier peut provoquer\nun arrêt inopiné (crash) du client.\n\n## Solution\n\nLa version 0.9.8h résout ces problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0891",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0891"
+    },
+    {
+      "name": "CVE-2008-1672",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1672"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité du projet OpenSSL du 28 mai 2008 :",
+      "url": "http://www.openssl.org/news/secadv_20080528.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Nortel 2008009822 du 25 juin 2008 :",
+      "url": "http://support.nortel.com/go/main.jsp?cscat=BLTDETAIL&id=738400"
+    },
+    {
+      "title": "Bulletin de sécurité Nortel 2008009823 du 25 juin 2008 :",
+      "url": "http://support.nortel.com/go/main.jsp?cscat=BLTDETAIL&id=738962"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-277",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-05-29T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Nortel.",
+      "revision_date": "2008-06-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans <span class=\"textit\">OpenSSL</span> permettent\nà un utilisateur malveillant de provoquer un déni de service à distance.\n",
+  "title": "Vulnérabilités dans OpenSSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin OpenSSL du 28 mai 2008",
+      "url": null
+    }
+  ]
+}

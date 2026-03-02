@@ -1,0 +1,100 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mozilla Firefox 3.0.",
+      "product": {
+        "name": "Firefox",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mozilla Firefox versions antérieures à 2.0.0.16 ;",
+      "product": {
+        "name": "Firefox",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans les versions 2.0.0.15 et 3.0 de\nMozilla Firefox. Elle permet à une personne malintentionnée de lancer\ndes URI de type chrome: ou des URI normalement traitées par une autre\napplication. Ceci peut être exploité pour porter atteinte à la\nconfidentialité des données.\n\nUne deuxième faille dans Mozilla Firefox 3.0 permet d'injecter des\nscripts dans des documents chrome. Cette attaque permet à un attaquant\nde contourner la politique de sécurité. Couplée avec la première\nvulnérabilité, cette faille permettrait également d'exécuter du code\narbitraire.\n\nUne troisième vulnérabilité a été identifiée dans les deux branches de\nMozilla Firefox. Elle concerne un compteur de taille insuffisante\nutilisé pour référencer des objets CSS. Ceci peut être exploité par une\npersonne malintentionnée pour exécuter du code arbitraire à distance.\n\nEnfin, une quatrième vulnérabilité concerne le traitement des GIF dans\nMozilla Firefox 3.0 sous Mac OS X. Une personne malintentionnée pourrait\nainsi exécuter du code arbitraire à distance via un fichier GIF\nspécialement conçu.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2934",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2934"
+    },
+    {
+      "name": "CVE-2008-2786",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2786"
+    },
+    {
+      "name": "CVE-2008-2785",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2785"
+    },
+    {
+      "name": "CVE-2008-2933",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2933"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2008/MFSA2008-35 du 15 juillet 2008 :",
+      "url": "http://www.mozilla.org/security/announce/2008/MFSA2008-35.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2008/MFSA2008-34 du 15 juillet 2008 :",
+      "url": "http://www.mozilla.org/security/announce/2008/MFSA2008-34.html"
+    },
+    {
+      "title": "Note de vulnérabilité de l'US-CERT VU#130923 du 16 juillet    2008 :",
+      "url": "http://www.kb.cert.org/vuls/id/130923"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2008/MFSA2008-36 du 16 juillet 2008 :",
+      "url": "http://www.mozilla.org/security/announce/2008/MFSA2008-36.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-368",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-07-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Des vulnérabilités identifiées dans Mozilla Firefox permettent à une\npersonne malintentionnée de contourner la politique de sécurité, de\nporter atteinte à la confidentialité des données et / ou d'exécuter du\ncode arbitraire à distance.\n",
+  "title": "Vulnérabilités dans Mozilla Firefox",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Mozilla MFSA 2008-34 du 15 juillet 2008",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Mozilla MFSA 2008-35 du 15 juillet 2008",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Mozilla MFSA 2008-36 du 16 juillet 2008",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Oracle9i Database Server seconde édition, version 9.2.0.2 ;",
+      "product": {
+        "name": "Database Server",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Oracle9i Application Server seconde édition, versions 9.0.3.0 et 9.0.3.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Oracle9i Application Server seconde édition, version 9.0.2.1 et les versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Oracle9i Application Server première édition, version 1.0.2.2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Oracle9i Database Server première édition, version 9.0.1.4.",
+      "product": {
+        "name": "Database Server",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été découverte dans l'analyse des données SOAP\n(Simple Object Access Protocol) des applications Oracle : Oracle9i\nApplication Server et Oracle9i Database Server.  \n  \nUn utilisateur mal intentionné peut, en envoyant une requête SOAP\nmalicieusement construite, réaliser un déni de service des applications\nOracle. Le risque est plus important pour les versions Oracle9i\nApplication Server seconde édition version 9.2.0.1 et antérieures car\nl'authentification SOAP est désactivée par défaut.\n\n## Solution\n\nAppliquer la mise à jour correspondant à votre version (cf. section\ndocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctif Oracle :",
+      "url": "http://metalink.oracle.com/metalink/plsql/ml2_documents.showDocument?p_database_id=NOT&p_id=259556.1"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-046",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-02-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte sur Oracle9i Application Server et\nOracle9i Database Server qui permet à un utilisateur mal intentionné de\nréaliser un déni de service sur ces deux systèmes.\n",
+  "title": "Vulnérabilité dans Oracle9i Application et Dabase Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité 65 d'Oracle",
+      "url": "http://otn.oracle.com/deploy/security/pdf/2004alert65.pdf"
+    }
+  ]
+}

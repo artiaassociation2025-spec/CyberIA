@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>GNU Emacs, versions 22.x.</p>",
+  "content": "## Description\n\nUne erreur de traitement dans la fonction hack-local-variables est\nexploitable par un utilisateur malveillant pour modifier le fichier\nuser-init-file d'un utilisateur et ensuite exécuter du code Lisp pour\nEmacs.\n\nLa vulnérabilité n'est exploitable que si le paramètre\nenable-local-variables est positionné à :safe.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5795",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5795"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site du CVS Emacs :",
+      "url": "http://cvs.savannah.gnu.org/viewvc/emacs/emacs/lisp/files.el?r1=1.896.2.28&r2=1.896.2.29"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-479",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-11-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une erreur dans le traitement de certains fichiers permet à un\nutilisateur malveillant d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité de GNU Emacs",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport d'erreur Debian 449008",
+      "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=449008"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les applications Sun ONE Integration Server EAI Edition 3.0 et Unified Development Server 5.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Les applications utilisant JRun 4.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les applications ColdFusion MX (éditions Professional, Enterprise, J2EE jusqu'aux versions d'octobre 2002) ;",
+      "product": {
+        "name": "ColdFusion",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa DTD est la définition des structures et des balises utilisées dans un\ndocument XML.\n\nL'interpréteur XML est utilisé dans la plupart des applications de\ndéveloppement de sites web, et sur de multiples serveurs HTTP.\n\nUn utilisateur mal intentionné peut effectuer un déni de service\nlocalement ou à distance sur des applications JRun, ColdFusion et SunOne\nWebServer, au moyen d'une DTD habilement construite dans un document\nXML.\n\n## Solution\n\nConsulter les bulletins de sécurité \\#23599 de Macromédia et \\#49922 de\nSun (voir paragraphe Documentation) pour connaître les disponibilité des\ncorrectifs pour les applications affectées.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin d'alerte #49922 de Sun :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F49922"
+    },
+    {
+      "title": "Bulletin de sécurité #23599 de Macromedia :",
+      "url": "http://www.macromedia.com/v1/handlers/index.cfm?ID=23599"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-006",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-01-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Il est possible d'utiliser la DTD (<span class=\"textit\">Data Type\nDefinition</span>) d'un document XML pour effectuer un déni de service\nlocal ou distant sur certaines applications utilisant un interpréteur\nXML.\n",
+  "title": "Vulnérabilité des interpréteurs XML sous de multiples systèmes et applications",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #49922 de Sun",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #MPSB02-14",
+      "url": null
+    }
+  ]
+}

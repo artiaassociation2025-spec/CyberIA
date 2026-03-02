@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Netscape Enterprise Server 3.x avec ou sans Service Pack.",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun ONE / iPlanet Web Server 4.1 Service Pack 1 et toutes les versions précédentes.",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "iPlanet Web Server 4.0 avec ou sans Service Pack.",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun ONE / iPlanet Web Server 6.0 avec ou sans Service Pack 1",
+      "product": {
+        "name": "Web",
+        "vendor": {
+          "name": "Centreon",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn utilisateur mal intentionné peut, par le biais d'un script injecté\ndans les fichiers journaux de Sun ONE Web Server, amener\nl'administrateur observant ces journaux au moyen de la console iPlanet\nAdmin à exécuter du code arbitraire sur le serveur Sun ONE Web Server.\n\nDeux vulnérabilités sont exploitées :\n\n-   une vulnérabilité dite de « Cross Site Scripting » (XSS) à travers\n    les fichiers journaux ;\n-   une vulnérabilité de la fonction Open() permettant l'exécution de\n    code arbitraire sous Sun ONE Web Server.\n\n## Contournement provisoire\n\nEviter d'utiliser la console iPlanet Admin pour observer les fichiers\njournaux.\n\n## Solution\n\nConsulter le bulletin d'alerte \\#49475 de Sun (voir le paragraphe\nDocumentation) pour connaître la disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin d'alerte #49475 de Sun :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F49475"
+    },
+    {
+      "title": "Bulletin de sécurité #2002-4 de NGSoftware :",
+      "url": "http://www.ngsec.com/docs/advisories/NGSEC-2002-4.txt"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-270",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-18T00:00:00.000000"
+    },
+    {
+      "description": "seconde version : modification des systèmes affectés et du paragraphe solution.",
+      "revision_date": "2003-01-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire avec les permissions de l'administrateur root"
+    }
+  ],
+  "summary": "Il est possible d'amener l'administrateur du serveur Sun ONE Web Server\nà exécuter du code arbitraire par le biais de la console\nd'administration iPlanet Admin\n",
+  "title": "Vulnérabilité de Sun ONE / iPlanet Web Server sous Solaris (<TT>iPlanet Admin</TT>)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin d'alerte de #49475 de Sun",
+      "url": null
+    }
+  ]
+}

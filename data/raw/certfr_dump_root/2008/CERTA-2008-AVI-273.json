@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "EMC AlphaStor version 3.1 SP1 ainsi que celles antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDes vulnérabilités ont été identifiées dans les applications de\nmaintenance de disques EMC AlphaStor :\n\n-   certaines concernent le service Server Agent et en particulier le\n    processus Command Line Interface en écoute par défaut sur le port\n    41025/tcp. Ces vulnérabilités peuvent être exploitées par une\n    personne malveillante distante qui pourrait se connecter au port et\n    envoyer une trame spécialement construite.\n-   une autre concerne le service Library Manager et en particulier le\n    processus robotd en écoute par défaut sur le port 3500/tcp. Cette\n    vulnérabilité peut être exploitée par une personne malveillante\n    distante qui pourrait se connecter au port et envoyer une requête\n    spécialement construite.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2157",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2157"
+    },
+    {
+      "name": "CVE-2008-2158",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2158"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité iDefense 703 du 27 mai 2008 :",
+      "url": "http://www.idefense.com/ntelligence/vulnerabilities/display.php?id=703"
+    },
+    {
+      "title": "Base d'informations de EMC pour clients, article emc186391    :",
+      "url": "http://powerlink.emc.com"
+    },
+    {
+      "title": "Site officiel EMC AlphaStor :",
+      "url": "http://www.emc.com/products/detail/software/alphastor.htm"
+    },
+    {
+      "title": "Bulletin de sécurité iDefense 702 du 27 mai 2008 :",
+      "url": "http://www.idefense.com/ntelligence/vulnerabilities/display.php?id=702"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-273",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-05-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Des vulnérabilités ont été identifiées dans les applications de\nmaintenance de disques EMC AlphaStor. Elles peuvent être exploitées par\nune personne malveillante distante afin d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilités d'EMC AlphaStor",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité iDefense 702 et 703 du 27 mai 2008",
+      "url": null
+    }
+  ]
+}

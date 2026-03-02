@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>OpenBSD 3.x.</P>",
+  "content": "## Description\n\nLa pile TCP/IP d'OpenBSD n'impose aucune limite pour le stockage des\nsegments invalides.\n\nL'envoi massif de segments TCP invalides permet à un utilisateur mal\nintentionné de réaliser un déni de service sur le système.\n\n## Solution\n\nAppliquer le correctif suivant la version d'OpenBSD :\n\n-   OpenBSD 3.3 :\n\n        ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.3/common/018_tcp.patch\n\n-   OpenBSD 3.4 :\n\n        ftp://ftp.openbsd.org/pub/OpenBSD/patches/3.4/common/013_tcp.patch\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-075",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité à été découverte dans la pile TCP/IP des systèmes\nOpenBSD 3.x.\n",
+  "title": "Vulnérabilité dans la pile TCP/IP de OpenBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis OpenBSD",
+      "url": "http://www.openbsd.org/errata.html"
+    }
+  ]
+}

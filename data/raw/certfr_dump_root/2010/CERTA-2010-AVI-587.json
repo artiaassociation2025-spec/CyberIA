@@ -1,0 +1,56 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Exim 4.x.</P>",
+  "content": "## Description\n\nDeux vulnérabilités affectant Exim ont été publiées :\n\n-   (CVE-2010-4344) un débordement de mémoire dans certaines\n    implantations d'Exim est exploitable par un utilisateur malveillant\n    pour exécuter du code arbitraire à distance ;\n-   (CVE-2010-4345) le compte d'utilisateur sous lequel Exim s'exécute\n    peut voir ses droits augmentés par l'utilisation d'un fichier de\n    configuration alternatif.\n\n## Solution\n\nSe référer aux bulletins de sécurité des distributions pour l'obtention\ndes correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-4344",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4344"
+    },
+    {
+      "name": "CVE-2010-4345",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4345"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 2131 du 10 décembre 2010 :",
+      "url": "http://www.debian.org/security/2010/dsa-2131"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2010:0970 du 10 décembre    2010 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2010-0970.html"
+    },
+    {
+      "title": "Bulletin de sécurité Suse SUSE-SA:2010:059 du 13 décembre    2010 :",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2010-12/msg00003.html"
+    },
+    {
+      "title": "Site du projet Exim :",
+      "url": "http://www.exim.org/"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-1032-1 du 11 décembre 2010    :",
+      "url": "http://www.ubuntulinux.org/usn/usn-1032-1"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-587",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans certaines implantations d'Exim permet à un\nutilisateur malveillant d'exécuter du code arbitraire à distance.\n\nUne autre vulnérabilité dans Exim permet à un utilisateur malveillant\nd'élever ses privilèges.\n",
+  "title": "Vulnérabilités dans Exim 4",
+  "vendor_advisories": []
+}

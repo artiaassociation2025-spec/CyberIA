@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Elastic Endgame versions antérieures à 3.62.3",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Elastic Security versions antérieures à 7.17.7 ou 8.4.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-38774",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-38774"
+    },
+    {
+      "name": "CVE-2022-38775",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-38775"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0053",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-01-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Elastic Endpoint et\nSecurity. Elles permettent à un attaquant de provoquer une élévation de\nprivilèges.\n",
+  "title": "Multiples vulnérabilités dans Elastic Endpoint et Security",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Elasticsearch 323753 du 24 janvier 2023",
+      "url": "https://discuss.elastic.co/t/endpoint-security-8-4-1-security-statement/323753"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Elasticsearch 323754 du 24 janvier 2023",
+      "url": "https://discuss.elastic.co/t/endpoint-security-8-4-0-7-17-7-and-endgame-3-62-3-security-statement/323754"
+    }
+  ]
+}

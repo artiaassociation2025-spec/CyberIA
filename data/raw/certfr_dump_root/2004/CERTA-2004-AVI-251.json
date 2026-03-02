@@ -1,0 +1,118 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Samba version 3.0.0 jusqu'à la version 3.0.4.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Samba version 2.2.0 jusqu'à la version 2.2.9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Samba",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSamba est un logiciel libre, open source, utilisé pour la mise en oeuvre\ndes partages réseau à l'aide des protocoles SMB et CIFS sous Unix.  \nDeux vulnérabilités ont été découvertes :\n\n-   Une première vulnérabilité concerne un débordement de mémoire dans\n    l'outil de gestion Samba accessible à travers un navigateur, nommé\n    SWAT (Samba Web Administration Tool). Ce débordement de mémoire\n    intervient dans le décodage base64 lors d'une authentification\n    basique (basic authentication) ainsi que lors du décodage de\n    l'attribut sambaMungeDial lors de l'utilisation de ldapsam passdb\n    (CVE CAN-2004-0600).  \n    Cette première vulnérabilité affecte seulement la branche Samba\n    3.0.x.\n-   une seconde vulnérabilité concerne un débordement de mémoire dans le\n    code gérant l'option mangling method = hash du fichier de\n    configuration smb.conf (CVE CAN-2004-0686).  \n    Cette seconde vulnérabilité affecte les branches Samba 2.2.x et\n    3.0.x.\n\n## Contournement provisoire\n\n-   Concernant la vulnérabilité CVE CAN-2004-0600, désactiver le service\n    d'administration SWAT et vérifier les droits d'accès en écriture aux\n    attributs sambaSamAccount.\n-   concernant la vulnérabilité CVE CAN-2004-0686, ne pas spécifier\n    l'option mangling method = hash dans le fichier de configuration\n    smb.conf. Utiliser mangling method = hash2 à la place (normalement\n    il s'agit de la valeur par défaut).\n\n## Solution\n\n-   A partir des sources, mettre à jour Samba en version 2.2.10 ou en\n    version 3.0.5.  \n    Les sources de Samba sont téléchargeables à l'adresse suivante :\n\n        http://download.samba.org/samba/ftp/\n\n-   Se référer au bulletin de sécurité de l'éditeur pour l'obtention des\n    correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HP HPSBUX01062 \"HP-UX CIFS server    potential remote root access\" du 26 juillet 2004 :",
+      "url": "http://www4.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBUX01062"
+    },
+    {
+      "title": "Note relative à la sortie de Samba 3.0.5 :",
+      "url": "http://www.samba.org/samba/whatsnew/samba-3.0.5.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:071 du 22 juillet    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:071"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD samba et    ja-samba :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/net/ja-samba/README.html"
+    },
+    {
+      "title": "Site Internet de Samba :",
+      "url": "http://www.samba.org"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD samba et    ja-samba :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/net/samba/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:404 du 26 juillet    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-404.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour samba du 21 juillet 2004    :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD pour samba du 23 juillet 2004    :",
+      "url": "http://www.vuxml.org/openbsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200407-21 du 29 juillet    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200407-21.xml"
+    },
+    {
+      "title": "Note relative à la sortie de Samba 2.2.10 :",
+      "url": "http://www.samba.org/samba/whatsnew/samba-2.2.10.html"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SA:2004:022 du 23 juillet    2004 :",
+      "url": "http://www.suse.com/de/security/2004_22_samba.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-251",
+  "revisions": [
+    {
+      "description": "ajout de la référence au bulletin de sécurité SUSE.",
+      "revision_date": "2004-07-23T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité OpenBSD et NetBSD.",
+      "revision_date": "2004-07-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RHSA-2004:404 de RedHat.",
+      "revision_date": "2004-07-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité HP-UX.",
+      "revision_date": "2004-07-28T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2004-07-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de Samba permettent à un utilisateur mal\nintentionné de réaliser un déni de service ou d'exécuter du code\narbitraire à distance.\n",
+  "title": "Vulnérabilité de Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RedHat RHSA-2004:259",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-259.html"
+    }
+  ]
+}

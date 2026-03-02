@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Applications utilisant le module <SPAN class=\n  \"textit\">imageop</SPAN> de Python, versions 2.5.1 et  précédentes.</P>",
+  "content": "## Description\n\nDes débordements d'entiers ne sont pas correctement gérés dans le module\nimapeop de Python. Un utilisateur malveillant, capable de soumettre une\nimage spécialement conçue à une application utilisant le module\nvulnérable, peut provoquer un déni de service ou d'exécuter un code\narbitraire à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-4965",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4965"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2007:1076 du 10 décembre    2007 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-1076.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200711-07 du 07 novembre    2007 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200711-07.xml"
+    },
+    {
+      "title": "Mise à jour de sécurité Fedora FEDORA-2007-2663 du 29    octobre 2007 :",
+      "url": "https://www.redhat.com/archives/fedora-package-annoucnce/2007-October/msg00378.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDVSA-2008:013 du 14 janvier    2008 :",
+      "url": "http://www.mandriva.com/archives/security/advisories"
+    },
+    {
+      "title": "Bulletin de sécurité Apple 307179 du 02 janvier 2008 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=307179"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-018",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-01-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Des vulnérabilités dans le module <span class=\"textit\">imapeop</span> de\nPython permettent à un utilisateur malveillant de provoquer un déni de\nservice ou d'exécuter un code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans Python",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "CVE-2007-4965",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4965"
+    }
+  ]
+}

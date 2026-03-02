@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Wireshark 1.4.x et 1.6.x.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent Wireshark :\n\n-   des analyseurs de formats ne vérifient pas les tailles des champs\n    dans plusieurs formats de fichiers de capture. Ce défaut permet à un\n    attaquant de provoquer l'arrêt inopiné de Wireshark ;\n-   une erreur de traitement de pointeurs nuls permet à un attaquant de\n    provoquer l'arrêt inopiné de Wireshark ;\n-   l'analyseur RLC est sujet à un débordement de mémoire.\n\n## Solution\n\nLes versions 1.4.11 et 1.6.5 de Wireshark résolvent ces problèmes.\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Wireshark wnpa-sec-2012-02 du 10    janvier 2012 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2012-02.html"
+    },
+    {
+      "title": "Bulletin de sécurité Wireshark wnpa-sec-2012-03 du 10    janvier 2012 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2012-03.html"
+    },
+    {
+      "title": "Bulletin de sécurité Wireshark wnpa-sec-2012-01 du 10    janvier 2012 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2012-01.html"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-020",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-01-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent Wireshark et permettent de contourner\nla politique de sécurité.\n",
+  "title": "Vulnérabilités dans Wireshark",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Wireshark du 10 janvier 2012",
+      "url": null
+    }
+  ]
+}

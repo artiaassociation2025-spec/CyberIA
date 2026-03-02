@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Xen versions 3.3 et antérieures.</p>",
+  "content": "## Description\n\nUne vulnérabilité a été découverte dans la gestion des appels flask_op.\nL'exploitation de cette vulnérabilité provoque un débordement de tas\nqu'une personne malintentionnée peut utiliser afin d'exécuter du code\narbitraire sous les privilèges Dom0.\n\nSeules les versions de Xen compilées avec la prise en charge du module\nXSM:FLASK sont vulnérables.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3687",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3687"
+    }
+  ],
+  "links": [
+    {
+      "title": "Mise à jour différentielle de Xen 21 juillet 2008 :",
+      "url": "http://xenbits.xensource.com/xen-3.3-testing.hq?rev/fa66b33f975a"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-429",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-08-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire en local"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans le logiciel de virtualisation\nXen. L'exploitation de cette vulnérabilité permet à un utilisateur\nmalintentionné de réaliser un déni de service local ou de contourner la\npolitique de sécurité.\n",
+  "title": "Vulnérabilité de Xen",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de mise à jour Xen du 21 juillet 2008",
+      "url": null
+    }
+  ]
+}

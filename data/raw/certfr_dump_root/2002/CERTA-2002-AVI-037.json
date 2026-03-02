@@ -1,0 +1,105 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Module d'administration HP AdvanceStack 10BT pour les commutateurs HP AdvanceStack ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP AdvanceStack 10Base-T S Hub-12R avec J3210A ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP AdvanceStack 10BT-S Hub-24T avec module d'administration.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP AdvanceStack 10BT-S Hub-12R avec module d'administration ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP AdvanceStack 10BT-S Hub-24R avec module d'administration ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP AdvanceStack 10Base-T S Hub-24T avec J3210A ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "HP AdvanceStack 10Base-T S Hub-24R avec J3210A",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes équipements AdvanceStack de HP disposent d'une interface web pour\nl'administration à distance.\n\nUn utilisateur mal intentionné peut, au moyen de cette interface,\nobtenir des privilèges élevés sur les équipements AdvanceStack.\n\n## Contournement provisoire\n\n-   Désactiver l'interface web des équipements concernés via telnet ou\n    une console connectée sur l'interface RS-232 :\n    1.  Taper me pour obtenir le menu ;\n    2.  taper 2 pour obtenir la console d'administration des accès ;\n    3.  taper 6 pour activer ou désactiver l'interface web (vérifier\n        qu'elle est bien désactivée).\n-   Supprimer l'interface web :\n    1.  Taper me pour obtenir le menu ;\n    2.  taper 2 pour accéder à la console d'administration des accès ;\n    3.  taper 1 pour la configuration IP ;\n    4.  taper Y pour changer cette configuration ;\n    5.  taper D pour désactiver le segment IP concerné.\n    6.  taper D pour confirmer (vérifier qu'il est bien désactivé).\n    7.  Renouveler les deux opérations précédentes pour tous les\n        segments.\n\n## Solution\n\nVisiter le site Internet HP pour s'informer de la disponibilité des\ncorrectifs :\n\n    ftp://ftp.itrc.hp.com:~ftp/export/patches/hp-ux_patch_matrix\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le bulletin de sécurité HPSBUX0202-185 sur le site Internet de  HP :",
+      "url": "http://www.itrc.hp.com/"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-037",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation des privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité des équipements HP AdvanceStack",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité HPSBUX0202-185 de HP",
+      "url": null
+    }
+  ]
+}

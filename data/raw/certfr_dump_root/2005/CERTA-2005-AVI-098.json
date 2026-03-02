@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>KDE 3.1.5 et versions antérieures.</p>",
+  "content": "## Description\n\nKppp est une application graphique de l'environnement KDE qui permet\nl'établissement de connexions ppp.\n\nUne vulnérabilité présente dans kppp peut être exploitée par un\nutilisateur local mal intentionné afin de modifier le contenu des\nfichiers /etc/hosts et /etc/resolv.conf utilisés pour la résolution de\nnoms (association adresse IP-nom de machine).\n\n## Contournement provisoire\n\nDans l'attente de l'application du correctif, supprimer le drapeau suid\nsur le fichier /usr/sbin/kppp.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD kdenetwork3 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/net/kdenetwork3/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité KDE du 28 février 2005 :",
+      "url": "http://www.kde.org/info/security/advisory-20050228-1.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-692 du 08 mars 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-692"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:175 du 03 mars 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-175.html"
+    },
+    {
+      "title": "Bulletin de sécurité iDefense du 28 février 2005 :",
+      "url": "http://www.idefense.com/application/poi/display?id=208&type=vulnerabilities"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-098",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-03-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat.",
+      "revision_date": "2005-03-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian et NetBSD.",
+      "revision_date": "2005-03-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de kppp",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de kde",
+      "url": null
+    }
+  ]
+}

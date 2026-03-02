@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Indépendamment du système, toutes les versions d'apache  antérieures à 1.3.19 sont vulnérables.</P>",
+  "content": "## Description\n\nLes modules mod_dir, mod_autoindex et mod_negociation du logiciel\nserveur web apache sont installés par défaut dans les versions\nantérieures à la 1.3.19.\n\nCes modules permettent à un utilisateur mal intentionné de lister le\ncontenu du serveur par le biais d'une URL habilement construite.\n\n## Contournement provisoire\n\nDésactiver les modules mod_dir, mod_autoindex et mod_negociation\nd'apache en attendant d'installer la nouvelle version.\n\n## Solution\n\nInstaller la nouvelle version d'apache (1.3.19) :\n\n    http://www.apache.org/dist/binaries/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Les informations données sur la nouvelle version d'apache  (1.3.19) :",
+      "url": "http://www.apache.org/docs/new_features_1_3.html"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-034",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-03-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès à des données non autorisées"
+    }
+  ],
+  "summary": "Les versions d'apache antérieures à la 1.3.19 installées avec les\nparamètres par défaut permettent à un utilisateur mal intentionné de\nd'afficher le contenu de n'importe quel répertoire du serveur sur lequel\nle logiciel est installé.\n",
+  "title": "Vulnérabilité du serveur web Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Apache",
+      "url": null
+    }
+  ]
+}

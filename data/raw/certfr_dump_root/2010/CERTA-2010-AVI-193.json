@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "mod_auth_shadow (branche 2.x) versions antérieures à 2.3.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "mod_auth_shadow (branche 1.x) versions antérieures à 1.7 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nmod_auth_shadow est un module Apache qui permet d'authentifier des\nutilisateurs en utilisant le fichier /etc/shadow du système. Une\nvulnérabilité affectant ce module a été découverte, permettant à un\nutilisateur distant de contourner le module d'authentification.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-1151",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1151"
+    }
+  ],
+  "links": [
+    {
+      "title": "Rapport de bogue Redhat 578168 du 09 avril 2010 :",
+      "url": "https://bugzilla.redhat.com/show_bug.cgi?id=578168"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-193",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-04-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans mod_auth_shadow permet à une personne\nmalintentionnée de contourner la politique de sécurité.\n",
+  "title": "Vulnérabilité dans mod_auth_shadow pour Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport de bug Redhat #578168 du 09 avril 2010",
+      "url": null
+    }
+  ]
+}

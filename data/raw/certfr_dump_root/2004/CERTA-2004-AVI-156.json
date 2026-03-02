@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Mac OS X.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans Mac OS X :\n\n-   Apache 2 ne filtre pas les séquences d'échappement de terminaux dans\n    ses journaux d'erreurs. Cette vulnérabilité peut être exploitée afin\n    de modifier certains fichiers ou bien d'effectuer un déni de service\n    ;\n-   deux vulnérabilités dans la mise en oeuvre d'IPSec permettent à un\n    utilisateur mal intentionné de contourner la politique de sécurité\n    ou d'effectuer un déni de service ;\n-   `AppleFileServer` fournit un système de partage de fichiers à partir\n    du protocole AFP (Apple Filing Protocol). Une vulnérabilité dans la\n    mise en oeuvre du système de pré-authentification permet à\n    utilisateur mal intentionné d'exécuter du code arbitraire à distance\n    avec les privilèges `Root` ;\n-   `CoreFoundation` ne gére pas correctement les variables\n    d'environnement.\n\n## Solution\n\nMettre à jour le système (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "avis CERTA-2003-AVI-067 du CERTA \"Vulnérabilité dans les    émulateurs de terminaux\" :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2003-AVI-067/"
+    },
+    {
+      "title": "avis de sécurité atstake :",
+      "url": "http://www.atstake.com/research/advisories/2004/a050304-1.txt"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-156",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-05-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De nombreuses vulnérabilités sont présentes dans certains composants de\nMAC OS X.\n",
+  "title": "Multiples vulnérabilités dans Mac OS X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité d'Apple",
+      "url": "http://docs.info.apple.com/article.html?artnum=61798"
+    }
+  ]
+}

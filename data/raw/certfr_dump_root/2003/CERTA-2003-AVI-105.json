@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows NT Server 4.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT Server 4.0, Terminal Server Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Professional.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nServer Message Block (SMB) est un protocole utilisé pour le partage de\nressources sous Windows et pour la communication entre clients à l'aide\nfichiers spéciaux : les tubes nommés et les mail slots.\n\nUne vulnérabilité dûe à une mauvaise gestion des requêtes client SMB par\nun serveur permet à un individu mal intentionné possédant un compte\nvalide d'exécuter du code arbitraire à distance.\n\n## Contournement provisoire\n\nBloquer les ports `139/TCP` et `445/TCP` sur le garde-barrière pour\nempêcher les attaques provenant de l'extérieur du réseau.\n\n## Solution\n\nAppliquer les correctifs fournis par Microsoft suivant la version du\nsystème d'exploitation.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-105",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans certaines versions de Microsoft Windows\npermet à un individu mal intentionné d'exécuter du code arbitraire sur\nla machine vulnérable.\n",
+  "title": "Vulnérabilité de SMB dans Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #MS03-024 de Microsoft",
+      "url": "http://www.microsoft.com/security/security_bulletins/ms03-024.asp"
+    }
+  ]
+}

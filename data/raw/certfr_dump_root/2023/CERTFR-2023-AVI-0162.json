@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Nexus 9000 Series Fabric Switches (ACI Mode) sans le dernier correctif de sécurité",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Cloud Network Controller (anciennement Cisco APIC) versions 4.2.x à 25.0.x antérieures à 26.0",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco APIC versions 6.0.x antérieures à 6.0(2e)",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco APIC versions 4.2.x à 5.2.x antérieures à 5.2(7g)",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-20089",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-20089"
+    },
+    {
+      "name": "CVE-2023-20011",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-20011"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco Security Advisory cisco-sa-aci-lldp-dos-ySCNZOpX du 22 février 2023",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-aci-lldp-dos-ySCNZOpX"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco Security Advisory cisco-sa-capic-csrfv-DMx6KSwV du 22 février 2023",
+      "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-capic-csrfv-DMx6KSwV"
+    }
+  ],
+  "reference": "CERTFR-2023-AVI-0162",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-02-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans <span\nclass=\"textit\">Cisco</span>. Elles permettent à un attaquant de\nprovoquer une injection de requêtes illégitimes par rebond (CSRF) et à\nl'intégrité des données et un déni de service à distance.\n",
+  "title": "Multiples vulnérabilités dans les produits Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco Security Advisory cisco-sa-capic-csrfv-DMx6KSwV du 22 février 2023",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco Security Advisory cisco-sa-aci-lldp-dos-ySCNZOpX du 22 février 2023",
+      "url": null
+    }
+  ]
+}

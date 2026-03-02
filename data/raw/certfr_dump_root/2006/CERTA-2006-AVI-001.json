@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "scponly versions 3.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "scponly versions 4.x antérieures à la version 4.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'application scponly est une application basée sur Openssh dont le but\nest de restreindre les utilisateurs à employer uniquement la commande\nscp.  \n  \n\n-   La première vulnérabilité est présente dans le binaire scponlyc,\n    elle permet à un utilisateur local mal intentionné d'élever ses\n    privilèges sur la machine hébergeant l'application vulnérable.\n-   La seconde vulnérabilité permet à un utilisateur distant mal\n    intentionné, via des arguments passés en ligne de commande, de\n    contourner la politique de sécurité mise en place par scponly afin\n    de pouvoir exécuter des commandes sur le système.\n\n## Contournement provisoire\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de scponly :",
+      "url": "http://www.sublimation.org/scponly"
+    },
+    {
+      "title": "Bulletin de sécurité de FreeBSD du 22 décembre 2005 :",
+      "url": "http://www.vuxml.org/freebsd/index.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-001",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-01-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes sur scponly peuvent être exploitées par un\nutilisateur mal intentionné pour contourner la politique de sécurité ou\npour élever ses privilèges sur le système.\n",
+  "title": "Vulnérabiliés sur SCPonly",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200512-17.xml"
+    }
+  ]
+}

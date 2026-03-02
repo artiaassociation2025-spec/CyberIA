@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de XFree86.</p>",
+  "content": "## Description\n\nXDM est un gestionnaire d'environnement graphique présent dans XFree86.\nIl permet de créer des sessions sur des plates-formes distantes via le\nprotocole XDMCP (X Display Manager Control Protocol). Une vulnérabilité\nde XDM autorise les connexions distantes au serveur X même si celles-ci\nont été désactivées dans le fichier de configuration `xdm-config`. Cette\nvulnérabilité peut être exploitée par un individu mal intentionné afin\nd'accéder au serveur à distance.\n\n## Solution\n\nMettre à jour XFree86 (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Description de la vulnérabilité XFree86 dans Bugzilla :",
+      "url": "http://bugs.xfree86.org/show_bug.cgi?id=1376"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200407-05 du 05 juillet    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200407-05.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:073 du 27 juillet    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:073"
+    },
+    {
+      "title": "Site Internet de XFree86 :",
+      "url": "http://www.xfree86.org"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-211",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-06-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo, de la référence CVE et du site Internet de XFree86.",
+      "revision_date": "2004-07-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandrake.",
+      "revision_date": "2004-07-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le gestionnaire d'environnement\ngraphique XDM de XFree86 permet à un utilisateur distant mal intentionné\nde se connecter au serveur même si celui-ci a été désactivé.\n",
+  "title": "Vulnérabilité de XFree86",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD pour XFree86 du 28 juin 2004",
+      "url": "http://www.vuxml.org/freebsd"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenBSD pour XFree86 du 26 mai 2004",
+      "url": "http://www.openbsd.org/errata.html#xdm"
+    }
+  ]
+}

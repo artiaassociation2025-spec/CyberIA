@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tous les systèmes utilisant une souche  client DNS issue de ISC BIND.</p>",
+  "content": "## Description\n\nLe DNS (Domain Name System) est un mécanisme utilisé pour la résolution\nde nom de machines (exemple : www.certa.ssi.gouv.fr) en adresse IP et\nvice-versa.\n\nUn utilisateur mal intentionné peut configurer un serveur DNS hostile\npour renvoyer des réponses aux requêtes DNS qui provoqueront un\ndébordement de mémoire lors de l'interprétation réalisée par les souches\nclient DNS vulnérables.\n\nCe débordement de mémoire permet, sous certaines conditions, de réaliser\nl'exécution de code arbitraire sur le poste du client avec les\nprivilèges de l'utilisateur exécutant l'application qui fait appel à la\nsouche client DNS vulnérable.\n\n## Solution\n\nConsultez l'éditeur pour la mise à jour correspondant à votre système :\n\n-   FreeBSD :\n\n        ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-02:28.resolv.asc\n\n-   OpenBSD :\n\n        http://www.openbsd.org/errata.html#resolver\n\n-   NetBSD :\n\n        ftp://ftp.NetBSD.ORG/pub/NetBSD/security/advisories/NetBSD-SA2002-006.txt.asc\n\n-   IRIX :\n\n        http://www.sgi.com/support/security/advisories/2002/0701-01-I\n\n-   Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-043.php\n\n-   Suse :\n\n        http://lists2.suse.com/archive/suse-security-announce/2002-Jul/0002.html\n\n-   SUN :\n\n        http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F46042&zone_32=category%3Asecurity\n\n-   RedHat :\n\n        http://rhn.redhat.com/errata/RHSA-2002-133.html\n\n-   Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-050.php\n\n-   HP (se référer au bulletin HPSBUX0208-209):\n\n        http://itrc.hp.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité #CA-2002-19 \"Buffer Overflow in    Multiple DNS Resolver Librairies\" du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2002-19.html"
+    },
+    {
+      "title": "Avis de sécurité \"Multiple vendor's DNS stub resolvers    vulnerable to buffer overflow \" du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/803539"
+    },
+    {
+      "title": "Avis de sécurité \"Buffer overflow in resolver\" de FreeBSD :",
+      "url": "ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-02:28.resolv.asc"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-139",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-28T00:00:00.000000"
+    },
+    {
+      "description": "ajout des avis CERT/CC, IRIX, Suse et Mandrake.",
+      "revision_date": "2002-07-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin Sun Alert Notification #46042 de SUN.",
+      "revision_date": "2002-07-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence à l'avis RHSA-2002-133 de RedHat.",
+      "revision_date": "2002-08-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux avis de Mandrake et HP.",
+      "revision_date": "2002-08-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité de type débordement de mémoire présente dans certaines\nsouches client DNS permet à un utilisateur mal intentionné d'exécuter du\ncode arbitraire à distance, par le biais d'un serveur DNS hostile, sur\nle poste du client vulnérable.\n",
+  "title": "Vulnérabilité de souches client DNS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis FreeBSD-SA-02:28.resolv de FreeBSD",
+      "url": null
+    }
+  ]
+}

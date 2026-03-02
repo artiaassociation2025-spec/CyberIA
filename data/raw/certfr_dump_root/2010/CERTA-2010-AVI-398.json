@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">phpCAS</SPAN> versions 1.1.1 et  antérieures.</P>",
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans phpCAS :\n\n-   un utilisateur déjà connecté peut produire des tickets qui seront\n    assignés à une autre session sans validation (CVE-2010-2795) ;\n-   une injection de code indirecte est possible via les URL de callback\n    lorsque le mode proxy est activé (CVE-2010-2796).\n\n## Solution\n\nMettre phpCAS à jour en version 1.1.2.\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2795",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2795"
+    },
+    {
+      "name": "CVE-2010-2796",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2796"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-398",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-08-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans <span class=\"textit\">phpCAS</span> permettent\nde réaliser une injection de code indirecte et de détourner une session.\n",
+  "title": "Vulnérabilités dans phpCAS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes de la version 1.1.2 de phpCAS",
+      "url": "https://wiki.jasig.org/display/CASC/phpCAS+ChangeLog"
+    }
+  ]
+}

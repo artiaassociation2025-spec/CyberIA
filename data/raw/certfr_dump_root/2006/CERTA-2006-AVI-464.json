@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Drupal 4.6.9.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Drupal 4.7.3 ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois vulnérabilités sont présentes dans Drupal :\n\n-   La première permet à un utilisateur distant de modifier la page de\n    destination spécifiée dans un formulaire HTML afin, par exemple, de\n    diriger la victime vers un site arbitraire ;\n-   la deuxième permet à un utilisateur distant, par le biais d'une page\n    web construite de façon particulière, d'injecter une réponse dans un\n    formulaire Drupal dans le contexte du navigateur d'un utilisateur\n    consultant le site de l'attaquant ;\n-   la dernière vulnérabilité permet à un utilisateur distant de\n    réaliser une attaque de type cross-site scripting via une\n    vulnérabilité présente dans l'analyseur XML de Drupal.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletins de sécurité du port FreeBSD de Drupal du    18 octobre 2006 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-drupal.html"
+    },
+    {
+      "title": "Bulletin de sécurité Drupal du 18 octobre 2006 :",
+      "url": "http://drupal.org/security/"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-464",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Cross-site scripting"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités sont présentes dans Drupal et permettent à\nun utilisateur distant d'altérer le contenu d'une page php ou de\nréaliser une attaque de type cross-site scripting.\n",
+  "title": "Multiples vulnérabilités dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Drupal du 18 octobre 2006",
+      "url": null
+    }
+  ]
+}

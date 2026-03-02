@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Symantec Altiris Notification  Server</SPAN> versions 6.0.x.</P>",
+  "content": "## Description\n\nUne clé statique, stockée sur le serveur Symantec Altiris Notification\nServer, est utilisée pour le chiffrement d'identifiants de connexion.\nCes identifiants sont utilisés pour énumérer les machines d'un domaine\nsur lesquelles un agent Altiris peut être déployé. De plus, si\nl'authentification à la base d'accès SQL repose sur des identifiants de\nconnexion, une exécution de code arbitraire est possible. L'exploitation\nde cette vulnérabilité nécessite un accès à la console d'administration\ndu serveur Altiris.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3035",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3035"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-040",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-01-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans <span class=\"textit\">Symantec Altiris\nNotification Server</span> permet de dévoiler des informations sur les\nmachines du réseau et, dans certains cas, d'exécuter du code arbitraire\nà distance.\n",
+  "title": "Vulnérabilité dans Symantec Altiris Notification Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symantec SYM10-001 du 28 janvier 2010",
+      "url": "http://www.symantec.com/business/security_response/securityupdates/detail.jsp?fid=security_advisory&pvid=security_advisory&suid=20100128_00"
+    }
+  ]
+}

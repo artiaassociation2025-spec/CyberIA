@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>La vulnérabilité touche toutes les versions d'Internet  Explorer (4.x et 5.x), sauf 5.5, et est indépendante du système  d'exploitation.</P>",
+  "content": "## Description\n\nLorsqu'un utilisateur donne un identifiant et un mot de passe pour\naccéder à des pages web, ces données sont conservées dans un cache par\nInternet Explorer, de façon à être réutilisées (lors d'autres accès au\nmême site) durant la même session. Les données confidentielles envoyées\nà un site lors d'une connexion en mode sécurisé, ne devraient jamais\nêtre transmises pendant des accès en mode non-sécurisé (HTTP).\n\nLa vulnérabilité réside dans le fait qu'Internet Explorer, conservant\nles données confidentielles utilisées lors d'un accès en mode sécurisé,\nles enverra aussi en clair, automatiquementé, s'il s'agit du même site,\nlors d'accès en mode non-sécurisé.\n\nUn utilisateur mal intentionné qui a accès au réseau situé entre le\nclient et le serveur sécurisé, peut, en usurpant l'adresse internet d'un\nautre serveur, et en envoyant au client une fausse page qui cherche à se\nconnecter par HTTP sur le site sur lequel le client s'est déjà\nauthentifié en mode s'écurisé, lire en clair les données confidentielles\nconservées dans le cache, qui sont envoyées automatiquement par le\nnavigateur.\n\n## Solution\n\nAppliquer le correctif de Microsoft pour Internet Explorer :\n\n    http://www.microsoft.com/windows/ie/download/critical/q273868.htm\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "la FAQ du bulletin de sécurité :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-076.asp"
+    },
+    {
+      "title": "le bulletin de sécurité de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-076.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-060",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-10-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité lors de l'accès à un site web sécurisé"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné, peut par un procédé d'usurpation\nd'adresse, obtenir des données d'authentification qui ne lui\nappartiennent pas, alors qu'elles ont été transmises à un site en mode\nsécurisé (lors d'un accès par HTTPS).\n",
+  "title": "Vulnérabilité dans le cache d'authentification d'Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

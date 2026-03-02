@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Solaris 7, 8, 9 et 10.</P>",
+  "content": "## Description\n\nXsun est un serveur Xwindow (pour X11) sous Solaris et Xprt un serveur\nd'impression utilisant ce même protocole X11.\n\nUne vulnérabilité dans ces applications permet à un utilisateur local\nmal intentionné d'exécuter du code arbitraire avec les privilèges des\nservices Xsun ou Xprt.\n\n## Contournement provisoire\n\nSupprimer les drapeaux SUID et SGID des exécutables Xprt et Xsun.\n\n## Solution\n\nConsulter le bulletin de sécurité \\#101800 de Sun (voir paragraphe\nDocumentation) pour connaître la disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sun #101800 du 26 septembre 2005 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-101800-1"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-365",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2005-09-27T00:00:00.000000"
+    },
+    {
+      "description": "correction de l'adresse réticulaire du bulletin Sun.",
+      "revision_date": "2005-10-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire en local"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de Xsun et Xprt permet à un utilisateur local mal\nintentionné d'exécuter du code arbitraire avec des privilèges élevés.\n",
+  "title": "Vulnérabilité dans Xsun et Xprt sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #101800 de Sun",
+      "url": null
+    }
+  ]
+}

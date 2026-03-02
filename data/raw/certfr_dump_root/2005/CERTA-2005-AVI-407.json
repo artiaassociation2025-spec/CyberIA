@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>cURL 7.x ;</LI>    <LI>GNU wget 1.x.</LI>  </UL>  <P>Toutes les applications utilisant la bibliothèque  <TT>libcURL</TT> sont vulnérables.</P>",
+  "content": "## Description\n\nLa bibliothèque libcURL comporte de nombreuses fonctions permettant le\ntransfert de fichiers en utilisant des syntaxes de type adresses\nréticulaires (URL).\n\nLa vulnérabilité se situe dans la mise en ouvre du protocole NTLM de\nMicrosoft.  \nCette vulnérabilité de type débordement de mémoire est due à une erreur\ndans la fonction ntlm_output et peut être exploitée au moyen d'une\nrequête HTTP malicieusement constituée.\n\n## Solution\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:807 du 02 novembre    2005 :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2005-807.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-919 du 12 décembre 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-919"
+    },
+    {
+      "title": "Mise à jour de sécurité pour cURL en version 7.15.0 :",
+      "url": "http://curl.haxx.se/download.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:812 du 02 novembre    2005 :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2005-812.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200510-19 du 22 octobre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200510-19.xml"
+    },
+    {
+      "title": "Bulletin de sécurité iDEFENSE #322 du 13 octobre 2005 :",
+      "url": "http://www.idefense.com/application/poi/display?id=322&vulnerabilities"
+    },
+    {
+      "title": "Site Internet de l'éditeur :",
+      "url": "http://curl.haxx.se/"
+    },
+    {
+      "title": "Mise à jour de sécurité pour wget en version 1.10.2 :",
+      "url": "http://ftp.gnu.org/pub/gnu/wget/"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:182 du 13 octobre    2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:182"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-205-1 du 14 octobre 2005 :",
+      "url": "http://www.ubuntu.com/usn/usn-205-1/"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-407",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2005-10-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Ubuntu.",
+      "revision_date": "2005-10-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurités Gentoo et RedHat.",
+      "revision_date": "2005-11-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian DSA-919 et RedHat RHSA-2005:812.",
+      "revision_date": "2005-12-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la bibliothèque libcURL permet à un utilisateur\nmal intentionné d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans la bibliothèque libcURL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cURL du 13 octobre 2005",
+      "url": "http://curl.haxx.se/mail/lib-2005-10/0061.html"
+    }
+  ]
+}

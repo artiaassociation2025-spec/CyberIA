@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GLPI versions postérieures ou égales à 0.71 et antérieures à 10.0.23",
+      "product": {
+        "name": "GLPI",
+        "vendor": {
+          "name": "GLPI",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GLPI versions 11.0.x antérieures à 11.0.5",
+      "product": {
+        "name": "GLPI",
+        "vendor": {
+          "name": "GLPI",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-23624",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-23624"
+    },
+    {
+      "name": "CVE-2026-22044",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-22044"
+    },
+    {
+      "name": "CVE-2026-22247",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-22247"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0117",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-02-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection SQL (SQLi)"
+    },
+    {
+      "description": "Falsification de requêtes côté serveur (SSRF)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans GLPI. Certaines d'entre elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données, une injection SQL (SQLi) et une falsification de requêtes côté serveur (SSRF).",
+  "title": "Multiples vulnérabilités dans GLPI",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-02-04",
+      "title": "Bulletin de sécurité GLPI GHSA-569q-j526-w385",
+      "url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-569q-j526-w385"
+    },
+    {
+      "published_at": "2026-02-04",
+      "title": "Bulletin de sécurité GLPI GHSA-5j4j-vx46-r477",
+      "url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-5j4j-vx46-r477"
+    },
+    {
+      "published_at": "2026-02-04",
+      "title": "Bulletin de sécurité GLPI GHSA-f6f6-v3qr-9p5x",
+      "url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-f6f6-v3qr-9p5x"
+    }
+  ]
+}

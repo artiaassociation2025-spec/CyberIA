@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Ruby 1.9 pour la version r18423 ainsi que celles antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Ruby 1.8.7 pour les versions antérieures à 1.8.7-p72 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Ruby 1.8.6 pour les versions antérieures à 1.8.6-p287 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans Ruby :\n\n1.  certaines concernent les niveaux de sûreté dans Ruby, dont des\n    méthodes comme untrace_var() qui ne devraient pas être autorisées à\n    certains niveaux ou la variable \\$PROGRAM_NAME modifiable au niveau\n    4 ;\n2.  une mauvaise manipulation des en-têtes HTTP par WEBrick, et en\n    particulier dans la fonction WEBrick::HTTPUtils.split_header_value()\n    ;\n3.  un mauvais contrôle des appels de fonctions par la bibliothèque DL\n    (dynamic linker).\n4.  une mauvaise génération d'aléas par resolv.rb pour les échanges DNS\n    concernant les identifiants de transactions ou le choix des ports\n    sources.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1447",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1447"
+    }
+  ],
+  "links": [
+    {
+      "title": "Annonce des changements pour la branche 1.8 de Ruby :",
+      "url": "http://www.ruby-lang.org/en/news/2008/08/11/ruby-1-8-7-p72-and-1-8-6-p287-released/"
+    },
+    {
+      "title": "Annonce des vulnérabilités Ruby publiée le 08 et le 11 août    2008 :",
+      "url": "http://www.ruby-lang.org/en/news/2008/08/08/multiples-vulnerabilities-in-ruby/"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-402",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-08-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans Ruby. Les conséquences\nde l'exploitation de ces dernières sont variées.\n",
+  "title": "Multiples vulnérabilités dans Ruby",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise à jour des versions Ruby du 08 et 11 août 2008",
+      "url": null
+    }
+  ]
+}

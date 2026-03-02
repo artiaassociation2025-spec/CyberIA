@@ -1,0 +1,95 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les Catalyst 6000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Les routeurs CISCO des séries AGS/MGS/CGS/AGS+, IGS, RSM, 800, ubr900, 1000, 1400, 1500, 1600, 1700, 2500, 2600, 3000, 3600, 3800, 4000, 4500, 4700, AS5200, AS5300, AS5800, 6400, 7000, 7200, ubr7200, 7500, et 12000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les plus récentes versions de commutateurs ATM LS1010 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les commutateurs de LAN des séries 1900, 2800, 2900, 3000, et 5000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "et le DistributedDirector.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les commutateurs de LAN Catalyst 2900XL ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn paquet ARP destiné à une interface du routeur et contenant, pour\nl'adresse IP du routeur, une adresse MAC différente de la sienne, est\ncensé être refusé. Mais au bout de plusieurs tentatives, pour éviter une\n« tempête », le routeur finira par accepter de remplacer sa propre\nadresse MAC par la nouvelle, rendant ainsi son interface inaccessible.\n\n## Contournement provisoire\n\nCoder en dur l'adresse MAC de l'interface à protéger avec la commande\nsuivante :\n\n-   Sous IOS :\n\n    arp \\<adresse IP de l'interface\\> \\<adresse MAC de l'interface\\>\n    \\<type\\>\n\n-   sous CatOS :\n\n    set arp \\[dynamic\\|permanent\\|static\\] \\<adresse IP de l'interface\\>\n    \\<adresse MAC de l'interface\\>\n\nCette commande n'est pas rémanente. Il faut la retaper après chaque\nredémarrage du routeur.\n\n## Solution\n\nSelon les versions du système d'exploitation du routeur ou du\ncommutateur, appliquer le correctif de CISCO ou mettre à jour la version\ndu système comme indiqué dans le bulletin de sécurité de CISCO.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité CISCO :",
+      "url": "http://www.cisco.com/warp/public/707/IOS-arp-overwrite-vuln-pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-147",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-11-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Il est possible de corrompre les tables ARP de ces appareils avec des\ninformations éronnées.\n",
+  "title": "Corruption de cache ARP des équipements CISCO",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité CISCO",
+      "url": null
+    }
+  ]
+}

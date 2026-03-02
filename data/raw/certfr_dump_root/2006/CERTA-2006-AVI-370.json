@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><TT>ppp</TT> versions 2.4.3 et antérieures.</P>",
+  "content": "## Description\n\nUn manque de contrôle de la valeur de retour de la fonction setuid()\ndans l'extension winbind du service pppd de ppp permet à un utilisateur\nlocal d'élever ses privilèges.\n\n## Solution\n\nLa version 2.4.4 de ppp corrige le problème :\n\n    ftp://ftp.samba.org/pub/ppp/\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2194",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2194"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:119 du 10 juillet    2006 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:119"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1106 du 10 juillet 2006 :",
+      "url": "http://www.debian.org/security/dsa-1106"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-370",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans ppp permet à un utilisateur local d'élever ses\nprivilèges sur le système vulnérable.\n",
+  "title": "Vulnérabilité dans ppp",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ubuntu USN-310-1",
+      "url": "http://www.ubuntulinux.org/usn/usn-310-1"
+    }
+  ]
+}

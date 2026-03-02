@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Visual Studio 6.0 Entreprise Edition.</P>",
+  "content": "## Description\n\nUn débogueur d'objets (vbsdicli.exe) est mis en place par défaut lors de\nl'installation de Visual Studio 6. Il est exploitable depuis une machine\ndistante. Un débordement de mémoire tampon permet à un utilisateur\ndistant d'exécuter du code arbitraire sur la machine cible ou entraîner\nun déni de service en bloquant cette machine.\n\n## Contournement provisoire\n\nBloquer les ports (TCP et UDP) 137 à 139 et 445 sur le garde barrière\nafin d'éviter toute attaque provenant de l'extérieur du réseau.\n\n## Solution\n\nTélécharger le correctif sur le site Microsoft :\n\n    http://msdn.microsoft.com/vstudio/downloads/debugging/default.asp\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-018"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-038",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-03-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité de Microsoft Visual Studio 6 permet à un utilisateur\nmal intentionné d'exécuter à distance du code arbitraire ou d'entraîner\nun déni de service.\n",
+  "title": "Vulnérabilité dans Microsoft Visual Studio 6.0",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft (MS01-18)",
+      "url": null
+    }
+  ]
+}

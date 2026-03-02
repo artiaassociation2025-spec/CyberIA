@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ISC Bind versions antérieures à 9.9.8-S3",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC Bind versions antérieures à 9.9.8-P2",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC Bind versions antérieures à 9.10.3-P2",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2015-8461",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2015-8461"
+    },
+    {
+      "name": "CVE-2015-8000",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2015-8000"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2015-AVI-562",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2015-12-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans <span\nclass=\"textit\">ISC Bind</span>. Elles permettent à un attaquant de\nprovoquer un déni de service à distance.\n",
+  "title": "Multiples vulnérabilités dans ISC Bind",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ISC AA-01317 du 15 décembre 2015",
+      "url": "https://kb.isc.org/article/AA-01317/74/CVE-2015-8000%3A-Responses-with-a-malformed-class-attribute-can-trigger-an-assertion-failure-in-db.c.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ISC AA-01319 du 15 décembre 2015",
+      "url": "https://kb.isc.org/article/AA-01319/74/CVE-2015-8461%3A-A-race-condition-when-handling-socket-errors-can-lead-to-an-assertion-failure-in-resolver.c.html"
+    }
+  ]
+}

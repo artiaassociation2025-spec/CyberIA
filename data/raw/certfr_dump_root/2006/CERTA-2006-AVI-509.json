@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenBSD version 3.9 ;",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenBSD version 4.0.",
+      "product": {
+        "name": "OpenBSD",
+        "vendor": {
+          "name": "OpenBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans l'éditeur de liens dynamique\nld.so au format exécutable ELF, pour les versions 3.9 et 4.0 d'OpenBSD.\nIl n'effacerait pas correctement l'environnement dans lequel il\ns'exécute. Une personne locale au système pourrait exploiter cette\nvulnérabilité, afin de contourner des mesures de sécurité, et, sous\ncertaines conditions, d'élever ses privilèges.\n\n## Solution\n\nSe référer aux mises à jour de l'éditeur pour l'obtention des correctifs\n(cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctifs de sécurité OpenBSD pour ELF ld.so du    19 novembre 2006 :",
+      "url": "http://openbsd.org/errata.html#39"
+    },
+    {
+      "title": "Correctifs de sécurité OpenBSD pour ELF ld.so du    19 novembre 2006 :",
+      "url": "http://openbsd.org/errata.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-509",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans OpenBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mises à jour OpenBSD du 19 novembre 2006",
+      "url": null
+    }
+  ]
+}

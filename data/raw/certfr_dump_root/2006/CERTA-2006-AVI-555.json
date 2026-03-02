@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "NetBackup Entreprise Server/NetBackup Server ; client, serveur, et option Storage Migrator pour Unix : versions 6.0 antérieures à 6.0_MP4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetBackup Entreprise Server/NetBackup Server ; client, serveur, et option Storage Migrator pour Unix : versions 5.1 antérieures à 5.1_MP6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetBackup Entreprise Server/NetBackup Server ; client, serveur, et option Storage Migrator pour Unix : versions 5.0 antérieures à 5.0_MP7.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nNetBackup est un produit destiné à réaliser des sauvegardes et des\nrestaurations.\n\nPlusieurs vulnérabilités ont été identifiées. Elles affectent le master,\nles clients et les serveurs du logiciel NetBackup. Un individu\nmalintentionné avec un accès à une machine disposant de la fonctionalité\nNetBackup pourrait exécuter du code arbitraire pouvant résulter en une\nélévation de privilège.\n\nUne première vulnérabilité due à un débordement de mémoire peut être\nexploitée sur le réseau par un individu malintentioné au moyen d'un\npaquet spécialement conçu.\n\nUne deuxième vulnérabilité affecte le daemon bpcd qui traite l'exécution\ndes commandes système. Le contrôle des commandes n'est pas fait\ncorrectement, et un individu malintentionné peut ajouter des commandes\narbitraires à des commandes valides.\n\n## Contournement provisoire\n\nSymantec recommande de ne jamais être exposé sur un réseau externe. La\nconfiguration devrait toujours restreindre les accès à des machines de\nconfiances. Symantec recommande de mettre en place la fonctionalité NBAC\net de configurer l'accès réservé uniquement à des machines de confiance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4902",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4902"
+    },
+    {
+      "name": "CVE-2006-5822",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5822"
+    },
+    {
+      "name": "CVE-2006-6222",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6222"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité Symantec SYM06-024 :",
+      "url": "http://securityresponse.symantec.com/avcenter/security/Content/2006.12.13a.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-555",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-12-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités de Symantec Veritas NetBackup",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité : SYM06-024",
+      "url": null
+    }
+  ]
+}

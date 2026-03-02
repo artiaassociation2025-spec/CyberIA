@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "NetScreen-Security Manager 2004.",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'installation par défaut de NetScreen-Security Manager ne met pas en\nœuvre de chiffrement lorsque celui-ci communique avec les divers\néquipements NetScreen.\n\nCette vulnérabilité permet à un individu mal intentionné d'intercepter\nles données de configuration transitant en clair sur le réseau.\n\n## Solution\n\nActiver le chiffrement AES 128-bit entre le NetScreen-Security Manager\net les divers équipements possédant ScreenOS 5.0 (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-015",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-01-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte lors de l'utilisation de\nNetScreen-Security Manager 2004 avec des équipements possédant la\nversion 5.0 de ScreenOS.\n",
+  "title": "Vulnérabilité dans NetScreen-Security Manager 2004",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité NetScreen #58290",
+      "url": "http://www.netscreen.com/services/security/alerts/58290.txt"
+    }
+  ]
+}

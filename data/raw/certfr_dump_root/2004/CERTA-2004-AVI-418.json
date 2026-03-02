@@ -1,0 +1,118 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Lecteur <SPAN class=\"textit\">Xpdf</SPAN> de documents au  format Portable Document Format (PDF).<BR></P>  <P>D'autres applications utilisant une partie du code de  <SPAN class=\"textit\">Xpdf</SPAN> sont également vulnérables  (Gpdf, kdegraphics, koffice, tetex, ...).</P>",
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire a été découverte dans\nla fonction Gfx::doImage.\n\nUn utilisateur mal intentionné peut exploiter cette vulnérabilité par le\nbiais d'un document au format PDF habilement construit. Il est alors\npossible d'exécuter du code arbitraire avec les privilèges de\nl'utilisateur ayant lancé le lecteur Xpdf.\n\n## Contournement provisoire\n\nNe lire que des documents au format PDF provenant d'une source de\nconfiance.\n\n## Solution\n\nMettre à jour le lecteur Xpdf (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004-162 pour Gpdf du    29 décembre 2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:162"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:034 du 15 janvier    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-034.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:018 du 12 janvier    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-018.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debain DSA-619 du 30 décembre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-619"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004-166 pour tetex du    29 décembre 2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:166"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:066 du 15 janvier    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-066.html"
+    },
+    {
+      "title": "Site Internet du lecteur Xpdf :",
+      "url": "http://www.foolabs.com/xpdf/"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD pour Xpdf du 22 décembre 2004    :",
+      "url": "http://www.vuxml.org/openbsd"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004-161 pour Xpdf du    29 décembre 2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:161"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD pour tetex du 25 décembre 2004    :",
+      "url": "http://www.vuxml.org/openbsd"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour Xpdf du 23 décembre 2004    :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200501-17 du 11 janvier    2005 :",
+      "url": "http://www.gentoo/org/security/en/glsa/glsa-200501-17.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004-165 pour koffice    du 29 décembre 2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:165"
+    },
+    {
+      "title": "Bulletin de sécurité de iDefense du 21 décembre 2004 :",
+      "url": "http://www.idefense.com/application/poi/display?id=172"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004-163 pour    kdegraphics du 29 décembre 2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:163"
+    },
+    {
+      "title": "Correctif pour le lecteur Xpdf    :",
+      "url": "ftp://ftp.foolabs.com/pub/xpdf/xpdf-3.00pl2.patch"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200412-24 du 28 décembre    2004 :",
+      "url": "http://www.gentoo/org/security/en/glsa/glsa-200412-24.xml"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-418",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-12-30T00:00:00.000000"
+    },
+    {
+      "description": "première révision : ajout des applications associées et ajout des avis Debian et Mandrake.",
+      "revision_date": "2005-01-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité Gentoo GLSA 200501-17.",
+      "revision_date": "2005-01-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité RedHat RHSA-2005:018.",
+      "revision_date": "2005-01-14T00:00:00.000000"
+    },
+    {
+      "description": "modification du lien vers le serveur de Foolabs.",
+      "revision_date": "2005-01-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité RedHat.",
+      "revision_date": "2005-02-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité du lecteur <span class=\"textit\">Xpdf</span> permet à\nun utilisateur mal intentionné d'exécuter du code arbitraire sur une\nmachine vulnérable.\n",
+  "title": "Vulnérabilité de Xpdf",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDefense du 21 décembre 2004",
+      "url": null
+    }
+  ]
+}

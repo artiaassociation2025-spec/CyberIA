@@ -1,0 +1,87 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Information Services (IIS) 6.0 (FTP Service 6.0) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Information Services (IIS) 5.0 (FTP Service 5.0) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Information Services (IIS) 7.0 (FTP Service 7.0).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Information Services (IIS) 5.1 (FTP Service 5.1) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité (CVE-2009-3023), de type débordement de mémoire, est\nprésente dans le serveur FTP de Microsoft IIS. Elle permet à un\nutilisateur distant malintentionné de provoquer un déni de service sur\nles versions 5.1 et 6.0 et 7.0 ou d'exécuter du code arbitraire sur la\nversion 5.0 du serveur vulnérable. Pour exploiter cette faille,\nl'attaquant doit disposer d'un compte ayant les droits d'écriture sur le\nserveur afin d'y créer des répertoires particuliers.\n\nLa deuxième vulnérabilité (CVE-2009-2521) est due à une saturation des\nressources de la pile. Elle permet à une personne malintentionnée\nauthentifiée de provoquer un déni de service au moyen d'une commande\nspécifique.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3023",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3023"
+    },
+    {
+      "name": "CVE-2009-2521",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2521"
+    }
+  ],
+  "links": [
+    {
+      "title": "Document du CERTA CERTA-2009-ALE-015 du 01 septembre 2009 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2009-ALE-015/index.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-433",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-10-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans le serveur FTP de <span\nclass=\"textit\">Microsoft IIS</span> permettent à un utilisateur distant\nde provoquer un déni de service ou d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilités du serveur FTP de Microsoft IIS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS09-053 du 13 octobre 2009",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-053.mspx"
+    }
+  ]
+}

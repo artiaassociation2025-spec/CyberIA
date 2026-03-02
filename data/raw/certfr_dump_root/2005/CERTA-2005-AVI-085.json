@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>unace</TT> version 1.2b (dernière  version libre) et versions antérieures.",
+  "content": "## Description\n\nunace est un outil de manipulation d'archives au format ACE.  \nPlusieurs vulnérabilités sont présentes dans unace :\n\n-   Des vulnérabilités de type débordement de mémoire dans la\n    manipulation d'archives au format ACE malicieusement construites\n    (CAN-2005-0160) ;\n-   des vulnérabilités de type traversée de répertoires (directory\n    traversal) lors de l'extraction d'archives au format ACE\n    malicieusement construites (CAN-2005-0161) ;\n-   des vulnérabilités de type débordement de mémoire dans la\n    manipulation des arguments passés à l'exécutable unace\n    particulièrement longs (CAN-2005-0160).\n\nCes vulnérabilités permettent à un utilisateur mal intentionné de\ncontourner la politique de sécurité (altérer des données), réaliser un\ndéni de service ou exécuter du code arbitraire à distance sur la\nplate-forme vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité OpenBSD pour unace du 22    février 2005 :",
+      "url": "http://www.vuxml.org/openbsd/pkg-unace.html"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SR:2005:016 du 17 juin 2005    :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_16_sr.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour unace du 22    février 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-unace.html"
+    },
+    {
+      "title": "Site Internet de unace :",
+      "url": "http://www.winace.com"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD unace :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/archivers/unace/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200502-32 du 28 février    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200502-32.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-085",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-02-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2005-03-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité NetBSD.",
+      "revision_date": "2005-03-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SUSE.",
+      "revision_date": "2005-06-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans unace permettent à un utilisateur mal\nintentionné de contourner la politique de sécurité (altérer des\ndonnées), réaliser un déni de service ou exécuter du code arbitraire à\ndistance sur la plate-forme vulnérable.\n",
+  "title": "Vulnérabilité de unace",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD du 22 février 2005",
+      "url": null
+    }
+  ]
+}

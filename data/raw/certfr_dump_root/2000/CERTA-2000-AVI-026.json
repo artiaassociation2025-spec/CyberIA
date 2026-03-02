@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Netscape Navigator toutes versions et Communicator 4.74 et  inférieures si java est activé. Vulnérabilité indépendante du  système d'exploitation.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nUn administrateur mal intentionné ayant déposé sur son site web une\napplet java peut lire le contenu du disque des utilisateurs possédant\nNetscape Navigator ou Communicator et ayant activé java. Ceci n'est\npossible que si l'utilisateur se connecte au site hostile et si java est\nactivé.\n\nL'applet java exécutée par le client parcourant le site hostile le\ntransforme alors en serveur web rendant toutes les données auxquelles\nl'utilisateur à accès, y compris celles situées sur des répertoires ou\ndisques réseaux, visibles par internet.\n\nDe nombreuses exploitations ont déjà été diffusées sur internet.\n\nIl n'est pas exclus que des adaptations soient développées sous tout\nnavigateur, et avec toutes sortes de langages, notamment ActiveX pour\nInternet Explorer ou Visual Basic, ou étendu aux mails aux formats HTML.\n\n## Contournement provisoire\n\nTout site doit avoir un garde-barrière, la configuration de ce\ngarde-barrière doit interdire les connexions vers les machines\nprotégées. En d'autre terme les client du site protégé ne peuvent pas\nêtre des serveurs vers internet grâce aux règles du garde-barrière.\n\nIl est donc important de ne pas naviguer depuis un serveur, car il n'est\npas protégé par le garde-barrière.\n\nLe port d'écoute du serveur peut être déterminé par l'administrateur mal\nintentionné, il n'est donc pas prévisible.\n\nCette mesure ne protègera pas contre une attaque de l'intérieur.\n\n## Solution\n\nIl n'y a pas de correctif actuellement disponible.\n\nDésactiver Java du navigateur web.\n\nPour prévenir toute évolution, désactiver aussi ActiveX des navigateurs\nInternet Explorer.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site ou la vulnérabilité de Java dans Netscape est décrite, et où on peut trouver un exemple d'exploitation. (Nota : Cet exemple, et les multiples autres déjà présents sur le web peuvent être modifiés pour un usage encore plus malfaisant)",
+      "url": "http://www.brumleve.com/BrownOrifice/"
+    },
+    {
+      "title": "avis K-063 du CIAC :",
+      "url": "http://www.ciac.org/ciac/bulletins/k-063.shtml"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-026",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité de la machine virtuelle java (<span\nclass=\"textit\">java Virtual Machine</span>) a été découverte sur\nNetscape Navigator et Communicator. Elle permet à un serveur web hostile\nde démarrer un processus serveur à l'insu de l'utilisateur qui navigue\nsur ce site. Ce processus permet à n'importe quel navigateur web de lire\ntoutes les données locales accessibles par l'utilisateur connecté.\n",
+  "title": "Vulnérabilité de Netscape avec Java",
+  "vendor_advisories": [
+    {
+      "published_at": "2000-08-09",
+      "title": "Réseau de confiance",
+      "url": "None"
+    },
+    {
+      "published_at": "2000-08-09",
+      "title": "Avis du CIAC",
+      "url": "None"
+    }
+  ]
+}

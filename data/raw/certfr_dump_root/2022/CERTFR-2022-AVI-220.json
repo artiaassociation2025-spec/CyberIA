@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<ul> <li>Ruby On Rails versions 5.2.x antérieures à 5.2.6.3</li> <li>Ruby On Rails versions 6.0.x antérieures à 6.0.4.7</li> <li>Ruby On Rails versions 6.1.x antérieures à 6.1.4.7</li> <li>Ruby On Rails versions 7.0.x antérieures à 7.0.2.3</li> </ul> <p>Les versions antérieures à 5.2.0 ne sont pas affectées par la vulnérabilité.</p> ",
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs et des mesures de contournement (cf. section Documentation).\n\n## Contournement provisoire\n\nL'éditeur indique que les applications doivent implémenter une liste\nd'autorisation stricte sur les méthodes ou arguments de transformation\nacceptés. Une politique de sécurité stricte configurée sur image magick\npermet contourner la vulnérabilité.\n",
+  "cves": [
+    {
+      "name": "CVE-2022-21831",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-21831"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2022-AVI-220",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-03-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Ruby on Rails. Elle permet à un\nattaquant de provoquer une exécution de code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans Ruby on Rails",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ruby on Rails n-p-W1yxatI du 08 mars 2022",
+      "url": "https://groups.google.com/g/rubyonrails-security/c/n-p-W1yxatI"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Rubysec CVE-2022-21831 du 08 mars 2022",
+      "url": "https://rubysec.com/advisories/CVE-2022-21831/"
+    }
+  ]
+}

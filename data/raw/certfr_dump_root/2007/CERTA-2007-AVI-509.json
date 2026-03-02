@@ -1,0 +1,91 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mozilla Firefox version 2.0.0.9 ainsi que celles antérieures ;",
+      "product": {
+        "name": "Firefox",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Netscape Navigator versions 9.0.0.3 et antérieures.",
+      "product": {
+        "name": "Firefox",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans le navigateur Mozilla\nFirefox :\n\n1.  l'une d'elles a été présentée dans le bulletin d'actualité\n    CERTA-2007-ACT-045 du 09 novembre 2007, et implique les URI de la\n    forme jar:. Des fichiers archivés se trouvant sur un site web (par\n    défaut, ou après un téléchargement) peuvent être exploités pour\n    lancer des attaques par injection de code indirecte (XSS). Le\n    correctif limite l'usage de ces URI par un en-tête Content-Type de\n    forme application/java-archive et application/x-jar. Il s'agit donc\n    d'une mesure de correction partielle.\n2.  une vulnérabilité permet de tricher sur le champ Referer de\n    l'en-tête HTTP. Celle-ci peut être exploitée pour lancer des\n    attaques de type CSRF (Cross-Site Request Forgery), en remplaçant sa\n    valeur légitime et après une situation de compétition particulière.\n3.  trois autres vulnérabilités sont citées par Mozilla. Elles\n    provoqueraient une corruption de la mémoire, et permettraient\n    éventuellement d'exécuter des commandes arbitraires sur un système\n    vulnérable. Elles concernent notamment l'interprétation d'images PNG\n    et la méthode destructor XBL.\n\n## Solution\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5947",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5947"
+    },
+    {
+      "name": "CVE-2007-5960",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5960"
+    },
+    {
+      "name": "CVE-2007-5959",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5959"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla MFSA2007-38 du    26 novembre 2007 :",
+      "url": "http://www.mozilla.org/security/announce/2007/mfsa2007-38.html"
+    },
+    {
+      "title": "Mise à jour de Netscape Navigator :",
+      "url": "http://browser.netscape.com/downloads/"
+    },
+    {
+      "title": "Document du CERTA CERTA-2007-ACT-045 du 09 novembre 2007 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2007-ACT-045.pdf"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla MFSA2007-37 du    26 novembre 2007 :",
+      "url": "http://www.mozilla.org/security/announce/2007/mfsa2007-37.html"
+    },
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla MFSA2007-39 du    26 novembre 2007 :      http://www.mozilla.org/security/announce/2007/mfsa2007-39.html",
+      "url": "http://www.mozilla.org/security/announce/2007/mfsaA2007-39.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-509",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2007-11-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références à Netscape.",
+      "revision_date": "2007-11-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans le navigateur Mozilla\nFirefox. Exploitées, elles permettraient à une personne malveillante\nd'exécuter du code sur le système vulnérable, ou conduire des attaques\npar injection de code indirecte de type CSRF (<span\nclass=\"textit\">Cross-Site Request Forgery</span>) ou XSS.\n",
+  "title": "Vulnérabilités dans Mozilla Firefox",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Mozilla MFSA du 26 novembre 2007",
+      "url": null
+    }
+  ]
+}

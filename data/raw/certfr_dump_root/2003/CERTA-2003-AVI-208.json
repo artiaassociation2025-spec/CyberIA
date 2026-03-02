@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>La première vulnérabilité affecte les  versions suivantes :  <UL>    <LI>6.3.1 ;</LI>    <LI>6.2.2 et antérieures ;</LI>    <LI>6.1.4 et antérieures ;</LI>    <LI>5.X.X et antérieures.</LI>  </UL>  <P>La seconde vulnérabilité affecte les versions 6.2.3 et  antérieures. Les versions 6.1.X et 5.X.X ne disposant pas du  client VPN ne sont pas affectées.</P></p>",
+  "content": "## Description\n\n-   Première vulnérabilité : au moyen d'un message SNMPv3 habilement\n    constitué, un utilisateur mal intentionné peut forcer l'arrêt brutal\n    du garde-barrière. Cette vulnérabilité n'est exploitable que si le\n    garde-barrière est configuré pour recevoir les messages SNMP\n    (snmp-server host \\<adresseIP\\>).\n-   Deuxième vulnérabilité : il est possible, sous certaines\n    circonstances, de forcer le client VPN du garde-barrière Cisco à\n    supprimer un tunnel IPSEC préalablement établi.\n\n## Contournement provisoire\n\nDeux mesures de protection peuvent être mises en oeuvre pour prévenir\nl'exploitation de la première vulnérabilité :\n\n-   Restreindre l'accès au serveur SNMP du garde-barrière :\n\n         snmp-server host <interface> <adresseIp> poll\n\n-   ou arrêter le serveur SNMP du garde-barrière :\n\n         no snmp-server location \n         no snmp-server contact \n         snmp-server community public \n         no snmp-server enable-traps\n\n## Solution\n\nSe référer au bulletin de sécurité du constructeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-208",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-12-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux nouvelles vulnérabilités ont été découvertes dans le garde-barrière\nPIX de Cisco.\n",
+  "title": "Multiples vulnérabilités du garde-barrière PIX de Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Cisco",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20031215-pix.shtml"
+    }
+  ]
+}

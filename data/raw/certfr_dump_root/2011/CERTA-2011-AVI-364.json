@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SGOS 6.1 et 6.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ProxySG ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDans la mémoire dans les produits Blue Coat affectés les informations\nsensibles, dont les données d'authentification des utilisateurs, sont\nséparées des autres données.\n\nEn cas de problème sur le système, le fichier core dump contient\nl'ensemble des données, mais sans protéger les données sensibles. Un\nutilisateur malveillant ayant accès à ce fichier peut obtenir ces\ninformations sensibles.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2011-AVI-364",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-06-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans des produits Blue Coat permet à un utilisateur\nmalveillant d'accéder à des informations sensibles.\n",
+  "title": "Vulnérabilité dans des produits Blue Coat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité BlueCoat SA56 du 17 juin 2011",
+      "url": "https://kb.bluecoat.com/index?page=content&id=SA56"
+    }
+  ]
+}

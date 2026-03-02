@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les versions de PowerDNS 3.1.7.1 et les  versions précédentes.</p>",
+  "content": "## Description\n\nDeux vulnérabilités dans PowerDNS Recursor ont été corrigées. La\npremière permet à une personne malintentionnée distante de provoquer un\ndéni de service ou d'exécuter du code arbitraire au moyen d'un paquet\nspéciallement réalisé. La seconde est exploitable au moyen d'une Zone\nspécialement mise en place afin de tromper PowerDNS Recursor pour qu'il\naccepte des données malveillantes à destination des utilisateurs du\nservice.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-4009",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-4009"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 1968-1 du 08 janvier 2010 :",
+      "url": "http://list.debian.org/debian-security-announce/2010/msg00003.html"
+    },
+    {
+      "title": "Bulletins de sécurité PowerDNS 2010-01 et 2010-02 du 6    janvier 2010 :",
+      "url": "http://doc.powerdns.com/powerdns-advisory-2010-02.html"
+    },
+    {
+      "title": "Bulletins de sécurité PowerDNS 2010-01 et 2010-02 du 6    janvier 2010 :",
+      "url": "http://doc.powerdns.com/powerdns-advisory-2010-01.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-003",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-01-07T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de la référence au bulletin de sécurité Debian.",
+      "revision_date": "2010-01-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans PowerDNS Recursor permettant l'exécution de\ncode arbitraire à distance et le contournement de la politique de\nsécurité ont été corrigées.\n",
+  "title": "Multiples vulnérabilités dans PowerDNS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité PowerDNS 2010-01 et 2010-02 du 6 janvier 2010",
+      "url": null
+    }
+  ]
+}

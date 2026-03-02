@@ -1,0 +1,111 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows Server 2008 et 2008 SP2 pour architecturess 32 bits, x64 et Itanium.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Vista, Vista SP1 et SP2, y compris versions pour x64 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows XP S2, SP3 et Édition Media Center 2005 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows 2000 SP4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 SP2, y compris versions pour x64 et Itanium ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows XP Professionnel Édition x64 SP2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nPlusieurs vulnérabilités de la bibliothèque ATL (Active template\nlibrary) de Windows ont été identifiées :\n\n-   la première provient de la lecture sans filtrage de données non\n    sûres ;\n-   la seconde tire son origine de la copie de données non sûres ;\n-   la troisième résulte du défaut d'initialisation d'un objet ;\n-   la quatrième est liée à des erreurs dans certains en-têtes ATL ;\n-   la cinquième provient d'un défaut de gestion de la mémoire.\n\nPour chacune de ces vulnérabilités, un utilisateur malveillant peut, par\nle biais d'une page web malveillante, exécuter du code arbitraire sur un\nsystème vulnérable avec les droits de l'utilisateur ;\n\n## Solution\n\nSe référer au bulletin de sécurité MS09-037 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0015",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0015"
+    },
+    {
+      "name": "CVE-2008-0020",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0020"
+    },
+    {
+      "name": "CVE-2009-2494",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2494"
+    },
+    {
+      "name": "CVE-2009-0901",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0901"
+    },
+    {
+      "name": "CVE-2009-2493",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2493"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-325",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de la bibliothèque ATL de Windows permettent à\nun utilisateur malveillant d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités de la bibliothèque ATL de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": "2009-08-11",
+      "title": "Bulletin de sécurité Microsoft MS09-037",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-037.mspx"
+    }
+  ]
+}

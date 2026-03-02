@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Endpoint Manager (EPM) versions antérieures à 2024 SU5 ",
+      "product": {
+        "name": "Endpoint Manager (EPM)",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-1602",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-1602"
+    },
+    {
+      "name": "CVE-2026-1603",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-1603"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0144",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-02-11T00:00:00.000000"
+    },
+    {
+      "description": "Ajout des références CVE",
+      "revision_date": "2026-02-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection SQL (SQLi)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Ivanti Endpoint Manager. Elles permettent à un attaquant de provoquer une injection SQL (SQLi) et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans Ivanti Endpoint Manager",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-02-10",
+      "title": "Bulletin de sécurité Ivanti february-2026-security-update",
+      "url": "https://www.ivanti.com/blog/february-2026-security-update"
+    },
+    {
+      "published_at": "2026-02-10",
+      "title": "Bulletin de sécurité Ivanti Security-Advisory-EPM-February-2026-for-EPM-2024",
+      "url": "https://forums.ivanti.com/s/article/Security-Advisory-EPM-February-2026-for-EPM-2024"
+    }
+  ]
+}

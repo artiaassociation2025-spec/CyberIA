@@ -1,0 +1,51 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tous système ayant une bibliothèque  <TT>libpng</TT> version 1.2.1 ou antérieure.</p>",
+  "content": "## Description\n\nLa bibliothèque libpng est utilisée par de nombreuses applications (dont\nles navigateurs) pour la manipulation de fichiers image au format png\n(Portable Neutral Graphics).\n\nUne vulnérabilité de type débordement de mémoire présente dans la\nbibliothèque libpng permet à un utilisateur mal intentionné d'exécuter\ndu code arbitraire ou d'entraîner un déni de service sur la machine\ncible au moyen d'un fichier judicieusement composé.\n\n## Solution\n\nSe référer aux bulletins de sécurité des différents éditeurs pour\nconnaître la disponibilité des correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité MDKSA-2003:008 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:008"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-003",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-01-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité MDKSA-2003:008 de Mandrake.",
+      "revision_date": "2003-01-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans la bibliothèque libpng permet à un\nutilisateur mal intentionné d'exécuter du code arbitraire ou d'entraîner\nun déni de service sur la machine cible.\n",
+  "title": "Vulnérabilité dans la bibliothèque libpng",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RHSA-2003:006 de Red Hat",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-006.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SuSE-SA:2003:0004 de SuSE",
+      "url": "http://www.suse.com/de/security/2003_004_libpng.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DSA-213 de Debian",
+      "url": "http://www.debian.org/security/2002/dsa-213"
+    }
+  ]
+}

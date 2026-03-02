@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<TT>pavuk</TT> version 0.9p128 et  versions antérieures.",
+  "content": "## Description\n\npavuk est un programme de récupération récursif de documents supportant\nles protocoles HTTP, FTP et Gopher.  \nLorsqu'un serveur HTTP renvoi un code d'erreur 305 (Use Proxy), pavuk\ncopie les données contenues dans l'en-tête HTTP Location d'une manière\nnon sécurisée. Cela permet à un utilisateur mal intentionné d'exécuter\ndu code arbitraire à distance avec les droits de l'utilisateur ayant\nexécuté pavuk.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de pavuk :      http://www.idata.sk/˜ondrej/pavuk/",
+      "url": "http://www.idata.sk/%CB%9Condrej/pavuk/"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour pavuk du 03 juillet 2004    :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-527 du 03 juillet 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-527"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-216",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence CVE et de la version impactée.",
+      "revision_date": "2004-07-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian et FreeBSD.",
+      "revision_date": "2004-07-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans l'outil pavuk permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité de pavuk",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA 200406-22",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200406-22.xml"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Adobe ColdFusion version 9.0.",
+      "product": {
+        "name": "ColdFusion",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Adobe ColdFusion versions 8.0.1 et antérieures ;",
+      "product": {
+        "name": "ColdFusion",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans Adobe ColdFusion. Elles\npermettent à un utilisateur local malintentionné de porter atteinte à la\nconfidentialités de certaines données (CVE-2010-1294) et à un\nutilisateur distant de conduire des attaques de type injection de code\nindirecte (CVE-2009-3467 et CVE-2010-1293).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-1293",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1293"
+    },
+    {
+      "name": "CVE-2010-1294",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1294"
+    },
+    {
+      "name": "CVE-2009-3467",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3467"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-209",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-05-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Adobe ColdFusion permettent à un\nutilisateur malintentionné de porter atteinte à la confidentialité de\ndonnées et de conduire des attaques de type injection de code indirecte.\n",
+  "title": "Multiples vulnérabilités dans Adobe ColdFusion",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Adobe APSB10-11 du 11 mai 2010",
+      "url": "http://www.adobe.com/support/security/bulletins/apsb10-11.html"
+    }
+  ]
+}

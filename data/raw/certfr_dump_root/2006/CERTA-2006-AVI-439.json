@@ -1,0 +1,152 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Visionneuse Microsoft Office Excel 2003 (Viewer).",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Excel 2002 dans la suite bureautique Microsoft Office XP Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Excel 2004 dans la suite bureautique Microsoft Office 2004 pour Mac ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Suite Microsoft Works 2006 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Excel v.X dans la suite bureautique Microsoft Office v.X pour Mac ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Suite Microsoft Works 2005 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Excel 2000 dans la suite bureautique Microsoft Office 2000 Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Excel 2003 dans la suite bureautique Microsoft Office 2003 Service Pack 1 ou 2 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Suite Microsoft Works 2004 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans l'application\nMicrosoft Excel, fournie dans la suite bureautique Microsoft Office ou\ndans Microsoft Works. Parmi celles-ci :\n\n-   Excel ne manipulerait pas convenablement des documents .xls\n    contenant un champ d'enregistrement DATETIME incorrect ;\n-   Excel ne manipulerait pas convenablement des documents .xls\n    contenant un champ d'enregistrement STYLE incorrect. Le code\n    d'exploitation en circulation utilise une chaîne de caractères\n    particulière codés sur 2 octets (caractères asiatiques), qu'il est\n    possible de désactiver en changeant la valeur InstallLanguage dans\n    la table de registres ;\n-   Excel ne manipulerait pas convenablement des documents .xls\n    contenant un champ d'enregistrement COLINFO incorrect ;\n-   Des fichiers Lotus 1-2-3 ne seraient pas traités de manière correct\n    par Excel.\n\nUne personne malveillante pourrait exploiter l'une de ces vulnérabilités\nen construisant un document Excel particulier. Lorsque celui-ci est\nouvert sur une machine ayant une version d'Excel vulnérable, il\nexécuterait du code arbitraire, et permettrait donc de prendre le\ncontrôle de la machine.\n\n## Solution\n\nL'éditeur Microsoft vient de publier un nouveau correctif de sécurité\ndestiné à mettre à jour l'exécutable excel.exe.\n\nSe référer au bulletin de sécurité MS06-059 de l'éditeur Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3431",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3431"
+    },
+    {
+      "name": "CVE-2006-3867",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3867"
+    },
+    {
+      "name": "CVE-2006-2387",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2387"
+    },
+    {
+      "name": "CVE-2006-3875",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3875"
+    }
+  ],
+  "links": [
+    {
+      "title": "Mise à jour du bulletin de sécurité Microsoft MS06-059 du    12 décembre 2006 :",
+      "url": "http://support.microsoft.com/kb/924164"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-439",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence de la mise à jour du bulletin de sécurité Microsoft MS06-059.",
+      "revision_date": "2006-12-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans l'application\nMicrosoft Excel, fournie dans la suite bureautique Microsoft Office ou\ndans Microsoft Works.\n\nUne personne malveillante pourrait exploiter l'une d'elles en\nconstruisant un document Excel particulier. Lorsque celui-ci est ouvert\nsur une machine ayant une version d'Excel vulnérable, il exécuterait du\ncode arbitraire, et permettrait donc de prendre le contrôle de la\nmachine.\n",
+  "title": "Multiples vulnérabilités dans Microsoft Excel",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-059 du 10 octobre 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-059.mspx"
+    }
+  ]
+}

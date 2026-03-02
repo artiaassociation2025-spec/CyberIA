@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Lotus Notes et Domino versions 5.0.12, 6.0.1 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Lotus Domino 6.0 versions alpha et beta.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa première vulnérabilité concerne un débordement de mémoire dans le\nservice COM Object Control Handler de Lotus Notes et Domino.\n\nCette vulnérabilité avait été annoncée comme une vulnérabilité de iNotes\nActiveX, mais elle n'est pas spécifique à iNotes ou aux ActiveX. Elle\npeut notamment être présente sur des clients Notes ou des serveurs\nDomino installés sur d'autres plates-formes que Microsoft Windows.\n\nLes systèmes affectés sont Lotus Notes et Domino versions 5.0.12, 6.0.1\net antérieures.  \n\nLa deuxième vulnérabilité concerne le protocole LDAP. Les versions de\nLotus Domino R5.0.7 et antérieures présentaient une vulnérabilité dans\nla gestion du protocole LDAP, qui avait été corrigée dans la version\nR5.0.7a.\n\nCette vulnérabilité est à nouveau présente dans les versions Lotus Notes\net Domino R6 alpha et beta.\n\n## Solution\n\nAppliquer le correctif pour la première vulnérabilité.  \n\nLes versions Lotus Domino et Notes R6.0 Gold et R6.0.1 corrigent la\ndeuxième vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis R7-0012 de Rapid7 (deuxième vulnérabilité) :",
+      "url": "http://www.rapid7.com/advisories/R7-0012.html"
+    },
+    {
+      "title": "Avis de sécurité IBM (première vulnérabilité) :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21104543"
+    },
+    {
+      "title": "Avis de sécurité NGSSoftware Insight NISR17022003e    (première vulnérabilité) :",
+      "url": "http://www.nextgenss.com/advisories/lotus-inotesclientaxbo.txt"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-068",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités de Lotus Notes et Domino permettent à un utilisateur\nmal intentionné d'exécuter du code arbitraire ou de provoquer un déni de\nservice.\n",
+  "title": "Deux vulnérabilités de Lotus Notes et Domino",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2003-11 du CERT/CC",
+      "url": "http://www.cert.org/advisories/CA-2003-11.html"
+    }
+  ]
+}

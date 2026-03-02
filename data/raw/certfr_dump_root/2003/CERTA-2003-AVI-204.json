@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Linux 2.4.22 et versions antérieures.</p>",
+  "content": "## Description\n\nUne vulnérabilité est présente dans la fonction do_brk() du noyau Linux\n(contrôle incorrect de l'adresse haute de la zone mémoire dynamique\n(TAS) du processus).\n\n  \nUn utilisateur mal intentionné peut exploiter cette vulnérabilité afin\nd'obtenir les privilèges du super-utilisateur root ou réaliser un déni\nde service par arrêt brutal du système.\n\n## Solution\n\nLa version 2.4.23 du noyau Linux corrige cette vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SuSE-SA:2003:049 de SuSE :",
+      "url": "http://www.suse.com/de/security/2003_049_kernel.html"
+    },
+    {
+      "title": "Sources du noyau Linux :",
+      "url": "http://www.kernel.org"
+    },
+    {
+      "title": "Bulletin de sécurité GLSA 200312-02 de Gentoo :",
+      "url": "http://www.securityfocus.com/advisories/6143"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-204",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-12-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de SuSE et Gentoo.",
+      "revision_date": "2003-12-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité du noyau Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MDKSA-2003:110 de Mandrake",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:110"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DSA-403 de Debian",
+      "url": "http://www.debian.org/security/2003/dsa-403"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RHSA-2003:392 de Red Hat",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-392.html"
+    }
+  ]
+}

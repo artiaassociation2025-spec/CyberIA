@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Selon la distribution GNU/Linux, les versions vulnérables    de VNC sont :      <UL>        <LI>RedHat et Mandrake : toutes les versions de VNC        antérieures à la version 3.3.3r2 ;</LI>        <LI>Gentoo : toutes les versions de VNC antérieures à la        version 3.3.6r1 ;</LI>        <LI>Connectiva : toutes les versions de VNC antérieures à        la version 3.3.3r2-21.</LI>      </UL>    </LI>    <LI>Selon la distribution GNU/Linux, les versions vulnérables    de TightVNC sont :      <UL>        <LI>RedHat et Mandrake : toutes les versions de TightVNC        antérieures à la version 1.2.5 ;</LI>        <LI>Gentoo : toutes les versions de TightVNC antérieures à        la version 1.2.8 ;</LI>        <LI>Connectiva : toutes les versions de TightVNC        antérieures à la version 1.2.6.</LI>      </UL>    </LI>  </UL>",
+  "content": "## Description\n\nVNC (Virtual Network Computing) est un logiciel de prise de contrôle à\ndistance d'un ordinateur. TightVNC est une version dérivée de VNC\npermettant également le contrôle à distance de l'ordinateur et\ncompatible avec ce dernier. Une vulnérabilté dans la création du cookie\nd'authentification au serveur X permet à un utilisateur mal intentionné\nde deviner le cookie d'authentification et de se connecter au serveur\nVNC ou TightVNC pour prendre le contrôle à distance de l'ordinateur.\n\n## Solution\n\nMettre à jour VNC et TightVNC en fonction de la distribution :\n\n-   Pour RedHat et Mandrake, mettre à jour VNC en version 3.3.3r2 et\n    TightVNC en version 1.2.5 ;\n-   pour Gentoo, mettre à jour VNC en version 3.3.6r1 et TightVNC en\n    version 1.2.8.\n-   pour Connectiva, mettre à jour VNC en version 3.3.3r2 et TightVNC en\n    version 1.2.6.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Connectiva CLA-2003:640 :",
+      "url": "http://distro.conectiva.com.br/atualizacoes/?id=a&anuncio=000640"
+    },
+    {
+      "title": "Avis de sécurité Mandrake MDKSA-2003:022 :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:022"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-031",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-02-28T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE et du bulletin de sécurité de connectiva.",
+      "revision_date": "2003-05-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contrôle de la machine à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le serveur VNC (et TightVNC) permet à un\nutilisateur mal intentionné de se connecter au serveur VNC (et TightVNC)\net ainsi avoir le contrôle à distance de la machine.\n",
+  "title": "Vulnérabilité du serveur VNC et TightVNC",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité RedHat RHSA-2003:041-12",
+      "url": "https://rhn.redhat.com/errata/RHSA-2003-041.html"
+    }
+  ]
+}

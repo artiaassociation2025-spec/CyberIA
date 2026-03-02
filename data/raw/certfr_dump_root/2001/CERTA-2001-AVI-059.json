@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Exchange 2000.</P>",
+  "content": "## Description\n\nOWA est un service d'Exchange 2000 Server qui permet à un utilisateur de\nse servir son navigateur pour accéder à sa boîte aux lettres Exchange.  \n\nLors de la manipulation des pièces jointes, il existe un problème\nd'interaction entre OWA et Internet Explorer. En effet, si une pièce\njointe contient du code HTML incluant un script, ce script sera exécuté\nlors de l'ouverture de la pièce jointe.\n\n## Contournement provisoire\n\nNe pas utiliser Internet Explorer avec OWA, mais se servir d'un autre\nnavigateur.\n\n## Solution\n\nAppliquer le correctif Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=30436\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-059",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-06-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "La manipulation de pièces jointes par le service OWA (Outlook Web\nAccess) d'Exchange 2000 peut provoquer l'exécution de code arbitraire.\n",
+  "title": "Vulnérabilité d'Exchange 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms01-030.asp"
+    }
+  ]
+}

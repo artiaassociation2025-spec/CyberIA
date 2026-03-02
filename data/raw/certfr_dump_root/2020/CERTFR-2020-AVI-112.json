@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache Tomcat 6 toutes versions",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat 9 versions antérieures à 9.0.31",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat 7 versions antérieures à 7.0.100",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat 8 versions antérieures à 8.5.51",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\n**Notes importantes** :\n\n-   Le nouveau paramétrage du connecteur AJP requiert une adaptation de\n    la configuration pour être fonctionnel ;\n-   Apache Tomcat 6 n'est plus maintenu par l'éditeur, aucun correctif\n    n'est donc proposé. Il est donc nécessaire de procéder à la mise à\n    jour de Apache Tomcat 6 vers une version supportée.\n",
+  "cves": [
+    {
+      "name": "CVE-2020-1938",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-1938"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2020-AVI-112",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2020-02-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans le connecteur AJP de Apache\nTomcat, qui est activé par défaut. Elle permet à un attaquant ayant la\ncapacité de se connecter directement sur le connecteur AJP de Tomcat de\nprovoquer une atteinte à la confidentialité des données.\n\nDans le cas où l'application propose une fonctionnalité de\ntéléchargement de fichier, un attaquant ayant accès à cette\nfonctionnalité pourrait déposer du code exécutable JSP (*JavaServer\nPages*) et en déclencher l'exécution via la présente vulnérabilité.\n\nDes premières preuves de concept ont été publiées, elles permettent\nd'accéder à un fichier arbitraire au sein du répertoire d'exécution de\nApache Tomcat.\n",
+  "title": "Vulnérabilité dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de Sécurité Apache Tomcat 8 du 24 février 2020",
+      "url": "http://tomcat.apache.org/security-8.html#Fixed_in_Apache_Tomcat_8.5.51"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de Sécurité Apache Tomcat 7 du 24 février 2020",
+      "url": "http://tomcat.apache.org/security-7.html#Fixed_in_Apache_Tomcat_7.0.100"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de Sécurité Apache Tomcat 9 du 24 février 2020",
+      "url": "http://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.31"
+    }
+  ]
+}

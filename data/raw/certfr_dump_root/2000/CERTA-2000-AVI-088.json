@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Commutateurs CISCO Catalyst séries 4000, 5000 et 6000  possédant un IOS inférieur à la version 6.1(1c)</P>",
+  "content": "## Description\n\nLorsqu'un paquet ne correspondant pas au protocole SSH est envoyé sur le\nport de ce service, une erreur est automatiquement générée. Cette erreur\nprovoque un blocage du moteur de supervision du commutateur ayant pour\neffet un arrêt du traitement des paquets entrant et sortant.\n\nIl peut entraîner également un redémarrage du système.  \n  \n\nNota : Par défaut la fonction SSH n'est pas mise en service et doit être\nconfigurée par l'administrateur.\n\n## Contournement provisoire\n\nDésactiver le service SSH.\n\n## Solution\n\nAppliquer la nouvelle version de l'IOS 6.1(1c) disponible sur le site :\n\n    http://www.cisco.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité CISCO :",
+      "url": "http://www.cisco.com/warp/public/707/catalyst-ssh-protocolmismatch-pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-088",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-12-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut provoquer à distance un arrêt d'un\ncommutateur CISCO (4000, 5000 ou 6000) par l'envoi de paquets « non\nattendus » sur le port SSH.\n",
+  "title": "Vulnérabilité dans le service SSH des commutateurs CISCO 4000, 5000 ET 6000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CISCO",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Symantec Gateway Security 2.0 - 5400 Series.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec Enterprise Firewall 8.0 (Windows et Solaris) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec VelociRaptor 1.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec Enterprise Firewall 7.0.x (Windows et Solaris) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec Gateway Security 1.0 - 5300 Series ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa bibliothèque Entrust LibKmp ISAKMP gère l'échange des clés IKE et le\ntraitement des paquets ISAKMP. Elle est utilisée par divers produits de\nsécurité de Symantec.\n\nUne vulnérabilité de type débordement de mémoire affectant cette\nbibliothèque permet l'exécution de code arbitraire à distance ou la\nréalisation d'un déni de service.\n\nCette vulnérabilité n'affecte pas les passerelles qui n'utilisent que\ndes tunnels VPN statiques ou qui n'ont pas de tunnels VPN dynamiques\ndéfinis.\n\n## Solution\n\nAppliquer le correctif fourni par Symantec :\n\n    http://www.symantec.com/region/fr/downloads\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-280",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-08-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans divers produits Symantec permet l'exécution de\ncode arbitraire à distance, ou la réalisation d'un déni de service.\n",
+  "title": "Vulnérabilité dans divers produits Symantec",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SYM04-012 de Symantec du 26 août 2004",
+      "url": "http://securityresponse.symantec.com/avcenter/security/Content/2004.08.26.html"
+    }
+  ]
+}

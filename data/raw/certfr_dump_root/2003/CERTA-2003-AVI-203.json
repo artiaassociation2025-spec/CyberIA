@@ -1,0 +1,23 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Stunnel</SPAN> versions :</P>  <UL>    <LI>antérieures à et incluant la 3.24,</LI>    <LI>4.00.</LI>  </UL>",
+  "content": "## Description\n\nStunnel est un programme permettant de sécuriser une connexion réseau\nTCP en créant un tunnel SSL/TLS.\n\nUne mauvaise gestion des descripteurs de fichiers sensibles permet à un\nutilisateur local mal intentionné de remplacer le service Stunnel par le\nsien. Un exploit est disponible.\n\n## Solution\n\nMettre à jour Stunnel.\n\n-   Sources 3.26 ou 4.04 au moins :\n\n        http://stunnel.mirt.net/downloads.html\n\n-   RedHat Linux\n\n        http://rhn.redhat.com/errata/RHSA-2003-297.html\n\n-   Mandrake Linux\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:108\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-203",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-12-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation du service légitme par un utilisateur local"
+    }
+  ],
+  "summary": "Un serveur habilement construit, lancé par l'intermédiaire de <span\nclass=\"textit\">Stunnel</span>, peut arriver à remplacer ce dernier en\nécoute. Il est alors possible pour le propriétaire du serveur d'attenter\nà la confidentialité des échanges normalement sécurisés par <span\nclass=\"textit\">Stunnel</span> (mots de passe,...).\n",
+  "title": "Vulnérabilité dans Stunnel",
+  "vendor_advisories": []
+}

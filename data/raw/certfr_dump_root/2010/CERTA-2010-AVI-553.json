@@ -1,0 +1,113 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMware ESXi version 4.1.",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESX versions 4.0 et 4.1 ;",
+      "product": {
+        "name": "ESXi",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne mise à jour du noyau de Service Console OS corrige les\nvulnérabilités suivantes:\n\n-   CVE-2010-0291 (élévation de privilèges et déni de service)\n-   CVE-2010-0307 (déni de service)\n-   CVE-2010-0415 (déni de service)\n-   CVE-2010-0622 (déni de service)\n-   CVE-2010-1087 (déni de service)\n-   CVE-2010-1088 (impact non défini)\n-   CVE-2010-1437 (déni de service)\n\nLa version 4.0 de VMware ESX est impactée mais le correctif n'est pas\nencore disponible à la date de rédaction de cet avis.\n\nDe même une mise à jour des paquets likewise corrige les vulnérabilités\nsuivantes:\n\n-   CVE-2009-0844 (déni de service à distance)\n-   CVE-2009-0845 (déni de service à distance)\n-   CVE-2009-0846 (exécution de code arbitraire à distance)\n-   CVE-2009-4212 (exécution de code arbitraire à distance)\n-   CVE-2010-1321 (déni de service)\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0846",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0846"
+    },
+    {
+      "name": "CVE-2010-0415",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0415"
+    },
+    {
+      "name": "CVE-2010-1321",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1321"
+    },
+    {
+      "name": "CVE-2010-0622",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0622"
+    },
+    {
+      "name": "CVE-2010-0307",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0307"
+    },
+    {
+      "name": "CVE-2010-0291",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0291"
+    },
+    {
+      "name": "CVE-2010-1087",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1087"
+    },
+    {
+      "name": "CVE-2010-1088",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1088"
+    },
+    {
+      "name": "CVE-2009-0844",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0844"
+    },
+    {
+      "name": "CVE-2010-1437",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1437"
+    },
+    {
+      "name": "CVE-2009-0845",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0845"
+    },
+    {
+      "name": "CVE-2009-4212",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-4212"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité VMware VMSA-2010-0016 du 15 novembre    2010",
+      "url": "http://lists.vmware.com/pipermail/security-announce/2010/000108.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-553",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-11-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités sont présentes dans <span\nclass=\"textit\">VMware</span> <span class=\"textit\">ESX</span> et <span\nclass=\"textit\">ESXi</span>. L'exploitation réussie de celles-ci permet\nentre autres l'exécution de code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans VMWare ESX et ESXi",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware VMSA-2010-0016 du 15 novembre 2010",
+      "url": null
+    }
+  ]
+}

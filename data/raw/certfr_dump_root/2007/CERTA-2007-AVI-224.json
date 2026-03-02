@@ -1,0 +1,106 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Firewall Service Module (FWSM) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified CallManager CCM 4.1, ainsi que les versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS XR ;",
+      "product": {
+        "name": "IOS XR",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco IOS 12.4 ainsi que les versions antérieures ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco PIX et ASA Security Appliances ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été rendues publiques cette semaine,\nconcernant des produits Cisco. Parmi eux :\n\n-   les systèmes fonctionnant avec le système d'exploitation IOS ne\n    manipuleraient pas correctement certains paquets SSL (pour Secure\n    Sockets Layer). Plus précisément, les vulnérabilités surviennent au\n    moment des négociations, avec les messages ClientHello,\n    ChangeCipherSpec et FinishedMessages. Les détails protocolaires sont\n    décrits dans le RFC 4346. Une personne malveillante peut exploiter\n    l'une de ces vulnérabilités après avoir établi une connexion TCP\n    valide, ou en injectant des paquets entre deux machines victimes. Le\n    système ayant une version IOS vulnérable pourrait alors être\n    perturbé.\n-   une bibliothèque cryptographique tierce utilisée par plusieurs\n    produits Cisco ne manipulerait pas correctement certaines données\n    codées en ASN.1 (Abstract Syntax Notation One). L'exploitation de\n    cette vulnérabilité entraîne la perturbation du système, et ne\n    nécessite pas l'utilisation de certificats ou autres crédits\n    (identifiants et mots de passe) valides.\n-   une vulnérabilité de type « injection de code indirecte » (ou\n    Cross-Site Scripting) existerait dans l'interface Web de Cisco\n    CallManager. Les données entrées par le formulaire de recherche ne\n    sont pas correctement contrôlées. Une personne malveillante pourrait\n    inciter un utilisateur à cliquer sur un lien réticulaire particulier\n    exploitant cette vulnérabilité, afin de provoquer l'exécution de\n    scripts via son navigateur.\n\n## Solution\n\nSe référer aux différents bulletins de sécurité de l'éditeur Cisco pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3894",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3894"
+    },
+    {
+      "name": "CVE-2007-2007",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2007"
+    },
+    {
+      "name": "CVE-2007-2813",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2813"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-224",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-05-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "",
+  "title": "Multiples vulnérabilités dans des produits Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": "2007-05-22",
+      "title": "Bulletin de sécurité Cisco ID 91890",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070522-crypto.shtml"
+    },
+    {
+      "published_at": "2007-05-23",
+      "title": "Bulletin de sécurité Cisco ID 82462",
+      "url": "http://www.cisco.com/warp/public/707/cisco-s%20a-20070523-ccm.shtml"
+    },
+    {
+      "published_at": "2007-05-22",
+      "title": "Bulletin de sécurité Cisco ID 91888 ",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070522-SSL.shtml"
+    }
+  ]
+}

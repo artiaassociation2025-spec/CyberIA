@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Module mod_survey versions 3.0.16-pre1 et antérieures (branche stable) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "module mod_survey versions 3.2.0-pre3 et antérieures (branche de développement) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe module mod_survey est un module du serveur HTTP Apache, utilisé pour\ntraiter des questionnaires au format XML.\n\nIl n'est pas installé par défaut.  \n\nUne vulnérabilité a été découverte dans le traitement des données. Elle\npermet d'injecter du code malicieux dans le rapport généré par le module\nmod_survey.  \n\nCette vulnérabilité peut être exploitée par un utilisateur distant mal\nintentionné pour exécuter du code arbitraire.\n\n## Solution\n\nMettre à jour le module mod_survey. Les versions suivantes corrigent\ncette vulnérabilité :\n\n-   branche stable : version 3.0.16-pre2 ;\n-   branche de développement : version 3.2.0-pre4.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité de mod_survey    du 21 mars 2004 :",
+      "url": "http://gathering.itm.mh.se/modsurvey/SA20040321.txt"
+    },
+    {
+      "title": "Note d'information du CERTA sur les vulnérabilités de type    \"Cross Site Scripting\" :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2002-INF-001/index.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-101",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut exploiter une vulnérabilité du\nmodule <span class=\"textit\">mod_survey</span> pour exécuter du code\narbitraire.\n",
+  "title": "Vulnérabilité du module mod_survey",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de mod_survey du 21 mars 2004",
+      "url": null
+    }
+  ]
+}

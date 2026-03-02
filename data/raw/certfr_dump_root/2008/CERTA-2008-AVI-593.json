@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PHP version 5.2.7.",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa version 5.2.7 de PHP récemment publiée présente une régression de\nfonctionnalité des magic_quotes. Une extension de filtrage (ext/filter)\nchange la valeur de magic_quotes_gpc à \"off\", rendant le site\npotentiellement vulnérable à certaines classes d'attaques.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-5814",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-5814"
+    }
+  ],
+  "links": [
+    {
+      "title": "Note de changement PHP 5.2.8 du 08 décembre 2008 :",
+      "url": "http://www.php.net/archive/2008#id2008-12-08-01"
+    },
+    {
+      "title": "Avis JVN JVNDB-2008-000084 du 19 décembre 2008 :",
+      "url": "http://jvndb.jvn.jp/en/contents/2008/JVNDB-2008-000084.html"
+    },
+    {
+      "title": "Signalement d'erreur PHP par S. Esser :",
+      "url": "http://www.suspekt.org/2008/12/07/php-527-beware-magic-quotes-gpc-broken/"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-593",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-12-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout d'une référence CVE associée.",
+      "revision_date": "2009-01-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "La version 5.2.7 de PHP récemment publiée présente une régression de\nfonctionnalité des magic_quotes pouvant permettre de contourner la\npolitique de sécurité mise en place.\n",
+  "title": "Vulnérabilité dans PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Changement de version PHP 5.2.8 du 08 décembre 2008",
+      "url": null
+    }
+  ]
+}

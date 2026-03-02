@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows 98 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows ME ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows XP.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe service UPnP ( Universal Plug and Play ) est un service permettant de\ndécouvrir automatiquement de nouveaux équipements réseau. Ce service est\ndisponible sur divers équipements: imprimantes, etc.\n\nUne vulnérabilité de la gestion des requêtes UPnP de Windows peut\nentraîner un déni de service sur la machine cible, si un utilisateur mal\nintentionné transmet des requêtes spécifiquement construites.  \n  \n\nNota : Sur Windows ME et XP, UPnP est installé par défaut. Il est\ninstallé sur Windows 98 lors de la mise en place du client de partage de\nconnexion internet.\n\n## Contournement provisoire\n\nFiltrer les ports 1900 et 5000 ( TCP et UDP ) au niveau du garde\nbarrière, pour éviter les attaques provenant de l'extérieur.\n\n## Solution\n\nTélécharger le correctif sur le site Microsoft :\n\n-   Microsoft Windows 98 et 98SE :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=33592\n\n-   Microsoft Windows ME et XP :\n\n        http://www.microsoft.com/Windowsupdate\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-054.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-137",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-11-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur distant mal intentionné peut, par le biais de requêtes\nUPnP habilement composées, réaliser un déni de service sur la machine\ncible.\n",
+  "title": "Vulnérabilité de UPnP sous Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-054",
+      "url": null
+    }
+  ]
+}

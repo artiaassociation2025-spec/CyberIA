@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les versions 3.5 de VMware ESXi et ESX  utilisant openwsman 2.0.0.</p>",
+  "content": "## Description\n\nLe service openwsman (Open Web Services Management) est vulnérable à\ndeux débordements de mémoire lors de la lecture des entêtes des trames\nHTTP basic authentication. Ces vulnérabilités sont exploitables sans\nidentifiants valides et permettent d'exécuter du code arbitraire à\ndistance à l'aide d'une trame spécifiquement conçue.\n\n## Solution\n\nSe référer au bulletin de sécurité VMware VMSA-2008-0015 du 19 septembre\n2008 pour l'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2234",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2234"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité VMware VMSA-2008-0015 du 19 septembre    2008 :",
+      "url": "http://www.vmware.com/security/advisories/VMSA-2008-0015.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-470",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-09-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Le service openwsman exécuté par VMware EXS et ESXi est vulnérable à\ndeux débordements de mémoire permettant l'exécution de code arbitraire à\ndistance.\n",
+  "title": "Vulnérabilité dans des produits VMware",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware VMSA-2008-0015 du 18 septembre 2008",
+      "url": null
+    }
+  ]
+}

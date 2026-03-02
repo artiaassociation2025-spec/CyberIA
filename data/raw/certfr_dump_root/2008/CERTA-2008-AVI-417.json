@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Les versions PHP de la branche 4 antérieures à 4.4.9.</LI>  </UL>  <P>Cette branche ne devrait plus être maintenue à la fin de  l'année 2008.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans PHP 4 :\n\n-   la bibliothèque PCRE (Perl-Compatible Regular Expression) ne gère\n    pas correctement certaines expressions régulières pouvant provoquer\n    un débordement de pile ;\n-   la fonction memnstr() appelée par explode() ne contrôlerait pas\n    correctement certaines entrées ;\n-   la fonction imageloadfont() (gd/ext) ne gère pas convenablement\n    certains caractères ;\n-   PHP ne manipulerait pas correctement certains liens avec des points\n    multiples de type XXX..php ;\n-   il est possible de contourner le safe_mode sous certaines\n    conditions.\n-   l'extension curl ne manipulerait pas correctement l'option\n    open_basedir.\n\nCertaines de ces vulnérabilités ont fait l'objet d'un correctif dans la\nbranche 5 en juin 2008 et sont mentionnées dans l'avis\nCERTA-2008-AVI-225.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2371",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2371"
+    },
+    {
+      "name": "CVE-2008-2665",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2665"
+    },
+    {
+      "name": "CVE-2008-2666",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2666"
+    }
+  ],
+  "links": [
+    {
+      "title": "Commentaires de rapport de bogues Gentoo du 06 août 2008 :",
+      "url": "http://bugs.gentoo.org/show_bug.cgi?id=234102"
+    },
+    {
+      "title": "Avis du CERTA CERTA-2008-AVI-225 du 25 juin 2008 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2008-AVI-225/"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-417",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-08-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans PHP 4. Leur\nexploitation permettrait de perturber le système ou de récupérer des\ndonnées confidentielles.\n",
+  "title": "Multiples vulnérabilités dans PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de changement de version PHP 4.4.9 du 07 août 2008",
+      "url": "http://www.php.net/ChangeLog-4.php#4.4.9"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<SPAN class=\"textit\">rsync</SPAN>  versions 2.6.2 et antérieures.",
+  "content": "## Description\n\nrsync est un utilitaire utilisé pour la copie de fichiers.  \n\nUne vulnérabilité a été découverte dans rsync, et permet à un\nutilisateur mal intentionné d'accéder à des fichiers situés en dehors du\nrépertoire de base.  \n\nPour exploiter cette vulnérabilité, il faut que rsync soit lancé en\nmodedémon et sans \"chroot\".\n\n## Contournement provisoire\n\n-   Ne pas lancer rsync en modedémon ;\n-   utiliser un \"chroot\".\n\n## Solution\n\nLa version 2.6.3pre1 corrige cette vulnérabilité. Se référer au bulletin\nde l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2004:026 du 16 août 2004    :",
+      "url": "http://www.suse.com/de/security/2004_26_rsync.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:083 du 17 août    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:083"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD pour rsync du 14 août 2004 :",
+      "url": "http://www.vuxml.org/openbsd"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD rsync :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/net/rsync/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-538 du 17 août 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-538"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour rsync du 26 août 2004 :",
+      "url": "http://www.vuxml.org/freebsd"
+    },
+    {
+      "title": "Site Internet de rsync :",
+      "url": "http://samba.org/rsync/"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200408-17 du 17 août 2004    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200408-17.xml"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:436 du 01 septembre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-436.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-271",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-08-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo et Mandrake, et ajout référence CVE.",
+      "revision_date": "2004-08-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité FreeBSD et NetBSD.",
+      "revision_date": "2004-08-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat.",
+      "revision_date": "2004-09-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité de <span class=\"textit\">rsync</span> permet à un\nutilisateur mal intentionné d'accéder à n'importe quel fichier de la\nmachine.\n",
+  "title": "Vulnérabilité de rsync",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité rsync",
+      "url": "http://samba.org/rsync/#security_aug04"
+    }
+  ]
+}

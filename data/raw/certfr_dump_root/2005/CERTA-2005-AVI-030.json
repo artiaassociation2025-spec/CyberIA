@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>L'ensemble des versions 9.x, 10.x, 11.x et 12.x sont affectées  par ces vulnérabilités.</P>",
+  "content": "## Description\n\nBGP (`Border Gateway Protocol`) est un protocole de routage standard de\nl'Internet (défini par la RFC 1771), utilisé pour l'interconnexion des\nAS (`Autonomous System`). Celui-ci n'est pas activé par défaut sur les\nrouteurs Cisco.\n\nDeux vulnérabilités affectent l'IOS des routeurs Cisco utilisant le\nroutage BGP :\n\n-   Une vulnérabilité présente dans la gestion des paquets BGP par les\n    routeurs Cisco permet à un individu mal intentionné, via l'envoi\n    d'un paquet malicieusement construit, de redémarrer les équipements\n    affectés suite à l'utilisation des commandes `show ip bgp neighbors`\n    ou `debug ip bgp    <neighbor> updates` par un administrateur ;\n-   L'envoi de paquets BGP malicieusement formés permet à un utilisateur\n    mal intentionné de redémarrer les routeurs affectés et de les rendre\n    inopérationnels pendant plusieurs minutes.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin dé sécurité Cisco \"Cisco IOS Misformed BGP Packet  Causes Reload\" du 26 janvier 2005 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20050126-bgp.pdf"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-030",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-01-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités sont présentent dans le traitement des paquets BGP\n(`Border Gateway Protocol`) par l'OS de Cisco (IOS), permettant à un\nutilisateur mal intentionné de réaliser un déni de service sur les\néquipements vulnérables.\n",
+  "title": "Vulnérabilités dans le traitement des paquets BGP par Cisco IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco du 26 janvier 2005",
+      "url": null
+    }
+  ]
+}

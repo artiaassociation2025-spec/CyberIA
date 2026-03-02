@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "pfSense Plus versions antérieures à 25.11",
+      "product": {
+        "name": "pfSense Plus",
+        "vendor": {
+          "name": "Netgate",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "pfSense CE versions antérieures à 2.8.1 ",
+      "product": {
+        "name": "pfSense CE",
+        "vendor": {
+          "name": "Netgate",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "L'éditeur conseille d'appliquer les mesures de contournements en attendant la mise à disponibilité de pfSense CE 2.8.1.",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-1101",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-12-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Netgate. Elles permettent à un attaquant de provoquer un déni de service à distance et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans les produits Netgate",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-12-11",
+      "title": "Bulletin de sécurité Netgate pfSense-SA-25_09",
+      "url": "https://docs.netgate.com/downloads/pfSense-SA-25_09.sshguard.asc"
+    }
+  ]
+}

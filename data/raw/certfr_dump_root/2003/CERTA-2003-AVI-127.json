@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Solaris 7 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 9.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 2.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'éditeur de liens dynamiques (ld.so.1) permet à des éxecutables\nd'utiliser des librairies dynamiques. La variable LD_PRELOAD, qui\ncontient les chemins d'accès à ces librairies, permet le chargement des\nbibliothèques.\n\nUn utilisateur mal intentionné peut, en exécutant un programme « setuid\nroot », provoquer un débordement de pile, par le biais de la variable\nLD_PRELOAD et obtenir les droits du super-utilisateur (root).\n\n## Solution\n\nAppliquer le correctif correspondant à votre plate-forme (cf. section\ndocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Sun :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert/55680"
+    },
+    {
+      "title": "Correctifs de Sun :",
+      "url": "http://sunsolve.sun.com/securitypatch"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-127",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-31T00:00:00.000000"
+    },
+    {
+      "description": "ajout de l'avis Sun et de la référence CVE.",
+      "revision_date": "2003-08-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente sur l'éditeur de liens dynamiques sous\nSolaris permet à un utilisateur local mal intentionné du système\nd'obtenir les privilèges du super-utilisateur.\n",
+  "title": "Vulnérabilité dans l'éditeur de liens dynamiques sur Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de iDefense",
+      "url": "http://www.idefense.com/advisory/07.29.03.txt"
+    }
+  ]
+}

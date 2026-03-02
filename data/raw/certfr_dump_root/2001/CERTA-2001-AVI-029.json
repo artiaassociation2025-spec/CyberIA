@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Internet Information Serveur 5.0.</P>",
+  "content": "## Description\n\nWebDAV est une extension du protocole HTTP permettant l'administration\ndistante du serveur internet. Sous Windows 2000, Internet Information\nServer envoie en traitement toutes les requêtes WebDAV. Si un\nutilisateur mal intentionné «innonde» le serveur distant de requêtes\nWebDav malformées, une augmentation des ressources utilisées va réduire\nconsidérablement les performances du serveur. Ce déni de service prend\nfin dès l'arrêt des requêtes malformées.\n\n## Contournement provisoire\n\nAucun correctif n'est actuellement disponible sur le site Microsoft.\nCependant une méthode permet de désactiver la fonction WebDAV :\n\n-   Ouvrir une session DOS\n\n-   Stopper les services d'Internet Information Server par la commande :\n    IISRESET /STOP\n\n-   Aller dans le répertoir\n\n        \\System32\\Inetsrv\n\n-   Relancer les services d'IIS par la commande : IISRESET /START\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Comment désactiver WebDAV :",
+      "url": "http://support.microsoft.com/technet/support/kb.asp?ID=241520"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-029",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-03-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, par le biais de requêtes\nspécifiques en HTPP, créer un déni de service sur un serveur distant.\n",
+  "title": "Vulnérabilité de Microsoft Internet Information Serveur 5.0",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-016",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-016.asp"
+    }
+  ]
+}

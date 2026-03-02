@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Joomla!</SPAN> versions 1.5.x antérieures  à 1.5.12.</P>",
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Joomla! :\n\n-   la variable HTTP_REFERER n'est pas correctement traitée, ce qui\n    permet de récupérer des cookies (20090604) ;\n-   la variable PHP_SELF n'est pas correctement filtrée, ce qui permet\n    d'injecter du code javascript (20090605) ;\n-   plusieurs fichiers ne vérifient pas si la variable \\_JEXEC a été\n    définie, ce qui provoque l'affichage du chemin d'installation de\n    certains scripts (20090606).\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur (voir Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletins de sécurité Joomla! 20090606 du 01 juillet 2009 :",
+      "url": "http://developer.joomla.org/security/news/300-20090606-core-missing-jexec-check.html"
+    },
+    {
+      "title": "Bulletins de sécurité Joomla! 20090604 du 01 juillet 2009 :",
+      "url": "http://developer.joomla.org/security/news/298-20090604-core-frontend-xss-httpreferer-not-properly-filtered.html"
+    },
+    {
+      "title": "Bulletins de sécurité Joomla! 20090605 du 01 juillet 2009 :",
+      "url": "http://developer.joomla.org/security/news/299-20090605-core-frontend-xss-phpself-not-properly-filtered.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-263",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-07-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans <span class=\"textit\">Joomla!</span>\npermettent de réaliser des injections de code indirectes.\n",
+  "title": "Multiples vulnérabilités dans Joomla!",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Joomla! 20090604, 20090605 et 20090606 du 01 juillet 2009",
+      "url": null
+    }
+  ]
+}

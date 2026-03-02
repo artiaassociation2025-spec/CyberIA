@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "WebSphere toutes versions utilisant IBM HTTP Server versions 9.0.x antérieures à la version 9.0.5.11",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-44224",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-44224"
+    },
+    {
+      "name": "CVE-2021-44790",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-44790"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité du CERT-FR du 21 décembre 2021",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2021-AVI-972/"
+    }
+  ],
+  "reference": "CERTFR-2022-AVI-035",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2022-01-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans IBM WebSphere.\nCertaines d'entre elles permettent à un attaquant de provoquer une\nexécution de code arbitraire à distance, un déni de service à distance\net un contournement de la politique de sécurité.\n\nElles sont en rapport avec les vulnérabilités du produit Apache décrites\ndans l'avis de sécurité\n[CERTFR-2021-AVI-972](/avis/CERTFR-2021-AVI-972)\ndu 21 décembre 2021.\n",
+  "title": "Multiples vulnérabilités dans IBM WebSphere",
+  "vendor_advisories": [
+    {
+      "published_at": "2022-01-12",
+      "title": "Bulletin de sécurité IBM 6540288",
+      "url": "https://www.ibm.com/support/pages/node/6540288"
+    }
+  ]
+}

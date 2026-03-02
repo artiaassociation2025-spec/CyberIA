@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Citrix Desktop Server version 1.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix Presentation Server versions 4.5 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix Access Essentials versions 2.0 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans Citrix Presentation Server\n:\n\n-   une vulnérabilité permet à des personnes authentifiées d'accéder à\n    des sessions de bureau pour lesquelles ils ne sont pas autorisés ;\n-   une deuxième vulnérabilité due à une erreur dans le protocole ICA\n    permet à une personne malintentionnée d'utiliser des algorithmes de\n    chiffrement plus faibles que ceux autorisés par l'administrateur\n    pour certaines connexions.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2008-AVI-251",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-05-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans Citrix Presentation Server permettent à une\npersonne malintentionnée de contourner la politique de sécurité.\n",
+  "title": "Vulnérabilités dans Citrix Presentation Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Citrix CTX114893 du 12 mai 2008",
+      "url": "http://support.citrix.com/article/CTX114893"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Citrix CTX116941 du 13 mai 2008",
+      "url": "http://support.citrix.com/article/CTX116941"
+    }
+  ]
+}

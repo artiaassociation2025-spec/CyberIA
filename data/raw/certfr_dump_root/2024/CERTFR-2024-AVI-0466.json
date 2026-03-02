@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Elastic Cloud Enterprise versions antérieures à 3.7.1",
+      "product": {
+        "name": "Elastic Cloud Enterprise",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Kibana versions 8.x.x postérieures à 8.6.3 et antérieures à 8.14.0",
+      "product": {
+        "name": "Kibana",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Elasticsearch versions 8.x.x postérieures à 8.10.0 et antérieures à 8.14.0",
+      "product": {
+        "name": "Elasticsearch",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2023-45288",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-45288"
+    },
+    {
+      "name": "CVE-2024-37279",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-37279"
+    },
+    {
+      "name": "CVE-2024-23445",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-23445"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0466",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-06-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Elastic. Elles permettent à un attaquant de provoquer un déni de service à distance, un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans les produits Elastic",
+  "vendor_advisories": [
+    {
+      "published_at": "2024-06-05",
+      "title": "Bulletin de sécurité Elastic ESA-2024-15",
+      "url": "https://discuss.elastic.co/t/kibana-8-14-0-security-update-esa-2024-15/360887"
+    },
+    {
+      "published_at": "2024-06-05",
+      "title": "Bulletin de sécurité Elastic ESA-2024-08",
+      "url": "https://discuss.elastic.co/t/elastic-cloud-enterprise-3-7-0-security-update-esa-2024-08/360888"
+    },
+    {
+      "published_at": "2024-06-06",
+      "title": "Bulletin de sécurité Elastic ESA-2024-13",
+      "url": "https://discuss.elastic.co/t/elasticsearch-8-14-0-security-update-esa-2024-13/360898"
+    }
+  ]
+}

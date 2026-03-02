@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2000 Professional, Server et Advanced Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Professional et Home Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT Workstation 4.0, NT Server 4.0 et NT Server 4.0 Terminal Server Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe noyau est le coeur d'un système d'exploitation chargé des tâches\ntelles que la gestion des processus, la gestion de la mémoire, les accès\naux périphériques, la gestion et la remontée des messages... Une\nvulnérabilité dans la manière dont le noyau Microsoft gère les messages\npermet à un utilisateur mal intentionné possédant un compte sur la\nmachine d'obtenir les droits de l'administrateur (création de comptes,\nconfiguration du système, effacement de données...).\n\n## Solution\n\nAppliquer le correctif disponible sur le site de Microsoft :\n\n    http://support.microsoft.com/?id=811493\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Microsoft Knowledge Base Article 811493 :",
+      "url": "http://support.microsoft.com/?id=811493"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-077",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-04-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès aux privilèges de l'administrateur (nécessite un compte sur la machine)"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la gestion des messages par le noyau Microsoft\npermet à un utilisateur mal intentionné possédant un compte sur la\nmachine d'obtenir les droits de l'administrateur.\n",
+  "title": "Vulnérabilité dans la gestion des messages par le noyau Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS03-13",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS03-013.asp"
+    }
+  ]
+}

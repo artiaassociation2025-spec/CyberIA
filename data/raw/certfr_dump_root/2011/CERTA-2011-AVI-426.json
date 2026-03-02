@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>SAP NetWeaver 7.x.</p>",
+  "content": "## Description\n\nTrois vulnérabilités ont été découvertes dans SAP NetWeaver :\n\n-   une erreur dans Business Communication Broker permet de découvrir\n    certaines informations confidentielles (comme le niveau de mise à\n    jour ou l'adresse IP interne) ;\n-   une erreur dans le traitement du paramètre txtBtdID de\n    CIDXBTDDump.jsp, BTDDump.jsp, et RNIF11BTDDump.jsp, permet\n    d'exécuter des scripts dans le navigateur du client ;\n-   un débordement d'entier dans le module de traitement XML permet de\n    stopper et de redémarrer le service disp+work.exe.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2011-AVI-426",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-08-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans SAP NetWeaver.\nElles permettent à une personne malintentionnée de provoquer un déni de\nservice à distance, d'atteindre à la confidentialité des données, et\nd'injecter du code indirecte à distance (XSS).\n",
+  "title": "Multiples vulnérabilités dans SAP NetWeaver",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SAP 1442517",
+      "url": "https://service.sap.com/sap/support/notes/1442517"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SAP 1543318",
+      "url": "https://service.sap.com/sap/support/notes/1543318"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SAP 1548548",
+      "url": "https://service.sap.com/sap/support/notes/1548548"
+    }
+  ]
+}

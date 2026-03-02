@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Lotus Notes R6 versions betas et pré-version.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Lotus",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Lotus Notes R4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Lotus",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Lotus Notes R5 versions antérieures à la version R5.0.11 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Lotus",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLorsqu'un client désire se connecter à un serveur Lotus Notes, il est\nnécessaire qu'il s'authentifie auprès de se serveur. Cette\nauthentification consiste en une série d'échanges entre le client et le\nserveur (mode « challenge / réponse ») afin d'authentifier\nl'utilisateur.\n\nUne vulnérabilité présente dans cette authentification permet à un\nutilisateur mal intentionné, par le biais de paquets malicieusement\nécrits, de réaliser un déni de service ou d'exécuter du code arbitraire\nsur le serveur.\n\n## Solution\n\nAppliquer le correctif correspondant à votre version de Lotus Notes (cf.\nsection documentation).\n\nNotes : Les versions R5.0.12, R6.0 Gold et R6.0.1 des serveurs Lotus\nNotes ne sont pas vulnérables.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctif :",
+      "url": "http://www-10.lotus.com/ldd/r5fixlist.nsf"
+    },
+    {
+      "title": "Référence CVE :",
+      "url": "http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CAN-2003-0122"
+    },
+    {
+      "title": "Avis du CERT/CC :",
+      "url": "http://www.kb.cert.org/vuls/id/433489"
+    },
+    {
+      "title": "Avis de sécurité TN 1105060 de Lotus Notes :",
+      "url": "http://www-1.ibm.com/support/docview.wss?rs=463&uid=swg21105101"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-049",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité du procédé d'authentification des utilisateurs sur un\nserveur Lotus Domino permet à un utilisateur mal intentionné de réaliser\nun déni de service ou d'exécuter du code arbitraire sur le système.\n",
+  "title": "Vulnérabilité sur le protocole d'authentification de Lotus Notes",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis VU#433489 du CERT/CC",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache HTTP Server versions inférieures  à 2.2.22.",
+      "product": {
+        "name": "HTTP Server",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nPlusieurs vulnérabilités existent dans Apache HTTP Server. Elles\npermettent à un utilisateur malintentionné de porter atteinte à la\nconfidentialité des données, causer un déni de service et d'élever ses\nprivilèges. La liste ci-dessous fournit le détail de ces vulnérabilités\n:\n\n-   CVE-2011-3368 : une erreur dans la gestion d'URI mal formées par le\n    module mod_proxy permet à une personne malintentionnée d'envoyer des\n    requêtes à des machines du réseau interne depuis l'extérieur ;\n-   CVE-2011-3607 : la fonction ap_pregsub, lorsque le module\n    mod_setenvif est activé, est vulnérable à un dépassement d'entier\n    permettant à un utilisateur malintentionné d'élever ses privilèges ;\n-   CVE-2011-4317 : cette vulnérabilité permet à un utilisateur\n    malintentionné d'accéder à des machines du réseau interne depuis\n    l'extérieur.\n-   CVE-2012-0021 : mod_log_config ne gère pas correctement certains\n    cookies, ce qui peut conduire à un arrêt inopiné du service Apache.\n-   CVE-2012-0031 : un problème dans la gestion des segments de mémoire\n    partagée peut conduire à un déni de service local.\n-   CVE-2012-0053 : lorsqu'aucune page personnalisée n'est définie pour\n    le code d'erreur 400, il est possible d'obtenir les cookies\n    httpOnly.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-0053",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0053"
+    },
+    {
+      "name": "CVE-2012-0021",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0021"
+    },
+    {
+      "name": "CVE-2012-0031",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0031"
+    },
+    {
+      "name": "CVE-2011-3607",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3607"
+    },
+    {
+      "name": "CVE-2011-3368",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3368"
+    },
+    {
+      "name": "CVE-2011-4317",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4317"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2012-AVI-050",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-02-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités permettant de porter atteinte à la\nconfidentialité des données, causer un déni de service et d'élever ses\nprivilèges sont présentes dans <span class=\"textit\">Apache HTTP\nServer</span>.\n",
+  "title": "Vulnérabilités dans Apache",
+  "vendor_advisories": [
+    {
+      "published_at": "2012-01-31",
+      "title": "Bulletin de sécurité Apache",
+      "url": "http://mail-archives.apache.org/mod_mbox/httpd-announce/201201.mbox/<4F286C70.9040705@apache.org>"
+    }
+  ]
+}

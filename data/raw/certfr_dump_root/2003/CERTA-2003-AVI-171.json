@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Exchange Server 5.5, Service Pack 4;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Exchange 2000 Server, Service Pack 3.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans Microsoft Exchange Server permet à un utilisateur\nmal intentionné de se connecter sur le port SMTP (25/TCP) et d'envoyer\nune requête malicieusement formée. Cette dernière, suivant la version du\nserveur, provoquera un déni de service ou exécutera du code arbitraire à\ndistance.\n\n## Solution\n\nAppliquer le correctif suivant la version affectée (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-171",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-10-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans le serveur de messagerie\nMicrosoft Exchange Server permettant d'effectuer un déni de service ou\nbien d'exécuter du code arbitraire à distance dans le contexte de\nsécurité du service SMTP.\n",
+  "title": "Vulnérabilité dans Exchange Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #MS03-046 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS03-046.asp"
+    }
+  ]
+}

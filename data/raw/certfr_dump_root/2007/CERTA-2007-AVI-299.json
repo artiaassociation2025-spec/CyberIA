@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Adobe Flash Player versions 9.0.45.0 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Adobe Flash Player versions 8.0.34.0 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Adobe Flash Player versions 7.0.69.0 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans différentes versions\nde Adobe Flash Player :\n\n-   une mauvaise validation des données par Adobe Flash Player (versions\n    9.0.45.0 et antérieures) permet, par le biais d'un fichier au format\n    SWF spécifiquement constitué, l'exécution de code arbitraire à\n    distance (référence CVE-2007-3456) ;\n-   une mauvaise validation du paramètre HTTP referer par Adobe Flash\n    Player (versions 8.0.34.0 et antérieures, la version 9 n'est pas\n    affectée) permet de réaliser des attaques de type cross-site request\n    forgery (référence CVE-2007-3457) ;\n-   des mises à jour pour les versions Linux et Solaris d'Adobe Flash\n    Player version 7 corrigent des vulnérabilités décrites dans le\n    bulletin de sécurité Adobe APSA07-03 (référence CVE-2007-2022).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-2022",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2022"
+    },
+    {
+      "name": "CVE-2007-3456",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3456"
+    },
+    {
+      "name": "CVE-2007-3457",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3457"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Adobe APSA07-03 du 11 avril 2007 :",
+      "url": "http://www.adobe.com/support/security/advisories/apsa07-03.html"
+    },
+    {
+      "title": "Bulletin de sécurité Adobe APSB07-12 du 10 juillet 2007 :",
+      "url": "http://www.adobe.com/support/security/bulletins/apsb07-12.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-299",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectant <span class=\"textit\">Adobe Flash\nPlayer</span> permettent, entre autres, l'exécution de code arbitraire à\ndistance.\n",
+  "title": "Vulnérabilités dans Adobe Flash Player",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Adobe APSB07 du 10 juillet 2007",
+      "url": null
+    }
+  ]
+}

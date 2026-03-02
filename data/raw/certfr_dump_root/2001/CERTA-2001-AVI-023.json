@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Windows 2000</P>  <UL>    <LI>Professional Edition</LI>    <LI>Server</LI>    <LI>Advanced Server</LI>    <LI>Datacenter Server</LI>  </UL>",
+  "content": "## Description\n\nL'observateur d'événements est un outil de Windows 2000 (et Windows NT)\npermettant de dépouiller les journaux d'événements d'un de ces systèmes.\n\nL'observateur d'événements ne peut pas être exécuté à distance. Il peut\nêtre manipulé par un utilisateur sans privilège pour les journaux\nsystème et application mais est le plus souvent utilisé par\nl'administrateur qui peut en plus visualiser le journal sécurité.\n\nIl contient une fonction détails qui permet d'obtenir plus\nd'informations sur un événement particulier du journal observé.\n\nUne vulnérabilité dans cette fonction permet à un utilisateur mal\nintentionné d'enregistrer un événement habilement construit (par un\nprogramme développé par ce dernier) qui fera déborder la pile lors de sa\nvisualisation. Si c'est l'administrateur qui dépouille les journaux,\nl'événement construit peut exécuter du code avec les privilèges de\ncelui-ci.\n\n## Solution\n\nAppliquer le correctif Microsoft :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=27842\n\nPour Windows 2000 Datacenter Server, les correctifs dépendent du\nmatériel et sont à demander au fabriquant d'origine de la machine.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-023",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-02-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité de l'observateur d'événements (<span\nclass=\"textit\">Event Viewer</span>) de Windows 2000 permet à un\nutilisateur mal intentionné de bloquer l'observateur d'événements\nlorsqu'un utilisateur ouvre cet outil d'administration, voire exécuter\ndu code arbitraire avec les privilèges de ce dernier.\n",
+  "title": "Dépassement de mémoire dans l'observateur d'événements de Windows 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-013.asp"
+    }
+  ]
+}

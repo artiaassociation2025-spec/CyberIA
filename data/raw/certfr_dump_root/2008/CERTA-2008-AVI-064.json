@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VPN-1 SecuRemote / SecureClient NGX R60 pour Windows ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VPN-1 SecuRemote / SecureClient NGAI R56 pour Windows.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans CheckPoint SecuRemote /\nSecureClient. La faille consiste en la possibilité de réutiliser de\nmanière triviale les identifiants du VPN. En effet, ceux-ci peuvent être\nmis en cache dans la base de registre d'un utilisateur et importés sur\nun autre système. Une personne malintentionnée peut ainsi exploiter\ncette vulnérabilité pour usurper l'identité d'une personne.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Checkpoint sk34315 du 08 février 2008    :",
+      "url": "https://usercenter.checkpoint.com/usercenter/portal/user/anon/page/supportCenter.psml"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-064",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Checkpoint SecuRemote / SecureClient permet à une\npersonne malintentionnée de contourner la politique de sécurité.\n",
+  "title": "Vulnérabilité dans Checkpoint SecureClient",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Checkpoint sk34315 du 06 février 2008",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Symantec Web Security 6.0 pour les versions antérieures à  3.0.1.85.</P>",
+  "content": "## Description\n\nLe produit Symantec Web Security propose des mesures de sécurité au\nniveau d'une passerelle Web, comme filtrer du contenu ou faire une\nanalyse antivirale. Deux vulnérabilités ont été identifiées dans\ncelui-ci :\n\n-   la console de gestion ne vérifierait pas correctement ses propres\n    balises HTML dans les messages d'erreur retournés au client. Une\n    personne malveillante pourrait effectuer une attaque de type\n    cross-site scripting afin d'exécuter des scripts dans les pages HTML\n    interprêtées par le navigateur de la victime ;\n-   une personne malveillante distante pourrait utiliser l'interface\n    d'enregistrement (licence) pour envoyer un gros fichier au système\n    Web Security vulnérable. Cela ne nécessite pas d'authentification\n    préalable, et peut provoquer un déni du service Symantec.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2007-AVI-053",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de Symantec Web Security",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symantec SYM07-001 du 24 janvier 2007",
+      "url": "http://securityresponse.symantec.com/avcenter/security/Content/2007.01.24c.html"
+    }
+  ]
+}

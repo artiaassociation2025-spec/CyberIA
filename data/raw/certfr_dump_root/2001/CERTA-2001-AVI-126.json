@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows NT Server 4.0 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Advanced Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT Terminal Server Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Datacenter Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe protocole RDP (Remote Desktop Protocol), protocole utilisé par telnet\nterminal serveur sous Windows ne vérifie pas correctement certaines\nséries de paquets reçus. Un utilisateur mal intentionné peut, par le\nbiais de paquets volontairement choisis, entraîner l'arrêt du serveur.\n\nNota : Il n'est pas nécessaire de s'authentifier avec le serveur pour\nexploiter cette vulnérabilité. Seul l'envoi des paquets mal formés sur\nle port RDP (port TCP 3389) suffit.\n\n## Contournement provisoire\n\nN'autoriser le trafic vers les ports RDP des serveurs qu'aux terminaux\nlégitimes.\n\n## Solution\n\nTélécharger le correctif concernant votre système sur le site Microsoft\n:\n\n-   Windows NT Server 4.0 et Terminal Serveur Edition :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=33250\n\n-   Windows 2000 Server et Advanced Server :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=33389\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-052.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-126",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le protocole RDP permet à un utilisateur mal\nintentionné de réaliser un déni de service sur le serveur cible et\nprovoquer une perte des données traitées lors de cette attaque.\n",
+  "title": "Vulnérabilité dans le protocole RDP sous Windows 2000 et NT Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-052",
+      "url": null
+    }
+  ]
+}

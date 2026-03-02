@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2003 Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 pour les systèmes Itanium (SP1 et SP2).",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 x64 Edition Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2003 Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans le service d'annuaire\nActive Directory de Microsoft. Il permet de représenter et de stocker\ndifférentes informations constituant le réseau, sous une forme\nhiérarchisée d'objets.\n\nLes deux vulnérabilités concernent la validation de requêtes du\nprotocole LDAP (pour Lightweight Directory Access Protocol) permettant\nd'accéder à cet annuaire. Le service LDAP ne vérifierait pas\nsuffisamment le nombre d'attributs pouvant être convertis qui sont\ninclus dans la requête. Une personne malveillante distante pourrait\nainsi profiter de cette vulnérabilité pour envoyer un tel paquet\nspécialement construit, afin de perturber le service ou de prendre le\ncontrôle complet du système.\n\nLes ports pouvant être ciblés pour exploiter ces deux vulnérabilités\nsont avant tout 389/TCP et 3268/TCP, utilisés par défaut pour initier\nune connexion.\n\n## Solution\n\nSe référer au bulletin de sécurité MS07-039 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0040",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0040"
+    },
+    {
+      "name": "CVE-2007-3028",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3028"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-294",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-07-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités de Microsoft Active Directory",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-039 du 10 juillet 2007",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-039.mspx"
+    }
+  ]
+}

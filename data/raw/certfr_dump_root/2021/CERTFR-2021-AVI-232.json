@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GitLab Enterprise Edition (EE) versions antérieures à 13.10.1, 13.9.5 et 13.8.7",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "GitLab",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GitLab Community Edition (CE) versions antérieures à 13.10.1, 13.9.5 et 13.8.7",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "GitLab",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTFR-2021-AVI-232",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-04-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans GitLab. Certaines\nd'entre elles permettent à un attaquant de provoquer un déni de service,\nune atteinte à l'intégrité des données et une atteinte à la\nconfidentialité des données. Les identifiants CVE pour ces\nvulnérabilités ne sont pas encore connus.\n",
+  "title": "Multiples vulnérabilités dans GitLab",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité GitLab du 31 mars 2021",
+      "url": "https://about.gitlab.com/releases/2021/03/31/security-release-gitlab-13-10-1-released/"
+    }
+  ]
+}

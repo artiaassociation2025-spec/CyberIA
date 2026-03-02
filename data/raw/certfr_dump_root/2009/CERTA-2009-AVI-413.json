@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Role-Based Access Control sous HP-UX B.11.23 et HP-UX B.11.31.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "DNS Bind Server sous T0685G06ˆ AAA, T0685G06ˆ AAC, T0685H01ˆ AAB et T0685H01ˆ AAD ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Une vulnérabilité dans le serveur DNS Bind peut être exploitée par\n    un utilisateur distant malintentionné afin de provoquer un déni de\n    service à distance (CVE-2009-0696) ;\n-   une vulnérabilité dans le modèle de contrôle d'accès RBAC\n    (Role-Based Access Control) sous HP-UX peut être exploitée afin de\n    contourner la politique de sécurité et permettre à un utilisateur\n    local d'obtenir un accès illégitime (CVE-2009-2692).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2692",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2692"
+    },
+    {
+      "name": "CVE-2009-2682",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2682"
+    },
+    {
+      "name": "CVE-2009-0696",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0696"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HP c01866178 du 21 septembre 2009 :",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c01866178"
+    },
+    {
+      "title": "Bulletin de sécurité HP c01855358 du 21 septembre 2009 :",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c01855358"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-413",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-09-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités découvertes dans HP-UX peuvent être exploitées afin\nde contourner la politique de sécurité ou pour provoquer un déni de\nservice à distance.\n",
+  "title": "Vulnérabilités dans HP-UX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité HP-UX du 21 septembre 2009",
+      "url": null
+    }
+  ]
+}

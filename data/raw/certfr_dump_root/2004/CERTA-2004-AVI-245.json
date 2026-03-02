@@ -1,0 +1,102 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Openswan versions 2.x antérieures à la version 2.1.4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "StrongSwan",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeS/Wan versions 1.x avec la mise à jour X.509 antérieures à la version 0.9.41 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "StrongSwan",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Super FreeS/Wan 1.x, toutes les versions avec la mise à jour X.509 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "StrongSwan",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Openswan versions 1.x antérieures à la version 1.0.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "StrongSwan",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "StrongSwan versions 2.x antérieures à la version 2.1.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "StrongSwan",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeS/Wan versions 2.x avec la mise à jour X.509 antérieures à la version 1.6.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "StrongSwan",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité présente dans une fonction de vérification des\ncertificats X.509 (verify_x509cert()) permet à un utilisateur mal\nintentionné, via l'envoi d'un certificat malicieusement construit, de\nréaliser un déni de service ou de contourner la politique de sécurité.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo du 25 juin 2004 :",
+      "url": "http://security.gentoo.org/glsa/glsa-200406-20.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake du 14 juillet 2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:070"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-245",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans FreeS/Wan, Openswan, StrongSwan et Super FreeS/Wan",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Openswan",
+      "url": "http://www.openswan.org/support/vuln/can-2004-0590/"
+    }
+  ]
+}

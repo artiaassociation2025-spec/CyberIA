@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Kerberos</SPAN> versions 5-1.4 à 5-1.6.2.  La version 5-1.4 ainsi que la version déployée sur Sun Solaris ne  sont pas concernées par la vulnérabilité référencée  CVE-2007-4000.</P>",
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans Kerberos 5 :\n\n-   un débordement de mémoire dans l'implémentation de RPCSEC_GSS permet\n    l'exécution de code arbitraire à distance (référence CVE-2007-3999).\n    D'autres applications utilisant la bibliothèque RPC fournie avec\n    Kerberos 5 peuvent être affectées ;\n-   le serveur d'administration de Kerberos (kadmind) peut écrire des\n    données dans un pointeur non initialisé (référence CVE-2007-4000).\n    Cette vulnérabilité est spécifique à l'implémentation MIT de\n    Kerberos.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-4000",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4000"
+    },
+    {
+      "name": "CVE-2007-3999",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3999"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sun Solaris #103060 du 05 septembre    2007 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-103060-1"
+    },
+    {
+      "title": "Bulletin de sécurité du MIT MITKRB5-SA-2007-006 du 04    septembre 2007 :",
+      "url": "http://web.mit.edu/kerberos/www/advisories/MITKRB5-SA-2007-006.txt"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-390",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-09-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités découvertes dans <span\nclass=\"textit\">Kerberos</span> 5 permettent l'exécution de code\narbitraire à distance.\n",
+  "title": "Vulnérabilités dans Kerberos",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité du MIT MITKRB5-SA-2007-006.txt du 04 septembre 2007",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sun 103060 du 05 septembre 2007",
+      "url": null
+    }
+  ]
+}

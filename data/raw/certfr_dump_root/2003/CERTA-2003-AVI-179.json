@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>OpenSSL version 0.9.6k sur Microsoft Windows.</P>",
+  "content": "## Description\n\nOpenSSL est une mise en œuvre « open source » des protocoles Secure\nSockets Layer (SSL) et Transport Layer Security (TLS). OpenSSL est\nlargement utilisé pour sécuriser des protocoles applicatifs sur\nl'Internet.  \n\nLes protocoles SSL et TLS utilisent le langage Abstract Syntax Notation\nOne (ASN.1) dans les échanges de certains objets.  \n\nUne vulnérabilité dans le traitement d'un objet ASN.1 permet à un\nutilisateur mal intentionné de provoquer un déni de service, en envoyant\npar exemple un certificat mal formé à un serveur vulnérable.\n\n## Solution\n\nMettre à jour OpenSSL (version 0.9.7c ou 0.9.6l).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité 006489/OpenSSL2/1 du NISCC (National  Infrastructure Security Co-ordination Center) :",
+      "url": "http://www.uniras.gov.uk/vuls/2003/006489/openssl2.htm"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-179",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-11-05T00:00:00.000000"
+    },
+    {
+      "description": "première révision : correction du titre.",
+      "revision_date": "2003-11-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut provoquer un déni de service sur une\nmachine qui utilise une version d'OpenSSL vulnérable.\n",
+  "title": "Faille dans l'implémentation d'OpenSSL sous Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité du NISCC 006489/OpenSSL2/1",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Unified Communications Manager versions 6.x antérieures à 6.1(3) ;",
+      "product": {
+        "name": "Unified Communications Manager",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified CallManager versions 4.1 ;",
+      "product": {
+        "name": "Unified Communications Manager",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified Communications Manager versions 5.x antérieures à 5.1(3e) ;",
+      "product": {
+        "name": "Unified Communications Manager",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified Communications Manager versions 4.3 antérieures à 4.3(2)SR1b ;",
+      "product": {
+        "name": "Unified Communications Manager",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified Communications Manager versions 7.0 antérieures à 7.0(2).",
+      "product": {
+        "name": "Unified Communications Manager",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Unified Communications Manager versions 4.2 antérieures à 4.2(3)SR4b ;",
+      "product": {
+        "name": "Unified Communications Manager",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été découverte dans le mécanisme de synchronisation\ndes carnets d'adresses (Personal Address Book - PAB) dans Cisco Unified\nCommunications Manager (autrefois appelé CallManager). Lorsqu'un client\nde synchronisation PAB s'authentifie auprès d'un serveur Cisco Unified\nCommunications Manager (via une connexion HTTPS), des identifiants d'un\ncompte d'administration sont renvoyés « en clair ». Un attaquant peut\nintercepter ces identifiants.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0632",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0632"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20090311-cucmpab du 11 mars 2009    :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20090311-cucmpab.shtml"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-095",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-03-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans <span class=\"textit\">Cisco Unified Communications\nManager</span> permet d'accéder à un compte d'administration de\nl'application.\n",
+  "title": "Vulnérabilité dans Cisco Unified Communications Manager",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-sa-20090311-cucmpab du 11 mars 2009",
+      "url": null
+    }
+  ]
+}

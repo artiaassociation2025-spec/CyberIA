@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous les systèmes Microsoft possédant une version de la  Machine Virtuelle (VM) inférieure à 5.0.3805 incluse.</P>  <P>Pour connaitre la version de la Machine Virtuelle de vos  systèmes, consultez le document additionnel référencé dans le  bulletin de sécurité MS02-069 de Microsoft :</P>  <PRE><A name=\"tex2html2\" href=\"http://www.microsoft.com/security/security_bulletins/ms02-069.asp\"\nid=\"tex2html2\">http://www.microsoft.com/security/security_bulletins/ms02-069.asp</A>\n</PRE>",
+  "content": "## Description\n\nLa Machine Virtuelle de Microsoft a pour objet d'exécuter des programmes\nJava.\n\nDe multiples vulnérabilités sont présentes dans la Machine Virtuelle de\nMicrosoft pour les versions 5.0.3805 et antérieures :\n\n-   Le standard COM (Composant Object Model) permet de gérer la\n    modularité de certaines applications sous Windows.\n\n    Seules les appliquettes Java « de confiance » (ou reconnues comme\n    sûres) peuvent accéder aux objets COM\n\n    L'une des vulnérabilités de la Machine Virtuelle permet aux\n    appliquettes Java « non reconnues comme sûres » d'accéder aux objets\n    COM.\n\n-   Une appliquette Java ne peut normalement accéder qu'au répertoire\n    dans lequel elle se situe ou aux sous-répertoires de ce dernier. Il\n    est possible de construire (par deux moyens différents) une\n    appliquette Java qui « tromperait » la Machine Virtuelle sur son\n    emplacement lorsqu'elle est exécutée, et pourrait accéder à des\n    objets situés dans des répertoires distants.\n\n-   Il est aussi possible de construire une URL qui, lors de son\n    traitement, permet l'exécution d'une appliquette Java dans un autre\n    domaine que celui depuis lequel elle est lancée. Ceci peut notamment\n    être utilisé pour exécuter une application Java dans un contexte de\n    sécurité différent de celui pour lequel elle est autorisée.\n\n-   Les API (Application Programming Interface) JDBC (Java DataBase\n    Connectivity) sont des applications permettant d'accéder à des bases\n    de données (ajout, modification, destruction) par le biais de\n    programmes JAVA.\n\n    Une vulnérabilité de la Machine Virtuelle permet à une appliquette\n    Java d'accéder aux applications JDBC.\n\n-   Le SSM (Security Standard Manager) est un outil permettant\n    d'appliquer des restrictions sur l'accès de certains objets Java.\n\n    Une vulnérabilité de la Machine Virtuelle permet d'empêcher\n    temporairement l'exécution de certains de ces objets en modifiant la\n    « banlist » (liste des objets bannis).\n\n-   Il est possible d'obtenir le nom de l'utilisateur connecté sur un\n    système grâce à une appliquette Java « non reconnue comme sûre » qui\n    ne devrait normalement pas permettre d'accéder à une propriété du\n    système nommée user.dir.\n\n-   Une création non terminée d'objet Java par une autre appliquette\n    Java habilement construite permet d'arrêter de façon inopinée le\n    navigateur Internet Explorer.\n\n## Contournement provisoire\n\nPour se prémunir contre la majeure partie de ces attaques via le\nnavigateur Internet Explorer, désactiver les appliquettes Java dans les\nparamètres de sécurité de tous les contextes de sécurité d'Internet\nEplorer.\n\n## Solution\n\nConsulter le bulletin de sécurité MS02-069 (se référer au paragraphe\ndocumentation) afin de connaître la disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-265",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Modification de données non autorisée"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Fuite de données"
+    },
+    {
+      "description": "Contournement des règles de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans la Machine Virtuelle de\nMicrosoft permettent à un utilisateur mal intentionné d'exécuter du code\narbitraire à distance, de contourner les mécanismes de sécurité et\nd'obtenir des informations sur l'utilisateur, ce qui pourrait faciliter\nles attaques par force brute.\n",
+  "title": "Multiples vulnérabilités de la Machine Virtuelle de Microsoft",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité MS02-069 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-069.asp"
+    }
+  ]
+}

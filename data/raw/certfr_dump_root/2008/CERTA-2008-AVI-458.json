@@ -1,0 +1,104 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Horde Application Framework versions 3.2.2 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Horde",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Horde Groupeware Webmail Edition versions 1.0.7 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Horde",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Horde Application Framework versions 3.1.8 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Horde",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Horde Groupeware Webmail Edition versions 1.1.2 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Horde",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Horde Groupeware versions 1.0.6 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Horde",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Horde Groupeware versions 1.1.2 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Horde",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans plusieurs produits Horde comme\nGroupeware, Groupeware Webmail Edition et Application Framework. Ces\nvulnérabilités sont relatives à la mise en œuvre d'extensions MIME ou\nbien à la gestion de certains caractères d'échappement. Elles permettent\nà un utilisateur distant malintentionné de réaliser des attaques de type\n« injection de code indirecte » (cross-site scripting).\n\n## Contournement provisoire\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-3823",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3823"
+    },
+    {
+      "name": "CVE-2008-3824",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-3824"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de l'oCERT :",
+      "url": "http://www.ocert.org/advisories/ocert-2008-012.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-458",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-09-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités sont présentes dans les produits Horde et\npermettent à un utilisateur distant malintentionné de réaliser des\nattaques de type « injection de code indirecte » (<span\nclass=\"textit\">cross-site scripting</span>).\n",
+  "title": "Multiples vulnérabilités dans Horde",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Horde",
+      "url": "http://marc.info/?l=horde-announce&m=122103888111491&w=2"
+    }
+  ]
+}

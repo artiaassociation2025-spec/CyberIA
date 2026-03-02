@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous les Unix avec Qpopper dont la version est inférieure ou  égale à 4.02.</P>",
+  "content": "## Description\n\nQpopper est un serveur POP3 (Post Office Protocol) développé par\nQualcomm pour Unix.\n\nUn débordement de mémoire de ce logiciel permet à un utilisateur mal\nintentionné d'arrêter à distance le service. Comme dans le cas de la\nplupart des débordements de mémoire, il est possible d'utiliser cette\nfaille pour exécuter du code sur la machine avec les privilèges du\ndaemon Qpopper.\n\n## Contournement provisoire\n\nQpopper ne doit pas être lancé avec un compte ayant les privilèges de\nroot.\n\n## Solution\n\nTélécharger la nouvelle version de Qpopper :\n\n    ftp://ftp.qualcomm.com/eudora/servers/unix/popper\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "La Release Notes de Qpopper :",
+      "url": "ftp://ftp.qualcomm.com/eudora/servers/unix/popper/Release.Notes"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-061",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-06-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Exécution de code à distance sans compte utilisateur"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut effectuer un déni de service du\nserveur POP3, voire exécuter du code à distance même sans compte sur le\nserveur.\n",
+  "title": "Vulnérabilité de Qpopper",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de mise à jour de Qpopper par Qualcomm",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Winamp, versions antérieures à la  version 5.571.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans Winamp et permettent à un\nutilisateur malveillant d'exécuter du code arbitraire à distance en\nincitant un utilisateur du système vulnérable à ouvrir un fichier\nspécialement conçu :\n\n-   un débordement d'entier survient dans le décodeur IN_MOD.DLL lors de\n    l'analyse de certains fichiers de type Oktalyzer, Ultratracker ou\n    Impulse Tracker ;\n-   plusieurs débordements d'entier sont présents dans les modules\n    png.w5s et jpeg.w5s et sont exploitables par le biais de fichiers\n    JPEG ou PNG spécifiques contenus dans un fichier MP3.\n\n## Solution\n\nMigrer en version 5.571.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3996",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3996"
+    },
+    {
+      "name": "CVE-2009-3995",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3995"
+    },
+    {
+      "name": "CVE-2009-3997",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3997"
+    },
+    {
+      "name": "CVE-2009-4356",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-4356"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-559",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-12-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans Winamp sont exploitables par un\nutilisateur malveillant pour exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans Winamp",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de version de Winamp du 21 décembre 2009",
+      "url": "http://www.winamp.com/help/Version_History#Winamp_5.571_.28Latest.29"
+    }
+  ]
+}

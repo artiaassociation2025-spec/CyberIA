@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>MantisBT, versions antérieures à la version 1.2.3.</P>",
+  "content": "## Description\n\nMantisBT est un outil de gestion des erreurs de programme (bug tracker).\n\nDes vulnérabilités de type XSS l'affectent :\n\n-   l'une d'elles réside dans la page de résumé d'un signalement\n    (summary). Elle est exploitable par un utilisateur malveillant\n    distant ;\n-   les autres, dans les composants manage_plugin_uninstall.php,\n    cfdef_standard.php et print_all_bug_page_word.php, sont exploitables\n    par un administrateur authentifié.\n\n## Solution\n\nLa version MantisBT 1.2.3 remédie à ces vulnérabilités.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3303",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3303"
+    },
+    {
+      "name": "CVE-2010-3763",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3763"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site de téléchargement du projet MantisBT :",
+      "url": "http://www.mantisbt.org/download.php"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-473",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-10-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    }
+  ],
+  "summary": "MantisBT présente des vulnérabilités de type injection de code indirecte\n(XSS).\n",
+  "title": "Vulnérabilités dans MantisBT",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de version de MantisBT du 14 septembre 2010",
+      "url": "http://www.mantisbt.org/bugs/changelog_page.php?version_id=111"
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Servlet</SPAN> WebDAV du logiciel Apache  Tomcat et logiciels l'utilisant :</P>  <UL>    <LI>Apache Tomcat, branches 4, 5 et 6 ;</LI>    <LI>Apache Geronimo, branches 1 et 2 ;</LI>    <LI>Apache Jakarta Slide, branche 2 ;</LI>    <LI>IBM Websphere.</LI>  </UL>  <P>Cette liste n'est pas limitative.</P>",
+  "content": "## Description\n\nDans certaines configurations, des requêtes spécialement marquées\npermettent à un utilisateur distant de lire tout fichier. Cette\nvulnérabilité permet à un utilisateur malveillant d'accéder à des\ninformations sensibles à distance.\n\nCette servlet est utilisée dans d'autres logiciels, les rendant\négalement vulnérables.\n\n## Solution\n\nLes versions de Tomcat 5.5 SVN et 6.0 SVN corrigent le problème. Se\nréférer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-5461",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5461"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin du projet Apache Geronimo :",
+      "url": "http://geronimo.apache.org/2007/10/18/potential-vulnerability-in-apache-tomcat-webdav-servlet.html"
+    },
+    {
+      "title": "Bulletin de sécurité IBM swg21286112 du 01 novembre 2007 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21286112"
+    },
+    {
+      "title": "Bulletins de sécurité du projet Apache Tomcat :",
+      "url": "http://tomcat.apache.org/security-4.html"
+    },
+    {
+      "title": "Référence CVE CVE-2007-5461 :",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5461"
+    },
+    {
+      "title": "Bulletins de sécurité du projet Apache Tomcat :",
+      "url": "http://tomcat.apache.org/security-5.html"
+    },
+    {
+      "title": "Bulletins de sécurité du projet Apache Tomcat :",
+      "url": "http://tomcat.apache.org/security-6.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-470",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-11-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la <span class=\"textit\">servlet</span> WebDAV du\nlogiciel Apache Tomcat permet à un utilisateur malveillant d'accéder à\ndes informations sensibles à distance.\n",
+  "title": "Vulnérabilité de Tomcat WebDAV et",
+  "vendor_advisories": []
+}

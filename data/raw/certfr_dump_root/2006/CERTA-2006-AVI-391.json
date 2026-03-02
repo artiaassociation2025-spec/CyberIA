@@ -1,0 +1,184 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mozilla SeaMonkey 1.0.4 ainsi que les versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mozilla Thunderbird 1.5.0.5 ainsi que les versions antérieures ;",
+      "product": {
+        "name": "Thunderbird",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mozilla Firefox 1.5.0.6 ainsi que les versions antérieures ;",
+      "product": {
+        "name": "Firefox",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans les produits Mozilla\nFirefox, Thunderbird et SeaMonkey. Parmi celles-ci :\n\n-   la manipulation de certains codes Javascript par le navigateur\n    Firefox pourrait provoquer un débordement de la mémoire, et ainsi\n    permettre l'exécution de commandes arbitraires. L'utilisateur doit\n    visiter une page construite de manière malveillante pour être\n    impacté. Cependant, la messagerie Thunderbird utilise en grande\n    partie le noyau du navigateur Firefox pour l'affichage de messages\n    en format HTML, quand cela est autorisé. L'utilisateur pourrait donc\n    avoir son système compromis suite à la lecture d'un courrier\n    électronique. Cette option n'est pas activée par défaut.\n-   la désactivation de Javascript dans la messagerie Thunderbird ne\n    serait pas correctement effectuée, et pourrait être contournée afin\n    de permettre l'exécution de code Javascript à l'insu de\n    l'utilisateur.\n-   une mauvaise vérification des signatures RSA PKCS \\#1 v1.5 utilisant\n    un exposant de valeur 3. Cette vulnérabilité est à mettre en\n    relation avec l'avis du CERTA CERTA-200-AVI-384 concernant OpenSSL.\n-   la procédure de mise à jour de Firefox et Thunderbird, basée sur SSL\n    ne s'effecturait pas correctement. Il serait possible, en usurpant\n    les réponses DNS adressées à la victime, de rediriger ses requêtes\n    de mises à jour vers un site malveillant. Le certificat ne serait\n    alors pas convenablement vérifié.\n\n## Solution\n\nSe référer au bulletin de sécurité de Mozilla pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4339",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4339"
+    },
+    {
+      "name": "CVE-2006-4566",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4566"
+    },
+    {
+      "name": "CVE-2006-4570",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4570"
+    },
+    {
+      "name": "CVE-2006-4253",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4253"
+    },
+    {
+      "name": "CVE-2006-4568",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4568"
+    },
+    {
+      "name": "CVE-2006-4565",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4565"
+    },
+    {
+      "name": "CVE-2006-4567",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4567"
+    },
+    {
+      "name": "CVE-2006-4340",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4340"
+    },
+    {
+      "name": "CVE-2006-4569",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4569"
+    },
+    {
+      "name": "CVE-2006-4571",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4571"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-352 du 25 septembre 2006 :",
+      "url": "http://www.ubuntu.com/usn/usn-352-1"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla MFSA-2006-60 :",
+      "url": "http://www.mozilla.org/security/announce/2006/mfsa2006-60.html"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2006:0675 du 15 septembre    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0675.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla MFSA-2006-64 :",
+      "url": "http://www.mozilla.org/security/announce/2006/mfsa2006-64.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla MFSA-2006-63 :",
+      "url": "http://www.mozilla.org/security/announce/2006/mfsa2006-63.html"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2006:0677 du 15 septembre    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0677.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla MFSA-2006-59 :",
+      "url": "http://www.mozilla.org/security/announce/2006/mfsa2006-59.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla MFSA-2006-57 :",
+      "url": "http://www.mozilla.org/security/announce/2006/mfsa2006-57.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-351 du 22 septembre 2006 :",
+      "url": "http://www.ubuntu.com/usn/usn-351-1"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SA:2006:054 du 22 septembre    2006 :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2006-Sep/0008.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:168 du 20    septembre 2006 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:168"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla MFSA-2006-62 :",
+      "url": "http://www.mozilla.org/security/announce/2006/mfsa2006-62.html"
+    },
+    {
+      "title": "Bulletin de sécurité SGI 20060901-01-P du 19 septembre 2006    :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20060901-01-P.asc"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla MFSA-2006-58 :",
+      "url": "http://www.mozilla.org/security/announce/2006/mfsa2006-58.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-350 du 21 septembre 2006 :",
+      "url": "http://www.ubuntu.com/usn/usn-350-1"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2006:0676 du 15 septembre    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0676.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mozilla MFSA-2006-61 :",
+      "url": "http://www.mozilla.org/security/announce/2006/mfsa2006-61.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-391",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-09-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité SuSE, Ubuntu, Red Hat, Mandriva et SGI.",
+      "revision_date": "2006-09-26T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Ubuntu, Red Hat.",
+      "revision_date": "2006-09-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifies dans les produits Mozilla\nFirefox, Thunderbird et SeaMonkey. L'exploitation de ceux-ci contre un\nsystème vulnérable peuvent conduire à une exécution de code arbitraire à\ndistance.\n",
+  "title": "Multiples vulnérabilités dans les produits Mozilla",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mises à jour Mozilla du 14 septembre 2006",
+      "url": null
+    }
+  ]
+}

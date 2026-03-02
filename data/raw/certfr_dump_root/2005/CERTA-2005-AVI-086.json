@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">phpBB</SPAN> versions 2.0.11 et  antérieures.</P>",
+  "content": "## Description\n\nL'outil phpBB est utilisé pour la mise en place de forums sur\nl'Internet.  \n\nLa première vulnérabilité (CVE CAN-2005-0258) concerne la fontion\nusercp_register.php. Un utilisateur distant mal intentionné peut\nexploiter cette vulnérabilité pour détruire des fichiers arbitraires sur\nle système.  \n\nLa deuxième vulnérabilité (CVE CAN-2005-0259) concerne la gestion de\nvariables relatives à l'image avatar (image associée à un nom\nd'utilisateur). Un utilisateur ayant un compte sur le serveur cible peut\nexploiter cette vulnérabilité pour accéder en lecture à n'importe quel\nfichier du système.\n\n## Contournement provisoire\n\nLa première vulnérabilité ne pourra pas être exploitée si la galerie des\nimages avatar est désactivée.  \n\nLa deuxième vulnérabilité ne pourra pas être exploitée si les images\navatar distantes et le téléchargement de ces images avatar sont\ndésactivés.  \n\n## Solution\n\nLa version 2.0.12 de phpBB corrige ces vulnérabilités.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité iDefense du 22 février 2005 (CVE    CAN-2005-0259) :",
+      "url": "http://www.idefense.com/application/poi/display?id=204&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour phpBB du 23 février 2005    :",
+      "url": "http://www.vuxml.org/freebsd/pkg-phpbb.html"
+    },
+    {
+      "title": "Bulletin de sécurité iDefense du 22 février 2005 (CVE    CAN-2005-0258) :",
+      "url": "http://www.idefense.com/application/poi/display?id=205&type=vulnerabilities"
+    },
+    {
+      "title": "Site Internet de l'outil phpBB    :",
+      "url": "http://www.phpbb.com"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-086",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-02-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des fichiers"
+    },
+    {
+      "description": "Atteinte à l'intégrité des fichiers"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes dans l'outil <span\nclass=\"textit\">phpBB</span>.\n",
+  "title": "Vulnérabilités de phpBB",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité iDefense du 22 février 2005",
+      "url": null
+    }
+  ]
+}

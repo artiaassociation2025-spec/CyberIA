@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Serveur HTTP Apache versions 2.0.35 à 2.0.48 avec le module  <SPAN class=\"textit\">mod_ssl</SPAN> activé.</P>",
+  "content": "## Description\n\nUne mauvaise gestion de la mémoire dans le module mod_ssl permet à un\nutilisateur mal intentionné de provoquer l'arrêt brutal du serveur HTTP\nApache.  \n\nCette vulnérabilité peut être exploitée en envoyant des paquets HTTP sur\nle port du serveur HTTPS (le port par défaut est le 443/tcp).\n\n## Contournement provisoire\n\nDésactiver le module mod_ssl si ce dernier n'est pas nécessaire.  \n\nFiltrer le port 443/tcp sur les pare-feux pour limiter les attaques\nvenant de l'extérieur.\n\n## Solution\n\nLa version 2.0.49 corrige cette vulnérabilité.  \n\nPour les versions actuelles, appliquer le correctif disponible à\nl'adresse suivante :\n\n    http://cvs.apache.org/viewcvs.cgi/httpd-2.0/modules/ssl/ssl_engine_io.c?r1=1.100.2.11&r2=1.100.2.12\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctifs intégrés à la version 2.0.49  d'Apache :  \n Bug du serveur HTTP Apache #27106 : http://nagoya.apache.org/bugzilla/show_bug.cgi?id=27106\n Avis de sécurité RedHat RHSA-2004:084-14 pour Red Hat  Enterprise Linux : http://rhn.redhat.com/errata/RHSA-2004-084.html\n Avis de sécurité RedHat RHSA-2004:182 pour Red Hat Linux : http://rhn.redhat.com/errata/RHSA-2004-182.html\n Avis de sécurité GLSA 200403-04 : http://www.securityfocus.com/advisories/6472\n Bulletin de sécurité HPSBUX01022 pour HP-UX : http://www.securityfocus.com/advisories/6621\n Bulletin de sécurité MDKSA-2004:043 de Mandrake : http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:043\n Avis de sécurité FreeBSD du 08 mars 2004 : http://www.vuxml.org/freebsd/\n Mise à jour de sécurité du paquetage NetBSD apache2 : ftp://ftp.netbsd.org/pub/NetBSD/packages/distfiles/vulnerabilities\n Référence CVE CAN-2004-0113 : https://www.cve.org/CVERecord?id=CAN-2004-0113",
+      "url": "http://www.apache.org/dist/httpd/CHANGES_2.0"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-079",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-11T00:00:00.000000"
+    },
+    {
+      "description": "première révision : correction dans le lien du correctif.",
+      "revision_date": "2004-03-16T00:00:00.000000"
+    },
+    {
+      "description": "sortie de la version 2.0.49 : ajout référence dans la section Documentation.",
+      "revision_date": "2004-03-22T00:00:00.000000"
+    },
+    {
+      "description": "troisième révision : ajout de l'avis RedHat.",
+      "revision_date": "2004-03-24T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence au bulletin de sécurité de Gentoo.",
+      "revision_date": "2004-03-29T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence au bulletin de Hewlett-Packard.",
+      "revision_date": "2004-04-27T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence au bulletin RHSA-2004:182 pour red Hat Linux.",
+      "revision_date": "2004-04-30T00:00:00.000000"
+    },
+    {
+      "description": "Ajout références aux bulletins de sécurité FreeBSD et NetBSD.",
+      "revision_date": "2004-05-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut provoquer un déni de service sur un\nserveur HTTP Apache dont le module <span class=\"textit\">mod_ssl</span>\nest activé.\n",
+  "title": "Vulnérabilité du serveur HTTP Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bug Apache #27106",
+      "url": null
+    }
+  ]
+}

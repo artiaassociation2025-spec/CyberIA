@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows XP ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans l'interprétation des paramètres d'autorun dans\nMicrosoft Windows permet le contournement de la politique de sécurité et\nl'exécution de code arbitraire à distance. En effet, les paramètres\ndéfinis par la valeur de la clé NoDriveTypeAutorun ne sont pas\ncorrectement interprétés par le système. L'exécution automatique de\ncodes malveillants au travers de clés USB (via le menu contextuel, ou un\ndouble-clic sur l'icône) ou lecteurs réseau, par exemple, est donc\npossible sur des sytèmes vulnérables même si la clé de registre est\nsupposée désactiver cette fonctionnalité.\n\nLa vulnérabilité a été corrigée pour les systèmes Windows Vista et\nWindows Server 2008 dans le correctif MS08-038, puis pour les autres\nsystèmes Windows dans une mise à jour non automatique.\n\n## Solution\n\nCette mise à jour n'est pas disponible en mise à jour automatique. Se\nréférer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). Remarque : le correctif porte la\nréférence kb950582 alors que le bulletin porte la référence kb953252.\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0951",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0951"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft KB953252 du 05 février 2009    :",
+      "url": "http://support.microsoft.com/kb/953252"
+    },
+    {
+      "title": "Note d'information « Risques associés aux clés USB » :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2006-INF-006/index.html"
+    },
+    {
+      "title": "Alerte de sécurité de l'US-CERT TA09-020A du 20 janvier    2009 :",
+      "url": "http://www.us-cert.gov/cas/techalerts/TA09-020A.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-064",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-02-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Microsoft Windows permet le contournement de la\npolitique de sécurité et l'exécution de code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans l'Autorun sur Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Alerte TA09-020A de l'US-CERT",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft KB953252 du 05 février 2009",
+      "url": null
+    }
+  ]
+}

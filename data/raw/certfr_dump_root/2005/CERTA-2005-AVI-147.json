@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>OpenOffice 1.1.4 et versions antérieures.</P>",
+  "content": "## Description\n\nOpenOffice est une suite bureautique.\n\nUne vulnérabilité de type débordement de mémoire est présente dans la\nfonction StgCompObjStream::Load() qui permet d'interpréter l'entête des\nfichiers .doc (Microsoft Word). Un utilisateur mal intentionné peut\nexécuter du code arbitraire, au moyen d'un fichier .doc malicieusement\nconstruit.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité Fedora Core 3 pour OpenOffice du 14    avril 2005 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/3/"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:082 du 06 mai 2005    :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:082"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SA:2005:025 du 19 avril 2005    :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_25_openoffice_org.html"
+    },
+    {
+      "title": "Mise à jour de sécurité Fedora Core 2 pour OpenOffice du 14    avril 2005 :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/2/"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour OpenOffice du 13 avril    2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-pl-openoffice.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200504-13 / OpenOffice du    15 avril 2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200504-13.xml"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-147",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-04-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité SuSE. Ajout référence CVE.",
+      "revision_date": "2005-04-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité Mandriva.",
+      "revision_date": "2005-05-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité découverte dans OpenOffice permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire sur le système vulnérable.\n",
+  "title": "Vulnérabilité dans OpenOffice",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenOffice #46388",
+      "url": "http://www.openoffice.org/issues/show_bug.cgi?id=46388"
+    }
+  ]
+}

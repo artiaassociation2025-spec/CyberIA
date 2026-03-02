@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toute distribution Linux (Red Hat, Mandrake, Debian,  Slackware,...) pour tout processeur.</P>",
+  "content": "## Description\n\nLe démon klogd lit les messages émis par le noyau, reformate ces\nmessages et les transmet au démon syslogd qui les stocke dans divers\njournaux selon la configuration donnée par le fichier syslog.conf. La\nprocédure de ré-écriture de ces messages ne gère pas correctement tous\nles symboles possibles. Des chaînes de caractères peuvent alors être\nfabriquées pour tuer le démon klogd voire lui faire éxécuter du code\narbitraire.\n\nIl n'y a pas besoin d'être super-utilisateur pour faire émettre un\nmessage par le noyau. Par exemple, la mauvaise initialisation d'une\nsocket provoque un message du noyau incluant le nom du programme, donnée\nqui peut être falsifiée. Il est également possible de développer un\ngestionnaire malicieux pour certains périphériques qui sont accessibles\nen lecture pour tout le monde...\n\n## Solution\n\nMettre à jour le paquetage klogd/syslogd en fonction de la distribution\nutilisée.\n\n## 5.1 Red Hat\n\n### 5.1.1 Version 5.2\n\n#### 5.1.1.1 Sources\n\n    ftp://updates.redhat.com/5.2/SRPMS/sysklogd-1.3.31-1.6.src.rpm\n\n#### 5.1.1.2 Intel 386\n\n    ftp://updates.redhat.com/5.2/i386/sysklogd-1.3.31-1.6.i386.rpm\n\n#### 5.1.1.3 Sparc\n\n    ftp://updates.redhat.com/5.2/sparc/sysklogd-1.3.31-1.6.sparc.rpm\n\n#### 5.1.1.4 Alpha\n\n    ftp://updates.redhat.com/5.2/alpha/sysklogd-1.3.31-1.6.alpha.rpm\n\n### 5.1.2 Version 6.2\n\n#### 5.1.2.1 Sources\n\n    ftp://updates.redhat.com/6.2/SRPMS/sysklogd-1.3.31-17.src.rpm\n\n#### 5.1.2.2 Intel 386\n\n    ftp://updates.redhat.com/6.2/i386/sysklogd-1.3.31-17.i386.rpm\n\n#### 5.1.2.3 Sparc\n\n    ftp://updates.redhat.com/6.2/sparc/sysklogd-1.3.31-17.sparc.rpm\n\n#### 5.1.2.4 Alpha\n\n    ftp://updates.redhat.com/6.2/alpha/sysklogd-1.3.31-17.alpha.rpm\n\n## 5.2 Mandrake\n\n### 5.2.1 Version 6.0\n\n#### 5.2.1.1 Sources\n\n    ftp://ftp.free.fr/pub/Distributions_Linux/Mandrake/updates/6.0/SRPMS/sysklogd-1.3.31-14mdk.src.rpm\n\n#### 5.2.1.2 Intel Pentium\n\n    ftp://ftp.free.fr/pub/Distributions_Linux/Mandrake/updates/6.0/RPMS/sysklogd-1.3.31-14mdk.i586.rpm\n\n### 5.2.2 Version 6.1\n\n#### 5.2.2.1 Sources\n\n    ftp://ftp.free.fr/pub/Distributions_Linux/Mandrake/updates/6.1/SRPMS/sysklogd-1.3.31-14mdk.src.rpm\n\n#### 5.2.2.2 Intel Pentium\n\n    ftp://ftp.free.fr/pub/Distributions_Linux/Mandrake/updates/6.1/RPMS/sysklogd-1.3.31-14mdk.i586.rpm\n\n### 5.2.3 Version 7.0\n\n#### 5.2.3.1 Sources\n\n    ftp://ftp.free.fr/pub/Distributions_Linux/Mandrake/updates/7.0/SRPMS/sysklogd-1.3.31-15mdk.src.rpm\n\n#### 5.2.3.2 Intel Pentium\n\n    ftp://ftp.free.fr/pub/Distributions_Linux/Mandrake/updates/7.0/RPMS/sysklogd-1.3.31-15mdk.i586.rpm\n\n### 5.2.4 Version 7.1\n\n#### 5.2.4.1 Sources\n\n    ftp://ftp.free.fr/pub/Distributions_Linux/Mandrake/updates/7.1/SRPMS/sysklogd-1.3.31-15mdk.src.rpm\n\n#### 5.2.4.2 Intel Pentium\n\n    ftp://ftp.free.fr/pub/Distributions_Linux/Mandrake/updates/7.1/RPMS/sysklogd-1.3.31-15mdk.i586.rpm\n\n## 5.3 Caldera\n\n### 5.3.1 OpenLinux Desktop 2.3\n\n#### 5.3.1.1 Sources\n\n    ftp://ftp.calderasystems.com/pub/updates/OpenLinux/2.3/current/SRPMS/sysklogd-1.4-2.src.rpm\n\n#### 5.3.1.2 Intel 386\n\n    ftp://ftp.calderasystems.com/pub/updates/OpenLinux/2.3/current/RPMS/sysklogd-1.4-2.i386.rpm\n\n### 5.3.2 OpenLinux eServer 2.3 et OpenLinux eBuilder for ECential 3.0\n\n#### 5.3.2.1 Sources\n\n    ftp://ftp.calderasystems.com/pub/updates/eServer/2.3/current/SRPMS/sysklogd-1.4-2.src.rpm\n\n#### 5.3.2.2 Intel 386\n\n    ftp://ftp.calderasystems.com/pub/updates/eServer/2.3/current/RPMS/sysklogd-1.4-2.i386.rpm\n\n### 5.3.3 OpenLinux eDesktop 2.4\n\n#### 5.3.3.1 Sources\n\n    ftp://ftp.calderasystems.com/pub/updates/eDesktop/2.4/current/SRPMS/sysklogd-1.4-2.src.rpm\n\n#### 5.3.3.2 Intel 386\n\n    ftp://ftp.calderasystems.com/pub/updates/eDesktop/2.4/current/RPMS/sysklogd-1.4-2.i386.rpm\n\n## 5.4 Slackware\n\n    ftp://ftp.slackware.com/pub/slackware/slackware-current/slakware/a1/sysklogd.tgz\n\n## 5.5 Debian\n\n### 5.5.1 Version 2.1 (slink)\n\n#### 5.5.1.1 Sources\n\n    http://security.debian.org/dists/slink/updates/source/sysklogd_1.3.orig.tar.gz\n\net\n\n    http://security.debian.org/dists/slink/updates/source/sysklogd_1.3-31.slink1.diff.gz\n\n#### 5.5.1.2 Intel 386\n\n    http://security.debian.org/dists/slink/updates/binary-i386/sysklogd_1.3-31.slink1_i386.deb\n\n### 5.5.2 Version 2.2 (potato)\n\n#### 5.5.2.1 Sources\n\n    http://security.debian.org/dists/potato/updates/main/source/sysklogd_1.3.orig.tar.gz\n\net\n\n    http://security.debian.org/dists/potato/updates/main/source/sysklogd_1.3-33.1.diff.gz\n\n#### 5.5.2.2 Intel 386\n\n    http://security.debian.org/dists/potato/updates/main/binary-i386/sysklogd_1.3-33.1_i386.deb\n\n#### 5.5.2.3 Sparc\n\n    http://security.debian.org/dists/potato/updates/main/binary-sparc/sysklogd_1.3-33.1_sparc.deb\n\n#### 5.5.2.4 Alpha\n\n    http://security.debian.org/dists/potato/updates/main/binary-alpha/sysklogd_1.3-33.1_alpha.deb\n\n#### 5.5.2.5 Arm\n\n    http://security.debian.org/dists/potato/updates/main/binary-arm/sysklogd_1.3-33.1_arm.deb\n\n## 5.6 Immunix\n\n#### 5.6.0.1 Sources\n\n    http://www.immunix.org:8080/ImmunixOS/6.2/updates/SRPMS/sysklogd-1.3.31-17_StackGuard.src.rpm\n\n#### 5.6.0.2 Intel 386\n\n    http://www.immunix.org:8080/ImmunixOS/6.2/updates/RPMS/sysklogd-1.3.31-17_StackGuard.i386.rpm\n\n## 5.7 Trustix\n\n    ftp://ftp.trustix.com/pub/Trustix/updates/1.1/RPMS/sysklogd-1.3.31-18tr.i586.rpm\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Caldera",
+      "url": "http://www.calderasystems.com/support/security/advisories/CSSA-2000-032.0.txt"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-050",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-09-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire permettant l'accès aux privilèges root en local. accès root distant possible mais non démontré"
+    }
+  ],
+  "summary": "Le démon <span class=\"textit\">klogd</span>, chargé de journaliser les\nmessages du noyau, comporte une vulnérabilité qui peut être exploitée\npar un utilisateur local pour obtenir les privilèges du\nsuper-utilisateur.\n",
+  "title": "Vulnérabilité dans le démon klogd sous Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Debian",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "BugTraq",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Red Hat",
+      "url": "http://www.red-hat.com/support/errata/RHSA-2000-061-02.html"
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Mandrake",
+      "url": "http://www.linux-mandrake.com/en/security/MDKSA-2000-050.php3"
+    }
+  ]
+}

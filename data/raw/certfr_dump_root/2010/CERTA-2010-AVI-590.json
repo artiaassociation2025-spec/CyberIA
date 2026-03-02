@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "versions inférieures à 1.0.0c (CVE-2010-4252) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "versions inférieures à 0.9.8q et 1.0.x avant 1.0.0c (CVE-2010-4180) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa première vulnérabilité corrigée (CVE-2010-4180) permet à un\nutilisateur malveillant de forcer les connexions futures à utiliser un\nalgorithme de chiffrement faible.\n\nLa seconde (CVE-2010-4252) permet à un utilisateur malveillant de\ns'authentifier sans connaître le secret partagé lorsque le protocole\nJ-PAKE est utilisé.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-4252",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4252"
+    },
+    {
+      "name": "CVE-2010-4180",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-4180"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HP HPSBUS02638 SSRT100339 du 03 mars    2011 :",
+      "url": "http://www.itrc.hp.com/service/cki/docDisplay.do?docId=emr_na-c02737002"
+    },
+    {
+      "title": "Bulletin de sécurité Oracle Solaris du 29 avril 2011 :",
+      "url": "http://blogs.sun.com/security/entry/cve_2010_4180_affects_openssl"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-590",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-12-14T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de la référence au bulletin de sécurité HP-UX.",
+      "revision_date": "2011-03-04T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de la référence au bulletin de sécurité Oracle Solaris.",
+      "revision_date": "2011-05-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été corrigées dans OpenSSL. Elles permettent à\nun utilisateur de contourner la politique de sécurité.\n",
+  "title": "Vulnérabilités dans OpenSSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenSSL du 02 décembre 2010",
+      "url": "http://www.openssl.org/news/secadv_20101202.txt"
+    }
+  ]
+}

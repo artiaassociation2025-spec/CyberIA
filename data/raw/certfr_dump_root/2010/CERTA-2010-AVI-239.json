@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IBM DB2 version 9.7.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités dans IBM DB2 ont été publiées et corrigées :\n\n-   l'agent TIVOLI installé pour DB2 permet à utilisateur distant de\n    provoquer un déni de service ;\n-   la renégociation des sessions TLS et SSL permet de contourner la\n    politique de sécurité ;\n-   les droits d'accès accordés peuvent n'être pas pris en considération\n    de manière homogène ;\n-   des informations pour les administrateurs peuvent être, à tort,\n    publiques.\n\n## Solution\n\nLe Fix Pack 2 pour IBM DB2 version 9.7 remédie à ces vulnérabilités.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3555",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3555"
+    },
+    {
+      "name": "CVE-2010-0472",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0472"
+    }
+  ],
+  "links": [
+    {
+      "title": "Document du CERTA CERTA-2009-AVI-482 du 19 mai 2010 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2009-AVI-482/index.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-239",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-06-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent IBM DB2 et permettent à un\nutilisateur malveillant de réaliser un déni de service à distance ou de\ncontourner la politique de sécurité.\n",
+  "title": "Vulnérabilités dans IBM DB2",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM swg21432298 du 28 mai 2010",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg21432298"
+    }
+  ]
+}

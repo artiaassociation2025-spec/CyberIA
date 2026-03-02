@@ -1,0 +1,161 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apple Mac OS X Server v10.3.9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple Mac OS X v10.4.9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple Mac OS X v10.3.9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apple Mac OS X Server v10.4.9.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans le système\nd'exploitation Mac OS X. Parmi celles-ci :\n\n-   Alias Manager : il existerait, sous certaines conditions, une\n    incohérence sur les noms de fichier lorsque deux images disque sont\n    montées. Cette vulnérabilité pourrait être exploitée pour faire\n    ouvrir et/ou exécuter un fichier différent de celui demandé sur le\n    système vulnérable ;\n-   BIND : plusieurs vulnérabilités ont été corrigées dans le serveur\n    DNS pour Mac OS X. Elles sont semblables à celles décrites dans les\n    avis CERTA-2006-AVI-385 et CERTA-2007-AVI-056 ;\n-   CoreGraphics : l'application ne manipulerait pas correctement\n    certains fichiers au format PDF (pour Portable Document Format),\n    pouvant entraîner l'exécution de commande arbitraire à distance ;\n-   crontabs : le gestionnaire de tâches pourrait perturber le système\n    de fichiers monté dans le répertoire /tmp, par le biais du script de\n    nettoyage journalier.\n-   fetchmail : une vulnérabilité présente dans fetchmail permettrait de\n    récupérer tout ou partie d'un mot de passe échangé au cours de\n    l'initialisation de la connexion POP3. Cette vulnérabilité est\n    différente de celle décrite dans CERTA-2007-AVI-020.\n-   file : la commande file ne manipule pas correctement certains\n    fichiers, ce qui peut provoquer l'interruption de la commande, voire\n    l'exécution de code arbitraire sur le système vulnérable.\n-   iChat : l'application de messagerie instantanée ne gère pas\n    correctement certains paquets UPnP IGD (pour Internet Gateway Device\n    Standardized Device Control Protocol). Une personne malveillante\n    distante peut ainsi exploiter cette vulnérabilité en envoyant un\n    paquet spécialement construit, afin de perturber l'application ou\n    d'exécuter du code arbitraire à distance.\n-   mDNSResponder : le problème est identique à celui présenté pour\n    iChat mais n'affecterait que les versions au moins équivalentes à\n    Mac OS X v10.4 ;\n-   PPP : le démon PPP ne chargerait pas correctement certains modules\n    au cours de son lancement en ligne de commandes, ce qui permettrait\n    à une personne malveillante locale d'élever ses privilèges sur le\n    système vulnérable ;\n-   ruby : les vulnérabilités corrigées ont été présentées dans l'avis\n    CERTA-2006-AVI-562 ;\n-   screen : le service GNU Screen auraient plusieurs vulnérabilités\n    exploitables par la ligne de commande screen, et qui provoqueraient\n    sous certaines conditions un déni de service.\n-   texinfo : une vulnérabilité permettrait d'élever ses privilèges à\n    ceux de l'utilisateur utilisant texinfo afin de créer ou d'écraser\n    des fichiers d'accès limité.\n-   VPN : le démon vpnd ne manipulerait pas correctement certaines\n    chaînes de caractères, permettant à un utilisateur local d'élever\n    ses privilèges à ceux du système et d'exécuter du code arbitraire\n    sur la machine.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-5467",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5467"
+    },
+    {
+      "name": "CVE-2007-1558",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1558"
+    },
+    {
+      "name": "CVE-2006-6303",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6303"
+    },
+    {
+      "name": "CVE-2007-0751",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0751"
+    },
+    {
+      "name": "CVE-2007-1536",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1536"
+    },
+    {
+      "name": "CVE-2007-0494",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0494"
+    },
+    {
+      "name": "CVE-2006-4096",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4096"
+    },
+    {
+      "name": "CVE-2007-2386",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2386"
+    },
+    {
+      "name": "CVE-2007-4573",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4573"
+    },
+    {
+      "name": "CVE-2007-0493",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0493"
+    },
+    {
+      "name": "CVE-2007-0752",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0752"
+    },
+    {
+      "name": "CVE-2007-0750",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0750"
+    },
+    {
+      "name": "CVE-2007-2390",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2390"
+    },
+    {
+      "name": "CVE-2007-0740",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0740"
+    },
+    {
+      "name": "CVE-2006-4095",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4095"
+    },
+    {
+      "name": "CVE-2007-0753",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0753"
+    },
+    {
+      "name": "CVE-2005-3011",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-3011"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Apple du 29 mai 2007 :",
+      "url": "http://docs.info.apple.com/article.html?artnum=305530"
+    },
+    {
+      "title": "Message dans la liste de diffusion GNU concernant GNU    Screen paru en octobre 2006 :",
+      "url": "http://lists.gnu.org/archive/html/screen-users/2006-10/msg00028.html"
+    },
+    {
+      "title": "Avis de sécurité Fetchmail associé SA-2007-01 du 18 mars    2007 :",
+      "url": "http://fetchmail.berlios.de/fetchmail-SA-2007-01.txt"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-234",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-05-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées : elles concernent le\nsystème d'exploitation Mac OS X. L'exploitation de ces dernières peut\navoir des conséquences variées, comme l'exécution de code arbitraire, ou\nun dysfonctionnement du système vulnérable.\n",
+  "title": "Multiples vulnérabilités dans Apple Mac OS X",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Apple 2007-005 305530 du 29 mai 2007",
+      "url": null
+    }
+  ]
+}

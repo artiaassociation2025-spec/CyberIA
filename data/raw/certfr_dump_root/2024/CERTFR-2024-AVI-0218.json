@@ -1,0 +1,79 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache Tomcat versions 8.x.x antérieures à 8.5.99",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat versions 10.x.x antérieures à 10.1.19",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat versions 9.x.x antérieures à 9.0.86",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2024-23672",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-23672"
+    },
+    {
+      "name": "CVE-2024-24549",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-24549"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-0218",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-03-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Apache Tomcat.\nElles permettent à un attaquant de provoquer un déni de service à\ndistance.\n",
+  "title": "Multiples vulnérabilités dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache Tomcat 9 du 14 mars 2024",
+      "url": "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.86"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache Tomcat 10 du 14 mars 2024",
+      "url": "https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.19"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache Tomcat 8 du 14 mars 2024",
+      "url": "https://tomcat.apache.org/security-8.html#Fixed_in_Apache_Tomcat_8.5.99"
+    }
+  ]
+}

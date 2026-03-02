@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Asterisk Business Edition versions C.x.x antérieures à C.1.0-beta8.",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Business Edition versions B.x.x antérieures à B.2.3.6 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Open Source versions 1.4.x antérieures à 1.4.16 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Open Source versions 1.2.x antérieures à 1.2.26 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été découverte dans Asterisk. Lorsque\nl'enregistrement des utilisateurs s'appuie sur la base de données et que\nl'authentification se base sur les machines, Asterisk ne vérifie pas\nl'adresse IP source si le nom d'utilisateur est valide et s'il n'a pas\nde mot de passe. L'exploitation de cette vulnérabilité permet de\ncontourner le mécanisme d'authentification.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-6430",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6430"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Asterisk AST-2007-027 du 18 décembre    2007 :",
+      "url": "http://downloads.digium.com/pub/security/AST-2007-027.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-562",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans <span class=\"textit\">Asterisk</span> permet de\ncontourner le mécanisme d'authentification.\n",
+  "title": "Vulnérabilité dans Asterisk",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Asterisk AST-2007-027 du 18 décembre 2007",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "HP StorageWorks Storage Mirroring versions antérieures à 5.1.1.1090.15.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nIl existe plusieurs vulnérabilités dans HP StorageWorks Storage\nMirroring :\n\n-   la première concerne un débordement de mémoire dans le module\n    Auto-Discovery, un individu malintentionné et distant peut exécuter\n    du code arbitraire à l'aide d'un paquet UDP contruit de façon\n    particulière ;\n-   la deuxième concerne la console de management (Management Console),\n    un individu malintentionné et distant peut réaliser un déni de\n    service à l'aide d'un paquet UDP contruit de façon particulière ;\n-   la dernière concerne une faiblesse de chiffrement présente dans le\n    module d'authentification de HP StorageWorks Storage Mirroring, un\n    individu malintentionné et distant peut contourner la politique de\n    sécurité.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0718",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0718"
+    },
+    {
+      "name": "CVE-2009-0716",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0716"
+    },
+    {
+      "name": "CVE-2009-0717",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0717"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-163",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-04-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités de <span class=\"textit\">HP StorageWorks Storage\nMirroring</span> permettent à un individu malintentionné et distant\nd'exécuter du code arbitraire, de réaliser un déni de service et de\ncontourner la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités dans HP StorageWorks",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité HP c01707538 du 20 avril 2009",
+      "url": "http://itrc.hp.com/service/cki/docDisplay.do?docId=c01707538"
+    }
+  ]
+}

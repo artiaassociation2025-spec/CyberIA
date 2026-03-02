@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>La commande <TT>sdiff</TT> est présente  dans le paquetage <TT>diffutils</TT> installé sur de nombreux  systèmes Unix ou Linux.  <P>Les versions 2.7 et antérieures du paquetage  <TT>diffutils</TT> sont vulnérables.</P></p>",
+  "content": "## Description\n\nLa commande sdiff est présente dans le paquetage diffutils installé sur\nde nombreux systèmes Unix ou Linux.\n\nUne vulnérabilité présente dans la création des fichiers temporaires en\nmode \"edit\" peut, sous certaines conditions, permettre à un utilisateur\nmal intentionné de corrompre n'importe quel fichier du système.\n\n## Contournement provisoire\n\nAvant d'utiliser la commande sdiff, redéfinir la variable\nd'environnement TMPDIR afin de forcer la création des fichiers\ntemporaires dans un répertoire uniquement accessible par l'utilisateur.\n\n## Solution\n\nUtiliser le correctif disponible à l'adresse suivante:\n\n    http://www.linux-mandrake.com/cgi-bin/cvsweb.cgi/SPECS/diffutils/diffutils-2.7-immunix-owl-tmp.patch\n\nCe correctif est utilisable avec la dernière version (2.7) de diffutils:\n\n    http://www.gnu.org/software/diffutils/diffutils.html\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-135",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Corruption de fichiers"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la commande sdiff du paquetage diffutils peut ,\nsous certaines conditions, permettre à un utilisateur mal intentionné de\ncorrompre n'importe quel fichier du système.\n",
+  "title": "Vulnérabilité dans sdiff",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité RedHat RHSA-2001:116-03",
+      "url": null
+    }
+  ]
+}

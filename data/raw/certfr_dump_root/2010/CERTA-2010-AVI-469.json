@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>MySQL versions 5.1.x et 5.5.x.</p>",
+  "content": "## Description\n\nDans certaines configurations de bases répliquées en mode\nmaître-esclave, une requête d'un utilisateur peut être exécutée sur la\nbase maître, mais pas sur la base esclave, et provoquer une incohérence\ndans les données.\n\nPlusieurs vulnérabilités dans l'évaluation de requêtes SQL permettent à\nun utilisateur malveillant de provoquer un déni de service à distance,\npar arrêt inopiné du serveur ou par création d'une boucle infinie.\n\n## Solution\n\nLes versions 5.1.51 et 5.5.6 de MySQL résolvent ces problèmes.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de la version 5.5.6 de MySQL du 13 septembre 2010    :",
+      "url": "http://dev.mysql.com/doc/refman/5.5/en/news-5-5-6.html"
+    },
+    {
+      "title": "Bulletin de la version 5.1.51 de MySQL du 10 septembre 2010    :",
+      "url": "http://dev.mysql.com/doc/refman/5.1/en/news-5-1-51.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-469",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-10-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans MySQL permettent à un utilisateur\nmalveillant de provoquer un déni de service à distance ou de porter\natteinte à l'intégrité des données.\n",
+  "title": "Vulnérabilités dans MySQL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins des versions 5.1.51 et 5.5.6 de MySQL",
+      "url": null
+    }
+  ]
+}

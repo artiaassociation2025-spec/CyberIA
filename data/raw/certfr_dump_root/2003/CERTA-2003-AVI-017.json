@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Solaris 8 sur SPARC et Intel ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 2.6 sur SPARC et Intel ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 9 sur SPARC et Intel.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 7 sur SPARC et Intel ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nKCMS (Kodak Color Management System) est un ensemble d'outils de gestion\ndes profils de couleur des différents périphériques (scanner,\nimprimante, écran, etc.).\n\nLe service kcms_server est installé sur Solaris et lancé par défaut par\ninetd, et permet d'accéder à distance à ces outils.\n\nUne vulnérabilité de kcms_server permet à un utilisateur mal intentionné\nde visualiser des fichiers appartenant à l'administrateur root en étant\nconnecté localement ou bien à distance.\n\n## Contournement provisoire\n\nDésactiver le service kcms_server, s'il n'est pas utilisé, en éditant le\nfichier inetd.conf\n\n## Solution\n\nSe référer au bulletin d'alerte \\#50104 de Sun (voir paragraphe\nDocumentation) pour connaître la disponibilité des correctifs.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-017",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-01-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès non-autorisé à des données"
+    }
+  ],
+  "summary": "Une vulnérabilité du serveur KCMS permet à un utilisateur mal\nintentionné de visualiser des fichiers appartenant à l'administrateur\nroot.\n",
+  "title": "Vulnérabilité de KCMS sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de vulnérabilité VU#850785 du CERT/CC",
+      "url": "http://www.kb.cert.org/vuls/id/850785"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin d'alerte #50104 de Sun",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F50104"
+    }
+  ]
+}

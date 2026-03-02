@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "NTPD versions antérieures à 4.2.4p8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NTPD versions antérieures à 4.2.6.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans NTPD permet à un utilisateur d'effectuer un déni\nde service à distance en envoyant un paquet UDP spécialement construit.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-3563",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-3563"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HP #c01961959 du 23 mars 2010 :",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document/.jsp?objectID=c01961959"
+    },
+    {
+      "title": "Bulletin de sécurité HP Tru64 UNIX c01961950 du 04 octobre    2010 :",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c01961950"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-002",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-01-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité HP.",
+      "revision_date": "2010-03-26T00:00:00.000000"
+    },
+    {
+      "description": "Ajout du bulletin de sécurité HP Tru64 UNIX.",
+      "revision_date": "2010-10-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans NTPD permet à un utilisateur d'effectuer un déni\nde service à distance.\n",
+  "title": "Vulnérabilité dans NTPD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport de bogue #1331 de NTP du 31 décembre 2009",
+      "url": "http://support.ntp.org/bugs/show_bug.cgi?id=1331"
+    }
+  ]
+}

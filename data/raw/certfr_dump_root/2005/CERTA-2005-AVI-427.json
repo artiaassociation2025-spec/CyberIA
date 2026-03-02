@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Apache versions 2.0.54 et antérieures.</p>",
+  "content": "## Description\n\nUne erreur dans le composant multi-tâche worker MPM de Apache 2.0 permet\nà un utilisateur distant mal-intentionné de provoquer une consommation\nexcessive de la mémoire par le biais d'une requête HTTP malicieusement\nconstruite, occasionnant ainsi un déni de service.\n\n## Solution\n\nLa version 2.0.55 de Apache corrige le problème :\n\n    http://httpd.apache.org\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:233 du 19 décembre    2005 :",
+      "url": "http://frontal2.mandriva.com/security/advisories?name=MDKSA-2005:233"
+    },
+    {
+      "title": "Liste des changements apportés à la version 2.0.55 :",
+      "url": "http://httpd.apache.org/security/vulnerabilities_20.html"
+    },
+    {
+      "title": "Le site de Apache :",
+      "url": "http://httpd.apache.org"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SR:2005:028 du 02 décembre    2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_28_sr.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-427",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité SUSE SUSE-SR:2005:028 et Mandriva MDKSA-2005:233.",
+      "revision_date": "2005-12-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Apache 2.0 permet à un utilisateur distant de\nprovoquer un déni de service.\n",
+  "title": "Vulnérabilité de Apache 2.0",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés à la version 2.0.55 d'Apache",
+      "url": null
+    }
+  ]
+}

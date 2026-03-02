@@ -1,0 +1,129 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Squid versions 2.5 et antérieures.</p>",
+  "content": "## Description\n\nSquid est un serveur mandataire (`proxy`) pour les protocoles HTTP,\nHTTPS et FTP.  \nLe protocole WCCP (`Web Cache Communication Protocol`) est un protocole\npermettant d'utiliser le serveur mandataire en tant que cache\ntransparent.\n\nPlusieurs vulnérabilités ont été découvertes dans Squid :\n\n-   Une vulnérabilité présente dans la fonction `recvfrom()` utilisée\n    pour la réception des requêtes WCCP permet à un individu mal\n    intentionné de réaliser un déni de service sur le serveur affecté\n    par la vulnérabilité via l'envoi d'un paquet WCCP anormalement grand\n    (vulnérabilité CAN-2005-0211) ;\n-   une vulnérabilité dans le traitement des messages WCCP permet à un\n    individu mal intentionné d'effectuer un déni de service via un\n    message WCCP judicieusement formé (vulnérabilité CVE CAN-2005-0095)\n    ;\n-   une vulnérabilité présente dans le traitement des requêtes HTTP\n    permet à un individu mal intentionné de polluer le cache du serveur\n    mandataire (vulnérabilités CVE CAN-2005-0173 et CAN-2005-0174) ;\n-   une vulnérabilité dans la gestion des identifiants LDAP permet à un\n    individu mal intentionné de porter atteinte à l'intégrité des\n    journaux (vulnérabilité CVE CAN-2005-0175) ;\n-   deux vulnérabilités dans la gestion des authentifications de type\n    NTLM (NT Lan Manager) permet à un individu mal intentionné\n    d'effectuer un déni de service sur le serveur affecté\n    (vulnérabilités CVE CAN-2005-0096 et CAN-2005-0097) ;\n-   une mauvaise gestion lors de la réception d'entêtes HTTP\n    anormalement grands permettrait à un individu mal intentionné de\n    polluer le cache à distance ou de contourner certaines règles de\n    contrôle d'accès (vulnérabilité CAN-2005-0241).\n\n## Solution\n\nSe référer aux bulletins de sécurité des éditeurs (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD squid :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/www/squid/README.html"
+    },
+    {
+      "title": "Note de vulnérabilité #823350 de l'US-CERT :",
+      "url": "http://www.kb.cert.org/vuls/id/823350"
+    },
+    {
+      "title": "Note de vulnérabilité #886006 de l'US-CERT :",
+      "url": "http://www.kb.cert.org/vuls/id/886006"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2005:006 du 10 février    2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_06_squid.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-651 du 20 janvier 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-651"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2005:014 du 24 janvier    2005 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2005:014"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD pour Squid du 26 janvier 2005    :",
+      "url": "http://www.vuxml.org/openbsd/"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour Squid du 08 février 2005    :",
+      "url": "http://www.vuxml.org/freebsd/pkg-squid.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200502-04 du 02 février    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200502-04.xml"
+    },
+    {
+      "title": "Bulletin de sécurité SQUID-2005:2 du 15 janvier 2005 :",
+      "url": "http://www.squid-cache.org/Advisories/SQUID-2005_02.txt"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour Squid du 28 janvier 2005    :",
+      "url": "http://www.vuxml.org/freebsd/pkg-squid.html"
+    },
+    {
+      "title": "Bulletin de sécurité SQUID-2005:3 du 28 janvier 2005 :",
+      "url": "http://www.squid-cache.org/Advisories/SQUID-2005_03.txt"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2005:034 du 10 février    2005 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2005:034"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour Squid du 03 juin 2005 :",
+      "url": "http://www.vuxml.org/freebsd/pkg-squid.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat (v.2.1 et v.3) RHSA-2005:061 du    11 février 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-61.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-667 du 04 février 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-667"
+    },
+    {
+      "title": "Bulletin de sécurité Squid du 31 janvier 2005 :",
+      "url": "http://www.squid-cache.org/bugs/show_bug.cgi?id=1200"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200501-25 du 16 janvier    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200501-25.xml"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat (v.4) RHSA-2005:060 du 15    février 2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-60.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-042",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-02-01T00:00:00.000000"
+    },
+    {
+      "description": "mise à jour des vulnérabilités, ajout des références aux bulletins de sécurité OpenBSD, NetBSD, Gentoo et des références CVE CAN-2005-0096, 0097, 0173, 0174, 0175.",
+      "revision_date": "2005-02-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandrake MDKSA-2005:034.",
+      "revision_date": "2005-02-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références CVE CAN-2005-0211 et CAN-2005-0241 (nouvelle vulnérabilité), des notes de vulnérabilité de l'US-CERT afférantes, des bulletins de sécurité RedHat et SUSE et de seconds bulletins pour Debian et FreeBSD.",
+      "revision_date": "2005-02-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout d'un second bulletin de sécurité RedHat.",
+      "revision_date": "2005-02-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout d'un bulletin de sécurité FreeBSD et modification des références FreeBSD.",
+      "revision_date": "2005-06-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités sont présentes dans le serveur mandataire Squid\npermettant à un individu mal intentionné d'effectuer un déni de servcie\nou de porter atteinte à l'intégrité des données du serveur mandataire.\n",
+  "title": "Multiples vulnérabilités dans Squid",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Squid",
+      "url": null
+    }
+  ]
+}

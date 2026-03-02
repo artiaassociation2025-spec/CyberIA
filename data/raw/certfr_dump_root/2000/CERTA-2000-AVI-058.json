@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Windows 9x et Millenium Edition.</P>",
+  "content": "## Description\n\nLe protocole IPX/SPX sous Microsoft Windows inclue un service appelé\nNMPI (Name Management Protocol on IPX, suppléant NBNS en l'absence du\nprotocole NetBIOS) qui répond à la requête de n'importe quelle adresse\nréseau. La vulnérabilité de IPX réside dans le fait que ce service ne\nfiltre pas les adresses réseau correctement. Si l'adresse source est une\nadresse de broadcast, il répondra à tout le réseau, et entraînera une\nréponse de toutes les autres machines du réseau.\n\nLe trafic du réseau peut augmenter considérablement dans de tels cas, et\ndes machines peuvent être bloquées par l'exploitation de cette\nvulnérabilité. Pour débloquer les machines, il faudra les redémarrer.\n\n## Contournement provisoire\n\nIPX/SPX est installé par défaut lors de l'installation de Windows 95 si\nla machine contient une carte réseau. Il n'est pas installé par défaut\nsur Windows 98 et Millenium Edition.\n\nSi vous n'utilisez pas IPX/SPX sur votre réseau, supprimez ce protocole\nde toutes vos machines.\n\nFiltrez ce protocole à l'aide de votre garde-barrière.\n\n## Solution\n\nAppliquer le correctif de Microsoft (Version US) sur toutes les machines\nutilisant ce protocole.\n\n    http://download.microsoft.com/download/win95/Update/11974/EN-US/273727USA5.EXE\n\n    http://download.microsoft.com/download/win98/Update/11974/EN-US/273727USA8.EXE\n\n    http://download.microsoft.com/download/winMe/Update/11974/EN-US/273727USAM.EXE\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le bulletin de sécurité de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS00-073.asp"
+    },
+    {
+      "title": "Un article concernant la description technique de IPX/SPX :",
+      "url": "http://support.microsoft.com/support/kb/articles/q203/0/51.asp"
+    },
+    {
+      "title": "La FAQ concernant ce bulletin :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-073.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-058",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-10-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service par amplification de trafic"
+    }
+  ],
+  "summary": "Une vulnérabilité dans l'implémentation d'IPX/SPX par Microsoft (NWLINK)\npermet à un utilisateur mal intentionné de déclencher une « tempête » de\n<span class=\"textit\">broadcast</span>, et de désactiver les services\nrépondant aux requêtes dans ce protocole.\n",
+  "title": "Vulnérabilité dans IPX/SPX de Microsoft sous Windows 9x/ME",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

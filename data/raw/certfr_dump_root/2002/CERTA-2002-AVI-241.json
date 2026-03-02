@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Sun Solaris 8.</P>",
+  "content": "## Description\n\nDans sa version 1/01, Solaris 8 installe par défaut les paquetages de\nWeb-Based Enterprise Management suivants :\n\n-   SUNWwbdoc ;\n-   SUNWwbcou ;\n-   SUNWwbdev ;\n-   SUNWmgapp.\n\nCes paquetages installent des fichiers qui sont accessibles en écriture\npar tous les utilisateurs du système.\n\nUn utilisateur mal intentionné connecté localement peut modifier ces\nfichiers de façon à obtenir les privilèges de l'administrateur root ou\neffectuer un déni de service..\n\n## Contournement provisoire\n\nCes fichiers sont situés dans le répertoire /usr/sadm et /usr/demo/wbem\net ont les permissions en écriture (w) pour leur groupe d'appartenance\net pour tous (group et other).\n\nSupprimer le bit écriture de tous ces fichiers à l'aide de la commande\nchmod.\n\n## Solution\n\n-   Se référer au bulletin d'alerte \\#48320 de Sun (voir paragraphe\n    documentation) pour connaître la disponibilité des correctifs.\n-   La version 9 de Solaris corrige cette vulnérabilité.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-241",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges ou déni de service exploitable localement"
+    }
+  ],
+  "summary": "<span class=\"textit\">Solaris 8 update 1/01</span> installe par défaut\ndes paquetages de Web-Based Enterprise Management dont les fichiers sont\naccessibles en écriture par tous les utilisateurs du système.\n",
+  "title": "Vulnérabilité du logiciel Web-Based Enterprise Management sous Solaris 8",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin d'alerte #48320 de Sun",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F48320"
+    }
+  ]
+}

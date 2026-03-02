@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système linux avec un des noyaux suivants:</P>  <UL>    <LI>kernel 2.4.3 ;</LI>    <LI>kernel 2.4.2 ;</LI>    <LI>kernel 2.4.1 ;</LI>    <LI>kernel 2.4.0-test1 ;</LI>    <LI>kernel 2.4.</LI>  </UL>",
+  "content": "## Description\n\nAvec IPTables, une règle de filtrage utilisant le mot clef « related »\ns'appliquera à un paquet initialisant une nouvelle connexion qui est en\nrelation avec une connexion existante.\n\nLe module ip_conntrack_ftp est chargé d'ajouter les connexions FTP\ndéfinies par les commandes PORT et PASV à la table des connexions\nautorisées.\n\nLe module ip_conntrack_ftp n'analysant pas correctement les paramètres\nde la commande PORT, un attaquant peut envoyer des paquets FTP à un\nserveur (à travers le pare-feu) en utilisant des adresses ip et ports\ntcp arbitraires afin d'ouvrir des trous dans le filtrage du pare-feu\n(ouvrir des ports normalement fermés conformément à la politique de\nsécurité en vigueur sur le site protégé par le pare-feu).\n\n## Contournement provisoire\n\nNe pas utiliser les connexions FTP « related ».\n\n## Solution\n\n-   Un correctif est disponible :\n\n        http://netfilter.samba.org/security-fix/ftp-security2.patch\n\n-   RedHat 7.1 est livrée avec le module ip_conntrack_ftp incriminé mais\n    n'utilise pas par défaut IPTables.\n\n        http://www.redhat.com/support/errata/RHSA-2001-052.html\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-047",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-04-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement des règles de filtrage de iptables"
+    }
+  ],
+  "summary": "IPTables est un des composants utilisé pour le filtrage des paquets\nréseaux.\n\nUne erreur dans l'implémentation de IPTables permet à un attaquant de\ncontourner les règles de filtrage mises en oeuvre par un pare-feu\nutilisant IPTables.\n\nCe contournement est possible dans le cas de connexions FTP marquées «\nrelated ».\n",
+  "title": "Vulnérabilité dans IPTables sous linux 2.4",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "RHSA-2001:052-02",
+      "url": "http://www.redhat.com/support/errata/RHSA-2001-052.html"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "pour GNOME 2.4 : versions antérieures à 2.4.4.4.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Pour GNOME 2.2 : versions antérieures à 2.4.1.7 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nGnome Display Manager (gdm) est un logiciel de gestion des sessions\nXWindows qui présente une fenêtre de connexion.\n\nDeux vulnérabilités dans gdm permettent de provoquer un déni de service\nsur la machine sur laquelle tourne ce logiciel :\n\n1.  un utilisateur peut exploiter une caractéristique de gdm dans le but\n    d'épuiser la mémoire disponible, ce qui aura pour effet de tuer le\n    processus gdm.\n2.  une limitation dans la gestion des commandes traitées par gdm peut\n    être exploitée afin de saturer gdm de commandes inutiles, rendant\n    impossible le traitement de commandes ultérieures valides (comme par\n    exemple une demande de connexion).\n\n## Solution\n\nLes utilisateurs de gdm sont invités à migrer vers une version qui\ncorrige ces vulnérabilités, c'est-à-dire :\n\n-   à partir des sources appliquer une version supérieure ou égale à\n    2.4.1.7 ou 2.4.4.4 ;\n-   à partir d'un correctif fourni par votre vendeur, prendre le\n    correctif qui corrige les vulnérabilités CAN-2003-0793 et\n    CAN-2003-0794.\n\ngdm tourne sous la forme d'un daemon. Installer le correctif peut ne pas\nsuffire si la version vulnérable tourne encore en mémoire. Assurez-vous\nde bien redémarrer le daemon gdm.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Mandrake MDKSA:100",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:100"
+    },
+    {
+      "title": "Le site de référence du projet gdm :",
+      "url": "http://www.jirka.org/gdm"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-174",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-10-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Impossibilité de se connecter au travers de l'interface gdm"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans certaines versions du logiciel de connexion gdm\npeuvent provoquer des dénis de service pouvant empêcher un utilisateur\nlégitime de se connecter.\n",
+  "title": "Déni de service dans GDM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mandrake : MDKSA-2003:100",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "CVE : CAN-2003-0793",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "CVE : CAN-2003-0794",
+      "url": null
+    }
+  ]
+}

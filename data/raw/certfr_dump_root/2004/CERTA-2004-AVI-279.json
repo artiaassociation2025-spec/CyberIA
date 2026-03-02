@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Secure ACS versions 3.2(3) et antérieures pour Windows ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Secure ACS version 3.2 pour Windows ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Secure ACS version 3.2(2) build 15 pour Windows ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Secure ACS solution Engine.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCisco Secure ACS et Cisco Secure ACS Solution Engine sont des logiciels\nqui fournissent le service AAA (Authentication, Authorization,\nAccounting) vers les équipements réseau tels que les serveurs d'accès\naux réseaux, Cisco Pix ou un routeur.\n\nCisco Secure ACS permet de s'assurer qu'un poste accédant au réseau est\nconforme aux politiques de sécurité du réseau.\n\nPlusieurs vulnérabilités sont présentes sur Cisco Secure ACS :\n\n-   vulnérabilité CSCeb60017 et CSCec66913 : une vulnérabilité a été\n    découverte dans l'interface d'administration CSAdmin, en écoute sur\n    le port 2002/TCP. Elle permet à un utilisateur mal intentionné, par\n    le biais d'un envoi répété de connexions de réaliser un déni de\n    service sur l'équipement vulnérable. Les versions 3.2 et 3.2(2)\n    build 15 sont affectées par cette vulnérabilité.\n-   vulnérabilité CSCec90317 : une vulnérabilité est présente sur Cisco\n    Secure ACS en mode proxy RADIUS. Un utilisateur mal intentionné peut\n    réaliser un déni de service par l'envoi de requêtes\n    d'authentification. La version 3.2 est affectée par cette\n    vulnérabilité ;\n-   vulnérabilité CSCed81716 : un utilisateur mal intentionné peut\n    accéder à des données confidentielles, via l'utilisation d'un mot de\n    passe vide, quand Cisco Secure ACS utilise une base de données NDS\n    (Novell Directory Services) pour l'authentification des\n    utilisateurs. Les versions ACS Solution Engine, Cisco ACS 3.2(3) et\n    antérieures sont affectées par cette vulnérabilité.\n-   vulnérabilité CSCef05950 : un utilisateur mal intentionné peut, en\n    usurpant l'adresse IP, voler la session d'un utilisteur déjà\n    connecté à l'interface d'administration de Cisco Secure ACS. Les\n    versions 3.2 et antérieures sont affectées par cette vulnérabilités.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-279",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-08-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans Cisco Secure ACS (Access Control\nServer) pour Windows permettent à un utilisateur mal intentionné de\nréaliser un déni de service ou d'accéder à des données confidentielles.\n",
+  "title": "Multiples vulnérabilités dans Cisco Secure ACS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20040825-acs.shtml"
+    }
+  ]
+}

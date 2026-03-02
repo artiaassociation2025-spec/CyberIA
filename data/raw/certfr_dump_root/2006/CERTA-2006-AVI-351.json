@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions de SquirrelMail comprises entre 1.4.0 et 1.4.7  (incluses).</P>",
+  "content": "## Description\n\nSquirrelMail est un outil de webmail écrit en PHP4, et permettant\nd'intéragir avec les protocoles IMAP et SMTP. Une vulnérabilité a été\nidentifiée dans la fonction compose.php. Cette dernière permet de\nrestaurer le message en cours d'écriture quand la session de\nl'utilisateur expire.\n\nUne personne malveillante authentifiée sur le système peut profiter de\ncette vulnérabilité pour lire ou écrire dans certaines variables, et\nainsi accéder à certaines options de l'utilisateur ou à des documents\nstockés en pièce jointe.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4019",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4019"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité du 11 août 2006 de SquirrelMail :",
+      "url": "http://www.squirrelmail.org/security/issue/2006-08-11"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD :",
+      "url": "http://www.vuxml.org/freebd/index.html"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SA:2006:023 du 27 septembre    2006 :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2006-Sep/0011.html"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2006:0668 du 25 septembre    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0668.html"
+    },
+    {
+      "title": "Site officiel du projet SquirrelMail :",
+      "url": "http://www.squirrelmail.org"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1154 du 20 août 2006 :",
+      "url": "http://www.debian.org/security/2006/dsa-1154"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-351",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2006-08-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité FreeBSD ;",
+      "revision_date": "2006-08-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Debian.",
+      "revision_date": "2006-08-23T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins de sécurité SuSE et Red Hat.",
+      "revision_date": "2006-09-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de SquirrelMail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité du projet SquirrelMail",
+      "url": null
+    }
+  ]
+}

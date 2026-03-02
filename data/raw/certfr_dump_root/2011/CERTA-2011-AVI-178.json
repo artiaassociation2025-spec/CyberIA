@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMWare Workstation pour Linux versions 7.x jusqu'à 7.1.3 incluse ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMWare Workstation pour Linux versions 6.x jusqu'à 6.5.5 incluse ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMWare VIX API pour Linux versions 1.x jusqu'à 1.10.2 incluse.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn utilisateur local malveillant peut utiliser la commande vmrun avec\ndes privilèges élevés, si celui-ci peut inclure des fichiers dans des\nrépertoires contenant des bibliothèques.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). Une mise à jour pour VMWare VIX\npour Linux sera prochainement disponible selon l'éditeur.\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1126",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1126"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité VMware VMSA-2011-0006 du 30 mars 2011    :",
+      "url": "http://www.vmware.com/security/advisories/VMSA-2011-0006.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-178",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-03-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans l'utilitaire <span class=\"textit\">vmrun</span>\npermet à un utilisateur local malveillant d'élever ses privilèges.\n",
+  "title": "Vulnérabilité dans VMWare",
+  "vendor_advisories": []
+}

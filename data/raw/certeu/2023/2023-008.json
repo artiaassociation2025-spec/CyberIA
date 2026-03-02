@@ -1,0 +1,19 @@
+{
+  "file_item": {
+    "filepath": "security-advisories",
+    "filename": "CERT-EU-SA2023-008.pdf"
+  },
+  "title": "Vulnerability in OpenSSH",
+  "serial_number": "2023-008",
+  "publish_date": "08-02-2023 17:20:00",
+  "description": "The development team of the OpenSSH suite has released the version 9.2 to address several security vulnerabilities, including a memory safety bug in the OpenSSH server (<i>sshd</i>) tracked as <b>CVE-2023-25136</b>. This vulnerability can be exploited by a remote attacker to execute arbitrary code on the target system.",
+  "url_title": "2023-008",
+  "content_markdown": "---\ntitle: 'Vulnerability in OpenSSH'\nversion: '1.0'\nnumber: '2023-008'\noriginal_date: 'February 3, 2023'\ndate: 'February 8, 2023'\n---\n\n_History:_\n\n* _08/02/2023 --- v1.0 -- Initial publication_\n\n# Summary\n\nThe development team of the OpenSSH suite has released the version 9.2 to address several security vulnerabilities, including a memory safety bug in the OpenSSH server (`sshd`) tracked as **CVE-2023-25136**. This vulnerability can be exploited by a remote attacker to execute arbitrary code on the target system [1].\n\n# Technical Details\n\nThe flaw was introduced in OpenSSH 9.1 and it is a pre-authentication double-free memory fault in the chunk of memory freed twice, during `options.kex_algorithms` handling. An unauthenticated attacker can trigger the double-free in the default configuration.\n\nThe vendor believes that exploitation of this vulnerability has limitations as it occurs in the unprivileged pre-auth process that is subject to chroot and is further sandboxed on most major platforms.\n\n# Affected Products\n\nOpenSSH server (`sshd`) version 9.1 is affected.\n\n# Recommendations\n\nCERT-EU recommends updating to OpenSSH version 9.2.\n\n# References\n\n[1] <https://nvd.nist.gov/vuln/detail/CVE-2023-25136>\n",
+  "content_html": "<p><em>History:</em></p><ul><li><em>08/02/2023 --- v1.0 -- Initial publication</em></li></ul><h2 id=\"summary\">Summary</h2><p>The development team of the OpenSSH suite has released the version 9.2 to address several security vulnerabilities, including a memory safety bug in the OpenSSH server (<code>sshd</code>) tracked as <strong>CVE-2023-25136</strong>. This vulnerability can be exploited by a remote attacker to execute arbitrary code on the target system [1].</p><h2 id=\"technical-details\">Technical Details</h2><p>The flaw was introduced in OpenSSH 9.1 and it is a pre-authentication double-free memory fault in the chunk of memory freed twice, during <code>options.kex_algorithms</code> handling. An unauthenticated attacker can trigger the double-free in the default configuration.</p><p>The vendor believes that exploitation of this vulnerability has limitations as it occurs in the unprivileged pre-auth process that is subject to chroot and is further sandboxed on most major platforms.</p><h2 id=\"affected-products\">Affected Products</h2><p>OpenSSH server (<code>sshd</code>) version 9.1 is affected.</p><h2 id=\"recommendations\">Recommendations</h2><p>CERT-EU recommends updating to OpenSSH version 9.2.</p><h2 id=\"references\">References</h2><p>[1] <a rel=\"noopener\" target=\"_blank\" href=\"https://nvd.nist.gov/vuln/detail/CVE-2023-25136\">https://nvd.nist.gov/vuln/detail/CVE-2023-25136</a></p>",
+  "licence": {
+    "title": "Creative Commons Attribution 4.0 International (CC-BY 4.0)",
+    "link": "https://creativecommons.org/licenses/by/4.0/",
+    "restrictions": "https://cert.europa.eu/legal-notice",
+    "author": "The Cybersecurity Service for the Union institutions, bodies, offices and agencies"
+  }
+}

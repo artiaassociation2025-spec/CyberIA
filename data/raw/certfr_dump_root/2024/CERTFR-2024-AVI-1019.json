@@ -1,0 +1,71 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "pfSense CE versions antérieures à 2.8.0",
+      "product": {
+        "name": "pfSense CE",
+        "vendor": {
+          "name": "Netgate",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "pfSense Plus versions antérieures à 24.11",
+      "product": {
+        "name": "pfSense Plus",
+        "vendor": {
+          "name": "Netgate",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [],
+  "links": [],
+  "reference": "CERTFR-2024-AVI-1019",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-11-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Netgate pfSense. Elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données, une injection de code indirecte à distance (XSS) et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans Netgate pfSense",
+  "vendor_advisories": [
+    {
+      "published_at": "2024-11-13",
+      "title": "Bulletin de sécurité Netgate pfSense-SA-24_05",
+      "url": "https://docs.netgate.com/downloads/pfSense-SA-24_05.webgui.asc"
+    },
+    {
+      "published_at": "2024-11-13",
+      "title": "Bulletin de sécurité Netgate pfSense-SA-24_07",
+      "url": "https://docs.netgate.com/downloads/pfSense-SA-24_07.dhclient.asc"
+    },
+    {
+      "published_at": "2024-11-13",
+      "title": "Bulletin de sécurité Netgate pfSense-SA-24_08",
+      "url": "https://docs.netgate.com/downloads/pfSense-SA-24_08.webgui.asc"
+    },
+    {
+      "published_at": "2024-11-13",
+      "title": "Bulletin de sécurité Netgate pfSense-SA-24_06",
+      "url": "https://docs.netgate.com/downloads/pfSense-SA-24_06.sshguard.asc"
+    }
+  ]
+}

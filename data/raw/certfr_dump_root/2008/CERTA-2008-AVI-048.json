@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les versions d'IBM DB2 UDB version 8 n'ayant pas le correctif Fixpak 16.",
+      "product": {
+        "name": "Db2",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans IBM DB2 UDB. Ainsi,\nl'outil DB2PD permettrait sous certaines conditions à un utilisateur\nlocal d'élever ses privilèges à ceux d'administrateur (root). Une\nvulnérabilité similaire se trouve dans l'outil b2dart manipulant une\ncommande TPUT. Les conséquences de l'exploitation d'autres\nvulnérabilités, concernant en particulier le serveur DAS ou la routine\nSYSPROC.ADMIN_SP_C ne sont pas précisées par l'éditeur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg21256235 du 07 janvier 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21256235"
+    },
+    {
+      "title": "Corrections apportées par la mise à jour Fixpak 16 pour IBM    DB2 UDB Version 8, publiées le 30 janvier 2008 :",
+      "url": "ftp://ftp.software.ibm.com/ps/products/db2/fixes/english-us/aparlist/db2_v82/APARLIST.TXT"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-048",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans IBM DB2 UDB.\nL'exploitation de ces dernières permet, entre autres, à un utilisateur\nlocal, d'élever ses privilèges, de provoquer un déni de service ou\ncontourner la politique de sécurité en vigueur.\n",
+  "title": "Plusieurs vulnérabilités dans IBM DB2 UDB",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de correctif 1256235 d'IBM du 07 janvier 2008",
+      "url": null
+    }
+  ]
+}

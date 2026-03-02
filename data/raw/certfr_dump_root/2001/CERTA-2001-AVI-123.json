@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Versions de procmail antérieures à la  version 3.15.2. La version 3.15.2 n'est pas vulnérable.</p>",
+  "content": "## Description\n\nProcmail est un programme permettant de réaliser des traitements\nautomatiques sur les méls (filtrage, réponse automatique, etc).\n\nDe multiples vulnérabilités présentes dans le code de gestion des\nsignaux (code non réentrant), peuvent être exploitées par un utilisateur\nmal intentionné afin d'obtenir les droits de l'administrateur root.\n\nCes vulnérabilités ne sont exploitables qu'en local. Les privilèges root\nne peuvent être obtenus que si la commande procmail est installée avec\nle drapeau suid root positionné, ce qui n'est pas le cas sur tous les\nsystèmes.\n\n## Solution\n\nIl est conseillé d'installer la dernière version de procmail disponible\nsur le site\n\n    http://www.procmail.org\n\n.\n\nCertains éditeurs diffusent des paquetages pour leurs distributions (cf\nsection Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-123",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans le code de gestion des\nsignaux peuvent permettre à un utilisateur mal intentionné d'obtenir les\ndroits de l'administrateur root.\n",
+  "title": "Vulnérabilités dans procmail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité RedHat RHSA-2001:093-03",
+      "url": null
+    }
+  ]
+}

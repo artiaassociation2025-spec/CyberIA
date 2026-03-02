@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD versions 5.5 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD versions 6.2 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans le générateur d'aléa de FreeBSD mis en œuvre par\nles périphériques /dev/random et /dev/urandom permet à un utilisateur\nmalveillant, dans certaines circonstances, de tirer à nouveau le même\naléa de façon prédictible. Ceci pourrait mettre en défaut les\napplications se basant sur cet aléa pour effectuer des opérations de\nchiffrement ou de hâchage.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2007-AVI-525",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans FreeBSD permet à un utilisateur de contourner la\npolitique de sécurité du système.\n",
+  "title": "Vulnérabilité dans FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD SA-07:09.random",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-07:09.random.asc"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Tous les systèmes Windows avec ICQ version 2001A ou antérieure ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tous les systèmes Windows avec ICQ version antérieure à 2001B Beta v5.18 Build #3659 avec le module Voice Video & Games installé.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nICQ est un outil qui permet l'échange de messages instantanés entre\nplusieurs utilisateurs distants. ICQ est très répandu sur les postes\nclients. Une vulnérabilité existe dans le client ICQ de Windows\npermettant l'exécution de code arbitraire par un utilisateur mal\nintentionné. Bien que certaines mesures aient été prises au niveau des\nserveurs ICQ, cette vulnérabilité demeure exploitable.\n\n## Contournement provisoire\n\nInstaller la version 2001B Beta v5.18 Build \\#3659. Celle-ci désinstalle\nle module `Voice Video & Games`.\n\nBloquer au niveau du client ICQ les connexions directes provenant de\nn'importe quel client.\n\n## Solution\n\nIl n'existe pas de correctif à ce jour.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2002-02.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-012",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-01-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité dans certaines versions d'ICQ permet à un utilisateur\nmal intentionné d'exécuter du code arbitraire sur la machine.\n",
+  "title": "Débordement de mémoire dans ICQ",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2002-02 du CERT/CC",
+      "url": null
+    }
+  ]
+}

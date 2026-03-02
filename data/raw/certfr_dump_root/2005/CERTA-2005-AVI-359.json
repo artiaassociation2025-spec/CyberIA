@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "util-linux version stable 2.12q et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "util-linux version de développement 2.13pre2 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nutil-linux est un groupe d'utilitaires pour linux. Parmi ces\nutilitaires, on trouve umount qui sert à démonter des systèmes de\nfichiers.  \nUne vulnérabilité dans la gestion du commutateur -r passé à umount peut\npermettre à un utilisateur mal intentionné d'élever ses privilèges.\n\n## Solution\n\nPour la branche stable, util-linux version 2.12r-pre1 ou versions\nsupérieures corrigent ces vulnérabilités.  \nPour la branche de développement, util-linux version 2.13pre3 ou\nversions supérieures corrigent ces vulnérabilités.  \nDans tous les cas, il conviendra de se référer au bulletin de sécurité\nde l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200509-15 du 20 septembre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200509-15.xml"
+    },
+    {
+      "title": "Site Internet de util-linux :",
+      "url": "http://www.kernel.org/pub/linux/utils/util-linux/"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:167 du 20    septembre 2005 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005:167"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-359",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-09-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la validation des paramètres passés à\nl'utilitaire umount permet à un utilisateur mal intentionné d'élever ses\nprivilèges.\n",
+  "title": "Vulnérabilité de util-linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA 200509-15 du 20 septembre 2005",
+      "url": null
+    }
+  ]
+}

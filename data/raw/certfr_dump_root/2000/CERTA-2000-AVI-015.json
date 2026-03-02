@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Outlook Express 4.0, 4.01, 5.0, 5.01",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Outlook 97, 98, 2000",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn composant partagé par Outlook et Outlook Express utilise une mémoire\ntampon, dont le débordement n'est pas contrôlé, qui contient les\nen-têtes des mèls téléchargés en POP3 ou IMAP4. En provoquant un\ndébordement de cette mémoire tampon, un utilisateur mailvaillant,\nexpédiant un mèl, peut stopper l'application ou exécuter du code sur la\nmachine destinataire.  \n  \n\nCette vulnérabilité fonctionne même si le mèl n'est pas lu, le code\nmalicieux se trouvant dans l'en-tête. En particulier ce problème n'est\npas lié aux recommandations de la note CERTA-2000-INF-002 concernant les\npièces jointes.  \n  \n\nNota : Les utilisateurs d'Internet Explorer 5.01 Service Pack 1 ou les\nutilisateurs Internet Explorer 5.5 (sauf sous Windows 2000) ne sont pas\naffectés par cette vulnérabilité.\n\n## Solution\n\nCette vulnérabilité peut être éliminée par l'installation par défaut de\n:\n\n\\- Internet Explorer 5.01 Service Pack 1\n\n    http://www.microsoft.com/Windows/ie/download/ie501sp1.htm\n\n\\- Internet Explorer 5.5 sur tous systèmes (excepté Windows 2000\\*)\n\n    http://www.microsoft.com/Windows/ie/download/ie55.htm\n\n  \n  \n\n\\* Lors de l'installation d'Internet Explorer 5.5 sous Windows 2000 la\nversion corrigée d'Outlook Express n'est pas installée. La vulnérabilité\nest donc toujours présente. Windows 2000 Service Pack 1, qui n'est pas\nencore disponible en France, prendra cette correction en compte.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "- Bulletin Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS00-043.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-015",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-07-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code en chargeant son courrier depuis sa boîte aux lettres"
+    }
+  ],
+  "summary": "Une vulnérabilité à été découverte sous Outlook et Outlook Express\npermettant à un utilisateur malveillant d'exécuter du code sur une\nmachine distante. Le code peut s'exécuter même si on ne lit par le\nmessage et les pièces jointes.\n",
+  "title": "Vulnérabilité dans l'en-tête des mèls sous Outlook",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Microsoft Security Bulletin",
+      "url": null
+    }
+  ]
+}

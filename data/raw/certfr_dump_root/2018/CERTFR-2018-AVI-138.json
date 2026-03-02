@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les enclaves compilées avec Intel SGX SDK versions antérieures à 2.1.2 sur Linux et 1.9.6 sur Windows",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Intel Software Guard Extensions Platform (SGX) Software Component versions antérieures à 1.9.105.42329",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Intel",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2018-3626",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2018-3626"
+    },
+    {
+      "name": "CVE-2017-5736",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2017-5736"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2018-AVI-138",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2018-03-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Intel SGX. Elles\npermettent à un attaquant de provoquer une élévation de privilèges.\n",
+  "title": "Multiples vulnérabilités dans Intel SGX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Intel INTEL-SA-00117 du 20 mars 2018",
+      "url": "https://security-center.intel.com/advisory.aspx?intelid=INTEL-SA-00117&languageid=en-fr"
+    }
+  ]
+}

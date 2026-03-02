@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Server 2003 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Server 2003 Service Pack 1.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "  <P>Des versions de Windows qui ne sont plus officiellement  maintenues par Microsoft peuvent aussi être affectées.</P>",
+  "content": "## Description\n\nDes vulnérabilités ont été identifiées dans le service Client pour\nNetWare (ou CSNW). CSNW permet un échange d'informations entre des\nmachines Windows et des systèmes Novell NetWare (service d'impression,\nde stockage, etc). Ce service peut aussi s'appeler Gateway Service pour\nNetWare (GSNW) avec Windows 2000 Server.\n\nUne personne malveillante pourrait construire des paquets particuliers,\nafin d'exploiter l'une de ces vulnérabilités. Si le système distant est\nvulnérable, la mauvaise manipulation des données reçues pourrait alors\nprovoquer l'exécution de code arbitraire., ou perturber le service.\n\n## Solution\n\nSe référer au bulletin de sécurité MS06-066 de l'éditeur pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4689",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4689"
+    },
+    {
+      "name": "CVE-2006-4688",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4688"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-066",
+      "url": "http://www.microsoft.com/france/technet/security/Bulletin/MS06-066.mspx"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-495",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Des vulnérabilités ont été identifiées dans le service Client pour\nNetWare (ou <span class=\"textit\">Client Service for NetWare CSNW</span>)\nde Microsoft Windows. Une personne qui exploiterait celles-ci à distance\npourrait, sous certaines conditions, exécuter des commandes arbitraires,\nou perturber le service.\n",
+  "title": "Vulnérabilités dans le service Client pour NetWare de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": "2006-11-14",
+      "title": "Bulletin de sécurité Microsoft MS06-066",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-066.mspx"
+    }
+  ]
+}

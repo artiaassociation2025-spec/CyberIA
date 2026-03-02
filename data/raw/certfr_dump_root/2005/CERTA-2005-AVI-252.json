@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IBM Tivoli Management Framework version  4.x (antérieure à la version 4.1.1) disposant du sous-composant  <TT>LCF</TT> versions 41100 et antérieures.</p>",
+  "content": "## Description\n\nSi une connexion est établie vers LCF, mais qu'aucun paquet n'est\nenvoyé, le processus génère un message d'erreur, puis se termine,\ninterdisant tout traffic valide.  \n\nIl est possible d'identifier une attaque réussie en recherchant une\nentrée similaire dans les journaux d'évènements :\n\n    Nov 28 12:00:00 1 lcfd Terminating for exception: net_recv: bad packet\n    Nov 28 10:00:00 1 lcfd Clean Shutdown\n\n## Solution\n\nAppliquer le dernier patch LCF (4.1.1-LCF-0020) disponible à l'adresse\nsuivante :\n\n    http://www-1.ibm.com/support/docview.wss?uid=swg24009815\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "IBM:",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=swg21210334"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-252",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-07-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "IBM Tivoli Management Framework propose une interface de gestion à\ndistance des Tivoli Management Endpoint qui , une fois installés sur des\ncomposantes du système d'information, permettent de gérer et de\nsurveiller leur niveau de sécurité.  \n\nLe sous-composant LCF gère l'interfaçage réseau de cette solution.  \n\nUn problème dans la gestion de certaines connexions au niveau de ce\nsous-composant provoque un déni de service.\n",
+  "title": "Vulnérabilité de IBM Tivoli",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin IBM 1210334",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Versions antérieures au firmware A20-00 (590G.GS00100).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois vulnérabilités ont été corrigées dans le produit Dell PowerVaul\nML6000. La permière est accessible par un utilisateur non authentifié,\nla faille est de type « inclusion de fichier » et touche la page «\nlogShow.htm ». La deuxième permet une injection de code dite XSS dans la\npage « checkQKMProg.html ». La troisième touche la page «\nsaveRestore.htm » (via une méthode POST) et permet une exécution de\ncommandes arbitaires avec les droits de l'utilisateur « root ».\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Note de vulnérabilité de l'US-CERT VU#913483 du 19 mars    2012 :",
+      "url": "http://www.kb.cert.org/vuls/id/913483"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-159",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-03-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été corrigées dans le produit <span\nclass=\"textit\">Dell PowerVaul ML6000</span>. L'exploitation de ces\nvulnérabilités pouvait conduire à une prise de contrôle du serveur.\n",
+  "title": "Multiples vulnérabilités dans Dell PowerVaul ML6000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VU#913483",
+      "url": null
+    }
+  ]
+}

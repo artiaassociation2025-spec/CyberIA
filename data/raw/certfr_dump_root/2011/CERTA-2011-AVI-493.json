@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tous les systèmes utilisant des  certificats SSL pour l'authentification, en particulier les  navigateurs.</p>",
+  "content": "## Description\n\nUne vulnérabilité de l'autorité de certification (CA) DigiNotar a permis\nl'émission frauduleuse de certificats sur plusieurs domaines.\n\nL'un de ces faux certificats a été utilisé pour monter une attaque\ntrompant les internautes.\n\n## Solution\n\nCertains éditeurs ont supprimé se la liste des certificats préinstallés\ndans leurs logiciels, ou simplement ou desactivé, le certificat de\nl'autorité DigiNotar.\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de la fondation Mozilla    2011/mfsa2011-34 du 30 août 2011 :",
+      "url": "http://www.mozilla.org/security/announce/2011/mfsa2011-34.html"
+    },
+    {
+      "title": "Bulletin du GOVCERT.NL du 31 août 2011 :",
+      "url": "http://www.govcert.nl/english/service-provision/knowledge-and-publication/factsheets/factsheet-fraudulent-issued-security-certificat-discovered.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 2299 du 31 août 2011 :",
+      "url": "http://www.debian.org/security/2011/dsa-2299"
+    },
+    {
+      "title": "Bulletin de sécurité Apple HT4920 du 09 septembre 2011 :",
+      "url": "http://support.apple.com/kb/HT4920"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft 2607712 du 29 août 2011 :",
+      "url": "http://www.microsoft.com/france/technet/security/advisory/2607712.mspx"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-493",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-09-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Apple.",
+      "revision_date": "2011-09-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Des certificats frauduleux ont été émis par une autorité de\ncertification et peuvent servir à authentifier à tort des ordinateurs.\n",
+  "title": "Certificats SSL frauduleux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Billet de l'US-CERT du 30 août 2011",
+      "url": "http://www.us-cert.gov/current/#fraudulent_diginotar_ssl_certificate"
+    }
+  ]
+}

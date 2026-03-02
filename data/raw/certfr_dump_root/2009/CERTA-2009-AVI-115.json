@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD 7.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 7.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn manque de contrôle dans la mise en œuvre de timers présents dans le\nnoyau du système d'exploitation FreeBSD permet à un utilisateur local de\nmodifier des zones mémoire arbitraires du noyau. Il lui est ainsi\npossible de contourner la politique de sécurité du système ou de\nmodifier les privilèges de certains processus.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-09:06.ktimer du 23 mars    2009 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-09:06.ktimer.asc"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-115",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-03-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le noyau de FreeBSD permet à un\nutilisateur local de contourner la politique de sécurité du système ou\nd'élever ses privilèges.\n",
+  "title": "Vulnérabilité du noyau FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD-SA-09:06.ktimer du 23 mars 2009",
+      "url": null
+    }
+  ]
+}

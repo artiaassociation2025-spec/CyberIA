@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Secure ACS versions 3.3.x antérieures à la version 3.3.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Secure ACS Solution Engine versions 3.x antérieures à la version 3.3.2;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité due à un problème sur le traitement des certificats\npermet à un utilisateur mal intentionné, via l'utilisation d'un\ncertificat malicieusement construit, de contourner l'authentification en\nmode EAP-TLS (Extensible Authentication Protocol Transport Layer\nSecurity).\n\n## Solution\n\nMettre à jour en appliquant le correctif disponible sur le site de\nl'éditeur ou remplacer la bibliothèque CSCRL.dll corrigée.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site internet Cisco :",
+      "url": "http://www.cisco.com"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco :",
+      "url": "http://www.cisco.com/en/US/products/products_security_advisory09186a008033320e.shtml"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-359",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-11-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation des privilèges"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans Cisco Secure ACS et Cisco Secure ACS\nSolution Engine permet à un utilisateur mal intentionné de contourner\nl'authentification.\n",
+  "title": "Vulnérabilité dans Cisco Secure ACS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO",
+      "url": null
+    }
+  ]
+}

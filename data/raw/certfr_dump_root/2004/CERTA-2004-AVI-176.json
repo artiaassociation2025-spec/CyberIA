@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "FreeBSD 5.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "FreeBSD 4.8, 4.9 et 4.10 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "FreeBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa primitive système msync() permet aux applications de demander\nl'écriture de pages mémoires modifiées sur le disque. Des erreurs de\nprogrammation de cette fonction peuvent conduire à une corruption du\ncache entre la mémoire virtuelle et le contenu du disque. Cette\nvulnérabilité peut être utilisée par un utilisateur mal intentionné afin\nde porter atteinte à l'intégrité des données (empêcher les changements\neffectués sur un fichier d'être écrits sur le disque).\n\n## Solution\n\nAppliquer le correctif fourni par FreeBSD.\n\n-   Pour FreeBSD 5.2 :\n\n        ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/patches/SA-04:11/msync5.patch\n\n-   Pour FreeBSD 4.8, 4.9 et 4.10 :\n\n        ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/patches/SA-04:11/msync4.patch\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-176",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-05-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans FreeBSD permet à un utilisateur mal intentionné\nde porter atteinte à l'intégrité des données.\n",
+  "title": "Vulnérabilité de la primitive système msync de FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité FreeBSD FreeBSD-SA-04:11.msync",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-04:11.msync.asc"
+    }
+  ]
+}

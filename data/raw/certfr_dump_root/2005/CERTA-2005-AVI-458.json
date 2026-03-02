@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système Linux utilisant <TT>Openswan</TT> dans une  version 2 antérieure à la 2.4.4.</P>",
+  "content": "## Description\n\nOpenswan est une solution IPsec pour système d'exploitation Linux.\n\nUne faille dans le gestionnaire IKE des associations de sécurité peut\nêtre exploitée pour provoquer un déni de service. Par ailleurs, un\nproblème lié à la négociation du chiffrement 3DES est également corrigé.\n\n## Solution\n\nMettre à jour les sources en version 2.4.4 au moins, ou se référer au\nbulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf.\nsection Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2005-3671",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2005-3671"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité Openswan du 14 novembre 2005 :",
+      "url": "http://www.openswan.org/niscc2/"
+    },
+    {
+      "title": "Avis de sécurité de l'UNIRAS 273756/NISCC/ISAKMP du 14    novembre 2005 :",
+      "url": "http://www.uniras.gov.uk/niscc/docs/br-20051114-01013.html"
+    },
+    {
+      "title": "Note de vulnérabilité #226364 de l'US-CERT :",
+      "url": "http://www.kb.cert.org/vuls/id/226364"
+    },
+    {
+      "title": "Mise à jour de sécurité Fedora Core 4 FEDORA-2005-1093 du    21 novembre 2005 :",
+      "url": "http://www.redhat.com/archives/fedora-announce-list/2005-November/msg00058.html"
+    },
+    {
+      "title": "Mise à jour de sécurité Fedora Core 3 FEDORA-2005-1092 du    21 novembre 2005 :",
+      "url": "http://www.redhat.com/archives/fedora-announce-list/2005-November/msg00057.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200512-04 du 12 décembre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200512-04.xml"
+    },
+    {
+      "title": "Site internet d'Openswan :",
+      "url": "http://www.openswan.org"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2005:070 du 20 décembre    2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_70_ipsec.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-458",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2005-11-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins de sécurité Gentoo, Fedora Core 3 et 4, de la référence CVE, de la note de vulnérabilité US-CERT et correction du numéro de version des sources vulnérables ;",
+      "revision_date": "2005-12-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité SuSE.",
+      "revision_date": "2005-12-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service distant"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut envoyer des paquets volontairement\nmal formés au service IKE pour provoquer son arrêt et empêcher ainsi\nl'établissement de toute nouvelle connexion.\n",
+  "title": "Vulnérabilité de la solution IPsec Openswan",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité 273756/NISCC/ISAKMP de l'UNIRAS",
+      "url": null
+    }
+  ]
+}

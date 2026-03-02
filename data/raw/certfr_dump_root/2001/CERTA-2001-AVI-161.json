@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SCO OpenServer version 5.0.6 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Solaris versions 2.5.1, 2.6, 7 et 8.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM AIX versions 4.3 et 5.1 ;",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SGI IRIX 3.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire dans l'exécutable\n/bin/login permet à un utilisateur d'obtenir les privilèges de\nl'administrateur root.  \n\nLa fonction login n'est pas suid ; elle s'exécute donc avec les droits\nde celui qui l'appelle. Néanmoins, certaines applications, rlogind ou\ntelnetd par exemple, fonctionnent avec les droits de root et font appel\nà login.\n\nIl est alors possible par ce biais d'obtenir les droits de\nl'administrateur de la machine à distance.\n\n## Contournement provisoire\n\nLimitez l'accès aux ports suivants sur les gardes-barrières :\n\n-   23/tcp (telnet)\n-   513/tcp (rlogin)\n\n## Solution\n\nContactez votre distributeur pour obtenir une mise à jour.\n\nPour les systèmes SGI IRIX, il est conseillé d'évoluer vers une versions\nd'IRIX parmi les versions 4.x, 5.x ou 6.x, qui ne sont pas vulnérables.\n\nPour les systèmes Sun, se reporter à l'avis 41987 (cf. Documentation) et\nappliquer les correctifs suivant la version et l'architecture du\nsystème.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-161",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-12-13T00:00:00.000000"
+    },
+    {
+      "description": "première révision : précision des versions vulnérables de Solaris et ajout des alertes SUN et SGI.",
+      "revision_date": "2001-12-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de l'exécutable <span class=\"textit\">/bin/login</span>\npermet à un utilisateur mal intentionné d'obtenir à distance les\nprivilèges de l'administrateur <span class=\"textit\">root</span>.\n",
+  "title": "Vulnérabilité de l'exécutable login",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2001-34 du CERT/CC",
+      "url": "http://www.cert.org/advisories/CA-2001-34.html"
+    }
+  ]
+}

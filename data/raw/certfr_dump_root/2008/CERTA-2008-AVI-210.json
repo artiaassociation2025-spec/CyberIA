@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco NAC Appliance pour les versions de la branche 3.5.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco NAC Appliance pour les versions de la branche 3.6.x antérieures à 3.6.4.4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco NAC Appliance pour les versions de la branche 4.0.x antérieures à 4.0.6 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco NAC Appliance pour les versions de la branche 4.1.x antérieures à 4.1.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans Cisco NAC (Network Admission\nControl) Appliance. Elle permettrait à une personne malveillante\ndistante de récupérer via les journaux d'erreurs transmis dans le réseau\nun secret partagé entre les éléments de type CAS (Cisco Clean Access\nServer) et CAM (Cisco Clean Access Manager).\n\nCette exploitation peut donc conduire non seulement au contournement de\nla politique de sécurité appliquée, mais également au contrôle complet\ndu CAS.\n\n## Solution\n\nSe référer au bulletin de sécurité de Cisco pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1155",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1155"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20080416-nac du 16 avril 2008 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080416-nac.shtml"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-210",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-04-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans Cisco NAC (<span\nclass=\"textit\">Network Admission Control</span>) Appliance. Elle\npermettrait à une personne malveillante distante de récupérer des\ninformations pour contourner la politique de sécurité et de prendre le\ncontrôle de certains éléments servant à la mettre en place.\n",
+  "title": "Vulnérabilité dans Cisco NAC Appliance",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 100782 publié le 16 avril 2008",
+      "url": null
+    }
+  ]
+}

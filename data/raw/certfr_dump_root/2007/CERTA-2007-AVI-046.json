@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Sun Solaris 10.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Solaris 8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Sun Solaris 9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLa commande tip permet sous Sun Solaris de se connecter à un système\ndistant, par exemple via un port série. Sa configuration se trouve\nnormalement dans le fichier /etc/remote, et l'utilisateur uucp est\nassocié à ses privilèges d'accès.\n\nUne vulnérabilité de cette commande permettrait à un utilisateur\nmalveillant local d'exécuter du code arbitraire avec les privilèges de\nl'utilisateur uucp, quels que soient les siens.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0470",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0470"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sun Solaris #102773 du 23 janvier 2007    :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-102773-1"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-046",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de la commande tip dans Sun Solaris permettrait à une\npersonne malveillante locale d'élever ses privilèges sur le système\nvulnérable.\n",
+  "title": "Vulnérabilité dans Sun Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sun 102773 du 23 janvier 2007",
+      "url": null
+    }
+  ]
+}

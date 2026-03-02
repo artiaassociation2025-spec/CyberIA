@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les Sun RPC ainsi que des bibliothèques  dérivées du code d'origine sont disponibles sur de nombreuses  plate-formes de type Unix ou Linux.</p>",
+  "content": "## Description\n\nSun RPC (Remote Procedure Call) est un protocole de type client/serveur\nutilisé pour l'implémentation d'applications réparties.\n\nCelui-ci utilise de manière transparente le protocole XDR (eXternal Data\nRepresentation) afin de résoudre les problèmes de non unicité de\nreprésentation interne des objets entre différentes machines.\n\nUne vulnérabilité a été découverte dans la fonction xdrmem_getbytes. Un\nutilisateur mal intentionné peut exploiter cette vulnérabilité à travers\nune application utilisant cette fonction (telle rpcbind sous Solaris)\nafin d'exécuter du code arbitraire à distance ou réaliser un déni de\nservice.\n\nCette vulnérabilité est également présente dans de nombreuses\napplications utilisant des bibliothèques dérivées de la bibliothèque Sun\nRPC (libc, glibc, etc. ), notamment kadmind, le système d'administration\nde Kerberos 5.\n\n## Contournement provisoire\n\nEn attendant d'appliquer les correctifs, il est conseillé de :\n\n-   filtrer l'accès au RPC Portmapper (111/tcp et udp) ;\n-   filtrer l'accès aux applications RPC (correspondant généralement à\n    la plage des ports hauts) ;\n-   arrêter les services RPC utilisant la fonction vulnérable ;\n-   arrêter les services RPC non utilisés.\n\n## Solution\n\nAppliquer le correctif selon l'éditeur:\n\n-   Bulletin de sécurité 2003-03 du MIT :\n\n        http://web.mit.edu/kerberos/www/advisories/MITKRB5-SA-2003-003-xdr.txt\n\n-   Bulletin de sécurité HPSBUX0303-252 \"Potential security\n    vulnerability in xdrmem_getbytes()\" de Hewlett-Packard :\n\n        http://itrc.hp.com/cki/bin/doc.pl/screen=ckiSecurityBulletin\n\n-   Bulletin de sécurité MSS-OAR-E01-2003.0371 \"Integer overflow in\n    various RPC implementations\" d'IBM :\n\n        http://www-1.ibm.com/services/continuity/recover1.nsf/MSS/MSS-OAR-E01-2003.0371.1\n\n-   Bulletin de sécurité RHSA-2003:089 de Red Hat :\n\n        https://rhn.redhat.com/errata/RHSA-2003-089.html\n\n-   Bulletin de sécurité RHSA-2003:051 de Red Hat :\n\n        https://rhn.redhat.com/errata/RHSA-2003-051.html\n\n-   Bulletin de sécurité RHSA-2003:091 de Red Hat :\n\n        https://rhn.redhat.com/errata/RHSA-2003-091.html\n\n-   Bulletin de sécurité \\#51884 de Sun :\n\n        http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert/51884\n\n-   Bulletin de sécurité FreeBSD-SA-03:05 \"Remote denial-of-service in\n    XDR encoder/decoder\" de FreeBSD :\n\n        ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-03%3A05.xdr.asc\n\n-   Bulletin de sécurité DSA-266 de Debian :\n\n        http://www.debian.org/security/2003/dsa-266\n\n-   Bulletin de sécurité DSA-272 de Debian :\n\n        http://www.debian.org/security/2003/dsa-272\n\n-   Bulletin de sécurité DSA-282 de Debian :\n\n        http://www.debian.org/security/2003/dsa-282\n\n-   Bulletin de sécurité MDKSA-2003:037 de Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:037\n\n-   Bulletin de sécurité MDKSA-2003:043 de Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:043\n\n-   Bulletin de sécurité NetBSD-SA2003-008 de NetBSD :\n\n        ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2003-008.txt.asc\n\n-   Bulletin de sécurité 200303-22 de gentoo :\n\n        http://www.securityfocus.com/advisories/5161\n\n-   Bulletin de sécurité 200303-28 de gentoo :\n\n        http://www.securityfocus.com/advisories/5203\n\n-   Bulletin de sécurité 200303-29 de gentoo :\n\n        http://www.securityfocus.com/advisories/5206\n\n-   Bulletin de sécurité 20030402-01-P de SGI :\n\n        ftp://patches.sgi.com/support/free/security/advisories/20030402-01-P\n\n-   Bulletin de sécurité SuSE-SA:2003:027 de SuSE :\n\n        http://www.suse.com/de/security/2003_027_glibc.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis CA-2003-10 \"Integer overflow in Sun RPC library    routines\" du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2003-10.html"
+    },
+    {
+      "title": "Bulletin de sécurité \"XDR Integer Overflow\" de eEye Digital    Security :",
+      "url": "http://www.eye.com/html/Research/Advisories/AD20030318.html"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-052",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de Sun et FreeBSD. Mention pour rpcbind (Solaris).",
+      "revision_date": "2003-03-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de Debian, Mandrake, gentoo, NetBSD. Ajout référence CVE.",
+      "revision_date": "2003-03-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de Gentoo, Red Hat, Mandrake relatifs à kadmind. Ajout références aux bulletins de Gentoo, Debian relatifs à dietlibc.",
+      "revision_date": "2003-04-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de Debian et SGI relatifs à Glibc.",
+      "revision_date": "2003-04-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de SuSE relatif à Glibc.",
+      "revision_date": "2003-05-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans la fonction xdrmem_getbytes\nutilisée dans les Sun RPC.\n",
+  "title": "Vulnérabilité dans les Sun RPC",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2003-10 du CERT/CC",
+      "url": null
+    }
+  ]
+}

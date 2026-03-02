@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Serveur <SPAN class=\"textit\">Apache  Geronimo</SPAN> versions 2.1.5 et inférieures.</p>",
+  "content": "## Description\n\n-   Une vulnérabilité (CVE-2010-1622) dans le composant SpringSource\n    Spring Framework permet à un attaquant d'exécuter du code arbitraire\n    via une requête HTTP contenant l'adresse d'un fichier jar ;\n-   une erreur dans la gestion des DTD inclus dans les messages SOAP\n    engendre une vulnérabilité dans le composant Apache Axis2\n    (CVE-2010-1632) et Apache CXF (CVE-2010-2076). Elle permet à un\n    utilisateur malveillant de déclencher des requêtes HTTP à des\n    serveurs de l'intranet, de lire des fichiers arbitraires, et causer\n    un déni de service par consommation excessive de ressources système.\n\n## Solution\n\nLa version 2.1.6 de Apache Geronimo contient les versions corrigées de\nces différents modules.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-1632",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1632"
+    },
+    {
+      "name": "CVE-2010-2076",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2076"
+    },
+    {
+      "name": "CVE-2010-1622",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1622"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Apache Geronimo :",
+      "url": "http://geronimo.apache.org/21x-security-report.html"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-387",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-08-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Des vulnérabilités concernant les composants d'<span\nclass=\"textit\">Apache Geronimo</span> permettent notamment à un\nutilisateur malveillant d'exécuter du code arbitraire à distance et de\nréaliser un déni de service.\n",
+  "title": "Vulnérabilités dans Apache Geronimo",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Notes de version de Geronimo 2.1.6",
+      "url": null
+    }
+  ]
+}

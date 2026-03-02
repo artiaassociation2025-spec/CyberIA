@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Visual Basic pour Applications SDK 5.0, 6.0, 6.2 et  6.3.</P>  <P>Ces versions de Visual Basic pour Applications sont incluses  dans les produits suivants :</P>  <UL>    <LI>Microsoft Access 97, 2000 et 2002 ;</LI>    <LI>Microsoft Excel 97, 2000 et 2002 ;</LI>    <LI>Microsoft PowerPoint 97, 2000 et 2002 ;</LI>    <LI>Microsoft Project 2000 et 2002 ;</LI>    <LI>Microsoft Publisher 2002 ;</LI>    <LI>Microsoft Visio 2000 et 2002 ;</LI>    <LI>Microsoft Word 97, 98(J), 2000 et 2002 ;</LI>    <LI>Microsoft Works Suite 2001, 2002 et 2003 ;</LI>    <LI>Microsoft Business Solutions Great Plains 7.5 ;</LI>    <LI>Microsoft Business Solutions Dynamics 6.0 et 7.0 ;</LI>    <LI>Microsoft Business Solutions eEnterprise 6.0 et 7.0 ;</LI>    <LI>Microsoft Business Solutions Solomon 4.5, 5.0 et 5.5.</LI>  </UL>",
+  "content": "## Description\n\nMicrosoft Visual Basic pour Applications (VBA) est un outil de\ndéveloppement qui permet de personnaliser des progiciels et de les\nintégrer à des données et à des systèmes existants.\n\nLes produits de la suite Microsoft Office font appel à VBA pour exécuter\ncertaines fonctions.\n\nUne vulnérabilité dans la vérification des propriétés d'un document lors\nde son ouverture par VBA permet l'exécution de code arbitraire sur la\nmachine. Les documents habilement construits permettant l'exploitation\nde la vulnérabilité sont ceux reconnus par un produit incluant VBA\n(documents Word, Excel, Access...). Dans le cas où Microsoft Word est\nutilisé comme éditeur HTML par Microsoft Outlook, le document est alors\nun mèl, et la vulnérabilité ne peut être exploitée que si un utilisateur\nrépond ou transfère ce message.\n\n## Solution\n\nInstaller le correctif indiqué à l'adresse suivante :\n\n    http://www.microsoft.com/technet/security/bulletin/ms03-037.asp\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-147",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-09-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Visual Basic pour Applications (VBA) permet\nl'exécution de code arbitraire.\n",
+  "title": "Vulnérabilité dans Visual Basic pour Applications (VBA)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis MS03-037 de Microsoft",
+      "url": null
+    }
+  ]
+}

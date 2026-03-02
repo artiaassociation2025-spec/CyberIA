@@ -1,0 +1,89 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Ethereal versions 0.10.13 et  antérieures.</p>",
+  "content": "## Description\n\nLe logiciel Ethereal permet de capturer des trames réseau et d'effectuer\nde multiples actions sur celles-ci afin de faciliter leur analyse.  \nUne vulnérabilité de type débordement de mémoire dans la fonction\ndissect_ospf_v3_address_prefix(), fonction impliquée dans le traitement\ndu protocole OSPF, permet à un utilisateur mal intentionné de réaliser\ndes dénis de service ou d'exécuter du code arbitraire à distance sur la\nplate-forme vulnérable.\n\n## Contournement provisoire\n\nIl est possible de désactiver l'interprétation OSPF par Ethereal :\n\n-   Sur plate-forme UNIX : echo ospf » /.ethereal/disabled_protos ;\n-   sur plate-forme Windows : ajouter ospf au fichier disabled_protos\n    qui se trouve dans le répertoire des préférences de l'utilisateur\n    (typiquement %APPDATA%/TT\\>).\n\n## Solution\n\nMettre à jour Ethereal à partir du code source en utilisant le dernier\ncode source disponible via subversion (vérifier que le fichier\npacket-ospf.c est en révision 16507 ou toute révision supérieure).  \nDans tous les cas, se référer au bulletin de l'éditeur pour l'obtention\nde correctifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité iDEFENSE #349 du 09 décembre 2005 :",
+      "url": "http://www.idefense.com/application/poi/display?id=349&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité Ethereal enpa-sa-00022 du 27 décembre    2005 :",
+      "url": "http://www.ethereal.com/appnotes/enpa-sa-0002.html"
+    },
+    {
+      "title": "La version 0.10.14 d'Ethereal est disponible à l'adresse    suivante :",
+      "url": "http://www.ethereal.com/download.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200512-06 du 14 décembre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200512-06.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:227 du 14 décembre    2005 :",
+      "url": "http://frontal2.mandriva.com/security/advisories?name=MDKSA-2005:227"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0156 du 11 janvier    2006 :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2006-0156.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:002 du 03 janvier    2006 :",
+      "url": "http://frontal2.mandriva.com/security/advisories?name=MDKSA-2006:002"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SR:2006:004 du 24 février    2006 :",
+      "url": "http://www.novell.com/linux/security/advisories/2006_04_sr.html"
+    },
+    {
+      "title": "Site Internet de Ethereal :",
+      "url": "http://www.ethereal.com"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-487",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-12-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Mandriva et Gentoo.",
+      "revision_date": "2005-12-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Ethereal.",
+      "revision_date": "2005-12-29T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva.",
+      "revision_date": "2006-01-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat.",
+      "revision_date": "2006-01-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SUSE.",
+      "revision_date": "2006-02-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Ethereal permet à un utilisateur mal intentionné\nde réaliser des dénis de service ou d'exécuter du code arbitraire à\ndistance sur la plate-forme vulnérable.\n",
+  "title": "Vulnérabilité de Ethereal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-920 du 13 décembre 2005",
+      "url": "http://www.debian.org/security/2005/dsa-920"
+    }
+  ]
+}

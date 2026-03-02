@@ -1,0 +1,84 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Symantec Norton SystemWorks 2006 à 2008.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec Norton Antivirus 2006 à 2008 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Norton 360 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Symantec Norton Internet Security 2006 à 2008 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Symantec",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans des produits Symantec :\n\n-   une erreur de type débordement de mémoire dans le contrôle ActiveX\n    symadata.dll ;\n-   une erreur de conception dans le processus utilisé pour lancer\n    l'outil AutoFix dans ce même contrôle ActiveX.\n\nCes failles permettent à une personne malintentionnée d'exécuter du code\narbitraire à distance. Ce contrôle ActiveX est toutefois verrouillé sur\ndes sites de confiance de Symantec.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0313",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0313"
+    },
+    {
+      "name": "CVE-2008-0312",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0312"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Symantec SYM08-009 du 02 avril 2008 :",
+      "url": "http://securityresponse.symantec.com/avcenter/security/Content/"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-182",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-04-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans des produits Symantec permettent à une personne\nmalveillante d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans des produits Symantec",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Symantec SVM08-009 du 02 avril 2008",
+      "url": null
+    }
+  ]
+}

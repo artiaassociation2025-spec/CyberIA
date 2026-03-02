@@ -1,0 +1,100 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "LibreNMS versions antérieures à 26.2.0",
+      "product": {
+        "name": "LibreNMS",
+        "vendor": {
+          "name": "LibreNMS",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "LibreNMS versions postérieures à 24.10.0 et antérieures à 26.2.0 pour composer",
+      "product": {
+        "name": "LibreNMS",
+        "vendor": {
+          "name": "LibreNMS",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-26988",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-26988"
+    },
+    {
+      "name": "CVE-2026-26990",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-26990"
+    },
+    {
+      "name": "CVE-2026-26989",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-26989"
+    },
+    {
+      "name": "CVE-2026-26987",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-26987"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0174",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-02-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Injection SQL (SQLi)"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans LibreNMS. Elles permettent à un attaquant de provoquer une injection SQL (SQLi) et une injection de code indirecte à distance (XSS).",
+  "title": "Multiples vulnérabilités dans LibreNMS",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-02-17",
+      "title": "Bulletin de sécurité LibreNMS GHSA-79q9-wc6p-cf92",
+      "url": "https://github.com/librenms/librenms/security/advisories/GHSA-79q9-wc6p-cf92"
+    },
+    {
+      "published_at": "2026-02-17",
+      "title": "Bulletin de sécurité LibreNMS GHSA-fqx6-693c-f55g",
+      "url": "https://github.com/librenms/librenms/security/advisories/GHSA-fqx6-693c-f55g"
+    },
+    {
+      "published_at": "2026-02-17",
+      "title": "Bulletin de sécurité LibreNMS GHSA-h3rv-q4rq-pqcv",
+      "url": "https://github.com/librenms/librenms/security/advisories/GHSA-h3rv-q4rq-pqcv"
+    },
+    {
+      "published_at": "2026-02-17",
+      "title": "Bulletin de sécurité LibreNMS GHSA-93fx-g747-695x",
+      "url": "https://github.com/librenms/librenms/security/advisories/GHSA-93fx-g747-695x"
+    },
+    {
+      "published_at": "2026-02-17",
+      "title": "Bulletin de sécurité LibreNMS GHSA-5pqf-54qp-32wx",
+      "url": "https://github.com/librenms/librenms/security/advisories/GHSA-5pqf-54qp-32wx"
+    },
+    {
+      "published_at": "2026-02-17",
+      "title": "Bulletin de sécurité LibreNMS GHSA-6xmx-xr9p-58p7",
+      "url": "https://github.com/librenms/librenms/security/advisories/GHSA-6xmx-xr9p-58p7"
+    },
+    {
+      "published_at": "2026-02-17",
+      "title": "Bulletin de sécurité LibreNMS GHSA-gqx7-99jw-6fpr",
+      "url": "https://github.com/librenms/librenms/security/advisories/GHSA-gqx7-99jw-6fpr"
+    }
+  ]
+}

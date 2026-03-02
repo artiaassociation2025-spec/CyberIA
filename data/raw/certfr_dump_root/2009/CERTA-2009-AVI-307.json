@@ -1,0 +1,56 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apple iPhone OS pour les versions antérieures à la 3.0.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans la gestion téléphonique du\nsystème d'exploitation Apple iPhone OS. Ce dernier ne manipulerait pas\ncorrectement les messages au format SMS (Short Message Service) qui lui\nsont destinés (format SMS_DELIVER). La vulnérabilité repose en\nparticulier sur les messages découpés en plusieurs morceaux (qui\ndépassent donc la limitation de 140 octets ou 160 caractères 7-bits) en\njouant sur le nombre de morceaux précisé dans l'en-tête SMS et le nombre\nde messages partiels réellement envoyés.\n\nCette vulnérabilité peut être exploitée par une personne malveillante\ndistante pour perturber le service de téléphonie ou exécuter des\ncommandes arbitraires sur l'équipement mobile.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2204",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2204"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Apple HT3754 du 31 juillet 2009 :",
+      "url": "http://support.apple.com/kb/HT3754"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-307",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans la gestion téléphonique du\nsystème d'exploitation Apple iPhone OS. Elle peut être exploitée par une\npersonne malveillante distante pour perturber le service de téléphonie\nou exécuter des commandes arbitraires.\n",
+  "title": "Vulnérabilité de l'OS iPhone d'Apple",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité KB HT3754 du 31 juillet 2009",
+      "url": null
+    }
+  ]
+}

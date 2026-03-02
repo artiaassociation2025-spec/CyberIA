@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<SPAN class=\"textit\">Wordpress</SPAN>,  versions 2.0.6 et antérieures.",
+  "content": "## Description\n\nLes vulnérabilités sont de plusieurs ordres :\n\n-   une vulnérabilité dans wp-admin/templates.php permet l'injection de\n    scripts ou de code HTML ;\n-   lorsque le paramétrage PHP active l'option mbstring, une personne\n    malintentionnée peut contourner le système de protection des\n    requêtes SQL et ainsi exécuter des commandes SQL arbitraires ;\n-   les messages d'erreur retournés par wp-login.php sont différents\n    selon l'existence ou non de l'utilisateur, ce qui facilite la\n    préparation d'attaques par recherche exhaustive.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-6808",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-6808"
+    },
+    {
+      "name": "CVE-2007-0109",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0109"
+    },
+    {
+      "name": "CVE-2007-0107",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0107"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de Wordpress du 15    janvier 2007 :",
+      "url": "http://wordpress.org/"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-034",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "<span class=\"textit\">Wordpress</span> est une plateforme de publication\nweb écrite en langage PHP. Des vulnérabilités permettent des atteintes à\nla disponibilité et à l'intégrité des données.\n",
+  "title": "Vulnérabilité de Wordpress",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Wordpress du 15 janvier 2007",
+      "url": null
+    }
+  ]
+}

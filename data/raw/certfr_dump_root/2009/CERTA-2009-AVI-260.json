@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Cisco ASA software versions antérieures à la 8.0.4(34)    ;</LI>    <LI>Cisco ASA software versions antérieures à la 8.1.2(25)    ;</LI>    <LI>Cisco ASA software versions antérieures à la 8.2.1(3).</LI>  </UL>  <P>Toutes ces versions sont vulnérables lorsqu'elles sont  installées sur les équipements Cisco ASA 5505, 5510, 5520, 5540,  5550 et 5580.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans Cisco ASA Software :\n\n-   un manque de restriction à l'accès au Document Object Model (DOM)\n    permet à une personne malintentionnée d'effectuer une injection de\n    code indirecte ;\n-   un manque de contrôle sur le paramètre Rot13-encoded permet à une\n    personne malintentionnée d'effectuer une injection de code indirecte\n    ;\n-   un manque de contrôle et d'alerte lors de l'utilisation de Common\n    Internet File System (CIFS) et des partages FTP permet à une\n    personne malintentionnée de voler les données d'identification d'un\n    utilisateur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1202",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1202"
+    },
+    {
+      "name": "CVE-2009-1201",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1201"
+    },
+    {
+      "name": "CVE-2009-1203",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1203"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin d'alerte Cisco 18536 du 24 juin 2009 :",
+      "url": "http://tools.cisco.com/security/center/viewAlert.x?alertId=18536"
+    },
+    {
+      "title": "Bulletin d'alerte Cisco 18442 du 24 juin 2009 :",
+      "url": "http://tools.cisco.com/security/center/viewAlert.x?alertId=18442"
+    },
+    {
+      "title": "Bulletin d'alerte Cisco 18373 du 24 juin 2009 :",
+      "url": "http://tools.cisco.com/security/center/viewAlert.x?alertId=18373"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-260",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-06-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectant Cisco ASA software permettent à une\npersonne malintentionnée de porter atteinte à la confidentialité des\ndonnées et d'effectuer une injection de code indirecte.\n",
+  "title": "Multiples vulnérabilités dans Cisco Adaptive Security Appliance",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins d'alerte Cisco 18373, 18442 et 18536 du 24 juin 2009",
+      "url": null
+    }
+  ]
+}

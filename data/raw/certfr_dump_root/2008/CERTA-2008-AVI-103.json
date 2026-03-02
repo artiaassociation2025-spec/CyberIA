@@ -1,0 +1,89 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VMware ESX Server 2.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware ESX Server 3.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités dans VMware ESX Server ont été découvertes :\n\n-   une erreur dans le pilote aacraid SCSI permet à un utilisateur local\n    de provoquer un déni de service ou une élévation de privilèges ;\n-   une vulnérabilité dans Samba permet à une personne malveillante\n    ayant accès à la console de service de provoquer un déni de service\n    ou d'exécuter du code arbitraire à distance ;\n-   plusieurs vunérabilités dans le module python permettent de\n    provoquer un déni de service, d'exécuter du code arbitraire ou\n    d'atteindre à la confidentialité des données.\n\n## Solution\n\nSe référer au bulletin de sécurité de VMware pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-6015",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6015"
+    },
+    {
+      "name": "CVE-2006-7228",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-7228"
+    },
+    {
+      "name": "CVE-2007-4308",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4308"
+    },
+    {
+      "name": "CVE-2007-2052",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2052"
+    },
+    {
+      "name": "CVE-2007-4965",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4965"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité VMware VMSA-2008-0003 du 04 février    2008 :",
+      "url": "http://www.vmware.com/security/advisories/VMSA-2008-0003.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-103",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-22T00:00:00.000000"
+    },
+    {
+      "description": "correction du lien vers le bulletin de sécurité VMware.",
+      "revision_date": "2008-02-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans VMware ESX Server permettent à une\npersonne malintentionnée d'élever ses privilèges, d'atteindre à la\nconfidentialité des données, d'exécuter du code arbitraire ou de\nprovoquer un déni de service.\n",
+  "title": "Multiples vulnérabilités dans VMware ESX Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware VMSA-2008-0003 du 04 février 2008",
+      "url": null
+    }
+  ]
+}

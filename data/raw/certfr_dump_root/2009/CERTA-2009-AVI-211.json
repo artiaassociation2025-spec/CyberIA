@@ -1,0 +1,123 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache Tomcat versions 4.1.39 et antérieures ;",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat versions 6.0.18 et antérieures.",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat versions 5.5.27 et antérieures ;",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans Apache Tomcat :\n\n-   la première est relative à une erreur dans le traitement de certains\n    en-têtes HTTP par le composant AJP Connector. Elle permet à un\n    utilisateur distant de provoquer un déni de service ;\n-   la deuxième concerne certaines fonctionnalités d'authentification et\n    permet à un personne distante d'obtenir des identifiants valides\n    d'utilisateur via des requêtes particulières ;\n-   la troisième est relative à la gestion des fichiers web.xml et tld\n    qui peuvent être modifiés par une application particulière dans une\n    autre application si celles-ci sont dans la même instance de Tomcat\n    ;\n-   la quatrième est due à une vulnérabilité dans le RequestDispatcher\n    et permet à un utilisateur malintentionné d'accéder à des données\n    sensibles ;\n-   la dernière est due à une erreur dans le calendrier permettant de\n    réaliser une attaque par injection de code indirecte.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0580",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0580"
+    },
+    {
+      "name": "CVE-2009-0033",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0033"
+    },
+    {
+      "name": "CVE-2009-0781",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0781"
+    },
+    {
+      "name": "CVE-2009-0783",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0783"
+    },
+    {
+      "name": "CVE-2008-5515",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-5515"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HP-UX du 21 octobre 2009 :",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c01908935"
+    },
+    {
+      "title": "Bulletins de sécurité Tomcat :",
+      "url": "http://tomcat.apache.org/security-5.html"
+    },
+    {
+      "title": "Bulletins de sécurité Tomcat du 03 juin 2009 :",
+      "url": "http://marc.info/?l=tomcat-user&m=124404378413736&w=2"
+    },
+    {
+      "title": "Bulletins de sécurité Tomcat du 03 juin 2009 :",
+      "url": "http://marc.info/?l=tomcat-user&m=124404378913734&w=2"
+    },
+    {
+      "title": "Bulletins de sécurité Tomcat du 03 juin 2009 :",
+      "url": "http://marc.info/?l=tomcat-user&m=124412001618125&w=2"
+    },
+    {
+      "title": "Bulletins de sécurité Tomcat :",
+      "url": "http://tomcat.apache.org/security-6.html"
+    },
+    {
+      "title": "Bulletins de sécurité Tomcat :",
+      "url": "http://tomcat.apache.org/security-4.html"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-211",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2009-06-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout de référence CVE et du bulletin HP-UX.",
+      "revision_date": "2009-10-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans Apache Tomcat permettent à un\nutilisateur distant de provoquer un déni de service et de porter\natteinte à la confidentialité et à l'intégrité des données.\n",
+  "title": "Multiples vulnérabilités de Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Apache Tomcat du 03 juin 2009",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les commutateurs Catalyst 6000 fonctionnant avec CatOS ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tous les équipements CISCO possédant une version d'IOS supportant le protocole SSH ;",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les pare-feux PIX ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "la famille des commutateurs CSS 11000.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn correctif publié par CISCO afin de corriger certaines vulnérabilités\nSSH (Voir l'avis CERTA-2001-AVI-097 du CERTA) permet à un individu mal\nintentionné d'effectuer un déni de service. Effectivement, lors de\nl'envoi de paquets excessivement grands, le processus SSH va occuper une\npartie importante des cycles d'instructions du processeur causant un\ndéni de service.\n\n## Solution\n\nAppliquer les correctifs de CISCO selon les produits et leurs versions\n(cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité CISCO \"Scanning for SSH Can Cause Crash\"  :",
+      "url": "http://www.cisco.com/warp/public/707/SSH-scanning.shtml"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-138",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le correctif fourni par CISCO pour\ncorriger une vulnérabilité SSH sur certains équipements CISCO, permet à\nun individu mal intentionné d'effectuer un déni de service.\n",
+  "title": "Vulnérabilité CISCO aux scans SSH",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO : \"Scanning for SSH Can Cause a Crach\"",
+      "url": null
+    }
+  ]
+}

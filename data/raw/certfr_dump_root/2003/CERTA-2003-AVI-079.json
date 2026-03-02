@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les commutateurs Cisco Catalyst 4000,  6000 et 6500 utilisant Catalyst OS version 7.5(1).</p>",
+  "content": "## Description\n\nSelon Cisco, un utilisateur non autorisé peut obtenir un accès à un\nsystème vulnérable en local (via la console) ou à distance (accès ssh ou\ntelnet) sans connaissance d'un mot de passe valide.\n\nIl est également possible de passer en mode privilégié (\"enable\") et\nmodifier ainsi la configuration du commutateur.\n\n  \nLa vulnérabilité ne peut être exploitée que sur des configurations\nutilisant une authentification locale.\n\n## Contournement provisoire\n\nIl est possible de spécifier les machines pouvant accéder aux services\nssh et telnet du commutateur au moyen d'une liste de controle d'accès :\n\n    set ip permit <adresse> <masque> telnet\n    set ip permit <adresse> <masque> ssh\n    set ip permit enable\n\n## Solution\n\nLa version 7.6(1) de Cisco Catalyst OS corrige cette vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité de Cisco \"Cisco Catalyst  enable password bypass vulnerability\" :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20030424-catos.shtml"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-079",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-04-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès non autorisé"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité des commutateurs Catalyst de Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis Cisco",
+      "url": null
+    }
+  ]
+}

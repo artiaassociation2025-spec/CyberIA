@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GitLab Community Edition (CE) et Enterprise Edition (EE) versions antérieures à 13.8.2, 13.7.6 et 13.6.6",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "GitLab",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-22172",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-22172"
+    },
+    {
+      "name": "CVE-2021-22169",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-22169"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2021-AVI-075",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-02-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans GitLab. Elles\npermettent à un attaquant de provoquer un contournement de la politique\nde sécurité, une atteinte à la confidentialité des données et une\ninjection de code indirecte à distance (XSS).\n",
+  "title": "Multiples vulnérabilités dans GitLab",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité GitLab du 01 février 2021",
+      "url": "https://about.gitlab.com/releases/2021/02/01/security-release-gitlab-13-8-2-released/"
+    }
+  ]
+}

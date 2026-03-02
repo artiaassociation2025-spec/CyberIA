@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Office Publisher 2000 fourni dans la suite Microsoft Office 2000 Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Office Publisher 2002 fourni dans la suite Microsoft Office XP Service Pack 3 ;",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Office Publisher 2003 fourni dans la suite Microsoft Office 2003 Service Pack 1 et Service Pack 2.",
+      "product": {
+        "name": "Office",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPublisher est une application fournie par Microsoft servant à la\npublication de documents (logiciel PAO, pour publication assistée par\nordinateur).\n\nUne vulnérabilité a été identifiée dans ce dernier. Il ne contrôlerait\npas de manière correcte certaines chaînes de caractères malformées dans\ndes fichiers au format .pub.\n\nUne personne malveillante pourrait construire une fichier exploitant\ncette vulnérabilité, afin d'exécuter du code arbitraire sur le système\noù le document sera ouvert.\n\n## Solution\n\nSe référer au bulletin de sécurité MS06-054 de Microsoft pour\nl'application des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0001",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0001"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-054 du :",
+      "url": "http://www.microsoft.com/france/technet/security/bulletin/2006/MS06-054.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-054 du :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-054.mspx"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-389",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-09-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans certaines versions de\nl'application Microsoft Publisher. Une personne malveillante pourrait\nconstruire une fichier exploitant cette vulnérabilité, afin d'exécuter\ndu code arbitraire sur le système où le document sera ouvert.\n",
+  "title": "Vulnérabilité dans Microsoft Publisher",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-054 du 12 septembre 2006",
+      "url": null
+    }
+  ]
+}

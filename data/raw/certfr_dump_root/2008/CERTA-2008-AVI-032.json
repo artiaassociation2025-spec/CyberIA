@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Horde Application Framework 3.1.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Horde",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Horde Groupware Webmail Edition 1.0.3.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Horde",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IMP Webmail 4.1.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Horde",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe filtre HTML ne filtre pas les éléments de type \\<Frame\\>  et\n\\<Frameset\\>. De plus, certains utilisateurs peuvent adresser des\nrequêtes via HTTP, sans vérification de validité. Cela peut servir à\neffacer des messages et à les purger de la corbeille. L'exploitation de\ncette vulnérabilité exige l'ouverture du message malveillant par la\nvictime.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-6018",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-6018"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200802-03 du 11 février    2008 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200802-03.xml"
+    },
+    {
+      "title": "Site de téléchargement du projet Horde :",
+      "url": "http://ftp.horde.org/pub/horde/patches/patch-horde-3.1.5-3.1.6.gz"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1470-1 du 20 janvier 2008 :",
+      "url": "http://lists.debian.org/debian-security-announce/debian-security-announce-2008/msg00030.html"
+    },
+    {
+      "title": "Site de téléchargement du projet Horde :",
+      "url": "http://ftp.horde.org/pub/horde/horde-3.1.6.tar.gz"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-032",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2008-01-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian et Gentoo.",
+      "revision_date": "2008-02-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité de Horde permet d'exécuter du code abitraire à\ndistance, de contourner la politique de sécurité ou de porter atteinte à\nl'intégrité des données.\n",
+  "title": "Vulnérabilité de Horde3",
+  "vendor_advisories": []
+}

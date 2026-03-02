@@ -1,0 +1,110 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "HP-UX 10.10, 10.20, 10.24, 11.00, 11.04, 11.11 et 11.22 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris versions 2.5.1 à 9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM AIX 4.3, 5.1 et 5.2.",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SGI IRIX version 6.5.13 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe serveur xfs (XWindow Font Serveur) est utilisé sur les serveurs X\nWindow pour distribuer les polices de caractères aux clients X Window.\n\nUne vulnérabilité de type débordement de mémoire permet à un utilisateur\nmal intentionné d'exécuter, à distance, du code arbitraire sur la\nmachine vulnérable.\n\n## Contournement provisoire\n\nFiltrer au niveau du pare-feu le port 7100/tcp utilisé par xfs afin\nd'empêcher l'exploitation de cette vulnérabilité depuis l'Internet.\n\n## Solution\n\nSe référer aux bulletins de sécurité des différents éditeurs pour\nl'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité \"Solaris fs.auto Remote Compromise    Vulnerability\" d'ISS :",
+      "url": "http://bvlive01.iss.net/issEN/delivery/xforce/alertdetail.jsp?oid=21541"
+    },
+    {
+      "title": "Avis de sécurité \"Buffer Overflow Vulnerability in X Font    Server\" de SGI :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20021202-01-I"
+    },
+    {
+      "title": "Bulletin de sécurité HPSBUX0212-228 de Hewlett-Packard :",
+      "url": "http://itrc.hp.com"
+    },
+    {
+      "title": "Bulletin de sécurité #48879 de Sun :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert/48879"
+    },
+    {
+      "title": "Bulletin de sécurité IBM AIX :",
+      "url": "http://www-1.ibm.com/services/continuity/recover1.nsf/mss/MSS-OAR-E01-2003.1601.1"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-253",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-11-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité #48879 de Sun.",
+      "revision_date": "2002-11-28T00:00:00.000000"
+    },
+    {
+      "description": "suppression des mentions spécifiques à Solaris, ajout référence au bulletin de sécurité de SGI.",
+      "revision_date": "2002-12-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité HPSBUX0212-228 de Hewlett-Packard.",
+      "revision_date": "2002-12-10T00:00:00.000000"
+    },
+    {
+      "description": "ajout bulletin IBM et référence CVE.",
+      "revision_date": "2004-01-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité du service xfs permet à un utilisateur mal intentionné\nd'exécuter du code arbitraire, à distance, sur la machine vulnérable.\n",
+  "title": "Vulnérabilité de XFS (XWindow Font Server)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité CA-2002-34 du CERT/CC",
+      "url": "http://www.cert.org/Advisories/CA-2002-34.html"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous les serveurs de connexion <TT>telnet</TT>, dont les  sources sont issues de la version BSD (FreeBSD, OpenBSD, Windows  NT, SGI Irix, IBM Aix, Linux Debian, Mandrake, RedHat,  HP-UX...).</P>",
+  "content": "## Description\n\nUne vulnérabilité dans le traitement des options du protocole telnet\n(fonction telrcv) permet à un utilisateur mal intentionné d'exécuter à\ndistance, et sans authentification préalable, du code arbitraire sur le\nserveur telnet au moyen d'un débordement de mémoire dans cette fonction.\n\nNota : Le daemon telnetd est installé et lancé par défaut sur les\nsystèmes FreeBSD entre autres.\n\nNota : Sur certaines distributions de Linux (Mandrake, RedHat, Debian\n...), le service telnet est installé avec le paquetage netkit.\n\n## Contournement provisoire\n\n-   Si le service telnet n'est pas utilisé sur une machine, ou s'il est\n    temporairement impossible d'installer le correctif il faut arrêter\n    telnetd et l'empêcher de redémarrer.\n\n    Il est généralement lancé par le biais d'inetd ou xinetd.\n\n-   Dans la mesure du possible, le propriétaire d'un service tel que\n    telnet ne doit pas être root.\n\n-   Restreindre l'accès au service telnet au niveau des gardes-barrières\n    (le port standard pour le service telnet est 23/TCP).\n\n## Solution\n\nSe référer aux bulletins de sécurité des différents distributeurs pour\nappliquer les correctifs (Cf. paragraphe Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian concernant netkit-telnet :",
+      "url": "http://www.debian.org/security/2001/dsa-070"
+    },
+    {
+      "title": "Bulletin de sécurité SGI :",
+      "url": "http://patches.sgi.com/support/free/security/advisories/20010801-01-P"
+    },
+    {
+      "title": "Bulletin d'alerte #28063 de Sun :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F28063"
+    },
+    {
+      "title": "Bulletin de sécurité du CIAC :",
+      "url": "http://www.ciac.org/ciac/bulletins/m-006.shtml"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-081",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-07-25T00:00:00.000000"
+    },
+    {
+      "description": "seconde version : ajout des correctifs concernant les principales distributions Unix dans la rubrique Solution et modification du titre de l'avis.",
+      "revision_date": "2001-08-24T00:00:00.000000"
+    },
+    {
+      "description": "troisième version : Ajout d'informations concernant HP-UX.",
+      "revision_date": "2001-10-19T00:00:00.000000"
+    },
+    {
+      "description": "quatrième version : Ajout du bulletin d'alerte de Sun dans le paragraphe Documentation, reformulation du paragraphe Solution.",
+      "revision_date": "2002-06-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire avec les privilèges du daemon telnetd (le plus souvent root) à distance. des programmes exploitant cette vulnérabilité ont été diffusés sur l'internet"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut exécuter à distance, et sans\nauthentification préalable, du code arbitraire avec les privilèges de\nl'utilisateur propriétaire du <span class=\"textit\">daemon</span>\ntelnetd.\n",
+  "title": "Débordement de mémoire dans telnetd",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de différentes distributions Linux",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité FreeBSD-SA-01:49",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-01:49.telnetd.asc"
+    },
+    {
+      "published_at": null,
+      "title": "Avis CA-2001-21 du CERT/CC",
+      "url": "http://www.cert.org/advisories/CA-2001-21.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin d'alerte Sun #28063",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité SGI 20010801-01-P",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité M-006 du CIAC",
+      "url": null
+    }
+  ]
+}

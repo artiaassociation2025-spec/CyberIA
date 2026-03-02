@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Linux versions 2.4.22 à 2.4.25 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Linux versions 2.6.1 à 2.6.3.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité présente dans la fonction ip_setsockopt() peut être\nexploitée par un utilisateur mal intentionné afin de réaliser une\nélévation de privilèges.\n\n## Solution\n\nInstaller le noyau Linux à partir des sources, les versions 2.4.26 et\n2.6.4 (ou versions supérieures) corrigeant cette vulnérabilité, ou\nappliquer le correctif fournit par l'éditeur :\n\n-   Bulletin de sécurité RHSA-2004:183 de Red Hat pour Red Hat\n    Enterprise Linux :\n\n        https://rhn.redhat.com/errata/RHSA-2004-183.html\n\n-   Bulletin de sécurité MDKSA-2004:037 de Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:037\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet du noyau Linux :",
+      "url": "http://www.kernel.org"
+    },
+    {
+      "title": "Bulletin de sécurité de Isec Security Research du 20 avril    2004 :",
+      "url": "http://www.isec.pl/vulnerabilities/isec-0015-msfilter.txt"
+    },
+    {
+      "title": "Bulletin de sécurité de Isec Security Research du 20 avril    2004 :",
+      "url": "http://www.isec.pl/vulnerabilities04.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-139",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-04-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins MDKSA-2004:037 de Mandrake et RHSA-2004:183 de Red Hat.",
+      "revision_date": "2004-04-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le noyau Linux peut être exploitée par\nun utilisateur mal intentionné afin de réaliser une élévation de\nprivilèges.\n",
+  "title": "Vulnérabilité du noyau Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Isec Security Research du 20 avril 2004",
+      "url": null
+    }
+  ]
+}

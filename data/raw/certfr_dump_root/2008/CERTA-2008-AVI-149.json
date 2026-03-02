@@ -1,0 +1,93 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "VPN-1 Pro NGX R61 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VPN-1 / Firewall-1 NG with AI R55 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VPN-1 Power / UTM NGX R65 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VPN-1 Pro NGX R62 GA ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VPN-1 Pro NGX R60 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VPN-1 Power / UTM NGX R65 with Messaging Security.",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité permettant à une personne malveillante de cause un\ndéni de service à distance et/ou de porter atteinte à la confidentialité\ndes données a été découverte dans Checkpoint VPN-1. Cette faille\nconcerne le scénario suivant :\n\n-   deux passerelles A et B sont connectées et forment un tunnel VPN ;\n-   une machine C se connecte à la passerelle A. Elle a une IP qui est\n    également définie dans le domaine de chiffrement de la passerelle B,\n    ce qui cause des collisions ;\n-   les nouvelles connexions destinées à l'IP du domaine de chiffrement\n    seront alors transférées à la machine C.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs ou des changements à apporter dans la configuration (cf.\nsection Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2008-AVI-149",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-03-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Checkpoint VPN-1 permet à une personne\nmalintentionnée de causer un déni de service à distance et/ou de porter\natteinte à la confidentialité des données.\n",
+  "title": "Vulnérabilité dans Checkpoint VPN-1",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Checkpoint sk34579 du 18 mars 2008",
+      "url": "https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk34579"
+    }
+  ]
+}

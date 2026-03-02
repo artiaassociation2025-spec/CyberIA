@@ -1,0 +1,99 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Xen versions xen-unstable sans les correctifs de sécurité xsa477.patch et xsa479.patch",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen versions 4.18.x sans les correctifs de sécurité xsa477-4.18.patch et xsa479.patch",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen versions 4.19.x sans le correctif de securité xsa477.patch",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen version varstored master sans le correctif de sécurité xsa478.patch",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-23553",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-23553"
+    },
+    {
+      "name": "CVE-2025-58151",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-58151"
+    },
+    {
+      "name": "CVE-2025-58150",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-58150"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0091",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-01-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Xen. Certaines d'entre elles permettent à un attaquant de provoquer une élévation de privilèges, un déni de service à distance et une atteinte à la confidentialité des données.",
+  "title": "Multiples vulnérabilités dans Xen",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-01-27",
+      "title": "Bulletin de sécurité Xen xsa/advisory-477",
+      "url": "https://xenbits.xen.org/xsa/advisory-477.html"
+    },
+    {
+      "published_at": "2026-01-27",
+      "title": "Bulletin de sécurité Xen xsa/advisory-478",
+      "url": "https://xenbits.xen.org/xsa/advisory-478.html"
+    },
+    {
+      "published_at": "2026-01-27",
+      "title": "Bulletin de sécurité Xen xsa/advisory-479",
+      "url": "https://xenbits.xen.org/xsa/advisory-479.html"
+    }
+  ]
+}

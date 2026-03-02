@@ -1,0 +1,136 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BEA WebLogic Server et WebLogic Express version 7.0, ayant une mise à jour antérieure au Service Pack 7.",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA WebLogic Server et WebLogic Express version 8.1, ayant une mise à jour antérieure au Service Pack 5 ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans les produits BEA\nWebLogic. 23 sont citées sur le site de l'éditeur. Parmi celles-ci :\n\n-   le service de démarrage et d'arrêt du serveur par les utilisateurs\n    ayant un rôle Admin et Operator ne serait pas suffisamment contrôlé\n    ;\n-   les sites pourraient, sous certaines conditions, diffuser de\n    l'information contextuelle concernant le réseau interne, tels la\n    configuration du NAT, les adresses IPs des machines ou du serveur\n    DNS ;\n-   la confidentialité SSL pourrait être contournée par un utilisateur\n    distant, afin de récupérer des données en clair ;\n-   les certificats clients ne seraient pas correctement validés,\n    lorsque les connexions sont mises en cache par le serveur ;\n-   le module de WebLogic Server pour Apache ne manipulerait pas\n    correctement certaines erreurs, pouvant provoquer l'interruption du\n    service Apache ;\n-   les requêtes HTTP ne seraient pas vérifiées de manière correcte ;\n    une personne malveillante pourrait donc envoyer des paquets\n    spécialement construits, afin de récupérer des données de requêtes\n    HTTP précédentes ;\n-   etc.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0426",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0426"
+    },
+    {
+      "name": "CVE-2007-0416",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0416"
+    },
+    {
+      "name": "CVE-2007-0411",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0411"
+    },
+    {
+      "name": "CVE-2007-0424",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0424"
+    },
+    {
+      "name": "CVE-2007-0408",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0408"
+    },
+    {
+      "name": "CVE-2007-0420",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0420"
+    },
+    {
+      "name": "CVE-2007-0413",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0413"
+    },
+    {
+      "name": "CVE-2007-0418",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0418"
+    },
+    {
+      "name": "CVE-2007-0410",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0410"
+    },
+    {
+      "name": "CVE-2007-0414",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0414"
+    },
+    {
+      "name": "CVE-2007-0412",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0412"
+    },
+    {
+      "name": "CVE-2007-0422",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0422"
+    },
+    {
+      "name": "CVE-2007-0415",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0415"
+    },
+    {
+      "name": "CVE-2007-0421",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0421"
+    },
+    {
+      "name": "CVE-2007-0425",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0425"
+    },
+    {
+      "name": "CVE-2007-0409",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0409"
+    },
+    {
+      "name": "CVE-2007-0417",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0417"
+    },
+    {
+      "name": "CVE-2007-0419",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0419"
+    },
+    {
+      "name": "CVE-2007-0423",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0423"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-044",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-01-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans les produits BEA\nWebLogic. Ils permettraient à une personne malveillante de contourner de\ndiverses manières la politique de sécurité.\n",
+  "title": "Multiples vulnérabilités de BEA WebLogic",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité BEA du 16 janvier 2007",
+      "url": "http://dev2dev.bea.com/advisoriesnotifications/index.html"
+    }
+  ]
+}

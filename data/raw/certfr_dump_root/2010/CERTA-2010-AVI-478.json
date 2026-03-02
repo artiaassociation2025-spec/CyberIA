@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>RSA Authentication Client, versions  2.x, 3.x, 3.5.x. utilisé avec un appareil RSA SecurID 800.</p>",
+  "content": "## Description\n\nUn gestion défaillante des marqueurs SENSITIVE et NON-EXTRACTABLE permet\nà un utilisateur malveillant de récupérer les clefs secrètes par le\nbiais de l'API PKCS#11.\n\n## Solution\n\nLa version RSA Client Authentication 3.5.3 corrige cette erreur.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3321",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3321"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site de l'éditeur RSA :",
+      "url": "http://www.rsa.com/"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-478",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-10-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans RSA Authentication Client est exploitable par un\nutilisateur malveillant pour contourner la politique de sécurité.\n",
+  "title": "Vulnérabilité dans RSA Authentication Client",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin du NIST CVE-2010-3321",
+      "url": "http://nvd.nist.gov/nvd.cfm?cvename=CVE-2010-3321"
+    }
+  ]
+}

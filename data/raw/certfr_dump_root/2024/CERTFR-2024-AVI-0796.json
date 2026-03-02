@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cloud Services Appliance versions antérieures à 5.0",
+      "product": {
+        "name": "Cloud Service Appliance (CSA)",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "Ivanti a publié un correctif de sécurité pour la version 4.6 (Patch 519), mais précise que la branche 4.x est en fin de vie et encourage ses clients à migrer en version 5.0.",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2024-8963",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-8963"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité CERT-FR CERTFR-2024-AVI-0784 du 17 septembre 2024",
+      "url": "https://www.cert.ssi.gouv.fr/avis/CERTFR-2024-AVI-0784/"
+    }
+  ],
+  "reference": "CERTFR-2024-AVI-0796",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2024-09-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Ivanti Cloud Service Appliance (CSA). Elle permet à un attaquant de provoquer un contournement de la politique de sécurité.\n\nIvanti déclare que la vulnérabilité CVE-2024-8963 est activement exploitée dans le cadre d'attaques ciblées, en combinaison avec la vulnérabilité CVE-2024-8190.",
+  "title": "Vulnérabilité dans Ivanti Cloud Services Appliance",
+  "vendor_advisories": [
+    {
+      "published_at": "2024-09-19",
+      "title": "Bulletin de sécurité Ivanti",
+      "url": "https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-CSA-4-6-Cloud-Services-Appliance-CVE-2024-8963"
+    }
+  ]
+}

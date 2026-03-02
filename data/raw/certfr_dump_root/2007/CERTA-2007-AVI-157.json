@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache Tomcat versions antérieures à 5.5.22 ;",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat versions antérieures à 6.0.10.",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSous certaines conditions, comme l'utilisation d'un mode mandataire\n(proxy) tel que : mod_proxy, mod_rewrite ou mod_jk, un manque de contôle\nde l'adresse réticulaire (URL) permet à un utilisateur malveillant\nd'accèder à des informations présentes sur le serveur par le biais d'une\nrequête spécialement conçue.\n\n## Solution\n\nLes versions 5.5.22 et 6.0.10 d'Apache Tomcat corrigent le problème. Se\nréférer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0450",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0450"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Apache Tomcat 6.x :",
+      "url": "http://tomcat.apache.org/security-6.html"
+    },
+    {
+      "title": "Bulletin de sécurité Apache Tomcat 5.x :",
+      "url": "http://tomcat.apache.org/security-5.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-157",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-04-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans Apache Tomcat permet de contourner la\npolitique de sécurité.\n",
+  "title": "Vulnérabilité dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "bulletins de sécurité Apache Tomcat",
+      "url": null
+    }
+  ]
+}

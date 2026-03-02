@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Explorer 5.5 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 5.01 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 6.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Première vulnérabilité :\n\n    Sur Internet Explorer une notion de zone permet d'accorder\n    différents niveaux de confiance aux sites visités. Suivant ces\n    niveaux, plusieurs restrictions sont effectuées pour l'exécution de\n    code ou autre. Par principe, les sites Internet distants sont\n    considérés dans la Zone Internet. Un concepteur de site mal\n    intentionné peut créer un cookie composé de code HTML qui sera\n    déposé, lors de la visite sur le site, dans la machine cible.\n\n    Quand ce cookie sera à nouveau consulté, le code qu'il contient sera\n    automatiquement exécuté en Zone Locale et non Zone Internet\n    diminuant ainsi les restrictions.\n\n-   Seconde vulnérabilité :\n\n    L'objet CodeBase permet de définir l'emplacement où un fichier,\n    récupéré par le biais d'une page Web, va être enregistré.\n\n    Une vulnérabilité présente dans cet objet permet d'exécuter\n    n'importe quel programme présent sur une machine.\n\n    Un concepteur de site mal intentionné ayant réalisé une page web\n    exploitant cette vulnérabilité pourrait faire exécuter n'importe\n    quel programme sur la machine cible. Cependant aucun paramètre ne\n    peut être ajouté à la commande.\n\n## Contournement provisoire\n\nConcernant la première vulnérabilité, il est conseillé de désactiver les\ncookies.\n\n## Solution\n\nTélécharger le correctif sur le site Microsoft :\n\n    http://www.microsoft.com/windows/ie/downloads/critical/Q319182/default.as\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.mircosoft.com/technet/security/bulletin/MS02-015.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-066",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-03-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Atténuation des paramètres de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes dans Internet Explorer.\n\nLa première vulnérabilité permet, par le biais d'un cookie\njudicieusement composé, de changer la détermination de zone d'Internet\nExplorer diminuant ainsi les restrictions.\n\nLa seconde vulnérabilité permet, lors de la visite d'une page web\nhabilement conçue, d'exécuter n'importe quel programme présent sur la\nmachine cible.\n",
+  "title": "Vulnérabilités dans Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS02-015",
+      "url": null
+    }
+  ]
+}

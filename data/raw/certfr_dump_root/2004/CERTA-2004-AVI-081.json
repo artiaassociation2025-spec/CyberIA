@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système utilisant KDE dans une version antérieure à la  3.1.3.</P>",
+  "content": "## Description\n\nKDE est un environnement graphique pour système Unix, incluant en\nparticulier un navigateur, Konqueror.\n\nUne faille existe au sein des bibliothèques de KDE dans la gestion des\ncookies.\n\nUn cookie peut comporter un champ qui restreint l'accès au cookie à une\nsous-arborescence spécifiée d'un site. Hors cette restriction peut être\ncontournée. Lorsque le cookie est utilisé pour l'authentification, un\nutilisateur mal intentionné, contrôlant des pages sur le même serveur\nque la zone protégée, peut dérober cet authentifiant à l'aide d'une page\nHTML habilement construite. Cette faille peut également affecter les\nclients de messagerie KDE capables d'afficher du HTML.\n\n## Solution\n\nMettre à jour KDE en version 3.1.3.\n\n-   Red Hat Linux 9 :\n\n        https://rhn.redhat.com/errata/RHSA-2004-075.html\n\n-   Linux Mandrake 9.1 :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:022\n\n-   Debian Linux 3.0 :\n\n        http://www.debian.org/security/2004/dsa-459\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité de la société Corsaire :",
+      "url": "http://www.corsaire.com/advisories/c030712-001.txt"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-081",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-03-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Vol de session"
+    },
+    {
+      "description": "Divulgation de données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la gestion des cookies permet à un utilisateur\nmal intentionné d'accéder à certains d'entre eux sans en avoir les\ndroits.\n",
+  "title": "Vulnérabilité du navigateur Konqueror",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Corsaire",
+      "url": null
+    }
+  ]
+}

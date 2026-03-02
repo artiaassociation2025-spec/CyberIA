@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>libVNCServer versions 0.8.1 et  antérieures.</p>",
+  "content": "## Description\n\nla bibliothèque de fonctions libVNCServer permet de mettre en œuvre des\nservices de bureau distant comme par exemple VNCServer.  \nUne erreur présente dans les fonctions d'authentification de cette\nbibliothèque permet à un utilisateur distant de contourner\nl'authentification mise en place dans une application basée sur cette\nbibliothèque. Il peut alors obtenir un accès illégitime à tout ou partie\nde l'application vulnérable.\n\n## Solution\n\nLa version 0.8.2 de libVNCServer corrige le problème :\n\n    http://www.sourceforge.net/project/showfiles.php?group_id=32584\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2450",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2450"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200608-05 du 04 août 2006    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200608-05.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200608-12 du 07 août 2006    concernant x11vnc :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200608-12.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Suse SUSE-SA:2006:042 du 26 juillet    2006 :",
+      "url": "http://lists.suse.com/archive/suse-security-announce/2006-Jul/0008.html"
+    },
+    {
+      "title": "Site de libVNCServer :",
+      "url": "http://libvncserver.sourceforge.net"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-299",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-07-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo et Suse.",
+      "revision_date": "2006-08-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo concernant x11vnc.",
+      "revision_date": "2006-08-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans libVNCServer permet à un utilisateur distant de\ncontourner la politique de sécurité du logiciel vulnérable.\n",
+  "title": "Vulnérabilité dans libVNCServer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Rapport d'erreur Debian #376824",
+      "url": "http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=376824"
+    }
+  ]
+}

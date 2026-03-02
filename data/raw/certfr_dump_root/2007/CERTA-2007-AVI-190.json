@@ -1,0 +1,51 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les versions de Cisco Netflow Collection Engine (NFC) antérieures à 6.0.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans certaines versions de Cisco\nNetflow Collection Engine (NFC). Netflow est un format particulier\npermettant d'agréger des paquets réseau (regroupement de paquets suivant\ncertains critères et une fenêtre de temps donnée), qui peut être utilisé\npour surveiller le trafic ou détecter certaines anomalies.\n\nAu cours de l'installation, un compte système est crée par défaut,\nsimilaire au compte d'accès à l'interface de maintenance. Le mot de\npasse imposé est identique au nom du compte. Il s'agit de nfcuser.\n\nUne personne malveillante pourrait donc exploiter cette vulnérabilité\npour accéder à l'interface, modifier la configuration, accéder aux\ndonnées, voire simplement se connecter sur le système hôte avec le\ncompte offert.\n\nL'avis de sécurité Cisco indique les commandes pour changer cette\nconfiguration, ainsi que les mises à jour. Celles-ci sont cependant\nfacultatives dans le cas présent.\n\n## Solution\n\nSe référer à l'avis de sécurité de l'éditeur Cisco pour de plus amples\ndétails (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 82078 du 25 avril 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070425-nfc.shtml"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-190",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-04-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans certaines versions de Cisco\nNetflow Collection Engine (NFC). Au cours de l'installation, un compte\nsystème est créé par défaut, similaire au compte d'accès à l'interface\nde maintenance. Le mot de passe imposé est identique au nom du compte.\nUne personne malveillante pourrait donc exploiter cette vulnérabilité\npour accéder à l'interface, modifier la configuration, accéder aux\ndonnées, voire simplement se connecter sur le système hôte avec le\ncompte offert.\n",
+  "title": "Vulnérabilité du Netflow Collection Engine de Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Cisco 82078 du 25 avril 2007",
+      "url": null
+    }
+  ]
+}

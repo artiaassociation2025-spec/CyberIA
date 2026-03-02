@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Symantec Scan Engine</SPAN> version  5.0.</P>",
+  "content": "## Description\n\nTrois vulnérabilités ont été découvertes dans Symantec Scan Engine :\n\n-   Symantec Scan Engine n'authentifie pas correctement les utilisateurs\n    qui se connectent par l'interface d'administration. Un utilisateur\n    mal intentionné peut obtenir les droits de l'administrateur de\n    Symantec Scan Engine en utilisant l'interface d'administration ;\n-   Symantec Scan Engine utilise une clé privée statique DSA pour ses\n    communications en SSL. Cette clé ne peut pas être modifiée par les\n    utilisateurs mais peut être facilement exportée. Un utilisateur mal\n    intentionné peut récupérer cette clé pour réaliser des attaques de\n    type man-in-the-middle ;\n-   une vulnérabilité permet de télécharger sans authentification\n    préalable les fichiers situés dans le répertoire d'installation de\n    Symantec Scan Engine.\n\n## Contournement provisoire\n\nFiltrer les ports 8004/tcp et 8005/tcp.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2006-AVI-169",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-04-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Accès non autorisé"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilités dans Symantec Scan Engine",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Symantec SYM06-008 du 21 avril 2006",
+      "url": "http://www.symantec.com/avcenter/security/Content/2006.04.21.html"
+    }
+  ]
+}

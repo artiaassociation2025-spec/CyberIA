@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI><SPAN class=\"textit\">Microsoft Windows 2000</SPAN> SP4    ;</LI>    <LI><SPAN class=\"textit\">Microsoft Windows XP</SPAN> SP2 et    SP3, toutes versions et architectures ;</LI>    <LI><SPAN class=\"textit\">Microsoft Windows Server 2003</SPAN>,    toutes versions et architectures ;</LI>    <LI><SPAN class=\"textit\">Microsoft Windows Vista</SPAN>, y    compris SP1 et SP2, toutes versions et architectures ;</LI>    <LI><SPAN class=\"textit\">Microsoft Windows Server 2008</SPAN>,    y compris SP2, toutes versions et architectures.</LI>  </UL>  <P>Note : <SPAN class=\"textit\">Microsoft Windows Server  2008</SPAN> R2 n'est pas vulnérable.</P>",
+  "content": "## Description\n\nTrois vulnérabilités du noyau de Microsoft Windows ont été publiées :\n\n-   la mauvaise gestion d'un pointeur nul est exploitable par un\n    utilisateur malintentionné pour exécuter du code arbitraire en mode\n    noyau ;\n-   un manque de validation des données fournies par les pilotes des\n    interfaces graphiques peut servir à un utilisateur malveillant pour\n    élever ses privilèges et exécuter du code arbitraire en mode noyau ;\n-   un défaut d'analyse des polices de caractères est utilisable par un\n    utilisateur malveillant pour exécuter en mode noyau du code\n    arbitraire.\n\nCes vulnérabilités sont exploitables à distance avec le concours d'un\nutilisateur connecté, par exemple en l'incitant à consulter une page web\nspécialement conçue.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2514",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2514"
+    },
+    {
+      "name": "CVE-2009-2513",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2513"
+    },
+    {
+      "name": "CVE-2009-1127",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1127"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-492",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-11-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités du noyau de <span class=\"textit\">Microsoft\nWindows</span> permettent à un utilisateur malveillant d'élever ses\nprivilèges ou d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités dans le noyau de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS09-065 du 10 novembre 2009",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS09-065.mspx"
+    }
+  ]
+}

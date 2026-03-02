@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Pour la branche stable, OpenCA version 0.9.1-8 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "pour la branche de développement, OpenCA version 0.9.2 RC6 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nOpenCA est une autorité de certification Open Source basée sur de\nnombreux produits du monde du logiciel libre tels OpenLDAP, OpenSSL,\nApache et Apache mod_ssl.  \nUne vulnérabilité de type Cross Site Scripting (XSS) permet à un\nutilisateur mal intentionné d'injecter du code HTML malicieux.\n\n## Solution\n\n-   Pour la branche stable, mettre à jour OpenCA en version 0.9.1-9 ou\n    supérieure ;\n-   pour la branche de développement, mettre à jour OpenCA via CVS.  \n\nSite Internet de téléchargement de OpenCA :\n\n    http://www.openca.org/openca/downloads.shtml\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet de OpenCA :",
+      "url": "http://www.openca.org/openca/"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-305",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    }
+  ],
+  "summary": "Une vulnérabilité dans OpenCA permet à un utilisateur mal intentionné\nd'injecter du code malicieux dans une page HTML.\n",
+  "title": "Vulnérabilité de OpenCA",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenCA du 06 septembre 2004",
+      "url": "http://www.openca.org/news/CAN-2004-0787.txt"
+    }
+  ]
+}

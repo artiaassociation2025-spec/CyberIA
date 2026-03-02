@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>HP9000 séries 700/800 sous HP-UX 10.xx et 11.xx</P>",
+  "content": "## Description\n\nLe script Auto_parms permet de gérer la configuration DHCP (Dynamic Host\nConfiguration Protocol). Ce script est appelé à chaque démarrage de la\nmachine. Les vulnérabilités découvertes permettent à un utilisateur mal\nintentionné d'usurper les privilèges de ROOT lors du lancement de ce\nscript.  \n  \n\nUn programme permettant de réaliser d'exploiter cette vulnérabilité est\nlargement répandu sur internet.\n\n## Solution\n\nCorrectifs suivant les versions d'HP-UX :\n\n  \n\n<div markdown=\"1\" align=\"center\">\n\n|             |            |\n|:------------|:-----------|\n| Version     | correctif  |\n| HP-UX 11.00 | PHCO_21993 |\n| HP-UX 11.04 | PHCO_22186 |\n| HP-UX 10.20 | PHCO_21992 |\n| HP-UX 10.24 | PHCO_22185 |\n| HP-UX 10.26 | PHCO_22591 |\n| HP-UX 10.10 | PHCO_21991 |\n| HP-UX 10.16 | PHCO_22634 |\n| HP-UX 10.01 | PHCO_21990 |\n\n</div>\n\n  \n\nCorrectif disponible sur le site :\n\n    http://europe-support.external.hp.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HP",
+      "url": "http://itrc.hp.com"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-073",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-11-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Risque important car l'exploitation de la vulnérabilité est facilement accessible"
+    },
+    {
+      "description": "Accès en local aux privilèges administrateur"
+    }
+  ],
+  "summary": "Deux vulnérabilités découvertes dans le script Auto_parms permettent à\nun utilisateur local d'usurper les privilèges root lors du démarrage de\nla machine.\n",
+  "title": "Vulnérabilité sous HP-UX du script auto_parms",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Hewlett Packard",
+      "url": null
+    }
+  ]
+}

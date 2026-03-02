@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Security and Acceleration Server 2000 Service Pack 1 & 2 ;",
+      "product": {
+        "name": "Internet Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Proxy Server 2.0 Service Pack 1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Small Business Server 2000 ;",
+      "product": {
+        "name": "Small Business",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Small Business Server 2003 Premium Edition.",
+      "product": {
+        "name": "Small Business",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes produits ISA Server 2000 et Proxy Server 2.0 enregistrent dans un\ncache les réponses des réquêtes DNS inverse, et utilisent ce cache pour\nrésoudre les requêtes DNS. Une personne mal intentionnée peut, par le\nbiais d'une requête DNS inverse malicieusement construite, polluer le\ncache en vue de duper un internaute en lui faisant croire qu'il accède à\nun site web de confiance tandis qu'il sera dirigé vers un site web\nmalicieux.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-365",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-11-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'adresse réticulaire (url)"
+    }
+  ],
+  "summary": "Une vulnérabilité découverte dans les systèmes affectés de Microsoft\npermet à un utilisateur mal intentionné d'usurper l'adresse réticulaire\n(URL) d'un site web.\n",
+  "title": "Vulnérabilité dans ISA Server / Proxy Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS04-039",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS04-039.mspx"
+    }
+  ]
+}

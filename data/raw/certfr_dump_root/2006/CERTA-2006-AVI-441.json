@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<OL>    <LI>Microsoft XML Parser 2.6 (toutes versions) et Microsoft XML    Core Services 3.0 (toutes versions) sur :      <UL>        <LI>Microsoft Windows 2000 Service Pack 4 ;</LI>        <LI>Microsoft Windows XP Service Pack 1 ;</LI>        <LI>Microsoft Windows XP Service Pack 2 ;</LI>        <LI>Microsoft Windows XP Professonal x64 Edition ;</LI>        <LI>Microsoft Windows Server 2003 ;</LI>        <LI>Microsoft Windows Server 2003 Service Pack 1 ;</LI>        <LI>Microsoft Windows Server 2003 et Windows Server 2003        Service Pack 1 pour système Itanium.</LI>      </UL>    </LI>    <LI>Microsoft XML Core Services 4.0 sur :      <UL>        <LI>Microsoft Windows 2000 Service Pack 4 ;</LI>        <LI>Microsoft Windows XP Service Pack 1 ;</LI>        <LI>Microsoft Windows XP Service Pack 2 ;</LI>        <LI>Microsoft Windows Server 2003 ;</LI>        <LI>Microsoft Windows Server 2003 Service Pack 1.</LI>      </UL>    </LI>    <LI>Microsoft XML Core Services 5.0 Service Pack 1 sur :      <UL>        <LI>Microsoft Office 2003 Service Pack 1 et Service Pack        2.</LI>      </UL>    </LI>    <LI>Microsoft XML Core Services 6.0 sur :      <UL>        <LI>Microsoft Windows 2000 Service Pack 4 ;</LI>        <LI>Microsoft Windows XP Service Pack 1 ;</LI>        <LI>Microsoft Windows XP Service Pack 2 ;</LI>        <LI>Microsoft Windows Server 2003 ;</LI>        <LI>Microsoft Windows Server 2003 Service Pack 1.</LI>      </UL>    </LI>  </OL>",
+  "content": "## Description\n\nMicrosoft XML Core Services permet aux clients de concevoir des\napplications XML au standard XML 1.0.\n\n-   Une vulnérabilité dans Microsoft XML Core Services permet à un\n    individu mal intentionné de porter atteinte à la confidentialité des\n    données notammment en ayant accès aux informations de session\n    (cookies).\n\neXtensible Stylesheet Language Transformations (XSLT) permet de\nmanipuler des données au format XML.\n\n-   Une vulnérabilité dans XSLT peut être exploitée par une personne\n    malveillante afin d'exécuter du code arbitraire à distance.\n\nCes vulnérabilités peuvent être exploitées au moyen d'un site web\nspécialement construit.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4686",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4686"
+    },
+    {
+      "name": "CVE-2006-4685",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4685"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2006-AVI-441",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités découvertes dans Microsoft XML Core Services\npermettent à un utilisateur mal intentionné de porter atteinte à la\nconfidentialité des données et/ou d'exécuter du code arbitraire à\ndistance.\n",
+  "title": "Vulnérabilités dans Microsoft XML Core Services",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS06-061 du 10 octobre 2006",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-061.mspx"
+    }
+  ]
+}

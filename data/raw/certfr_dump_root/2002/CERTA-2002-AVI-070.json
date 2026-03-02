@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Secure ACS pour Windows version 3.0.1 (build 40).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Secure ACS pour Windows version 2.6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCisco Secure Access Control Server (ACS) est un outil de centralisation\ndes autorisations d'accès (AAA).  \nACS possède un module d'administration distante CSADMIN utilisant le\nport TCP 2002. Deux vulnérabilités sont présentes dans ce module :  \n\n-   L'envoi d'une URL particulière peut permettre de stopper le module\n    et, dans certains cas, d'exécuter du code arbitraire.\n-   Un utilisateur mal intentionné peut également accéder à certaines\n    données du disque ou de la partition où se situe l'installation du\n    module en employant une syntaxe spécifique dans l'URL afin de\n    remonter en dehors de la racine du serveur Web.\n\n## Contournement provisoire\n\nFiltrer le port 2002/TCP sur un équipement de filtrage en amont afin\nd'empêcher les accès non autorisés.\n\n## Solution\n\nSe référer au bulletin de sécurité Cisco pour consulter les correctifs\ndisponibles (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco \"Web Interface Vulnerabilities in  Cisco Secure ACS\" disponible à l'adresse suivante :",
+      "url": "http://www.cisco.com/warp/public/707/ACS-Win-Web.shtml"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-070",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-04-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Accès à des données non autorisées"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été trouvées dans Cisco Secure ACS pour Windows.\n",
+  "title": "Vulnérabilités dans Cisco Secure ACS pour Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco \"Web Interface Vulnerabilities in Cisco ACS for Windows\"",
+      "url": null
+    }
+  ]
+}

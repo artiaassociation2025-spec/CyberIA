@@ -1,0 +1,102 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Toute machine configurée avec Secure Boot pour sécuriser la séquence de démarrage de son système d'exploitation",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nLes mises à jour publiées par les éditeurs de distribution Linux doivent\nêtre appliquées sur les machines utilisant GRUB2.\n\nAfin de rétablir la chaîne de confiance Secure Boot, toutes les machines\nconfigurées avec Secure Boot devront être mises à jour pour interdire\nl'utilisation des versions GRUB2 vulnérables. Cette étape consiste à\nactualiser les fichiers DB et DBX qui référencent respectivement les\nbootloaders de confiance et les bootloaders révoqués par Secure Boot :\n\n-   soit en appliquant les mesures préconisées par Microsoft pour les\n    machines installées avec un système d'exploitation Windows\n-   soit en appliquant les mesures préconisées par l'éditeur de la\n    distribution Linux lorsque celui propose une mise à jour de Secure\n    Boot\n-   soit en appliquant une mise à jour de BIOS publiée par le\n    constructeur de l'équipement\n\nCette mise à jour de DBX doit donc être réalisée après avoir mis à jour\nGRUB2 sur les machines pour ne pas risque un blocage au moment du\ndémarrage.\n\n**Le CERT-FR recommande donc fortement de se référer aux différentes\npublications des éditeurs disponibles à ce jour (cf. références\ndocumentaires) afin de déterminer le plan d'actions adapté à chaque\nconfiguration.**\n",
+  "cves": [
+    {
+      "name": "CVE-2021-3418",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-3418"
+    },
+    {
+      "name": "CVE-2021-20225",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-20225"
+    },
+    {
+      "name": "CVE-2020-27779",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-27779"
+    },
+    {
+      "name": "CVE-2020-25632",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-25632"
+    },
+    {
+      "name": "CVE-2021-20233",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-20233"
+    },
+    {
+      "name": "CVE-2020-14372",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-14372"
+    },
+    {
+      "name": "CVE-2020-15705",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-15705"
+    },
+    {
+      "name": "CVE-2020-27749",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-27749"
+    },
+    {
+      "name": "CVE-2020-25647",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-25647"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2021-AVI-172",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-03-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "GRUB2 est le bootloader le plus couramment utilisé par les distributions\nLinux pour démarrer le système d'exploitation.\n\nDe multiples vulnérabilités ont été découvertes dans GRUB2. Elles\npermettent à un attaquant, ayant la possibilité de passer une commande à\nGRUB2 ou de manipuler d'autres ressources utilisées par GRUB2, de\nprovoquer une exécution de code arbitraire. Pour y parvenir, l'attaquant\ndoit avoir les droits administrateurs ou avoir un accès physique à un\néquipement afin de manipuler la séquence de démarrage (via un support\namovible ou via la modification du disque de boot de la machine). Ces\nméthodes permettent donc de compromettre une machine même si celle-ci\nn'a pas Linux d'installé à l'origine.\n\nEn agissant ainsi sur une machine configurée avec Secure Boot,\nl'attaquant est alors en capacité de rompre la chaîne de confiance et de\ndéployer du code malveillant pour compromettre la machine de façon\npersistante sans être détecté.\n",
+  "title": "Multiples vulnérabilités dans GRUB",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité VMware du 02 mars 2021",
+      "url": "https://kb.vmware.com/s/article/82763"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Ubuntu du 02 mars 2021",
+      "url": "https://wiki.ubuntu.com/SecurityTeam/KnowledgeBase/GRUB2SecureBootBypass2021"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité GRUB du 02 mars 2021",
+      "url": "https://lists.gnu.org/archive/html/grub-devel/2021-03/msg00007.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Red Hat du 02 mars 2021",
+      "url": "https://access.redhat.com/security/vulnerabilities/RHSB-2021-003"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft du 04 mars 2021",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/ADV200011"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SUSE du 02 mars 2021",
+      "url": "https://www.suse.com/support/kb/doc/?id=000019892"
+    }
+  ]
+}

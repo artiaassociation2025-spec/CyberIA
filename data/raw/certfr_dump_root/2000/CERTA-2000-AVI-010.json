@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>La version 1.6.3 de <TT>splitVT</TT> (utilitaire pour  UNIX).</P>",
+  "content": "## Solution\n\n##   4.1 Supprimer splitVT\n\nL'auteur de splitVT reconnaît dans la page de manuel que son application\nn'est pas absolument sûre en mode SET-UID. Donc, si vous n'avez pas\nabsolument besoin de ce programme, il faut le désinstaller.\n\n##   4.2 Debian\n\ndebian organisation publiant une distribution du système Linux a publié\nun correctif rendant sûre l'utilisation de splitVT :\n\n**Source**\n:      \n    -   http://security.debian.org/dists/stable/updates/source/splitvt_1.6.3-7.0slink1.diff.gz\n\n    -   http://security.debian.org/dists/stable/updates/source/splitvt_1.6.3-7.0slink1.dsc\n\n    -   http://security.debian.org/dists/stable/updates/source/splitvt_1.6.3.orig.tar.gz\n\n**alpha**\n\n:   http://security.debian.org/dists/stable/updates/binary-alpha/splitvt_1.6.3-7.0slink1_alpha.deb\n\n**i386**\n\n:   http://security.debian.org/dists/stable/updates/binary-i386/splitvt_1.6.3-7.0slink1_i386.deb\n\n**m68k**\n\n:   http://security.debian.org/dists/stable/updates/binary-m68k/splitvt_1.6.3-7.0slink1_m68k.deb\n\n**sparc**\n\n:   http://security.debian.org/dists/stable/updates/binary-sparc/splitvt_1.6.3-7.0slink1_sparc.deb\n\n##   4.3 Nouvelle version de splitVT\n\nOn peut mettre à jour son système en chargeant la dernière version de\nsplitVT :\n\n    http://www.devolution.com/~slouken/projects/splitvt/splitvt-1.6.4.tar.gz\n\n.\n\n##   4.4 Suse\n\nLa version de splitVT installée dans la distribution Suse n'est pas\nsensible à cette vulnérabilité. Cependant, elle est installée dans une\nconfiguration qui pourrait permettre, entre autre, de capturer ce qui\nest entré au clavier (par exemple un mot de passe).\n\nIl faut la remplacer par la version 1.6.4 décrite plus haut (compilée\npar vos soins).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-010",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-06-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation locale des privilèges du superutilisateur root sur la machine accueillant splitvt"
+    },
+    {
+      "description": "Capture de mots de passe"
+    }
+  ],
+  "summary": "SplitVT est un programme qui découpe verticalement un terminal en deux\nparties ; chaque partie accueillant un shell différent. Un programme\nexploitant un débordement de variable dans la pile a été publié. Ce\nprogramme permet d'acquérir les droits root localement.\n",
+  "title": "Débordement de pile dans le programme <TT>splitVT</TT>",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "avis debian du 5 juin 2000",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Security Bugware",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "BugTrack",
+      "url": null
+    }
+  ]
+}

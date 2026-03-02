@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco IOS.",
+      "product": {
+        "name": "IOS",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco CatOS;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCDP (Cisco Discovery Protocol) est un protocole permettant aux\néquipements CISCO d'un même réseau de s'échanger des informations. Ce\nprotocole permet, par l'envoi de trames périodiques, de tenir à jour une\ntable d'information d'états des matériels CISCO voisins (adresses, etc.)\n\nUn utilisateur mal intentionné peut réaliser un déni de service sur les\néquipements CISCO par l'envoi massif de requêtes CDP. Cette\nvulnérabilité n'est exploitable que par une machine se trouvant sur le\nmême réseau physique que le CISCO (CDP utilisant des trames de diffusion\nde niveau 2 non routables).\n\nLe protocole CDP est activé par défaut sur les CISCO.\n\n## Contournement provisoire\n\nDésactiver le protocole CDP sur le matériel vulnérable (cf section\ndocumentation).\n\n## Solution\n\nLes correctifs pour Cisco IOS sont disponibles sur le site CISCO:\n\n    http://www.cisco.com\n\nLes correctifs pour Cisco CatOS ne sont pas disponibles actuellement sur\nle site CISCO.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Note d'information CISCO :",
+      "url": "http://www.cisco.com/warp/public/707/cdp_issue.shtml"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-121",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné, se trouvant sur un réseau comportant des\néquipements CISCO, peut réaliser un déni de service de ces derniers via\nle protocole CDP.\n",
+  "title": "Vulnérabilité des Cisco IOS et CatOS sous le protocole CDP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Cisco",
+      "url": null
+    }
+  ]
+}

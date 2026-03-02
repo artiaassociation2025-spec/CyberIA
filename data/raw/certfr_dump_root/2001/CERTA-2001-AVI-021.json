@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Outlook Express.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Outlook ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn des composants de Outlook et Outlook Express ne vérifie pas\ncorrectement les données contenues dans une carte de visite attachée à\nun mél.\n\nSi un utilisateur mal intentionné construit une carte de visite\ncontenant un code spécifique, il peut entraîner un déni de service ou\nexécuter du code arbitraire avec les privilèges de la personne\nconsultant cette carte.\n\nNota : Les cartes de visites sont considérées comme des pièces jointes\nmais ne sont pas ouvertes automatiquement lors de la lecture du\ncourrier. Il est donc nécessaire d'inciter la personne recevant le mél à\nouvrir la carte de visite.\n\n## Solution\n\nUn correctif est disponible sur le site Microsoft :\n\n    http://www.microsoft.com/windows/ie/download/critical/q283908/default.asp\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin et FAQ Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-012.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-021",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-02-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, en ajoutant une carte de visite\nhabilement composée à un courrier électronique, entraîner l'exécution de\ncode arbitraire ou un déni de service sur la machine recevant ce\ncourrier.\n",
+  "title": "Vulnérabilité sous Microsoft Outlook et Outlook Express",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS 01-012",
+      "url": null
+    }
+  ]
+}

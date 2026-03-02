@@ -1,0 +1,44 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>IBM AIX 5.3 et versions antérieures.</P>",
+  "content": "## Description\n\nUne vulnérabilité de type chaine de format dans l'application\nauditselect permet à un utilisateur local mal intentionné qui fait\npartie groupe audit afin d'exécuter du code arbitraire avec les\nprivilèges du compte root.\n\n## Contournement provisoire\n\n-   Autoriser uniquement les personnes de confiance à accéder aux\n    systèmes critiques ;\n-   restreindre le groupe audit aux adminsitrateurs systèmes ;\n-   retirer de l'application auditselect le drapeau setuid.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité d'IBM :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IY67519"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-064",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-02-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité des systèmes AIX de IBM",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "local format String Vulnerability",
+      "url": "http://www.idefense.com/application/poi/display?id=193&type=vulnerabilities"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IY67519 de IBM du 08 février 2005",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécirité iDEFENSE IBM AIX auditselect",
+      "url": null
+    }
+  ]
+}

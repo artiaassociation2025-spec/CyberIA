@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM Lotus Domino 5.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Lotus Domino 6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM Lotus Domino 7.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nEn utilisant le protocole NRPC (Notes Remote Procedure Call), un\nutilisateur distant malintentionné, sans être authentifié, peut trouver\net télécharger des fichiers identifiants (fichiers ID) de l'annuaire\nLotus Notes vulnérable. Une fois le mot de passe du fichier identifiant\ntrouvé, celui-ci pourra être utilisé pour usurper les droits et\nl'identité de son propriétaire.\n\n## Solution\n\nLes versions 7.0.2 et 6.5.5 Fix Pack 2 corrigent le problème en ajoutant\nl'option BLOCK_LOOKUPID dans le fichier notes.ini.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM Lotus du 07  novembre 2006 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?rs=463&uid=swg21248026"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-502",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans IBM Lotus Domino permet à un utilisateur\ndistant malintentionné de contourner la politique de sécurité.\n",
+  "title": "Vulnérabilité dans Lotus Domino NRPC",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM du 07 novembre 2006",
+      "url": null
+    }
+  ]
+}

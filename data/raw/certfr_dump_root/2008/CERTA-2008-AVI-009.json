@@ -1,0 +1,161 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows XP Professional x64 Edition Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows XP Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 pour systèmes Itanium (SP1 et SP2) ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows XP Professional x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 x64 Edition Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 Service Pack 1 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Vista x64 Edition.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Server 2003 Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Vista ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans la mise en œuvre par\nle noyau Windows de certains protocoles.\n\n1.  le noyau Windows ne stockerait pas correctement les informations\n    issues de requêtes IGMPv3 et MLDv2. IGMP (pour Internet Group\n    Management Protocol) est un protocole utilisé pour signaler les\n    appartenances de groupes de diffusion, ou multicast, sous IPv4.\n    MLDv2 (pour Multicast Listener Discovery) est un protocole utilisé\n    par les routeurs sous IPv6 pour découvrir les nœuds intéressés par\n    la diffusion, ou multicast, et les adresses candidates. Il se\n    définit comme un dérivé du protocole ICMPv6.\n2.  le noyau Windows ne manipulerait pas correctement les requêtes de\n    découverte au niveau du routage par le protocole ICMP RDP (Router\n    Discovery Protocol). Ce protocole n'est cependant pas activé par\n    défaut.\n\nCes vulnérabilités peuvent être exploitées à distance, par le biais de\ntrames spécialement construites, afin de perturber le système\nvulnérable, voire d'y exécuter des commandes arbitraires.\n\n## Solution\n\nSe référer au bulletin de sécurité MS08-001 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0066",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0066"
+    },
+    {
+      "name": "CVE-2007-0069",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0069"
+    }
+  ],
+  "links": [
+    {
+      "title": "RFC 3810, \"Multicast Listener Discovery Version 2 (MLDv2)    pour IPv6\", juin 2004 :",
+      "url": "http://www.ietf.org/rfc/rfc3810.txt"
+    },
+    {
+      "title": "RFC 3376, \"Internet Group Management Protocol, Version 3\",    octobre 2002 :",
+      "url": "http://www.ietf.org/rfc/rfc3376.txt"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-009",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-01-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans la mise en œuvre par\nle noyau Windows de certains protocoles. Ces vulnérabilités peuvent être\nexploitées à distance, par le biais de trames spécialement construites,\nafin de perturber le système vulnérable, voire d'y exécuter des\ncommandes arbitraires.\n",
+  "title": "Vulnérabilités protocolaires dans Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS08-001 du 08 janvier 2008",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-001.mspx"
+    }
+  ]
+}

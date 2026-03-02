@@ -1,0 +1,120 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco PIX 500 versions 6.x et 7.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco ASA 5500 versions 7.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Firewall Service Module (FWSM) versions 2.x et 3.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent les produits Cisco précités :\n\n-   une erreur dans la méthode d'authentification LOCAL de PIX 6.x\n    permet à un utilisateur authentifié malveillant disposant des\n    privilèges minimaux (level 0) d'obtenir les privilèges maximaux\n    (level 15) ;\n-   une erreur dans la gestion des listes de contrôle d'accès (ACL) par\n    FWSM permet à un utilisateur malveillant de ne pas faire évaluer des\n    règles de contrôle d'accès ou de les faire évaluer dans un ordre\n    incorrect ;\n-   une erreur dans le traitement des packets SIP malformés provoque un\n    rechargement du système ou un arrêt inopiné. Un utilisateur\n    malveillant peut provoquer un déni de service à distance au moyen\n    d'un paquet SIP conçu à cet effet ;\n-   une erreur dans l'inspection du trafic HTTP, quand cette inspection\n    est activée, provoque le rechargement ou l'arrêt du système. Un\n    utilisateur malveillant peut provoquer un déni de service à distance\n    au moyen d'une communication HTTP conçue à cet effet ;\n-   une erreur dans l'inspection du trafic des protocoles basés sur TCP,\n    quand cette inspection est activée, provoque le rechargement ou\n    l'arrêt du système. Un utilisateur malveillant peut provoquer un\n    déni de service à distance au moyen d'une communication basée sur\n    TCP (HTTP, FTP...) conçue à cet effet ;\n-   Plusieurs erreurs affectant le traitement des requêtes HTTPS, SNMP\n    et HTTP (URL longues) par FWSM 3.x provoquent le rechargement du\n    système. Dans certaines conditions, un utilisateur malveillant peut\n    provoquer un déni de service à distance au moyen de trafic conçu à\n    cet effet.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0966",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0966"
+    },
+    {
+      "name": "CVE-2007-0963",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0963"
+    },
+    {
+      "name": "CVE-2007-0964",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0964"
+    },
+    {
+      "name": "CVE-2007-0960",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0960"
+    },
+    {
+      "name": "CVE-2007-0967",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0967"
+    },
+    {
+      "name": "CVE-2007-0962",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0962"
+    },
+    {
+      "name": "CVE-2007-0968",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0968"
+    },
+    {
+      "name": "CVE-2007-0961",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0961"
+    },
+    {
+      "name": "CVE-2007-0965",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0965"
+    },
+    {
+      "name": "CVE-2007-0959",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0959"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 77853 du 14 février 2007 :",
+      "url": "http://www.cisco.com/en/US/products/products_security_advisory09186a00807e2484.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco ID 72327 du 14 février 2007 :",
+      "url": "http://www.cisco.com/en/US/products/products_security_advisory09186a00807e2481.shtml"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-090",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-02-16T00:00:00.000000"
+    },
+    {
+      "description": "correction des liens.",
+      "revision_date": "2007-02-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités sur les produits <span class=\"textit\">Cisco\nPIX, ASA</span> et <span class=\"textit\">FWSM</span> permettent de\nréaliser un déni de service à distance, de contourner la politique de\nsécurité ou d'élever ses privilèges.\n",
+  "title": "Multiples vulnérabilités de produits Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins Cisco du 14 février 2007",
+      "url": null
+    }
+  ]
+}

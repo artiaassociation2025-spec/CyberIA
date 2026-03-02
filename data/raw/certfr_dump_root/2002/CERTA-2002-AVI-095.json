@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Solaris versions 2.5, 2.5.1, 2.6, 7 et  8.</p>",
+  "content": "## Description\n\nL'utilitaire admintool est un outil d'administration (gestion des\nutilisateurs, installation de paquetages logiciels ...) utilisé sous\nSolaris.\n\nDe multiples vulnérabilités de type débordement de mémoire présentes\ndans l'outil admintool permettent à un utilisateur mal intentionné\nd'exécuter du code arbitraire avec les privilèges de l'administrateur\nroot.\n\nCes vulnérabilités ne sont exploitables qu'en local.\n\n## Contournement provisoire\n\nSi le correctif ne peut être appliqué immédiatement, retirer le drapeau\nsetuid afin de prévenir l'exploitation de ces vulnérabilités :\n\n\\# chmod u-s /usr/bin/admintool\n\n## Solution\n\nAppliquer les correctifs (se référer à la section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis eSO:2397 d'eSecurityOnline :",
+      "url": "http://www.eSecurityOnline.com/advisories/eSO2397.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-095",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-05-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans l'outil admintool permettent\nà un utilisateur mal intentionné d'exécuter du code arbitraire avec les\nprivilèges de l'administrateur root.\n",
+  "title": "Vulnérabilités d'admintool sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Sun Alert Notification #27353",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F27353&zone_32=category%3Asecurity"
+    }
+  ]
+}

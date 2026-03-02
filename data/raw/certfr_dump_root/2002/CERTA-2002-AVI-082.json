@@ -1,0 +1,61 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft SQL Server 7.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft SQL Server 2000.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne procédure stockée étendue est une procédure stockée qui exécute du\ncode écrit en langage de programmation et non des commandes de base de\ndonnées. Certaines des procédures stockées étendues fournies dans SQL\nServer contiennent des vulnérabilités de type débordement de mémoire. Un\nutilisateur mal intentionné peut exploiter ces vulnérabilités afin\nd'exécuter du code arbitraire avec les priviléges du service MSSQL ou\nbien effectuer un déni de service.\n\n## Solution\n\nAppliquer le correctif fourni par Microsoft (cf. Documentation)\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité MS02-020 de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-020.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-082",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-04-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Des vulnérabilités ont été découvertes dans certaines procédures\nstockées étendues du serveur SQL de Microsoft.\n",
+  "title": "Vulnérabilité dans Microsoft SQL Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de securite MS02-020 de Microsoft",
+      "url": null
+    }
+  ]
+}

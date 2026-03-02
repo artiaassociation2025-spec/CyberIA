@@ -1,0 +1,39 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>FreeBSD 6.0.</p>",
+  "content": "## Description\n\nLe système d'exploitation FreeBSD inclut plusieurs systèmes de filtrage\ndont ipfw.  \nUne vulnérabilité dans la gestion des paquets IP fragmentés par le\nsystème de filtrage ipfw de FreeBSD permet à un utilisateur mal\nintentionné de provoquer un déni de service par arrêt brutal du service\nde filtrage.\n\n## Solution\n\nMettre à jour FreeBSD en version 6.0-RELEASE-p2 ou en version\n6.0-STABLE. Se référer au bulletin de sécurité de l'éditeur pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-0054",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-0054"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site Internet de FreeBSD :",
+      "url": "http://www.freebsd.org"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-021",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-01-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le système de filtrage ipfw de FreeBSD permet à\nun utilisateur mal intentionné de créer un déni de service.\n",
+  "title": "Vulnérabilité du système de filtrage ipfw de FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD du 11 janvier 2006",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-06:04.ipfw.asc"
+    }
+  ]
+}

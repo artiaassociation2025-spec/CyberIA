@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Ethereal 0.x.</P>",
+  "content": "## Description\n\nEthereal est un renifleur réseau. Il permet l'analyse de données depuis\nle réseau ou à partir d'un fichier.\n\nUne vulnérabilité de type dépassement de la mémoire présente dans la\nfonction dissect_a11_radius permet à un utilisateur malveillant\nd'effectuer un déni de service ou d'exécuter du code arbitraire sur le\nsystème vulnérable au moyen de paquets CDMA2000 A11 malicieusement\nconstruits.\n\nPlusieurs vulnérabilités dans les routines de dissection des flux IAPP,\nEtheric, GPRS-LLC, JXTA, et sFlow permettent de réaliser un déni de\nservice à distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de Gentoo GLSA 200503-16 du 13 mars    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200503-16.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-718 du 28 avril 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-718"
+    },
+    {
+      "title": "Bulletin de sécurité d'Ethereal enpa-sa-00018 du 11 mars    2005 :",
+      "url": "http://www.ethereal.com/appnotes/enpa-sa-00018.html"
+    },
+    {
+      "title": "Mise à jour du paquetage NetBSD Ethereal :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/net/ethereal/README.html"
+    },
+    {
+      "title": "Site de l'éditeur :",
+      "url": "http://www.ethereal.com"
+    },
+    {
+      "title": "Bulletin de sécurité de Mandrake MDKSA-2005:053 du 15 mars    2005 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2005:053"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:306-10 du 18 mars    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-306.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-103",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2005-03-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout de plusieurs vulnérabilités. Ajout des références CVE, et des bulletins de sécurité d'Ethereal, de Gentoo, de Mandrake, de RedHat et de NetBSD ;",
+      "revision_date": "2005-03-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Debian.",
+      "revision_date": "2005-04-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans Ethereal permettent à un\nutilisateur mal intentionné d'exécuter du code arbitraire ou d'effectuer\nun déni de service à distance.\n",
+  "title": "Vulnérabilités dans Ethereal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité LSS LSS-2005-03-04",
+      "url": "http://security.lss.hr/en/index.php?page=details&ID=LSS-2005-03-04"
+    }
+  ]
+}

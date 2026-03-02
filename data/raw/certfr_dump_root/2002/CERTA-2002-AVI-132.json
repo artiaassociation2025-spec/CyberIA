@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Office 2000 pour Windows ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Office XP pour Windows.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Excel 2002 pour Windows ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Word 2002 pour Windows ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Excel 2000 pour Windows ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn module spécifique permet d'informer l'utilisateur de la présence\nd'une ou plusieurs macros lors de l'ouverture d'un document Excel ou\nWord. Un utilisateur mal intentionné peut, par le biais d'un document\njudicieusement composé, contourner ce module et exécuter des macros à\nl'insu de l'utilisateur.  \n  \nMicrosoft a créé le système DDE (Dynamic Data Exchange) pour pouvoir\nutiliser des données partagées entre plusieurs applications.\nNormalement, chaque application vérifie et informe l'utilisateur si une\nmacro doit être exécutée. Mais il arrive qu'une macro soit exécutée dans\nun objet importé grâce à DDE sans que l'utilisateur n'en soit averti.  \n  \nQuatre nouvelles vulnérabilités de ce type ont été découvertes :\n\n-   Si un objet contenant une macro est importé dans une feuille de\n    calcul Excel, le fait de cliquer sur cet objet exécute la macro sans\n    que l'utilisateur n'en soit averti ;\n-   si un dessin est pourvu d'un lien pointant sur une feuille de calcul\n    Excel, une macro contenue dans cette feuille de calcul est exécutée\n    sans que l'utilisateur n'en soit averti ;\n-   si une feuille de calcul Excel au format XSL contient du script\n    HTML, ce script est exécuté sans en avertir l'utilisateur ;\n-   Word peut utiliser Access pour en extraire des données. Si la base\n    Access contient une macro, celle-ci est exécutée sans en avertir\n    l'utilisateur.\n\nCe type de vulnérabilité peut servir à exécuter du code arbitraire,\ncomme par exemple des virus ou des chevaux de Troie.\n\n## Solution\n\nDes correctifs sont disponibles en téléchargement sur le site web de\nMicrosoft :\n\n    http://www.microsoft.com/technet/security/bulletin/MS02-031.asp\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-132",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Risque de propagation de virus"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut composer un document Excel ou Word\ncontenant des macros spécifiques permettant d'exécuter du code\narbitraire sur la machine cible.\n",
+  "title": "Multiples vulnérabilités dans Excel et Word pour Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #MS02-031 de Microsoft",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-031.asp"
+    }
+  ]
+}

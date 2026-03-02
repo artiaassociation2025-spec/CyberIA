@@ -1,0 +1,48 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Potentiellement tout système ayant des  programmes liés avec la bibliothèque <SPAN class=\n  \"textit\">libpng</SPAN> versions source 1.2.5 et antérieures.</p>",
+  "content": "## Description\n\nLa bibliothèque libpng est utilisée par de nombreuses applications (dont\nles navigateurs, les environnements graphiques KDE et Gnome, certaines\ndistributions <span class=\"logo,LaTeX\">L^<span\nclass=\"small\">A</span>^T<span class=\"small\">E</span>X</span>,...) pour\nla manipulation de fichiers image au format png (\\`\\`Portable Network\nGraphics''). La bibliothèque exporte diverses fonctions, dont deux\npermettent d'émettre des messages d'erreur ou d'avertissement. Ces\nfonctions utilisent des tampons de taille fixe, sans vérifier la taille\ndes arguments passés et sans que cette taille maximum soit précisée dans\nla documentation. Une mauvaise utilisation de ces fonctions dans un\nprogramme peut conduire à l'exécution de code arbitraire par débordement\nde tampon.\n\n## Solution\n\nMettre à jour en suivant les recommandations des éditeurs :\n\n-   Avis de sécurité Mandrake MDKSA-2004:040 :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:040\n\n-   Avis de sécurité Debian DSA-498 :\n\n        http://www.debian.org/security/2004/dsa-498\n\n-   Avis de sécurité Red Hat Linux\n    -   Red Hat Desktop, Enterprise et Advanced Workstation\n        RHSA-2004:180 :\n\n            https://rhn.redhat.com/errata/RHSA-2004-180.html\n\n    -   Red Hat 9 RHSA-2004:181 :\n\n            https://rhn.redhat.com/errata/RHSA-2004-181.html\n\n-   Avis de sécurité Gentoo GLSA 200405-06 du 14 mai 2004 :\n\n        http://www.gentoo.org/security/en/glsa/glsa-200405-06.xml\n\n-   Avis de sécurité FreeBSD du 2 mai 2004 :\n\n        http://www.vuxml.org/freebsd/\n\n-   Avis de sécurité pour le paquetage OpenBSD libpng du 3 mai 2004 :\n\n        http://www.vuxml.org/openbsd/\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-148",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-04-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité de Red Hat.",
+      "revision_date": "2004-05-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité FreeBSD et OpenBSD.",
+      "revision_date": "2004-05-12T00:00:00.000000"
+    },
+    {
+      "description": "correction de la référence Mandrake, ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2004-05-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité Red Hat Enterprise.",
+      "revision_date": "2004-05-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une faille dans la gestion des messages d'erreur et d'avertissement peut\ndonner la possibilité à un utilisateur mal intentionné d'exécuter du\ncode arbitraire ou d'entraîner un déni de service sur la machine cible.\n",
+  "title": "Vulnérabilité de la bibliothèque libpng",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Mandrake",
+      "url": null
+    }
+  ]
+}

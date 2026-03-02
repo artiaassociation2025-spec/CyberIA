@@ -1,0 +1,136 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "dtterm.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "hanterm-xf 2.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Konsole 3.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "SecureCRT 3.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Eterm 0.9.x (Eterm 0.9.2 n'est pas vulnérable) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "putty 0.5x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "aterm 0.4.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "rxvt 2.7.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "gnome-terminal 2.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne séquence d'échappement est constitué d'une série de caractères\ndébutant par un caractère d'échappement (`0x1B`) suivi d'une séquence de\ncaractères ordinaires.\n\nUne mauvaise gestion des séquences d'échappement dans plusieurs\némulateurs de terminaux permet à un individu mal intentionné de tromper\nla vigilance d'un utilisateur afin d'exécuter des commandes arbitraires\nou de modifier certains fichiers.\n\n## Solution\n\nAppliquer les correctifs suivants les terminaux utilisés :  \n\nVulnérabilité dans l'émulateur de terminaux `rxvt` :\n\n-   Bulletin de sécurité Mandrake :\n\n        http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:034\n\n-   Bulletin de sécurité RedHat :\n\n        http://rhn.redhat.com/errata/RHSA-2003-054.html\n\n-   Bulletin de sécurité Gentoo :\n\n        http://forums.gentoo.org/viewtopic.php?t=42582\n\nVulnérabilité dans l'émulateur de terminaux `gnome-terminal` :\n\n-   Bulletin de sécurité RedHat :\n\n        http://rhn.redhat.com/errata/RHSA-2003-053.html\n\nVulnérabilité dans l'émulateur de terminaux `Eterm` :\n\n-   Bulletin de sécurité Gentoo :\n\n        http://www.securityfocus.com/advisories/5034\n\n-   Bulletin de sécurité Debian DSA-496 :\n\n        http://www.debian.org/security/2004/dsa-496\n\nVulnérabilité dans l'émulateur de terminaux `dtterm` :\n\n-   Bulletin de sécurité HPSBUX0401-309 \"SSRT3507 dtterm\" de\n    Hewlett-Packard :\n\n        http://itrc.hp.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Digital Defense Incoporated :",
+      "url": "http://digitaldefense.net/labs/papers/Termulation.txt"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-067",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-28T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence au bulletin de sécurité HPSBUX0401-309 de Hewlett-Packard.",
+      "revision_date": "2004-01-23T00:00:00.000000"
+    },
+    {
+      "description": "Ajout référence au bulletin de sécurité Debian.",
+      "revision_date": "2004-04-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de commandes arbitraires"
+    },
+    {
+      "description": "Injection de données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans plusieurs émulateurs de\nterminaux permettant à un individu mal intentionné de détourner des\nactions effectuées par l'utilisateur du terminal.\n",
+  "title": "Vulnérabilité dans les émulateurs de terminaux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de Digital Defense Incorporated",
+      "url": null
+    }
+  ]
+}

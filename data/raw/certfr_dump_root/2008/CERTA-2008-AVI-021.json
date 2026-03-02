@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Drupal versions 4.x antérieures à 4.7.11 ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Drupal versions 5.x antérieures à 5.6.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans Drupal :\n\n-   une vulnérabilité dans le module de traitement des flux RSS permet\n    de réaliser une attaque de type cross-site request forgery\n    (SA-2008-005) ;\n-   l'utilisation de séquences de caractères considérés comme invalides\n    par les spécifications de UTF8 permet de réaliser une attaque de\n    type cross-site scripting (SA-2008-006) ;\n-   lorsque les fichiers de thème (.tpl.php) ont des droits d'accès via\n    le Web et que la variable PHP register_globals est activée, il est\n    possible de réaliser des attaques de type cross-site scripting\n    (SA-2008-007).\n\n## Contournement provisoire\n\nIl n'existe pas de correctif pour la vulnérabilité décrite dans l'avis\nDrupal SA-2008-007. L'éditeur recommande de désactiver la variable\nregister_globals et de ne pas positionner de droits d'accès via le Web\nsur les fichiers de thème.\n\n## Solution\n\nMettre à jour en version 4.7.11 ou 5.6. Se référer au bulletin de\nsécurité de l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2008-AVI-021",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-01-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injections de code indirectes (cross-site scripting et cross-site request forgery)"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans <span class=\"textit\">Drupal</span>\npermettent de réaliser diverses injections de code indirectes.\n",
+  "title": "Vulnérabilités dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Drupal SA-2008-007 du 10 janvier 2008",
+      "url": "http://drupal.org/node/208565"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Drupal SA-2008-005 du 10 janvier 2008",
+      "url": "http://drupal.org/node/208562"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Drupal SA-2008-006 du 10 janvier 2008",
+      "url": "http://drupal.org/node/208564"
+    }
+  ]
+}

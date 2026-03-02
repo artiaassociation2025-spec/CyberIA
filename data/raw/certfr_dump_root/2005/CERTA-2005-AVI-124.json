@@ -1,0 +1,122 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Client Telnet.</P>",
+  "content": "## Description\n\nLe client Telnet permet d'émuler un terminal à distance.\n\nDeux vulnérabilités de type débordement de mémoire peuvent être\nexploitées au travers des fonctions slc_add_reply() et env_opt_add().\nCes vulnérabilités permettent à un individu mal intentionné d'exécuter\ndu code arbitraire à distance, au moyen de réponses malicieusement\nconstituées.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SUN #57755 du 29 mars 2005 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-26-57755-1"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-765 du 22 juillet 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-765"
+    },
+    {
+      "title": "Mise à jour de sécurité pour Fedora Core 2 du 30 mars 2005    :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/2/"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-697 du 29 mars 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-697"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-699 du 29 mars 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-699"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:330-06 du 30 mars    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-330.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:327-10 du 28 mars    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-327.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-05:01.telnet du 28 mars    2005 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-05:01.telnet.asc"
+    },
+    {
+      "title": "Bulletin de sécurité MIT krb5 Security Advisory 2005-001 du    28 mars 2005 :",
+      "url": "http://web.mit.edu/kerberos/www/advisories/MITKRB5-SA-2005-001-telnet.txt"
+    },
+    {
+      "title": "Mise à jour de sécurité pour Fedora Core 3 du 30 mars 2005    :",
+      "url": "http://download.fedora.redhat.com/pub/fedora/linux/core/updates/3/"
+    },
+    {
+      "title": "Bulletin de sécurité Avaya ASA-2005-132 du 14 juin 2005 :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2005-132_RHSA-2005-327.pdf"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2005:061 du 29 mars    2005 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2005:061"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-731 du 02 juin 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-731"
+    },
+    {
+      "title": "Bulletin de sécurité 221 d'iDefense du 28 mars 2005 :",
+      "url": "http://www.idefense.com/application/poi/display?id=221&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité 220 d'iDefense du 28 mars 2005 :",
+      "url": "http://www.idefense.com/application/poi/display?id=220&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200504-04 / telnet du 06    avril 2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200504-04.xml"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SR:2005:009 du 29 mars 2005    :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_09_sr.html"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD pour telnet du 30 mars 2005 :",
+      "url": "http://www.openbsd.org/errata.html#telnet"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-124",
+  "revisions": [
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo GLSA-200504-04.",
+      "revision_date": "2005-03-13T00:00:00.000000"
+    },
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-03-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité OpenBSD.",
+      "revision_date": "2005-03-31T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-731.",
+      "revision_date": "2005-06-02T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Avaya ASA-2005-132.",
+      "revision_date": "2005-06-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-765.",
+      "revision_date": "2005-07-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Deux vulnérabilités découvertes dans le client Telnet permettent à un\nutilisateur mal intentionné d'exécuter du code arbitraire à distance sur\nle système vulnérable.\n",
+  "title": "Multiples vulnérabilités dans le client Telnet",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité US-CERT VU#291924 du 28 mars 2005",
+      "url": "http://www.kb.cert.org/vuls/id/291924"
+    }
+  ]
+}

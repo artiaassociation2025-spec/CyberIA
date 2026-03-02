@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les solutions Cisco PIX et ASA ayant des versions logicielles antérieures à 7.2(3)006 ou 8.0(3) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Les solutions Cisco Application Velocity System (AVS) 3110, 3120, 3180 et 3180A Management Station ayant des versions logicielles antérieures à AVS 5.1.0.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans des produits Cisco :\n\n1.  La première concerne l'absence de changement de mot de passe de\n    certains utilisateurs pendant la phase initiale de configuration\n    pour les solutions Cisco AVS. Ces utilisateurs par défaut peuvent\n    avoir des droits d'administrateur. Si l'administrateur ne change pas\n    ces identifiants de lui-même, ces comptes restent actifs et présents\n    sur le système, permettant ainsi à une personne malveillante\n    d'élever ses privilèges et de modifier les configurations.\n2.  La seconde concerne le traitement du champ Time-To-Live des trames\n    IP par des solutions PIX et ASA. Certaines valeurs provoqueraient le\n    redémarrage du système. Cette vulnérabilité fonctionne dès lors que\n    l'option decrement-ttl est fonctionnelle. Celle-ci n'est cependant\n    pas active par défaut.\n\n## Solution\n\nSe référer aux bulletins de sécurité de Cisco pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0029",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0029"
+    },
+    {
+      "name": "CVE-2008-0028",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0028"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20080123-avs du 23 janvier 2008    :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080123-avs.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco 20080123-asa du 23 janvier 2008    :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20080123-asa.shtml"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-037",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-01-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été identifiées dans des produits Cisco. La\npremière concerne l'absence de changement de mot de passe des\nutilisateurs pendant la phase initiale de configuration pour les\nsolutions Cisco AVS. La seconde concerne le traitement du champ\nTime-To-Live des trames IP par des solutions PIX et ASA.\n",
+  "title": "Vulnérabilités dans des produits Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de Cisco publiés le 23 janvier 2008",
+      "url": null
+    }
+  ]
+}

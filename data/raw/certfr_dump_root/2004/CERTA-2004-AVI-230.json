@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Sur architecture Sparc :  <UL>    <LI>Solaris 7 sans le correctif 106541-33 ;</LI>    <LI>Solaris 8 sans le correctif 109007-18 ;</LI>    <LI>Solaris 9 sans le correctif 114332-12.</LI>  </UL>  <P>Sur architecture x86 :</P>  <UL>    <LI>Solaris 7 sans le correctif 106542-33 ;</LI>    <LI>Solaris 8 sans le correctif 109008-18 ;</LI>    <LI>Solaris 9 sans le correctif 116558-01.</LI>  </UL></p>",
+  "content": "## Description\n\nUne vulnérabilité dans le module de sécurité BSM (Basic Security Module)\npermet à un utilisateur local mal intentionné de réaliser un déni de\nservice.\n\nCette vulnérabilité n'est exploitable que si le module de sécurité est\nconfiguré pour lancer un audit de type « ad » (Administrative audit\nclass) ou « as » (System-Wide Administration audit class).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité de US-CERT VU#901582 du 28 juin 2004 :",
+      "url": "http://www.kb.cert.org/vuls/id/901582"
+    },
+    {
+      "title": "Avis de sécurité Sun 57497 du 22 juin 2004 :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert/57497"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-230",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité dans le module de sécurité BSM sur Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SUN 57497",
+      "url": null
+    }
+  ]
+}

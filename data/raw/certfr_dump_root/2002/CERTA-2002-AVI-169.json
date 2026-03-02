@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les séries des équipements VPN 5000 de CISCO ayant pour logiciel les versions 6.0.21.0002 et 5.2.23.0003 (les modèles VPN 5001, VPN 5002, VPN 5008 sont concernés par cette vulnérabilité) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les séries des équipements IntraPort (IntraPort 2, Intraport 2+, IntraPort Enterprise-2 IntraPort Entreprise-8, IntraPort Carrier-2 et IntraPort Carrier-8).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe service RADIUS est un service qui permet l'authentification des\nutilisateurs. Une vulnérabilité est présente sur les équipements CISCO\ncités ci-dessus lorsque ce service est utilisé avec les protocoles\nd'authentifications PAP ou Challenge.\n\nPour authentifier l'utilisateur, les équipements VPN 5000 utilisent une\nbase de données interne ou un serveur RADIUS.  \n\nLors de l'utilisation d'un serveur RADIUS, une requête contenant le mot\nde passe chiffré de l'utilisateur désirant se connecter est envoyée\ndepuis l'équipement CISCO vers le serveur RADIUS.\n\nLa vulnérabilité présente sur les VPN 5000 apparaît si le serveur RADIUS\nn'a pas répondu à cette requête. Dans ce cas, une seconde requête,\ncontenant cette fois le mot de passe « non chiffré » de l'utilisateur\nest envoyée au serveur. Cette vulnérabilité permet à un utilisateur mal\nintentionné de récupérer le mot de passe transmis dans cette requête.\n\n## Contournement provisoire\n\nDans l'attente d'appliquer le correctif il est possible d'utiliser le\nprotocole d'authentification CHAP :\n\nDans la section RADIUS mettre ChallengeType = CHAP\n\n## Solution\n\nAppliquer le correctif correspondant à la version de votre logiciel (cf\nsection documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctifs disponibles sur le site de CISCO à l'adresse :",
+      "url": "http://www.cisco.com/public/sw-center/"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-169",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations"
+    }
+  ],
+  "summary": "Une vulnérabilité est présente sur les équipements CISCO cités ci-dessus\nquand ils sont configurés pour utiliser le protocole d'authentification\nRADIUS. Cette vulnérabilité permet à un utilisateur mal intentionné de\nrécupérer les mots de passes non chiffrés envoyés dans une requête lors\nde réémission vers un serveur RADIUS.\n",
+  "title": "Vulnérabilité sur VPN 5000 de CISCO",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO",
+      "url": "http://www.cisco.com/warp/public/707/vpn5k-radius-pap-vuln-pub.shtml"
+    }
+  ]
+}

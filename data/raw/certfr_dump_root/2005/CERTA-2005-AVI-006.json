@@ -1,0 +1,85 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>KDE 3.3.2 et version antérieures.</p>",
+  "content": "## Description\n\nKDE est un environnement graphique utilisé sur les systèmes Unix et\nLinux.\n\n  \nUne vulnérabilité est présente dans le traitement des URL de type ftp://\nrendant possible l'injection de commandes dans une session FTP.\n\nEn forcant l'utilisateur d'un programme exploitant le composant KDE\nkio_ftp (tel le navigateur Konqueror) à consulter une URL habilement\nconstituée, il est alors possible de réaliser des attaques par rebond\nsur certains services réseau (SMTP par exemple).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité KDE du 01 janvier 2005 :",
+      "url": "http://www.kde.org/info/security/advisory-20050101-1.txt"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD \"kdelibs3 - konqueror FTP    command injection vulnerability\" du 01 janvier 2005 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2005:045 du 17 février    2005 ;",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2005:045"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD kdebase3 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/x11/kdebase3/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:065 du 15 février    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-065.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-631 du 10 janvier 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-631"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:160 du 29 décembre    2004 ;",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:160"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:009 du 10 février    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-009.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200501-18 du 11 janvier    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200501-18.xml"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-006",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-01-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Debian, Gentoo et RedHat.",
+      "revision_date": "2005-02-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RHSA-2005:065 de RedHat.",
+      "revision_date": "2005-02-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité MDKSA-2005:045 de Mandrake.",
+      "revision_date": "2005-02-18T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité NetBSD.",
+      "revision_date": "2005-03-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de KDE",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de KDE",
+      "url": null
+    }
+  ]
+}

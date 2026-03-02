@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ICA WIn32 Program Neighborhood Client ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ICA WIn32 Web Client.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix Presentation Manager Server ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ICA WIn32 Program Neighborhood Agent ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe serveur Citrix Presentation Manager Server fournit un composant\nActiveX qui permet l'intégration du client dans des pages web. Une\nvulnérabilité dans ce composant permet d'exécuter du code arbitraire\ndans le contexte du processus du serveur. Cette attaque utilise une page\nweb spécialement conçue à cet effet.\n\n## Solution\n\nLa version 9.230 du serveur Citrix Presentation Manager Server corrige\nle problème. Se référer au bulletin de sécurité de l'éditeur pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2006-AVI-532",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-12-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité dans un composant ActiveX permet d'exécuter du code\narbitraire.\n",
+  "title": "Vulnérabilité de Citrix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Citrix CTX111827 du 04 décembre 2006",
+      "url": "http://support.citrix.com/article/CTX111827.html"
+    }
+  ]
+}

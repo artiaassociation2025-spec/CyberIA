@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Sophos Connect client versions 2.x antérieures à v2.2 MR1 (2.2.90)",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sophos",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2022-48310",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-48310"
+    },
+    {
+      "name": "CVE-2022-48309",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-48309"
+    },
+    {
+      "name": "CVE-2022-4901",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-4901"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2023-AVI-0182",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-03-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Sophos Connect.\nElles permettent à un attaquant de provoquer une atteinte à la\nconfidentialité des données, une injection de code indirecte à distance\n(XSS) et une injection de requêtes illégitimes par rebond (CSRF).\n",
+  "title": "Multiples vulnérabilités dans Sophos Connect",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Sophos sophos-sa-20230301-scc-csrf du 01 mars 2023",
+      "url": "https://www.sophos.com/fr-fr/security-advisories/sophos-sa-20230301-scc-csrf"
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apple Quicktime 6.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Aplle Quicktime 7.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nL'application Quicktime d'Apple est un lecteur multimédia.\n\n-   Deux vulnérabilités de type débordement d'entier permettent à un\n    utilisateur distant mal intentionné d'exécuter du code arbitraire au\n    moyen d'un fichier vidéo .mov malicieusement contruit ;\n-   une vulnérabilité dans la gestion de certains attributs d'un fichier\n    video permet à une personne distante de causer un déni de service ;\n-   une vulnérabilité de type débordement de mémoire dans PictureViewer\n    peut être exploitée au moyen d'un fichier PICT malicieusement\n    constitué afin d'exécuter du code arbitraire à distance.\n\n## Solution\n\nMettre à jour Apple Quicktime avec la version 7.0.3, disponible à\nl'adresse suivante :\n\n    http://www.apple.com/support/downloads/quicktime703.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Apple Quicktime 7.0.3 :",
+      "url": "http://www.apple.com/support/downloads/quicktime703.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-436",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-11-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "De nombreuses vulnérabilités découvertes dans l'application Quicktime\nd'Apple permettent à un utilisateur distant mal intentionné de réaliser\nun déni de service ou d'exécuter du code arbitraire.\n",
+  "title": "Multiples vulnérabilités dans Quicktime",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apple #302772 du 02 novembre 2005",
+      "url": "http://docs.info.apple.com/article.html?artnum=302772"
+    }
+  ]
+}

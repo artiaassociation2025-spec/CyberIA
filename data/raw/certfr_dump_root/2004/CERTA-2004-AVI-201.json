@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "BEA WebLogic Server et WebLogic Express version 8.1 ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA WebLogic Server et WebLogic Express version 6.1.",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "BEA WebLogic Server et WebLogic Express version 7.0 ;",
+      "product": {
+        "name": "Weblogic",
+        "vendor": {
+          "name": "Oracle",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nIl est possible pour un client de se connecter plusieurs fois à un\nserveur WebLogic avec différentes identités.  \n\nLorsque ces connexions utilisent les requêtes RMI (Remote Method\nInvocation) sur le protocole IIOP (Internet Inter-ORB Protocol),\ncertaines méthodes RMI de l'une des identités peuvent être exécutées\navec les privilèges d'une autre identité.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention du\ncorrectif (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de BEA #BEA04-62.00 :",
+      "url": "http://dev2dev.bea.com/resourcelibrary/advisoriesnotifications/BEA04_62.00.jsp"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-201",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-06-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité de BEA WebLogic Server et WebLogic Express permet à un\nutilisateur distant mal intentionné d'exécuter certaines actions sous\nune fausse identité.\n",
+  "title": "Vulnérabilité de BEA WebLogic",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité BEA04-62.00",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>FreeBSD 5.5 à 7.0.</P>",
+  "content": "## Description\n\nL'appel système sendfile sous FreeBSD permet à une application serveur\nde transmettre le contenu d'un fichier via une connection réseau sans\ntransiter par la mémoire de l'application.\n\nUne vulnérabilité a été découverte : un processus peut ouvrir un fichier\nen écriture seule et utiliser sendfile pour envoyer son contenu via une\nconnexion réseau. Une personne malintentionnée peut ainsi exploiter ceci\npour accéder à des données qui sont confidentielles.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0777",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0777"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD SA-08:03.sendfile du 14    février 2008 :",
+      "url": "ftp://ftp.freebsd.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-08:03.sendfile.asc"
+    },
+    {
+      "title": "Référence CVE CVE-2008-0777 :",
+      "url": "http://nvd.nist.gov/nvd.cfm?cvename=CVE-2008-0777"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-093",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-02-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans <span class=\"textit\">sendfile</span> sous FreeBSD\npermet à une personne malintentionné de porter atteinte à la\nconfidentialité des données.\n",
+  "title": "Vulnérabilité dans sendfile sous FreeBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité FreeBSD-SA-08:03.sendfile du 14 février 2008",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GNATS version 3.113.1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GNATS version 3.113 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GNATS version 3.2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GNATS version 3.002 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nGNATS est un outil de gestion de rapports de défauts (bug report).  \nPlusieurs débordements de mémoire dans GNATS permettent à un utilisateur\nmal intentionné d'élever ses privilèges et d'obtenir ceux du\nsuper-utilisateur root.\n\n## Contournement provisoire\n\nEnlever le drapeau setuid des binaires GNATS (cela peut entraîner des\nlimitations).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité INetCop :",
+      "url": "http://x82.inetcop.org/h0me/adv1sor1es/INCSA.2003-0x82-018-GNATS-bt.txt"
+    },
+    {
+      "title": "Site Internet de GNATS :",
+      "url": "http://www.gnu.org/software/gnats/gnats.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour GNATS du 02 juillet 2004    :",
+      "url": "http://www.vuxml.org/freebsd/"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-221",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans GNATS permettent à un utilisateur mal\nintentionné d'élever ses privilèges.\n",
+  "title": "Vulnérabilité de GNATS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité INetCop #2003-0x82-018",
+      "url": null
+    }
+  ]
+}

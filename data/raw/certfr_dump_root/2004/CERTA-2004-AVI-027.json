@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Checkpoint VPN-1/FireWall-1 version 4.1 SP5a et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Checkpoint VPN-1/FireWall-1 Next Generation FP0 et FP1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe protocole ISAKMP (Internet Security Association and Key Management\nProtocol) est un protocole d'initialisation de communications utilisé\npar le protocole IPSEC. Une vulnérabilité a été découverte dans\nl'implémentation du protocole ISAKMP par les produits Checkpoint VPN-1\nserver et Checkpoint VPN SecureRemote/SecureClient permettant à un\nutilisateur mal intentionné d'exécuter du code arbitraire à distance.\nAucune authentification n'est nécessaire pour exploiter cette\nvulnérabilité.\n\n## Contournement provisoire\n\nDans l'attente de la mise à jour de vos produits, filtrer le service\nISAKMP (par défaut 500/UDP).\n\n## Solution\n\nContacter l'éditeur pour l'obtention d'un correctif.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de Checkpoint \"ISAKMP Alert\" du 07    février 2004 :",
+      "url": "http://www.checkpoint.com/techsupport/alerts/41_isakmp.html"
+    },
+    {
+      "title": "Avis de sécurité du CERT/CC VU#873334 :",
+      "url": "http://www.kb.cert.org/vuls/id/873334"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-027",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-02-09T00:00:00.000000"
+    },
+    {
+      "description": "correction des systèmes affectés et ajout du bulletin de sécurité de Checkpoint.",
+      "revision_date": "2004-02-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans l'implémentation du protocole ISAKMP par les\nproduits Checkpoint VPN-1 server et Checkpoint VPN\nSecureRemote/SecureClient permet à un utilisateur mal intentionné\nd'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité de Checkpoint VPN-1",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de ISS X-Force du 04 février 2004",
+      "url": "http://xforce.iss.net/xforce/alerts/id/163"
+    }
+  ]
+}

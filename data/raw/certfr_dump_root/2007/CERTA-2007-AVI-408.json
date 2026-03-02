@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "La version 4.0.3 de WinSCP ainsi que celles antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans l'outil de transfert de données\nWinSCP. L'installation de l'application spécifie au système\nd'exploitation les protocoles qu'il peut manipuler : scp:// et sftp://.\nUne personne malveillante qui contrôlerait un serveur FTP peut forcer sa\nvictime à effectuer des transferts de données par une adresse construite\nà partir de ces protocoles. Il peut s'agir d'un lien ajouté dans le\nchamp IFRAME d'une page par exemple. Le transfert peut être dans les\ndeux sens : chargement ou récupération de données sur le poste ayant une\nversion de WinSCP vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité et installer la version 4.0.4 de\nWinSCP disponible sur le site du projet (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-4909",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4909"
+    }
+  ],
+  "links": [
+    {
+      "title": "Version 4.0.4 disponible sur le site du projet WinSCP :",
+      "url": "http://winscp.net/eng/download.php"
+    },
+    {
+      "title": "Documentation en français de WinSCP :",
+      "url": "http://winscp.net/eng/docs/lang:fr"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-408",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-09-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité, l'intégrité et la disponibilité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans l'outil de transfert de données\nWinSCP. L'exploitation de cette dernière permettrait à une personne\ndistante d'effectuer de forcer des transactions illégitimes à un\nutilisateur ayant une version de WinSCP vulnérable.\n",
+  "title": "Vulnérabilité de WinSCP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Changement de version WinSCP du 02 septembre 2007",
+      "url": null
+    }
+  ]
+}

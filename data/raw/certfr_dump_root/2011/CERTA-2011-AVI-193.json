@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Bibliothèque GNU C (glibc) versions strictement inférieures à  2.13.</P>",
+  "content": "## Description\n\nUn utilisateur malveillant pouvant manipuler certaines variables\nd'environnement, peut faire exécuter du code arbitraire à un autre\nutilisateur qui manipulerait ces variables via un script. Les privilèges\naccordés au code arbitraire seront alors ceux du script.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-1095",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-1095"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-193",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-04-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une erreur dans la commande <span class=\"textit\">locale</span> de la\nglibc a été corrigée. Elle permet à un utilisateur malveillant d'élever\nses privilèges.\n",
+  "title": "Vulnérabilité dans la glibc",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RedHat RHSA-2011:0412 du 04 avril 2011",
+      "url": "http://rhn.redhat.com/errata/RHSA-2011-0412.html"
+    }
+  ]
+}

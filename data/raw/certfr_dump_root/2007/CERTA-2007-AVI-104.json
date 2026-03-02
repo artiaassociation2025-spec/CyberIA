@@ -1,0 +1,72 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les séries Cisco 7600.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les séries Cisco Catalyst 6000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les séries Cisco Catalyst 6500 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans certains produits Cisco\nCatalyst.\n\n1.  La première vulnérabilité concerne le module NAM (pour Network\n    Analysis Module). Ce dernier sert à la surveillance et l'analyse de\n    trafic du réseau, par le biais de RMON (Remote Monitoring), RMON2 et\n    d'autres MIBs (Management Information Bases). Ces informations sont\n    accessibles à distance par le protocole Simple Network Management\n    Protocol ou SNMP. Cependant, les échanges SNMP entre les modules\n    NAMs et le système Catalyst ne seraient pas correctement sécurisés,\n    notamment au niveau de l'authentification. Cela pourrait permettre à\n    un utilisateur malveillant distant de prendre le contrôle, via SNMP,\n    du système vulnérable.\n2.  la seconde vulnérabilité concernerait la manipulation par des\n    interfaces de routage nommées Route Processor (ou MSFC) de paquets\n    MPLS. Ce protocole, Multiprotocol Label Switching, sert à fournir un\n    service unifié de transport de données, en permettant la commutation\n    des paquets marqués, ou labélisés. La vulnérabilité ne nécessite\n    cependant pas que le protocole soit configuré pour fonctionner. Une\n    personne malveillante pourrait envoyer des paquets MPLS spécialement\n    construits pour perturber le système vulnérable.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco ID 81865 du 28 février 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070228-mpls.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco ID 81863 du 28 février 2007 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20070228-nam.shtml"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-104",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-03-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été identifiées dans certains produits Cisco\nCatalyst. Elles permettraient à une personne malveillante distante de\nprendre le contrôle du système vulnérable, ou du moins le perturber.\n",
+  "title": "Vulnérabilités dans les Cisco Catalyst",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité CISCO du 28 février 2007",
+      "url": null
+    }
+  ]
+}

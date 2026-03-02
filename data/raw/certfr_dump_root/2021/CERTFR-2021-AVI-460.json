@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Citrix XenServer versions 7.1 LTSR CU2 sans le correctif de sécurité XS71ECU2063",
+      "product": {
+        "name": "Citrix Hypervisor",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix Hypervisor versions 8.2 LTSR sans le correctif de sécurité XS82E026",
+      "product": {
+        "name": "Citrix Hypervisor",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2021-0089",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-0089"
+    },
+    {
+      "name": "CVE-2021-28692",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-28692"
+    },
+    {
+      "name": "CVE-2021-26313",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-26313"
+    },
+    {
+      "name": "CVE-2021-27379",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2021-27379"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2021-AVI-460",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2021-06-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Citrix Hypervisor.\nElles permettent à un attaquant de provoquer une exécution de code\narbitraire à distance et un déni de service à distance.\n",
+  "title": "Multiples vulnérabilités dans Citrix Hypervisor",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Citrix CTX316324 du 09 juin 2021",
+      "url": "https://support.citrix.com/article/CTX316324"
+    }
+  ]
+}

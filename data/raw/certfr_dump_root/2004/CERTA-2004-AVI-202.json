@@ -1,0 +1,94 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Usermin version 1.070 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Webmin version 1.140-r1 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nWebmin et Usermin sont des outils d'administration pour les\nplates-formes Unix basé sur une interface web. Plusieurs vulnérabilités\nde Webmin et Usermin peuvent être exploitées par un utilisateur mal\nintentionné.  \nLa première vulnérabilité de Webmin permet à tous les utilisateurs\nd'avoir accès à la configuration des différents modules, et d'obtenir\nainsi des informations importantes sur le système.  \nLa deuxième vulnérabilité concerne une mauvaise gestion par Usermin des\nmessages électroniques au format HTML permettant l'exécution de code\nmalicieux.  \nLa troisième vulnérabilité concerne Webmin et Usermin. Un utilisateur\nmal intentionné peut, par le biais d'informations d'authentification\nerronées, bloquer l'accès du service aux utilisateurs légitimes.\n\n## Solution\n\n-   Mettre à jour l'outil Webmin. La version 1.150 corrige ces\n    vulnérabiltiés.\n-   Mettre à jour l'outil Usermin. La version 1.080 corrige ces\n    vulnérabiltiés.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site Internet des changements de Webmin :",
+      "url": "http://www.webmin.com/changes-1.150.html"
+    },
+    {
+      "title": "Bulletin de sécurité SNS Advisory No. 75 du 11 juin 2004 :",
+      "url": "http://www.lac.co.jp/security/csl/intelligence/SNSadvisory_e/75_e.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200406-12 du 16 juin 2004    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200406-12.xml"
+    },
+    {
+      "title": "Bulletin de sécurité SNS Advisory No. 74 du 11 juin 2004 :",
+      "url": "http://www.lac.co.jp/security/csl/intelligence/SNSadvisory_e/74_e.html"
+    },
+    {
+      "title": "Site Internet de Webmin et Usermin :",
+      "url": "http://www.webmin.com/"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200406-15 du 18 juin 2004    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200406-15.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:074 du 27 juillet    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:074"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-526 du 03 juillet 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-526"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-202",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-06-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références à Usermin. Ajout des bulletins de sécurité SNS, Debian et des références CVE.",
+      "revision_date": "2004-07-05T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de Mandrake.",
+      "revision_date": "2004-07-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Divulgation d'informations confidentielles"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans les outils Webmin et\nUsermin.\n",
+  "title": "Vulnérabilité de Webmin et Usermin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Gentoo GLSA 200406-12",
+      "url": null
+    }
+  ]
+}

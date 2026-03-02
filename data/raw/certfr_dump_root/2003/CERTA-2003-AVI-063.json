@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Ximian Evolution versions 1.2.2 et antérieures.</P>",
+  "content": "## Description\n\nDeux vulnérabilités concernent le codage UUEncode. La première permet,\nen construisant malicieusement un en-tête UUEncode, de provoquer l'arrêt\nbrutal de l'application Evolution. La deuxième permet de provoquer un\ndéni de service sur le système en utilisant plusieurs codages UUEncode\nitératifs.  \n\nUne autre vulnérabilité concerne certains fichiers au format MIME. Il\nest possible d'y inclure un code arbitraire qui sera exécuté par le\nsystème vulnérable.\n\n## Solution\n\nInstaller la version 1.2.3 de Ximian Evolution :\n\n    http://www.ximian.com\n\n  \n\nou consulter l'éditeur pour connaître la disponibilité des correctifs :\n\n-   avis de sécurité RedHat RHSA-2003:108-16 :\n\n        http://rhn.redhat.com/errata/RHSA-2003-108.html\n\n      \n\n-   avis de sécurité Gentoo :\n\n        http://forums.gentoo.org/viewtopic.php?t=42816\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité CoreSecurity CORE-20030304-01 :",
+      "url": "http://www.coresecurity.com/common/showdoc.php?idx=309&idxseccion=10"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-063",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de règles de sécurité"
+    }
+  ],
+  "summary": "Le client mél Ximian Evolution présente trois vulnérabilités qui\npermettent à un utilisateur mal intentionné d'exécuter du code\narbitraire ou de provoquer un déni de service.\n",
+  "title": "Vulnérabilités de Ximian Evolution",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de CoreSecurity CORE-20030304-01",
+      "url": null
+    }
+  ]
+}

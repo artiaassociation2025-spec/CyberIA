@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "AIX 5.3.0.",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "AIX 5.2.0 ;",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur de type débordement de tampon dans la commande getconf permet\nà un utilisateur local mal intentionné d'élever ses privilèges ou\nd'exécuter du code arbitraire.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM IY73850 pour AIX 5.2.0 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isgIY73850"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IY73814 pour AIX 5.3.0 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isgIY73814"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-368",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-09-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité des systèmes AIX permet à un utilisateur local mal\nintentionné d'élever ses privilèges ou d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité des systèmes d'exploitation AIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM IY73850 et IY73814",
+      "url": null
+    }
+  ]
+}

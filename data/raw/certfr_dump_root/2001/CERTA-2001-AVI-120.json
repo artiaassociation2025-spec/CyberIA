@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Solaris 7;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 2.6.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 8;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nXlock est une commande permettant de réaliser le verrouillage de\nl'écran. Xlock est installée avec Solaris Openview.\n\nUne vulnérabilité présente dans cette commande permet à un utilisateur\nmal intentionné d'exécuter du code arbitraire avec les privilèges de\nl'administrateur root. Cette vulnérabilité n'est exploitable qu'en\nlocal.\n\n## Contournement provisoire\n\nSi les correctifs ne peuvent être installés immédiatement, il est\nrecommandé de supprimer l'attribut suid sur la commande xlock:\n\n\\# chmod a-s /usr/openwin/bin/xlock\n\n## Solution\n\nLe correctif pour la version 8 de Solaris est disponible sous la\nréférence 108652-40 pour l'architecture sparc et 108653-34 pour\nl'architecture x86. Sun prévoit la sortie des correctifs pour les autres\nversions de Solaris sous les références suivantes:\n\n-   Solaris 7: 108376-30 (sparc), 108377-26 (x86);\n-   Soalris 2.6: 105633-60 (sparc), 106248-45 (x86).\n\n#### 6.0.0.1\n\nSe référer au site du constructeur pour l'obtention des correctifs:\n\n    http://sunsolve.sun.com/securitypatch\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-120",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans la commande xlock permet à un\nutilisateur mal intentionné d'exécuter du code arbitraire avec les\nprivilèges de l'administrateur root.\n",
+  "title": "Vulnérabilité dans Xlock sous Solaris",
+  "vendor_advisories": []
+}

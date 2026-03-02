@@ -1,0 +1,118 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SeaMonkey (versions antérieures à 1.0.6).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Thunderbird (versions antérieures à 1.5.0.8) ;",
+      "product": {
+        "name": "Thunderbird",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Firefox (versions antérieures à 1.5.0.8) ;",
+      "product": {
+        "name": "Firefox",
+        "vendor": {
+          "name": "Mozilla",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont fait l'objet de correctifs dans les\nproduits Mozilla :\n\n-   il a été démontré qu'il était possible de modifier des objets\n    scripts en cours d'exécution. Cette possibilité conduit\n    potentiellement à l'exécution de code JavaScript arbitraire. Cette\n    fonctionalité touche le moteur du navigateur qui est aussi utilisé\n    dans le lecteur de mail qui devient ainsi vulnérable si la\n    fonctionalité JavaScript est activée.\n-   Une vulnérabilité de SeaMonkey permet à un utilisateur distinct\n    d'exécuter à distance du code arbitraire avec les privilèges de\n    l'utilisateur qui utilise ce logiciel.\n-   Les signatures électronique avec l'algorithme RSA sont falsifiables\n    si l'exposant[^1^](#foot30) est trop petit. Cette vulnérabilité est\n    corrigée dans les versions de la bibliothèque de fonctions Network\n    Security Services (NSS) 3.11.3 utilisées dans Firefox 2.0.\n\n## Contournement provisoire\n\nLa recommandation générale du CERTA, qui consiste à désactiver par\ndéfaut le JavaScript et à ne l'activer qu'au cas par cas, si nécessaire,\nselon la confiance que l'on accorde aux sites visités, est plus que\njamais d'actualité. Cette recommandation générale préconise de ne jamais\nactiver le JavaScript dans un logiciel de courrier électronique.\n\nSi ce n'est pas déjà fait, il est recommandé de désactiver le JavaScript\nen attendant l'application du correctif de sécurité.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation). Le correctif consiste à passer\naux versions suivantes des applications vulnérables :\n\n-   Firefox 1.5.0.8 ;\n-   Thunderbird 1.5.0.8 ;\n-   SeaMonkey 1.0.6.\n",
+  "cves": [
+    {
+      "name": "CVE-2006-5748",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5748"
+    },
+    {
+      "name": "CVE-2006-5462",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5462"
+    },
+    {
+      "name": "CVE-2006-5747",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5747"
+    },
+    {
+      "name": "CVE-2006-5464",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5464"
+    }
+  ],
+  "links": [
+    {
+      "title": "Avis de sécurité Mandriva MDKSA-2006:205 du 09 novembre    2006 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:205"
+    },
+    {
+      "title": "Avis de sécurité Slackware SSA:2006-313-01 du 09 novembre    2006 :",
+      "url": "http://slackware.com/security/viewer.php?l=slackware-security&y=2006&m=slackware-security.387734"
+    },
+    {
+      "title": "Avis de sécurité mozilla MFSA 2006-65 :",
+      "url": "http://www.mozilla.org/security/announce/2006/mfsa2006-65.html"
+    },
+    {
+      "title": "Avis de sécurité mozilla MFSA 2006-66 :",
+      "url": "http://www.mozilla.org/security/announce/2006/mfsa2006-66.html"
+    },
+    {
+      "title": "Avis de sécurité mozilla MFSA 2006-67 :",
+      "url": "http://www.mozilla.org/security/announce/2006/mfsa2006-67.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-482",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-09T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Mandriva et Slackware.",
+      "revision_date": "2006-11-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Fausses signatures électroniques"
+    }
+  ],
+  "summary": "La dernière livraison des logiciels Mozilla corrige plusieurs failles de\nsécurité qui peuvent conduire à l'exécution de code arbitraire ou à de\nfausses signatures électroniques.\n",
+  "title": "Vulnérabilités des produits Mozilla",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Mozilla MFSA 2006-66",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Mozilla MFSA 2006-67",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Mozilla MFSA 2006-65",
+      "url": null
+    }
+  ]
+}

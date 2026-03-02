@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Elastic Agent versions 8.x.x antérieures à 8.10.1",
+      "product": {
+        "name": "Elasticsearch",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Fleet Server versions versions 8.x.x antérieures à 8.10.1",
+      "product": {
+        "name": "Elasticsearch",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Beats versions 8.x.x antérieures à 8.10.1",
+      "product": {
+        "name": "Elasticsearch",
+        "vendor": {
+          "name": "Elastic",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2023-31421",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2023-31421"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité ElasticSearch 343385 du 19 septembre 2023",
+      "url": "https://discuss.elastic.co/t/beats-elastic-agent-apm-server-and-fleet-server-8-10-1-security-update-improper-certificate-validation-issue-esa-2023-16/343385"
+    }
+  ],
+  "reference": "CERTFR-2023-AVI-0765",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2023-09-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans <span class=\"textit\">les\nproduits ElasticSearch</span>. Elle permet à un attaquant de provoquer\nun contournement de la politique de sécurité.\n",
+  "title": "Vulnérabilité dans les produits ElasticSearch",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ElasticSearch 343385 du 19 septembre 2023",
+      "url": null
+    }
+  ]
+}

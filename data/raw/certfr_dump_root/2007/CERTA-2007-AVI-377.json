@@ -1,0 +1,150 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenSolaris sur x86 de svn_01 à svn_11.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 10 sur SPARC sans le patch 139099-03 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenSolaris sur SPARC de svn_01 à svn _115 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GNU tar versions antérieures à 1.18 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 9 sur SPARC ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 9 sur x86 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solaris 10 sur x86 sans le patch 139100-03 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn manque de vérification de certains attributs d'une archive tar permet\nà un utilisateur malveillant d'extraire des fichiers ou des dossiers\ncontenus dans l'archive vers des emplacements arbitraires. Un\nutilisateur exploitant cette vulnérabilité peut contourner la politique\nde sécurité en créant ou en écrasant des données sensibles.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-4131",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-4131"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:173 du 4 septembre    2007 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:173"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200709-09 du 15 septembre    2007 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200709-09.xml"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2007:0860 du 23 août 2007    :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2007-0860.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-506-1 du 28 août 2007 :",
+      "url": "http://www.ubuntu.com/usn/usn-506-1"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SA:2007:018 du 31 août 2007    :",
+      "url": "http://www.novell.com/linux/security/advisories/2007_18_sr.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1438 du 28 décembre 2008 :",
+      "url": "http://www.debian.org/security/2008/dsa-1438"
+    },
+    {
+      "title": "Bulletin de sécurité Sun 1-66-273551-1 du 2 décembre 2009 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-273551-1"
+    },
+    {
+      "title": "Bulletin de sécurité Avaya ASA-2007-383 du 26 septembre    2007 :",
+      "url": "http://support.avaya.com/elmodocs2/security/ASA-2007-383.htm"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD FreeBSD-SA-07:10.gtar du 29    novembre 2007 :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-07:10.gtar.asc"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-377",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-08-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo, Debian, Mandriva, SuSE, Ubuntu, FreeBSD et Avaya.",
+      "revision_date": "2008-10-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références au bulletin de sécurité Sun 1-66-273551-1 du 02 décembre 2009.",
+      "revision_date": "2009-12-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité de GNU tar permet de contourner la politique de\nsécurité.\n",
+  "title": "Vulnérabilité dans GNU tar",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Redhat RHSA-2007:0860 du 23 août 2007",
+      "url": null
+    }
+  ]
+}

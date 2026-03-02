@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "bibliothèque libpng 1.0.15-8 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "bibliothèque libpng3 1.2.1-1.1 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Bibliothèque libpng 1.0.12-3 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "bibliothèque libpng3 1.2.5.0-9 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes bibliothèques libpng et libpng3 sont utilisées par de nombreuses\napplications pour la manipulation de fichier au format png (\\`\\`Portable\nNetwork Graphics''). Plusieurs vulnérabilités ont été découvertes dans\nces bibliothèques :\n\n-   Ces deux bibliothèques présentent des vulnérabilités de type\n    débordement d'entier (integer overflow). Un utilisateur mal\n    intentionné peut ainsi exécuter un code arbitraire sur le système\n    vulnérable au moyen d'une image au format png malicieusement\n    constituée.\n-   De plus, la bibliothèque libpng3 présente une vulnérabilité de type\n    débordement de mémoire.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Docuementation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-353",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-10-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Les vulnérabilités découvertes dans les bibliothèques libpng et libpng3\npermettent à un utilisateur mal intentionné d'exécuter du code\narbitraire sur le système vulnérable.\n",
+  "title": "Multiples vulérabilités dans les bibliothèques libpng",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-571 du 20 octobre 2004",
+      "url": "http://debian.org/security/2004/dsa-571"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-570 du 20 octobre 2004",
+      "url": "http://debian.org/security/2004/dsa-570"
+    }
+  ]
+}

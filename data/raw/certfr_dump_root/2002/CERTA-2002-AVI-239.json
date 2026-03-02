@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Microsoft Windows 2000 et Windows XP.</P>",
+  "content": "## Description\n\nPPTP (Point-to-Point Tunneling Protocol) est un protocole de type\nclient-serveur permettant d'encapsuler des trames PPP dans des paquets\nIP. Il a été défini dans la RFC 2637 (cf. Documentation), et sert à la\nmise en place de réseaux privés virtuels (VPN).  \n\nCe protocole est natif dans les systèmes Microsoft Windows 2000 et\nWindows XP.\n\nOn le retrouve également comme composant optionnel dans les systèmes\nWindows NT 4.0, Windows 98, Windows 98 SE et Windows ME, mais\nl'implantation du protocole sur ces systèmes ne présente pas de\nvulnérabilité.  \n\nLe protocole PPTP définit une connexion de contrôle entre le client et\nle serveur (port 1723/tcp par défaut). Une vulnérabilité dans le\ntraitement des données de cette connexion permet à un utilisateur mal\nintentionné, par le biais de paquets PPTP malicieusement construits, de\nprovoquer un déni de service.\n\nCette vulnérabilité est exploitable à distance.\n\n## Solution\n\nAppliquer le correctif publié par Microsoft (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-239",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-10-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le traitement des données du protocole PPTP\npermet à un utilisateur mal intentionné de provoquer un déni de service\nà distance.\n",
+  "title": "Vulnérabilité du protocole PPTP sous Windows 2000 et Windows XP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Microsoft MS02-063",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms02-063.asp"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "NetBSD 1.6, 1.6.1 et 1.6.2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "la branche NetBSD 2.0 est affectée mais la version finale NetBSD 2.0 incluera le correctif.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetBSD 1.5, 1.5.1, 1.5.2 et 1.5.3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetBSD-current de sources antérieures au 22 avril 2004 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "NetBSD",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe procole TCP, décrit dans la RFC 793, présente plusieurs faiblesses :\n\n-   Possibilité de fabriquer des paquets RST afin de terminer une\n    connection TCP ;\n-   possibilité de fabriquer des paquets SYN afin de terminer une\n    connection TCP ;\n-   possibilité d'injecter des paquets dans une session TCP.\n\n  \nEn plus de ces faiblesses, la mise en oeuvre du protocole TCP dans le\nnoyau 4.4BSD (dont NetBSD est dérivé) souffre d'un problème dans la\nvalidation des paquets TCP RST.\n\n## Solution\n\nAppliquer le correctif fournit par NetBSD (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Le protocole TCP (RFC 793) :",
+      "url": "http://www.ietf.org/rfc/rfc793.txt"
+    },
+    {
+      "title": "Considérations de sécurité sur le protocole TCP du 19 avril    2004 :",
+      "url": "http://www.ietf.org/internet-drafts/draft-ietf-tcpm-tcpsecure-01.txt"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-140",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-04-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Injection de données dans un flux tcp"
+    }
+  ],
+  "summary": "Outre les faiblesses du protocole TCP (Transmission Control Protocol)\nconnues depuis plusieurs années, une vulnérabilité dans la mise en\noeuvre du protocole TCP par NetBSD permet à un utilisateur mal\nintentionné de créer un déni de service ou d'injecter des données dans\nun flux TCP.\n",
+  "title": "Vulnérabilité du noyau NetBSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité NetBSD NetBSD-SA2004-006",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/security/advisories/NetBSD-SA2004-006.txt.asc"
+    }
+  ]
+}

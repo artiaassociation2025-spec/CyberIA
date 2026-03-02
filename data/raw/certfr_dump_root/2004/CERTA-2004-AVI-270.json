@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "vulnérabilité CVE CAN-2004-0630 et CVE CAN 2004-0631 : Adobe Acrobat Reader versions 5.0.8 et antérieures pour les plates-formes Unix.",
+      "product": {
+        "name": "Acrobat",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Vulnérabilité CVE CAN-2004-0629 : Adobe Acrobat et Adobe Acrobat Reader versions antérieures à la 6.0.2 ;",
+      "product": {
+        "name": "Acrobat",
+        "vendor": {
+          "name": "Adobe",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Vulnérabilité CVE CAN-2004-0629 : une vulnérabilité de type\n    débordement de mémoire a été découverte dans le composant ActiveX.\n    Elle permet à un utilisateur distant mal intentionné d'exécuter du\n    code arbitraire ou de provoquer un déni de service.\n-   Vulnérabilité CVE CAN-2004-0630 et CAN-2004-0631 : deux\n    vulnérabilités dans le décodage des chaînes \"uuencodées\" sur les\n    plates-formes Unix permettent à un utilisateur d'exécuter du code\n    arbitraire par le biais d'un document au format PDF malicieusement\n    construit.\n\n## Contournement provisoire\n\n-   Vulnérabilité CVE CAN-2004-0629 : ne pas ouvrir les documents au\n    format PDF avec un navigateur.\n-   Vulnérabilité CVE CAN-2004-0630 et CAN-2004-0631 :\n    -   n'ouvrir que les documents PDF provenant d'une source de\n        confiance ;\n    -   ne pas ouvrir les documents PDF sur une plate-forme Unix.\n\n## Solution\n\n-   La version 5.0.9 corrige les vulnérabilités CVE CAN-2004-0630 et\n    CAN-2004-0631 ;\n-   la version 6.0.2 corrige la vulnérabilité CVE CAN-2004-0629.\n\nAdobe Acrobat Reader est téléchargeable à l'adresse suivante :\n\n    http://www.adobe.com/products/acrobat/alternate.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité iDefense du 13 août 2004 (CVE    CAN-2004-0629) :",
+      "url": "http://www.idefense.com/application/poi/display?id=126"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour acroread du 12 août 2004    :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200408-14 du 15 août 2004    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200408-14.xml"
+    },
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD acroread5 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/print/acroread5/README.html"
+    },
+    {
+      "title": "Site Internet du produit Adobe Acrobat :",
+      "url": "http://www.adobe.com/products/acrobat/main.html"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:432 du 26 août 2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-432.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-270",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-08-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat.",
+      "revision_date": "2004-08-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité NetBSD et des liens vers les références CVE.",
+      "revision_date": "2004-08-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout du lien Internet de téléchargement de Adobe Acrobat Reader.",
+      "revision_date": "2004-09-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités des applications Adobe Acrobat et Adobe Acrobat\nReader permettent à un utilisateur distant mal intentionné d'exécuter du\ncode arbitraire ou de provoquer un déni de service sur une machine\nvulnérable.\n",
+  "title": "Vulnérabilités d'Adobe Acrobat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité iDefense du 12 août 2004",
+      "url": "http://www.idefense.com/application/poi/display?id=125"
+    }
+  ]
+}

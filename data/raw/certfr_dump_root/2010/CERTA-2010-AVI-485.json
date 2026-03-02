@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows Media Player sur Windows Vista Service Pack 1 et Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Media Player sur Windows 7 pour les systèmes 32 bits ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Media Player sur Windows 7 pour les systèmes 64 bits.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Media Player sur Windows Vista x64 Edition Service Pack 1 et Service Pack 2 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le service de partage réseau du\nlecteur multimédia Windows Media Player. La réception d'un paquet RTSP\nspécialement conçu peut provoquer une exécution de code à distance.\n\nEn configuration par défaut, cette attaque ne peut être menée que depuis\nle réseau local. Sur les systèmes Windows Vista, Windows 7\nprofessionnel, entreprise et ultimate, le service de partage n'est pas\nactivé par défaut. Par contre, il est en service sur les autres versions\nde Windows 7.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3225",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3225"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-485",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-10-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le service de partage réseau de\nMicrosoft Windows Media Player permet à un utilisateur d'exécuter du\ncode arbitraire à distance. La configuration par défaut de ce service\nrend cette vulnérabilité exploitable uniquement depuis le réseau local.\n",
+  "title": "Vulnérabilité dans le service de partage réseau de Media Player",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS10-075 du 12 octobre 2010",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS10-075.mspx"
+    }
+  ]
+}

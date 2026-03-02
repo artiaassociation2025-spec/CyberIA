@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Versions Outlook ou Outlook Express antérieures aux versions Outlook 2002 ou Outlook Express 6.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tous les systèmes Microsoft Windows possédant une version quelconque d'Internet Explorer.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nNormalement lors d'une navigation avec Internet Explorer, un script\nprésent dans une page web ne peut pas ouvrir de frame dont la source\nprovient d'un autre site web.\n\nUne vulnérabilité de la gestion des VBScripts (Scripts en Visual Basic)\npermet à un administrateur de site web mal intentionné d'ouvrir une\nframe contenant des pages situées dans un autre site web par le biais\nd'une page web habilement construite à partir de scripts Visual Basic.\n\nL'exploitation de cette vulnérabilité permet à cet administrateur\nd'obtenir des informations personnelles sur ses victimes et d'accéder à\ndes fichiers présents sur les machines victimes contenant des données\npersonnelles.\n\n## Contournement provisoire\n\nDésactiver les VBScripts en désactivant Active Scripting dans les\nparamètres de sécurité de Internet Explorer.\n\n## Solution\n\n-   Se référer au site web de Microsoft pour connaitre la disponibilité\n    des correctifs :\n\n        http://www.microsoft.com/windowsupdate\n\n-   Installer le supplément sécurité de Microsoft pour Outlook 98 et\n    2000 :\n\n        http://office.microsoft.com/Download/2000/Out2ksec.aspx\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-042",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation de données présentes sur le système"
+    }
+  ],
+  "summary": "Un administrateur de site web mal intentionné peut accéder à des données\nprésentes sur le système de ses victimes au moyen d'un script Visual\nBasic.\n",
+  "title": "Vulnérabilité de Internet Explorer liée aux VBScripts",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS02-009",
+      "url": "http://www.microsoft.com/technet/seecurity/bulletin/MS02-009.asp"
+    }
+  ]
+}

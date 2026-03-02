@@ -1,0 +1,97 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Asterisk Open Source, pour les versions de la branche 1.4.x antérieures à 1.4.17 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "AsteriskNOW pour les versions antérieures à beta7 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Business Edition, pour les versions de la branche C.x.x antérieures à C.1.0-beta8 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "s800i (Asterisk Appliance) pour les versions de la branche 1.0.x antérieures à 1.0.3.4.",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Asterisk Appliance Developer Kit pour les versions antérieures à Asterisk 1.4 revision 95946 ;",
+      "product": {
+        "name": "Asterisk",
+        "vendor": {
+          "name": "Asterisk",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans Asterisk. L'application ne\nmanipulerait pas correctement les trames signalant la fermeture d'une\nsession d'appel SIP (BYE) et un transfert (en-tête \"Also\"). Celui-ci\nn'est normalement plus utilisé, et a été remplacé par la méthode Refer.\n\nCette vulnérabilité pourrait être exploitée à distance par le biais de\ntrames spécialement construites afin de perturber le service Asterisk.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0095",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0095"
+    }
+  ],
+  "links": [
+    {
+      "title": "RFC 3515, \"The Session Initiation Protocol (SIP) Refer    Method\" :",
+      "url": "http://www.ietf.org/rfc/rfc3115.txt"
+    },
+    {
+      "title": "Annonce de sécurité du projet Asterisk AST-2008-001 du 02    janvier 2008 :",
+      "url": "http://downloads.digium.com/pub/security/AST-2008-001.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-006",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-01-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans Asterisk. Elle pourrait être\nexploitée à distance par le biais de trames spécialement construites,\nafin de perturber le service.\n",
+  "title": "Vulnérabilité dans Asterisk",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité du projet Asterisk AST-2008-001 du 02 janvier 2008",
+      "url": null
+    }
+  ]
+}

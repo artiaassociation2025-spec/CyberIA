@@ -1,0 +1,118 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Defender x64 Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Antigen pour SMTP Gateway 9.x ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Defender ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Antigen pour Exchange 9.x ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Forefront Security pour SharePoint.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Forefront Security pour Exchange Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows Live OneCare ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Defender pour Windows Vista ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité, de type débordement d'entier, a été identifiée dans\nle moteur de protection contre les codes malveillants (mpengine.dll)\nfourni avec certaines applications de sécurité Microsoft. Celle-ci se\nproduirait au cours de l'analyse de documents au format PDF (pour\nPortable Document Format).\n\nUne personne malveillante pourrait construire un fichier d'extension\n.pdf exploitant cette vulnérabilité. Si une personne récupère ce dernier\n(soit en le téléchargeant via une page Web, soit comme pièce jointe d'un\ncourrier électronique par exemple), du code malveillant pourrait être\nexécuté lorsque l'antivirus de Mirosoft analyserait le fichier.\n\n## Solution\n\nSe référer au bulletin de sécurité MS07-010 de l'éditeur pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-5270",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5270"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-081",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-02-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité du moteur de protection mpengine.dll de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-010 du 13 février 2007",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-010.mspx"
+    }
+  ]
+}

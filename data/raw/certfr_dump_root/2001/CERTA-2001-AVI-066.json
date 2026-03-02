@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Internet Information Server 4.0 et 5.0, installé sur les  serveurs Windows NT et 2000, ayant les Extensions FrontPage  activées.</P>",
+  "content": "## Description\n\nVisual Studio RAD est un composant de Microsoft FrontPage Extensions qui\nn'est pas installé par défaut.\n\nUn utilisateur distant mal intentionné, peu à l'aide d'une URL\nhabilement conçue, effectuer un débordement de mémoire dans ce composant\nlui permettant d'exécuter du code avec les privilèges d'un utilisateur\nnormal, ou bien ceux de SYSTEM.\n\nCes commandes sont exécutées dans le contexte de sécurité d'un\nutilisateur, ou bien du système, ce qui permet à l'utilsateur\nd'effectuer n'importe quelle action sur le serveur.\n\n## Contournement provisoire\n\nVisual Studio RAD est un outils de développement des objets COM : Il ne\nfaut pas installer Visual Studio RAD sur une machine en production.\n\nRendre non exécutable les librairies Dynamiques :\n\n<span\nclass=\"small\">`Program Files\\Common  Files\\Microsoft Shared\\Web Server  Extensions\\40\\ISAPI\\_vti_aut\\fp30reg.dll`</span>\n\net\n\n<span\nclass=\"small\">`Program Files\\Common  Files\\Microsoft Shared\\Web Server  Extensions\\40\\bin\\fp4areg.dll`.</span>\n\n## Solution\n\nAppliquer le correctif Microsoft pour les versions Anglaises et\nAméricaines :\n\n-   Pour Windows 2000 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=30727\n\n-   Pour Windows NT 4.0 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID31038\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms01-035.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-066",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-06-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire avec les privilèges d'un utilisateur normal voire de system"
+    }
+  ],
+  "summary": "Une vulnérabilité d'un composant des Extensions FrontPage permet à un\nutilisateur mal intentionné d'exécuter du code à distance.\n",
+  "title": "Vulnérabilité des Extensions FrontPage de Microsoft IIS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS01-035",
+      "url": null
+    }
+  ]
+}

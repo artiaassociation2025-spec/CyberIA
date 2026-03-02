@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>gaim versions 1.0.1 et antérieures.</p>",
+  "content": "## Description\n\ngaim est un client de messagerie instantanée multi-protocoles (ICQ, MSN\nMessenger, Yahoo!, IRC, Jabber, AIM, ...).\n\n  \nMSNSLP est un protocole utilisé par le logiciel de messagerie\ninstantanée MSN Messenger.\n\nUne vulnérabilité de type débordement de mémoire est présente dans une\ndes routines traitant les messages au format MSNSLP. Par le biais de\nmessages habilement constitués, un utilisateur distant mal intentionné\npeut exécuter du code arbitraire à distance sur un client gaim\nvulnérable.\n\n  \n\nDeux autres vulnérabilités pouvant entrainer un déni de service par\narrêt brutal de l'application sont également présente dans gaim.\n\n## Solution\n\nLa version 1.0.2 de gaim corrige ces vulnérabilités.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Sources de gaim :",
+      "url": "http://gaim.sourceforge.net"
+    },
+    {
+      "title": "Bulletin \"MSN SLP DOS\" du 19 octobre 2004 :",
+      "url": "http://gaim.sourceforge.net/security/?id=8"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD pour gaim du 22 octobre 2004 :",
+      "url": "http://www.vuxml.org/openbsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200410-23 du 24 octobre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200410-23.xml"
+    },
+    {
+      "title": "Bulletin \"MSN SLP buffer overflow\" du 19 octobre 2004 :",
+      "url": "http://gaim.sourceforge.net/security/?id=9"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:117 du 01 novembre    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:117"
+    },
+    {
+      "title": "Bulletin \"MSN file transfer DOS\" du 19 octobre 2004 :",
+      "url": "http://gaim.sourceforge.net/security/?id=7"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-350",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-10-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Gentoo.",
+      "revision_date": "2004-10-27T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandrake.",
+      "revision_date": "2004-11-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité OpenBSD.",
+      "revision_date": "2004-11-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans gaim permettent à un\nutilisateur distant mal intentionné d'exécuter du code arbitraire à\ndistance ou réaliser un déni de service sur le poste client vulnérable.\n",
+  "title": "Multiples vulnérabilités de Gaim",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RHSA-2004:604 de Red Hat",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-604.html"
+    }
+  ]
+}

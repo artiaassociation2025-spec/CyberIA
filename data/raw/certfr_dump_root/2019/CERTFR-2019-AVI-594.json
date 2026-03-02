@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Les diques durs HPE SAS à état solide (SSD) dont la version du microgiciel est antérieure à HPD8. Se référer au site du constructeur pour la liste complète des produits affectés (cf. section Documentation).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "HPE",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTFR-2019-AVI-594",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2019-11-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans HPE SAS SSD. Après 32 768 heures\nde fonctionnement, soit 3 ans, 270 jours et 8 heures, le disque dur\ns'arrête de fonctionner et il est impossible de récupérer les données.\nPlusieurs disques durs mis en service en même temps s'arrêteront donc\nsensiblement au même moment.\n\nIl est possible d'utiliser l'outil de diagnostic intégré pour vérifier\nla durée de fonctionnement du disque\n(<https://support.hpe.com/hpsc/doc/public/display?docId=emr_na-a00092478en_us>).\n",
+  "title": "Vulnérabilité dans HPE SAS SSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité HPE a00092491en_us du 22 novembre 2019",
+      "url": "https://support.hpe.com/hpsc/doc/public/display?docId=emr_na-a00092491en_us"
+    }
+  ]
+}

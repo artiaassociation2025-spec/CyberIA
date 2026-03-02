@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>phpMyAdmin 3.4.x.</p>",
+  "content": "## Description\n\nDeux vulnérabilités de phpMyAdmin ont été corrigées :\n\n-   dans des configurations très particulières, un message d'erreur peut\n    divulguer des informations sur l'arborescence des fichiers du\n    serveur ;\n-   l'interface d'installation ne valide pas correctement des données\n    entrées. Cela permet de réaliser de l'injection de code indirecte\n    qui, dans certaines circonstances, peut être persistente.\n\n## Solution\n\nLa version phpMyAdmin 3.4.6 corrige ces vulnérabilités.\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-4064",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-4064"
+    },
+    {
+      "name": "CVE-2011-3646",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-3646"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité phpMyAdmin PMASA-2011-15 du 17 octobre    2011 :",
+      "url": "http://www.phpmyadmin.net/home_page/security/PMASA-2011-15.php"
+    },
+    {
+      "title": "Bulletin de sécurité phpMyAdmin PMASA-2011-16 du 17 octobre    2011 :",
+      "url": "http://www.phpmyadmin.net/home_page/security/PMASA-2011-16.php"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-572",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-10-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Des vulnérabilités dans phpMyAdmin permettent à un utilisateur\nmalveillant de lire des données sensibles ou de réaliser de l'injection\nde code indirecte.\n",
+  "title": "Vulnérabilités dans phpMyAdmin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité phpMyAdmin PMASA-2011-15 et 16 du 17 octobre 2011",
+      "url": null
+    }
+  ]
+}

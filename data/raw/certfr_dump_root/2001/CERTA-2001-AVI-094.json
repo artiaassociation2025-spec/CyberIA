@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les logiciels de détection d'intrusions suivant :</P>  <UL>    <LI>CISCO NetRanger ;</LI>    <LI>le module de détection d'intrusions des routeurs Catalyst    6000 ;</LI>    <LI>Dragon sensor 4.x ;</LI>    <LI>ISS realsecure Network Sensor 5.x, 6.x, avant XPU 3.2 et    Server Sensor 6.0 et 5.5 pour Windows ;</LI>    <LI>les versions de snort antérieures à la version 1.8.1.</LI>  </UL>  <P>Il est possible que d'autres systèmes de détection  d'intrusions soient sensibles à cette vulnérabilité, contactez le  distributeur de votre système.</P>",
+  "content": "## Description\n\nCertains IDS (Intrusion Detection System ou Système de Détection\nd'Intrusions) utilisent des « signatures » basées sur la recherche de\nchaines de caractères dans les paquets qui transitent sur le réseau afin\nde détecter l'occurence d'une attaque.\n\nUn utilisateur mal intentionné peut créer un code malicieux utilisant un\ncodage unicode particulier (que seuls les serveurs web Internet\nInformation Server utilisent) dans une requête HTTP afin de tromper les\nIDS.\n\n## Solution\n\nAppliquer les correctifs selon les systèmes :\n\n-   Cisco Secure Intrusion Detection System Sensor :\n\n        ftp://ftp-eng.cisco.com/csids-sig-updates/ServicePacks/IDSK9-sp3.0-1.43-s6-0.43-bin\n\n-   Pour les autres produits CISCO, il faut avoir un contrat de\n    maintenance :\n\n        http://www.cisco.com\n\n-   Tous les produits ISS :\n\n        http://www.iss.net/eval/eval.php\n\n-   Realsecure Network Sensor :\n\n        http://www.iss.net/db_data/xpu/RS.php\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "L'avis L-139 du CIAC :",
+      "url": "http://www.ciac.org/ciac/bulletins/l-139.shtml"
+    },
+    {
+      "title": "L'avis Cisco :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-intrusion-detection-obfuscation-vuln-pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-094",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-09-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Possibilité d'obtention de faux négatifs sur certains ids"
+    }
+  ],
+  "summary": "Certains IDS peuvent être leurrés par des codes malicieux utilisant un\nformat unicode particulier.\n",
+  "title": "Attaques non détectées par certains IDS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis L139 du CIAC",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Solaris 7, 8 et 9 pour les  architectures Sparc et x86.</p>",
+  "content": "## Description\n\nUne vulnérabilité est présente dans le serveur NFS de Sun.\n\nAu moyen de requêtes malicieusement constituées, un client NFS accédant\nà un système de fichiers UFS exporté par un serveur NFS vulnérable peut\nentraîner l'arrêt brutal et le redémarrage de la machine hébergeant ce\nserveur.\n\n## Contournement provisoire\n\nAu niveau du serveur NFS, exporter les systèmes de fichiers en mode\n\"lecture-seule\".\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur (cf. section\nDocumentation) pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-176",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-10-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité du serveur NFS sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #57406 de Sun",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F57406"
+    }
+  ]
+}

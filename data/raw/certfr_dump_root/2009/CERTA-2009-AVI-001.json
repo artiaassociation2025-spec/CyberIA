@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Samba versions 3.2.0 à 3.2.6.</p>",
+  "content": "## Description\n\nUne vulnérabilité est présente dans le serveur de fichier Samba. Cette\nvulnérabilité concerne les serveurs configurés avec la directive\nregistry shares positionnée à yes. Dans ces conditions et avec un\ncertain type de client samba, il est possible à un utilisateur distant\nmalintentionné d'accéder à la racine du système de fichiers (''/'') avec\nles privilèges du compte valide utilisé pour se connecter auprès du\nserveur Samba vulnérable.\n\n## Solution\n\nLa version 3.2.7 corrige le problème :\n\n    http://us6.samba.org/samba/ftp/stable/samba-3.2.7.tar.gz\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0022",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0022"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-001",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-01-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans le serveur de fichier Samba permet à un\nutilisateur malintentionné distant de contourner la politique de\nsécurité du système vulnérable.\n",
+  "title": "Vulnérabilité dans Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Samba CVE-2009-0022",
+      "url": "http://us1.samba.org/samba/security/CVE-2009-0022.html"
+    }
+  ]
+}

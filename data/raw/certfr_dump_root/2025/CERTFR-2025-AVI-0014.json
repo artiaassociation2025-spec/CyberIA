@@ -1,0 +1,82 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Connect Secure (ICS) versions antérieures à 22.7R2.5 ",
+      "product": {
+        "name": "Connect Secure (ICS)",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Neurons for ZTA gateways versions antérieures à 22.7R2.5.",
+      "product": {
+        "name": "Neurons for Zero Trust Access (ZTA) gateways",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Policy Secure (IPS) toutes versions.",
+      "product": {
+        "name": "Policy Secure (IPS)",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "L'éditeur indique que les correctifs pour Policy Secure et Neurons for ZTA gateways seront disponibles le 21 janvier. Les versions 9.x de Connect Secure ne bénéficieront pas de correctifs de sécurité pour la CVE-2025-0283 (la vulnérabilité CVE-2025-0282 n'affecte pas cette branche).\n\nVeuillez vous référer à l'alerte CERTFR-2025-ALE-001 pour la procédure de mise à jour de ces équipements.\n",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-0282",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-0282"
+    },
+    {
+      "name": "CVE-2025-0283",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-0283"
+    }
+  ],
+  "links": [
+    {
+      "title": "Alerte CERTFR-2025-ALE-001 du 09 janvier 2025",
+      "url": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2025-ALE-001/"
+    }
+  ],
+  "reference": "CERTFR-2025-AVI-0014",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-01-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Ivanti. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et une élévation de privilèges.",
+  "title": "Multiples vulnérabilités dans les produits Ivanti",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-01-08",
+      "title": "Bulletin de sécurité Ivanti Security-Advisory-Ivanti-Connect-Secure-Policy-Secure-ZTA-Gateways-CVE-2025-0282-CVE-2025-0283",
+      "url": "https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Connect-Secure-Policy-Secure-ZTA-Gateways-CVE-2025-0282-CVE-2025-0283"
+    },
+    {
+      "published_at": "2025-01-08",
+      "title": "Bulletin de sécurité Ivanti security-update-ivanti-connect-secure-policy-secure-and-neurons-for-zta-gateways",
+      "url": "https://www.ivanti.com/blog/security-update-ivanti-connect-secure-policy-secure-and-neurons-for-zta-gateways"
+    }
+  ]
+}

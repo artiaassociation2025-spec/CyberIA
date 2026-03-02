@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les pilotes des cartes réseau Ethernet des distributions  suivantes peuvent être vulnérables :</P>  <UL>    <LI>Debian ;</LI>    <LI>EnGarde Secure Linux ;</LI>    <LI>HP-UX ;</LI>    <LI>Mandrake ;</LI>    <LI>Red Hat ;</LI>    <LI>Sun OS ;</LI>    <LI>SGI IRIX.</LI>  </UL>  <P>De plus, des pilotes de carte ont été identifiés comme  vulnérables :</P>  <UL>    <LI>les pilotes NDIS2 d'Intel versions antérieures à 3.2 sous    Windows et OS/2 sont vulnérables ;</LI>    <LI>les pilotes ODI d'Intel versions antérieures à 2.13 sous    Novell sont vulnérables ;</LI>    <LI>le pilote de DocuColor 1632/2240 de Xerox est    vulnérable.</LI>  </UL>  <P>D'autres pilotes peuvent être affectés par cette  vulnérabilité.</P>",
+  "content": "## Description\n\nLes paquets Ethernet ont un champ données d'une taille minimum de 46\noctets. La RFC 1042 (Request For Comments) spécifie que si le champ\ndonnées du paquet fait moins de 46 octets, celui-ci devrait être\naugmenté de zéros afin d'obtenir la taille minimum. Néanmoins, certains\npilotes de carte réseau Ethernet utilisent des informations contenues en\nmémoire pour réaliser le remplissage du champ données.\n\nUn utilisateur mal intentionné peut ainsi voler des informations\ncontenues en mémoire en envoyant des trames Ethernet avec un champ\ndonnées de trop petite taille.\n\n## Solution\n\nAppliquer le correctif proposé soit par le revendeur de la distribution\nutilisée, soit par le revendeur de la carte.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "avis de sécurité SGI IRIX :",
+      "url": "http://patches.sgi.com/support/free/security/advisories/20030601-01-l.asc"
+    },
+    {
+      "title": "réponse à la note de vulnérabilité VU#412115 du CERT/CC par    Xerox :",
+      "url": "http://www.xerox.com/security"
+    },
+    {
+      "title": "avis HPSBUX0305-261 de HP :",
+      "url": "http://support.itrc.hp.com"
+    },
+    {
+      "title": "avis Red Hat (noyau versions 2.2) :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-088.html"
+    },
+    {
+      "title": "avis de sécurité MDKSA-2003:039 de MandrakeSoft :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2003:039"
+    },
+    {
+      "title": "avis de sécurité DSA-311-1 de Debian :",
+      "url": "http://www.debian.org/security/2003/dsa-311"
+    },
+    {
+      "title": "avis Red Hat Enterprise Linux :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-103.html"
+    },
+    {
+      "title": "RFC 1042 :",
+      "url": "http://www.ietf.org/rfc/rfc1042.txt"
+    },
+    {
+      "title": "avis Red Hat (noyau versions 2.4) :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2003-025.html"
+    },
+    {
+      "title": "avis de sécurité ESA-20030318-009 de EnGarde Secure Linux :",
+      "url": "http://www.linuxsecurity.com/advisories/engarde_advisory-2976.html"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-110",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-07-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout avis de sécurité SGI.",
+      "revision_date": "2004-04-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut voler des informations contenues en\nmémoire en utilisant des trames Ethernet avec un champ données de petite\ntaille.\n",
+  "title": "Vulnérabilité des pilotes de carte réseau Ethernet",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de vulnérabilité VU#412115 du CERT/CC",
+      "url": "http://www.kb.cert.org/vuls/id/412115"
+    }
+  ]
+}

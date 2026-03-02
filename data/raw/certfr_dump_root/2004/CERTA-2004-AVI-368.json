@@ -1,0 +1,90 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Samba 3.0.7 et versions antérieures.</p>",
+  "content": "## Description\n\nSamba est un logiciel libre utilisé pour la mise en oeuvre des partages\nréseau à l'aide des protocoles SMB et CIFS sous Unix.\n\n  \n\nDeux vulnérabilités sont présentes dans Samba :\n\n-   CVE CAN-2004-882 : une vulnérabilité de type débordement de mémoire\n    est présente dans le traitement des requêtes QFILEPATHINFO. En\n    créant au préalable sur un serveur Samba des fichiers dont le nom\n    est soigneusement choisi, un utilisateur mal intentionné peut\n    réaliser l'exécution de code arbitraire à distance sur un serveur\n    Samba vulnérable.\n-   CVE CAN-2004-930 : une vulnérabilité est présente dans le traitement\n    des noms de fichiers contenant le caractère '\\*'. Par le biais de\n    requêtes habilement contituées, un utilisateur mal intentionné peut\n    réaliser un déni de service par consommation excessive de ressources\n    processeur.\n\n## Solution\n\nLa version 3.0.8 de Samba corrige ces vulnérabilités.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de Samba :",
+      "url": "http://www.samba.org"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200411621 du 15 novembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200411-21.xml"
+    },
+    {
+      "title": "Bulletin de sécurité SGI (IRIX) 20041201-01-P du 07    décembre 2004 :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20041201-01-P.asc"
+    },
+    {
+      "title": "Bulletin de sécurité de FreeBSD pour Samba du 12 novembre    2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2004:632 du 16 novembre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-632.html"
+    },
+    {
+      "title": "Bulletin de sécurité de FreeBSD pour smbd du 17 novembre    2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:131 du 10 novembre    2004 :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:131"
+    },
+    {
+      "title": "Annonce Samba \"CAN-2004-0930: Potential remote denial of    service vulnerability in Samba 3.0.x <= 3.0.7\" :",
+      "url": "http://sambafr.idealx.org/samba/security/CAN-2004-0930.html"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SuSE-SA:2004:40 du 15 novembre    2004 :",
+      "url": "http://www.suse.com/de/security/2004_40_samba.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:136 du 18 novembre    2004 :",
+      "url": "http://www.mandrakesecure.net/en/advisories/advisory.php?name=MDKSA-2004:136"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-368",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-11-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité MDKSA-2004:136 de Mandrake.",
+      "revision_date": "2004-11-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au second bulletin de sécurité FreeBSD.",
+      "revision_date": "2004-11-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SGI.",
+      "revision_date": "2004-12-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Samba 3.0.8 corrige deux vulnérabilités présentes dans les versions\nantérieures de Samba.\n",
+  "title": "Multiples vulnérabilités de Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité d'e-matters",
+      "url": "http://security.e-matters.de/advisories/132004.html"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité d'iDEFENSE",
+      "url": "http://www.idefense.com/application/poi/display?id=156&type=vulnerabilities"
+    }
+  ]
+}

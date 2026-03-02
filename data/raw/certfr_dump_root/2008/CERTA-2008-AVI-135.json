@@ -1,0 +1,126 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM AIX 6.1.",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM AIX 5.2 ;",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "IBM AIX 5.3 ;",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent IBM ; ces vulnérabilités concernent :\n\n-   le noyaux AIX : plusieurs vulnérabilités affectant la gestion des\n    processus 64-bit, la gestion des Volume Group, la gestion des\n    droits, la gestion des liens, les appels système et la commande\n    ProbeVue permettent à un utilisateur local d'exécuter du code\n    arbitraire, de réaliser un déni de service, de contourner la\n    politique de sécurité ou d'élever ses privilèges ;\n-   la famille de commandes nddstat : un défaut de contrôle de certaines\n    variables permet à un utilisateur local d'exécuter du code\n    arbitraire en exploitant cette vulnérabilité ;\n-   la commande lsmcode : un défaut de contrôle de certaines variables\n    permet à un utilisateur local d'exécuter du code arbitraire en\n    exploitant cette vulnérabilité ;\n-   la commande reboot : une vulnérabilité permet à un utilisateur\n    local, ayant les privilèges nécessaires pour exécuter cette\n    commande, d'exécuter du code arbitraire via un débordement de\n    mémoire.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM IZ15479 du 11 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IZ15479"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IZ16992 du 11 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IZ16992"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IZ15057 du 11 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IZ15057"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IZ17058 du 11 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IZ17058"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IZ15276 du 11 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IZ15276"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IZ17111 du 11 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IZ17111"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IZ15277 du 11 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IZ15277"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IZ17059 du 11 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IZ17059"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IZ16991 du 11 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IZ16991"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IZ11820 du 11 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IZ11820"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IZ15100 du 11 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IZ15100"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IZ16975 du 11 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IZ16975"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IZ12794 du 11 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IZ12794"
+    },
+    {
+      "title": "Bulletin de sécurité IBM IZ15480 du 11 mars 2008 :",
+      "url": "http://www-1.ibm.com/support/docview.wss?uid=isg1IZ15480"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-135",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-03-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités affectent IBM AIX et permettent à un\nutilisateur local d'exécuter du code arbitraire, de réaliser un déni de\nservice, de contourner la politique de sécurité ou d'élever ses\nprivilèges.\n",
+  "title": "Multiples vulnérabilités dans IBM AIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité IBM du 11 mars 2008",
+      "url": null
+    }
+  ]
+}

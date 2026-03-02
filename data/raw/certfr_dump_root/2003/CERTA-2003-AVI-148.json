@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Access 2002 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Access 2000 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Access 97 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Access Snapshot Viewer (téléchargeable).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nMicrosoft Access Snapshot Viewer permet de visualiser un aperçu\ninstantané d'une base de données Access, sans avoir installé l'ensemble\ndu logiciel Microsoft Access.\n\nMicrosoft Access Snapshot Viewer est présent dans toutes les versions\nd'Access, même s'il n'est pas installé par défaut. Il peut également\nêtre téléchargé séparément.\n\nMicrosoft Access Snapshot Viewer utilise un contrôle ActiveX, dont une\ndes fonctions comporte une vulnérabilité de type débordement de mémoire.\n\n  \n\nUn utilisateur mal intentionné peut créer une page web faisant\nmalicieusement appel au contrôle ActiveX vulnérable, et inciter une\nvictime potentielle à s'y rendre. Il pourra dans ce cas exécuter du code\narbitraire sur la machine, avec les privilèges de l'utilisateur victime.\n\n## Solution\n\nAppliquer le correctif fourni par Microsoft (cf. Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Microsoft MS03-038:",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms03-038.asp"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-148",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-09-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité de type débordement de mémoire permet l'exécution de\ncode arbitraire sur une machine possédant Microsoft Access Snapshot\nViewer, par le biais d'un site web malicieusement construit.\n",
+  "title": "Vulnérabilité dans Microsoft Access Snapshot Viewer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Microsoft Security Bulletin MS03-038",
+      "url": null
+    }
+  ]
+}

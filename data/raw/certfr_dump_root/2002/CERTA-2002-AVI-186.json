@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous les systèmes Windows.</P>",
+  "content": "## Description\n\nLe contrôle web du Terminal Services Advanced Client (TSAC) est un\ncontrôle ActiveX qui peut être utilisé pour lancer des sessions Terminal\nServices dans Internet Explorer. Le contrôle TSAC n'est pas installé par\ndéfaut sur les systèmes Windows client. Dès lors qu'un client Windows se\nconnecte à un serveur IIS qui utilise le contrôle TSAC, le\ntéléchargement depuis le serveur et l'installation du contrôle TSAC sont\nréalisés par le client.\n\nLe contrôle TSAC contient une vulnérabilité de type débordement de\nmémoire. Cette vulnérabilité permet à un utilisateur mal intentionné\nd'exécuter du code arbitraire sur le système client dans le contexte de\nsécurité de l'utilisateur connecté.\n\n## Solution\n\nTélécharger le correctif.\n\n-   Pour les webmestres qui utilisent TSAC sur leur site :\n\n        http://www.microsoft.com/windowsxp/pro/downloads/rdwebconn.asp\n\n-   Pour les utilisateurs d'Internet Explorer :\n\n        http://www.microsoft.com/windows/ie/downloads/critical/q323759ie/default.asp\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Microsoft MS02-046 :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-046.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-186",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le contrôle ActiveX Terminal Services Advanced\nClient (TSAC) permet à un utilisateur mal intentionné d'exécuter du code\narbitraire sur le système.\n",
+  "title": "Vulnérabilité dans le contrôle ActiveX TSAC",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis Microsoft MS02-046",
+      "url": null
+    }
+  ]
+}

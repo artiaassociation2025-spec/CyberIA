@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de OpenSSL  implémentant les extensions <TT>TLS</TT>. Ceci inclut :  <UL>    <LI>OpenSSL versions 0.9.8f à 0.9.8o ;</LI>    <LI>OpenSSL versions 1.0.0 et 1.0.0a.</LI>  </UL></p>",
+  "content": "## Description\n\nUne vulnérabilité est présente dans OpenSSL. Elle est relative à la\ngestion de la mise en cache interne. Ainsi seules sont vulnérables les\napplications mettant en œuvre du multi-threading et s'appuyant sur la\nmise en cache interne de OpenSSL. L'exploitation de cette faille permet\nà un utilisateur distant de provoquer un déni de service ou d'exécuter\ndu code arbitraire.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-3864",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-3864"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HP du HPSBUS02638 SSRT100339 du 03    mars 2011 :",
+      "url": "http://www.itrc.hp.com/service/cki/docDisplay.do?docId=emr_na-c02737002"
+    },
+    {
+      "title": "Bulletin de sécurité HP c03179825 du 02 février 2012 :",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c03179825"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-2125 du 22 novembre 2010 :",
+      "url": "http://www.debian.org/security/2010/dsa-2125"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD FreeBSD-SA-10:10 du 29    novembre 2010 :",
+      "url": "http://security.freebsd.org/advisories/FreeBSD-SA-10:10.openssl.asc"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-555",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-11-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité FreeBSD et Debian.",
+      "revision_date": "2010-12-02T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de la référence au bulletin de sécurité HP-UX.",
+      "revision_date": "2011-03-04T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de la référence au bulletin de sécurité HP.",
+      "revision_date": "2012-02-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans OpenSSL permet à un utilisateur distant\nde provoquer un déni de service ou d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité dans OpenSSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenSSL du 16 novembre 2010",
+      "url": "http://www.openssl.org/news/secadv_20101116.txt"
+    }
+  ]
+}

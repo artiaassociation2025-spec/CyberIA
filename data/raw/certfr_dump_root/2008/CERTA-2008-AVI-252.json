@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Les noyaux Linux versions 2.6.25.2 et  antérieures.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans le noyau Linux :\n\n-   la première est relative à l'appel système sys_utimensat(). Elle\n    permet à un utilisateur local de modifier les dates d'accès ou de\n    modifications d'un fichier arbitraire sans tenir compte des droits\n    d'accès normaux ;\n-   la deuxième concerne le pilote mettant en œuvre l'encapsulation IPv6\n    dans IPv4 et permet à un utilisateur distant de provoquer une\n    consommation excessive de la mémoire via un paquet particulier ;\n-   la dernière concerne la fonction mmap() sur architecture de type\n    SPARC. Cette vulnérabilité permet à un utilisateur local de\n    provoquer un déni de service du système vulnérable.\n\n## Solution\n\nLa version 2.6.25.3 du noyau Linux corrige le problème :\n\n    http://www.kernel.org\n\nSe référer au bulletin de sécurité des éditeurs de distributions pour\nl'obtention de correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-2148",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2148"
+    },
+    {
+      "name": "CVE-2008-2137",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2137"
+    },
+    {
+      "name": "CVE-2008-2136",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-2136"
+    }
+  ],
+  "links": [
+    {
+      "title": "Liste des changements apportés dans la version 2.6.25.3 du    noyau Linux :",
+      "url": "http://www.kernel.org/pub/linux/kernel/v2.6/ChangeLog-2.6.25.3"
+    },
+    {
+      "title": "Bulletin de sécurité OpenSUSE SUSE-SA:2008:030 du 20 juin    2008 :",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2008-06/msg00006.html"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-252",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-05-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité OpenSUSE.",
+      "revision_date": "2008-06-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans le noyau Linux permettent à un\nutilisateur distant de provoquer un déni de service ou à un utilisateur\nlocal de contourner la politique de sécurité du système.\n",
+  "title": "Multiples vulnérabilités du noyau Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements apportés dans la version 2.6.25.3 du noyau Linux",
+      "url": null
+    }
+  ]
+}

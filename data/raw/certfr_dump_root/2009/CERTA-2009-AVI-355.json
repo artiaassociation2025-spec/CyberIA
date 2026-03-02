@@ -1,0 +1,51 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Google Chrome versions antérieures à la  version 2.0.172.43.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été découvertes dans le navigateur Google\nChrome :\n\n-   la première vulnérabilité est due à une erreur dans le moteur\n    d'interprétation du langage javascript et permet à un utilisateur\n    malveillant d'accéder à la mémoire ;\n-   la deuxième vulnérabilité est due à une mauvaise gestion des\n    certificats SSL, permettant ainsi de contourner les mécanismes de\n    confidentialité mis en place ;\n-   les deux dernières vulnérabilités sont issues de l'utilisation d'une\n    version vulnérable de la bibliothèque libxml2, et permettent à un\n    utilisateur mal intentionné d'exécuter du code arbitraire à\n    distance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2416",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2416"
+    },
+    {
+      "name": "CVE-2009-2935",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2935"
+    },
+    {
+      "name": "CVE-2009-2414",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2414"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-355",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités permettant, entre autres, l'exécution de code\narbitraire à distance ont été découvertes dans Google Chrome.\n",
+  "title": "Multiples vulnérabilités du navigateur Google Chrome",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Note de mise à jour Google Chrome du 25 août 2009",
+      "url": "http://googlechromereleases.blogspot.com/2009/08/stable-update-security-fixes.html"
+    }
+  ]
+}

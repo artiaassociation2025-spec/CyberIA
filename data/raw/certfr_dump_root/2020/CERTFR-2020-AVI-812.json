@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Struts 2.x versions antérieures à 2.5.26",
+      "product": {
+        "name": "Struts",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\n**Important** : l'éditeur de Struts déconseille fortement l'évaluation\nforcée d'expression OGNL sur des données utilisateurs \\[1\\].\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2020-17530",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2020-17530"
+    }
+  ],
+  "links": [
+    {
+      "title": "[1] Règles de sécurité pour Struts",
+      "url": "https://struts.apache.org/security/#do-not-use-incoming-untrusted-user-input-in-forced-expression-evaluation"
+    }
+  ],
+  "reference": "CERTFR-2020-AVI-812",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2020-12-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Apache Struts. Elle permet à un\nattaquant de provoquer une exécution de code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans Apache Struts",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache Struts S2-061 du 08 décembre 2020",
+      "url": "https://cwiki.apache.org/confluence/display/WW/s2-061"
+    }
+  ]
+}

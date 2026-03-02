@@ -1,0 +1,80 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Courier-IMAP versions 1.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Courier Mail Server 0.x ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Courier-IMAP versions 2.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCourier-IMAP est un serveur de mail IMAP/POP.\n\nUne vulnérabilité de type « chaîne de format » (format string) est\nprésente dans la fonction auth_debug() utilisée pour le débogage du\nlogin dans le logiciel Courier-IMAP.\n\nCe débogage n'est pas activé par défaut.\n\n## Contournement provisoire\n\nDésactiver le mode de débogage du login en mettant le paramètre\nDEBUG_LOGIN=0 dans le fichier de configuration.\n\n## Solution\n\nMettre à jour Courier-IMAP avec la version 3.0.7.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de iDefense du 18 août 2004 :",
+      "url": "http://www.idefense.com/application/poi/display?id=131&type=vulnerabilities"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour courier-imap du 22 août    2004 :",
+      "url": "http://www.vuxml.org/freebsd"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200408-19 du 19 août 2004    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200408-19.xml"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-276",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-08-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurité Gentoo et FreeBSD ainsi que de la référence CVE.",
+      "revision_date": "2004-08-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans Courier-IMAP peut être exploitée par un\nutilisateur mal intentionné pour réaliser un déni de service ou exécuter\ndu code arbitraire.\n",
+  "title": "Vulnérabilité dans Courier-IMAP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité iDefense",
+      "url": null
+    }
+  ]
+}

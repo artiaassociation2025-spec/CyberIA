@@ -1,0 +1,154 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "XFree86 versions 4.4.99.13 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Motif 1.2.5.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nXFree86 est une mise en oeuvre du système X Window très utilisée sur les\nplates-formes Linux.  \n\nLessTif et libXpm sont deux bibliothèques graphiques.\n\nMotif et OpenMotif réutilisant du code de libXpm sont également\nvulnérables.\n\n  \n\nPlusieurs vulnérabilités ont été découvertes dans XFree86 concernant la\ngestion des fichiers image XPM. Elles sont également présentes dans le\ncode des bibliothèques libXpm et LessTif.\n\n-   Plusieurs vulnérabilités de type débordement de mémoire permettent à\n    un utilisateur mal intentionné d'exécuter du code arbitraire sur la\n    machine (CVE CAN-2004-0687).\n-   Une vulnérabilité de type débordement de mémoire permet à un\n    utilisateur mal intentionné de provoquer un déni de service (CVE\n    CAN-2004-0688).\n\n## Solution\n\nLa version 4.4.99.14 de Xfree86 corrige ces vulnérabilités.\n\nLa version 1.2.6 de Motif corrige ces vulnérabilités.\n\nSe référer au bulletin de l'éditeur pour l'obtention des correctifs (cf.\nsection Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sun #57653 du 08 octobre 2004 :",
+      "url": "http://www.sunsolve.sun.com/search/document.do?assetkey=1-26-57653-1"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SA:2004034 du 17 septembre    2004 :",
+      "url": "http://www.suse.com/de/security/2004_34_xfree86_libs_xshared.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-560 du 07 octobre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-560"
+    },
+    {
+      "title": "Bulletin de sécurité #19 pour OpenBSD 3.5 du 16 septembre    2004 :",
+      "url": "http://www.openbsd.com/errata#xpm"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200409-34 du 27 septembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200409-34.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Sun #57652 du 15 octobre 2004 :",
+      "url": "http://www.sunsolve.sun.com/search/document.do?assetkey=1-26-57652"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-561 du 11 octobre 2004 :",
+      "url": "http://www.debian.org/security/2004/dsa-561"
+    },
+    {
+      "title": "Bulletin de sécurité SSRT4831 pour HP Tru64 Unix du 11    novembre 2004 :",
+      "url": "http://www4.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBTU01093"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:099 du 15    septembre 2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:099"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200410-09 du 09 octobre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200410-09.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2004:537 du 02 décembre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-537.html"
+    },
+    {
+      "title": "Bulletin de sécurité d'ICS pour Motif :",
+      "url": "http://www.ics.com/developers/index.php?cont=xpm_security_alert"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:098 du 15    septembre 2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:098"
+    },
+    {
+      "title": "Site internet de XFree86 :",
+      "url": "http://www.xfree.org"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2004:478 du 04 octobre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-478.html"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD pour xpm du 15 septembre 2004    :",
+      "url": "http://www.vuxml.org/freebsd/"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-325",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-09-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin Gentoo.",
+      "revision_date": "2004-09-27T00:00:00.000000"
+    },
+    {
+      "description": "LessTif est prise en compte. Ajout de la référence au bulletin de sécurité de Red Hat (RHSA-2004-078) et Debian (DSA-560).",
+      "revision_date": "2004-10-08T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité Gentoo GLSA 200410-09 relatif à LessTif.",
+      "revision_date": "2004-10-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité Debian (DSA-561) et Sun.",
+      "revision_date": "2004-10-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité OpenBSD.",
+      "revision_date": "2004-10-15T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité #57652 de Sun.",
+      "revision_date": "2004-10-20T00:00:00.000000"
+    },
+    {
+      "description": "Prise en compte de Motif et OpenMotif.",
+      "revision_date": "2004-10-21T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité SSRT4831 pour HP Tru64.",
+      "revision_date": "2004-11-16T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité Red Hat RHSA-2004:537 relatif à OpenMotif.",
+      "revision_date": "2004-12-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été découvertes dans le code de XFree86,\nlibXpm et LessTif.\n",
+  "title": "Vulnérabilités de XFree86, libXpm, LessTif, Motif et OpenMotif",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SuSE SUSE-SA:2004034 du 17 septembre 2004",
+      "url": null
+    }
+  ]
+}

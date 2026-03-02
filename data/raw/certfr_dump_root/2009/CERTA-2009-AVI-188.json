@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>SquirrelMail versions 1.4.17 et  antérieures.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans SquirrelMail :\n\n-   un manque de contrôle dans les paramètres passés dans certaines URI\n    de SquirrelMail permet à un utilisateur distant d'exécuter du code\n    dans le contexte du navigateur d'un utilisateur consultant un\n    SquirrelMail vulnérable ;\n-   une erreur dans la gestion des sessions des utilisateurs permet à\n    une personne malveillante d'usurper la session d'un autre\n    utilisateur ;\n-   un manque de contrôle lors de l'affichage de certains messages\n    électroniques permet à un utilisateur distant de surcharger certains\n    éléments de l'interface de SquirrelMail pour modifier son\n    comportement.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1578",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1578"
+    },
+    {
+      "name": "CVE-2009-1580",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1580"
+    },
+    {
+      "name": "CVE-2009-1581",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1581"
+    },
+    {
+      "name": "CVE-2009-1579",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1579"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurité SquirrelMail :",
+      "url": "http://www.squirrelmail.org/security/issue/2009-05-09"
+    },
+    {
+      "title": "Bulletins de sécurité SquirrelMail :",
+      "url": "http://www.squirrelmail.org/security/issue/2009-05-10"
+    },
+    {
+      "title": "Bulletins de sécurité SquirrelMail :",
+      "url": "http://www.squirrelmail.org/security/issue/2009-05-12"
+    },
+    {
+      "title": "Bulletins de sécurité SquirrelMail :",
+      "url": "http://www.squirrelmail.org/security/issue/2009-05-11"
+    },
+    {
+      "title": "Bulletins de sécurité SquirrelMail :",
+      "url": "http://www.squirrelmail.org/security/issue/2009-05-08"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-188",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-05-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans SquirrelMail permettent à un\nutilisateur distant de contourner la politique de sécurité, de porter\natteinte à la confidentialité de certaines données ou de procéder à des\nattaques de type injection de code indirecte.\n",
+  "title": "Multiples vulnérabilités dans SquirrelMail",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité SquirrelMail du 8, 9, 10, 11, 12 mai 2009",
+      "url": null
+    }
+  ]
+}

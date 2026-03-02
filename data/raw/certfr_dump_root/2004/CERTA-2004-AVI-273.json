@@ -1,0 +1,42 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Cisco IOS versions 12.0S, 12.2 et 12.3.<BR>  Les versions Cisco IOS 12.1, 12.0 et antérieures ne sont pas  affectées.</P>",
+  "content": "## Description\n\nOSPF (Open Shortest Path First) est un protocole de routage.  \n\nUne vulnérabilité a été découverte dans la gestion de ce protocole par\nle système d'exploitation IOS de certains équipements Cisco.  \n\nElle permet à un utilisateur mal intentionné de provoquer un déni de\nservice par le biais d'un paquet OSPF malicieusement construit.  \n\n## Contournement provisoire\n\n-   Utiliser l'authentification OSPF (cf. section Documentation) ;\n-   Utiliser des listes de contrôle d'accès (ACLs) pour protéger le\n    réseau (cf. section Documentation).\n\n## Solution\n\nAppliquer le correctif proposé par Cisco (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Informations sur l'authentification OSPF :",
+      "url": "http://www.cisco.com/warp/public/104/25.shtml"
+    },
+    {
+      "title": "Informations sur les listes de contrôle d'accès :",
+      "url": "http://www.cisco.com/warp/public/707/iacl.html"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco #61635 du 18 août 2004 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20040818-ospf.shtml"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-273",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-08-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la gestion du protocole OSPF par le systèmes\nd'exploitation Cisco IOS permet à un utilisateur distant mal intentionné\nde provoquer un déni de service.\n",
+  "title": "Vulnérabilité du système d'exploitation Cisco IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco #61365 du 18 août 2004",
+      "url": null
+    }
+  ]
+}

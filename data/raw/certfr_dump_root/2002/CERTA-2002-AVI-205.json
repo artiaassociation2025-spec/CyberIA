@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Client VPN Cisco sur les plates-formes  suivantes :  <UL>    <LI>Windows ;</LI>    <LI>Linux utilisant une version du noyau équivalente ou    supérieure à la version 2.2.12 exceptée la version 2.5 ;</LI>    <LI>Solaris UltraSPARC sur les architectures 32 bits et 64 bits    utilisant une version du noyau 2.6 ou supérieure ;</LI>    <LI>Mac OS X versions 10.1.0 ou supérieures.</LI>  </UL></p>",
+  "content": "## Description\n\nLe numéro des vulnérabilités ci-dessous correspond à l'identification\nCisco :\n\n-   CSCdt35749 : les clients VPN qui reçoivent des paquets TCP\n    spécifiques ayant comme ports source et destination le port 137\n    (NETBIOS Name Service) sont vulnérables à une attaque par déni de\n    service.\n-   CSCdt60391 : sur les plates-formes Windows, un utilitaire permet de\n    découvrir les mots de passe chiffrés du groupe IPSEC ;\n-   CSCdw87717 : une vulnérabilité dans le processus d'authentification\n    du serveur par le client permet à un utilisateur mal intentionné de\n    réaliser une attaque du type « Man in the middle » ;\n-   CSCdy37058 : une vulnérabilité du client VPN permet à un utilisateur\n    mal intentionné d'envoyer un paquet sur le réseau privée virtuel.\n    Cette vulnérabilité n'est exploitable que si la fonction split\n    tunneling est désactivée.\n\n## Solution\n\nAppliquer les correctifs correspondant à votre plate-forme (cf. section\ndocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Correctifs :",
+      "url": "http://www.cisco.com/kobayashi/sw-center/vpn/client/"
+    },
+    {
+      "title": "Procédure de mise à jour du client VPN Cisco :",
+      "url": "http://www.cisco.com/univercd/cc/td/doc/product/vpn/client/"
+    },
+    {
+      "title": "Avis de sécurité de Cisco :",
+      "url": "http://www.cisco.com/warp/public/707/vpnclient-multiple2-vuln-pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-205",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-09-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Divulgation d'informations"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Le client VPN Cisco est une application chargée d'établir des connexions\nsur un réseau privée virtuel pour des communications chiffrées et\nauthentifiées.\n\nPlusieurs vulnérabilités ont été découvertes sur les clients VPN Cisco.\n",
+  "title": "Vulnérabilités sur le client VPN Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Cisco",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "clients et serveurs Subversion versions 1.6.0 à 1.6.3 (incluses).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Clients et serveurs Subversion versions 1.5.6 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples débordements de mémoire ont été découverts dans Subversion.\nLa bibliothèque libsvn_delta n'effectue pas suffisamment de validations\ndes flux, ce qui peut être exploité pour exécuter du code arbitraire à\ndistance.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2411",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2411"
+    },
+    {
+      "name": "CVE-2009-2412",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2412"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2009-AVI-320",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-08-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Subversion</span>\npermettent d'exécuter du code arbitraire à distance.\n",
+  "title": "Multiples vulnérabilités dans Subversion",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Subversion",
+      "url": "http://subversion.tigris.org/security/CVE-2009-2411-advisory.txt"
+    }
+  ]
+}

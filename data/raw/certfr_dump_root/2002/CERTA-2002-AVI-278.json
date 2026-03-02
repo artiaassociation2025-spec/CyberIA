@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Parmi les divers vendeurs affectés, les suivants ont  officiellement reconnu un problème conséquent :</P>  <UL>    <LI>certains routeurs Cisco et commutateurs Catalyst ;</LI>    <LI>clients PuTTY pour Windows jusqu'à la version v0.53 ;</LI>    <LI>clients SecureNetTerm pour Windows jusqu'à la version 5.4.1    ;</LI>    <LI>serveur SecureShell de Pragma Systems jusqu'à la version 2    ;</LI>    <LI>client Windows WinSCP 2.0.</LI>  </UL>",
+  "content": "## Description\n\nLes tests portent sur l'initialisation de la connexion : échange de\nversions puis de clefs. La plupart des failles relèvent d'une mauvaise\ngestion des tampons mémoires. Ce type de problème conduit généralement à\nl'arrêt du processus quand il ne permet pas d'injecter du code qui sera\nexécuter avec les permissions du programme.\n\n## Contournement provisoire\n\n-   Pour les serveurs : restreindre les adresses IPs autorisées à se\n    connecter à des adresses de «confiance» au moyen de listes de\n    contrôle d'accès (ACL - «Access Control Lists») sur les routeurs ou\n    en filtrant au niveau d'un pare-feu.\n-   Pour les clients : ne se connecter qu'à des serveurs de «confiance».\n\n## Solution\n\n-   Cisco : voir le bulletin de sécurité au paragraphe suivant ;\n\n-   PuTTY : mettre à jour avec une version au moins égale à 0.53b,\n\n        http://www.chiark.greenend.org.uk/~sgtatham/putty/\n\n-   SecureNetTerm : mettre à jour avec une version au moins égale à\n    5.4.2,\n\n        http://www.securenetterm.com\n\n-   SecureShell : mettre à jour avec une version au moins égale à 3,\n\n        http://www.pragmasys.com\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Communiqué F-Secure du 18 décembre 2002 :",
+      "url": "http://www.f-secure.com/support/technical/ssh/ssh2_ca-2002-36.shtml"
+    },
+    {
+      "title": "Communiqué SSH Communications Security du 18 décembre 2002    :",
+      "url": "http://www.ssh.com/company/newsroom/article/303/"
+    },
+    {
+      "title": "Avis de sécurité Cisco du 19 décembre 2002 :",
+      "url": "http://www.cisco.com/warp/public/707/ssh-packet-suite-vuln.shtml"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-278",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "La société <span class=\"textit\">Rapid7</span> a développé une suite de\ntests de charge pour le protocole SSHv2. Divers produits évalués se sont\nalors révélés vulnérables.\n",
+  "title": "Vulnérabilités dans diverses implémentations SSH",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2002-36 du 16 décembre 2002 du CERT/CC",
+      "url": "http://www.cert.org/advisories/CA-2002-36.html"
+    }
+  ]
+}

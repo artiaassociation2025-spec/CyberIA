@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows NT 4.0 Terminal Server.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT 4.0 Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSous Windows NT 4, un objet «mutex» permet de synchroniser l'accès aux\nressources système pour empêcher deux processus distincts d'utiliser\nsimultanément la même ressource. Une vulnérabilité dans les permissions\nde l'objet chargé des ressources réseau permet à un utilisateur local de\nsaturer cette ressource afin d'isoler la machine du réseau.\n\n## Solution\n\nCorrectifs (version US) disponibles sur le site Microsoft :  \n  \n\nWindows NT 4.0 :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=27272\n\n  \n  \n\nWindows NT 4 Terminal Server Edition :\n\n    http://www.microsoft.com/Downloads/Release.asp?ReleaseID=27291\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms01-003.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-009",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-01-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur local peut, par le biais d'une vulnérabilité liée aux\nressources réseau, bloquer toute connexion sur la machine à laquelle il\na accès.\n",
+  "title": "Vulnérabilité dans les permissions d'accès sous Windows NT 4",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS01-003",
+      "url": null
+    }
+  ]
+}

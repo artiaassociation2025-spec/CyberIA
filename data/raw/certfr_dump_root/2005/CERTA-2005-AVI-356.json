@@ -1,0 +1,75 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Usermin verions 1.150 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Webmin versions 1.220 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nWebmin et Usermin permettent l'administration à distance de machine via\nune interface web. Une erreur dans la mise en œuvre de\nl'authentification des utilisateurs dans ces deux logiciels permet à un\nutilisateur distant mal intentionné d'accéder à Webmin ou Usermin sans\ns'authentifier préalablement.\n\nRemarque : la vulnérabilité n'est exploitable que si l'option \\`\\`full\nPAM conversations'' a été activée dans l'inteface de configuration de\nl'authentification. Ce n'est pas le cas par défaut.\n\n## Solution\n\nMettre à jour :\n\n-   Webmin en version 1.230 disponible à l'adresse :\n\n        http://www.webmin.com/download.html\n\n-   Usermin en version 1.160 disponible à l'adresse :\n\n        http://www.webmin.com/udownload.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité SNS No. 83 du 20 septembre 2005 :",
+      "url": "http://www.lac.co.jp/business/sns/intelligence/SNSadvisory_e/83_e.html"
+    },
+    {
+      "title": "Site Internet de Webmin et Usermin :",
+      "url": "http://www.webmin.com"
+    },
+    {
+      "title": "Liste des changements dans Usermin :",
+      "url": "http://www.webmin.com/uchanges-1.160.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA 200509-17 du 24 septembre    2005 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200509-17.xml"
+    },
+    {
+      "title": "Liste des changements dans Webmin :",
+      "url": "http://www.webmin.com/changes-1.230.html"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-356",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-09-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout du lien vers les changements Usermin ainsi que des références aux bulletins de sécurité SNS No. 83, Gentoo GLSA 200509-17 et CVE CAN-2005-3042.",
+      "revision_date": "2005-09-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Webmin et Usermin permet à un utilisateur distant\nde contourner la politique de sécurité du système vulnérable.\n",
+  "title": "Vulnérabilité de Webmin et Usermin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Liste des changements dans Webmin/Usermin du 20 septembre 2005",
+      "url": null
+    }
+  ]
+}

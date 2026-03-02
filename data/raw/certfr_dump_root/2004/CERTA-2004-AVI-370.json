@@ -1,0 +1,110 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Vulnérabilité CAN-2004-0940 : serveur HTTP Apache versions 1.3.32 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Vulnérabilité CAN-2004-0942 : serveur HTTP Apache versions 2.0.52 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Vulnérabilité CAN-2004-0940 : une vulnérabilité du module\n    mod_include de type débordement de mémoire permet à un utilisateur\n    mal intentionné d'exécuter du code arbitraire à distance.\n\n    Pour exploiter cette vulnérabilité, l'utilisateur doit être autorisé\n    à créer des fichiers de type Server Side Include (SSI).  \n\n-   Vulnérabilité CAN-2004-0942 : une vulnérabilité a été découverte\n    dans la gestion de certaines requêtes HTTP. Cette vulnérabilité peut\n    être exploitée par un utilisateur distant mal intentionné afin de\n    provoquer un déni de service.\n\n## Solution\n\nLa version 1.3.33 corrige la vulnérabilité CAN-2004-0940.  \nLa version 2.0.53-dev corrige la vulnérabilité CAN-2004-0942.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD apache et    apache2 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/www/apache2/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200411-18 du 10 novembre    2004 :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200411-18.xml"
+    },
+    {
+      "title": "Bulletin de sécurité HP HPSBTU01106 \"HP Tru64 UNIX SWS    (Apache) Secure Web Server remote denial of service (DoS)\" du    22 décembre 2004 :",
+      "url": "http://www5.itrc.hp.com/service/cki/docDisplay.do?docId=HPSBTU01106"
+    },
+    {
+      "title": "Bulletin de sécurité d'Apache du 22 octobre 2004    (CAN-2004-0942) :",
+      "url": "http://www.apacheweek.com/features/security-20"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:134 du 15 novembre    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:134"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:135 du 15 novembre    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:135"
+    },
+    {
+      "title": "Site Internet du serveur HTTP Apache :",
+      "url": "http://httpd.apache.org"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2004:562 du 12 novembre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-562.html"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SR:2004:001 du 24 novembre    2004 :",
+      "url": "http://www.suse.de/de/security/2004_01_sr.html"
+    },
+    {
+      "title": "Mise à jour de sécurité des paquetages NetBSD apache et    apache2 :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/www/apache/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité d'Apache du 16 novembre 2004    (CAN-2004-0940) :",
+      "url": "http://www.apacheweek.com/features/security-13"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-370",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-11-19T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SUSE.",
+      "revision_date": "2004-11-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité HPSBTU01106 pour Apache sur Tru64 UNIX.",
+      "revision_date": "2005-01-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité NetBSD.",
+      "revision_date": "2005-02-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été découvertes dans le serveur HTTP Apache.\n",
+  "title": "Vulnérabilités du serveur HTTP Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-594 du 17 novembre 2004",
+      "url": "http://www.debian.org/security/2004/dsa-594"
+    }
+  ]
+}

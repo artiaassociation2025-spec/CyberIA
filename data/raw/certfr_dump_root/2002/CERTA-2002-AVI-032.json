@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>La plupart des appareils CISCO. Pour savoir si votre système  est affecté, se référer au bulletin de sécurité CISCO (paragraphe  <TT>Documentation</TT>).</P>",
+  "content": "## Description\n\nLes tests effectués par l'université finlandaise d'Oulu ont mis en\névidence la présence de vulnérabilités dans les routines de décodage et\nde traitement des messages SNMP dans de nombreuses implémentations (se\nréférer au bulletin d'alerte CERTA-2002-ALE-004 du CERTA).\n\nUne vulnérabilité de l'agent SNMP, permet à un utilisateur mal\nintentionné de faire redémarrer un appreil CISCO. Cette vulnérabilité,\nde type débordement de mémoire, est exploitable à distance.\n\n## Contournement provisoire\n\n-   Couper le service SNMP à l'aide de la commande de configuration :\n\n    `no snmp-server` ;\n\n-   utiliser les capacités de filtrage (Access Control List) de chaque\n    équipement CISCO afin de restreindre l'accès aux ports 161/UDP et\n    162/UDP uniquement à la station d'administration du réseau au moyen\n    des commandes de configuration suivantes :\n\n    `access-list 100 permit ip host x.x.x.x      any`\n\n    `access-list 100 deny udp any any eq snmp`\n\n    `access-list 100 deny udp any any eq      snmptrap`\n\n    `access-list 100 permit ip any any`\n\n    Où x.x.x.x est l'adresse IP de la station d'administration du\n    réseau.\n\n-   Filtrer les ports 161/udp et 162/UDP et 1993/TCP utilisés par le\n    protocole SNMP V1 au niveau du garde-barrière afin d'empêcher\n    l'exploitation de ces vulnérabilités depuis l'Internet visant les\n    appreils présents à l'intérieur du réseau.\n\n## Solution\n\nSe référer au bulletin de sécurité CISCO (voir paragraphe Documentation)\npour appliquer le correctif selon l'appareil utilisé.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-032",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut utiliser une vulnérabilité de\nl'agent SNMP pour causer un redémarrage à distance des équipements\nCISCO.\n",
+  "title": "vulnérabilité de SNMP sur CISCO",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité CISCO",
+      "url": "http://www.cisco.com/warp/public/707/cisco-malformed-snmp-msgs-pub.shtml"
+    }
+  ]
+}

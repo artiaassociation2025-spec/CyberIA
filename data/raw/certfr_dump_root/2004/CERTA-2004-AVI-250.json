@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco ONS série 15327 (carte contrôleur XTC) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco ONS série 15600 (carte contrôleur TSC).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco ONS série 15454 SDH (cartes contrôleur TCCi/TCC2) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco ONS série 15454 (cartes contrôleur TCC/TCC+/TCC2) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\n-   Une vulnérabilité référencée sous le numéro Cisco CsCed06531\n    présente sur les cartes contrôleur XTC, TCC/TCC+/TCC2 et TCCi/TCC2\n    permet à un utilisateur mal intentionné, via l'envoi répété de\n    paquets IP malicieusement construits, de réaliser un redémarrage des\n    équipements vulnérables.\n-   Une vulnérabilité référencée sous le numéro Cisco CsCed86946\n    présente sur les cartes contrôleur XTC, TCC/TCC+/TCC2 et TCCi/TCC2\n    permet à un utilisateur mal intentionné, via l'envoi répété de\n    paquets ICMP malicieusement construits, de réaliser un redémarrage\n    des équipements vulnérables.\n-   Une vulnérabilité référencée sous les numéros Cisco CsCed88426,\n    CsCed88508, CsCed85088, CsCeb07263, CsCec21429 présente sur les\n    cartes contrôleur XTC, TCC/TCC+/TCC2, TCCi/TCC2 et XTC permet à un\n    utilisateur mal intentionné, via l'envoi répété de paquets TCP\n    malicieusement construits, de réaliser un redémarrage des\n    équipements vulnérables.  \n    Il n'y a pas d'impact sur le traffic sur les Cisco ONS série 15600\n    pour cette vulnérabilité, seules les fonctions de gestion de\n    l'équipement sont impactées.\n-   Une vulnérabilité référencée sous les numéros Cisco CSCec59739,\n    CSCed02439, CSCed22547 présente sur les cartes contrôleur XTC,\n    TCC/TCC+/TCC2 et TCCi/TCC2 permet à un utilisateur mal intentionné,\n    par une attaque de type « TCP-ACK DOS » (envoi de paquets invalides\n    à la place des paquets d'acquitement pour mettre la connection TCP\n    dans un état instable), de provoquer un redémarrage des équipements\n    vulnérables.\n-   Une vulnérabilité référencée sous les numéros Cisco CSCec88402,\n    CSCed31918, CSCed83309, CSCec85982, CSCec21435, CSCee03697 présente\n    sur les cartes contrôleur XTC, TCC/TCC+/TCC2, TCCi/TCC2 et XTC\n    permet à un utilisateur mal intentionné, via l'envoi répété de\n    paquets UDP malicieusement construits, de réaliser un redémarrage\n    des équipements vulnérables.  \n    Il n'y a pas d'impact sur le traffic sur les Cisco ONS serie 15600\n    pour cette vulnérabilité, seule les fonctions de gestion de\n    l'équipement sont impactées.\n-   Une vulnérabilité référencée sous les numéros Cisco CSCea16455,\n    CSCea37089, CSCea37185 présente sur les cartes contrôleur XTC,\n    TCC/TCC+/TCC2 et TCCi/TCC2 permet à un utilisateur mal intentionné,\n    via l'envoi répété de paquets SNMP malicieusement construits, de\n    réaliser un redémarrage des équipements vulnérables.\n-   Une vulnérabilité référencée sous le numéro Cisco CsCee27329\n    présente sur l'interface d'authentification TL1 permet à un\n    utilisateur mal intentionné de s'authentifier avec un mot de passe\n    supérieur à dix caractères.\n\nCes équipements sont la plupart du temps utilisés sur un réseau local.\nCela réduit l'exploitation de ces vulnérabilités depuis l'Internet.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-250",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-22T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans les équipements de transport par fibre\noptique Cisco permettent à un utilisateur mal intentionné de réaliser un\ndéni de service sur l'équipement vulnérable.\n",
+  "title": "Vulnérabilités dans Cisco ONS 15000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 60322",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20040721-ons.shtml"
+    }
+  ]
+}

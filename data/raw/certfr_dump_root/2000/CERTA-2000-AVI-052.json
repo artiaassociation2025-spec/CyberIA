@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout les systèmes Microsoft Windows, avec des applications  Office telles que Word ou Excel dans le cas présent.</P>",
+  "content": "## Description\n\nLors de l'ouverture d'un fichier par une application Office, si le\nsystème a besoin d'une librairie dynamique, il la recherche d'abord dans\nle répertoire de l'application, le répertoire où se trouve le fichier\nouvert, puis dans les répertoires systèmes de Windows et enfin dans les\nrépertoires indiqués par les chemins listés dans la variable PATH.\n\nLes librairies msi.dll et Riched20.dll, sont normalement situées dans le\nrépertoire winnt/system32 de Windows NT, et Windows/system dans le cas\nde windows 9x, et sont utilisées lors de l'exécution de WORD ou d'EXCEL\n(seulement msi.dll dans ce dernier cas).\n\nUn utilisateur mal intentionné peut s'arranger pour qu'une de ces\nbibliothèques, qu'il aura modifiée au préalable en y mettant du code\nmalicieux, soit située dans le même répertoire qu'un document que sa\nvictime aura à ouvrir. Si l'application office n'est pas déjà ouverte,\nla librairie falsifiée sera chargée et exécutée.\n\n## Contournement provisoire\n\nLe fait que l'application Office soit déjà ouverte empêche ce phénomène,\ncar la librairie à charger en mémoire est déjà ouverte depuis le chemin\nnominal.\n\nIl ne faut donc jamais ouvrir un document par un double-clique, ni par\nle menu contextuel de l'explorateur, mais exécuter l'application qui y\nest associée, et ouvrir le document à partir du menu fichier de\nl'application.\n\nDésactiver, dans l'explorateur, l'association des fichier .doc et .dot\navec WORD et .xls avec EXCEL.\n\nDans le menu affichage de l'explorateur ou du poste de travail, choisir\noptions, dans la fenêtre qui s'ouvre, sélectionner l'onglet types de\nfichiers, enfin supprimer les entrées pour les types de documents\nindiqués.\n\nVérifier qu'il n'y a pas de fichier librairies .DLL dans des répertoires\nne contenant que des données. Elle ne devraient pas y être.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2000-AVI-052",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-09-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Si une librairie dynamique particulière se situe dans le même répertoire\nqu'un document Office quelconque, elle sera exécutée à condition que\nl'ouverture de ce document via l'explorateur lance l'application\nassociée.\n",
+  "title": "Vulnérabilité sous Windows liée à l'ouverture d'un Document Office",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "SecurityFocus et BugTraq",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Georgi Guninski",
+      "url": null
+    }
+  ]
+}

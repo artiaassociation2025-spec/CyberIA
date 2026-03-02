@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les versions PHP 5.x, antérieures ou égales à la 5.1.6.",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les versions PHP 4.x, antérieures à 4.3.0 ;",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPHP (venant de l'acronyme récursif PHP: Hypertext Preprocessor) est un\nlangage généralement interprété par un serveur Web, afin de générer des\ndocuments comme des pages HTML.\n\nUne vulnérabilité a été identifiée dans celui-ci. Elle concerne la\nfonction unserialize() se trouvant dans le fichier zend_alloc.c. Cette\nfonction fait appel à une autre fonction, nommée ecalloc(), qui ne\nvérifierait pas correctement certaines données avant d'allouer la\nmémoire. Une personne malveillante pourrait injecter des données afin de\nprovoquer un débordement de cette mémoire et parvenir à exécuter des\ncommandes arbitraires sur le serveur Web vulnérable. Cela est notamment\nrendu possible par les valeurs de variables Cookie envoyées au serveur.\n\nTout code PHP faisant appel à la fonction unserialize() serait\nvulnérable. Cela inclut en particulier plusieurs applications Web, dont\nphpBB, Invision Board, vBulletin, Serendpity, dotclear, etc.\n\n## Solution\n\nSe référer aux mises à jour des éditeurs pour l'obtention des correctifs\n(cf. section Documentation). Une mise à jour provisoire est disponible\nsur le serveur CVS de PHP, ainsi que sur le site Hardened-PHP.\n",
+  "cves": [
+    {
+      "name": "CVE-2006-4812",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4812"
+    }
+  ],
+  "links": [
+    {
+      "title": "Mise à jour provisoire fournie par le site Hardened-PHP :",
+      "url": "http://www.hardened-php.net/files/CVE-2006-4812.patch"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:180 du 05 octobre    2006 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:180"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:180 du 05 octobre    2006 :",
+      "url": "http://archives.mandrivalinux.com/security-announce/2006-10/msg00004.php"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2006:0708 du 05 octobre    2006 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2006-0708.html"
+    },
+    {
+      "title": "Ajout dans la base CVS du site PHP.net d'une mise à jour    provisoire :",
+      "url": "http://cvs.php.net/viewvc.cgi/ZendEngine2/zend_alloc.c?r1=1.161&r2=1.162"
+    },
+    {
+      "title": "Bulletin de sécurité publié par le site Hardened-PHP du 09    octobre 2006 :",
+      "url": "http://www.hardened-php.net/advisory_092006.133.html"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-433",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans PHP. Celle-ci permettrait à une\npersonne malveillante distante d'exécuter des commandes arbitraires sur\nle serveur Web vulnérable.\n",
+  "title": "Vulnérabilité dans PHP",
+  "vendor_advisories": []
+}

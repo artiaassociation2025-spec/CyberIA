@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>gaim versions 0.81 et antérieures.</p>",
+  "content": "## Description\n\ngaim est un client de messagerie instantanée multi-protocoles (ICQ, MSN\nMessenger, Yahoo!, IRC, Jabber,  \nAIM, ...).\n\nDe multiples vulnérabilités de type débordement de mémoire sont\nprésentes dans gaim :\n\n-   CVE CAN-2004-0785 : vulnérabilités relatives à l'interprétation des\n    messages au format rtf (Rich Text Format), à la résolution, via DNS,\n    du nom de machine locale, à la réception d'URL de taille supérieure\n    à 2048 caractères ;\n-   CVE CAN-2004-0754 : vulnérabilité liée à l'allocation mémoire lors\n    de la réception d'un message habilement constitué envoyé par un\n    serveur.\n\nDe plus, à l'installation de nouvaux \"émoticons\", gaim ne filtre pas\ncorrectement le nom du fichier archive (CVE CAN-2004-0784). Il est alors\npossible pour une personne mal intentionnée incitant l'utilisateur à\ninstaller une archive habilement constituée, d'exécuter des commandes au\nmoyen de l'interpréteur de commandes lancé automatiquement par gaim pour\nl'installation de l'archive.\n\n## Solution\n\nLa version 0.82 de gaim corrige ces vulnérabilités.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour de sécurité du paquetage NetBSD gaim :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/chat/gaim/README.html"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2004:400 du 7 septembre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-400.html"
+    },
+    {
+      "title": "Site internet de gaim :",
+      "url": "http://gaim.sourceforge.net"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200408-27 du 27 août 2004    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200408-27.xml"
+    },
+    {
+      "title": "Site internet de gaim, liste des vulnérabilités :",
+      "url": "http://gaim.sourceforge.net/security"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-281",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-08-30T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité NetBSD.",
+      "revision_date": "2004-09-01T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité de Red Hat.",
+      "revision_date": "2004-09-08T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans gaim permettent à un\nutilisateur distant mal intentionné d'exécuter du code arbitraire à\ndistance.\n",
+  "title": "Multiples vulnérabilités dans gaim",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité GLSA 200408-27 de Gentoo",
+      "url": null
+    }
+  ]
+}

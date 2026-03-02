@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Visio 2002 Service Pack 2 dans Microsoft Office XP Service    Pack 2 ;</LI>    <LI>Visio 2003 Service Pack 2 dans Microsoft Office 2003    Service Pack 2 ;</LI>    <LI>Visio 2003 Service Pack 3 dans Microsoft Office 2003    Service Pack 3 ;</LI>    <LI>Visio 2007 dans Microsoft Office System 2007 ;</LI>    <LI>Visio 2007 Service Pack 1 dans Microsoft Office System 2007    Service Pack 1 .</LI>  </UL>  <P>Les visualiseurs (<SPAN class=\"textit\">viewer</SPAN>) Visio ne  seraient pas affectés.</P>",
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans l'application bureautique\nMicrosoft Visio destinée à la création de diagrammes et de synoptiques.\n\n-   l'application ne validerait pas correctement les données d'en-tête\n    des objets dans les fichiers ;\n-   l'application ne validerait pas correctement les allocations de\n    mémoire lors du chargement des fichiers au format .DFX. Il s'agit du\n    format de fichiers de dessin AutoCAD qui n'est pas associé à\n    Microsoft Viso par défaut.\n\nL'exploitation de ces vulnérabilités peut se faire par le biais d'un\nfichier spécialement construit. Si celui-ci est ouvert sur un système\nvulnérable, il pourrait alors provoquer l'exécution de commandes\narbitraires.\n\n## Solution\n\nSe référer au bulletin de sécurité MS08-019 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-1089",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1089"
+    },
+    {
+      "name": "CVE-2008-1090",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-1090"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2008-AVI-190",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-04-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été identifiées dans l'application bureautique\nMicrosoft Visio. L'exploitation de ces vulnérabilités par le biais d'un\nfichier spécialement construit permettrait d'exécuter du code arbitraire\nsur le système vulnérable.\n",
+  "title": "Vulnérabilités dans Microsoft Office Viso",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS08-019 du 08 avril 2008",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS08-019.mspx"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>JSSE 1.0.3, 1.0.3_01 et 1.0.3_02 pour  les plates-formes Linux, Solaris et Windows.  <P>La version de JSSE intégrée à JAVA 2 SDK 1.4.x n'est pas  vulnérable.</P></p>",
+  "content": "## Description\n\nJSSE (Java Secure Socket Extension) est une extension du langage Java\nimplémentant une version Java des protocoles SSL (Socket Secure Layer)\net TLS (Transport Socket Layer) ainsi que des fonctionnalités de\nchiffrement, de contrôle d'intégrité et d'authentification. JSSE à été\nintégré à JAVA 2 SDK version 1.4.\n\n  \n\nSelon Sun, une vulnérabilité est présente dans la validation des\ncertificats permettant ainsi à un site web malicieux de se faire passer\npour un site de confiance lors d'une connexion SSL.\n\n## Solution\n\nLa version 1.0.3_03 de JSSE corrige cette vulnérabilité :\n\n    http://java.sun.com/products/jsse/index-103.html\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-169",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-05-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de Java Secure Socket Extension (JSSE)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité #57560 de Sun",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pl?doc=fsalert%2F57560"
+    }
+  ]
+}

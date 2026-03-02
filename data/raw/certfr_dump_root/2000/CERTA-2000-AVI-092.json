@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Sun Solaris 2.x (SunOS 5.x)</P>",
+  "content": "## Description\n\npatchadd et patchrm sont des utilitaires qui nécessitent d'être root\npour être exécutés.\n\nUne mauvaise gestion des fichiers temporaires par ces outils lors d'une\nmise à jour ou de l'installation d'un correctif permet à un utilisateur\nmal intentionné d'utiliser ces fichiers temporaires pour obtenir les\nprivilèges de root ou bien exécuter du code avec ces privilèges.\n\n## Contournement provisoire\n\nAvant l'installation de correctifs ou de mises à jour, il faut vérifier\nque le répertoire /tmp est vide.\n\nAfin d'être sûr d'être la seule personne connectée, vous pouvez en plus,\nredémarrer la machine en mode single user pour appliquer le correctif ou\nla mise à jour.\n\n## Solution\n\nAppliquer le correctif proposé par Sun en se plaçant dans les conditions\nindiquées dans le paragraphe Contournement provisoire :\n\n    http://sunsolve.sun.com/pub-cgi/show.pl?target=patches/patch-access\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Informations indiquées sur la page de téléchargement du  correctif :",
+      "url": "http://sunsolve.sun.com/pub-cgi/show.pl?target=patches/patch-access"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-092",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-12-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code avec les privilèges de root"
+    },
+    {
+      "description": "Augmentation de privilèges"
+    }
+  ],
+  "summary": "patchadd et patchrm sont des outils qui permettent respectivement\nd'installer ou de désinstaller des correctifs ou mises à jour du système\nSolaris de Sun.\n\nUne vulnérabilité de ces outils permet à un utilisateur mal intentionné\nd'augmenter ses privilèges et d'exécuter localement du code avec les\nprivilèges de root.\n",
+  "title": "Vulnérabilités de Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Sun Microsystems",
+      "url": null
+    }
+  ]
+}

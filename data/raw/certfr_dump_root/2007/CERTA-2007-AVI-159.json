@@ -1,0 +1,84 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Qt versions antérieures à 4.2.3.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Qt versions antérieures à 3.3.8 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité présente dans la fonction de Qt permettant le décodage\ndes chaînes de caractères UTF-8 permettrait à un utilisateur\nmalintentionné de réaliser des attaques par injection de code indirecte\n(Cross Site Scripting) par le biais d'une suite de caractères UTF-8\nspécialement conçue.\n\n## Solution\n\nLes versions 3.3.8 et 4.2.3 de Qt corrigent le problème. Se référer au\nbulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf.\nsection Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0242",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0242"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-452-1 du 11 avril 2007 :",
+      "url": "http://www.ubuntu.com/usn/usn-452-1"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:076 du 03 avril    2007 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:076"
+    },
+    {
+      "title": "Bulletin de sécurité SuSE SUSE-SR:2007:006 du 13 avril 2007    :",
+      "url": "http://lists.opensuse.org/opensuse-security-announce/2007-Apr/0002.html"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:075 du 03 avril    2007 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:075"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2007:074 du 03 avril    2007 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2007:074"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-1292 du 15 mai 2007 :",
+      "url": "http://www.debian.org/security/2007/dsa-1292"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-159",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-04-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références aux bulletins de sécurit'e Debian, Mandriva, Ubuntu et SuSE.",
+      "revision_date": "2007-08-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte (cross site scripting)"
+    }
+  ],
+  "summary": "Une vulnérabilité présente dans Qt permettrait de réaliser des attaques\npar injection de code indirecte (<span class=\"textit\">Cross Site\nScripting</span>).\n",
+  "title": "Vulnérabilité dans Qt",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Trolltech du 03 avril 2007",
+      "url": "http://www.trolltech.com/company/newsroom/announcements/press.2007-03-30.9172215350"
+    }
+  ]
+}

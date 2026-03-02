@@ -1,0 +1,51 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>ISC Bind 9.7.x.</p>",
+  "content": "## Description\n\nQuand un serveur faisant autorité vient de réussir un transfert\nincrémental (IXFR) ou une mise à jour dynamique (DDNS), un utilisateur\nmalveillant distant peut provoquer un blocage au moyen d'une requête\nDNS.\n\n## Solution\n\nLes versions ISC Bind 9.7.3 corrigent ce problème.\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-0414",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-0414"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité ISC Bind CVE-2011-0414 du 22 février    2011 :",
+      "url": "https://www.isc.org/software/bind/advisories/cve-2011-0414"
+    },
+    {
+      "title": "Bulletin de sécurité Novell CVE-2011-0414 du 25 février    2011 :",
+      "url": "http://support.novell.com/security/cve/CVE-2011-0414.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-1070-1 du 22 février 2011 :",
+      "url": "http://www.ubuntu.com/usn/usn-1070-1"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-103",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-02-23T00:00:00.000000"
+    },
+    {
+      "description": "révision des versions affectées, ajout des références Novell (Suse) et Ubuntu.",
+      "revision_date": "2011-02-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le serveur DNS ISC Bind permet à un utilisateur\nmalintentionné de provoquer un déni de service à distance.\n",
+  "title": "Vulnérabilité dans ISC Bind",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité ISC Bind CVE-2011-0414 du 22 février 2011",
+      "url": null
+    }
+  ]
+}

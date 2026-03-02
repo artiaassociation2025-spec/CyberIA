@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>IBM AIX versions 4.3.3, 5.1.0 et 5.2.0.</p>",
+  "content": "## Description\n\nLa bibliothèque système libIM.a est utilisée pour l'internationalisation\n(National Language Support ou NLS). Un débordement de tampon dans la\nbibliothèque libIM.a permet à un utilisateur local mal intentionné\nd'exécuter du code arbitraire avec les droits de l'application faisant\nappel à cette bibliothèque. Si l'application possède le drapeau setuid\nroot, l'utilisateur local mal intentionné peut exécuter du code\narbitraire avec les droits root.\n\n## Contournement provisoire\n\nAppliquer le correctif provisoire fournit par IBM (cf. section\ndocumentation). Vérifier l'empreinte MD5 avant tout utilisation des\ncorrectifs.\n\n## Solution\n\nIBM va mettre à disposition les correctifs suivants :\n\n-   Pour IBM AIX 4.3.3, correctif IY40307 ;\n-   pour IBM AIX 5.1.0, correctif IY40317 ;\n-   pour IBM AIX 5.2.0, correctif IY40320.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site FTP de IBM de téléchargement du correctif provisoire :",
+      "url": "ftp://aix.software.ibm.com/aix/efixes/security/libIM_efix.tar.Z"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-022",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-02-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire en local"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Un débordement de tampon dans la bibliothèque libIM.a permet à un\nutilisateur local mal intentionné d'exécuter du code arbitraire avec les\ndroits de l'application faisant appel à cette bibliothèque.\n",
+  "title": "Vulnérabilité de la bibliothèque libIM.a sous IBM AIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité de iDefense du 12.02.03",
+      "url": "http://www.idefense.com/advisory/02.12.03.txt"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft Windows 2000 Service Pack 4 ;</LI>    <LI>Microsoft Windows XP Service Pack 1 et Service Pack 2    ;</LI>    <LI>Microsoft Windows Server 2003 et Microsoft Windows Server    2003 Service Pack 1 ;</LI>    <LI>Microsoft Windows Server 2003 pour les systèmes Itanium ou    Édition x64 ;</LI>  </UL>  <P>Les systèmes d'exploitation Microsoft Windows 98, Microsoft  Windows 98 Deuxième Édition (SE) et Microsoft Windows Millennium  Edition (ME) ne sont pas concernés.</P>",
+  "content": "## Description\n\nDeux vulnérabilités ont été identifiées dans Microsoft Windows. Elles\nconcernent le service Serveur, qui est installé par défaut sur la\nplupart des systèmes Windows.\n\n-   La première vulnérabilité vise les mailslots. Un mailslot est un\n    mécanisme temporaire utilisé par les applications et les processus\n    pour faciliter le transfert de données unidirectionnel. Le service\n    ne contrôlerait pas correctement la taille d'un paramètre. Cette\n    vulnérabilité peut être exploitée par une personne malveillante\n    distante, qui, en envoyant un paquet réseau spécialement conçu,\n    pourrait exécuter du code arbitraire sur le système affecté.\n-   La deuxième vulnérabilité concerne SMB (pour Server Message Block).\n    Il s'agit du protocole standard Internet utilisé par Windows pour\n    partager des fichiers, des imprimantes et des ports série et pour la\n    communication entre les ordinateurs. Il fonctionne en mode\n    requête-réponse entre client et serveur. Le service Serveur\n    n'initialiserait pas correctement un espace mémoire. Une personne\n    malveillante pourrait exploiter cette vulnérabilité afin de lire à\n    distance les informations stockées dans les tampons pour le trafic\n    Server Message Block.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-1315",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1315"
+    },
+    {
+      "name": "CVE-2006-1314",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-1314"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-035 du 11 juillet 2006    :",
+      "url": "http://www.microsoft.com/france/technet/security/Bulletin/MS06-035.mspx"
+    },
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-035 du 11 juillet 2006    :",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-035.mspx"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-283",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-07-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités du service Serveur de Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft du 11 juillet 2006",
+      "url": null
+    }
+  ]
+}

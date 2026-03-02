@@ -1,0 +1,210 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Solutions basées sur F-Secure Protection Service pour Business - Workstation security version 9 et antérieures ;",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "F-Secure Internet Gatekeeper pour Windows 6.61 et antérieures ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "F-Secure Anti-Virus pour Linux Servers 4.65 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "F-Secure Internet Gatekeeper pour Linux 4.02 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Services basés sur F-Secure Mac Protection build 8060 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "F-Secure Anti-Virus Linux Client Security 5.54 et antérieures ;",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "F-Secure Anti-Virus Linux Server Security 5.54 et antérieures ;",
+      "product": {
+        "name": "Server Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "F-Secure Linux Security 7.03 et antérieures ;",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "F-Secure Anti-Virus pour Workstations 9 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "F-Secure Anti-Virus pour Microsoft Exchange 9 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solutions basées sur F-Secure Protection Service pour Business - Server Security version 8 et antérieures ;",
+      "product": {
+        "name": "Server Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "F-Secure Anti-Virus pour Citrix Servers 9 et antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "F-Secure Anti-Virus 2010 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "F-Secure Anti-Virus pour MIMEsweeper 5.61 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "F-Secure Anti-Virus pour Windows Servers 9 et antérieures ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "F-Secure Client Security 9 et antérieures ;",
+      "product": {
+        "name": "Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Solutions basées sur F-Secure Protection Service pour Consumers version 9 et antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "F-Secure Home Server Security 2009 ;",
+      "product": {
+        "name": "Server Security",
+        "vendor": {
+          "name": "ESET",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité dans les produits F-Secure permet, à une personne\nmalveillante, de construire des archives (7Z, GZIP, CAB ou RAR)\nspécialement formées contournant le moteur de détection de l'Anti-Virus.\nLes fichiers malveillants contenus dans ces archives ne seront donc pas\ndétectés.\n\nCependant cela n'affecte pas le mécanisme de détection lorsque ces\nfichiers sont extraits des archives.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2010-AVI-166",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-04-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la gestion des archives <span class=\"textit\">7Z,\nGZIP, CAB</span> ou <span class=\"textit\">RAR</span> permet de contourner\nle moteur de détection de l'<span class=\"textit\">Anti-Virus</span>.\n",
+  "title": "Vulnérabilité dans F-Secure",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité F-Secure FSC-2010-1 du 12 avril 2010",
+      "url": "http://www.f-secure.com/en_EMEA/support/security-advisory/fsc-2010-1.html"
+    }
+  ]
+}

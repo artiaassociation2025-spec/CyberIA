@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Equipements Cisco utilisant certaines  versions de Cisco IOS. Se référer au bulletin de sécurité de  Cisco (cf. section Documentation) pour obtenir la liste des  versions vulnérables.</p>",
+  "content": "## Description\n\nSAA (Service Assurance Agent), anciennement RTR (Response Time\nReporter), est un agent logiciel livré avec certaines versions de Cisco\nIOS sur des routeurs Cisco. Il permet de mesurer la disponibilité et les\ntemps de réponse des équipements réseau.\n\n  \n\nSelon Cisco, une vulnérabilité présente dans le traitement de certains\npaquets RTR peut être exploitée par un utilisateur mal intentionné afin\nde forcer l'arrêt brutal du routeur Cisco.\n\nLa vulnérabilité ne peut être exploitée que si l'agent RTR est activé,\nce qui n'est pas le cas par défaut. La commande \"show rtr responder\"\npermet de vérifier si l'agent est actif.\n\n## Contournement provisoire\n\nL'agent RTR utilise le port 1967/udp.\n\nIl est conseillé de mettre en place sur les routeurs vulnérables un\nfiltre permettant de rejeter les paquets en provenance de sources non\nsûres.\n\n## Solution\n\nContacter le constructeur pour l'obtention des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de Cisco :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20030515-saa.shtml"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-085",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-05-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Au moyen de paquets RTR habilement constitués, un utilisateur mal\nintentionné peut forcer l'arrêt brutal d'un équipement Cisco utilisant\nune version vulnérable de Cisco IOS.\n",
+  "title": "Vulnérabilité du Service Assurance Agent (SAA) sous Cisco IOS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco-sa-20030515-saa",
+      "url": null
+    }
+  ]
+}

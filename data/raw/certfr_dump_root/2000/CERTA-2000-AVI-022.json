@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "CheckPoint Firewall-1 version 4.1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Description\n\nLa liste des vulnérabilités de Firewall-1 corrigées par le Service Pack\n2 est la suivante :\n\n-   Une salve rapide de commandes SMTP envoyée au serveur de sécurité\n    pour SMTP peut faire monter la charge du processeur jusqu'au blocage\n    complet du transfert du courrier. Cependant, le reste du trafic\n    continue de fonctionner normalement.\n-   Les mécanismes utilisés pour tenir un historique des paquets\n    fragmentés lors d'une attaque consomment une grosse charge du\n    processeur et aboutit à un déni de service du garde-barrière.\n-   Par une malformation de requêtes TCP fragmentées, ou de multiples\n    connexions puis déconnexions successives, il est possible de passer\n    outre les contrôles de connexions unidirectionnelles.\n-   Des requêtes de connexions RSH/REXEC malformées permettent à un\n    serveur RSH/REXEC externe d'établir une connection non-autorisée\n    avec un client protégé (interne). Ceci ne peut se produire que si\n    l'administrateur de Firewall-1 y a autorisé les connexions\n    RSH/REXEC).\n-   Dans certaines conditions, les connexions FTP d'un serveur vers un\n    client peuvent êtres détournées vers un client non-désiré.\n-   Des paquets encapsulés FWZ (chiffrés) peuvent passer normalement les\n    règles du garde-barrière même s'ils ne proviennent pas d'un de ses\n    clients.\n-   Les mécanismes d'authentifications des communications inter-modules\n    sont attaquables et permettent un déni de service du garde-barrière.\n-   Les mécanismes d'authentification utilisées par OPSEC peuvent être\n    sujet à des usurpations d'identité.\n-   Les mécanisme d'authentification inter-module utilisés dans\n    l'authentification par challenge-réponse pour les versions 3.1 et\n    4.0 du logiciel sans réseau privé virtuel (non-VPN software) est\n    attaquable, en tentant toutes les possibilités.\n-   Une mauvaise implémentation du protocol de communication\n    inter-module peut-être exploité pour effectuer un dépassement de\n    mémoire dans Getkey. Ceci a pour conséquence l'arrêt du daemon de\n    FIREWALL-1.\n\n## Contournement provisoire\n\nBien que la majorité de ces vulnérabilités puissent être évitées par un\nrenforcement des règles du Firewall, il est obligatoire d'appliquer le\ncorrectif au plus vite.\n\n## Solution\n\nAppliquer le Service Pack 2 disponible sur le site de CheckPoint à\nl'adresse :\n\n    http://www.checkpoint.com/sp\n\nou :\n\n    http://www.checkpoint.com/cgi-bin/download.cgi\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Conseil de mise à jour en fonction de l'installation :",
+      "url": "http://www.securitywatch.com/scripts/news/list.asp?AID3462"
+    },
+    {
+      "title": "Avis de CheckPoint au sujet de ces vulnérabilités :",
+      "url": "http://www.checkpoint.com/techsupport/alerts/list_vun.html"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-022",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-08-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De nombreuses vulnérabilités de Firewall-1 ont été publiées récement.\n",
+  "title": "Vulnérabilités sous Firewall-1",
+  "vendor_advisories": [
+    {
+      "published_at": "2000-08-08",
+      "title": "Avis du CERT IST",
+      "url": "None"
+    },
+    {
+      "published_at": "2000-08-03",
+      "title": "réseau de confiance",
+      "url": "None"
+    }
+  ]
+}

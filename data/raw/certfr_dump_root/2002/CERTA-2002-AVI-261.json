@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Debian instable (sid) : FreeS/WAN versions antérieures à la version 1.99-1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Debian 3.0 (woody) : FreeS/WAN versions antérieures à la version 1.96-1.4 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Debian",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nIPSec est un ensemble de mécanismes de sécurité pour le protocole IP.\nNatifs dans IPv6, ces mécanismes doivent être ajoutés aux piles IPv4.\n\nFreeS/WAN est une implantation libre d'IPSec pour les systèmes Linux.\n\nSous Debian, FreeS/WAN ne traite pas correctement les paquets IP de\npetite taille. Cette vulnérabilité peut être exploitée pour provoquer\nune attaque de type déni de service.\n\n## Solution\n\nLes versions 1.96-1.4 (Debian woody) et 1.99-1 (Debian sid) corrigent\ncette vulnérabilité.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Debian :",
+      "url": "http://www.debian.org/security/2002/dsa-201"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-261",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "L'implantation FreeS/WAN de Debian est vulnérable à une attaque de type\ndéni de service.\n",
+  "title": "Vulnérabilité de FreeS/WAN sous Debian",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Debian DSA 201-1",
+      "url": null
+    }
+  ]
+}

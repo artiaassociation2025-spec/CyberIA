@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>la version de OpenSSH mise en œuvre dans Debian Etch ;</LI>    <LI>la version de OpenSSH mise en œuvre dans les versions 7.04,    7.10 et 8.04 de Ubuntu.</LI>  </UL>  <P>La version présente dans l'ancienne version stable de Debian :  <SPAN class=\"textit\">sarge</SPAN> n'est pas vulnérable.</P>",
+  "content": "## Description\n\nPar effet de bord, la vulnérabilité décrite dans l'avis\nCERTA-2008-AVI-239 sur OpenSSL, s'applique également au paquetage\nOpenSSH des distributions Debian et Ubuntu. Tous les bi-clefs ssh\nengendrés par la commande ssh-keygen fournie par les versions\nvulnérables de OpenSSH sont donc considérés comme non-fiables et doivent\nêtre renouvelés.\n\n## Solution\n\nSe référer au bulletin de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-0166",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-0166"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-612-5 du 14 mai 2008 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-612-5"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1576 du 14 mai 2008 :",
+      "url": "http://www.debian.org/security/2008/dsa-1576"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-246",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-05-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la version de OpenSSH propre aux distributions\nDebian, Ubuntu ou à leurs dérivés permet à un utilisateur distant de\ncontourner la politique de sécurité ou de porter atteinte à la\nconfidentialité du système vulnérable.\n",
+  "title": "Vulnérabilité dans OpenSSH pour Debian et Ubuntu",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Debian DSA-1576 du 14 mai 2008",
+      "url": null
+    }
+  ]
+}

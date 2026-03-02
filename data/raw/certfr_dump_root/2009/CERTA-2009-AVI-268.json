@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Sun Solaris 10.</p>",
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans Sun Solaris :\n\n-   la première (CVE-2009-2297) concerne la pile UDP (udp(7p)) des\n    systèmes Solaris disposant des Solaris Trusted Extensions. Elle\n    permet à un utilisateur distant malintentionné de provoquer un déni\n    de service ;\n-   la seconde (CVE-2009-2296) est relative à la mise en œuvre du\n    protocole NFSv4 par Solaris et permet à un utilisateur ne disposant\n    pas de droits suffisants d'accéder en lecture ou en écriture à des\n    partages NFS qui lui sont normalement interdits.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-2296",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2296"
+    },
+    {
+      "name": "CVE-2009-2297",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-2297"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Sun Solaris #262668 du 30 juin 2009 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-262668-1"
+    },
+    {
+      "title": "Bulletin de sécurité Sun Solaris #262048 du 30 juin 2009 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-262048-1"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-268",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-07-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans le système d'exploitation Sun Solaris\npermettent à un utilisateur distant de provoquer un déni de service, de\nporter atteinte à l'intégrité et à la confidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans Sun Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Sun #262668 #262048 du 30 juillet 2009",
+      "url": null
+    }
+  ]
+}

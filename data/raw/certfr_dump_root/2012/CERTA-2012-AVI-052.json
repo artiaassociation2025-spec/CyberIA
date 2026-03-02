@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Drupal versions 7.x antérieures à 7.11.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Drupal versions 6.x antérieures à 6.23 ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Drupal :\n\n-   OpenId ne vérifie pas si certains attributs sont signés, ce qui\n    permet de modifier les informations des utilisateurs (CVE-2012-0825)\n    ;\n-   des injections de requêtes illégitimes par rebond sont possibles via\n    le module Aggregator. Dans certains cas, l'exploitation de cette\n    vulnérabilité permet de réaliser un déni de service (CVE-2012-0826)\n    ;\n-   sous certaines conditions, des utilisateurs peuvent télécharger\n    indûment des fichiers via le module File. Ce problème n'affecte que\n    les versions 7.x de Drupal (CVE-2012-0827).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-0825",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0825"
+    },
+    {
+      "name": "CVE-2012-0826",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0826"
+    },
+    {
+      "name": "CVE-2012-0827",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0827"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Drupal SA-CORE-2012-001 du 01 février    2012 :",
+      "url": "http://drupal.org/node/1425084"
+    }
+  ],
+  "reference": "CERTA-2012-AVI-052",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-02-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Drupal</span>\npermettent de contourner des restrictions d'accès à des fichiers, de\nmodifier des informations d'utilisateur et d'injecter illégitimement des\nrequêtes par rebond.\n",
+  "title": "Multiples vulnérabilités dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Drupal SA-CORE-2012-001 du 01 février 2012",
+      "url": null
+    }
+  ]
+}

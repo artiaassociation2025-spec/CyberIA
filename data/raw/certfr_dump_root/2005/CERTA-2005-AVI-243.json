@@ -1,0 +1,73 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Cacti 0.8.6e et versions antérieures.</p>",
+  "content": "## Description\n\nCacti propose une interface à l'outil RRDTool qui utilise le langage de\nscripts PHP.  \nDe multiples vulnérabilités sont présentes dans Cacti :\n\n-   Une vulnérabilité permettant l'injection de code SQL dans l'URL au\n    niveau des filtres mis en place suite aux vulnérabilités précédentes\n    (CERTA-2005-AVI-227) peut être exploitée par un utilisateur mal\n    intentionné afin de réaliser des requêtes arbitraires sur la base de\n    données ;\n-   une vulnérabilité dans la gestion de l'URL au niveau des filtres mis\n    en place suite aux vulnérabilités précédentes (CERTA-2005-AVI-227)\n    peut être exploitée par un utilisateur mal intentionné afin\n    d'injecter des commandes système ;\n-   une vulnérabilité dans la gestion des en-têtes HTTP peut être\n    utilisée par un utilisateur mal intentionné afin de contourner le\n    système d'authentification de Cacti. Ainsi, il lui est possible\n    d'obtenir les droits d'administration et par conséquent, d'exécuter\n    des commandes système sur le serveur web.\n\n## Solution\n\nLa version 0.8.6f de Cacti corrige ces vulnérabilités.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité FreeBSD pour cacti du 05 juillet 2005    :",
+      "url": "http://www.vuxml.org/freebsd/pkg-cacti.html"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SUSE-SR:2005:017 du 13 juillet    2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_17_sr.html"
+    },
+    {
+      "title": "Bulletin de sécurité 03/2005 de Hardened - PHP du 01    Juillet 2005",
+      "url": "http://www.hardened-php.net/advisory-032005.php"
+    },
+    {
+      "title": "Bulletin de sécurité 04/2005 de Hardened - PHP du 01    Juillet 2005",
+      "url": "http://www.hardened-php.net/advisory-042005.php"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA-764 du 21 juillet 2005 :",
+      "url": "http://www.debian.org/security/2005/dsa-764"
+    },
+    {
+      "title": "Bulletin de sécurité 05/2005 de Hardened - PHP du 01    Juillet 2005",
+      "url": "http://www.hardened-php.net/advisory-052005.php"
+    },
+    {
+      "title": "Annonce de la sortie de la version 0.8.6f",
+      "url": "http://www.cacti.net/release_notes_0_8_6f.php"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-243",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-07-04T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité FreeBSD.",
+      "revision_date": "2005-07-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SUSE SUSE-SR:2005:017 et des références CVE CAN-2005-2148 et CAN-2005-2149.",
+      "revision_date": "2005-07-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Debian DSA-764.",
+      "revision_date": "2005-07-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Multiples vulnérabilités de Cacti",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de vulnérabilité Hardened - PHP",
+      "url": null
+    }
+  ]
+}

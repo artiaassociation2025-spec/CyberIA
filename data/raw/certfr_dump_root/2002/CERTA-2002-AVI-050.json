@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tous les systèmes utilisant une machine virtuelle Java basée  sur celle de Sun.</P>  <P>Entre autres :</P>  <UL>    <LI>Les machines virtuelles de SDK et JRE versions 1.3.0_02 et    antérieures sous Solaris et Linux ;</LI>    <LI>les machines virtuelles de SDK et JRE versions 1.2.2_010 et    antérieures sous Solaris et Linux ;</LI>    <LI>les machines virtuelles de JDK et JRE versions 1.1.8_007 et    antérieures sous Solaris et Linux ;</LI>    <LI>les navigateurs de Netscape versions 4.79 et antérieurs    ainsi que 6, 6.01 et 6.1 ;</LI>    <LI>les navigateurs Internet Explorer 4.x, 5.x ;</LI>    <LI>les systèmes d'exploitations Micorosoft Windows 98, ME et    2000 pour lesquels la machine virtuelle Java (JVM) est    installée par défaut.</LI>    <LI>Différents systèmes d'exploitation et logiciels distribués    par Compaq.</LI>  </UL>",
+  "content": "## Description\n\nIl existe une vulnérabilité de la machine virtuelle de Sun permettant à\nun utilisateur mal intentionné, par le biais d'une appliquette Java\nhabilement construite, de détourner le flux d'informations circulant\nentre un client et son serveur mandataire.\n\nCette vulnérabilité est présente dans la JDK (Java Developper Kit) et\nJRE (Java Runtime Enviroenment) de Sun, mais le modèle de la machine\nvirtuelle Java étant le même pour les navigateurs Microsoft et Netscape,\nelle permet à un utilisateur mal intentionné d'obtenir les données\npersonnelles envoyées sur l'Internet par un utilisateur utilisant ces\nclients à travers un serveur mandataire, de les utiliser, de les\nmodifier avant leur utilisation, ou bien de les arrêter afin de créer un\ndéni de service.\n\n## Contournement provisoire\n\nDésactiver Java en attendant d'appliquer le correctif ou la mise à jour\ndu système affecté.\n\n## Solution\n\nAppliquer le correctif du constructeur :\n\n-   Sun : mettre à jour ou changer de version selon les indications du\n    bulletin de sécurité 00216 (cf. : paragraphe Documentation) :\n\n        http://java.sun.com/\n\n-   Netscape : passer à la version 6.2 ou 6.2.1 :\n\n        http://www.netscape.com\n\n-   Microsoft : mettre à jour la machine virtuelle Java du système :\n\n        http://www.microsoft.com/java/vm/dl_vm40.htm\n\n-   Pour connaître les systèmes Compaq affectés ainsi que les mesures à\n    prendre, consulter le bulletin de sécurité SSRT0822 de Compaq (Cf. :\n    paragraphe Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité 00216 de Sun :",
+      "url": "http://sunsolve.sun.com/cgi-bin/secBulletin.pl"
+    },
+    {
+      "title": "Bulletin de sécurité MS02-013 de Microsoft :",
+      "url": "http://www.microsoft/com/technet/security/bulletin/MS02-013.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-050",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-03-05T00:00:00.000000"
+    },
+    {
+      "description": "seconde version : prise en compte du bulletin de sécurité SSRT0822 de Compaq.",
+      "revision_date": "2002-06-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Divulgation de données"
+    },
+    {
+      "description": "Attaque de type man in the middle (attaque par le milieu)"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut, au moyen d'une vulnérabilité de la\nmachine virtuelle Java du navigateur de sa victime, détourner et\nmodifier le flux de données situé entre celle-ci et son serveur\nmandataire (<span class=\"textit\">Proxy</span>).\n",
+  "title": "Vulnérabilité de la machine virtuelle Java",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SSRT0822 de Compaq",
+      "url": "http://www2.tru64.org/stories.php?story=02/05/14/472385"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS02-013",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "bulletin de sécurité 00216 de Sun",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Netscape",
+      "url": "http://www.netscape.com/security/"
+    }
+  ]
+}

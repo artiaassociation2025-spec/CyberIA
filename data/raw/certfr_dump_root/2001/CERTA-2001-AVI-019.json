@@ -1,0 +1,79 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Linux Mandrake 6.0, 6.1, 7.0, 7.1, 7.2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "d'autres unix utilisant Vixie-Cron peuvent être vulnérables, consulter votre éditeur pour le savoir.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Linux RedHat 5.2, 6.2 et 7.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn utilisateur dont la longueur du nom de compte dépasse 20 caractères\npeut utiliser un débordement de mémoire de la commande crontab pour\ncompromettre la machine sur laquelle il possède ce compte.\n\n## Contournement provisoire\n\nL'administrateur de la machine doit changer tous les comptes dont le nom\npossède plus de 20 caractères et faire attention à ne pas en créer à\nl'avenir.\n\n## Solution\n\nAppliquer le correctif proposé par l'éditeur.\n\n-   Red Hat 5.2 :\n    -   Sources :\n\n            ftp://updates.redhat.com/5.2/SRPMS/vixie-cron-3.0.1-38.5.2.src.rpm\n\n    -   pour Alpha:\n\n            ftp://updates.redhat.com/5.2/alpha/vixie-cron-3.0.1-38.5.2.alpha.rpm\n\n    -   Pour i386:\n\n            ftp://updates.redhat.com/5.2/i386/vixie-cron-3.0.1-38.5.2.i386.rpm\n\n    -   Pour Sparc:\n\n            ftp://updates.redhat.com/5.2/sparc/vixie-cron-3.0.1-38.5.2.sparc.rpm\n\n-   Red Hat 6.2 :\n    -   Sources :\n\n            ftp://updates.redhat.com/6.2/SRPMS/vixie-cron-3.0.1-40.1.src.rpm\n\n    -   pour Alpha:\n\n            ftp://updates.redhat.com/6.2/alpha/vixie-cron-3.0.1-40.1.alpha.rpm\n\n    -   Pour i386:\n\n            ftp://updates.redhat.com/6.2/i386/vixie-cron-3.0.1-40.1.i386.rpm\n\n    -   Pour Sparc:\n\n            ftp://updates.redhat.com/6.2/sparc/vixie-cron-3.0.1-40.1.sparc.rpm\n\n-   Red Hat 7.0 :\n    -   Sources :\n\n            ftp://updates.redhat.com/7.0/SRPMS/vixie-cron-3.0.1-61.src.rpm\n\n    -   Pour Alpha:\n\n            ftp://updates.redhat.com/7.0/alpha/vixie-cron-3.0.1-61.alpha.rpm\n\n    -   Pour i386:\n\n            ftp://updates.redhat.com/7.0/i386/vixie-cron-3.0.1-61.i386.rpm\n\n-   Linux Mandrake :\n\n    Sélectionner votre serveur FTP à l'adresse :\n\n        http://www.linux-mandrake.com/en/ftp.php3\n\n    Puis rechercher le correctifs selon la version de Linux :\n\n    -   Linux Mandrake 6.0 : 6.0/RPMS/vixie-cron-3.0.1-46.2mdk.i586.rpm\n    -   Sources : 6.0/SRPMS/vixie-cron-3.0.1-46.2mdk.src.rpm\n    -   Linux-Mandrake 6.1: 6.1/RPMS/vixie-cron-3.0.1-46.2mdk.i586.rpm\n    -   Sources : 6.1/SRPMS/vixie-cron-3.0.1-46.2mdk.src.rpm\n    -   Linux-Mandrake 7.0: 7.0/RPMS/vixie-cron-3.0.1-46.2mdk.i586.rpm\n    -   Sources : 7.0/SRPMS/vixie-cron-3.0.1-46.2mdk.src.rpm\n    -   Linux-Mandrake 7.1: 7.1/RPMS/vixie-cron-3.0.1-46.2mdk.i586.rpm\n    -   Sources : 7.1/SRPMS/vixie-cron-3.0.1-46.2mdk.src.rpm\n    -   Linux-Mandrake 7.2: 7.2/RPMS/vixie-cron-3.0.1-46.1mdk.i586.rpm\n    -   Sources : 7.2/SRPMS/vixie-cron-3.0.1-46.1mdk.src.rpm\n    -   Corporate Server 1.0.1:\n        1.0.1/RPMS/vixie-cron-3.0.1-46.2mdk.i586.rpm\n    -   1.0.1/SRPMS/vixie-cron-3.0.1-46.2mdk.src.rpm\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "L'avis de sécurité du CIAC :",
+      "url": "http://www.ciac.org/ciac/bulletins/l-048.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Linux Mandrake :",
+      "url": "http://www.linux-mandrake.com/en/security/2001/MDKSA-2001-022.php3?dis=7.2"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat :",
+      "url": "http://www.redhat.com/support/errata/RHSA-2001-014.html"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-019",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-02-21T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Compromission root en local"
+    },
+    {
+      "description": "Exécution de code arbitraire en local"
+    },
+    {
+      "description": "Débordement de mémoire"
+    }
+  ],
+  "summary": "Un débordement de mémoire lié à la longueur des noms d'utilisateurs,\npermet à un utilisateur d'obtenir localement les privilèges de root.\n",
+  "title": "Vulnérabilité de Vixie-cron sous Unix",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RedHat Linux Mandrake et CIAC",
+      "url": null
+    }
+  ]
+}

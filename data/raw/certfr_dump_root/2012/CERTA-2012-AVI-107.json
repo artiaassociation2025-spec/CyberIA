@@ -1,0 +1,186 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Wireless Services Modules (WISM) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco 2100 Series WLC ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco 5500 Series WLC ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Flex 7500 Series Cloud Controllers.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco 4100 Series WLC ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Catalyst 3750G Integrated WLCs ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco NM-AIR-WLC Modules for Integrated Services Routers ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco 500 Series Wireless Express Mobility Controllers ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco 2500 Series WLC ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco NME-AIR-WLC Modules for Integrated Services Routers ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Wireless Services Modules version 2 (WSIM version 2) ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco 2000 Series WLC ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco 4400 Series WLC ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Cisco Wireless LAN\nControllers :\n\n-   un attaquant distant peut, sans authentification, provoquer un arrêt\n    inopiné du matériel en soumettant une URL mal formée à l'interface\n    de gestion (CVE-2012-0368) ;\n-   un attaquant distant peut, sans authentification, provoquer un\n    redémarrage du matériel en envoyant une série de paquets IPv6\n    (CVE-2012-0369) ;\n-   un attaquant distant peut, sans authentification, provoquer un\n    redémarrage du matériel en envoyant une série de paquets HTTP ou\n    HTTPS (CVE-2012-0370) ;\n-   un attaquant distant peut, dans certains cas, se connecter sans\n    authentification au contrôleur via le port 1023/tcp et en modifier\n    la configuration. Cette vulnérabilité n'affecte que Cisco 4400\n    Series WLC, WISM (version 1) et Cisco Catalyst 3750G Integrated WLCs\n    (CVE-2012-0371).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2012-0370",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0370"
+    },
+    {
+      "name": "CVE-2012-0369",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0369"
+    },
+    {
+      "name": "CVE-2012-0371",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0371"
+    },
+    {
+      "name": "CVE-2012-0368",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2012-0368"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2012-AVI-107",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2012-03-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Cisco Wireless LAN\nControllers</span> permettent de réaliser des dénis de service à\ndistance et de modifier la configuration du matériel.\n",
+  "title": "Multiples vulnérabilités dans Cisco Wireless LAN Controllers",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20120229-wlc du 29 février 2012",
+      "url": "http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20120229-wlc"
+    }
+  ]
+}

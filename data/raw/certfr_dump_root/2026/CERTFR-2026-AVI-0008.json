@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Joomla! CMS versions 3.9.x à 5.x antérieures à 5.4.2",
+      "product": {
+        "name": "Joomla!",
+        "vendor": {
+          "name": "Joomla!",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Joomla! CMS versions 6.x antérieures à 6.0.2",
+      "product": {
+        "name": "Joomla!",
+        "vendor": {
+          "name": "Joomla!",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-63083",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-63083"
+    },
+    {
+      "name": "CVE-2025-63082",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-63082"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0008",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-01-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Joomla!. Elles permettent à un attaquant de provoquer une injection de code indirecte à distance (XSS).",
+  "title": "Multiples vulnérabilités dans Joomla!",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-01-06",
+      "title": "Bulletin de sécurité Joomla! 1016-20260101",
+      "url": "https://developer.joomla.org/security-centre/1016-20260101-core-inadequate-content-filtering-for-data-urls.html"
+    },
+    {
+      "published_at": "2026-01-06",
+      "title": "Bulletin de sécurité Joomla! 1017-20260102",
+      "url": "https://developer.joomla.org/security-centre/1017-20260102-core-xss-vector-in-the-pagebreak-plugin.html"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>PostgreSQL versions 7.2.1 et antérieures.</P>",
+  "content": "## Description\n\nPostgreSQL est un gestionnaire de bases de données relationnelles.\n\nDes vulnérabilités de type débordement de mémoire, découvertes dans\nplusieurs fonctions, permettent à un utilisateur mal intentionné\nd'exécuter du code arbitraire.\n\nL'utilisateur doit pouvoir se connecter à l'une des bases pour exploiter\nces vulnérabilités.\n\n## Contournement provisoire\n\nPour limiter l'impact des vulnérabilités, vous pouvez :\n\n-   bloquer le port sur lequel le serveur PostgreSQL est en écoute\n    (5432/tcp par défaut) au niveau des pare-feux afin d'empêcher\n    l'exploitation de ces vulnérabilités depuis l'Internet ;\n\n-   ne pas accepter les connexions non authentifiées (trust\n    authentication) à la base de données.\n\n    Editez pour cela le fichier pg_hba.conf.\n\n## Solution\n\nLa version 7.2.2 corrige ces vulnérabilités.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de PostgreSQL :",
+      "url": "http://www.fr.postgresql.org/news.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-192",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2002-08-27T00:00:00.000000"
+    },
+    {
+      "description": "première révision : ajout de l'avis Debian.",
+      "revision_date": "2002-09-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités sur PostgreSQL permettent à un utilisateur mal\nintentionné d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilités de PostgreSQL",
+  "vendor_advisories": []
+}

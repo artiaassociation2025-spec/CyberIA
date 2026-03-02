@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Toutes les versions de <TT>libmm</TT> jusqu'à la version 1.1.3  incluse.</P>",
+  "content": "## Description\n\nLa bibliothèque libmm (paquetage mm) fournit une interface de haut\nniveau permettant la communication inter-processus. Cette bibliothèque\nest utilisée par le serveur HTTP apache.\n\n  \n\nUne mauvaise gestion des accès concurrents à des fichiers temporaires\npermet à un utilisateur mal intentionné de forcer une application\nutilisant libmm à écrire dans un fichier arbitraire.\n\nCette vulnérabilité n'est exploitable que par un utilisateur local.\n\n## Solution\n\nAppliquer les correctifs des différents éditeurs (Consultez la section\ndocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité RHSA-2002:153 de RedHat :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2002-153.html"
+    },
+    {
+      "title": "Avis de sécurité SuSE-SA:2002:028 de SuSE :",
+      "url": "http://www.suse.de/de/security/"
+    },
+    {
+      "title": "Avis de sécurité DSA 137-1 de Debian :",
+      "url": "http://www.debian.org/security"
+    },
+    {
+      "title": "Avis de sécurité MDKSA-2002:045 de Mandrake :",
+      "url": "http://www.mandrakesecure.net/en/advisories/2002/MDKSA-2002-045.php"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-165",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Modification de données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une mauvaise gestion des accès concurrents à des fichiers temporaires\npermet à un utilisateur mal intentionné d'obtenir les privilèges de\nl'utilisateur privilégié root.\n",
+  "title": "Vulnerabilité de la bibliothèque libmm",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité DSA 137-1 de Debian",
+      "url": null
+    }
+  ]
+}

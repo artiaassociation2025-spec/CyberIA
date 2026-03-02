@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Struts versions 2.0.0 à 2.1.8.1 ;",
+      "product": {
+        "name": "Struts",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "VMware vCenter Orchestrator 4.0 et 4.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "VMware",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur dans l'évaluation des paramètres des requêtes au serveur par\nle module XWork, inclus dans Struts, permet à un attaquant d'exécuter du\ncode arbitraire à distance. Cette vulnérabilité affecte également le\nlogiciel VMware vCenter Orchestrator.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-1870",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1870"
+    }
+  ],
+  "links": [
+    {
+      "title": "Article KB de Vmware 1034175 du 16 mars 2011 :",
+      "url": "http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1034175"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-011",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-01-12T00:00:00.000000"
+    },
+    {
+      "description": "ajout des références concernant VMware vCO.",
+      "revision_date": "2011-03-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans <span class=\"textit\">Struts</span> version 2\npermet à un attaquant d'exécuter du code Java à distance.\n",
+  "title": "Vulnérabilité dans Struts",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache Struts S2-005 du 16 Août 2010",
+      "url": "http://struts.apache.org/2.2.1/docs/s2-005.html"
+    },
+    {
+      "published_at": null,
+      "title": "Article KB de VMware 1034175 du 16 mars 2011",
+      "url": null
+    }
+  ]
+}

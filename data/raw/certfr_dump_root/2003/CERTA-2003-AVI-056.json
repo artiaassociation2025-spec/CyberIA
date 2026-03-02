@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Checkpoint Firewall-1 NG FP3.</P>",
+  "content": "## Description\n\nL'envoi de caractères malicieux vers le démon `syslog` entraîne une\nconsommation excessive du temps CPU. Cette vulnérabilité peut être\nexploitée par un individu mal intentionné afin d'effectuer un déni de\nservice sur le garde-barrière.\n\nUn utilitaire en ligne de commande (`fw log -nfnl`) présent dans le\ngarde-barrière permet la visualisation de messages des journaux `syslog`\nsur une console. Une vulnérabilité présente dans cet utilitaire permet à\nun individu mal intentionné d'injecter des caractères malicieux afin\nd'en fausser l'affichage.\n\n## Contournement provisoire\n\nFiltrer le port `514/UDP` pour n'accepter des paquets provenants\nuniquement de sources sûres.\n\n## Solution\n\nLa première vulnérabilité peut être corrigée par l'application du\ncorrectif `HF2` (cf. Documentation ) ou bien par l'utilisation de\nl'outil `SmartUpdate`.\n\nAucun correctif n'est disponible pour la seconde vulnérabilité le jour\nde la rédaction de l'avis. Il est toutefois recommandé de ne pas\nutiliser cet utilitaire afin de visualiser les messages `syslog` ou de\nfiltrer les caractères non désirés.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2003-AVI-056",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-03-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Le garde-barrière Checkpoint Firewall-1 NG FP3 possède un démon `syslog`\npermettant la consolidation de journaux provenant de plusieurs\nmatériels. Celui-ci présente plusieurs vulnérabilités.\n",
+  "title": "Vulnérabilités dans le garde-barrière Firewall-1 NG",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Checkpoint",
+      "url": "http://www.checkpoint.com/techsupport/alerts/syslog.html"
+    }
+  ]
+}

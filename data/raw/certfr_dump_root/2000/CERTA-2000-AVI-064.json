@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Internet Information Server 4.0 et 5.0</P>",
+  "content": "## Description\n\nHTTP est un protocole fonctionnant en mode déconnecté. Pour simuler une\nsession, ou préserver des préférences enregistrées lors d'une navigation\nsur un site afin de les réutiliser ultérieurement, on peut utiliser des\npetits fichiers textes appelés « cookies » dans lesquels sont\nenregistrées des informations nécessaires à l'identification de la\nsession entre un serveur web et un navigateur client. Les cookies\npermettent notamment de créer un contexte de « session » lors d'une\nnavigation sur un site web.\n\nAu cours d'une session de navigation en mode sécurisé, il se peut que le\nclient et le serveur échangent des cookies chiffrés. Malheureusement les\npages écrites au format .ASP gèrent mal les sessions identifiées par des\ncookies. Lorsqu'un utilisateur navigue en mode sécurisé sur un site, et\nlorsque le serveur crée une ouverture de session en envoyant des cookies\nchiffrés au navigateur client, si cet utilisateur est amené par la suite\nà naviguer sur le même site en mode normal, les mêmes cookies seront\nalors échangés en clair.\n\nCela permet à un utilisateur mal intentionné qui maîtrise le réseau\nsitué entre le navigateur client et le serveur, s'il réussi à amener le\nclient à naviguer sur le même site en mode normal, de lire les cookies\net de les réutiliser, en usurpant ainsi l'identité de sa victime, sur le\nsite sécurisé.\n\n## Contournement provisoire\n\nPour les clients : désactiver les cookies sauf dans les cas de\nnécessité.\n\n## Solution\n\nPour les serveurs : appliquer le correctif de Microsoft :\n\n-   Pour Internet Information 4.0 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ID=25233\n\n-   Pour Internet Information Server 5.0 :\n\n        http://www.microsoft.com/Downloads/Release.asp?ID=25232\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "La page de la CNIL concernant les cookies :",
+      "url": "http://www.cnil.fr/traces/comment/cooki.htm"
+    },
+    {
+      "title": "Une RFC concernant HTTP et les cookies :",
+      "url": "http://www.ietf.org/rfc/rfc2109.txt"
+    },
+    {
+      "title": "Le bulletin de sécurité Microsoft et sa FAQ :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms00-080.asp"
+    },
+    {
+      "title": "Le bulletin de sécurité Microsoft et sa FAQ :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/fq00-080.asp"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-064",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-10-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    },
+    {
+      "description": "Vol d'informations confidentielles"
+    }
+  ],
+  "summary": "Les cookies échangés lors d'une session de navigation en mode sécurisé\n(HTTPS) sur un site sont échangés <span class=\"textit\">en clair</span>\npendant la même session, lors d'une connexion au même site en mode\nnormal (HTTP).\n",
+  "title": "Vol de cookies sous HTTPS avec les serveurs Microsoft Internet Information Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de Sécurité Microsoft",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Pour <SPAN class=\"textit\">lpspooler</SPAN> les versions  vulnérables d'HP-UX sont :</P>  <UL>    <LI>HP-UX 11.00;</LI>    <LI>HP-UX 10.20;</LI>    <LI>HP-UX 10.10;</LI>    <LI>HP-UX 10.01.</LI>  </UL>  <P>Pour <SPAN class=\"textit\">ftpd</SPAN>, les versions  vulnérables sont :</P>  <UL>    <LI>HP-UX 11.04;</LI>    <LI>HP-UX 11.00;</LI>    <LI>HP-UX 10.24;</LI>    <LI>HP-UX 10.20;</LI>    <LI>HP-UX 10.10;</LI>    <LI>HP-UX 10.01.</LI>  </UL>",
+  "content": "## Description\n\nDes débordements de mémoire dans lpspooler (plus précisément\nPrinterMgmt.LP-SPOOL) permettent à un utilisateur mal intentionné\nd'augmenter ses privilèges, ou d'arrêter le service d'impression.\n\nSous les versions d'HP-UX 11.0x seulement, l'installation par défaut du\nservice FTP permet la commande SITE EXEC permettant à un utilisateur\ndistant d'obtenir les privilèges root sur le serveur.\n\nDans toutes les versions d'HP-UX 11.0x et 10.xx, le daemon ftpd passe à\nla fonction setproctitle() des paramètres avec un format incorrect,\npermettant ainsi à l'utilisateur mal intentionné d'obtenir les\nprivilèges de root sur la machine.\n\n## Solution\n\nTélécharger les correctifs depuis le site HP :\n\n    http://itrc.hp.com\n\n-   Pour lpspooler :\n\n    -   pour HP-HX 11.00 appliquer le correctif nommé PHCO_22365,\n    -   pour HP-HX 10.20 appliquer le correctif nommé PHCO_22364,\n    -   pour HP-HX 10.10 appliquer le correctif nommé PHCO_22411,\n    -   pour HP-HX 10.01 appliquer le correctif nommé PHCO_22410.\n\n    Pour ftpd :\n\n    -   pour HP-HX 11.00 appliquer le correctif nommé PHNE_22936,\n    -   pour HP-HX 11.04 appliquer le correctif nommé PHNE_22060,\n    -   pour HP-HX 10.20 appliquer le correctif nommé PHNE_22057,\n    -   pour HP-HX 10.24 appliquer le correctif nommé PHNE_22059,\n    -   pour HP-HX 10.01 et 10.10 appliquer le correctif nommé\n        PHNE_22058.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "le CIAC à publié ces deux avis dans un seul page sur son    site :",
+      "url": "http://www.ciac.org/ciac/bulletins/l-006.shtml"
+    },
+    {
+      "title": "L'avis d'HP est visible sur le site :",
+      "url": "http://itrc.hp.com"
+    }
+  ],
+  "reference": "CERTA-2000-AVI-062",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2000-10-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Augmentation des privilèges, déni de service pour lpspooler"
+    },
+    {
+      "description": "Accès root pour ftpd"
+    }
+  ],
+  "summary": "De multiples vulnérabilités sont présentes dans les services <span\nclass=\"textit\">lpspooler</span> et <span class=\"textit\">ftpd</span> du\nsystème HP-UX.\n",
+  "title": "Vulnérabilités dans lpspool et ftpd sous HP-UX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bugtraq",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis du CIAC",
+      "url": null
+    }
+  ]
+}

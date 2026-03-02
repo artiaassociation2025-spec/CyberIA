@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "JRun 3.0, 3.1 et 4.0 pour IIS sous Windows.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ColdFusion MX (version 6.0 et antérieures) pour IIS 4.0 et 5.0 sous Windows ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nColdFusion et JRun sont des applications crées par Macromedia utilisant\nla technologie ISAPI (Internet Services Application Programming\nInterface) et permettant de développer des extensions pour les serveurs\nweb. ISAPI est une technologie permettant aux développeurs de site web\nde fournir des services plus ou moins élaborées par le biais d'une\ninterface web.\n\nLe filtre ISAPI gérant les noms de fichier possède une vulnérabilité de\ntype débordement de mémoire.\n\nUn utilisateur mal intentionné peut, en utilisant des noms de fichiers\ntrès longs, exécuter du code arbitraire sur le serveur IIS avec les\nprivilèges très élevés de l'utilisateur SYSTEM.\n\n## Solution\n\nSe référer aux bulletins de sécurité Macromedia (voir paragraphe\ndocumentation) pour connaître la disponibilité des correctifs.\n\nNota : Le correctif de JRun est un correctif cumulatif qui corrige\nd'autres erreurs.\n\nLe Service Pack 1 et le Service Pack 1a pour JRun corrigent les\nvulnérabilités couvertes par le correctif cumulatif. Ce dernier ne doit\ndonc pas être appliqué si l'un de ces Service Pack a été installé.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de Macromedia concernant ColdFusion :",
+      "url": "http://www.macromedia.com/v1/handlers/index.cfm?ID=23161"
+    },
+    {
+      "title": "Bulletin de sécurité de Macromedia concernant JRun :",
+      "url": "http://www.macromedia.com/v1/handlers/index.cfm?ID=23500"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-247",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-11-15T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Il existe une vulnérabilité de type débordement de mémoire exploitable à\ndistance dans les applications ColdFusion et JRun pour IIS sous Windows.\n",
+  "title": "Vulnérabilités de JRun et ColdFusion pour Microsoft IIS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "bulletin de sécurité Macromedia",
+      "url": null
+    }
+  ]
+}

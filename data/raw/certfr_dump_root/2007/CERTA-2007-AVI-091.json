@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Mac OS X et Mac OS X Server version 10.4.8.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Mac OS X et Mac OS X Server version 10.3.9 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans iChat :\n\n-   un problème de validation lors de l'échange du message Bonjour\n    (CVE-2007-0614 et CVE-2007-0710) permet à un utilisateur\n    malintentionné du réseau local de réaliser un déni de service de\n    l'application iChat par le biais d'un message Bonjour spécialement\n    conçu ;\n-   un manque de validation des adresses réticulaires AIM d'iChat\n    (CVE-2007-0021) peut permettre à un utilisateur distant\n    malintentionné de réaliser un déni de service de l'application iChat\n    ou d'exécuter du code arbitraire par le biais d'une adresse\n    réticulaire AIM spécialement conçue.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0021",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0021"
+    },
+    {
+      "name": "CVE-2007-0710",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0710"
+    },
+    {
+      "name": "CVE-2007-0614",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0614"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-091",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-02-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités présentes dans iChat peuvent permettre de\nréaliser un déni de service ou l'exécution de code arbitraire à\ndistance.\n",
+  "title": "Multiples vulnérabilités dans Apple iChat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise à jour de sécurité Apple 2007-002 du 15 février 2007",
+      "url": "http://docs.info.apple.com/article.html?artnum=305102"
+    }
+  ]
+}

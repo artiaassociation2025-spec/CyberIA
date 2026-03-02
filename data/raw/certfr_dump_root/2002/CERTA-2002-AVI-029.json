@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Systèmes avec <TT>groff</TT> versions 1.16-7 et  antérieures.</P>",
+  "content": "## Description\n\ngroff est un système de formatage des documents. Le préprocesseur de\ngroff contient une vulnérabilité qui permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire. Le système d'impression LPR\npeut faire appel à groff, ce qui peut rendre possible l'exploitation de\ncette vulnérabilité à distance.\n\n## Contournement provisoire\n\nFiltrer le port 515/tcp au niveau du garde-barrière pour empêcher\nl'exploitation de cette vulnérabilité par le biais de LPR.\n\n## Solution\n\nAppliquer le patch correctif de votre distributeur.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-029",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-02-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité du préprocesseur de groff permet l'exécution de code\narbitraire.\n",
+  "title": "Vulnérabilité de groff",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis Mandrake",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis RedHat",
+      "url": "http://www.redhat.com/support/errata/RHSA-2002-004.html"
+    }
+  ]
+}

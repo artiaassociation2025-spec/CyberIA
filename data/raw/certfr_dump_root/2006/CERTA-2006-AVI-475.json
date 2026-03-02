@@ -1,0 +1,40 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>HP System Management Homepage (SMH)  versions antérieures à 2.1.5.</p>",
+  "content": "## Description\n\nLes versions Linux et Windows de HP System Management Homepage\ncontiennent de multiples failles dans les composants PHP :\n\n-   des vulnérabilités dans les fonctions PHP parse_str(), extract() et\n    import_request_variables() permettent de contourner de la politique\n    de sécurité ;\n-   une vulnérabilité dans la gestion des entrées de la fonction PHP\n    phpinfo() permet de réaliser de l'injection de code indirecte\n    (cross-site scripting) ;\n-   une vulnérabilité de type integer overflow dans l'utilisation des\n    bibliothèques PCRE peut conduire à un déni de service.\n\n## Solution\n\nLa version 2.1.5 de HP System Management Homepage corrige les\nvulnérabilités.  \nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité HP c00786522 du 01 novembre 2006 :",
+      "url": "http://itrc.hp.com/service/cki/docDisplay.do?docId=c00786522"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-475",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-11-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Cross-site scripting"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans HP System Management Homepage permettent à\nune personne distante malintentionnée de contourner la politique de\nsécurité, de réaliser de l'injection de code indirecte (cross-site\nscripting) ou de réaliser un déni de service.\n",
+  "title": "Multiples vulnérabilités dans HP System Management Homepage",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité HP du 01 novembre 2006",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Novell ZENworks 11 Configuration Management avec SP1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Novell",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Novell ZENworks AdminStudio.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Novell",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Novell ZENworks 10 Configuration Management avec SP2 ou SP3 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Novell",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDes vulnérabilités sont présentes dans les produits Novell ZENworks :\n\n-   des vulnérabilités dans mscomct2.ocx, appelé directement par\n    ZENworks, déjouant la protection par killbit ;\n-   une absence de filtrage des paramètres transmis à la fonction\n    LaunchProcess ;\n-   un dépassement de tampon mémoire pour le paramètre bstrReplaceText.\n\nToutes ces vulnérabilités permettent à un utilisateur malintentionné\nd'exécuter du code arbitraire. L'exploitation peut se faire à distance\nsous réserve d'inciter un utilisateur local à visiter un fichier\nmalveillant distant.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2011-AVI-629",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-11-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Des vulnérabilités dans les produits Novell ZENworks permettent à un\nutilisateur malintentionné d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilités dans Novell ZENworks",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Novell 7009570 du 19 octobre 2011",
+      "url": "http://www.novell.com/support/viewContent.do?externalId=7009570"
+    }
+  ]
+}

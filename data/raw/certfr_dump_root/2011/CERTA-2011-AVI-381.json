@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les versions 9.6.3, 9.6-ESV-R4, 9.6-ESV-R4-P1, 9.6-ESV-R5b1 9.7.0, 9.7.0-P1, 9.7.0-P2, 9.7.1, 9.7.1-P1, 9.7.1-P2, 9.7.2, 9.7.2-P1, 9.7.2-P2, 9.7.2-P3, 9.7.3, 9.7.3-P1, 9.7.3-P2, 9.7.4b1 9.8.0, 9.8.0-P1, 9.8.0-P2, 9.8.0-P3 et 9.8.1b1 sont affectées par la vulnérabilité CVE-2011-2464 ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "les versions 9.8.0, 9.8.0-P1, 9.8.0-P2 and 9.8.1b1 sont affectées par la vulnérabilité CVE-2011-2465.",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités sont présentes dans le serveur DNS Bind :\n\n-   la première, de nature non-précisée par l'éditeur, permet à un\n    utilisateur distant de provoquer un arrêt inopiné du service named\n    par le biais d'un paquet construit de façon particulière.\n-   la seconde concerne la mise en œuvre des Response Policy Zone (RPZ)\n    et permet, sous certaines conditions, à un utilisateur distant de\n    provoquer un déni de service.\n\n## Solution\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2464",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2464"
+    },
+    {
+      "name": "CVE-2011-2465",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2465"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Debian DSA 2272 du 05 juillet 2011 :",
+      "url": "http://www.debian.org/security/2011/dsa-2272"
+    },
+    {
+      "title": "Bulletin de sécurité HP du 20 janvier 2012 :",
+      "url": "http://h20000.www2.hp.com/bizsupport/TechSupport/Document.jsp?objectID=c03070783"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu USN-1163-1 du 05 juillet 2011 :",
+      "url": "http://www.ubuntulinux.org/usn/usn-1163-1"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-381",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-07-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout du belletin de sécurité HP.",
+      "revision_date": "2012-01-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités présentes dans Bind permettent à un utilisateur\ndistant malintentionné de provoquer un déni de service.\n",
+  "title": "Multiples vulnérabilités dans Bind",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité ISC Bind du 05 juillet 2011",
+      "url": "http://www.isc.org/software/bind/advisories/cve-2011-2465"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les applications utilisant une  bibliothèque <TT>libnids</TT> vulnérable. Les versions 1.17 et  antérieures de <TT>libnids</TT> sont vulnérables.</p>",
+  "content": "## Description\n\nLa bibliothèque libnids offre des fonctionnalités aux systèmes de\ndétection d'intrusions. Elle permet notamment la défragmentation IP et\nle réassemblage des sessions TCP. Une vulnérabilité dans la\nfonctionnalité de réassemblage de sessions TCP permet l'exécution de\ncode arbitraire.\n\n## Solution\n\nInstaller la version 1.18 de libnids disponible à l'adresse suivante :\n\n    http://prdownloads.sourceforge.net/libnids/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Site de libnids :",
+      "url": "http://www.packetfactory.net/Projects/libnids/"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA:200311-07 :",
+      "url": "http://www.securityfocus.com/archive/1/345458/2003-11-22/2003-11-28/0"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 410-1 :",
+      "url": "http://www.debian.org/security/2004/dsa-410"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-178",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-11-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Gentoo.",
+      "revision_date": "2003-11-25T00:00:00.000000"
+    },
+    {
+      "description": "ajout du bulletin de sécurité Debian.",
+      "revision_date": "2004-01-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la bibliothèque libnids permet l'exécution de\ncode arbitraire à distance.\n",
+  "title": "Vulnérabilité de la bibliothèque Libnids",
+  "vendor_advisories": []
+}

@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Novell Netware client 4.91 SP2.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Novell",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Novell Netware client 4.91 SP1 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Novell",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Novell Netware cleint 4.91 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Novell",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCette vulnérabilité provient d'une faille dans la librairie nwspool.dll\nqui ne gère pas correctement certains arguments (dépassant 458 bits ou\n524 bits) pour les fonctions EnumPrinters() et OpenPrinter().\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-5854",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-5854"
+    }
+  ],
+  "links": [
+    {
+      "title": "Référence CVE :",
+      "url": "http://www.cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-5854"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-520",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-12-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    }
+  ],
+  "summary": "Une vulnérabilité découverte dans Novell netware client permet à un\nutilisateur mal intentionné et sans authentification préalable\nd'éxécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilité Novell",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité de Novell",
+      "url": "http://www.novell.com/support/search.do?cmd=displayKC&esternalld=312553&sliceld=SAL_Public"
+    }
+  ]
+}

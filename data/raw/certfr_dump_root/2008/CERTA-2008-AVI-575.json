@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>imlib2 1.4.2 et versions antérieures.</P>",
+  "content": "## Description\n\nUne vulnérabilité de type débordement de mémoire a été corrigée dans la\nfonction load() utilisée pour le chargement de fichiers XPM dans imlib2.\nL'exploitation de cette vulnérabilité via un fichier spécialement conçu\npermet à une personne malintentionnée distante de provoquer un déni de\nservice ou potentiellement d'exécuter du code arbitraire sur une\napplication utilisant cette bibliothèque.\n\n## Solution\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-5187",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-5187"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Fedora 10 FEDORA-2008-10364 du 26    novembre 2008 :",
+      "url": "http://www.redhat.com/archives/fedora-package-announce/2008-November/msg00906.html"
+    },
+    {
+      "title": "Bulletin de sécurité Fedora 9 FEDORA-2008-10287 du 26    novembre 2008 :",
+      "url": "http://www.redhat.com/archives/fedora-package-announce/2008-November/msg00856.html"
+    },
+    {
+      "title": "Bulletin de sécurité Debian DSA 1672 du 29 novembre 2008 :",
+      "url": "http://www.debian.org/security/2008/dsa-1672"
+    },
+    {
+      "title": "Bulletin de sécurité Fedora 8 FEDORA-2008-10296 du 26    novembre 2008 :",
+      "url": "http://www.redhat.com/archives/fedora-package-announce/2008-November/msg00858.html"
+    },
+    {
+      "title": "Bulletin de sécurité Ubuntu 683-1 du 02 décembre 2008 :",
+      "url": "http://www.ubuntu.com/usn/USN-683-1"
+    }
+  ],
+  "reference": "CERTA-2008-AVI-575",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-12-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans la bibliothèque imlib2 permet à une personne\nmalintentionnée distante de provoquer un déni de service ou\npotentiellement d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité dans imlib2",
+  "vendor_advisories": []
+}

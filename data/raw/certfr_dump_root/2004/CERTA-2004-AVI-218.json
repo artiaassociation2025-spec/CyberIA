@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco Collaboration Server 3.x avec ServletExec 2.2 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Collaboration Server 4.x avec ServletExec 3.0 ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco Collaboration Server 5.x avec ServletExec 4.1.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCisco Collaboration Server (CCS) est une solution de travail\ncollaboratif pouvant être intégrée à des architectures de commerce\nélectronique ou de service client.\n\nCCS utilise la `servlet` Java `ServletExec` maintenue par la société New\nAtlanta.\n\nUne vulnérabilité présente dans `ServletExec` permet de télécharger des\nfichiers sur le serveur Web et de les exécuter afin d'élever ses\nprivilèges.\n\n## Solution\n\n-   Appliquer les correctifs à l'aide du script fourni par Cisco pour\n    CSS 4.x :\n\n        http://www.cisco.com/pcgi-bin/tablebuild.pl/ccs40\n\n-   mettre à jour CCS avec la version 5.x (cf. Documentation) ;\n\n-   correctifs pour ServletExec de New Altanta :\n\n        ftp://ftp.newatlanta.com/public/servletexec/\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2004-AVI-218",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Cisco Collaboration Server\ninstallé avec ServletExec permettant à un individu mal intentionné\nd'installer des fichiers sur le système vulnérable et d'élever ses\nprivilèges.\n",
+  "title": "Vulnérabilité dans Cisco Collaboration Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité SA-20040630 de CISCO",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20040630-CCS.shtml"
+    }
+  ]
+}

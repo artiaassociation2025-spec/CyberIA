@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Qemu-kvm versions inférieures à 0.14",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités dans qemu-kvm ont été corrigées. La première\n(CVE-2011-2212) permet à un utilisateur avec privilèges sur un système\ninvité, de réaliser un déni de service et dans certains cas, d'élever\nses privilèges sur le système hôte, au moyen d'un débordement de tampon.\nLa seconde (CVE-2011-2512) permet à un utilisateur d'un système invité,\nsans privilèges sur ce système, de réaliser un déni de service et dans\ncertains cas, d'élever ses privilèges sur le système hôte, via une\nerreur de manipulation d'index de tableau.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2512",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2512"
+    },
+    {
+      "name": "CVE-2011-2212",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2212"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2011-0919 du 05 juillet    2011 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2011-0919.html"
+    }
+  ],
+  "reference": "CERTA-2011-AVI-383",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-07-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Deux vulnérabilités ont été corrigées dans <span\nclass=\"textit\">qemu-kvm</span> et permettent à un utilisateur d'un\nsystème invité, de réaliser un déni de service et dans certains cas,\nd'élever ses privilèges dans le système hôte.\n",
+  "title": "Vulnérabilité dans Qemu",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité RedHat RHSA-2011-0919 du 05 juillet 2011",
+      "url": null
+    }
+  ]
+}

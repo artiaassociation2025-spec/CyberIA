@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Kaspersky Personal 5.x,",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Kaspersky",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "F-Secure Anti-Virus Linux 4.x.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Kaspersky",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Kaspersky Anti-Virus On-Demand Scanner for Linux 5.x,",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Kaspersky",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLe moteur antiviral possède la capacité d'analyser divers formats de\nfichiers. Parmi ceux-ci, le type CHM (« Compiled HTML Help », format\nutilisé par les fichiers d'aide Windows) peut être utilisé pour\nprovoquer un débordement de tampon dans la pile.\n\nLe moteur de Kaspersky est utilisé par d'autres éditeurs, notamment pour\nles versions Linux qui peuvent être utilisées sur des serveurs de\nmessagerie, de partage de fichiers,...\n\nUn déni de service peut être un moyen préliminaire à la diffusion de\ncode malveillant qui aurait été sinon détecté.\n\n## Solution\n\nToute mise à jour de la base de signature postérieure à juillet 2005\ncorrige cette faille.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2005-AVI-391",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2005-10-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service sur le filtrage antiviral"
+    }
+  ],
+  "summary": "Un utilisateur mal intentionné peut soumettre au moteur d'analyse\nantivirale un fichier volontairement mal formé provoquant un déni de\nservice voire l'exécution de code arbitraire avec les droits du\nprogramme.\n",
+  "title": "Vulnérabilité des antivirus Kaspersky et F-Secure",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité d'iDefense du 10 octobre 2005",
+      "url": "http://www.idefense.com/application/poi/display?id=318&type=vulnerabilities"
+    }
+  ]
+}

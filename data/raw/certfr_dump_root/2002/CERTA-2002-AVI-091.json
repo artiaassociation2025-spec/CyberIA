@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Pour les architectures Intel et Sparc, les systèmes suivants  sont affectés :</P>  <UL>    <LI>Solaris 2.5.1 ;</LI>    <LI>Solaris 2.6 ;</LI>    <LI>Solaris 7 ;</LI>    <LI>Solaris 8.</LI>  </UL>",
+  "content": "## Description\n\nLe daemon cachefsd permet la mise en cache localement de données\nprésentes sur un système de fichiers distant.\n\nUn utilisateur mal intentionné peut :\n\n-   arrêter le daemon à distance au moyen d'une requête contenant un\n    appel de procédure astucieusement construit ;\n-   obtenir les privilèges de l'administrateur root à distance ou\n    localement en effectuant un débordement de mémoire du daemon\n    cachefsd.\n\n## Contournement provisoire\n\n-   Bloquer le port 111/TCP (SUNRPC) au niveau du garde-barrière pour se\n    protéger contre les attaques provenant de l'extérieur.\n\n-   Désactiver le service cachefs en commentant comme suit la ligne\n    concernant cachefsd dans `/etc/inetd.conf` :\n\n    `#100235/1 tli rpc/tcp wait root      /usr/lib/fs/cachefs/cachefsd`\n\n    et en arrêtant le daemon par la commande `kill -HUP`.\n\n## Solution\n\nSe référer au bulletin de Sun pour connaitre la disponibilité des\ncorrectifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin d'alerte #44309 de Sun :",
+      "url": "http://sunsolve.sun.com/pub-cgi/retrieve.pls?doc=fsalert%2F44309"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-091",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-05-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Deux vulnérabilités du <span class=\"textit\">daemon</span> cachefsd ont\nété mises en évidence :\n\n-   Il est possible d'arrêter à distance le <span\n    class=\"textit\">daemon</span> cachefsd ;\n-   un utilisateur mal intentionné peut exécuter du code arbitraire à\n    distance, avec les privilèges de l'administrateur root.\n",
+  "title": "Multiples vulnérabilités de cachefsd sous Solaris",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "bulletin d'alerte #44309 de Sun",
+      "url": null
+    }
+  ]
+}

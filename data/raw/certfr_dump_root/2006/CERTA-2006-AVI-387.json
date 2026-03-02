@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Le service <TT>MSMQ</TT> (Microsoft  Message Queuing) pour  Windows XP Service Pack 1 et Service Pack 2",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": " <P>La version <SPAN class=\"textit\">Edition x64</SPAN> de ce  système d'exploitation ne serait pas affectée par cette  vulnérabilité.</P>",
+  "content": "## Description\n\nLe transport multicast permet de diffuser simultanément de l'information\nà un groupe restreint de machines. Au niveau d'IPv4, les adresses\nréservées pour ce dernier sont dans la plage 224.0.0.0/4 (224.0.0.0 à\n239.255.255.255).\n\nIl existe plusieurs implémentations de protocoles multicast, l'une\nd'elles étant le PGM (pour Pragmatic General Multicast). Elle est\ndéfinie par la norme RFC 3208 et s'appuie sur le principe des accusés de\nréception négatifs (NACK), pour signaler des données qui n'ont pas été\nreçues. PGM est un protocole de la couche transport, par analogie avec\nTCP ou UDP, et porte le numéro de protocole 113 dans l'entête IPv4.\n\nLes versions actuelles de Microsoft Windows ne mettent pas en œuvre ce\nprotocole par défaut. En revanche, PGM peut être activé si le service\nMSMQ (pour Microsoft Message Queuing) est installé.\n\nUne vulnérabilité a été identifiée dans la mise en œuvre du protocole\nPGM pour certaines versions de Microsoft Windows, permettant un accès\nillégitime à la mémoire. Une personne malveillante pourrait envoyer un\npaquet conçu dans le but d'exploiter cette vulnérabilité. Cela lui\npermettrait d'exécuter des commandes arbitraires, au moment de la\nréception du paquet par le système vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité MS06-052 de Microsoft pour\nl'application des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3442",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3442"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Microsoft MS06-052 du 12 septembre    2006 :   ",
+      "url": "http://www.microsoft.com/france/technet/security/bulletin/2006/MS06-052.mspx"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-387",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-09-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans le protocole PGM (<span\nclass=\"textit\">Pragmatic General Multicast</span>), utilisé notamment\npar le service MSMQ (pour <span class=\"textit\">Microsoft Message\nQueuing</span>). Ce service n'est pas installé ou activé par défaut. Une\npersonne malveillante pourrait envoyer un paquet conçu dans le but\nd'exploiter cette vulnérabilité via le protocole PGM. Cela lui\npermettrait d'exécuter des commandes arbitraires, au moment de la\nréception du paquet par le système vulnérable.\n",
+  "title": "Vulnérabilité du protocole PGM dans Microsoft Windows",
+  "vendor_advisories": [
+    {
+      "published_at": "2006-09-12",
+      "title": "Bulletin de sécurité MS06-052 de Microsoft ",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS06-052.mspx"
+    }
+  ]
+}

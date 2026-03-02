@@ -1,0 +1,103 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système Unix utilisant les paquetages GNU suivants :</P>  <UL>    <LI><SPAN class=\"textit\">gdb</SPAN>,</LI>    <LI><SPAN class=\"textit\">binutils</SPAN> (contenant les    programmes <SPAN class=\"textit\">strings</SPAN>, <SPAN class=\n    \"textit\">nm</SPAN>, <SPAN class=\n    \"textit\">objdump</SPAN>,...),</LI>    <LI><SPAN class=\"textit\">elfutils</SPAN>,</LI>    <LI><SPAN class=\"textit\">HT Editor</SPAN>.</LI>  </UL>",
+  "content": "## Description\n\nELF est une spécification de format binaire utilisé pour les exécutables\net les bibliothèques partagées. C'est maintenant le format utilisé dans\nSolaris, Linux et les BSDs (OpenBSD, FreeBSD et NetBSD).\n\nUne mauvaise gestion de la mémoire, dans divers utilitaires analysant ce\nformat, permet à un utilisateur mal intentionné de faire exécuter par sa\nvictime du code arbitraire à l'aide d'un fichier ELF volontairement mal\nformé.\n\nPar ailleurs, un mauvais choix de conception dans gdb permet l'exécution\nde tout fichier .gdbinit présent dans le répertoire courant et donc de\nlancer des commandes arbitraires avec les privilèges de l'utilisateur.\n\ngdb est un débogueur, binutils contient entre autres strings qui permet\nd'extraire les chaînes de caractères d'un fichier, elfutils regroupe des\nutilitaires spécifiquement dédiés au format elf et HT Editor est un\néditeur de fichiers exécutables.\n\n## Solution\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Mise à jour NetBSD de gdb :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/devel/gdb/README.html"
+    },
+    {
+      "title": "Bulletins de sécurité Gentoo :       GLSA-200505-08 du 10 mai 2005 pour HT Editor :          \n  GLSA-200505-15 du 20 mai 2005 pour gdb :          \n  GLSA-200506-01 du 1er juin 2005 pour binutils et elfutils:",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200505-15.xml"
+    },
+    {
+      "title": "Site du paquetage elfutils :",
+      "url": "http://people.redhat.com/drepper/"
+    },
+    {
+      "title": "Site du paquetage binutils :",
+      "url": "http://sources.redhat.com/binutils/"
+    },
+    {
+      "title": "Site de HT Editor (version    source 0.9.0 au moins) :",
+      "url": "http://hte.sourceforge.net/"
+    },
+    {
+      "title": "Site de gdb :      \nou",
+      "url": "http://www.gnu.org/software/gdb/"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:215 du 24 novembre    2005 :",
+      "url": "http://wwwnew.mandriva.com/security/advisories?name=MDKSA-2005-215"
+    },
+    {
+      "title": "GLSA-200505-08 du 10 mai 2005 pour HT Editor :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200505-08.xml"
+    },
+    {
+      "title": "Bulletins de sécurité Gentoo :       GLSA-200505-08 du 10 mai 2005 pour HT Editor :          \n  GLSA-200505-15 du 20 mai 2005 pour gdb :          \n  GLSA-200506-01 du 1er juin 2005 pour binutils et elfutils:",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200505-08.xml"
+    },
+    {
+      "title": "Bulletins de sécurité Gentoo :       GLSA-200505-08 du 10 mai 2005 pour HT Editor :          \n  GLSA-200505-15 du 20 mai 2005 pour gdb :          \n  GLSA-200506-01 du 1er juin 2005 pour binutils et elfutils:",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200506-01.xml"
+    },
+    {
+      "title": "Site de gdb :      \nou",
+      "url": "http://sources.redhat.com/gdb/"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2005:095 du 30 mai 2005    pour gdb :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2005-095"
+    },
+    {
+      "title": "GLSA-200505-15 du 20 mai 2005 pour gdb :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200505-15.xml"
+    },
+    {
+      "title": "Bulletin de sécurité RedHat RHSA-2005:709 du 05 octobre    2005 pour gdb :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-709.html"
+    },
+    {
+      "title": "Bulletin de sécurité SGI 20060703-01-P du 31 juillet 2006 :",
+      "url": "ftp://patches.sgi.com/support/free/security/advisories/20060703-01-U.asc"
+    },
+    {
+      "title": "GLSA-200506-01 du 1er juin 2005 pour binutils et elfutils:",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200506-01.xml"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-190",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2005-06-03T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité RedHat.",
+      "revision_date": "2005-10-07T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité Mandriva.",
+      "revision_date": "2005-11-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin de sécurité SGI.",
+      "revision_date": "2006-08-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire avec les droits de l'utilisateur courant"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": null,
+  "title": "Vulnérabilité de divers outils gérant le format ELF",
+  "vendor_advisories": []
+}

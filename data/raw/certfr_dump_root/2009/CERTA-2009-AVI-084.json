@@ -1,0 +1,54 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P><SPAN class=\"textit\">Cisco Unified MeetingPlace Web  Conferencing</SPAN> versions 6.0 et 7.0.</P>",
+  "content": "## Description\n\nDeux vulnérabilités ont été découvertes dans Cisco Unified MeetingPlace\nWeb Conferencing :\n\n-   un utilisateur malintentionné peut, par le biais d'une requête\n    spécifiquement constituée, contourner le mécanisme\n    d'authentification du serveur et ainsi obtenir un accès à\n    l'application avec des droits d'administration ;\n-   un utilisateur authentifié peut, par le biais de la page d'édition\n    du compte, réaliser des attaques de type cross-site scripting.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-0614",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0614"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Cisco 20090226-mtgplace du 26 février    2009 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sr-20090226-mtgplace.shtml"
+    },
+    {
+      "title": "Bulletin de sécurité Cisco 20090225-mtgplace du 25 février    2009 :",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20090225-mtgplace.shtml"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-084",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-03-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Accès à distance avec les droits administrateur"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans <span class=\"textit\">Cisco Unified MeetingPlace\nWeb Conferencing</span> permettent d'accéder à distance à l'application\navec des droits administrateur et de réaliser des attaques de type <span\nclass=\"textit\">cross-site scripting</span>.\n",
+  "title": "Vulnérabilités dans Cisco Unified MeetingPlace Web Conferencing",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-sr-20090226-mtgplace du 26 février 2009",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité cisco-sa-20090225-mtgplace du 25 février 2009",
+      "url": null
+    }
+  ]
+}

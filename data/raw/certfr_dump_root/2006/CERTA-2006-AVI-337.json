@@ -1,0 +1,68 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Usermin 1.210 et versions antérieures.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Webmin 1.280 et versions antérieures ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "N/A",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nCette vulnérabilité est causée par une erreur dans le traitement des\nadresses réticulaires (URL). Un individu malveillant peut exploiter\ncette vulnérabilité au moyen d'une adresse réticulaire spécialement\nconçue pour ensuite accéder en lecture aux fichiers présents sur le\nsystème.\n\n## Solution\n\nAppliquer la mise à jour de sécurité Webmin en passant à la version\n1.290 disponible à l'adresse :\n\n    http://www.webmin.com\n\nAppliquer la mise à jour de sécurité Usermin en passant à la version\n1.220 disponible à l'adresse :\n\n    http://www.webmin.com/index6.html\n",
+  "cves": [
+    {
+      "name": "CVE-2006-3392",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3392"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Webmin et Usermin du    29 juin 2006 :",
+      "url": "http://www.webmin.com/securty.html"
+    },
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200608-11 du 06 août 2006    :",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200608-11.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Mandriva MDKSA-2006:125 du 18 juillet    2006 :",
+      "url": "http://www.mandriva.com/security/advisories?name=MDKSA-2006:125"
+    }
+  ],
+  "reference": "CERTA-2006-AVI-337",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-08-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité découverte dans les applications Webmin et Usermin\npermet à un utilisateur mal intentionné de porter atteinte à la\nconfidentialité des données présentes sur le système.\n",
+  "title": "Vulnérabilité dans Webmin &amp; Usermin",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "BUlletin de sécurité Gentoo GLSA 200608-11 du 06 août 2006",
+      "url": null
+    }
+  ]
+}

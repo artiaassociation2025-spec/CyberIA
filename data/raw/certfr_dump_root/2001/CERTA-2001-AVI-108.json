@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Les versions du garde-barrière PIX 4.0 à 4.4(8), 5.0(3),  5.1(3), 5.2(2) et 5.3(1) sont affectées.</P>  <P>Seuls les systèmes utilisant le service d'authentification AAA  sont concernés.</P>",
+  "content": "## Description\n\nUn utilisateur mal intentionné peut réaliser un déni de service en\nenvoyant de nombreuses requêtes d'authentification et provoquer ainsi un\népuisement des ressources du garde-barrière.\n\nSelon Cisco, ce déni de service empêche les utilisateurs légitimes de\npouvoir s'authentifier et peut porter atteinte à la disponibilité du\ngarde-barrière.\n\nCette vulnérabilité n'est exploitable que si le service\nd'authentification AAA est activé (existence de lignes de configuration\ncommençant par aaa authentication).\n\n## Solution\n\nLes version 5.2(6) et 5.3(2) corrigent le problème.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Cisco \"Cisco PIX firewall  authetication denial of service vulnerability\" :",
+      "url": "http://www.cisco.com/warp/public/707/pixfirewall-authen-flood-pub.shtml"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-108",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-10-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "En exploitant une vulnérabilité dans le module d'authentification, un\nutilisateur mal intentionné peut provoquer un déni de service sur le\ngarde-barrière PIX de Cisco.\n",
+  "title": "Vulnérabilité dans le garde-barrière PIX de Cisco",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Cisco \"Cisco PIX firewall authetication denial of service vulnerability\"",
+      "url": null
+    }
+  ]
+}

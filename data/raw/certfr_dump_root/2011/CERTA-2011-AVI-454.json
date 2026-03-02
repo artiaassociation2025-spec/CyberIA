@@ -1,0 +1,83 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache Tomcat 5.5.0-5.5.33.",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat 6.0.0-6.0.32 ;",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat 7.0.0-7.0.19 ;",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités présentes dans le produit Apache Tomcat ont\nété corrigées. Ces vulnérabilités permettent la divulgation et/ou\nl'altération d'information. Il convient néanmoins de détailler les\ninformations à risque :\n\n-   contournement de la politique de sécurité permettant l'accès à des\n    fichiers protégés du super-utilisateur (root) (CVE-2011-2729,\n    CVE-2011-2526) ;\n-   divulgation du mot de passe de l'utilisateur (CVE-2011-2204) ;\n-   divulgation (et/ou modification) des fichiers web.xml, context.xml\n    et fichiers tld d'autres applications web de l'instance Apache\n    Tomcat (CVE-2011-2481).\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n\nIl est important de noter, que suivant la documentation de l'éditeur\n(http://tomcat.apache.org/security-5.html), les mises à jour ne sont pas\nencore disponibles pour les versions 5.X de Apache Tomcat. Celles-ci\nseront disponibles lors de la publication de la version 5.5.34 de Apache\nTomcat (à paraitre).\n",
+  "cves": [
+    {
+      "name": "CVE-2011-2729",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2729"
+    },
+    {
+      "name": "CVE-2011-2526",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2526"
+    },
+    {
+      "name": "CVE-2011-2481",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2481"
+    },
+    {
+      "name": "CVE-2011-2204",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2011-2204"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2011-AVI-454",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2011-08-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités présentes dans le produit <span\nclass=\"textit\">Apache Tomcat</span> ont été corrigées. Elles permettent\nla divulgation de mots de passe utilisateur, l'altération de fichiers de\nconfiguration et le contournement de la politique de sécurité.\n",
+  "title": "Vulnérabilités dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "http://tomcat.apache.org/security-7.html",
+      "url": null
+    }
+  ]
+}

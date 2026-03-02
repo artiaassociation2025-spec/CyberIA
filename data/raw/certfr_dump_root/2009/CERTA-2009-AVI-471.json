@@ -1,0 +1,79 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "IBM WebSphere Application Server 7.0.x.",
+      "product": {
+        "name": "WebSphere",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans IBM WebSphere :\n\n-   plusieurs vulnérabilités permettent de provoquer un déni de service\n    à distance sur l'APR Apache ;\n-   une erreur de traitement dans l'interface Apr_xml\\_\\* permet de\n    provoquer un déni de service ;\n-   la console d'administration permet aux utilisateurs d'effectuer des\n    actions malveillantes par le biais de requêtes HTTP non vérifiées ;\n-   une erreur de traitement dans le serveur Web embarqué permet de\n    provoquer un déni de service par le biais de requêtes HTTP\n    spécialement conçues.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2009-1891",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1891"
+    },
+    {
+      "name": "CVE-2009-0023",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-0023"
+    },
+    {
+      "name": "CVE-2009-1956",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2009-1956"
+    }
+  ],
+  "links": [
+    {
+      "title": "Référence Bulletin de sécurité IBM PK99477 du 29 octobre    2009 :",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1PK99477"
+    },
+    {
+      "title": "Référence Bulletin de sécurité IBM PK99480 du 29 octobre    2009 :",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1PK99480"
+    },
+    {
+      "title": "Référence Bulletin de sécurité IBM PK99478 du 29 octobre    2009 :",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg1PK99478"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-471",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-11-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans IBM WebSphere permettent de provoquer un\ndéni de service à distance ou d'injecter des requêtes illégitimes par\nrebond.\n",
+  "title": "Multiples vulnérabilités dans IBM WebSphere pour z/OS",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM PK99478 du 29 octobre 2009",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM PK99480 du 29 octobre 2009",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM PK99477 du 29 octobre 2009",
+      "url": null
+    }
+  ]
+}

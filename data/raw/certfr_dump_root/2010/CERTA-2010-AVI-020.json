@@ -1,0 +1,117 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "ISC Bind 9.5.2-P1 et antérieures ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC Bind 9.6.1-P2 et antérieures.",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC Bind 9.0.x ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC Bind 9.2.x ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC Bind 9.1.x ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC Bind 9.3.x ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "ISC Bind 9.4.3-P3 et antérieures ;",
+      "product": {
+        "name": "BIND",
+        "vendor": {
+          "name": "ISC",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne erreur dans ISC Bind avec DNSSEC autorise la mise en cache de\ncertaines réponses éronnées de type NXDOMAIN. Cette faille permet à un\nutilisateur distant de corrompre le cache DNS ou de provoquer un déni de\nservice du serveur vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-0097",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-0097"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Oracle (Sun) 275890 mis à jour le 28    avril 2010 :",
+      "url": "http://sunsolve.sun.com/search/document.do?assetkey=1-66-275890-1"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-020",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-01-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence au bulletin Oracle (Sun).",
+      "revision_date": "2010-04-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Une vulnérabilité dans <span class=\"textit\">ISC Bind</span> avec DNSSEC\npermet à un utilisateur distant de corrompre le cache DNS ou de\nprovoquer un déni de service.\n",
+  "title": "Vulnérabilité dans BIND DNSSEC",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité BIND CVE2010-0097 du 19 janvier 2010",
+      "url": "https://www.isc.org/advisories/CVE2010-0097"
+    }
+  ]
+}

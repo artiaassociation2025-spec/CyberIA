@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout système utilisant un noyau Linux.</P>",
+  "content": "## Description\n\nPPP est utilisé pour réaliser des connexions point à point, en\nparticulier pour établir une communication avec un fournisseur d'accès\nvia une ligne téléphonique que ce soit du RTC ou de l'ADSL.\n\nL'envoi d'un paquet volontairement mal formé à un serveur PPP (souvent\nappelé pppd) bloque le noyau dans une boucle infinie. Du code malicieux\nest publiquement disponible.\n\n## Solution\n\nMettre à jour les sources du noyau (2.4.30-rc1 ou 2.6.11.4 au moins) ou\nconsulter le bulletin de l'éditeur pour l'obtention d'un correctif (cf.\nsection Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Red Hat Enterprise Linux :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-283.html"
+    },
+    {
+      "title": "Red Hat Enterprise Linux :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-284.html"
+    },
+    {
+      "title": "Sources du noyau Linux :",
+      "url": "http://www.kernel.org"
+    },
+    {
+      "title": "Red Hat Enterprise Linux :",
+      "url": "http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=151241"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2005:018 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_018_kernel.html"
+    },
+    {
+      "title": "Gentoo Linux, utiliser un noyau postérieur au 2.6.11-r4 :",
+      "url": "http://bugs.gentoo.org/show_bug.cgi?id=82201"
+    },
+    {
+      "title": "Red Hat Enterprise Linux :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-366.html"
+    },
+    {
+      "title": "Red Hat Enterprise Linux :",
+      "url": "http://bugzilla.redhat.com/bugzilla/show_bug.cgi?id=151240"
+    }
+  ],
+  "reference": "CERTA-2005-AVI-119",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2005-03-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout des bulletins de sécurité Red Hat, SuSE et de la référence CVE.",
+      "revision_date": "2005-05-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une faille a été identifiée dans le pilote noyau du protocole PPP («\nPoint to Point Protocol ») qui permet à un client mal intentionné de\nsuspendre le fonctionnement de l'hôte.\n",
+  "title": "Vulnérabilité du noyau Linux",
+  "vendor_advisories": []
+}

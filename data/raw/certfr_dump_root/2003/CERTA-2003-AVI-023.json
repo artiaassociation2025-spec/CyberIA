@@ -1,0 +1,88 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Oracle9i Database Server Release 2 et  versions antérieures.</p>",
+  "content": "## Description\n\nOracle Database Server est le système de gestion de base de données\nd'Oracle.\n\n  \n\nQuatre vulnérabilités de type débordement de mémoire sont présentes dans\nOracle Database Server. Ces vulnérabilités sont mentionnées dans les\nbulletins de sécurité suivants publiés sur le site d'Oracle :\n\n-   Buffer Overflow in DIRECTORY parameter of Oracle9i Database server ;\n-   Buffer Overflow in TZ_OFFSET function of Oracle9i Database server ;\n-   Buffer Overflow in TO_TIMESTAMP_TZ function of Oracle9i Database\n    server ;\n-   Buffer Overflow in ORACLE.EXE binary of Oracle9i Database server.\n\nL'exploitation de ces vulnérabilités permet à un utilisateur mal\nintentionné d'exécuter du code arbitraire sur le serveur hébergeant la\nbase de données.\n\nLa dernière vulnérabilité est exploitable par un utilisateur ne\npossédant pas d'authentification sur le système vulnérable.\n\n## Solution\n\nSe référer aux bulletins de sécurité de l'éditeur (cf. section\nDocumentation) pour obtenir les correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité #NISR16022003e \"ORACLE bfilename    function buffer overflow vulnerability\" de NGSSoftware :",
+      "url": "http://www.nextgenss.com/advisories/ora-bfilebo.txt"
+    },
+    {
+      "title": "Bulletin de sécurité #NISR16022003b \"ORACLE TO_TIMESTAMP_TZ    remote system buffer overrun\" de NGSSoftware :",
+      "url": "http://www.nextgenss.com/advisories/ora-tmstmpbo.txt"
+    },
+    {
+      "title": "Bulletin de sécurité #50 \"Buffer Overflow in    TO_TIMESTAMP_TZ function of Oracle9i Database server\" :",
+      "url": "http://otn.oracle.com/deploy/security/pdf/2003alert50.pdf"
+    },
+    {
+      "title": "Bulletin de sécurité #49 \"Buffer Overflow in TZ_OFFSET    function of Oracle9i Database server\" :",
+      "url": "http://otn.oracle.com/deploy/security/pdf/2003alert49.pdf"
+    },
+    {
+      "title": "Bulletin de sécurité #NISR16022003c \"ORACLE TZ_OFFSET    remote system buffer overrun\" de NGSSoftware :",
+      "url": "http://www.nextgenss.com/advisories/ora-tzofstbo.txt"
+    },
+    {
+      "title": "Avis de sécurité CA-2003-05 \"Multiple vulnerabilities in    Oracle servers\" du CERT/CC :",
+      "url": "http://www.cert.org/advisories/CA-2003-05.html"
+    },
+    {
+      "title": "Bulletin de sécurité #51 \"Buffer Overflow in ORACLE.EXE    binary of Oracle9i Database server\" :",
+      "url": "http://otn.oracle.com/deploy/security/pdf/2003alert51.pdf"
+    },
+    {
+      "title": "Bulletin de sécurité #48 \"Buffer Overflow in DIRECTORY    parameter of Oracle9i Database server\" :",
+      "url": "http://otn.oracle.com/deploy/security/pdf/2003alert48.pdf"
+    },
+    {
+      "title": "Bulletin de sécurité #NISR16022003a \"ORACLE unauthenticated    remote system compromise\" de NGSSoftware :",
+      "url": "http://www.nextgenss.com/advisories/ora-unauthrm.txt"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-023",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-02-17T00:00:00.000000"
+    },
+    {
+      "description": "ajout condition d'exploitation de la vulnérabilité décrite dans le bulletin de sécurité #51 d'Oracle. Ajout documentation additionnelle.",
+      "revision_date": "2003-02-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Quatre vulnérabilités de type débordement de mémoire sont présentes dans\nOracle Database Server.\n",
+  "title": "Multiples vulnérabilités dans Oracle Database Server",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité #49 d'Oracle",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité #50 d'Oracle",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité #51 d'Oracle",
+      "url": null
+    },
+    {
+      "published_at": null,
+      "title": "Avis de sécurité #48 d'Oracle",
+      "url": null
+    }
+  ]
+}

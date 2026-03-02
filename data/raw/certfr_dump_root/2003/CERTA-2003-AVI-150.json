@@ -1,0 +1,50 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Pine versions 4.56 et antérieures.</p>",
+  "content": "## Description\n\nPine est un client de messagerie textuel développé par l'Université de\nWashington. Deux vulnérabilités de type débordement de mémoire sont\nprésentes dans le traitement des messages électroniques par Pine. La\npremière vulnérabilité est une mauvaise gestion du champ\nmessage/external-body de l'en-tête des messages. La seconde\nvulnérabilité est un débordement de mémoire dans la fonction\nrfc2231_get_param(). Il est ainsi possible pour un utilisateur mal\nintentionné d'exécuter du code arbitraire à distance par l'envoi d'un\nmessage électronique judicieusement composé.\n\n## Solution\n\nMettre à jour Pine en version 4.58. La nouvelle version de Pine peut\nêtre obtenue à l'adresse suivante :\n\n    http://www.washigton.edu/pine/getpine/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité RedHat RHSA-2003:273-01 :",
+      "url": "https://rhn.redhat.com/errata/RHSA-2003-273.html"
+    },
+    {
+      "title": "Avis de sécurité SuSE SuSE-SA:2003:037 :",
+      "url": "http://www.suse.de/de/security/2003_037_pine.html"
+    },
+    {
+      "title": "Avis de sécurité Slackware SSA:2003-253-01 :",
+      "url": "http://www.slackware.com/security/viewer.php?l=slackware-security&y=2003&m=slackware-security.347016"
+    },
+    {
+      "title": "Site Pine à l'Université de Washington :",
+      "url": "http://www.washington.edu/pine/"
+    }
+  ],
+  "reference": "CERTA-2003-AVI-150",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2003-09-11T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de sécurité de RedHat, SuSE et Slackware.",
+      "revision_date": "2003-09-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Deux vulnérabilités dans le client de messagerie Pine permettent à un\nutilisateur mal intentionné d'exécuter du code arbitraire à distance.\n",
+  "title": "Vulnérabilités du client de messagerie Pine",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité iDEFENSE 09.10.03",
+      "url": "http://www.idefense.com/advisory/09.10.03.txt"
+    }
+  ]
+}

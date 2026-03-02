@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Squid versions 3.5 et antérieures sans le dernier correctif de sécurité",
+      "product": {
+        "name": "Squid",
+        "vendor": {
+          "name": "Squid",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Squid versions antérieures à 4.4",
+      "product": {
+        "name": "Squid",
+        "vendor": {
+          "name": "Squid",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTFR-2018-AVI-518",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2018-10-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Squid . Elles\npermettent à un attaquant de provoquer un déni de service à distance et\nune injection de code indirecte à distance (XSS).\n",
+  "title": "Multiples vulnérabilités dans Squid",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Squid SQUID-2018_5 du 28 octobre 2018",
+      "url": "http://www.squid-cache.org/Advisories/SQUID-2018_5.txt"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Squid SQUID-2018_4 du 28 octobre 2018",
+      "url": "http://www.squid-cache.org/Advisories/SQUID-2018_4.txt"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Internet Explorer 7 sous Windows XP, Windows Server 2003 et Windows Vista.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 6 sous Windows XP et Windows Server 2003 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Internet Explorer 5.01 et Internet Explorer 6 Service Pack 1 sous Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans le navigateur\nMicrosoft Internet Explorer. Parmi celles-ci :\n\n-   le navigateur ne crée pas correctement les instances de certains\n    objets COM (Component Object Model) pour les utiliser comme\n    contrôles ActiveX. Cette vulnérabilité, exploitée par le biais d'une\n    page Web spécialement construite, permet à la personne malveillante\n    de lancer des commandes arbitraires sur le système, avec les mêmes\n    droits que l'utilisateur connecté. Internet Explorer 7 n'est\n    cependant pas affecté par cette vulnérabilité ;\n-   le navigateur ne manipule pas correctement certaines balises de\n    style CSS (Cascading Style Sheets). Une page spécialement construite\n    pourrait donc corrompre la mémoire du système, et permettre\n    l'exécution de code ;\n-   le navigateur ne gère pas correctement l'installation de plusieurs\n    paquets linguistiques, pouvant entraîner une situation de\n    compétition (race condition). Cette dernière permettrait à une\n    personne malveillante d'exécuter du code arbitraire sur le système ;\n-   le navigateur chercherait à accéder à un objet qui n'a pas été\n    initialisé, ou qui a été préalablement supprimé. Ce problème peut\n    être exploité par une personne malveillante pour, comme les\n    précédentes vulnérabilités, exécuter du code arbitraire sur le\n    système vulnérable ;\n-   le navigateur ne gère pas correctement les modifications de la page\n    d'annulation (cancel page). Une personne malveillante pourrait donc\n    tromper l'utilisateur en lui présentant une autre page spécialement\n    construite ;\n-   le navigateur ne manipule pas correctement certains objets ActiveX\n    liés à Microsoft Speech, un moyen d'interagir avec la machine pour\n    les applications vocales.\n\n## Solution\n\nSe référer au bulletin de sécurité MS07-033 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0218",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0218"
+    },
+    {
+      "name": "CVE-2007-1750",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1750"
+    },
+    {
+      "name": "CVE-2007-1499",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1499"
+    },
+    {
+      "name": "CVE-2007-2222",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-2222"
+    },
+    {
+      "name": "CVE-2007-1751",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1751"
+    },
+    {
+      "name": "CVE-2007-3027",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3027"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-263",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-06-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans le navigateur\nMicrosoft Internet Explorer. L'exploitation de l'une d'elles permettrait\nà une personne malveillante de tromper l'utilisateur, voire d'exécuter\ndes commandes arbitraires sur son système vulnérable.\n",
+  "title": "Multiples vulnérabilités dans Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-033 du 12 juin 2007",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-033.mspx"
+    }
+  ]
+}

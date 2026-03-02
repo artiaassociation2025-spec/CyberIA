@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "OpenSSL versions 0.9.8c et antérieures.",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "OpenSSL versions 0.9.7k et antérieures ;",
+      "product": {
+        "name": "OpenSSL",
+        "vendor": {
+          "name": "OpenSSL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nTrois vulnérabilités sont présentes dans OpenSSL :\n\n-   La première vulnérabilité concerne la mise en œuvre du format ASN.1.\n    Elle permet à un utilisateur distant mal intentionné de provoquer un\n    déni de service de l'application utilisant des fonctions de la\n    bibliothèque ASN.1 du OpenSSL vulnérable ;\n-   La seconde vulnérabilité concerne la fonction\n    SSL_get_shared_ciphers(). Elle permet de réaliser un débordement de\n    tampon et potentiellement d'exécuter du code arbitraire ;\n-   La dernière vulnérabilité concerne la mise en œuvre du protocole\n    SSLv2 par le client SSL. Elle permet de réaliser un déni de service\n    contre le client utilisant la bibliothèque de fonctions OpenSSL\n    vulnérable par le biais d'un serveur OpenSSL particulier.\n\n## Solution\n\nLes versions 0.9.7l et 0.9.8d corrigent le problème :\n\n    http://www.openssl.org/source/\n",
+  "cves": [
+    {
+      "name": "CVE-2006-2940",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2940"
+    },
+    {
+      "name": "CVE-2006-4343",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-4343"
+    },
+    {
+      "name": "CVE-2006-3738",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-3738"
+    },
+    {
+      "name": "CVE-2006-2937",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2006-2937"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2006-AVI-421",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2006-10-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans OpenSSL permettent à un utilisateur\ndistant de provoquer un déni de service.\n",
+  "title": "Multiples Vulnérabilités dans OpenSSL",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité OpenSSL du 28 septembre 2006",
+      "url": "http://www.openssl.org/news/secadv_20060928.txt"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Versions 4.1 et antérieures.  <P>Xloadimage est une application X11 tournant sur de nombreuses  plateformes Unix.</P></p>",
+  "content": "## Description\n\nUne vulnérabilité dans une des routines de chargement d'images peut\nentrainer sous certaines conditions l'éxecution d'un code arbitraire\ncontenu dans cette image.\n\nXloadimage est aussi utilisé par Netscape Navigator sur les plateformes\nLinux pour visualiser des images au format Tiff et SUN Raster. Un\nutilisateur mal intentionné peut mettre à disposition sur un site Web\ndes images contenant du code arbitraire qui sera exécuté avec les\nprivilèges de l'utilisateur.\n\n## Contournement provisoire\n\nParamétrer Netscape Navigator pour empêcher l'utilisation de xloadimage:\nse référer au fichier de configuration /etc/pluggerrc de Netscape\nNavigator.\n\n## Solution\n\nUn correctif est disponible sur le site de RedHat :\n\n-   ftp://updates.redhat.com/7.0/en/os/SRPMS/xloadimage-4.1-20.src.rpm\n\nPour les autres distributions, consulter l'éditeur pour les\nmises-à-jour.\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2001-AVI-077",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-07-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance (utilisation avec netscape navigator)"
+    },
+    {
+      "description": "Exécution de code arbitraire en local"
+    }
+  ],
+  "summary": "Xloadimage est un outil permettant de visualiser des images de\ndifférents formats ( GIF, TIFF, JPEG...).\n\nUne vulnérabilité de type débordement de mémoire dans la commande\nxloadimage permet l'exécution de code arbitraire avec les privilèges de\nl'utilisateur. Si xloadimage est utilisé avec Netscape, l'exploitation\nde cette vulnérabilité peut se faire à distance.\n",
+  "title": "Vulnérabilité dans xloadimage",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité RHSA-2001:088-04 de RedHat",
+      "url": null
+    }
+  ]
+}

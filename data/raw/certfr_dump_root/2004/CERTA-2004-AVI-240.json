@@ -1,0 +1,109 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2000 Professional ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Home Edition ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP Professional ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Advanced Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Internet Explorer 6.0 Service Pack 1 installé sur Windows NT 4.0 SP6a.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Datacenter Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn débordement de pile est présent dans la verification du nom de\nl'application à exécuter dans le gestionnaire de tâches (task scheduler\nMstask.dll). Un utilisateur mal intentionné peut, via l'utilisation d'un\nemail, d'un fichier ayant l'extension .JOB ou d'un site Internet\nmalicieusement construit, réaliser un déni de service ou exécuter du\ncode arbitraire sur la plate-forme vulnérable.\n\nLa vulnérabilité n'est exploitable que si la victime est administrateur\ndu système.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité de l'US-CERT VU#228028 du 13 juillet    2004 :",
+      "url": "http://www.kb.cert.org/vuls/id/228028"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-240",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-07-15T00:00:00.000000"
+    },
+    {
+      "description": "correction des systèmes affectés et ajout du risque.",
+      "revision_date": "2004-07-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Microsoft Windows Task Scheduler permet à un\nutilisateur mal intentionné de réaliser un déni de service ou d'exécuter\ndu code arbitraire à distance.\n",
+  "title": "Vulnérabilité dans Microsoft Windows Task Scheduler",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS04-022",
+      "url": "http://www.microsoft.com/technet/security/bulletin/ms04-022.mspx"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Samba versions 3.0.29 à 3.2.4.</p>",
+  "content": "## Description\n\nUne erreur est présente dans le serveur de fichiers Samba. Elle est\nrelative au traitement des requêtes de type trans, trans2 et nttrans.\nCette vulnérabilité peut être exploitée par un utilisateur\nmalintentionné distant pour accéder à certaines zones mémoire\nnormalement non-accessibles du service smbd via des paquets\nparticuliers.\n\n## Solution\n\nLes versions 3.0.33 et 3.2.5 corrigent le problème :\n\n    http://us1.samba.org/samba/security/\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2008-4313",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4313"
+    },
+    {
+      "name": "CVE-2008-4314",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2008-4314"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2008-AVI-572",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-12-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Samba permet à un utilisateur distant\nmalintentionné de porter atteinte à la confidentialité de certaines\ndonnées.\n",
+  "title": "Vulnérabilité de Samba",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Samba du 27 novembre 2008",
+      "url": "http://us1.samba.org/samba/security/CVE-2008-4313.html"
+    }
+  ]
+}

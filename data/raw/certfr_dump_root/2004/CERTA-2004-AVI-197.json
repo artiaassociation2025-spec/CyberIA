@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Toutes les versions de  <TT>subversion</TT> antérieures à la version 1.0.5.</p>",
+  "content": "## Description\n\nsubversion est un système client/serveur utilisé pour la gestion des\nversions de fichiers essentiellement textuels.  \nLe service svnserve permet un accès aux fichiers gérés par subversion en\nutilisant une URI (Uniform Resource Identifier) du type svn://,\nsvn+ssh:// ou svn+\\*:// (tunnels).  \nUne mauvaise gestion de la longueur de l'URI envoyée par le client\npermet à un utilisateur mal intentionné de créer un déni de service ou\nd'exécuter du code arbitraire à distance avec les privilèges du service\nsvnserve.\n\n## Solution\n\nSe référer à la section Documentation pour l'obtention des correctifs.  \nLa version 1.0.5 de subversion corrige cette vulnérabilité.  \nLa dernière version de subversion est téléchargeable à l'adresse :\n\n    http://subversion.tigris.org/project_packages.html\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité subversion :",
+      "url": "http://subversion.tigris.org/security/CAN-2004-0413-advisory.txt"
+    },
+    {
+      "title": "Site Internet de subversion :",
+      "url": "http://subversion.tigris.org"
+    },
+    {
+      "title": "Avis de sécurité Suse SUSE-SA:2004:018 du 17 juin 2004 :",
+      "url": "http://www.suse.com/de/security/2004_18_subversion.html"
+    },
+    {
+      "title": "Mise à jour du paquetage NetBSD subversion :",
+      "url": "ftp://ftp.netbsd.org/pub/NetBSD/packages/pkgsrc/devel/subversion/README.html"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-197",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-06-14T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence à l'avis de sécurité de Suse.",
+      "revision_date": "2004-06-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans subversion permet à un utilisateur mal\nintentionné de créer un déni de service ou d'exécuter du code arbitraire\nà distance.\n",
+  "title": "Vulnérabilité de subversion",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Gentoo GLSA-200406-07",
+      "url": "http://www.gentoo.org/security/en/glsa/glsa-200406-07.xml"
+    }
+  ]
+}

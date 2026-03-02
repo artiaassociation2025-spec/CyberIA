@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2000 Datacenter.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Advanced Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Server ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUn service employé par les contrôleurs de domaine de Windows 2000\ncontient une vulnérabilité au niveau de la gestion de la mémoire. Un\nutilisateur distant lançant toute une série de requêtes malformées sur\nles ports Kerberos peut entraîner une saturation de la mémoire. Dans ce\ncas le contrôleur de domaine ne peut plus assurer de nouvelles\nauthentifications réseau (restriction aux authentifications locales) ou\ndes requêtes au niveau de l'Active Directory.\n\n## Contournement provisoire\n\nLe fait de bloquer les ports Kerberos 88 et 464 au niveau du garde\nbarrière permet d'empêcher la réalisation de cet exploit depuis\ninternet, le risque se limitant à une attaque interne.\n\n## Solution\n\nTélécharger les correctifs sur le site Microsoft :\n\n-   Microsoft Windows 2000 Server et Advanced Server :\n\n        http://www.microsoft.com/Downloads/Release.asp?ReleaseID=29537\n\n-   Concernant Microsoft Windows 2000 Datacenter Server, Microsoft\n    préconise de prendre contact avec le fournisseur du serveur afin de\n    connaître les solutions à apporter.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-024.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-049",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-05-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Un utilisateur distant mal intentionné peut, par le biais de requêtes\njudicieusement composées, saturer un contrôleur de domaine Windows 2000.\n",
+  "title": "Déni de service sur le contrôleur de domaine Windows 2000",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft MS01-024",
+      "url": null
+    }
+  ]
+}

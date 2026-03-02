@@ -1,0 +1,65 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache versions 2.0.x jusqu'à la version 2.0.36 incluse.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache versions 1.3.x jusqu'à la version 1.3.24 incluse ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nAvec le protocole HTTP 1.1, il est possible d'utiliser l'algorithme\nchunk lorsque la taille des données à envoyer au serveur n'est pas\nconnue à l'avance.\n\nUne vulnérabilité présente dans la routine de traitement des requêtes\nutilisant cet algorithme peut provoquer l'arrêt du processus fils\ntraitant cette requête.  \n\nDans les versions 2.0.x du serveur Apache, cette vulnérabilité ne peut\npas être exploitée pour exécuter du code sur le serveur, mais peut\nprovoquer un déni de service par l'arrêt et le redémarrage de nombreux\nprocessus.\n\nLes plates-formes Windows et Netware sont plus sensibles que les autres\nà ce phénomène.  \n\nDans les versions 1.3.x du serveur, il est en revanche possible de\nprovoquer, par cette vulnérabilité, un débordement de pile et d'exécuter\ndu code arbitraire.\n\n## Solution\n\nLes versions 1.3.26 et 2.0.39 corrigent la vulnérabilité.\n\nConsulter votre éditeur pour obtenir une mise à jour ou télécharger un\ncorrectif sur le site Apache Software Foundation (cf. Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2002-AVI-130",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-06-18T00:00:00.000000"
+    },
+    {
+      "description": "première révision : ajout de précisions sur la vulnérabilité et de l'avis SGI.",
+      "revision_date": "2002-06-19T00:00:00.000000"
+    },
+    {
+      "description": "deuxième révision : ajout des avis RedHat, SuSE et Debian.",
+      "revision_date": "2002-06-20T00:00:00.000000"
+    },
+    {
+      "description": "troisième révision : ajout de l'avis Hewlett Packard.",
+      "revision_date": "2002-07-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Déni de service"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le traitement de certaines requêtes sur Apache\npermet à un utilisateur mal intentionné d'effectuer un déni de service\nou d'exécuter du code arbitraire.\n",
+  "title": "Vulnérabilité sur Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis CA-2002-17 du Cert-CC",
+      "url": "http://www.cert.org/advisories/CA-2002-17.html"
+    }
+  ]
+}

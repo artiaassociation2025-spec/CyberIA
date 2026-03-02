@@ -1,0 +1,32 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Noyau Linux versions 2.6.x.</p>",
+  "content": "## Description\n\nUne erreur dans une fonction de contrôle de pilote de son intégré au\nnoyau Linux peut conduire à un débordement d'entier. L'exploitation\nréussie de cette vulnérabilité permet à un utilisateur malveillant,\ndisposant des droits d'accès aux périphériques /dev/snd/controlC\\*,\nd'entraîner l'arrêt inopiné du système, ou une élévation des privilèges\nde cet utilisateur.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2010-AVI-460",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-09-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une vulnérabilité dans le noyau <span class=\"textit\">Linux</span> permet\nà un attaquant de réaliser un déni de service et d'élever ses\nprivilèges.\n",
+  "title": "Vulnérabilité dans le noyau Linux",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Mise à jour des sources du noyau",
+      "url": "http://git.kernel.org/?p=linux/kernel/git/tiwai/sound-2.6.git;a=commitdiff;h=5591bf07225523600450edd9e6ad258bb877b779"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Tout système possédant KDE en version  2.2.2, 3.0 à 3.0.3 est vulnérable.</p>",
+  "content": "## Description\n\nLe code javascript peut s'exécuter, sans le contrôle de Konqueror, dans\nles sous-cadres de pages (sub-frames) et donc permet une attaque de type\n« Cross Site Scripting ».\n\n## Contournement provisoire\n\nDésactiver l'emploi des javascripts.\n\n## Solution\n\nAppliquer le correctif disponible en téléchargement sur le site de KDE\n(consulter la section documentation) ou installer la version 3.0.3a de\nkdelibs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité #20020908-2 de KDE :",
+      "url": "http://www.kde.org/info/security/advisory-20020908-2.txt"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-207",
+  "revisions": [
+    {
+      "description": "version initiale ;",
+      "revision_date": "2002-09-13T00:00:00.000000"
+    },
+    {
+      "description": "ajout de l'avis debian.",
+      "revision_date": "2002-09-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Divulgation de données"
+    }
+  ],
+  "summary": "Les protections de konqueror contre l'exécution du javascript pour\ncertains domaines ne fonctionnent pas dans les sous-cadres de pages\n(sub-frames).\n",
+  "title": "Contournement des règles de sécurité dans Konqueror",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis #20020908-2 de KDE",
+      "url": null
+    }
+  ]
+}

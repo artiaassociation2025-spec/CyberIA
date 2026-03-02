@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows Server 2003, Service Pack 1 et Service Pack 2 (y compris pour les systèmes basés sur Itanium et les éditions x64).",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000 Service Pack 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité a été identifiée dans le service serveur de résolution\nde noms DNS de Microsoft Windows. L'interface de gestion RPC (pour\nRemote Procedure Call) du service serveur DNS ne manipulerait pas\ncorrectement certains paquets, pouvant provoquer un débordement de\ntampon.\n\nCette vulnérabilité est actuellement exploitée par plusieurs codes\nmalveillants, et a fait l'objet de l'alerte CERTA-2007-ALE-010 le 16\navril 2007.\n\n## Solution\n\nSe référer au bulletin de sécurité MS07-029 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-1748",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-1748"
+    }
+  ],
+  "links": [
+    {
+      "title": "Alerte CERTA-2007-ALE-010 du 16 avril 2007 :",
+      "url": "http://www.certa.ssi.gouv.fr/site/CERTA-2007-ALE-010/"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-209",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-05-09T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été identifiée dans le service serveur de résolution\nde noms DNS de Microsoft Windows. Celle-ci est exploitable à distance\npar le réseau, et permet de prendre le contrôle de la machine\nvulnérable.\n",
+  "title": "Vulnérabilité de l'interface Microsoft DNS RPC",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-029 du 08 mai 2007",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-029.mspx"
+    }
+  ]
+}

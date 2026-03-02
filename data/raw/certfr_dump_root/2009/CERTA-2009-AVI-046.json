@@ -1,0 +1,38 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<p>Bugzilla 3.x et 2.x.</p>",
+  "content": "## Description\n\nPlusieurs vulnérabilités sont présentes dans l'outil de gestion des\nbogues Bugzilla :\n\n-   un manque de validation dans la gestion des pièces jointes permet à\n    un utilisateur malveillant de fabriquer des requêtes illégitimes par\n    rebond (CRSF ou cross-site request forgery) ;\n-   un manque de validation dans la gestion des pièces jointes permet\n    également à un utilisateur malveillant de réaliser de l'injection de\n    code indirecte (XSS ou cross-site scripting) ;\n-   quand le module mod_perl est utilisé, les chaînes de caractères ne\n    sont pas suffisament aléatoires, ce qui permet de fabriquer des\n    requêtes illégitimes par rebond et la visualisation de pièces\n    jointes non publiques.\n\n## Solution\n\nLes versions 2.22.7, 3.0.8, 3.2.2 et 3.3.3 corrigent ces vulnérabilités.\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité du projet Bugzilla du 03 février 2009    :",
+      "url": "http://www.bugzilla.org/security/3.0.7/"
+    },
+    {
+      "title": "Bulletin de sécurité du projet Bugzilla du 02 février 2009    :",
+      "url": "http://www.bugzilla.org/security/2.22.6/"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-046",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-02-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent Bugzilla. Elles permettent des\ninjections de code indirectes et des requêtes illégitimes par rebond.\n",
+  "title": "Vulnérabilités de Bugzilla",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité du projet Bugzilla des 02 et 03 février 2009",
+      "url": null
+    }
+  ]
+}

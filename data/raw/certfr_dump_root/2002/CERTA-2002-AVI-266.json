@@ -1,0 +1,49 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 2000 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows XP.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nSMB (Service Message Block), initialement conçu comme un protocole de\npartage de fichiers, est aujourd'hui principalement utilisé pour\npropager des informations sur la gestion des groupes d'utilisateurs\ndepuis les contrôleurs de domaine vers les systèmes nouvellement\nconnectés.\n\nSMB peut être configuré de sorte que ces informations soient\nauthentifiées par le contrôleur de domaine. En intervenant au moment de\nla négociation de la session SMB, un utilisateur mal intentionné peut\nfaire en sorte que les données de cette session ne soient pas\nauthentifiées.\n\n## Solution\n\nConsulter le bulletin de sécurité MS02-070 de Microsoft (voir paragraphe\ndocumentation) pour connaître la disponibilté des correctifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité MS02-070 de Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS02-070.asp"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-266",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Modification de la politique de groupe"
+    }
+  ],
+  "summary": "Une vulnérabilité dans SMB (Service Message Block) de Microsoft permet à\nun utilisateur local mal intentionné de désactiver l'authentification\nlors de la négociation d'une session SMB, et de modifier les\ninformations échangées.\n",
+  "title": "Vulnérabilité dans SMB (Service Message Block) de Microsoft",
+  "vendor_advisories": []
+}

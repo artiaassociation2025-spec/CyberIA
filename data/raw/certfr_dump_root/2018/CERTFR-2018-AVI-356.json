@@ -1,0 +1,87 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Apache Tomcat versions 7.0.x antérieures à 7.0.90",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat versions 8.5.x antérieures à 8.5.32",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat versions 8.0.x antérieures à 8.0.52",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Apache Tomcat versions 9.0.x antérieures à 9.0.10",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2018-1336",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2018-1336"
+    },
+    {
+      "name": "CVE-2018-8037",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2018-8037"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2018-AVI-356",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2018-07-24T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Apache Tomcat.\nElles permettent à un attaquant de provoquer un déni de service à\ndistance et une atteinte à la confidentialité des données.\n",
+  "title": "Multiples vulnérabilités dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache CVE-2018-1336 du 22 juillet 2018",
+      "url": "http://mail-archives.us.apache.org/mod_mbox/www-announce/201807.mbox/%3C20180722090435.GA60759%40minotaur.apache.org%3E"
+    },
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Apache CVE-2018-8037 du 22 juillet 2018",
+      "url": "http://mail-archives.us.apache.org/mod_mbox/www-announce/201807.mbox/%3C20180722090623.GA92700%40minotaur.apache.org%3E"
+    }
+  ]
+}

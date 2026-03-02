@@ -1,0 +1,37 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<P>Tout serveur web Apache (quel que soit le système  d'exploitation) possédant la configuration suivante :</P>  <UL>    <LI><SPAN class=\"textit\">Apache</SPAN> versions 1.3.x,</LI>    <LI>module <SPAN class=\"textit\">Apache</SPAN> <SPAN class=\n    \"textit\">mod_jk</SPAN> version 1.2 dialoguant avec le serveur    web Java <SPAN class=\"textit\">Tomcat</SPAN> en version    4.x.</LI>  </UL>",
+  "content": "## Description\n\nLe module mod_jk n'interprète pas correctement la fonctionnalité\n«chunk-encoding» du protocole HTTP/1.1. Cette spécification est employée\nlorsque la taille des données envoyées au serveur n'est pas connue a\npriori.\n\nCela induit une dé-synchronisation entre les requêtes envoyées par le\nmodule et les réponses du serveur Tomcat. Des clients du serveur Apache\npeuvent ainsi recevoir les réponses destinées à d'autres. Par ailleurs,\nle module peut aller jusqu'à saturer ses mémoires tampons et ne plus\noffrir aucun service.\n\n## Solution\n\nMettre à jour le module mod_jk avec une version au moins égale à 1.2.1 :\n\n    http://jakarta.apache.org/builds/jakarta-tomcat-connectors/jk/release/v1.2.1/\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité Qualys :",
+      "url": "http://archives.neohapsis.com/archives/bugtraq/2002-12/0045.html"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-269",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-12-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Divulgations d'informations"
+    }
+  ],
+  "summary": "<span class=\"textit\">Tomcat</span> est un serveur web Java, développé\npar la fondation Apache, et permettant d'implémenter les technologies\n<span class=\"textit\">Servlet</span> (appliquettes Java exécutées sur le\nserveur) et <span class=\"textit\">JavaServer Pages</span>.\n\n<span class=\"textit\">mod_jk</span> est un module pour le serveur <span\nclass=\"textit\">Apache</span> permettant à ce dernier de transmettre de\nfaçon transparente au moteur <span class=\"textit\">Tomcat</span> les\nrequêtes correspondant aux technologies précitées.\n\nUne mauvaise gestion du protocole de communication par ce module permet\nà un utilisateur mal intentionné de réaliser un déni de service.\n",
+  "title": "Vulnérabilité du module mod_jk du serveur web Apache",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis de sécurité Qualys QSA-2002-12-04",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Windows xeniface sans le correctif de sécurité xsa468/xeniface-0x.patch",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows xencons sans le correctif de sécurité xsa468/xencons-0x.patch ",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "XenServer VM Tools versions antérieures à 9.4.1 pour Windows",
+      "product": {
+        "name": "XenServer",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Windows xenbus sans le correctif de sécurité xsa468/xenbus-01.patch",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-27464",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-27464"
+    },
+    {
+      "name": "CVE-2025-27463",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-27463"
+    },
+    {
+      "name": "CVE-2025-27462",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-27462"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2025-AVI-0456",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2025-05-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Citrix et Xen. Elles permettent à un attaquant de provoquer une élévation de privilèges.",
+  "title": "Multiples vulnérabilités dans Citrix et Xen",
+  "vendor_advisories": [
+    {
+      "published_at": "2025-05-27",
+      "title": "Bulletin de sécurité Xen xsa/advisory-468",
+      "url": "https://xenbits.xen.org/xsa/advisory-468.html"
+    },
+    {
+      "published_at": "2025-05-27",
+      "title": "Bulletin de sécurité Citrix CTX692748",
+      "url": "https://support.citrix.com/s/article/CTX692748-xenserver-and-citrix-hypervisor-security-update-for-cve202527462-cve202527463-cve202527464"
+    }
+  ]
+}

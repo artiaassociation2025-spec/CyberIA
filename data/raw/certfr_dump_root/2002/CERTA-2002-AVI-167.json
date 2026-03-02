@@ -1,0 +1,34 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Toutes les versions de FreeBSD antérieures à la version    <TT>4.6-RELEASE</TT> (incluse).      <P>La version <TT>4.6-STABLE</TT> (avant la correction du 30      juillet 2002) est également vulnérable.</P>    </LI>    <LI>Toutes les versions de OpenBSD antérieures à la version    <TT>3.1</TT> (incluse).</LI>  </UL>",
+  "content": "## Description\n\nPar convention, sur les systèmes POSIX, les descripteurs de fichier 0, 1\net 2 correspondent respectivement à l'entrée standard, la sortie\nstandard et l'erreur standard.\n\nLes descripteurs de fichier sont alloués séquentiellement, en partant du\nnuméro de descripteur non attribué le plus bas. Si un programme set-uid\nou set-gid était lancé avec certains descripteurs d'entrée/sortie fermés\n(descripteurs 0, 1 et 2), ce programme pourrait ouvrir un fichier et\nl'associer par erreur à l'entrée standard, la sortie standard ou\nl'erreur standard. Le programme pourrait ainsi lire des données d'un\nfichier, ou écrire dans celui-ci par erreur.\n\nL'exploitation de cette vulnérabilité permet, dans certains cas, à un\nutilisateur local mal intentionné d'obtenir les privilèges root.\n\n## Solution\n\nMettre à jour le noyau. Se référer aux avis de sécurité du distributeur.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Avis de sécurité FreeBSD-SA-02:23.stdio :",
+      "url": "ftp://ftp.FreeBSD.org/pub/FreeBSD/CERT/advisories/FreeBSD-SA-02:23.asc"
+    }
+  ],
+  "reference": "CERTA-2002-AVI-167",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2002-08-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Une mauvaise gestion des descripteurs de fichier sous FreeBSD permet à\nun utilisateur mal intentionné d'élever ses privilèges.\n",
+  "title": "Problème de gestion des descripteurs de fichier sous BSD",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Avis FreeBSD-SA-02:23.stdio",
+      "url": null
+    }
+  ]
+}

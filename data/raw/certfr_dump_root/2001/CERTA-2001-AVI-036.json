@@ -1,0 +1,88 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Microsoft Windows 98 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows Me ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows NT 4 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 95 ;",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Microsoft Windows 2000.",
+      "product": {
+        "name": "Windows",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nLes 29 et 30 janvier 2001, VeriSign a validé deux certificats à une\npersonne se faisant passer pour un employé Microsoft. Le nom assigné à\nces deux certificats est « Microsoft Corporation ».\n\nCes certificats peuvent être employés pour signer des programmes\nexécutables, des contrôles active X ou des macros. Ces programmes signés\npar les faux certificats peuvent être transmis par mél, téléchargés sur\ndes pages HTML ou mis sur n'importe quel support (CD, disquette,\netc...).\n\nCes faux certificats sont inscris dans la liste de révocation de\nVeriSign (CRL). Cependant, aucun point de distribution de cette liste\nn'étant accessible pour les certificats, il est impossible de consulter\nautomatiquement, lors de l'installation, ces révocations.\n\nCet incident démontre à nouveau que la sécurité du certificat ne repose\npas uniquement sur la solidité des algorithmes. La procédure appliquée\npar l'autorité de certification est essentielle. (Dans le cas présent\nVeriSign n'a pas correctement contrôlé l'identité du demandeur à\npriori.)\n\n## Contournement provisoire\n\nAvant la mise en place d'un programme ou l'exécution d'un contrôle\nActive X, vérifier les dates de délivrance des certificats dans la\nfenêtre d'avertissement. Officiellement aucun certificat n'a été délivré\npour Micorsoft en date du 29 ou 30 janvier 2001.\n\nUn correctif Microsoft prenant en compte la vérification de ces faux\ncertificats devrait être prochainement disponible.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin Microsoft :",
+      "url": "http://www.microsoft.com/technet/security/bulletin/MS01-017.asp"
+    }
+  ],
+  "reference": "CERTA-2001-AVI-036",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2001-03-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Usurpation d'identité"
+    },
+    {
+      "description": "Coutournement des règles de sécurité"
+    }
+  ],
+  "summary": "Suite à la délivrance par VeriSign de deux certificats au nom de\nMicrosoft Corporation à un faux employé Microsoft, un utilisateur\npourrait installer un programme ou exécuter un active X d'origine\ninconnue mais portant cependant la signature Microsoft.\n",
+  "title": "Certificats erronés délivrés par VeriSign",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin Microsoft (MS01-017)",
+      "url": null
+    }
+  ]
+}

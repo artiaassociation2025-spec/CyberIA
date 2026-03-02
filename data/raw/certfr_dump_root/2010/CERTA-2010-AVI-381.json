@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Cisco ACE 4710 Application Control Engine.",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Cisco ACE Application Control Engine Module ;",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Cisco",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPlusieurs vulnérabilités dans les produits Cisco ACE permettent à un\nutilisateur malintentionné de réaliser un déni de service à distance :\n\n-   (CVE-2010-2822) le traitement de l'inspection des flux RTSP en\n    transit par les modules et les boîtiers ACE présente une erreur.\n    Cette inspection des flux RTSP n'est pas activée par défaut ;\n-   (CVE-2010-2823) les boîtiers Cisco ACE 4710 présentent un défaut\n    lors de l'inspection en profondeur des flux HTTP en transit. Cette\n    vulnérabilité est présente dès lors que l'inspection des flux HTTP,\n    RTSP ou SIP est activée. L'inspection des flux HTTP, RTSP et SIP\n    n'est pas activée par défaut ;\n-   (CVE-2010-2824) le module Cisco ACE peut cesser de fonctionner quand\n    certains paquets SSL spécialement conçus lui sont adressés ;\n-   (CVE-2010-2825) des paquets SIP en transit spécialement conçus\n    peuvent provoquer un arrêt de fonctionnement des modules et des\n    boîtiers Cisco ACE quand l'inspection de ce flux est activée.\n    L'inspection des flux SIP n'est pas activée par défaut.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-2823",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2823"
+    },
+    {
+      "name": "CVE-2010-2822",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2822"
+    },
+    {
+      "name": "CVE-2010-2825",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2825"
+    },
+    {
+      "name": "CVE-2010-2824",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-2824"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2010-AVI-381",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-08-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans les produits Cisco ACE permettent à un\nutilisateur malintentionné de réaliser un déni de service à distance.\n",
+  "title": "Vulnérabilités dans Cisco ACE",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Cisco 20100811-ace du 11 août 2010",
+      "url": "http://www.cisco.com/warp/public/707/cisco-sa-20100811-ace.shtml"
+    }
+  ]
+}

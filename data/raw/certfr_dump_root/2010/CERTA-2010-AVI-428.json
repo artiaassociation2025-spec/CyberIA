@@ -1,0 +1,53 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "AIX 6.1, AIX 5.3 et versions antérieures, VIOS versions 1.5 et 2.1 pour l'élévation de privilèges.",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "AIX 5.3 pour le contournement de la politique de sécurité ;",
+      "product": {
+        "name": "AIX",
+        "vendor": {
+          "name": "IBM",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDeux vulnérabilités touchent ces produits IBM :\n\n-   un débordement de tampon dans le programme /usr/esa/sbin/sa_snap\n    permet à un attaquant d'élever ses privilèges ;\n-   un attaquant peut contourner la politique de sécurité et supprimer\n    des fichiers sensibles via une erreur non spécifiée par l'éditeur.\n\nCes deux vulnérabilités, pour être exploitables, requièrent que\nl'attaquant possède les privilèges « system group user ».\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2010-AVI-428",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-09-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "Un utilisateur authentifié malveillant peut exploiter plusieurs\nvulnérabilités dans <span class=\"textit\">IBM AIX</span> pour élever ses\nprivilèges et supprimer des informations auxquelles il ne devrait pas\navoir accès.\n",
+  "title": "Vulnérabilités dans IBM AIX",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité IBM du 13 septembre 2010",
+      "url": "http://aix.software.ibm.com/aix/efixes/security/sa_snap_advisory.asc"
+    }
+  ]
+}

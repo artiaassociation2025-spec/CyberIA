@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Wireshark versions 1.2.7 et antérieures.",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Wireshark versions 1.0.12 et antérieures ;",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nUne vulnérabilité relative à l'analyseur de protocole DOCSIS (Data Over\nCable Service Interface Specifications) est présente dans Wireshark.\nElle permet à un utilisateur distant de provoquer un déni de service de\nl'application vulnérable.\n\n## Solution\n\nLes versions 1.0.13 et 1.2.8 corrigent le problème :\n\n    http://www.wireshark.org/download.html\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2010-1455",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2010-1455"
+    }
+  ],
+  "links": [
+    {
+      "title": "Site de Wireshark :",
+      "url": "http://www.wireshark.org"
+    }
+  ],
+  "reference": "CERTA-2010-AVI-200",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2010-05-06T00:00:00.000000"
+    },
+    {
+      "description": "ajout de la référence CVE.",
+      "revision_date": "2010-06-11T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité dans Wireshark permet à un utilisateur distant de\nprovoquer un déni de service.\n",
+  "title": "Vulnérabilité dans Wireshark",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletins de sécurité Wireshark du 05 mai 2010",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2010-04.html"
+    }
+  ]
+}

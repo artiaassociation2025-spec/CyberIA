@@ -1,0 +1,69 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Wireshark, pour les versions antérieures à 0.99.5.",
+      "product": {
+        "name": "Wireshark",
+        "vendor": {
+          "name": "Wireshark",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nEthereal est un logiciel de capture et d'analyse de trafic réseau. Le\nprojet Ethereal a été interrompu au cours de l'année 2006, et son\ndéveloppement se poursuit actuellement sous le nom de Wireshark.\n\nDe multiples vulnérabilités ont été identifiées dans ce dernier. Parmi\ncelles-ci, certaines concernent :\n\n-   le module d'analyse du protocole TCP : l'analyse de paquets\n    fragmentés HTTP ne serait pas correctement effectuée, du à un\n    problème de mise en œuvre dans le fichier packet-tcp.c ;\n-   le module d'analyse du protocole HTTP : cette vulnérabilité n'est\n    pas documentée ;\n-   le module d'analyse protocolaire 802.11, pour les trames Wi-Fi ;\n-   le module d'analyse du protocole LLT (Low Latency Transport),\n    utilisé pour les communications entre serveurs utilisant le logiciel\n    VCS (pour Veritas Cluster Server).\n\nUne personne malveillante pourrait construire un paquet exploitant l'une\nde ces vulnérabilités, afin de perturber le service Wireshark, qui\ncapturerait et tenterait d'analyser cette trame.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-0458",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0458"
+    },
+    {
+      "name": "CVE-2007-0457",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0457"
+    },
+    {
+      "name": "CVE-2007-0456",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0456"
+    },
+    {
+      "name": "CVE-2007-0459",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-0459"
+    }
+  ],
+  "links": [
+    {
+      "title": "Annonce des correctifs de la version 0.99.5 de Wireshark :",
+      "url": "http://www.wireshark.org/docs/relnotes/wireshark-0.99.5.html"
+    },
+    {
+      "title": "Bulletin de sécurité Wireshark wnpa-sec-2007-01 du 01    février 2007 :",
+      "url": "http://www.wireshark.org/security/wnpa-sec-2007-01.html"
+    }
+  ],
+  "reference": "CERTA-2007-AVI-067",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-02-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans Wireshark (Ethereal).\nElles permettraient à une personne malveillante distante, de provoquer\nune perturbation du service sur le système utilisant une version\nvulnérable.\n",
+  "title": "Multiples vulnérabilités de Wireshark (Ethereal)",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Annonce des modifications pour Wireshark 0.99.5 du 01 février 2007",
+      "url": null
+    }
+  ]
+}

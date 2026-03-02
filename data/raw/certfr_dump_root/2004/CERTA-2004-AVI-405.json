@@ -1,0 +1,113 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PHP versions 5.0.2 et antérieures.",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PHP versions 4.3.9 et antérieures ;",
+      "product": {
+        "name": "PHP",
+        "vendor": {
+          "name": "PHP",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nPHP est un langage de script permettant la réalisation de pages web\ndynamiques.\n\nDe multiples vulnérabilités sont présentes dans PHP :\n\n-   CVE CAN-2004-1018 : une vulnérabilité de type débordement de mémoire\n    est présente dans les fonctions pack() et unpack(). Sous certaines\n    conditions, il est possible pour un utilisateur distant mal\n    intentionné de réaliser l'exécution de code arbitraire avec les\n    privilèges du serveur Web ;\n-   CVE CAN-2004-1019 : de multiples vulnérabilités dans la fonction\n    unserialize() peuvent être exploitées pour un accès non autorisé à\n    des données ou l'exécution de code arbitraire ;\n-   CVE CAN-2004-1020 : la fonction addslashes() ne traitant pas\n    correctement certains caractères en entrée, il est possible pour un\n    utilisateur distant mal intentionné de lire ou d'écraser des\n    fichiers arbitraires sur le système ;\n-   CVE CAN-2004-1063 : il est possible, sous certaines conditions, de\n    contourner les restrictions d'accès mises en place avec safe_mode ;\n-   CVE CAN-2004-1064 : certaines mises en oeuvre de la fonction\n    realpath ne traitent pas correctement des chemins d'accès long. Il\n    est possible, sous certaines conditions, de réaliser l'inclusion\n    arbitraire de fichiers ;\n\n## Solution\n\nLes versions 4.3.10 et 5.0.3 corrigent ces vulnérabilités.\n\nSe référer aux bulletins de sécurité des éditeurs pour l'obtention des\ncorrectifs.\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité Gentoo GLSA-200412-14 du 19 décembre    2004 :",
+      "url": "http://www.gentoo.org/security/glsa/glsa-200412-14.xml"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2005:031 du 19 janvier    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-031.html"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD du 20 décembre 2004 relatif à    PHP5:",
+      "url": "http://www.vuxml.org/openbsd/"
+    },
+    {
+      "title": "Bulletin de sécurité SUSE SuSE-SA:2005:002 du 17 janvier    2005 :",
+      "url": "http://www.novell.com/linux/security/advisories/2005_02_php4_mod_php4.html"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2004:687 du 21 décembre    2004 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2004-687.html"
+    },
+    {
+      "title": "Site de PHP :",
+      "url": "http://www.php.net"
+    },
+    {
+      "title": "Bulletin de sécurité FreeBSD du 17 décembre 2004 :",
+      "url": "http://www.vuxml.org/freebsd/"
+    },
+    {
+      "title": "Bulletin de sécurité OpenBSD du 18 décembre 2004 :",
+      "url": "http://www.vuxml.org/openbsd/"
+    },
+    {
+      "title": "Bulletin de sécurité Red Hat RHSA-2005:032 du 15 février    2005 :",
+      "url": "http://rhn.redhat.com/errata/RHSA-2005-032.html"
+    },
+    {
+      "title": "Annonce de la sortie de la version 4.3.10 de PHP :",
+      "url": "http://www.php.net/release_4_3_10_fr.php"
+    },
+    {
+      "title": "Bulletin de sécurité Mandrake MDKSA-2004:151 du 17 décembre    2004 :",
+      "url": "http://www.mandrakesoft.com/security/advisories?name=MDKSA-2004:151"
+    }
+  ],
+  "reference": "CERTA-2004-AVI-405",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2004-12-20T00:00:00.000000"
+    },
+    {
+      "description": "ajout références aux bulletins de sécurité Red Hat et OpenBSD (PHP5).",
+      "revision_date": "2004-12-22T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité Red Hat.",
+      "revision_date": "2005-01-24T00:00:00.000000"
+    },
+    {
+      "description": "ajout référence au bulletin de sécurité Red Hat RHSA-2005-032.",
+      "revision_date": "2005-02-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données et du système"
+    },
+    {
+      "description": "Atteinte à la disponibilité des données et du système"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités dans PHP permettent à un utilisateur distant\nmal intentionné de porter atteinte à la disponibilité, la\nconfidentialité et à l'intégrité des données et/ou du système les\nhébergeant.\n",
+  "title": "Multiples vulnérabilités de PHP",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité PHP",
+      "url": null
+    }
+  ]
+}

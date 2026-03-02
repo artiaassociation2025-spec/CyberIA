@@ -1,0 +1,56 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Drupal versions 6.x antérieures à 6.4.",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Drupal versions 5.x antérieures à 5.10 ;",
+      "product": {
+        "name": "Drupal",
+        "vendor": {
+          "name": "Drupal",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Description\n\nDe multiples vulnérabilités ont été découvertes dans Drupal :\n\n-   plusieurs erreurs permettent de réaliser des attaques de type\n    cross-site scripting et cross-site request forgery ;\n-   le module blogAPI ne valide pas correctement l'extension des\n    fichiers déposés ce qui permet à des utilisateurs disposant de\n    droits spécifiques de déposer des fichiers dangereux ;\n-   le module Upload dans Drupal 6 contient une vulnérabilité permettant\n    l'élévation de privilèges pour certains utilisateurs disposant de\n    droits spécifiques. Ceci permet notamment de modifier du contenu.\n\n## Solution\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des\ncorrectifs (cf. section Documentation).\n",
+  "cves": [],
+  "links": [],
+  "reference": "CERTA-2008-AVI-418",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2008-08-14T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités dans <span class=\"textit\">Drupal</span>\npermettent de modifier le contenu, de réaliser des injections de code\nindirectes et de déposer des fichiers.\n",
+  "title": "Multiples vulnérabilités dans Drupal",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Drupal SA-2008-047 du 13 août 2008",
+      "url": "http://drupal.org/node/295053"
+    }
+  ]
+}

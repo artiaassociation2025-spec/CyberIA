@@ -1,0 +1,31 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<SPAN class=\"textit\">IBM  WebSphere</SPAN>, versions 6.1.0.x.",
+  "content": "## Description\n\nPlusieurs vulnérabilités affectent IBM WebSphere:\n\n-   les entrées faite au travers du People Picker Tag sont retournées à\n    l'utilisateur sans avoir été correctement filtrées. Cette\n    insuffisance est exploitable par un utilisateur malveillant pour\n    réaliser de l'injection de code indirecte (XSS).\n-   des messages d'erreur d'XMLAccess affichent des informations\n    sensibles ;\n-   un problème de sécurité dans l'utilitaire XMLAccess a un impact non\n    précisé par l'éditeur.\n\n## Solution\n\nLa version 6.1.0.3 remédie à ces problèmes. Se référer au bulletin de\nsécurité de l'éditeur pour l'obtention des correctifs (cf. section\nDocumentation).\n",
+  "cves": [],
+  "links": [
+    {
+      "title": "Bulletin de sécurité IBM swg27014411 du 25 novembre 2009 :",
+      "url": "http://www-01.ibm.com/support/docview.wss?uid=swg27014411"
+    }
+  ],
+  "reference": "CERTA-2009-AVI-524",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2009-12-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités affectent <span class=\"textit\">IBM\nWebSphere</span>, permettant en particulier de réaliser de l'injection\nde code indirecte (XSS).\n",
+  "title": "Vulnérabilités dans IBM WebSphere",
+  "vendor_advisories": []
+}

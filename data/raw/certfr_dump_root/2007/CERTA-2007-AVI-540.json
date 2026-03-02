@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [],
+  "affected_systems_content": "<UL>    <LI>Microsoft Internet Explorer 5.01 ;</LI>    <LI>Microsoft Internet Explorer 6 ;</LI>    <LI>Microsoft Internet Explorer 6 Service Pack 1 ;</LI>    <LI>Microsoft Internet Explorer 7.</LI>  </UL>  <P>Il s'agit des versions courantes du navigateur fournies par  défaut avec le système Windows.</P>",
+  "content": "## Description\n\nPlusieurs vulnérabilités ont été identifiées dans le navigateur Internet\nExplorer.\n\n-   Internet Explorer ne manipulerait pas correctement des objets\n    supprimés ou initialisés de manière incorrecte. Ces vulnérabilités\n    peuvent être exploitées par l'exécution de contrôles ActiveX ou\n    Active Scripting malveillants, au cours de la navigation sur une\n    page Web ou à l'ouverture d'un courriel au format HTML.\n-   Une autre vulnérabilité concerne certains appels de méthode vers des\n    objets HTML (DHTML). Elle provoquerait alors une corruption de la\n    mémoire, et potentiellement l'exécution de code arbitraire sur le\n    système vulnérable.\n\n## Solution\n\nSe référer au bulletin de sécurité MS07-069 de Microsoft pour\nl'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2007-3902",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3902"
+    },
+    {
+      "name": "CVE-2007-5347",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5347"
+    },
+    {
+      "name": "CVE-2007-5344",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-5344"
+    },
+    {
+      "name": "CVE-2007-3903",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2007-3903"
+    }
+  ],
+  "links": [],
+  "reference": "CERTA-2007-AVI-540",
+  "revisions": [
+    {
+      "description": "version initiale.",
+      "revision_date": "2007-12-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "Plusieurs vulnérabilités ont été identifiées dans le navigateur Internet\nExplorer. Certaines d'entre elles peuvent être exploitées par le biais\nde pages Web spécialement construites, afin d'exécuter du code sur le\nsystème de l'utilisateur naviguant sur la page.\n",
+  "title": "Multiples vulnérabilités dans Microsoft Internet Explorer",
+  "vendor_advisories": [
+    {
+      "published_at": null,
+      "title": "Bulletin de sécurité Microsoft MS07-069 du 11 décembre 2007",
+      "url": "http://www.microsoft.com/technet/security/Bulletin/MS07-069.mspx"
+    }
+  ]
+}
