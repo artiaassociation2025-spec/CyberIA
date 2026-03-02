@@ -1,33 +1,35 @@
-name: Sync CERT Raw Data (Debug Safe)
+name: Sync CERT Raw Data
 
 on:
   schedule:
     - cron: "0 5 * * *"
   workflow_dispatch:
 
+# 🔥 THIS IS WHAT WAS MISSING
+permissions:
+  contents: write
+
 jobs:
   sync:
     runs-on: ubuntu-latest
 
     steps:
-
-      # 1️⃣ Checkout with full history
-      - name: Checkout CyberIA
+      # 1️⃣ Checkout with write token
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
 
-      # 2️⃣ Show current branch and status
-      - name: Debug - Repo State
+      # 2️⃣ Debug branch info
+      - name: Debug repo state
         run: |
-          echo "Current branch:"
+          echo "Branch:"
           git branch
           echo "Last commit:"
           git log -1 --oneline
-          echo "Repo status:"
-          git status
 
-      # 3️⃣ Clone mirror repos (shallow)
+      # 3️⃣ Clone mirror repos
       - name: Clone CERT-BUND
         run: git clone --depth 1 https://github.com/9adidaa/certbund-intel-mirror.git temp_certbund
 
@@ -37,53 +39,38 @@ jobs:
       - name: Clone CERT-EU
         run: git clone --depth 1 https://github.com/9adidaa/certeu-intel-mirror.git temp_certeu
 
-      # 4️⃣ Prepare raw directories
+      # 4️⃣ Ensure directories exist
       - name: Prepare raw directories
         run: |
           mkdir -p data/raw/certbund
           mkdir -p data/raw/certfr
           mkdir -p data/raw/certeu
 
-      # 5️⃣ Sync using rsync (incremental)
-      - name: Sync CERT-BUND raw
+      # 5️⃣ Incremental sync
+      - name: Sync CERT-BUND
         run: rsync -a --delete temp_certbund/database/raw/ data/raw/certbund/
 
-      - name: Sync CERT-FR raw
+      - name: Sync CERT-FR
         run: rsync -a --delete temp_certfr/database/raw/ data/raw/certfr/
 
-      - name: Sync CERT-EU raw
+      - name: Sync CERT-EU
         run: rsync -a --delete temp_certeu/database/raw/ data/raw/certeu/
 
-      # 6️⃣ Cleanup temp repos
-      - name: Cleanup temp folders
+      # 6️⃣ Cleanup
+      - name: Cleanup
         run: rm -rf temp_certbund temp_certfr temp_certeu
 
-      # 7️⃣ Show what changed BEFORE commit
-      - name: Debug - Changes before commit
-        run: |
-          echo "Changed files:"
-          git status
-          echo "Changed count:"
-          git status --porcelain | wc -l
-
-      # 8️⃣ Safe Commit
-      - name: Commit changes safely
+      # 7️⃣ Commit & push only if changes exist
+      - name: Commit and push
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
-          CHANGED=$(git status --porcelain | wc -l)
-
-          if [ "$CHANGED" -eq "0" ]; then
-            echo "No changes detected. Skipping commit."
-            exit 0
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Changes detected. Committing..."
+            git add data/raw
+            git commit -m "Daily CERT raw sync"
+            git push origin HEAD
+          else
+            echo "No changes detected."
           fi
-
-          echo "Changes detected: $CHANGED files"
-          git add data/raw
-
-          echo "Committing..."
-          git commit -m "Daily CERT raw sync"
-
-          echo "Pushing..."
-          git push
