@@ -10,10 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout CyberIA
       - name: Checkout CyberIA
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      # Clone mirror repositories
+      # 2️⃣ Clone mirror repositories (shallow)
       - name: Clone CERT-BUND
         run: git clone --depth 1 https://github.com/9adidaa/certbund-intel-mirror.git temp_certbund
 
@@ -23,31 +26,40 @@ jobs:
       - name: Clone CERT-EU
         run: git clone --depth 1 https://github.com/9adidaa/certeu-intel-mirror.git temp_certeu
 
-      # Clean old raw directory
-      - name: Reset raw directory
+      # 3️⃣ Ensure raw folders exist
+      - name: Prepare raw directories
         run: |
-          rm -rf data/raw
-          mkdir -p data/raw
+          mkdir -p data/raw/certbund
+          mkdir -p data/raw/certfr
+          mkdir -p data/raw/certeu
 
-      # Copy full raw directories
-      - name: Copy CERT-BUND raw
-        run: cp -r temp_certbund/database/raw data/raw/certbund
+      # 4️⃣ Incremental sync using rsync
+      - name: Sync CERT-BUND raw
+        run: |
+          rsync -a --delete temp_certbund/database/raw/ data/raw/certbund/
 
-      - name: Copy CERT-FR raw
-        run: cp -r temp_certfr/database/raw data/raw/certfr
+      - name: Sync CERT-FR raw
+        run: |
+          rsync -a --delete temp_certfr/database/raw/ data/raw/certfr/
 
-      - name: Copy CERT-EU raw
-        run: cp -r temp_certeu/database/raw data/raw/certeu
+      - name: Sync CERT-EU raw
+        run: |
+          rsync -a --delete temp_certeu/database/raw/ data/raw/certeu/
 
-      # Cleanup
+      # 5️⃣ Cleanup temp folders
       - name: Cleanup temp folders
         run: rm -rf temp_certbund temp_certfr temp_certeu
 
-      # Commit changes if any
+      # 6️⃣ Commit only if changes exist
       - name: Commit changes
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add data/raw
-          git commit -m "Daily CERT raw sync" || echo "No changes"
-          git push
+
+          if [ -n "$(git status --porcelain)" ]; then
+            git add data/raw
+            git commit -m "Daily CERT raw sync"
+            git push
+          else
+            echo "No changes detected"
+          fi
