@@ -48,77 +48,73 @@ Elle facilite également l’autocomplétion et la détection d’erreurs dans l
 ## Issue 3 — Parser et point d’entrée de validation
 
 ### Fichier concerné
-src/normalization_api/parsers/threat_graph_json.py
+- `src/normalization_api/parsers/threat_graph_json.py`
 
 ### Description
-Cette étape met en place la fonction principale qui permet de transformer un JSON en objet Python.
-
-La fonction `parse_threat_graph(payload: dict)` :
-- Prend un JSON en entrée
-- Vérifie que les champs obligatoires existent (ex : schema_version)
-- Convertit les données en objet ThreatGraph
-- Lève des erreurs claires si le JSON est invalide
+Mise en place de la fonction `parse_threat_graph(payload: dict)` qui transforme un JSON en objet Python et lève des erreurs claires en cas d'invalidité.
 
 ### Rôle principal
 Servir de point d’entrée pour charger et valider un threat graph.
-
-### Spécificité
-C’est la première validation côté Python.  
-Elle garantit que les données sont exploitables dans le code.
-
-### Acceptance Criteria
-- Un test appelle parse_threat_graph avec sample.json
-- Si schema_version manque → erreur explicite
 
 ---
 
 ## Issue 4 — Nettoyage et Stabilisation des données (Cleaning)
 
 ### Fichier concerné
-src/normalization_api/cleaning/threat_graph_cleaner.py
+- `src/normalization_api/cleaning/threat_graph_cleaner.py`
 
 ### Description
-Cette étape consiste à nettoyer les données pour les rendre propres et cohérentes.
-
-Le module permet de :
-- Supprimer les espaces inutiles dans les chaînes
-- Transformer les chaînes vides ("") en None
-- Supprimer les doublons dans les listes
-- Uniformiser les données
+Nettoyage des données : suppression des espaces inutiles, transformation des chaînes vides en `None` et suppression des doublons.
 
 ### Rôle principal
 Garantir que les données sont propres avant validation.
-
-### Spécificité
-C’est la phase de nettoyage.  
-Elle évite les doublons et les valeurs vides.
-
-### Acceptance Criteria
-- Un test prouve que "" devient None
-- Un test prouve que ["Windows","Windows"] devient ["Windows"]
 
 ---
 
 ## Issue 5 — Validation de l’intégrité référentielle (Refs)
 
 ### Fichier concerné
-src/normalization_api/validators/threat_graph_refs.py
+- `src/normalization_api/validators/threat_graph_refs.py`
 
 ### Description
-Cette étape vérifie que toutes les références du graphe existent.
-
-Le validateur vérifie que :
-- Les from_id existent
-- Les to_id existent
-- Les références internes existent
+Vérifie que tous les liens (`from_id`, `to_id`) pointent bien vers des entités existantes dans le graphe.
 
 ### Rôle principal
 Éviter les liens invalides dans le graphe.
 
-### Spécificité
-Si un ID est manquant, une erreur est levée avec la liste des IDs manquants.
+---
+
+## Issue 6 — Canonicalisation et Sortie JSON Stable
+
+### Fichier concerné
+- `src/normalization_api/canonicalizer/threat_graph_canonicalizer.py`
+
+### Description
+Cette étape transforme le ThreatGraph en un dictionnaire dont l'ordre est fixe. Elle trie les entités par leur identifiant unique et les clés par ordre alphabétique.
+
+### Rôle principal
+Garantir que la sortie JSON est déterministe et identique à chaque exécution.
 
 ### Acceptance Criteria
-- Si une ref est invalide → erreur
-- Test avec sample.json
-- Test avec ID inconnu → échec
+- Les entités sont triées par ID dans le fichier final.
+- Le fichier `data/curated/threat_graph.json` est généré.
+
+---
+
+## Issue 7 — Centralisation des préfixes et construction d’IRIs
+
+### Fichiers concernés
+- `src/ontology_api/ttl_builder/namespaces.py`
+- `src/ontology_api/ttl_builder/iri.py`
+
+### Description
+Passage du JSON au Web sémantique par la création d’IRIs (Internationalized Resource Identifiers).
+- Définition des Namespaces via `BASE_IRI`.
+- Création des fonctions `iri_for` et `iri_source`.
+
+### Rôle principal
+Attribuer une identité unique et globale à chaque élément pour permettre l'interconnexion en RDF.
+
+### Acceptance Criteria
+- La `BASE_IRI` est configurable.
+- Les IRIs générées sont stables (stabilité prouvée par test).
