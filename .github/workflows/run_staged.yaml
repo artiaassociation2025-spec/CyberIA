@@ -1,0 +1,46 @@
+name: Normalize CVEs
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * 1,4'   # e.g. twice a week
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/normalize_cves.py'
+      - 'requirements.txt'
+
+jobs:
+  normalize:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+
+      - name: Run CVE normalization script
+        run: python scripts/normalize_cves.py
+
+      # Optional: commit changes back if the script modifies files
+      - name: Commit updated files (if any)
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "actions@github.com"
+          git add .
+          git diff --staged --quiet || git commit -m "chore: update normalized CVE data"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
