@@ -1,9 +1,13 @@
 name: Normalize CVEs
 
+# Grant write permission to repository contents so git commit + git push works
+permissions:
+  contents: write
+
 on:
   workflow_dispatch:
   schedule:
-    - cron: '17 4 * * 1,4'   # e.g. twice a week
+    - cron: '17 4 * * 1,4'   # e.g. twice a week (Monday & Thursday at 04:17 UTC)
   push:
     branches: [main]
     paths:
