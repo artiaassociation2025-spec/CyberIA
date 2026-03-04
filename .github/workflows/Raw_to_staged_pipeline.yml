@@ -3,7 +3,7 @@ name: Daily CVE Pipeline
 on:
   schedule:
     # Run every day at 2 AM UTC
-    - cron: '0 6 * * *'
+    - cron: '0 2 * * *'
   
   # Allow manual trigger from GitHub UI
   workflow_dispatch:
@@ -26,7 +26,7 @@ jobs:
           fetch-depth: 0
       
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       
@@ -60,7 +60,7 @@ jobs:
       
       - name: Upload logs
         if: failure()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: pipeline-logs
           path: data/logs/
@@ -76,4 +76,3 @@ jobs:
         run: |
           echo "❌ Daily CVE pipeline failed!"
           echo "Check the workflow run at: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
-
