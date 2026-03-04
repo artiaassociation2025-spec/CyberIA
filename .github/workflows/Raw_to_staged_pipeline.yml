@@ -3,7 +3,7 @@ name: Daily CVE Pipeline
 on:
   schedule:
     # Run every day at 2 AM UTC
-    - cron: '0 2 * * *'
+    - cron: '0 6 * * *'
   
   # Allow manual trigger from GitHub UI
   workflow_dispatch:
@@ -76,3 +76,4 @@ jobs:
         run: |
           echo "❌ Daily CVE pipeline failed!"
           echo "Check the workflow run at: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
