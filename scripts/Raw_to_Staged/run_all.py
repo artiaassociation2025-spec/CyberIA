@@ -13,11 +13,11 @@ import enrich_cert_bund
 # ------------------------------------------------------------------------------
 
 PIPELINE = [
-    #("extract_cves",    extract_cves.main,    None),
-    #("build_skeletons", build_skeletons.main, "cve_list"),
-    #("enrich_epss",     enrich_epss.main,     None),
-    #("enrich_nvd",      enrich_nvd.main,      None),
-    #("enrich_cert_fr",  enrich_cert_fr.main,  None),
+    ("extract_cves",    extract_cves.main,    None),
+    ("build_skeletons", build_skeletons.main, "cve_list"),
+    ("enrich_epss",     enrich_epss.main,     None),
+    ("enrich_nvd",      enrich_nvd.main,      None),
+    ("enrich_cert_fr",  enrich_cert_fr.main,  None),
     ("enrich_cert_bund", enrich_cert_bund.main, None),
     # ("enrich_cisa_kev", enrich_cisa_kev.main, None),
     # ("enrich_cert_eu",  enrich_cert_eu.main,  None),
