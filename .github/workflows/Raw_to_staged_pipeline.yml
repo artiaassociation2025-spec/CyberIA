@@ -49,12 +49,17 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
-          # Check if there are changes
-          if git diff --quiet; then
-            echo "No changes to commit"
+          echo "=== Staging all changes ==="
+          git add -A
+          
+          echo ""
+          echo "=== Checking for changes ==="
+          if git diff --cached --quiet; then
+            echo "ℹ️ No changes to commit"
           else
-            git add -A
+            echo "✅ Found changes, committing..."
             git commit -m "🔄 Daily CVE pipeline run - $(date +'%Y-%m-%d %H:%M:%S')"
+            echo "✅ Pushing to repository..."
             git push
           fi
       
