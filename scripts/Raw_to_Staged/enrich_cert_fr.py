@@ -20,7 +20,7 @@ def load_json(path: Path):
 
 
 # --------------------------------------------------------
-# Parse a CERT-FR advisory into a clean advisory entry
+# Parse a CERT-FR advisory into the UNIFIED advisory structure
 # --------------------------------------------------------
 
 def parse_advisory(data: dict, path: Path) -> dict:
@@ -30,38 +30,52 @@ def parse_advisory(data: dict, path: Path) -> dict:
     cves = [c.get("name", "").upper() for c in (data.get("cves") or []) if c.get("name")]
 
     return {
-        "id":          f"advisory--{data.get('reference', path.stem)}",
-        "source":      "cert-fr",
-        "publisher":   "CERT-FR",
-        "reference":   data.get("reference"),
-        "title":       data.get("title"),
-        "summary":     data.get("summary"),
-        "content":     data.get("content"),
-        "date":        published,
-        "related_cves": cves,
-        "revisions":   [
+        # ── Identity ──
+        "id":               f"advisory--{data.get('reference', path.stem)}",
+        "source":           "cert-fr",
+        "publisher":        "CERT-FR",
+        "advisory_id":      data.get("reference"),
+        "title":            data.get("title"),
+        "date":             published,
+
+        # ── Text ──
+        "description":      data.get("summary"),
+        "content":          data.get("content"),
+        "related_cves":     cves,
+        "risks":            [r.get("description") for r in (data.get("risks") or [])],
+
+        # ── Technical (CERT-FR doesn't provide these per-advisory) ──
+        "cwe":              [],
+        "cvss": {
+            "version":      None,
+            "score":        None,
+            "vector":       None,
+            "severity":     None
+        },
+        "remediations":     [],
+
+        # ── Products & References ──
+        "affected_products": [
+            {
+                "product":   s.get("product", {}).get("name"),
+                "vendor":    s.get("product", {}).get("vendor", {}).get("name"),
+                "versions":  [],
+                "status":    "affected",
+                "description": s.get("description")
+            }
+            for s in (data.get("affected_systems") or [])
+        ],
+        "references":       [
+            v.get("url")
+            for v in (data.get("vendor_advisories") or [])
+            if v.get("url")
+        ],
+        "revisions":        [
             {
                 "date":        r.get("revision_date", "")[:10],
                 "description": r.get("description")
             }
             for r in revisions
-        ],
-        "risks": [r.get("description") for r in (data.get("risks") or [])],
-        "affected_systems": [
-            {
-                "description": s.get("description"),
-                "product":     s.get("product", {}).get("name"),
-                "vendor":      s.get("product", {}).get("vendor", {}).get("name")
-            }
-            for s in (data.get("affected_systems") or [])
-        ],
-        "vendor_advisories": [
-            {
-                "title":        v.get("title"),
-                "url":          v.get("url"),
-                "published_at": v.get("published_at")
-            }
-            for v in (data.get("vendor_advisories") or [])
         ]
     }
 
@@ -106,22 +120,28 @@ def main():
                     continue
 
                 skel = json.loads(skel_path.read_text(encoding="utf-8"))
-                advisories = skel["entities"].setdefault("advisories", [])
+
+                # Access the new advisories structure
+                adv_block = skel["entities"]["advisories"]
+                adv_list = adv_block.setdefault("list", [])
 
                 # Get latest revision date from incoming advisory
                 new_date = advisory.get("date") or ""
 
-                existing_idx = next((i for i, a in enumerate(advisories) if a.get("id") == advisory["id"]), None)
+                existing_idx = next((i for i, a in enumerate(adv_list) if a.get("id") == advisory["id"]), None)
 
                 if existing_idx is not None:
-                    old_date = advisories[existing_idx].get("date") or ""
+                    old_date = adv_list[existing_idx].get("date") or ""
                     if new_date <= old_date:
                         continue  # nothing changed, skip
-                    advisories[existing_idx] = advisory  # newer version, overwrite
+                    adv_list[existing_idx] = advisory  # newer version, overwrite
                 else:
-                    advisories.append(advisory)  # new advisory, add it
+                    adv_list.append(advisory)  # new advisory, add it
 
-                # Track source
+                # Set source flag to 1
+                adv_block.setdefault("sources", {})["cert-fr"] = 1
+
+                # Track source in cve object too
                 cve_obj = skel["entities"]["cve"]
                 if "cert-fr" not in cve_obj.get("sources", []):
                     cve_obj.setdefault("sources", []).append("cert-fr")

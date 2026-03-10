@@ -12,6 +12,39 @@ def now_utc():
     return datetime.now(UTC).date().isoformat()
 
 
+# --------------------------------------------------------
+# Unified advisory template — same structure for ALL sources
+# Used by: enrich_cert_fr, enrich_cert_bund, enrich_cert_eu
+# Fields a source doesn't have stay null / []
+# --------------------------------------------------------
+
+def empty_advisory():
+    """Return a blank unified advisory entry."""
+    return {
+        "id":               None,
+        "source":           None,
+        "publisher":        None,
+        "advisory_id":      None,
+        "title":            None,
+        "date":             None,
+        "description":      None,
+        "content":          None,
+        "related_cves":     [],
+        "risks":            [],
+        "cwe":              [],
+        "cvss": {
+            "version":      None,
+            "score":        None,
+            "vector":       None,
+            "severity":     None
+        },
+        "remediations":     [],
+        "affected_products": [],
+        "references":       [],
+        "revisions":        []
+    }
+
+
 def make_skeleton(cve_id: str) -> dict:
     return {
         "schema_version": "1.0.0",
@@ -59,7 +92,35 @@ def make_skeleton(cve_id: str) -> dict:
                 "sources": []
             },
 
-            "advisories": [],  # each entry: { id, publisher, title, date, related_techniques, source }
+            "advisories": {
+                "sources": {
+                    "cert-fr": 0,
+                    "cert-bund": 0,
+                    "cert-eu": 0
+                },
+                "list": [
+                    # Each entry follows this unified structure (shown as template):
+                    # {
+                    #     "id":               "advisory--CERTFR-2026-AVI-0228",
+                    #     "source":           "cert-fr" | "cert-bund" | "cert-eu",
+                    #     "publisher":        "CERT-FR" | "BSI" | "CERT-EU",
+                    #     "advisory_id":      "CERTFR-2026-AVI-0228",
+                    #     "title":            "...",
+                    #     "date":             "2026-02-02",
+                    #     "description":      "short summary",
+                    #     "content":          "full remediation / markdown text",
+                    #     "related_cves":     ["CVE-2026-23220", "CVE-2026-23222"],
+                    #     "risks":            ["Exécution de code", "Déni de service"],
+                    #     "cwe":              ["CWE-79", "CWE-346"],
+                    #     "cvss":             {"version": "3.1", "score": 9.8, "vector": "...", "severity": "critical"},
+                    #     "remediations":     [{"type": "vendor_fix", "description": "...", "url": "..."}],
+                    #     "affected_products": [{"product": "...", "vendor": "...", "versions": [], "status": "..."}],
+                    #     "references":       ["https://..."],
+                    #     "revisions":        [{"date": "2026-02-02", "description": "..."}]
+                    # }
+                ]
+            },
+
             "enisa_threats": [],
             "nis2_sectors": [],
             "controls": [],

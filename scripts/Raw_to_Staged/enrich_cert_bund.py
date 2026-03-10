@@ -34,224 +34,177 @@ def detect_category(doc: dict) -> str:
 
 
 # --------------------------------------------------------
-# Parse RICH advisory (bsi / bsi-cvd)
+# Extract per-CVE data from a RICH vulnerability entry
 # --------------------------------------------------------
 
-def parse_rich_vulnerability(vuln: dict, advisory_id: str, advisory_date: str) -> list:
-    """
-    Extract per-CVE details from a full CSAF vulnerability entry.
-    Returns list of dicts (one per CVE, though typically just one).
-    """
-    entries = []
-    
+def extract_rich_cve(vuln: dict) -> dict:
+    """Extract per-CVE details from a full CSAF vulnerability entry."""
     cve_id = vuln.get("cve")
     if not cve_id:
-        return entries
-    
+        return None
+
     cve_id = cve_id.upper()
-    
-    # Extract description
+
+    # Description
     description = None
     for note in (vuln.get("notes") or []):
         if note.get("category") in ("summary", "description"):
             description = note.get("text")
             if description:
                 break
-    
-    # Extract CWE
+
+    # CWE
     cwes = []
     cwe_obj = vuln.get("cwe", {})
     if isinstance(cwe_obj, dict) and cwe_obj.get("id"):
         cwes.append(cwe_obj["id"])
-    
-    # Extract CVSS scores
-    cvss_block = {"version": None, "score": None, "vector": None, "severity": None}
+
+    # CVSS
+    cvss = {"version": None, "score": None, "vector": None, "severity": None}
     for score_entry in (vuln.get("scores") or []):
         cvss_v3 = score_entry.get("cvss_v3", {})
         if cvss_v3:
-            cvss_block = {
+            cvss = {
                 "version":  cvss_v3.get("version"),
                 "score":    cvss_v3.get("baseScore"),
                 "vector":   cvss_v3.get("vectorString"),
                 "severity": cvss_v3.get("baseSeverity", "").lower() or None
             }
             break
-    
-    # Extract remediations
+
+    # Remediations
     remediations = []
     for rem in (vuln.get("remediations") or []):
         remediations.append({
-            "category": rem.get("category"),
-            "details":  rem.get("details"),
-            "url":      rem.get("url")
+            "type":        rem.get("category"),
+            "description": rem.get("details"),
+            "url":         rem.get("url")
         })
-    
-    # Extract affected products (from product_status)
+
+    # Affected products
     affected_products = []
     product_status = vuln.get("product_status", {})
-    
     for status, product_ids in product_status.items():
         for pid in (product_ids or []):
             affected_products.append({
-                "product_id": pid,
-                "status":     status  # known_affected, fixed, known_not_affected, etc.
+                "product":  pid,
+                "vendor":   None,
+                "versions": [],
+                "status":   status
             })
-    
-    entries.append({
-        "cve_id":          cve_id,
-        "description":     description,
-        "cwe":             cwes,
-        "cvss":            cvss_block,
-        "remediations":    remediations,
-        "affected_products": affected_products,
-        "title":           vuln.get("title")
-    })
-    
-    return entries
 
-
-def parse_rich_advisory(data: dict, path: Path) -> dict:
-    """Parse a full CSAF security advisory (bsi or bsi-cvd)."""
-    doc = data.get("document", {})
-    tracking = doc.get("tracking", {})
-    
-    advisory_id = tracking.get("id")
-    initial_date = tracking.get("initial_release_date", "")[:10] if tracking.get("initial_release_date") else None
-    current_date = tracking.get("current_release_date", "")[:10] if tracking.get("current_release_date") else None
-    advisory_date = current_date or initial_date
-    
-    # Parse all vulnerabilities
-    cve_entries = []
-    for vuln in (data.get("vulnerabilities") or []):
-        cve_entries.extend(parse_rich_vulnerability(vuln, advisory_id, advisory_date))
-    
     return {
-        "source":        "cert-bund",
-        "type":          "security_advisory",
-        "advisory_id":   advisory_id,
-        "title":         doc.get("title"),
-        "date":          advisory_date,
-        "publisher":     doc.get("publisher", {}).get("name", "BSI"),
-        "summary":       None,  # Extract from notes if needed
-        "cves":          cve_entries,
-        "references":    [ref.get("url") for ref in (doc.get("references") or []) if ref.get("url")]
+        "cve_id":           cve_id,
+        "description":      description,
+        "cwe":              cwes,
+        "cvss":             cvss,
+        "remediations":     remediations,
+        "affected_products": affected_products,
+        "title":            vuln.get("title")
     }
 
 
 # --------------------------------------------------------
-# Parse MINIMAL advisory (bsi-wid)
+# Extract per-CVE data from a MINIMAL vulnerability entry
 # --------------------------------------------------------
 
-def parse_minimal_vulnerability(vuln: dict, advisory_id: str, advisory_date: str) -> list:
-    """
-    Extract minimal per-CVE details from a base CSAF vulnerability entry.
-    """
-    entries = []
-    
+def extract_minimal_cve(vuln: dict) -> dict:
+    """Extract minimal per-CVE details from a base CSAF entry."""
     cve_id = vuln.get("cve")
     if not cve_id:
-        return entries
-    
+        return None
+
     cve_id = cve_id.upper()
-    release_date = vuln.get("release_date", "")[:10] if vuln.get("release_date") else advisory_date
-    
+
     # Only product status available in wid format
     affected_products = []
     product_status = vuln.get("product_status", {})
-    
     for status, product_ids in product_status.items():
         for pid in (product_ids or []):
             affected_products.append({
-                "product_id": pid,
-                "status":     status
+                "product":  pid,
+                "vendor":   None,
+                "versions": [],
+                "status":   status
             })
-    
-    entries.append({
-        "cve_id":          cve_id,
-        "release_date":    release_date,
-        "title":           vuln.get("title"),
-        "affected_products": affected_products
-    })
-    
-    return entries
+
+    return {
+        "cve_id":           cve_id,
+        "description":      None,
+        "cwe":              [],
+        "cvss":             {"version": None, "score": None, "vector": None, "severity": None},
+        "remediations":     [],
+        "affected_products": affected_products,
+        "title":            vuln.get("title")
+    }
 
 
-def parse_minimal_advisory(data: dict, path: Path) -> dict:
-    """Parse a minimal CSAF base advisory (bsi-wid)."""
+# --------------------------------------------------------
+# Build UNIFIED advisory entry for a specific CVE
+# --------------------------------------------------------
+
+def build_unified_advisory(data: dict, cve_data: dict, category: str) -> dict:
+    """
+    Build a unified advisory entry from a CERT-Bund file.
+    Same structure as CERT-FR and CERT-EU advisories.
+    """
     doc = data.get("document", {})
     tracking = doc.get("tracking", {})
-    
+
     advisory_id = tracking.get("id")
     initial_date = tracking.get("initial_release_date", "")[:10] if tracking.get("initial_release_date") else None
     current_date = tracking.get("current_release_date", "")[:10] if tracking.get("current_release_date") else None
     advisory_date = current_date or initial_date
-    
-    # Parse all vulnerabilities
-    cve_entries = []
+
+    # Collect all CVE IDs from the file for related_cves
+    all_cves = []
     for vuln in (data.get("vulnerabilities") or []):
-        cve_entries.extend(parse_minimal_vulnerability(vuln, advisory_id, advisory_date))
-    
+        vid = vuln.get("cve")
+        if vid:
+            all_cves.append(vid.upper())
+
+    # References
+    references = [ref.get("url") for ref in (doc.get("references") or []) if ref.get("url")]
+
+    # Revisions from tracking history
+    revisions = []
+    for rev in (tracking.get("revision_history") or []):
+        revisions.append({
+            "date":        rev.get("date", "")[:10] if rev.get("date") else None,
+            "description": rev.get("summary") or rev.get("number")
+        })
+
+    # Aggregate severity as risk
+    risks = []
+    severity_text = doc.get("aggregate_severity", {}).get("text")
+    if severity_text:
+        risks.append(severity_text)
+
     return {
-        "source":       "cert-bund",
-        "type":         "base",
-        "advisory_id":  advisory_id,
-        "title":        doc.get("title"),
-        "date":         advisory_date,
-        "publisher":    doc.get("publisher", {}).get("name", "BSI"),
-        "cves":         cve_entries,
-        "references":   [ref.get("url") for ref in (doc.get("references") or []) if ref.get("url")]
+        # ── Identity ──
+        "id":               f"advisory--{advisory_id}",
+        "source":           "cert-bund",
+        "publisher":        doc.get("publisher", {}).get("name", "BSI"),
+        "advisory_id":      advisory_id,
+        "title":            doc.get("title"),
+        "date":             advisory_date,
+
+        # ── Text ──
+        "description":      cve_data.get("description"),
+        "content":          None,
+        "related_cves":     all_cves,
+        "risks":            risks,
+
+        # ── Technical ──
+        "cwe":              cve_data.get("cwe", []),
+        "cvss":             cve_data.get("cvss", {"version": None, "score": None, "vector": None, "severity": None}),
+        "remediations":     cve_data.get("remediations", []),
+
+        # ── Products & References ──
+        "affected_products": cve_data.get("affected_products", []),
+        "references":       references,
+        "revisions":        revisions
     }
-
-
-# --------------------------------------------------------
-# Build advisory entry for skeleton
-# --------------------------------------------------------
-
-def build_advisory_entry(advisory: dict, cve_id: str) -> dict:
-    """
-    Build an advisory entry to append to a CVE skeleton.
-    cve_id is the specific CVE being enriched.
-    """
-    # Find the CVE entry for this specific CVE ID
-    cve_data = None
-    for cve in advisory.get("cves", []):
-        if cve["cve_id"] == cve_id:
-            cve_data = cve
-            break
-    
-    if not cve_data:
-        return None
-    
-    entry = {
-        "id":          f"advisory--{advisory['advisory_id']}",
-        "source":      "cert-bund",
-        "publisher":   advisory.get("publisher"),
-        "advisory_id": advisory.get("advisory_id"),
-        "title":       advisory.get("title"),
-        "date":        advisory.get("date"),
-        "advisory_type": advisory.get("type"),
-        "cve_in_advisory": cve_id
-    }
-    
-    # Add type-specific fields
-    if advisory.get("type") == "security_advisory":
-        # Rich advisory has detailed per-CVE info
-        entry.update({
-            "description":     cve_data.get("description"),
-            "cwe":             cve_data.get("cwe", []),
-            "cvss":            cve_data.get("cvss"),
-            "remediations":    cve_data.get("remediations", []),
-            "affected_products": cve_data.get("affected_products", []),
-        })
-    else:
-        # Minimal advisory only has product status
-        entry.update({
-            "affected_products": cve_data.get("affected_products", []),
-        })
-    
-    entry["references"] = advisory.get("references", [])
-    
-    return entry
 
 
 # --------------------------------------------------------
@@ -278,68 +231,83 @@ def main():
             try:
                 # Detect advisory type
                 category = detect_category(data)
-                
+
                 if category == "security_advisory":
-                    advisory = parse_rich_advisory(data, path)
+                    extractor = extract_rich_cve
                 elif category == "base":
-                    advisory = parse_minimal_advisory(data, path)
+                    extractor = extract_minimal_cve
                 else:
                     continue
-                
-                if not advisory.get("cves"):
+
+                vulns = data.get("vulnerabilities") or []
+                if not vulns:
                     continue
-                
+
+                # Extract per-CVE data
+                cve_entries = []
+                for vuln in vulns:
+                    cve_data = extractor(vuln)
+                    if cve_data:
+                        cve_entries.append(cve_data)
+
+                if not cve_entries:
+                    continue
+
                 total_files += 1
-                
-                # For each CVE in this advisory, update the corresponding skeleton
-                for cve_data in advisory.get("cves", []):
+
+                # For each CVE, build a unified advisory and inject into skeleton
+                for cve_data in cve_entries:
                     cve_id = cve_data.get("cve_id")
                     if not cve_id:
                         continue
-                    
+
                     total_cves += 1
                     skel_path = CVE_DIR / f"{cve_id}.json"
-                    
+
                     # Skip if no skeleton exists
                     if not skel_path.exists():
                         total_skipped += 1
                         continue
-                    
+
                     skel = json.loads(skel_path.read_text(encoding="utf-8"))
-                    advisories = skel["entities"].setdefault("advisories", [])
-                    
-                    # Build the advisory entry
-                    advisory_entry = build_advisory_entry(advisory, cve_id)
-                    if not advisory_entry:
-                        continue
-                    
+
+                    # Access the new advisories structure
+                    adv_block = skel["entities"]["advisories"]
+                    adv_list = adv_block.setdefault("list", [])
+
+                    # Build unified advisory entry
+                    advisory_entry = build_unified_advisory(data, cve_data, category)
+
                     # Check for existing entry and update if newer
                     new_date = advisory_entry.get("date") or ""
                     existing_idx = next(
-                        (i for i, a in enumerate(advisories) if a.get("id") == advisory_entry["id"]),
+                        (i for i, a in enumerate(adv_list) if a.get("id") == advisory_entry["id"]),
                         None
                     )
-                    
+
                     if existing_idx is not None:
-                        old_date = advisories[existing_idx].get("date") or ""
+                        old_date = adv_list[existing_idx].get("date") or ""
                         if new_date <= old_date:
                             continue  # No update needed
-                        advisories[existing_idx] = advisory_entry  # Overwrite with newer
+                        adv_list[existing_idx] = advisory_entry  # Overwrite with newer
                     else:
-                        advisories.append(advisory_entry)  # New advisory
-                    
-                    # Track source
+                        adv_list.append(advisory_entry)  # New advisory
+
+                    # Set source flag to 1
+                    adv_block.setdefault("sources", {})["cert-bund"] = 1
+
+                    # Track source in cve object too
                     cve_obj = skel["entities"]["cve"]
                     if "cert-bund" not in cve_obj.get("sources", []):
                         cve_obj.setdefault("sources", []).append("cert-bund")
-                    
+
                     skel["generated_at"] = now_utc()
                     skel_path.write_text(
                         json.dumps(skel, indent=2, ensure_ascii=False),
                         encoding="utf-8"
                     )
                     total_enriched += 1
-            
+
             except Exception as e:
                 print(f"[enrich_cert_bund] ERROR processing {path}: {e}")
                 total_errors += 1
