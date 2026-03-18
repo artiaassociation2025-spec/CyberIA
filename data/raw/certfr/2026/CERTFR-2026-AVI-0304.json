@@ -1,0 +1,70 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Xen versions 4.17.x sans le correctif de sécurité xsa480.patch",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen versions 4.18.x sans le correctif de sécurité xsa481.patch",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-23554",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-23554"
+    },
+    {
+      "name": "CVE-2026-23555",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-23555"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0304",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-03-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Xen. Elles permettent à un attaquant de provoquer une élévation de privilèges, un déni de service à distance et une atteinte à la confidentialité des données.",
+  "title": "Multiples vulnérabilités dans Xen",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-03-17",
+      "title": "Bulletin de sécurité Xen xsa/advisory-480",
+      "url": "https://xenbits.xen.org/xsa/advisory-480.html"
+    },
+    {
+      "published_at": "2026-03-17",
+      "title": "Bulletin de sécurité Xen xsa/advisory-481",
+      "url": "https://xenbits.xen.org/xsa/advisory-481.html"
+    }
+  ]
+}

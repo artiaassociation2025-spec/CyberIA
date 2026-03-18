@@ -1,0 +1,67 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Spring versions 1.1.x antérieures à 1.1.3",
+      "product": {
+        "name": "Spring AI",
+        "vendor": {
+          "name": "Spring",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Spring versions 1.0.x antérieures à 1.0.4",
+      "product": {
+        "name": "Spring AI",
+        "vendor": {
+          "name": "Spring",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-22730",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-22730"
+    },
+    {
+      "name": "CVE-2026-22729",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-22729"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0305",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-03-17T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection SQL (SQLi)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Spring AI. Elles permettent à un attaquant de provoquer une injection SQL (SQLi) et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans Spring AI",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-03-17",
+      "title": "Bulletin de sécurité Spring cve-2026-22729",
+      "url": "https://spring.io/security/cve-2026-22729"
+    },
+    {
+      "published_at": "2026-03-17",
+      "title": "Bulletin de sécurité Spring cve-2026-22730",
+      "url": "https://spring.io/security/cve-2026-22730"
+    }
+  ]
+}
