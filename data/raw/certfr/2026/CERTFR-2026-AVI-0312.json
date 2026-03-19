@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "glpi versions 11.0.x antérieures à 11.0.6",
+      "product": {
+        "name": "GLPI",
+        "vendor": {
+          "name": "GLPI",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": null,
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-25937",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-25937"
+    },
+    {
+      "name": "CVE-2026-25936",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-25936"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0312",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-03-18T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection SQL (SQLi)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans GLPI. Elles permettent à un attaquant de provoquer une injection SQL (SQLi) et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans GLPI",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-03-17",
+      "title": "Bulletin de sécurité GLPI GHSA-qw3x-7vv2-7759",
+      "url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-qw3x-7vv2-7759"
+    },
+    {
+      "published_at": "2026-03-17",
+      "title": "Bulletin de sécurité GLPI GHSA-2g3p-vwp2-7qxm",
+      "url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-2g3p-vwp2-7qxm"
+    }
+  ]
+}
