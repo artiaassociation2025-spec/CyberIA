@@ -1,0 +1,77 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Traefik versions v3.7.0-ea.x antérieures à v3.7.0-ea.2",
+      "product": {
+        "name": "Traefik",
+        "vendor": {
+          "name": "Traefik",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Traefik versions v3.6.x antérieures à v3.6.11",
+      "product": {
+        "name": "Traefik",
+        "vendor": {
+          "name": "Traefik",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Traefik versions antérieures à v2.11.41",
+      "product": {
+        "name": "Traefik",
+        "vendor": {
+          "name": "Traefik",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-32595",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-32595"
+    },
+    {
+      "name": "CVE-2026-32305",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-32305"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0333",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-03-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Traefik. Elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans Traefik",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-03-20",
+      "title": "Bulletin de sécurité Traefik GHSA-wvvq-wgcr-9q48",
+      "url": "https://github.com/traefik/traefik/security/advisories/GHSA-wvvq-wgcr-9q48"
+    },
+    {
+      "published_at": "2026-03-20",
+      "title": "Bulletin de sécurité Traefik GHSA-g3hg-j4jv-cwfr",
+      "url": "https://github.com/traefik/traefik/security/advisories/GHSA-g3hg-j4jv-cwfr"
+    }
+  ]
+}
