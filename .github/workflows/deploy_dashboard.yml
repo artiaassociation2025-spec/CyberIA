@@ -1,0 +1,84 @@
+name: Deploy Dashboard to GitHub Pages
+
+on:
+  # Run after the daily CVE pipeline
+  workflow_run:
+    workflows: ["Daily CVE Pipeline"]
+    types: [completed]
+
+  # Also allow manual trigger
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate stats
+        run: |
+          echo "=== Generating stats from CVE data ==="
+          python scripts/generate_stats.py
+          echo ""
+          echo "=== Stats file ==="
+          ls -lh docs/stats.json
+          echo ""
+          echo "=== Preview ==="
+          python -c "import json; d=json.load(open('docs/stats.json')); print(f'Total CVEs: {d[\"total_cves\"]:,}')"
+        env:
+          PYTHONUNBUFFERED: 1
+
+      - name: Verify dashboard files
+        run: |
+          echo "=== Dashboard files ==="
+          ls -lah docs/
+          echo ""
+          if [ ! -f "docs/index.html" ]; then
+            echo "ERROR: docs/index.html not found!"
+            exit 1
+          fi
+          if [ ! -f "docs/stats.json" ]; then
+            echo "ERROR: docs/stats.json not found!"
+            exit 1
+          fi
+          echo "All dashboard files present!"
+
+      - name: Commit stats updates
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+
+          git add docs/stats.json docs/stats_history.json
+          
+          if git diff --cached --quiet; then
+            echo "No stats changes to commit"
+          else
+            git commit -m "Update dashboard stats - $(date +'%Y-%m-%d %H:%M:%S')"
+            git push
+            echo "Stats committed and pushed!"
+          fi
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          publish_branch: gh-pages
+          force_orphan: true
