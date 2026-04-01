@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Papercut MF versions antérieures à 25.0.10",
+      "product": {
+        "name": "Papercut",
+        "vendor": {
+          "name": "Papercut",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Papercut NG versions antérieures à 25.0.10",
+      "product": {
+        "name": "Papercut",
+        "vendor": {
+          "name": "Papercut",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-4794",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-4794"
+    },
+    {
+      "name": "CVE-2026-5115",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-5115"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0377",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-03-31T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Papercut. Elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données et une injection de code indirecte à distance (XSS).",
+  "title": "Multiples vulnérabilités dans Papercut",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-03-31",
+      "title": "Bulletin de sécurité Papercut papercut-ng-mf-security-bulletin-march-2026",
+      "url": "https://www.papercut.com/kb/Main/papercut-ng-mf-security-bulletin-march-2026/"
+    }
+  ]
+}
