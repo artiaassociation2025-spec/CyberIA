@@ -1,0 +1,109 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Joomla! versions 6.x antérieures à 6.0.4",
+      "product": {
+        "name": "Joomla!",
+        "vendor": {
+          "name": "Joomla!",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Joomla! versions antérieures à 5.4.4",
+      "product": {
+        "name": "Joomla!",
+        "vendor": {
+          "name": "Joomla!",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-21631",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-21631"
+    },
+    {
+      "name": "CVE-2026-23899",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-23899"
+    },
+    {
+      "name": "CVE-2026-21630",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-21630"
+    },
+    {
+      "name": "CVE-2026-23898",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-23898"
+    },
+    {
+      "name": "CVE-2026-21632",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-21632"
+    },
+    {
+      "name": "CVE-2026-21629",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-21629"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0384",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-04-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Injection SQL (SQLi)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Joomla!. Certaines d'entre elles permettent à un attaquant de provoquer une atteinte à l'intégrité des données, une injection SQL (SQLi) et une injection de code indirecte à distance (XSS).",
+  "title": "Multiples vulnérabilités dans Joomla!",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-03-31",
+      "title": "Bulletin de sécurité Joomla! 1032-20260306",
+      "url": "https://developer.joomla.org/security-centre/1032-20260306-core-improper-access-check-in-webservice-endpoints.html"
+    },
+    {
+      "published_at": "2026-03-31",
+      "title": "Bulletin de sécurité Joomla! 1029-20260303",
+      "url": "https://developer.joomla.org/security-centre/1029-20260303-core-xss-vector-in-com-associations-comparison-view.html"
+    },
+    {
+      "published_at": "2026-03-31",
+      "title": "Bulletin de sécurité Joomla! 1027-20260301",
+      "url": "https://developer.joomla.org/security-centre/1027-20260301-core-acl-hardening-in-com-ajax.html"
+    },
+    {
+      "published_at": "2026-03-31",
+      "title": "Bulletin de sécurité Joomla! 1028-20260302",
+      "url": "https://developer.joomla.org/security-centre/1028-20260302-core-sql-injection-in-com-content-articles-webservice-endpoint.html"
+    },
+    {
+      "published_at": "2026-03-31",
+      "title": "Bulletin de sécurité Joomla! 1031-20260305",
+      "url": "https://developer.joomla.org/security-centre/1031-20260305-core-arbitrary-file-deletion-in-com-joomlaupdate.html"
+    },
+    {
+      "published_at": "2026-03-31",
+      "title": "Bulletin de sécurité Joomla! 1030-20260304",
+      "url": "https://developer.joomla.org/security-centre/1030-20260304-core-xss-vectors-in-various-article-title-outputs.html"
+    }
+  ]
+}
