@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "pfSense Plus versions antérieures à 26.07",
+      "product": {
+        "name": "pfSense Plus",
+        "vendor": {
+          "name": "Netgate",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "pfSense CE version 2.8.1 sans les derniers correctifs de sécurité",
+      "product": {
+        "name": "pfSense CE",
+        "vendor": {
+          "name": "Netgate",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "pfSense CE versions antérieures à 2.8.1",
+      "product": {
+        "name": "pfSense CE",
+        "vendor": {
+          "name": "Netgate",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0387",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-04-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Netgate. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et une injection de code indirecte à distance (XSS).",
+  "title": "Multiples vulnérabilités dans les produits Netgate",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-04-01",
+      "title": "Bulletin de sécurité Netgate pfSense-SA-26_04",
+      "url": "https://docs.netgate.com/downloads/pfSense-SA-26_04.webgui.asc"
+    },
+    {
+      "published_at": "2026-04-01",
+      "title": "Bulletin de sécurité Netgate pfSense-SA-26_03",
+      "url": "https://docs.netgate.com/downloads/pfSense-SA-26_03.webgui.asc"
+    },
+    {
+      "published_at": "2026-04-01",
+      "title": "Bulletin de sécurité Netgate pfSense-SA-26_01",
+      "url": "https://docs.netgate.com/downloads/pfSense-SA-26_01.webgui.asc"
+    },
+    {
+      "published_at": "2026-04-01",
+      "title": "Bulletin de sécurité Netgate pfSense-SA-26_02",
+      "url": "https://docs.netgate.com/downloads/pfSense-SA-26_02.webgui.asc"
+    }
+  ]
+}
