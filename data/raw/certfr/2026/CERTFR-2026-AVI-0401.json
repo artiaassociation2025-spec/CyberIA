@@ -1,0 +1,97 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GLPI versions 11.0.x antérieures à 11.0.6",
+      "product": {
+        "name": "GLPI",
+        "vendor": {
+          "name": "GLPI",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GLPI versions antérieures à 10.0.24",
+      "product": {
+        "name": "GLPI",
+        "vendor": {
+          "name": "GLPI",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-26263",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-26263"
+    },
+    {
+      "name": "CVE-2026-29047",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-29047"
+    },
+    {
+      "name": "CVE-2026-26026",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-26026"
+    },
+    {
+      "name": "CVE-2026-25932",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-25932"
+    },
+    {
+      "name": "CVE-2026-26027",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-26027"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0401",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-04-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Injection SQL (SQLi)"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans GLPI. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une injection SQL (SQLi) et une injection de code indirecte à distance (XSS).",
+  "title": "Multiples vulnérabilités dans GLPI",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-04-03",
+      "title": "Bulletin de sécurité GLPI GHSA-346p-qj3v-9rxj",
+      "url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-346p-qj3v-9rxj"
+    },
+    {
+      "published_at": "2026-04-03",
+      "title": "Bulletin de sécurité GLPI GHSA-chch-wcm9-f9cp",
+      "url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-chch-wcm9-f9cp"
+    },
+    {
+      "published_at": "2026-04-03",
+      "title": "Bulletin de sécurité GLPI GHSA-2c98-648q-h27h",
+      "url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-2c98-648q-h27h"
+    },
+    {
+      "published_at": "2026-04-03",
+      "title": "Bulletin de sécurité GLPI GHSA-3m49-qf92-vccr",
+      "url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-3m49-qf92-vccr"
+    },
+    {
+      "published_at": "2026-04-03",
+      "title": "Bulletin de sécurité GLPI GHSA-m627-945g-x7xh",
+      "url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-m627-945g-x7xh"
+    }
+  ]
+}
