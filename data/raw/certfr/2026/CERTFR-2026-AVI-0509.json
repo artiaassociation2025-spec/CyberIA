@@ -1,0 +1,205 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Xen toutes versions utilisant XAPI sans les derniers correctifs de sécurité",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen toutes versions incluant le correctif de sécurité XSA-419 sans le correctif xsa483-xapi.patch pour Xen XAPI oxenstored",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen sur systèmes x86 ou Arm PVH ou HVM avec un noyau linux postérieur à 3.8 sans le correctif de sécurité xsa487-linux.patch",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen toutes versions incluant le correctif de sécurité XSA-419 sans le correctif xsa483.patch pour Xen 4.18.x",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen versions postérieures ou égales à 4.2 sans le correctif de sécurité xsa484.patch applicable pour Xen 4.18.x",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen versions 4.17.x et 4.18.x sans le correctif de sécurité xsa486-4.18.patch",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen versions postérieures ou égales à 4.2 sans le correctif de sécurité xsa484-4.17.patch applicable pour Xen 4.17.x",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen avec un noyau linux postérieur à 4.12 sans le correctif de sécurité xsa485-linux.patch ",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen versions 4.19.x  sans le correctif de sécurité  xsa486.patch  ",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xen toutes versions incluant le correctif de sécurité XSA-419 sans le correctif xsa483-4.17.patch pour Xen 4.17.x",
+      "product": {
+        "name": "Xen",
+        "vendor": {
+          "name": "XEN",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-31787",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-31787"
+    },
+    {
+      "name": "CVE-2026-23559",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-23559"
+    },
+    {
+      "name": "CVE-2026-42486",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-42486"
+    },
+    {
+      "name": "CVE-2026-23558",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-23558"
+    },
+    {
+      "name": "CVE-2026-23556",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-23556"
+    },
+    {
+      "name": "CVE-2026-31786",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-31786"
+    },
+    {
+      "name": "CVE-2026-23561",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-23561"
+    },
+    {
+      "name": "CVE-2026-23557",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-23557"
+    },
+    {
+      "name": "CVE-2026-23560",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-23560"
+    },
+    {
+      "name": "CVE-2026-23562",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-23562"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0509",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-04-29T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Xen. Certaines d'entre elles permettent à un attaquant de provoquer une élévation de privilèges, un déni de service à distance et une atteinte à la confidentialité des données.",
+  "title": "Multiples vulnérabilités dans Xen",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-04-28",
+      "title": "Bulletin de sécurité Xen xsa/advisory-484",
+      "url": "https://xenbits.xen.org/xsa/advisory-484.html"
+    },
+    {
+      "published_at": "2026-04-28",
+      "title": "Bulletin de sécurité Xen xsa/advisory-489",
+      "url": "https://xenbits.xen.org/xsa/advisory-489.html"
+    },
+    {
+      "published_at": "2026-04-28",
+      "title": "Bulletin de sécurité Xen xsa/advisory-485",
+      "url": "https://xenbits.xen.org/xsa/advisory-485.html"
+    },
+    {
+      "published_at": "2026-04-28",
+      "title": "Bulletin de sécurité Xen xsa/advisory-486",
+      "url": "https://xenbits.xen.org/xsa/advisory-486.html"
+    },
+    {
+      "published_at": "2026-04-28",
+      "title": "Bulletin de sécurité Xen xsa/advisory-487",
+      "url": "https://xenbits.xen.org/xsa/advisory-487.html"
+    },
+    {
+      "published_at": "2026-04-28",
+      "title": "Bulletin de sécurité Xen xsa/advisory-483",
+      "url": "https://xenbits.xen.org/xsa/advisory-483.html"
+    }
+  ]
+}
