@@ -1,0 +1,63 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Redis toutes versions",
+      "product": {
+        "name": "redis-server",
+        "vendor": {
+          "name": "Redis",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-23479",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-23479"
+    },
+    {
+      "name": "CVE-2026-23631",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-23631"
+    },
+    {
+      "name": "CVE-2026-25243",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-25243"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0536",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-05-06T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Redis. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance.",
+  "title": "Multiples vulnérabilités dans Redis",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-05-05",
+      "title": "Bulletin de sécurité Redis GHSA-8ghh-qpmp-7826",
+      "url": "https://github.com/redis/redis/security/advisories/GHSA-8ghh-qpmp-7826"
+    },
+    {
+      "published_at": "2026-05-05",
+      "title": "Bulletin de sécurité Redis GHSA-c8h9-259x-jff4",
+      "url": "https://github.com/redis/redis/security/advisories/GHSA-c8h9-259x-jff4"
+    },
+    {
+      "published_at": "2026-05-05",
+      "title": "Bulletin de sécurité Redis GHSA-93m2-935m-8rj3",
+      "url": "https://github.com/redis/redis/security/advisories/GHSA-93m2-935m-8rj3"
+    }
+  ]
+}
