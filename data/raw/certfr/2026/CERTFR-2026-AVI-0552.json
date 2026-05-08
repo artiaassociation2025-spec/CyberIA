@@ -1,0 +1,100 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Endpoint Manager Mobile versions 12.7.x antérieures à 12.7.0.1",
+      "product": {
+        "name": "Endpoint Manager Mobile (EPMM)",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Endpoint Manager Mobile versions antérieures à 12.6.1.1",
+      "product": {
+        "name": "Endpoint Manager Mobile (EPMM)",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Endpoint Manager Mobile versions 12.8.x antérieures à 12.8.0.1",
+      "product": {
+        "name": "Endpoint Manager Mobile (EPMM)",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-5786",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-5786"
+    },
+    {
+      "name": "CVE-2026-6973",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-6973"
+    },
+    {
+      "name": "CVE-2026-5787",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-5787"
+    },
+    {
+      "name": "CVE-2026-5788",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-5788"
+    },
+    {
+      "name": "CVE-2026-7821",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-7821"
+    }
+  ],
+  "links": [
+    {
+      "title": "Alerte CERT-FR CERTFR-2026-ALE-001 du 30 janvier 2026",
+      "url": "https://www.cert.ssi.gouv.fr/alerte/CERTFR-2026-ALE-001/"
+    }
+  ],
+  "reference": "CERTFR-2026-AVI-0552",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-05-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Ivanti Endpoint Manager Mobile (EPMM). Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la confidentialité des données.\n\nL'éditeur indique que la vulnérabilité CVE-2026-6973 est activement exploitée dans le cadre d'attaques ciblées. Celle-ci permet à un attaquant authentifié, avec les droits administrateur, de provoquer une exécution de code arbitraire à distance. \n\nL'une des recommandations concernant les vulnérabilités critiques CVE-2026-1281 et CVE-2026-1340, mentionnées dans l'alerte CERTFR-2026-ALE-001 (cf. section Documentation), était de réinitialiser tous les mots de passe des comptes EPMM locaux.\n\nSi cette recommandation n'a pas été suivie, des attaquant peuvent réutiliser des mots de passe de comptes administrateurs découverts à cette occasion pour exploiter la vulnérabilité CVE-2026-6973.",
+  "title": "Multiples vulnérabilités dans Ivanti Endpoint Manager Mobile",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-05-07",
+      "title": "Bulletin de sécurité Ivanti may-2026-epmm-security-update",
+      "url": "https://www.ivanti.com/blog/may-2026-epmm-security-update"
+    },
+    {
+      "published_at": "2026-05-07",
+      "title": "Bulletin de sécurité Ivanti May-2026-Security-Advisory-Ivanti-Endpoint-Manager-Mobile-EPMM-Multiple-CVEs",
+      "url": "https://forums.ivanti.com/s/article/May-2026-Security-Advisory-Ivanti-Endpoint-Manager-Mobile-EPMM-Multiple-CVEs"
+    }
+  ]
+}

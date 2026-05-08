@@ -1,0 +1,91 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GLPI versions antérieures à 11.0.7",
+      "product": {
+        "name": "GLPI",
+        "vendor": {
+          "name": "GLPI",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GLPI versions antérieures à 10.0.25",
+      "product": {
+        "name": "GLPI",
+        "vendor": {
+          "name": "GLPI",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-32312",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-32312"
+    },
+    {
+      "name": "CVE-2026-42320",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-42320"
+    },
+    {
+      "name": "CVE-2026-42321",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-42321"
+    },
+    {
+      "name": "CVE-2026-40108",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-40108"
+    },
+    {
+      "name": "CVE-2026-42318",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-42318"
+    },
+    {
+      "name": "CVE-2026-42317",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-42317"
+    },
+    {
+      "name": "CVE-2026-5385",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-5385"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0551",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-05-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Non spécifié par l'éditeur"
+    },
+    {
+      "description": "Falsification de requêtes côté serveur (SSRF)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans GLPI. Certaines d'entre elles permettent à un attaquant de provoquer une atteinte à l'intégrité des données, une falsification de requêtes côté serveur (SSRF) et une injection de code indirecte à distance (XSS).",
+  "title": "Multiples vulnérabilités dans GLPI",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-04-29",
+      "title": "Bulletin de sécurité undefined",
+      "url": "https://github.com/glpi-project/glpi/releases"
+    }
+  ]
+}
