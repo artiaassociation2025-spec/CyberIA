@@ -1,0 +1,60 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PgBouncer versions antérieures à 1.25.2",
+      "product": {
+        "name": "PgBouncer",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-6665",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-6665"
+    },
+    {
+      "name": "CVE-2026-6667",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-6667"
+    },
+    {
+      "name": "CVE-2026-6664",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-6664"
+    },
+    {
+      "name": "CVE-2026-6666",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-6666"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0559",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-05-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans PostgreSQL PgBouncer. Elles permettent à un attaquant de provoquer un déni de service à distance et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans PostgreSQL PgBouncer ",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-05-11",
+      "title": "Bulletin de sécurité PostgreSQL pgbouncer-1252-released-3292",
+      "url": "https://www.postgresql.org/about/news/pgbouncer-1252-released-3292/"
+    }
+  ]
+}
