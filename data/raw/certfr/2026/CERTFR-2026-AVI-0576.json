@@ -1,0 +1,122 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Endpoint Manager (EPM) versions antérieures à 2024 SU6",
+      "product": {
+        "name": "Endpoint Manager (EPM)",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Secure Access Client versions antérieures à 22.8R6",
+      "product": {
+        "name": "Secure Access Client (ISAC)",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Xtraction versions antérieures à 2026.2",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Virtual Traffic Manager (vTM) versions antérieures à 22.9r4",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Ivanti",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).\n",
+  "cves": [
+    {
+      "name": "CVE-2026-8051",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-8051"
+    },
+    {
+      "name": "CVE-2026-8043",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-8043"
+    },
+    {
+      "name": "CVE-2026-7432",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-7432"
+    },
+    {
+      "name": "CVE-2026-7431",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-7431"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0576",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-05-13T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Injection SQL (SQLi)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Ivanti. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la confidentialité des données.",
+  "title": "Multiples vulnérabilités dans les produits Ivanti",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-05-12",
+      "title": "Bulletin de sécurité Ivanti may-2026-security-update",
+      "url": "https://www.ivanti.com/blog/may-2026-security-update"
+    },
+    {
+      "published_at": "2026-05-12",
+      "title": "Bulletin de sécurité Ivanti Security-Advisory---Ivanti-Xtraction-CVE-2026-8043",
+      "url": "https://forums.ivanti.com/s/article/Security-Advisory---Ivanti-Xtraction-CVE-2026-8043"
+    },
+    {
+      "published_at": "2026-05-12",
+      "title": "Bulletin de sécurité Ivanti May-2026-Security-Advisory-Ivanti-Secure-Access-Client-CVE-2026-7431-CVE-2026-7432",
+      "url": "https://forums.ivanti.com/s/article/May-2026-Security-Advisory-Ivanti-Secure-Access-Client-CVE-2026-7431-CVE-2026-7432"
+    },
+    {
+      "published_at": "2026-05-12",
+      "title": "Bulletin de sécurité Ivanti May-2026-Security-Advisory-Ivanti-Virtual-Traffic-Manager-vTM-CVE-2026-8051",
+      "url": "https://forums.ivanti.com/s/article/May-2026-Security-Advisory-Ivanti-Virtual-Traffic-Manager-vTM-CVE-2026-8051"
+    },
+    {
+      "published_at": "2026-05-12",
+      "title": "Bulletin de sécurité Ivanti Security-Advisory-Ivanti-Endpoint-Manager-EPM-May-2026",
+      "url": "https://forums.ivanti.com/s/article/Security-Advisory-Ivanti-Endpoint-Manager-EPM-May-2026"
+    }
+  ]
+}
