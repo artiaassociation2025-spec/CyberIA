@@ -2,6 +2,16 @@
   "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
   "affected_systems": [
     {
+      "description": "azl3 kernel-hwe 6.12.0.0-1 versions antérieures à 6.12.89.1-1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
       "description": "azl3 python-urllib3 2.0.7-4 versions antérieures à 2.0.7-5",
       "product": {
         "name": "N/A",
@@ -32,6 +42,16 @@
       }
     },
     {
+      "description": "azl3 kernel 6.6.138.1-1",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Microsoft",
+          "scada": false
+        }
+      }
+    },
+    {
       "description": "azl3 openvswitch 3.3.0-2 versions antérieures à 3.3.0-3",
       "product": {
         "name": "N/A",
@@ -52,7 +72,7 @@
       }
     }
   ],
-  "affected_systems_content": null,
+  "affected_systems_content": "",
   "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
   "cves": [
     {
@@ -72,6 +92,10 @@
       "url": "https://www.cve.org/CVERecord?id=CVE-2026-46483"
     },
     {
+      "name": "CVE-2026-46333",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-46333"
+    },
+    {
       "name": "CVE-2026-44431",
       "url": "https://www.cve.org/CVERecord?id=CVE-2026-44431"
     },
@@ -86,6 +110,10 @@
     {
       "description": "Version initiale",
       "revision_date": "2026-05-20T00:00:00.000000"
+    },
+    {
+      "description": "Ajout du bulletin de sécurité CVE-2026-46333.",
+      "revision_date": "2026-05-21T00:00:00.000000"
     }
   ],
   "risks": [
@@ -105,6 +133,11 @@
   "summary": "De multiples vulnérabilités ont été découvertes dans les produits Microsoft. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et un déni de service.\n\nMicrosoft indique que les vulnérabilités CVE-2026-41091 et CVE-2026-45498 sont activement exploitées.",
   "title": "Multiples vulnérabilités dans les produits Microsoft",
   "vendor_advisories": [
+    {
+      "published_at": "2026-05-16",
+      "title": "Bulletin de sécurité Microsoft CVE-2026-46333",
+      "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-46333"
+    },
     {
       "published_at": "2026-05-19",
       "title": "Bulletin de sécurité Microsoft CVE-2026-45498",
