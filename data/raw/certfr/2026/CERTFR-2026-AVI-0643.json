@@ -1,0 +1,78 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "NGINX Plus versions Rx antérieures à R36 P5 ou R32 P7",
+      "product": {
+        "name": "NGINX",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NGINX Plus versions 37.x antérieures à 37.0.1.1",
+      "product": {
+        "name": "NGINX",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NGINX Open Source versions postérieures à 1.31.0 antérieures à 1.31.1",
+      "product": {
+        "name": "NGINX",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NGINX Open Source versions 1.x antérieures à 1.30.2",
+      "product": {
+        "name": "NGINX",
+        "vendor": {
+          "name": "F5",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "L'éditeur indique que les versions 0.x de Nginx Open Source n'auront pas de correctifs",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-9256",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-9256"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0643",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-05-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Nginx. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance et un déni de service à distance.",
+  "title": "Vulnérabilité dans Nginx",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-05-22",
+      "title": "Bulletin de sécurité F5 K000161377",
+      "url": "https://my.f5.com/manage/s/article/K000161377"
+    }
+  ]
+}
