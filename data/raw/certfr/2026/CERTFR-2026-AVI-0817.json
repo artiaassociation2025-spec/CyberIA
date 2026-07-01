@@ -1,0 +1,101 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Tomcat versions 11.0.x antérieures à 11.0.23",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tomcat versions 10.1.x antérieures à 10.1.56",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Tomcat versions 9.0.x antérieures à 9.0.119",
+      "product": {
+        "name": "Tomcat",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-55276",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-55276"
+    },
+    {
+      "name": "CVE-2026-50229",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-50229"
+    },
+    {
+      "name": "CVE-2026-55956",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-55956"
+    },
+    {
+      "name": "CVE-2026-55955",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-55955"
+    },
+    {
+      "name": "CVE-2026-53434",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-53434"
+    },
+    {
+      "name": "CVE-2026-53404",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-53404"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0817",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-06-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Non spécifié par l'éditeur"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Apache Tomcat. Certaines d'entre elles permettent à un attaquant de provoquer une injection de code indirecte à distance (XSS), un contournement de la politique de sécurité et un problème de sécurité non spécifié par l'éditeur.",
+  "title": "Multiples vulnérabilités dans Apache Tomcat",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-06-23",
+      "title": "Bulletin de sécurité Apache Tomcat Apache_Tomcat_9.0.119",
+      "url": "https://tomcat.apache.org/security-9.html#Fixed_in_Apache_Tomcat_9.0.119"
+    },
+    {
+      "published_at": "2026-06-22",
+      "title": "Bulletin de sécurité Apache Tomcat Apache_Tomcat_10.1.56",
+      "url": "https://tomcat.apache.org/security-10.html#Fixed_in_Apache_Tomcat_10.1.56"
+    },
+    {
+      "published_at": "2026-06-22",
+      "title": "Bulletin de sécurité Apache Tomcat Apache_Tomcat_11.0.23",
+      "url": "https://tomcat.apache.org/security-11.html#Fixed_in_Apache_Tomcat_11.0.23"
+    }
+  ]
+}
