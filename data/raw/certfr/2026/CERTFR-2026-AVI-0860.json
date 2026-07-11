@@ -1,0 +1,76 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "CPCI85 Central Processing/Communication versions antérieures à 26.20",
+      "product": {
+        "name": "CPCI85 Central Processing/Communication",
+        "vendor": {
+          "name": "Siemens",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "SICORE Base system versions antérieures à 26.20.0",
+      "product": {
+        "name": "SICORE Base system",
+        "vendor": {
+          "name": "Siemens",
+          "scada": true
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-54798",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-54798"
+    },
+    {
+      "name": "CVE-2026-54801",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-54801"
+    },
+    {
+      "name": "CVE-2026-54799",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-54799"
+    },
+    {
+      "name": "CVE-2026-54800",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-54800"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0860",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-07-10T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Siemens. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, une élévation de privilèges et un déni de service à distance.",
+  "title": "Multiples vulnérabilités dans les produits Siemens",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-07-09",
+      "title": "Bulletin de sécurité Siemens SSA-229470",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-229470.html"
+    }
+  ]
+}
