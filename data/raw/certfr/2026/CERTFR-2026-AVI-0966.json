@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "librenms versions antérieures à 26.5.0",
+      "product": {
+        "name": "LibreNMS",
+        "vendor": {
+          "name": "LibreNMS",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-45694",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-45694"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0966",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-08-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Falsification de requêtes côté serveur (SSRF)"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans LibreNMS. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une falsification de requêtes côté serveur (SSRF) et une injection de code indirecte à distance (XSS).",
+  "title": "Multiples vulnérabilités dans LibreNMS",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-08-04",
+      "title": "Bulletin de sécurité LibreNMS GHSA-jmqm-f8q4-v7wx",
+      "url": "https://github.com/librenms/librenms/security/advisories/GHSA-jmqm-f8q4-v7wx"
+    },
+    {
+      "published_at": "2026-08-04",
+      "title": "Bulletin de sécurité LibreNMS GHSA-jf24-8g2h-2wg7",
+      "url": "https://github.com/librenms/librenms/security/advisories/GHSA-jf24-8g2h-2wg7"
+    },
+    {
+      "published_at": "2026-08-04",
+      "title": "Bulletin de sécurité LibreNMS GHSA-7gww-x7fh-jf9j",
+      "url": "https://github.com/librenms/librenms/security/advisories/GHSA-7gww-x7fh-jf9j"
+    },
+    {
+      "published_at": "2026-08-04",
+      "title": "Bulletin de sécurité LibreNMS GHSA-7hmq-j399-mqwf",
+      "url": "https://github.com/librenms/librenms/security/advisories/GHSA-7hmq-j399-mqwf"
+    },
+    {
+      "published_at": "2026-08-04",
+      "title": "Bulletin de sécurité LibreNMS GHSA-g993-wffj-m3gv",
+      "url": "https://github.com/librenms/librenms/security/advisories/GHSA-g993-wffj-m3gv"
+    },
+    {
+      "published_at": "2026-08-04",
+      "title": "Bulletin de sécurité LibreNMS GHSA-7cj5-v4pp-v632",
+      "url": "https://github.com/librenms/librenms/security/advisories/GHSA-7cj5-v4pp-v632"
+    },
+    {
+      "published_at": "2026-08-04",
+      "title": "Bulletin de sécurité LibreNMS GHSA-v5jp-f342-234h",
+      "url": "https://github.com/librenms/librenms/security/advisories/GHSA-v5jp-f342-234h"
+    }
+  ]
+}
