@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "WordPress versions antérieures à 7.0.3",
+      "product": {
+        "name": "WordPress",
+        "vendor": {
+          "name": "WordPress",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-64638",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-64638"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-0979",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-08-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Falsification de requêtes côté serveur (SSRF)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans WordPress. Certaines d'entre elles permettent à un attaquant de provoquer une élévation de privilèges, une atteinte à la confidentialité des données et une falsification de requêtes côté serveur (SSRF).",
+  "title": "Multiples vulnérabilités dans WordPress",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-08-06",
+      "title": "Bulletin de sécurité WordPress wordpress-7-0-3",
+      "url": "https://wordpress.org/news/2026/08/wordpress-7-0-3-release/"
+    }
+  ]
+}
