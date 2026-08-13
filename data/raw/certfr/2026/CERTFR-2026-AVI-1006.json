@@ -1,0 +1,103 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Email Security versions antérieures à 10.0.36",
+      "product": {
+        "name": "Email Security",
+        "vendor": {
+          "name": "Sonicwall",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "GMS versions antérieures à 9.5.2 ",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Sonicwall",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-66150",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-66150"
+    },
+    {
+      "name": "CVE-2026-66154",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-66154"
+    },
+    {
+      "name": "CVE-2026-66148",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-66148"
+    },
+    {
+      "name": "CVE-2026-66149",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-66149"
+    },
+    {
+      "name": "CVE-2026-66147",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-66147"
+    },
+    {
+      "name": "CVE-2026-66146",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-66146"
+    },
+    {
+      "name": "CVE-2026-18634",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-18634"
+    },
+    {
+      "name": "CVE-2026-66145",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-66145"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1006",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-08-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits SonicWall. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une élévation de privilèges et une atteinte à la confidentialité des données.",
+  "title": "Multiples vulnérabilités dans les produits SonicWall",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-08-11",
+      "title": "Bulletin de sécurité SonicWall SNWLID-2026-0012",
+      "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0012"
+    },
+    {
+      "published_at": "2026-08-11",
+      "title": "Bulletin de sécurité SonicWall SNWLID-2026-0011",
+      "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0011"
+    }
+  ]
+}
