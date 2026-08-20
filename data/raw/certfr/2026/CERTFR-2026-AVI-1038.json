@@ -2,6 +2,16 @@
   "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
   "affected_systems": [
     {
+      "description": "Safari versions antérieures à 26.6.1",
+      "product": {
+        "name": "Safari",
+        "vendor": {
+          "name": "Apple",
+          "scada": false
+        }
+      }
+    },
+    {
       "description": "iOS versions antérieures à 26.6.1",
       "product": {
         "name": "iOS",
@@ -590,6 +600,10 @@
     {
       "description": "Version initiale",
       "revision_date": "2026-08-18T00:00:00.000000"
+    },
+    {
+      "description": "Ajout du bulletin de sécurité Apple 148286 du 18 août 2026.",
+      "revision_date": "2026-08-19T00:00:00.000000"
     }
   ],
   "risks": [
@@ -618,6 +632,11 @@
   "summary": "De multiples vulnérabilités ont été découvertes dans les produits Apple. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, une élévation de privilèges et un déni de service à distance.",
   "title": "Multiples vulnérabilités dans les produits Apple",
   "vendor_advisories": [
+    {
+      "published_at": "2026-08-18",
+      "title": "Bulletin de sécurité Apple 148286",
+      "url": "https://support.apple.com/en-us/148286"
+    },
     {
       "published_at": "2026-08-17",
       "title": "Bulletin de sécurité Apple 148282",

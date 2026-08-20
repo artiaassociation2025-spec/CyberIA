@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Zimbra Collaboration versions antérieures à 10.1.20",
+      "product": {
+        "name": "Zimbra Collaboration",
+        "vendor": {
+          "name": "Synacor",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-50055",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-50055"
+    },
+    {
+      "name": "CVE-2026-73570",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-73570"
+    },
+    {
+      "name": "CVE-2026-10631",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-10631"
+    },
+    {
+      "name": "CVE-2026-50054",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-50054"
+    }
+  ],
+  "links": [
+    {
+      "title": "ENISA EUVD",
+      "url": "https://euvd.enisa.europa.eu/vulnerability/CVE-2026-73570"
+    }
+  ],
+  "reference": "CERTFR-2026-AVI-1041",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-08-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Non spécifié par l'éditeur"
+    },
+    {
+      "description": "Falsification de requêtes côté serveur (SSRF)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Synacor Zimbra Collaboration. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une falsification de requêtes côté serveur (SSRF) et une injection de code indirecte à distance (XSS).\n\nL'ENISA indique que la vulnérabilité CVE-2026-73570 est activement exploitée.",
+  "title": "Multiples vulnérabilités dans Synacor Zimbra Collaboration",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-08-13",
+      "title": "Bulletin de sécurité Zimbra",
+      "url": "https://wiki.zimbra.com/wiki/Zimbra_Security_Advisories"
+    }
+  ]
+}
