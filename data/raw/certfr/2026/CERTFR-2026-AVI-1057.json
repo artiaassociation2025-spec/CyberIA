@@ -1,0 +1,88 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Ceph versions antérieures à 19.2.6",
+      "product": {
+        "name": "Ceph",
+        "vendor": {
+          "name": "Ceph",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Ceph versions 20.2.x antérieures à 20.2.4",
+      "product": {
+        "name": "Ceph",
+        "vendor": {
+          "name": "Ceph",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-39944",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-39944"
+    },
+    {
+      "name": "CVE-2026-54330",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-54330"
+    },
+    {
+      "name": "CVE-2025-30156",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-30156"
+    },
+    {
+      "name": "CVE-2026-50152",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-50152"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1057",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-08-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Ceph. Elles permettent à un attaquant de provoquer une élévation de privilèges, une atteinte à la confidentialité des données et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans Ceph",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-08-19",
+      "title": "Bulletin de sécurité Ceph GHSA-rmjq-ffrm-j6vj",
+      "url": "https://github.com/ceph/ceph/security/advisories/GHSA-rmjq-ffrm-j6vj"
+    },
+    {
+      "published_at": "2026-08-19",
+      "title": "Bulletin de sécurité Ceph GHSA-rg9p-5xcp-wm8h",
+      "url": "https://github.com/ceph/ceph/security/advisories/GHSA-rg9p-5xcp-wm8h"
+    },
+    {
+      "published_at": "2026-08-19",
+      "title": "Bulletin de sécurité Ceph GHSA-j73r-qrgx-jvq2",
+      "url": "https://github.com/ceph/ceph/security/advisories/GHSA-j73r-qrgx-jvq2"
+    },
+    {
+      "published_at": "2026-08-19",
+      "title": "Bulletin de sécurité Ceph GHSA-7q3q-3975-qw3q",
+      "url": "https://github.com/ceph/ceph/security/advisories/GHSA-7q3q-3975-qw3q"
+    }
+  ]
+}
