@@ -1,0 +1,81 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Keycloak versions antérieures à 26.7.2",
+      "product": {
+        "name": "Keycloak",
+        "vendor": {
+          "name": "Keycloak",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-15945",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-15945"
+    },
+    {
+      "name": "CVE-2026-45292",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-45292"
+    },
+    {
+      "name": "CVE-2026-15571",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-15571"
+    },
+    {
+      "name": "CVE-2026-17048",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-17048"
+    },
+    {
+      "name": "CVE-2026-59888",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-59888"
+    },
+    {
+      "name": "CVE-2026-18963",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-18963"
+    },
+    {
+      "name": "CVE-2026-14613",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-14613"
+    },
+    {
+      "name": "CVE-2026-59889",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-59889"
+    }
+  ],
+  "links": [
+    {
+      "title": "Article Red Hat sur la vulnérabilité CVE-2026-18963",
+      "url": "https://access.redhat.com/security/cve/cve-2026-18963"
+    }
+  ],
+  "reference": "CERTFR-2026-AVI-1078",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-08-25T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Non spécifié par l'éditeur"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Keycloak. Elles permettent à un attaquant de provoquer un contournement de la politique de sécurité et un problème de sécurité non spécifié par l'éditeur.\n\nLe CERT-FR a connaissance d'une preuve de concept publique pour la vulnérabilité CVE-2026-18963 qui permet à un attaquant non authentifié de prendre le contrôle d'un compte dont il connait l'identifiant.\n\n## Mesure de contournement\n\nSi l'application de la mise à jour n'est pas possible, l'équipe de sécurité de Red Hat recommande de désactiver la fonctionnalité \"Forgot password\" pour tous les domaines d'authentification (cf. section Documentation). Celle-ci n'est pas activée par défaut.",
+  "title": "Multiples vulnérabilités dans Keycloak",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-08-19",
+      "title": "Bulletin de sécurité Keycloack",
+      "url": "https://www.keycloak.org/2026/08/keycloak-2672-released"
+    }
+  ]
+}
