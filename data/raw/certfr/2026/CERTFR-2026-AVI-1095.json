@@ -38,6 +38,10 @@
     {
       "title": "Billet de blogue Rapid7 du 28 août 2026",
       "url": "https://www.rapid7.com/blog/post/etr-papercut-ng-mf-critical-zero-day-exploited-in-the-wild/"
+    },
+    {
+      "title": "Billet de blogue Huntress du 28 août 2026",
+      "url": "https://www.huntress.com/blog/papercut-actively-exploited"
     }
   ],
   "reference": "CERTFR-2026-AVI-1095",
@@ -45,6 +49,10 @@
     {
       "description": "Version initiale",
       "revision_date": "2026-08-28T00:00:00.000000"
+    },
+    {
+      "description": "L'éditeur a mis a jour son bulletin de sécurité avec de nouveaux indicateurs de compromission.",
+      "revision_date": "2026-08-31T00:00:00.000000"
     }
   ],
   "risks": [
@@ -55,7 +63,7 @@
       "description": "Contournement de la politique de sécurité"
     }
   ],
-  "summary": "De multiples vulnérabilités ont été découvertes dans Papercut. Elles permettent à un attaquant de contourner l'authentification et d'exécuter du code arbitraire à distance.\n\nPapercut indique que ces vulnérabilités sont activement exploitées.\n\nL'éditeur explique que le correctif bloque les requêtes SQL qui contiennent les instructions EXEC, EXECUTE ou CALL pour des recherches Card/ID number depuis une base de donnée externe.\n\nLe CERT-FR recommande donc fortement l'application des correctifs dans les plus brefs délais.\n\n## Mesure de contournement\n\nPapercut recommande de restreindre l'accès au serveur applicatif à des adresses IP dites de confiance, notamment par des règles de pare-feu.\n\n## Indicateurs de compromission\n\nL'éditeur préconise de :\n* surveiller toute alerte en provenance d'outils de sécurité concernant le serveur applicatif Papercut et plus particulièrement toute activité anormale de la part de *pc-app.exe* ;\n* relever des fichiers *server.log* de Papercut manquants, tronqués ou supprimés ; \n* rechercher la présence des motifs <code>ERROR No suitable driver found for jdbc:no:x</code> ou <code>ERROR DatabaseUtils - Database error looking up cardID: VALUES CAST</code> dans *server.log*.\n\nPapercut précise que la seule absence de ces indicateurs ne permet pas de déduire que les vulnérabilités n'ont pas été exploitées.",
+  "summary": "De multiples vulnérabilités ont été découvertes dans Papercut. Elles permettent à un attaquant de contourner l'authentification et d'exécuter du code arbitraire à distance.\n\nPapercut indique que ces vulnérabilités sont activement exploitées.\n\nL'éditeur explique que le correctif bloque les requêtes SQL qui contiennent les instructions EXEC, EXECUTE ou CALL pour des recherches Card/ID number depuis une base de donnée externe.\n\nLe CERT-FR recommande donc fortement l'application des correctifs dans les plus brefs délais.\n\n## Mesure de contournement\n\nPapercut recommande de restreindre l'accès au serveur applicatif à des adresses IP dites de confiance, notamment par des règles de pare-feu.\n\n## Indicateurs de compromission\n\nL'éditeur préconise de :\n* surveiller toute alerte en provenance d'outils de sécurité concernant le serveur applicatif Papercut et plus particulièrement toute activité anormale de la part de *pc-app.exe* ;\n* relever des fichiers *server.log* de Papercut manquants, tronqués ou supprimés ; \n* rechercher la présence des motifs <code>ERROR No suitable driver found for jdbc:no:x</code> ou <code>ERROR DatabaseUtils - Database error looking up cardID: VALUES CAST</code> dans *server.log*.\n\nPapercut précise que la seule absence de ces indicateurs ne permet pas de déduire que les vulnérabilités n'ont pas été exploitées.\n\n<span class=\"important-content\">[Mise à jour du 31 août 2026]\n</span><br>L'éditeur a mis a jour son bulletin de sécurité avec de nouveaux indicateurs de compromission.",
   "title": "Multiples vulnérabilités dans Papercut",
   "vendor_advisories": [
     {
