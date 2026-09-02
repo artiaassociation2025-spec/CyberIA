@@ -1,0 +1,137 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Artifactory versions 7.161.x antérieures à 7.161.20",
+      "product": {
+        "name": "Artifactory",
+        "vendor": {
+          "name": "JFrog",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "Artifactory versions 7.146.x antérieures à 7.146.38",
+      "product": {
+        "name": "Artifactory",
+        "vendor": {
+          "name": "JFrog",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "Artifactory versions 7.111.4 à 7.111.x antérieures à 7.111.21",
+      "product": {
+        "name": "Artifactory",
+        "vendor": {
+          "name": "JFrog",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "Artifactory versions 7.125.x antérieures à 7.125.20",
+      "product": {
+        "name": "Artifactory",
+        "vendor": {
+          "name": "JFrog",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "Artifactory versions 7.117.x antérieures à 7.117.28",
+      "product": {
+        "name": "Artifactory",
+        "vendor": {
+          "name": "JFrog",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "Artifactory versions 7.133.x antérieures à 7.133.29",
+      "product": {
+        "name": "Artifactory",
+        "vendor": {
+          "name": "JFrog",
+          "scada": true
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-69104",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-69104"
+    },
+    {
+      "name": "CVE-2026-82329",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-82329"
+    },
+    {
+      "name": "CVE-2026-70551",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-70551"
+    },
+    {
+      "name": "CVE-2026-70548",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-70548"
+    },
+    {
+      "name": "CVE-2026-70550",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-70550"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1100",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-09-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Falsification de requêtes côté serveur (SSRF)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans JFrog Artifactory. Elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données, une falsification de requêtes côté serveur (SSRF) et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans JFrog Artifactory",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-08-25",
+      "title": "Bulletin de sécurité JFrog cve-2026-70550",
+      "url": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories#cve-2026-70550---potential-unauthorized-access-to-private-composer-repository-metadata-in-jfrog-artifactory"
+    },
+    {
+      "published_at": "2026-08-25",
+      "title": "Bulletin de sécurité JFrog cve-2026-69104",
+      "url": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories#cve-2026-69104---potential-unauthorized-repository-migration-in-jfrog-artifactory"
+    },
+    {
+      "published_at": "2026-08-25",
+      "title": "Bulletin de sécurité JFrog cve-2026-70548",
+      "url": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories#cve-2026-70548---ssrf-in-cocoapods-via-jfrog-artifactory-external-dependency"
+    },
+    {
+      "published_at": "2026-08-25",
+      "title": "Bulletin de sécurité JFrog cve-2026-70551",
+      "url": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories#cve-2026-70551"
+    },
+    {
+      "published_at": "2026-08-28",
+      "title": "Bulletin de sécurité JFrog cve-2026-82329",
+      "url": "https://docs.jfrog.com/releases/docs/jfrog-security-advisories#cve-2026-82329---potential-authentication-bypass-leading-to-administrative-access-in-artifactory"
+    }
+  ]
+}
