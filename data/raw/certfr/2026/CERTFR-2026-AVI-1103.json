@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Modèles SMA1000 6210, 7210 et 8200v versions antérieures à 12.4.3-03526",
+      "product": {
+        "name": "Secure Mobile Access",
+        "vendor": {
+          "name": "Sonicwall",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Modèles SMA1000 6210, 7210 et 8200v versions 12.5.x antérieures à 12.5.0-02952",
+      "product": {
+        "name": "Secure Mobile Access",
+        "vendor": {
+          "name": "Sonicwall",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-83549",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-83549"
+    },
+    {
+      "name": "CVE-2026-83548",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-83548"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1103",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-09-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Falsification de requêtes côté serveur (SSRF)"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits SonicWall. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et une falsification de requêtes côté serveur (SSRF).\n\nL'éditeur indique que les vulnérabilités CVE-2026-83548 et CVE-2026-83549 sont activement exploités.",
+  "title": "Multiples vulnérabilités dans les produits SonicWall",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-09-01",
+      "title": "Bulletin de sécurité SonicWall SNWLID-2026-0016",
+      "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0016"
+    }
+  ]
+}
