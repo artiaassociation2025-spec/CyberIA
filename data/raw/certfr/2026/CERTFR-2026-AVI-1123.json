@@ -1,0 +1,208 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "libmongocrypt versions antérieures à 1.20.4",
+      "product": {
+        "name": "libmongocrypt",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PHP Driver versions antérieures à 1.21.8",
+      "product": {
+        "name": "PHP Driver",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "C Driver versions antérieures à 1.30.9",
+      "product": {
+        "name": "C Driver",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "C++ Driver versions antérieures à 4.5.2",
+      "product": {
+        "name": "C++ Driver",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "C Driver versions 2.x antérieures à 2.5.2",
+      "product": {
+        "name": "C Driver",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PHP Driver versions 2.2.x antérieures à 2.5.1",
+      "product": {
+        "name": "PHP Driver",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "PHP Driver versions 2.1.x antérieures à 2.1.9",
+      "product": {
+        "name": "PHP Driver",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "MongoDB pour VS Code versions antérieures à 1.17.1",
+      "product": {
+        "name": "MongoDB pour VS Code",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-84966",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-84966"
+    },
+    {
+      "name": "CVE-2026-84970",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-84970"
+    },
+    {
+      "name": "CVE-2026-84969",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-84969"
+    },
+    {
+      "name": "CVE-2026-84964",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-84964"
+    },
+    {
+      "name": "CVE-2026-84965",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-84965"
+    },
+    {
+      "name": "CVE-2026-84971",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-84971"
+    },
+    {
+      "name": "CVE-2026-84967",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-84967"
+    },
+    {
+      "name": "CVE-2026-84962",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-84962"
+    },
+    {
+      "name": "CVE-2026-84963",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-84963"
+    },
+    {
+      "name": "CVE-2026-84968",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-84968"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1123",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-09-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans MongoDB. Certaines d'entre elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données, une atteinte à l'intégrité des données et une injection de requêtes illégitimes par rebond (CSRF).",
+  "title": "Multiples vulnérabilités dans MongoDB",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-09-03",
+      "title": "Bulletin de sécurité MongoDB CDRIVER-6410",
+      "url": "https://jira.mongodb.org/browse/CDRIVER-6410"
+    },
+    {
+      "published_at": "2026-09-03",
+      "title": "Bulletin de sécurité MongoDB CXX-3547",
+      "url": "https://jira.mongodb.org/browse/CXX-3547"
+    },
+    {
+      "published_at": "2026-09-03",
+      "title": "Bulletin de sécurité MongoDB CXX-3548",
+      "url": "https://jira.mongodb.org/browse/CXX-3548"
+    },
+    {
+      "published_at": "2026-09-03",
+      "title": "Bulletin de sécurité MongoDB VSCODE-798",
+      "url": "https://jira.mongodb.org/browse/VSCODE-798"
+    },
+    {
+      "published_at": "2026-09-03",
+      "title": "Bulletin de sécurité MongoDB MONGOCRYPT-960",
+      "url": "https://jira.mongodb.org/browse/MONGOCRYPT-960"
+    },
+    {
+      "published_at": "2026-09-03",
+      "title": "Bulletin de sécurité MongoDB CDRIVER-6405",
+      "url": "https://jira.mongodb.org/browse/CDRIVER-6405"
+    },
+    {
+      "published_at": "2026-09-03",
+      "title": "Bulletin de sécurité MongoDB MONGOCRYPT-971",
+      "url": "https://jira.mongodb.org/browse/MONGOCRYPT-971"
+    },
+    {
+      "published_at": "2026-09-03",
+      "title": "Bulletin de sécurité MongoDB PHPC-2744",
+      "url": "https://jira.mongodb.org/browse/PHPC-2744"
+    },
+    {
+      "published_at": "2026-09-03",
+      "title": "Bulletin de sécurité MongoDB CDRIVER-6407",
+      "url": "https://jira.mongodb.org/browse/CDRIVER-6407"
+    },
+    {
+      "published_at": "2026-09-03",
+      "title": "Bulletin de sécurité MongoDB CDRIVER-6409",
+      "url": "https://jira.mongodb.org/browse/CDRIVER-6409"
+    }
+  ]
+}
