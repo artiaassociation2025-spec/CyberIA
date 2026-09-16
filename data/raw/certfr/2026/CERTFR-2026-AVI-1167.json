@@ -2,7 +2,7 @@
   "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
   "affected_systems": [
     {
-      "description": "CPython sans le dernier correctif de sécurité",
+      "description": "CPython sans les derniers correctifs de sécurité",
       "product": {
         "name": "CPython",
         "vendor": {
@@ -18,6 +18,10 @@
     {
       "name": "CVE-2026-87910",
       "url": "https://www.cve.org/CVERecord?id=CVE-2026-87910"
+    },
+    {
+      "name": "CVE-2026-82049",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-82049"
     }
   ],
   "links": [],
@@ -26,20 +30,38 @@
     {
       "description": "Version initiale",
       "revision_date": "2026-09-14T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de l'identifiant CVE-2026-82049, modification des risques en conséquence.",
+      "revision_date": "2026-09-15T00:00:00.000000"
     }
   ],
   "risks": [
     {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
       "description": "Non spécifié par l'éditeur"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
     }
   ],
-  "summary": "Une vulnérabilité a été découverte dans CPython. Elle permet à un attaquant de provoquer un problème de sécurité non spécifié par l'éditeur.",
-  "title": "Vulnérabilité dans CPython",
+  "summary": "De multiples vulnérabilités ont été découvertes dans Python. Certaines d'entre elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données, une atteinte à l'intégrité des données et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans Python",
   "vendor_advisories": [
     {
       "published_at": "2026-09-11",
       "title": "Bulletin de sécurité Python 57TBTLL2W6APMZR3A25B2YV7GL3EPTDJ",
       "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/57TBTLL2W6APMZR3A25B2YV7GL3EPTDJ/"
+    },
+    {
+      "published_at": "2026-09-14",
+      "title": "Bulletin de sécurité Python EFJWGAZJA56AKSBR2WHMHQZO7RRLZPRH/",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/EFJWGAZJA56AKSBR2WHMHQZO7RRLZPRH/"
     }
   ]
 }
