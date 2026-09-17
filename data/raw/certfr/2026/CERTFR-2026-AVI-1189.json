@@ -1,0 +1,55 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Docker Sandboxes versions antérieures à 0.42.0",
+      "product": {
+        "name": "Docker",
+        "vendor": {
+          "name": "Docker",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-77179",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-77179"
+    },
+    {
+      "name": "CVE-2026-79994",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-79994"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1189",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-09-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Docker. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une atteinte à la confidentialité des données et une atteinte à l'intégrité des données.",
+  "title": "Multiples vulnérabilités dans Docker",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-09-07",
+      "title": "Bulletin de sécurité Docker #docker-sandboxes-0420-security-update-cve-2026-77179-and-cve-2026-79994",
+      "url": "https://docs.docker.com/security/security-announcements/#docker-sandboxes-0420-security-update-cve-2026-77179-and-cve-2026-79994"
+    }
+  ]
+}
