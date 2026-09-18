@@ -106,6 +106,10 @@
     {
       "description": "Version initiale",
       "revision_date": "2026-09-15T00:00:00.000000"
+    },
+    {
+      "description": "Ajout de la section Indicateurs de compromission.",
+      "revision_date": "2026-09-17T00:00:00.000000"
     }
   ],
   "risks": [
@@ -125,7 +129,7 @@
       "description": "Contournement de la politique de sécurité"
     }
   ],
-  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Cisco. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une injection SQL (SQLi).\n\nCisco indique que la vulnérabilité CVE-2026-76461 est activement exploitée.",
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Cisco. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une injection SQL (SQLi).\n\nCisco indique que la vulnérabilité CVE-2026-76461 est activement exploitée.\n\n## Indicateurs de compromission\n\nCisco recommande de rechercher des requêtes SQL suspectes dans les journaux *mail_logs*. <br>\nA ce titre, l'éditeur fournit un exemple, non-exhaustif, de commande :<br>\n<code>cisco-esa> grep -i \"COPY.*TO PROGRAM\" [IronPort Text Mail Logs Log name - Default: mail_logs]</code>",
   "title": "Multiples vulnérabilités dans les produits Cisco",
   "vendor_advisories": [
     {
