@@ -1,0 +1,58 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Multi-Domain Security Management Server sans le correctif R82.20",
+      "product": {
+        "name": "Multi-Domain Security Management",
+        "vendor": {
+          "name": "Check Point",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Security Management Server sans le correctif R82.20",
+      "product": {
+        "name": "Security Management",
+        "vendor": {
+          "name": "Check Point",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-93616",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-93616"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1219",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-09-23T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Check Point Security Management Server. Elle permet à un attaquant de provoquer une exécution de code arbitraire à distance et une atteinte à l'intégrité des données.\n\nL'éditeur indique que la vulnérabilité CVE-2026-93616 est activement exploitée.\n\nCheck Point propose de limiter l'accès à l'interface d'administration et de ne pas l'exposer sur Internet. Des indicateurs de compromission sont disponibles dans l'avis de l'éditeur.",
+  "title": "Vulnérabilité dans Check Point Security Management Server",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-09-22",
+      "title": "Bulletin de sécurité Check Point sk1000171",
+      "url": "https://support.checkpoint.com/results/sk/sk1000171"
+    }
+  ]
+}
