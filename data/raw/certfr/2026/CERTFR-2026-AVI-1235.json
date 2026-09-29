@@ -1,0 +1,137 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Citrix NetScaler ADC versions 14.1-FIPS antérieures à 14.1-73.37 FIPS",
+      "product": {
+        "name": "NetScaler ADC",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix NetScaler ADC versions 13.1-FIPS antérieures à 13.1-NDcPP 13.1.37.279",
+      "product": {
+        "name": "NetScaler ADC",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetScaler Gateway versions 13.1.x antérieures à 13.1-64.23",
+      "product": {
+        "name": "NetScaler Gateway",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "NetScaler Gateway versions 14.1.x antérieures à 14.1-73.37",
+      "product": {
+        "name": "NetScaler Gateway",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix NetScaler ADC versions 14.1.x antérieures à 14.1-73.37",
+      "product": {
+        "name": "NetScaler ADC",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Citrix NetScaler ADC versions 13.1.x antérieures à 13.1-64.23",
+      "product": {
+        "name": "NetScaler ADC",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-88777",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-88777"
+    },
+    {
+      "name": "CVE-2026-88776",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-88776"
+    },
+    {
+      "name": "CVE-2026-88771",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-88771"
+    },
+    {
+      "name": "CVE-2026-88772",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-88772"
+    },
+    {
+      "name": "CVE-2026-88775",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-88775"
+    },
+    {
+      "name": "CVE-2026-88774",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-88774"
+    },
+    {
+      "name": "CVE-2026-88773",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-88773"
+    },
+    {
+      "name": "CVE-2026-88778",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-88778"
+    }
+  ],
+  "links": [
+    {
+      "title": "Billet de blogue Citrix du 27 septembre 2026",
+      "url": "https://community.citrix.com/techzone-blogs/110_security-updates/netscaler-adc-and-netscaler-gateway-security-bulletin-for-cve-2026-88771-through-cve-2026-88778/#Indicators_of_Compromise__cabcb4"
+    }
+  ],
+  "reference": "CERTFR-2026-AVI-1235",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-09-28T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Non spécifié par l'éditeur"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Citrix NetScaler ADC et Gateway. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et un contournement de la politique de sécurité.\n\nCitrix indique que les vulnérabilités CVE-2026-88771 et CVE-2026-88772 sont activement exploitées.\n\nL'éditeur indique que si les correctifs n'ont pas été installés, tous les équipements sont vulnérables dans leur configuration par défaut.",
+  "title": "Multiples vulnérabilités dans Citrix NetScaler ADC et Gateway",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-09-27",
+      "title": "Bulletin de sécurité Citrix CTX697096",
+      "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697096&articleURL=Citrix_NetScaler_ADC_and_Citrix_NetScaler_Gateway_Security_Bulletin_for_CVE_2026_88771_CVE_2026_88772_CVE_2026_88773_CVE_2026_88774_CVE_2026_88775_CVE_2026_88776_CVE_2026_88777_and_CVE_2026_88778"
+    }
+  ]
+}
