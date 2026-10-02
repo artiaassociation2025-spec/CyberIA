@@ -1,0 +1,57 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "CPython sans le dernier correctif de sécurité",
+      "product": {
+        "name": "CPython",
+        "vendor": {
+          "name": "Python",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-19445",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-19445"
+    },
+    {
+      "name": "CVE-2026-19553",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-19553"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1243",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-10-01T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans CPython. Elles permettent à un attaquant de provoquer un déni de service à distance et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans CPython",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-09-30",
+      "title": "Bulletin de sécurité Python QMQIUQB6WGGC3MI7I3WKQXOYOBDSPPS3",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/QMQIUQB6WGGC3MI7I3WKQXOYOBDSPPS3/"
+    },
+    {
+      "published_at": "2026-09-30",
+      "title": "Bulletin de sécurité Python QNZRG3YOAMTHDCMVCICXGY6YEFPY2VDL",
+      "url": "https://mail.python.org/archives/list/security-announce@python.org/thread/QNZRG3YOAMTHDCMVCICXGY6YEFPY2VDL/"
+    }
+  ]
+}
