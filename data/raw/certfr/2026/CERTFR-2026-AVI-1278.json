@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Backup & Replication versions antérieures à 12.3.2 P4 (build 12.3.2.4934)",
+      "product": {
+        "name": "Veeam Backup & Replication",
+        "vendor": {
+          "name": "Veeam",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2025-64393",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-64393"
+    },
+    {
+      "name": "CVE-2025-64392",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2025-64392"
+    },
+    {
+      "name": "CVE-2026-93026",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-93026"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1278",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-10-07T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Veeam. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une atteinte à la confidentialité des données et une injection de code indirecte à distance (XSS).",
+  "title": "Multiples vulnérabilités dans les produits Veeam",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-10-06",
+      "title": "Bulletin de sécurité Veeam kb4934",
+      "url": "https://www.veeam.com/kb4934"
+    }
+  ]
+}
