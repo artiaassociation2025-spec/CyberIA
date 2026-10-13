@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PostgreSQL JDBC versions antérieures à 42.7.14\n",
+      "product": {
+        "name": "PostgreSQL JDBC",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-107315",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-107315"
+    },
+    {
+      "name": "CVE-2026-107314",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-107314"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1292",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-10-12T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans PostgreSQL JDBC. Elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans PostgreSQL JDBC",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-10-08",
+      "title": "Bulletin de sécurité PostgreSQL",
+      "url": "https://github.com/pgjdbc/pgjdbc/security/advisories/GHSA-f64h-wr5q-3qf3"
+    },
+    {
+      "published_at": "2026-10-08",
+      "title": "Bulletin de sécurité PostgreSQL",
+      "url": "https://github.com/pgjdbc/pgjdbc/security/advisories/GHSA-rhp9-mr79-r74h"
+    },
+    {
+      "published_at": "2026-10-09",
+      "title": "Bulletin de sécurité PostgreSQL 2026-10-07-postgresql-jdbc-42714-security-update-for-multiple-cves-3399",
+      "url": "https://www.postgresql.org/about/news/2026-10-07-postgresql-jdbc-42714-security-update-for-multiple-cves-3399/"
+    }
+  ]
+}
