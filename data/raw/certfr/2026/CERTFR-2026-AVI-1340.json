@@ -1,0 +1,62 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Roundcube Webmail versions 1.7.x antérieures à 1.7.5",
+      "product": {
+        "name": "Roundcube Webmail",
+        "vendor": {
+          "name": "Roundcube",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Roundcube Webmail versions antérieures 1.6.20",
+      "product": {
+        "name": "Roundcube Webmail",
+        "vendor": {
+          "name": "Roundcube",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1340",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-10-19T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Falsification de requêtes côté serveur (SSRF)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Roundcube Webmail. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une falsification de requêtes côté serveur (SSRF) et une injection de code indirecte à distance (XSS).",
+  "title": "Multiples vulnérabilités dans Roundcube Webmail",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-10-19",
+      "title": "Bulletin de sécurité Roundcube security-updates-1.6.20-and-1.7.5",
+      "url": "https://roundcube.net/news/2026/10/19/security-updates-1.6.20-and-1.7.5"
+    }
+  ]
+}
