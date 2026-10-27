@@ -1,0 +1,220 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "libmmongocrypt versions antérieures à 1.21.1",
+      "product": {
+        "name": "libmongocrypt",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "C Driver versions 2.5.x antérieures à 2.5.7",
+      "product": {
+        "name": "C Driver",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "C Driver versions antérieures à 1.30.14",
+      "product": {
+        "name": "C Driver",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "C# Driver versions antérieures à 3.13.0",
+      "product": {
+        "name": "C# Driver",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Compass versions antérieures à 1.53.1",
+      "product": {
+        "name": "Compass",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-114645",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-114645"
+    },
+    {
+      "name": "CVE-2026-114652",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-114652"
+    },
+    {
+      "name": "CVE-2026-114649",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-114649"
+    },
+    {
+      "name": "CVE-2026-114646",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-114646"
+    },
+    {
+      "name": "CVE-2026-114648",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-114648"
+    },
+    {
+      "name": "CVE-2026-114654",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-114654"
+    },
+    {
+      "name": "CVE-2026-114653",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-114653"
+    },
+    {
+      "name": "CVE-2026-114643",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-114643"
+    },
+    {
+      "name": "CVE-2026-114647",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-114647"
+    },
+    {
+      "name": "CVE-2026-114650",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-114650"
+    },
+    {
+      "name": "CVE-2026-114644",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-114644"
+    },
+    {
+      "name": "CVE-2026-115929",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-115929"
+    },
+    {
+      "name": "CVE-2026-114651",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-114651"
+    },
+    {
+      "name": "CVE-2026-114655",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-114655"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1386",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-10-26T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de requêtes illégitimes par rebond (CSRF)"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Injection SQL (SQLi)"
+    },
+    {
+      "description": "Déni de service"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits MongoDB. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, une atteinte à la confidentialité des données et une atteinte à l'intégrité des données.",
+  "title": "Multiples vulnérabilités dans les produits MongoDB",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-10-22",
+      "title": "Bulletin de sécurité MongoDB CSHARP-6162",
+      "url": "https://jira.mongodb.org/browse/CSHARP-6162"
+    },
+    {
+      "published_at": "2026-10-24",
+      "title": "Bulletin de sécurité MongoDB v1.53.1",
+      "url": "https://github.com/mongodb-js/compass/releases/tag/v1.53.1"
+    },
+    {
+      "published_at": "2026-10-22",
+      "title": "Bulletin de sécurité MongoDB CSHARP-6186",
+      "url": "https://jira.mongodb.org/browse/CSHARP-6186"
+    },
+    {
+      "published_at": "2026-10-22",
+      "title": "Bulletin de sécurité MongoDB CSHARP-6166",
+      "url": "https://jira.mongodb.org/browse/CSHARP-6166"
+    },
+    {
+      "published_at": "2026-10-22",
+      "title": "Bulletin de sécurité MongoDB MONGOCRYPT-963",
+      "url": "https://jira.mongodb.org/browse/MONGOCRYPT-963"
+    },
+    {
+      "published_at": "2026-10-22",
+      "title": "Bulletin de sécurité MongoDB CSHARP-6174",
+      "url": "https://jira.mongodb.org/browse/CSHARP-6174"
+    },
+    {
+      "published_at": "2026-10-22",
+      "title": "Bulletin de sécurité MongoDB CSHARP-6157",
+      "url": "https://jira.mongodb.org/browse/CSHARP-6157"
+    },
+    {
+      "published_at": "2026-10-22",
+      "title": "Bulletin de sécurité MongoDB CSHARP-6181",
+      "url": "https://jira.mongodb.org/browse/CSHARP-6181"
+    },
+    {
+      "published_at": "2026-10-22",
+      "title": "Bulletin de sécurité MongoDB CSHARP-6184",
+      "url": "https://jira.mongodb.org/browse/CSHARP-6184"
+    },
+    {
+      "published_at": "2026-10-22",
+      "title": "Bulletin de sécurité MongoDB CSHARP-6180",
+      "url": "https://jira.mongodb.org/browse/CSHARP-6180"
+    },
+    {
+      "published_at": "2026-10-22",
+      "title": "Bulletin de sécurité MongoDB CDRIVER-6421",
+      "url": "https://jira.mongodb.org/browse/CDRIVER-6421"
+    },
+    {
+      "published_at": "2026-10-22",
+      "title": "Bulletin de sécurité MongoDB CSHARP-6170",
+      "url": "https://jira.mongodb.org/browse/CSHARP-6170"
+    },
+    {
+      "published_at": "2026-10-22",
+      "title": "Bulletin de sécurité MongoDB CSHARP-6179",
+      "url": "https://jira.mongodb.org/browse/CSHARP-6179"
+    },
+    {
+      "published_at": "2026-10-22",
+      "title": "Bulletin de sécurité MongoDB CSHARP-6168",
+      "url": "https://jira.mongodb.org/browse/CSHARP-6168"
+    }
+  ]
+}
