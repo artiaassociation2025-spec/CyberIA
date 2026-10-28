@@ -1,0 +1,84 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "NPort W2150A-W4/W2250A-W4 Series versions antérieures à v1.5.9",
+      "product": {
+        "name": "NPort W2150A-W4/W2250A-W4 Series",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "Remote Connect Suite versions antérieures à v4.2.2",
+      "product": {
+        "name": "Remote Connect Suite",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "L'éditeur indique qu'il est nécessaire de contacter le support technique pour obtenir le correctif lié aux produits NPort W2150A-W4/W2250A-W4 Series et Remote Connect Suite.\nL'éditeur indique que le produit OnCell G3150A-LTE Series est en fin de vie.",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-111460",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-111460"
+    },
+    {
+      "name": "CVE-2026-111459",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-111459"
+    },
+    {
+      "name": "CVE-2026-111461",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-111461"
+    },
+    {
+      "name": "CVE-2026-111548",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-111548"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1393",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-10-27T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Exécution de code arbitraire"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Moxa. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire, un déni de service à distance et une atteinte à la confidentialité des données.",
+  "title": "Multiples vulnérabilités dans les produits Moxa",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-10-27",
+      "title": "Bulletin de sécurité Moxa MPSA-261250",
+      "url": "https://www.moxa.com/en/support/product-support/security-advisory/mpsa-261250-cve-2026-111548-stack-buffer-overflow-vulnerability-in-wireless-device-servers"
+    },
+    {
+      "published_at": "2026-10-27",
+      "title": "Bulletin de sécurité Moxa MPSA-269510",
+      "url": "https://www.moxa.com/en/support/product-support/security-advisory/mpsa-269510-cve-2026-111459-cve-2026-111460-cve-2026-111461-vulnerabilities-in-moxa-remote-connect-suite-mrc-client"
+    }
+  ]
+}
