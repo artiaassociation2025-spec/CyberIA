@@ -1,0 +1,45 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "trilogy versions antérieures à 2.13.2",
+      "product": {
+        "name": "trilogy",
+        "vendor": {
+          "name": "Ruby on Rails",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1424",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-10-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection SQL (SQLi)"
+    }
+  ],
+  "summary": "Une vulnérabilité a été découverte dans Ruby on Rails trilogy. Elle permet à un attaquant de provoquer une injection SQL (SQLi).",
+  "title": "Vulnérabilité dans Ruby on Rails trilogy",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-10-29",
+      "title": "Bulletin de sécurité Ruby on Rails 91797",
+      "url": "https://discuss.rubyonrails.org/t/ghsa-744p-w4gc-m3gh-sql-injection-through-trilogy-escape-with-multibyte-encodings/91797"
+    },
+    {
+      "published_at": "2026-10-29",
+      "title": "Bulletin de sécurité Ruby on Rails GHSA-744p-w4gc-m3gh",
+      "url": "https://github.com/trilogy-libraries/trilogy/security/advisories/GHSA-744p-w4gc-m3gh"
+    }
+  ]
+}

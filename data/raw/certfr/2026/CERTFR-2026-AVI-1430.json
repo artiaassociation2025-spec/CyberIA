@@ -1,0 +1,89 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Laravel MongoDB versions antérieures à 5.12.0",
+      "product": {
+        "name": "Laravel MongoDB",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Java Driver versions antérieures à 5.14.0",
+      "product": {
+        "name": "Java Driver",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Database Tools versions antérieures à 100.20.0",
+      "product": {
+        "name": "Database Tools",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-116641",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-116641"
+    },
+    {
+      "name": "CVE-2026-118510",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-118510"
+    },
+    {
+      "name": "CVE-2026-118581",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-118581"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1430",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-10-30T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Injection SQL (SQLi)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits MongoDB. Certaines d'entre elles permettent à un attaquant de provoquer une atteinte à l'intégrité des données, une injection SQL (SQLi) et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans les produits MongoDB",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-10-28",
+      "title": "Bulletin de sécurité MongoDB r5.14.0",
+      "url": "https://github.com/mongodb/mongo-java-driver/releases/tag/r5.14.0"
+    },
+    {
+      "published_at": "2026-10-28",
+      "title": "Bulletin de sécurité MongoDB dbtools-100.20.0-changelog",
+      "url": "https://www.mongodb.com/docs/database-tools/release-notes/dbtools-100.20.0-changelog/"
+    },
+    {
+      "published_at": "2026-10-28",
+      "title": "Bulletin de sécurité MongoDB 5.12.0",
+      "url": "https://github.com/mongodb/laravel-mongodb/releases/tag/5.12.0"
+    }
+  ]
+}
