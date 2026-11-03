@@ -1,0 +1,64 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "macmon versions 6.x et 7.x sans le dernier correctif de sécurité",
+      "product": {
+        "name": "macmon",
+        "vendor": {
+          "name": "Belden",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": " NRSW versions antérieures à 5.0.0.104",
+      "product": {
+        "name": "NetModule Router Software",
+        "vendor": {
+          "name": "Belden",
+          "scada": true
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "Belden indique que les versions 6.x doivent être mises à jour en 7.x avant de pouvoir appliquer le dernier correctif de sécurité.",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-109619",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-109619"
+    },
+    {
+      "name": "CVE-2026-109618",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-109618"
+    }
+  ],
+  "links": [
+    {
+      "title": "Alerte CERT-FR CERTFR-2026-ALE-014 du 21 octobre 2026",
+      "url": "/alerte/CERTFR-2026-ALE-014/"
+    }
+  ],
+  "reference": "CERTFR-2026-AVI-1438",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-11-02T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Belden macmon et NRSW. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance.",
+  "title": "Multiples vulnérabilités dans macmon et NRSW",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-10-22",
+      "title": "Bulletin de sécurité Belden PSIRT-10-Critical-PHP-Vulnerabilities-in-macmon-and-NRSW",
+      "url": "https://assets.belden.com/asset/0e20ea6c-c1f5-4269-b765-e160a2bf4965/PSIRT-10-Critical-PHP-Vulnerabilities-in-macmon-and-NRSW.pdf"
+    }
+  ]
+}
