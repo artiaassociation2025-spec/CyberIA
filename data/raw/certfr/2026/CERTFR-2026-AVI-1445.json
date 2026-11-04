@@ -1,0 +1,96 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "PostgreSQL ODBC versions antérieures à 18.00.0006",
+      "product": {
+        "name": "ODBC",
+        "vendor": {
+          "name": "PostgreSQL",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-120066",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-120066"
+    },
+    {
+      "name": "CVE-2026-120064",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-120064"
+    },
+    {
+      "name": "CVE-2026-120067",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-120067"
+    },
+    {
+      "name": "CVE-2026-120063",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-120063"
+    },
+    {
+      "name": "CVE-2026-120060",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-120060"
+    },
+    {
+      "name": "CVE-2026-120058",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-120058"
+    },
+    {
+      "name": "CVE-2026-120061",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-120061"
+    },
+    {
+      "name": "CVE-2026-120065",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-120065"
+    },
+    {
+      "name": "CVE-2026-120059",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-120059"
+    },
+    {
+      "name": "CVE-2026-120057",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-120057"
+    },
+    {
+      "name": "CVE-2026-120062",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-120062"
+    }
+  ],
+  "links": [
+    {
+      "title": "Changelog PostgreSQL 18.00.0006 du 2 novembre 2026",
+      "url": "https://github.com/postgresql-interfaces/psqlodbc/blob/main/Changelog.md"
+    }
+  ],
+  "reference": "CERTFR-2026-AVI-1445",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-11-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection SQL (SQLi)"
+    },
+    {
+      "description": "Non spécifié par l'éditeur"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans PostgreSQL. Elles permettent à un attaquant de provoquer une injection SQL (SQLi), un contournement de la politique de sécurité et un problème de sécurité non spécifié par l'éditeur.",
+  "title": "Multiples vulnérabilités dans PostgreSQL",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-11-02",
+      "title": "Bulletin de sécurité PostgreSQL security-release-for-psqlodbc-3431",
+      "url": "https://www.postgresql.org/about/news/security-release-for-psqlodbc-3431/"
+    }
+  ]
+}

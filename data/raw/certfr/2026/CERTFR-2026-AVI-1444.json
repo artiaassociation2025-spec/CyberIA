@@ -1,0 +1,66 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "glpi versions 11.0.x antérieures à 11.0.10",
+      "product": {
+        "name": "GLPI",
+        "vendor": {
+          "name": "GLPI",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "glpi versions antérieures à 10.0.28",
+      "product": {
+        "name": "GLPI",
+        "vendor": {
+          "name": "GLPI",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1444",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-11-03T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection de code indirecte à distance (XSS)"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans GLPI. Elles permettent à un attaquant de provoquer une élévation de privilèges, une injection de code indirecte à distance (XSS) et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans GLPI",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-11-02",
+      "title": "Bulletin de sécurité GLPI GHSA-5pgp-cfq7-4j9h",
+      "url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-5pgp-cfq7-4j9h"
+    },
+    {
+      "published_at": "2026-11-02",
+      "title": "Bulletin de sécurité GLPI GHSA-47mc-679g-2jrv",
+      "url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-47mc-679g-2jrv"
+    },
+    {
+      "published_at": "2026-11-02",
+      "title": "Bulletin de sécurité GLPI GHSA-c46f-4v9j-5gpc",
+      "url": "https://github.com/glpi-project/glpi/security/advisories/GHSA-c46f-4v9j-5gpc"
+    }
+  ]
+}
