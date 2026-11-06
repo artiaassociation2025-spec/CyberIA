@@ -1,0 +1,86 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "SIMATIC IoT2050 versions antérieures à 4.3.4-1",
+      "product": {
+        "name": "SIMATIC",
+        "vendor": {
+          "name": "Siemens",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "famille Desigo CC V9 toutes versions sans le dernier correctif pour .NET",
+      "product": {
+        "name": "Desigo",
+        "vendor": {
+          "name": "Siemens",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "famille Desigo CC V8 toutes versions sans le dernier correctif pour .NET",
+      "product": {
+        "name": "Desigo",
+        "vendor": {
+          "name": "Siemens",
+          "scada": true
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-58115",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-58115"
+    },
+    {
+      "name": "CVE-2026-111497",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-111497"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1464",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-11-05T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Siemens. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidentialité des données.",
+  "title": "Multiples vulnérabilités dans les produits Siemens",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-11-04",
+      "title": "Bulletin de sécurité Siemens SSA-045512",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-045512.html"
+    },
+    {
+      "published_at": "2026-11-04",
+      "title": "Bulletin de sécurité Siemens SSA-834709",
+      "url": "https://cert-portal.siemens.com/productcert/html/ssa-834709.html"
+    }
+  ]
+}

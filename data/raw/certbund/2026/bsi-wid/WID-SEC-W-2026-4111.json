@@ -154,14 +154,79 @@
         "category": "external",
         "summary": "Red Hat Security Advisory RHSA-2026:94500 vom 2026-11-03",
         "url": "https://access.redhat.com/errata/RHSA-2026:94500"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2026:94500 vom 2026-11-04",
+        "url": "https://errata.build.resf.org/RLSA-2026:94500"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:94523 vom 2026-11-03",
+        "url": "https://access.redhat.com/errata/RHSA-2026:94523"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:94557 vom 2026-11-03",
+        "url": "https://access.redhat.com/errata/RHSA-2026:94557"
+      },
+      {
+        "category": "external",
+        "summary": "Rocky Linux Security Advisory RLSA-2026:94501 vom 2026-11-04",
+        "url": "https://errata.build.resf.org/RLSA-2026:94501"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:94634 vom 2026-11-03",
+        "url": "https://access.redhat.com/errata/RHSA-2026:94634"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:95012 vom 2026-11-04",
+        "url": "https://access.redhat.com/errata/RHSA-2026:95012"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:94631 vom 2026-11-03",
+        "url": "https://access.redhat.com/errata/RHSA-2026:94631"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:95267 vom 2026-11-04",
+        "url": "https://access.redhat.com/errata/RHSA-2026:95267"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:95360 vom 2026-11-04",
+        "url": "https://access.redhat.com/errata/RHSA-2026:95360"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2026-94500 vom 2026-11-04",
+        "url": "https://oss.oracle.com/pipermail/el-errata/2026-November/022794.html"
+      },
+      {
+        "category": "external",
+        "summary": "Oracle Linux Security Advisory ELSA-2026-94501 vom 2026-11-04",
+        "url": "https://oss.oracle.com/pipermail/el-errata/2026-November/022783.html"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:95365 vom 2026-11-05",
+        "url": "https://access.redhat.com/errata/RHSA-2026:95365"
+      },
+      {
+        "category": "external",
+        "summary": "Red Hat Security Advisory RHSA-2026:95261 vom 2026-11-04",
+        "url": "https://access.redhat.com/errata/RHSA-2026:95261"
       }
     ],
     "source_lang": "en-US",
     "title": "Red Hat Ansible Automation Platform: Mehrere Schwachstellen",
     "tracking": {
-      "current_release_date": "2026-11-02T23:00:00.000+00:00",
+      "current_release_date": "2026-11-04T23:00:00.000+00:00",
       "generator": {
-        "date": "2026-11-03T12:22:50.399+00:00",
+        "date": "2026-11-05T09:52:48.121+00:00",
         "engine": {
           "name": "BSI-WID",
           "version": "1.7.0"
@@ -199,10 +264,20 @@
           "date": "2026-11-02T23:00:00.000+00:00",
           "number": "6",
           "summary": "Neue Updates von IBM aufgenommen"
+        },
+        {
+          "date": "2026-11-03T23:00:00.000+00:00",
+          "number": "7",
+          "summary": "Neue Updates von Rocky Enterprise Software Foundation und Red Hat aufgenommen"
+        },
+        {
+          "date": "2026-11-04T23:00:00.000+00:00",
+          "number": "8",
+          "summary": "Neue Updates von Red Hat und Oracle Linux aufgenommen"
         }
       ],
       "status": "final",
-      "version": "6"
+      "version": "8"
     }
   },
   "product_tree": {
@@ -240,6 +315,40 @@
         ],
         "category": "vendor",
         "name": "IBM"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "Oracle Linux",
+            "product": {
+              "name": "Oracle Linux",
+              "product_id": "T056236",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:oracle:linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "Oracle"
+      },
+      {
+        "branches": [
+          {
+            "category": "product_name",
+            "name": "RESF Rocky Linux",
+            "product": {
+              "name": "RESF Rocky Linux",
+              "product_id": "T054581",
+              "product_identification_helper": {
+                "cpe": "cpe:/o:resf:rocky_linux:-"
+              }
+            }
+          }
+        ],
+        "category": "vendor",
+        "name": "RESF"
       },
       {
         "branches": [
@@ -321,7 +430,9 @@
       "cve": "CVE-2026-102266",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -337,7 +448,9 @@
       "cve": "CVE-2026-102267",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -353,7 +466,9 @@
       "cve": "CVE-2026-102268",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -369,7 +484,9 @@
       "cve": "CVE-2026-102271",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -385,7 +502,9 @@
       "cve": "CVE-2026-102272",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -401,7 +520,9 @@
       "cve": "CVE-2026-102273",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -417,7 +538,9 @@
       "cve": "CVE-2026-102925",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -433,7 +556,9 @@
       "cve": "CVE-2026-102930",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -449,7 +574,9 @@
       "cve": "CVE-2026-102937",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -465,7 +592,9 @@
       "cve": "CVE-2026-102938",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -481,7 +610,9 @@
       "cve": "CVE-2026-103262",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -497,7 +628,9 @@
       "cve": "CVE-2026-104851",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -513,7 +646,9 @@
       "cve": "CVE-2026-11332",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -529,7 +664,9 @@
       "cve": "CVE-2026-27459",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -545,7 +682,9 @@
       "cve": "CVE-2026-45820",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -561,7 +700,9 @@
       "cve": "CVE-2026-63374",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -577,7 +718,9 @@
       "cve": "CVE-2026-87776",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -593,7 +736,9 @@
       "cve": "CVE-2026-87817",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -609,7 +754,9 @@
       "cve": "CVE-2026-90711",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -625,7 +772,9 @@
       "cve": "CVE-2026-90959",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -641,7 +790,9 @@
       "cve": "CVE-2026-92982",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -657,7 +808,9 @@
       "cve": "CVE-2026-94416",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -673,7 +826,9 @@
       "cve": "CVE-2026-97687",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",
@@ -689,7 +844,9 @@
       "cve": "CVE-2026-97689",
       "product_status": {
         "known_affected": [
+          "T056236",
           "2951",
+          "T054581",
           "T061634",
           "67646",
           "T021415",

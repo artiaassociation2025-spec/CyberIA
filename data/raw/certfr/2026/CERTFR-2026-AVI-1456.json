@@ -1,0 +1,52 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "GMS versions 9.5.2 et antérieures",
+      "product": {
+        "name": "GMS",
+        "vendor": {
+          "name": "Sonicwall",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "SonicWall indique que ce produit est en fin de vie et ne recevra donc plus de correctifs de sécurité.",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-109594",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-109594"
+    },
+    {
+      "name": "CVE-2026-109593",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-109593"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1456",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-11-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Injection SQL (SQLi)"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits SonicWall. Elles permettent à un attaquant de provoquer une atteinte à la confidentialité des données et une injection SQL (SQLi).",
+  "title": "Multiples vulnérabilités dans les produits SonicWall",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-11-03",
+      "title": "Bulletin de sécurité SonicWall SNWLID-2026-0019",
+      "url": "https://psirt.global.sonicwall.com/vuln-detail/SNWLID-2026-0019"
+    }
+  ]
+}

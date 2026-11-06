@@ -1,0 +1,74 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Zookeeper versions 3.9.x antérieures à 3.9.7",
+      "product": {
+        "name": "Zookeeper",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Zookeeper versions 3.8.x antérieures à 3.8.8",
+      "product": {
+        "name": "Zookeeper",
+        "vendor": {
+          "name": "Apache",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-100302",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-100302"
+    },
+    {
+      "name": "CVE-2026-115448",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-115448"
+    },
+    {
+      "name": "CVE-2026-100235",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-100235"
+    },
+    {
+      "name": "CVE-2026-100300",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-100300"
+    },
+    {
+      "name": "CVE-2026-100252",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-100252"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1448",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-11-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans Apache Zookeeper. Elles permettent à un attaquant de provoquer un déni de service à distance et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans Apache Zookeeper",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-11-04",
+      "title": "Bulletin de sécurité Apache Zookeeper security",
+      "url": "https://zookeeper.apache.org/security.html"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "UniconOS Management (Scout) On-Prem Scout LTSR sans le correctif de sécurité 2508 CU2 LTSR",
+      "product": {
+        "name": "UniconOS",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "XenServer 8.4 et 9 avec Workload Balancing versions antérieures à 2026.1.1 et Conversion Manager versions antérieures à 2026.2.0",
+      "product": {
+        "name": "XenServer",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Scout Cloud Gateway (SCG) On-Prem sans le correctif de sécurité 2605.1-3",
+      "product": {
+        "name": "Scout Cloud Gateway",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "UniconOS Management (Scout) On-Prem sans le correctif de sécurité 2609.1",
+      "product": {
+        "name": "UniconOS",
+        "vendor": {
+          "name": "Citrix",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2022-36763",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-36763"
+    },
+    {
+      "name": "CVE-2026-98432",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-98432"
+    },
+    {
+      "name": "CVE-2022-36764",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2022-36764"
+    },
+    {
+      "name": "CVE-2026-45447",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-45447"
+    },
+    {
+      "name": "CVE-2026-97631",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-97631"
+    },
+    {
+      "name": "CVE-2024-38797",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-38797"
+    },
+    {
+      "name": "CVE-2024-38796",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2024-38796"
+    },
+    {
+      "name": "CVE-2026-111497",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-111497"
+    },
+    {
+      "name": "CVE-2026-102703",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-102703"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1449",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-11-04T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Élévation de privilèges"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Citrix. Elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance et une élévation de privilèges.",
+  "title": "Multiples vulnérabilités dans les produits Citrix",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-11-03",
+      "title": "Bulletin de sécurité Citrix CTX697256",
+      "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697256&articleURL=XenServer_Security_Update_for_Multiple_Issues"
+    },
+    {
+      "published_at": "2026-11-03",
+      "title": "Bulletin de sécurité Citrix CTX697300",
+      "url": "https://support.citrix.com/support-home/kbsearch/article?articleNumber=CTX697300&articleURL=Citrix_Security_Advisory_for_CVE_2026_111497_Impact_on_Unicon_eLux_Scout"
+    }
+  ]
+}
