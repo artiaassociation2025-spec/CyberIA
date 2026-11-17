@@ -1,0 +1,173 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "Libmongocrypt versions 1.21.2 et antérieures",
+      "product": {
+        "name": "libmongocrypt",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Pilote Node.js versions antérieures à 7.9.0",
+      "product": {
+        "name": "Node.js Driver",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Pilote C# versions antérieures à 3.14.0",
+      "product": {
+        "name": "C# Driver",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Pilote Atlas SQL JDBC versions 4.0.1 et antérieures",
+      "product": {
+        "name": "Pilote Atlas SQL ODBC",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Pilote Ruby 9.x sans le dernier correctif de sécurité ",
+      "product": {
+        "name": "Ruby Driver",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    },
+    {
+      "description": "Pilotes Rust sans les derniers correctifs de sécurité",
+      "product": {
+        "name": "Rust Driver",
+        "vendor": {
+          "name": "MongoDB",
+          "scada": false
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-126818",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-126818"
+    },
+    {
+      "name": "CVE-2026-126792",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-126792"
+    },
+    {
+      "name": "CVE-2026-126838",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-126838"
+    },
+    {
+      "name": "CVE-2026-126817",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-126817"
+    },
+    {
+      "name": "CVE-2026-126982",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-126982"
+    },
+    {
+      "name": "CVE-2026-126823",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-126823"
+    },
+    {
+      "name": "CVE-2026-126839",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-126839"
+    },
+    {
+      "name": "CVE-2026-126837",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-126837"
+    },
+    {
+      "name": "CVE-2026-126835",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-126835"
+    }
+  ],
+  "links": [
+    {
+      "title": "Bulletins de sécurité MongoDB",
+      "url": "https://www.mongodb.com/resources/products/alerts"
+    }
+  ],
+  "reference": "CERTFR-2026-AVI-1544",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-11-16T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans MongoDB. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, une atteinte à la confidentialité des données et un contournement de la politique de sécurité.",
+  "title": "Multiples vulnérabilités dans MongoDB",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-11-12",
+      "title": "Bulletin de sécurité MongoDB CSHARP-6169",
+      "url": "https://jira.mongodb.org/browse/CSHARP-6169"
+    },
+    {
+      "published_at": "2026-11-12",
+      "title": "Bulletin de sécurité MongoDB RUST-2531",
+      "url": "https://jira.mongodb.org/browse/RUST-2531"
+    },
+    {
+      "published_at": "2026-11-13",
+      "title": "Bulletin de sécurité MongoDB MONGOID-6037",
+      "url": "https://jira.mongodb.org/browse/MONGOID-6037"
+    },
+    {
+      "published_at": "2026-11-13",
+      "title": "Bulletin de sécurité MongoDB CSHARP-6160",
+      "url": "https://jira.mongodb.org/browse/CSHARP-6160"
+    },
+    {
+      "published_at": "2026-11-12",
+      "title": "Bulletin de sécurité MongoDB MONGOCRYPT-975",
+      "url": "https://jira.mongodb.org/browse/MONGOCRYPT-975"
+    },
+    {
+      "published_at": "2026-11-12",
+      "title": "Bulletin de sécurité MongoDB SQL-3540",
+      "url": "https://jira.mongodb.org/browse/SQL-3540"
+    },
+    {
+      "published_at": "2026-11-12",
+      "title": "Bulletin de sécurité MongoDB NODE-7830",
+      "url": "https://jira.mongodb.org/browse/NODE-7830"
+    },
+    {
+      "published_at": "2026-11-12",
+      "title": "Bulletin de sécurité MongoDB v7.9.0",
+      "url": "https://github.com/mongodb/node-mongodb-native/releases/tag/v7.9.0"
+    }
+  ]
+}
