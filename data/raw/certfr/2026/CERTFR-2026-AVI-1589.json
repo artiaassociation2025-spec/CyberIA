@@ -1,0 +1,84 @@
+{
+  "$ref": "https://www.cert.ssi.gouv.fr/openapi.json",
+  "affected_systems": [
+    {
+      "description": "les commutateurs Moxa, se référer au bulletin de sécurité de l'éditeur pour la liste des appareils vulnérables (cf. section Documentation).",
+      "product": {
+        "name": "N/A",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    },
+    {
+      "description": "ioLogik E1200 versions antérieures à 4.0.5",
+      "product": {
+        "name": "ioLogik E1200 Series",
+        "vendor": {
+          "name": "Moxa",
+          "scada": true
+        }
+      }
+    }
+  ],
+  "affected_systems_content": "Aucun correctif n'est disponible pour les vulnérabilités CVE-2026-130493 et CVE-2026-130494, Moxa recommande de suivre les mesures de contournement préconisées dans le bulletin de sécurité.",
+  "content": "## Solutions\n\nSe référer au bulletin de sécurité de l'éditeur pour l'obtention des correctifs (cf. section Documentation).",
+  "cves": [
+    {
+      "name": "CVE-2026-130494",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-130494"
+    },
+    {
+      "name": "CVE-2026-130493",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-130493"
+    },
+    {
+      "name": "CVE-2026-129972",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-129972"
+    },
+    {
+      "name": "CVE-2026-129971",
+      "url": "https://www.cve.org/CVERecord?id=CVE-2026-129971"
+    }
+  ],
+  "links": [],
+  "reference": "CERTFR-2026-AVI-1589",
+  "revisions": [
+    {
+      "description": "Version initiale",
+      "revision_date": "2026-11-20T00:00:00.000000"
+    }
+  ],
+  "risks": [
+    {
+      "description": "Déni de service à distance"
+    },
+    {
+      "description": "Exécution de code arbitraire à distance"
+    },
+    {
+      "description": "Atteinte à l'intégrité des données"
+    },
+    {
+      "description": "Contournement de la politique de sécurité"
+    },
+    {
+      "description": "Atteinte à la confidentialité des données"
+    }
+  ],
+  "summary": "De multiples vulnérabilités ont été découvertes dans les produits Moxa. Certaines d'entre elles permettent à un attaquant de provoquer une exécution de code arbitraire à distance, un déni de service à distance et une atteinte à la confidentialité des données.",
+  "title": "Multiples vulnérabilités dans les produits Moxa",
+  "vendor_advisories": [
+    {
+      "published_at": "2026-11-20",
+      "title": "Bulletin de sécurité Moxa MPSA-264520",
+      "url": "https://www.moxa.com/en/support/product-support/security-advisory/mpsa-264520-cve-2026-129971,-cve-2026-129972-buffer-overflow-vulnerabilities-in-ethernet-remote-i-os"
+    },
+    {
+      "published_at": "2026-11-20",
+      "title": "Bulletin de sécurité Moxa MPSA-268140",
+      "url": "https://www.moxa.com/en/support/product-support/security-advisory/mpsa-268140-cve-2026-130493,-cve-2026-130494-multiple-vulnerabilities-in-ethernet-switches"
+    }
+  ]
+}
