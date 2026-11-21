@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberIA — CVE Intelligence Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.7/chart.umd.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0a0e17;--bg2:#111827;--bg3:#1a2235;--card:#161d2e;
+--border:#1e2a3e;--text:#e2e8f0;--muted:#8892a4;--accent:#38bdf8;
+--green:#34d399;--red:#f87171;--amber:#fbbf24;--purple:#a78bfa;
+--coral:#fb7185;--teal:#2dd4bf;--blue:#60a5fa;
+}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* Header */
+header{background:linear-gradient(135deg,#0f172a 0%,#1e1b4b 50%,#0f172a 100%);border-bottom:1px solid var(--border);padding:1.5rem 2rem}
+header .wrap{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+header h1{font-size:1.5rem;font-weight:700;letter-spacing:-0.5px}
+header h1 span{color:var(--accent)}
+header .meta{font-size:0.8rem;color:var(--muted)}
+.tag{display:inline-block;background:rgba(56,189,248,0.12);color:var(--accent);font-size:0.7rem;padding:3px 10px;border-radius:20px;font-weight:600;letter-spacing:0.5px;border:1px solid rgba(56,189,248,0.2)}
+
+/* Main */
+main{max-width:1400px;margin:0 auto;padding:1.5rem}
+
+/* KPI cards */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:1.5rem}
+.kpi{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem;position:relative;overflow:hidden;transition:border-color .2s}
+.kpi:hover{border-color:var(--accent)}
+.kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:12px 12px 0 0}
+.kpi:nth-child(1)::before{background:var(--accent)}
+.kpi:nth-child(2)::before{background:var(--green)}
+.kpi:nth-child(3)::before{background:var(--purple)}
+.kpi:nth-child(4)::before{background:var(--amber)}
+.kpi:nth-child(5)::before{background:var(--coral)}
+.kpi:nth-child(6)::before{background:var(--teal)}
+.kpi .label{font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.kpi .value{font-family:'JetBrains Mono',monospace;font-size:1.8rem;font-weight:700;line-height:1.1}
+.kpi .sub{font-size:0.75rem;color:var(--muted);margin-top:4px}
+.kpi .change{font-size:0.7rem;margin-top:6px;padding:2px 8px;border-radius:10px;display:inline-block}
+.kpi .change.up{background:rgba(52,211,153,0.15);color:var(--green)}
+.kpi .change.down{background:rgba(248,113,113,0.15);color:var(--red)}
+.kpi .change.same{background:rgba(136,146,164,0.1);color:var(--muted)}
+
+/* Chart grid */
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(400px,1fr));gap:16px;margin-bottom:1.5rem}
+.chart-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem}
+.chart-card h3{font-size:0.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:12px;font-weight:600}
+.chart-card canvas{width:100%!important}
+
+/* Full width chart */
+.full{grid-column:1/-1}
+
+/* Tables */
+.tables{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:16px;margin-bottom:1.5rem}
+.table-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem}
+.table-card h3{font-size:0.85rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;margin-bottom:12px;font-weight:600}
+table{width:100%;border-collapse:collapse}
+table th{text-align:left;font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.8px;padding:8px 0;border-bottom:1px solid var(--border)}
+table td{padding:8px 0;font-size:0.85rem;border-bottom:1px solid rgba(30,42,62,0.5)}
+table td:last-child{text-align:right;font-family:'JetBrains Mono',monospace;font-weight:600}
+.bar-cell{display:flex;align-items:center;gap:8px}
+.bar-bg{flex:1;height:6px;background:var(--bg2);border-radius:3px;overflow:hidden}
+.bar-fill{height:100%;border-radius:3px;transition:width .6s ease}
+
+/* Source badges */
+.src-badge{display:inline-block;font-size:0.65rem;padding:2px 8px;border-radius:10px;font-weight:600;letter-spacing:0.3px}
+.src-fr{background:rgba(96,165,250,0.15);color:var(--blue)}
+.src-de{background:rgba(251,191,36,0.15);color:var(--amber)}
+.src-eu{background:rgba(167,139,250,0.15);color:var(--purple)}
+.src-both{background:rgba(52,211,153,0.15);color:var(--green)}
+.src-none{background:rgba(136,146,164,0.1);color:var(--muted)}
+
+/* Footer */
+footer{text-align:center;padding:2rem;font-size:0.75rem;color:var(--muted);border-top:1px solid var(--border)}
+
+/* Loading */
+.loading{text-align:center;padding:4rem;color:var(--muted)}
+.loading .spinner{width:40px;height:40px;border:3px solid var(--border);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 16px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Responsive */
+@media(max-width:768px){
+  .charts,.tables{grid-template-columns:1fr}
+  .kpis{grid-template-columns:repeat(2,1fr)}
+  header .wrap{flex-direction:column;text-align:center}
+  main{padding:1rem}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap">
+  <div>
+    <h1><span>Cyber</span>IA <span style="font-weight:400;font-size:0.9rem;color:var(--muted)">Intelligence Dashboard</span></h1>
+  </div>
+  <div style="text-align:right">
+    <span class="tag">LIVE DATA</span>
+    <div class="meta" id="last-update" style="margin-top:4px">Loading...</div>
+  </div>
+</div>
+</header>
+
+<main>
+  <div id="loading" class="loading">
+    <div class="spinner"></div>
+    <div>Loading CVE intelligence data...</div>
+  </div>
+
+  <div id="dashboard" style="display:none">
+    <!-- KPIs -->
+    <div class="kpis" id="kpis"></div>
+
+    <!-- Charts row 1 -->
+    <div class="charts">
+      <div class="chart-card">
+        <h3>CVSS severity distribution</h3>
+        <canvas id="cvssChart" height="260"></canvas>
+      </div>
+      <div class="chart-card">
+        <h3>Advisory source coverage</h3>
+        <canvas id="sourceChart" height="260"></canvas>
+      </div>
+    </div>
+
+    <!-- Charts row 2 -->
+    <div class="charts">
+      <div class="chart-card">
+        <h3>EPSS exploitation probability</h3>
+        <canvas id="epssChart" height="260"></canvas>
+      </div>
+      <div class="chart-card">
+        <h3>CVEs by year</h3>
+        <canvas id="yearChart" height="260"></canvas>
+      </div>
+    </div>
+
+    <!-- Timeline (full width) -->
+    <div class="charts">
+      <div class="chart-card full">
+        <h3>Publication timeline (last 24 months)</h3>
+        <canvas id="timelineChart" height="180"></canvas>
+      </div>
+    </div>
+
+    <!-- History (full width) -->
+    <div class="charts">
+      <div class="chart-card full">
+        <h3>Database growth (last 90 days)</h3>
+        <canvas id="historyChart" height="180"></canvas>
+      </div>
+    </div>
+
+    <!-- Tables -->
+    <div class="tables">
+      <div class="table-card">
+        <h3>Top 15 CWE categories</h3>
+        <table id="cweTable"></table>
+      </div>
+      <div class="table-card">
+        <h3>Top 15 affected products</h3>
+        <table id="productTable"></table>
+      </div>
+      <div class="table-card">
+        <h3>Top 15 vendors</h3>
+        <table id="vendorTable"></table>
+      </div>
+      <div class="table-card">
+        <h3>Enrichment coverage</h3>
+        <table id="enrichTable"></table>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  CyberIA — CVE Intelligence Platform &nbsp;|&nbsp; Data refreshed daily via GitHub Actions &nbsp;|&nbsp; <span id="footer-total"></span>
+</footer>
+
+<script>
+const COLORS = {
+  accent:'#38bdf8', green:'#34d399', red:'#f87171', amber:'#fbbf24',
+  purple:'#a78bfa', coral:'#fb7185', teal:'#2dd4bf', blue:'#60a5fa',
+  muted:'#8892a4', bg2:'#111827', bg3:'#1a2235'
+};
+
+Chart.defaults.color = '#8892a4';
+Chart.defaults.borderColor = '#1e2a3e';
+Chart.defaults.font.family = "'DM Sans', sans-serif";
+Chart.defaults.font.size = 12;
+
+async function load() {
+  try {
+    const r = await fetch('stats.json');
+    if (!r.ok) throw new Error('stats.json not found');
+    const d = await r.json();
+    render(d);
+  } catch(e) {
+    document.getElementById('loading').innerHTML =
+      `<div style="color:var(--red)">Error loading stats.json</div>
+       <div style="margin-top:8px;font-size:0.8rem">Run generate_stats.py first, then commit stats.json to docs/</div>`;
+  }
+}
+
+function fmt(n) { return n != null ? n.toLocaleString() : '—'; }
+
+function render(d) {
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('dashboard').style.display = 'block';
+  document.getElementById('last-update').textContent = 'Last update: ' + (d.generated_at || 'N/A');
+  document.getElementById('footer-total').textContent = fmt(d.total_cves) + ' CVEs indexed';
+
+  // ── KPIs ──
+  const ch = d.changes || {};
+  const dailyAdd = ch.daily?.added || 0;
+  const weeklyAdd = ch.weekly?.added || 0;
+  const monthlyAdd = ch.monthly?.added || 0;
+
+  const kpis = [
+    { label:'Total CVEs', value:fmt(d.total_cves), sub:'Indexed in database', change:dailyAdd, changeLabel:'today' },
+    { label:'With CVSS', value:fmt(d.enrichment?.has_cvss), sub:((d.enrichment?.has_cvss/d.total_cves*100)||0).toFixed(1)+'% coverage' },
+    { label:'With EPSS', value:fmt(d.enrichment?.has_epss), sub:((d.enrichment?.has_epss/d.total_cves*100)||0).toFixed(1)+'% coverage' },
+    { label:'CERT-FR', value:fmt(d.advisory_coverage?.['cert-fr']), sub:'Advisories linked' },
+    { label:'CERT-Bund', value:fmt(d.advisory_coverage?.['cert-bund']), sub:'Advisories linked' },
+    { label:'Weekly new', value:'+'+fmt(weeklyAdd), sub:'Added this week', change:monthlyAdd, changeLabel:'this month' },
+  ];
+
+  const kpiEl = document.getElementById('kpis');
+  kpiEl.innerHTML = kpis.map(k => {
+    let changeHtml = '';
+    if (k.change !== undefined) {
+      const cls = k.change > 0 ? 'up' : k.change < 0 ? 'down' : 'same';
+      const prefix = k.change > 0 ? '+' : '';
+      changeHtml = `<div class="change ${cls}">${prefix}${fmt(k.change)} ${k.changeLabel||''}</div>`;
+    }
+    return `<div class="kpi"><div class="label">${k.label}</div><div class="value">${k.value}</div><div class="sub">${k.sub||''}</div>${changeHtml}</div>`;
+  }).join('');
+
+  // ── CVSS Chart ──
+  const cvss = d.cvss_distribution || {};
+  new Chart(document.getElementById('cvssChart'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Critical (9.0+)', 'High (7.0-8.9)', 'Medium (4.0-6.9)', 'Low (0-3.9)', 'No score'],
+      datasets: [{
+        data: [cvss.critical||0, cvss.high||0, cvss.medium||0, cvss.low||0, cvss.none||0],
+        backgroundColor: [COLORS.red, COLORS.coral, COLORS.amber, COLORS.green, COLORS.bg3],
+        borderWidth: 0, hoverOffset: 8
+      }]
+    },
+    options: {
+      responsive: true, cutout: '60%',
+      plugins: { legend: { position:'bottom', labels: { padding:12, usePointStyle:true, pointStyle:'circle' } } }
+    }
+  });
+
+  // ── Source Coverage Chart ──
+  const adv = d.advisory_coverage || {};
+  new Chart(document.getElementById('sourceChart'), {
+    type: 'bar',
+    data: {
+      labels: ['CERT-FR only', 'CERT-Bund only', 'Both FR+Bund', 'CERT-EU', 'None'],
+      datasets: [{
+        data: [
+          (adv['cert-fr']||0) - (adv.both_fr_bund||0),
+          (adv['cert-bund']||0) - (adv.both_fr_bund||0),
+          adv.both_fr_bund||0,
+          adv['cert-eu']||0,
+          adv.none||0
+        ],
+        backgroundColor: [COLORS.blue, COLORS.amber, COLORS.green, COLORS.purple, COLORS.bg3],
+        borderRadius: 6, borderSkipped: false
+      }]
+    },
+    options: {
+      responsive: true, indexAxis: 'y',
+      plugins: { legend: { display: false } },
+      scales: { x: { grid: { color:'rgba(30,42,62,0.5)' } }, y: { grid: { display: false } } }
+    }
+  });
+
+  // ── EPSS Chart ──
+  const epss = d.epss_distribution || {};
+  new Chart(document.getElementById('epssChart'), {
+    type: 'doughnut',
+    data: {
+      labels: ['High risk (>90%)', 'Medium (50-90%)', 'Low (10-50%)', 'Minimal (<10%)', 'No EPSS'],
+      datasets: [{
+        data: [epss.high_90||0, epss.medium_50||0, epss.low_10||0, epss.minimal||0, epss.none||0],
+        backgroundColor: [COLORS.red, COLORS.amber, COLORS.teal, COLORS.green, COLORS.bg3],
+        borderWidth: 0, hoverOffset: 8
+      }]
+    },
+    options: {
+      responsive: true, cutout: '60%',
+      plugins: { legend: { position:'bottom', labels: { padding:12, usePointStyle:true, pointStyle:'circle' } } }
+    }
+  });
+
+  // ── CVEs by year ──
+  const years = d.cves_by_year || [];
+  new Chart(document.getElementById('yearChart'), {
+    type: 'bar',
+    data: {
+      labels: years.map(y => y.year),
+      datasets: [{
+        data: years.map(y => y.count),
+        backgroundColor: years.map(y => y.year >= 2024 ? COLORS.accent : 'rgba(56,189,248,0.3)'),
+        borderRadius: 4, borderSkipped: false
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { display: false }, ticks: { maxRotation: 45 } },
+        y: { grid: { color:'rgba(30,42,62,0.5)' } }
+      }
+    }
+  });
+
+  // ── Publication timeline ──
+  const timeline = d.publication_timeline || [];
+  new Chart(document.getElementById('timelineChart'), {
+    type: 'line',
+    data: {
+      labels: timeline.map(t => t.month),
+      datasets: [{
+        data: timeline.map(t => t.count),
+        borderColor: COLORS.accent, backgroundColor: 'rgba(56,189,248,0.1)',
+        fill: true, tension: 0.4, pointRadius: 3, pointBackgroundColor: COLORS.accent,
+        borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { display: false }, ticks: { maxRotation: 45 } },
+        y: { grid: { color:'rgba(30,42,62,0.5)' }, beginAtZero: true }
+      }
+    }
+  });
+
+  // ── History chart ──
+  const history = d.history || [];
+  if (history.length > 1) {
+    new Chart(document.getElementById('historyChart'), {
+      type: 'line',
+      data: {
+        labels: history.map(h => h.date),
+        datasets: [
+          { label:'Total CVEs', data: history.map(h => h.total), borderColor: COLORS.accent, borderWidth: 2, tension: 0.3, pointRadius: 2, fill: false },
+          { label:'With CVSS', data: history.map(h => h.has_cvss), borderColor: COLORS.green, borderWidth: 1.5, tension: 0.3, pointRadius: 0, fill: false },
+          { label:'CERT-FR', data: history.map(h => h.cert_fr), borderColor: COLORS.blue, borderWidth: 1.5, tension: 0.3, pointRadius: 0, fill: false },
+          { label:'CERT-Bund', data: history.map(h => h.cert_bund), borderColor: COLORS.amber, borderWidth: 1.5, tension: 0.3, pointRadius: 0, fill: false },
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: { legend: { position:'bottom', labels: { usePointStyle:true, pointStyle:'circle', padding:16 } } },
+        scales: {
+          x: { grid: { display: false }, ticks: { maxTicksLimit: 15 } },
+          y: { grid: { color:'rgba(30,42,62,0.5)' } }
+        }
+      }
+    });
+  } else {
+    document.getElementById('historyChart').parentElement.innerHTML =
+      '<h3>Database growth (last 90 days)</h3><div style="text-align:center;padding:2rem;color:var(--muted)">History will appear after 2+ pipeline runs</div>';
+  }
+
+  // ── CWE table ──
+  const cweMax = d.top_cwe?.[0]?.count || 1;
+  document.getElementById('cweTable').innerHTML =
+    '<thead><tr><th>CWE</th><th>Distribution</th><th>Count</th></tr></thead><tbody>' +
+    (d.top_cwe||[]).map(c =>
+      `<tr><td>${c.id}</td><td><div class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:${c.count/cweMax*100}%;background:${COLORS.purple}"></div></div></div></td><td>${fmt(c.count)}</td></tr>`
+    ).join('') + '</tbody>';
+
+  // ── Products table ──
+  const prodMax = d.top_products?.[0]?.count || 1;
+  document.getElementById('productTable').innerHTML =
+    '<thead><tr><th>Product</th><th>Distribution</th><th>CVEs</th></tr></thead><tbody>' +
+    (d.top_products||[]).map(p =>
+      `<tr><td>${p.name}</td><td><div class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:${p.count/prodMax*100}%;background:${COLORS.coral}"></div></div></div></td><td>${fmt(p.count)}</td></tr>`
+    ).join('') + '</tbody>';
+
+  // ── Vendors table ──
+  const vendMax = d.top_vendors?.[0]?.count || 1;
+  document.getElementById('vendorTable').innerHTML =
+    '<thead><tr><th>Vendor</th><th>Distribution</th><th>CVEs</th></tr></thead><tbody>' +
+    (d.top_vendors||[]).map(v =>
+      `<tr><td>${v.name}</td><td><div class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:${v.count/vendMax*100}%;background:${COLORS.teal}"></div></div></div></td><td>${fmt(v.count)}</td></tr>`
+    ).join('') + '</tbody>';
+
+  // ── Enrichment table ──
+  const enr = d.enrichment || {};
+  const total = d.total_cves || 1;
+  const enrichRows = [
+    ['Description', enr.has_description, COLORS.accent],
+    ['CVSS score', enr.has_cvss, COLORS.green],
+    ['EPSS score', enr.has_epss, COLORS.amber],
+    ['References', enr.has_references, COLORS.purple],
+    ['CERT-FR advisory', d.advisory_coverage?.['cert-fr']||0, COLORS.blue],
+    ['CERT-Bund advisory', d.advisory_coverage?.['cert-bund']||0, COLORS.amber],
+  ];
+  document.getElementById('enrichTable').innerHTML =
+    '<thead><tr><th>Field</th><th>Coverage</th><th>Count</th></tr></thead><tbody>' +
+    enrichRows.map(([name, count, color]) =>
+      `<tr><td>${name}</td><td><div class="bar-cell"><div class="bar-bg"><div class="bar-fill" style="width:${count/total*100}%;background:${color}"></div></div><span style="font-size:0.75rem;color:var(--muted);min-width:40px;text-align:right">${(count/total*100).toFixed(1)}%</span></div></td><td>${fmt(count)}</td></tr>`
+    ).join('') + '</tbody>';
+}
+
+load();
+</script>
+</body>
+</html>
